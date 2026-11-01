@@ -1,0 +1,2696 @@
+{
+ "file": "C:\\Users\\Kelvin\\Desktop\\auditorium\\reviews\\iteration-03-work\\model\\copy.blend",
+ "units": [
+  "METRIC",
+  1.0,
+  "METERS"
+ ],
+ "n_mesh_objects": 4634,
+ "seats_by_name": 3000,
+ "seats_collection": {
+  "40_SEAT_Congregation": 3000
+ },
+ "seats_hidden": 0,
+ "seat_dims": {
+  "(0.48, 0.6, 0.85)": 3000
+ },
+ "dup_seat_locations": 0,
+ "csv_columns": [
+  "seat_id",
+  "row",
+  "section",
+  "block",
+  "seat_in_block",
+  "x",
+  "y",
+  "z_floor",
+  "eye_z",
+  "in_blender_model",
+  "blender_x",
+  "blender_y",
+  "blender_z",
+  "assigned_exit_balanced",
+  "nearest_exit",
+  "shortest_route_exit_sensitivity",
+  "plan_travel_to_hall_exit_m",
+  "plan_travel_to_external_door_m",
+  "plan_travel_to_nearest_hall_exit_m",
+  "revision"
+ ],
+ "csv_rows": 3000,
+ "csv_not_in_blend": 0,
+ "blend_not_in_csv": 0,
+ "csv_vs_blend_max_dev": 1.5258789076710855e-06,
+ "seats_per_row": {
+  "1": 56,
+  "2": 56,
+  "3": 76,
+  "4": 76,
+  "5": 76,
+  "6": 76,
+  "7": 76,
+  "8": 76,
+  "9": 76,
+  "10": 76,
+  "11": 76,
+  "12": 76,
+  "13": 76,
+  "14": 76,
+  "15": 76,
+  "16": 76,
+  "17": 76,
+  "18": 76,
+  "19": 76,
+  "20": 76,
+  "21": 76,
+  "22": 76,
+  "23": 76,
+  "24": 76,
+  "25": 76,
+  "26": 76,
+  "27": 76,
+  "28": 76,
+  "29": 76,
+  "30": 76,
+  "31": 76,
+  "32": 76,
+  "33": 76,
+  "34": 76,
+  "35": 76,
+  "36": 76,
+  "37": 76,
+  "38": 76,
+  "39": 76,
+  "40": 76
+ },
+ "n_solids": 1167,
+ "chair_vs_solid_mesh_overlaps": 0,
+ "chair_vs_solid_examples": [],
+ "solid_solid_mesh_overlap_by_class": {
+  "IfcSlab:FLOOR x IfcWall:SOLIDWALL": 57,
+  "IfcColumn:COLUMN x IfcSlab:FLOOR": 100,
+  "IfcRamp:STRAIGHT_RUN_RAMP x IfcWall:SOLIDWALL": 4,
+  "IfcColumn:COLUMN x IfcRamp:STRAIGHT_RUN_RAMP": 16,
+  "IfcSlab:ROOF x IfcWall:SOLIDWALL": 3,
+  "IfcColumn:COLUMN x IfcWall:SOLIDWALL": 74,
+  "IfcBeam:BEAM x IfcWall:SOLIDWALL": 54,
+  "IfcMember:PURLIN x IfcSlab:ROOF": 96,
+  "IfcColumn:COLUMN x IfcSlab:ROOF": 34,
+  "IfcMember:CHORD x IfcMember:MEMBER": 702,
+  "IfcMember:MEMBER x IfcMember:MEMBER": 189,
+  "IfcMember:BRACE x IfcMember:MEMBER": 120,
+  "IfcMember:BRACE x IfcMember:BRACE": 90,
+  "IfcDoor:DOOR x IfcWall:SOLIDWALL": 31,
+  "IfcMember:CHORD x IfcMember:CHORD": 9,
+  "IfcSlab:LANDING x IfcWall:SOLIDWALL": 2,
+  "IfcColumn:COLUMN x IfcSlab:LANDING": 4,
+  "IfcWall:SOLIDWALL x IfcWindow:WINDOW": 1,
+  "IfcSlab:FLOOR x IfcWall:PARTITIONING": 3,
+  "IfcDoor:DOOR x IfcSlab:FLOOR": 1,
+  "IfcDoor:DOOR x IfcWall:PARTITIONING": 10,
+  "IfcWall:PARTITIONING x IfcWall:PARTITIONING": 8,
+  "IfcColumn:COLUMN x IfcRailing:GUARDRAIL": 4,
+  "IfcWall:SOLIDWALL x IfcWall:SOLIDWALL": 2
+ },
+ "solid_solid_examples": {
+  "IfcSlab:FLOOR x IfcWall:SOLIDWALL": [
+   [
+    "ARC-SLAB-HALL-FRONT",
+    "ENV-WALL-HALL-W"
+   ],
+   [
+    "ARC-SLAB-RAKE-FRONT",
+    "ENV-WALL-HALL-W"
+   ],
+   [
+    "ARC-SLAB-AMB-W-NORTH",
+    "ENV-WALL-HALL-W"
+   ],
+   [
+    "ARC-SLAB-HALL-FRONT",
+    "ENV-WALL-HALL-E"
+   ],
+   [
+    "ARC-SLAB-RAKE-FRONT",
+    "ENV-WALL-HALL-E"
+   ],
+   [
+    "ARC-SLAB-AMB-E-NORTH",
+    "ENV-WALL-HALL-E"
+   ],
+   [
+    "ARC-SLAB-CROSS-AISLE",
+    "ENV-WALL-HALL-W"
+   ],
+   [
+    "ARC-SLAB-CROSS-AISLE",
+    "ENV-WALL-HALL-E"
+   ]
+  ],
+  "IfcColumn:COLUMN x IfcSlab:FLOOR": [
+   [
+    "ARC-SLAB-RAKE-FRONT",
+    "STR-COL-B8"
+   ],
+   [
+    "ARC-SLAB-HALL-FRONT",
+    "STR-COL-B9"
+   ],
+   [
+    "ARC-SLAB-AMB-W-NORTH",
+    "STR-COL-B9"
+   ],
+   [
+    "ARC-SLAB-HALL-FRONT",
+    "STR-COL-B10"
+   ],
+   [
+    "ARC-SLAB-AMB-W-NORTH",
+    "STR-COL-B10"
+   ],
+   [
+    "ARC-SLAB-HALL-FRONT",
+    "STR-COL-B11"
+   ],
+   [
+    "ARC-SLAB-AMB-W-NORTH",
+    "STR-COL-B11"
+   ],
+   [
+    "ARC-SLAB-HALL-FRONT",
+    "STR-COL-C11"
+   ]
+  ],
+  "IfcRamp:STRAIGHT_RUN_RAMP x IfcWall:SOLIDWALL": [
+   [
+    "ARC-RAMP-AMB-W-N",
+    "ENV-WALL-HALL-W"
+   ],
+   [
+    "ARC-RAMP-AMB-E-N",
+    "ENV-WALL-HALL-E"
+   ],
+   [
+    "ARC-RAMP-AMB-W-S",
+    "ENV-WALL-HALL-W"
+   ],
+   [
+    "ARC-RAMP-AMB-E-S",
+    "ENV-WALL-HALL-E"
+   ]
+  ],
+  "IfcColumn:COLUMN x IfcRamp:STRAIGHT_RUN_RAMP": [
+   [
+    "ARC-RAMP-AMB-W-N",
+    "STR-COL-B8"
+   ],
+   [
+    "ARC-RAMP-AMB-E-N",
+    "STR-COL-G8"
+   ],
+   [
+    "ARC-RAMP-AMB-W-N",
+    "STR-COL-B7"
+   ],
+   [
+    "ARC-RAMP-AMB-E-N",
+    "STR-COL-G7"
+   ],
+   [
+    "ARC-RAMP-AMB-W-S",
+    "STR-COL-B5"
+   ],
+   [
+    "ARC-RAMP-AMB-E-S",
+    "STR-COL-G5"
+   ],
+   [
+    "ARC-RAMP-AMB-W-S",
+    "STR-COL-B4"
+   ],
+   [
+    "ARC-RAMP-AMB-E-S",
+    "STR-COL-G4"
+   ]
+  ],
+  "IfcSlab:ROOF x IfcWall:SOLIDWALL": [
+   [
+    "ENV-ROOF-AMB-W",
+    "ENV-WALL-HALL-W"
+   ],
+   [
+    "ENV-ROOF-AMB-E",
+    "ENV-WALL-HALL-E"
+   ],
+   [
+    "ENV-ROOF-BOH",
+    "ENV-WALL-STAGE-REAR"
+   ]
+  ],
+  "IfcColumn:COLUMN x IfcWall:SOLIDWALL": [
+   [
+    "ENV-WALL-HALL-W",
+    "STR-COL-B8"
+   ],
+   [
+    "ENV-WALL-HALL-W",
+    "STR-COL-B9"
+   ],
+   [
+    "ENV-WALL-HALL-W",
+    "STR-COL-B10"
+   ],
+   [
+    "ENV-WALL-HALL-W",
+    "STR-COL-B11"
+   ],
+   [
+    "ENV-WALL-STAGE-REAR",
+    "STR-COL-B11"
+   ],
+   [
+    "ENV-WALL-STAGE-REAR",
+    "STR-COL-C11"
+   ],
+   [
+    "ENV-WALL-STAGE-REAR",
+    "STR-COL-D11"
+   ],
+   [
+    "ENV-WALL-STAGE-REAR",
+    "STR-COL-E11"
+   ]
+  ],
+  "IfcBeam:BEAM x IfcWall:SOLIDWALL": [
+   [
+    "ENV-WALL-HALL-W",
+    "STR-BEAM-EAVES-B-8-9"
+   ],
+   [
+    "ENV-WALL-HALL-W",
+    "STR-BEAM-EAVES-B-9-10"
+   ],
+   [
+    "ENV-WALL-HALL-W",
+    "STR-BEAM-EAVES-B-10-11"
+   ],
+   [
+    "ENV-WALL-HALL-E",
+    "STR-BEAM-EAVES-G-8-9"
+   ],
+   [
+    "ENV-WALL-HALL-E",
+    "STR-BEAM-EAVES-G-9-10"
+   ],
+   [
+    "ENV-WALL-HALL-E",
+    "STR-BEAM-EAVES-G-10-11"
+   ],
+   [
+    "ENV-WALL-HALL-W",
+    "STR-BEAM-EAVES-B-6-7"
+   ],
+   [
+    "ENV-WALL-HALL-W",
+    "STR-BEAM-EAVES-B-7-8"
+   ]
+  ],
+  "IfcMember:PURLIN x IfcSlab:ROOF": [
+   [
+    "ENV-ROOF-HALL-W",
+    "STR-PURLIN-8-9-P00"
+   ],
+   [
+    "ENV-ROOF-HALL-W",
+    "STR-PURLIN-9-10-P00"
+   ],
+   [
+    "ENV-ROOF-HALL-W",
+    "STR-PURLIN-10-11-P00"
+   ],
+   [
+    "ENV-ROOF-HALL-W",
+    "STR-PURLIN-8-9-P01"
+   ],
+   [
+    "ENV-ROOF-HALL-W",
+    "STR-PURLIN-9-10-P01"
+   ],
+   [
+    "ENV-ROOF-HALL-W",
+    "STR-PURLIN-10-11-P01"
+   ],
+   [
+    "ENV-ROOF-HALL-W",
+    "STR-PURLIN-8-9-P02"
+   ],
+   [
+    "ENV-ROOF-HALL-W",
+    "STR-PURLIN-9-10-P02"
+   ]
+  ],
+  "IfcColumn:COLUMN x IfcSlab:ROOF": [
+   [
+    "ENV-ROOF-AMB-W",
+    "STR-COL-B8"
+   ],
+   [
+    "ENV-ROOF-AMB-W",
+    "STR-COL-B9"
+   ],
+   [
+    "ENV-ROOF-AMB-W",
+    "STR-COL-B10"
+   ],
+   [
+    "ENV-ROOF-AMB-W",
+    "STR-COL-B11"
+   ],
+   [
+    "ENV-ROOF-AMB-E",
+    "STR-COL-G8"
+   ],
+   [
+    "ENV-ROOF-AMB-E",
+    "STR-COL-G9"
+   ],
+   [
+    "ENV-ROOF-AMB-E",
+    "STR-COL-G10"
+   ],
+   [
+    "ENV-ROOF-AMB-E",
+    "STR-COL-G11"
+   ]
+  ],
+  "IfcMember:CHORD x IfcMember:MEMBER": [
+   [
+    "STR-TRUSS-T8-BC01",
+    "STR-TRUSS-T8-V21"
+   ],
+   [
+    "STR-TRUSS-T8-BC01",
+    "STR-TRUSS-T8-D32"
+   ],
+   [
+    "STR-TRUSS-T8-TC02",
+    "STR-TRUSS-T8-V21"
+   ],
+   [
+    "STR-TRUSS-T8-D32",
+    "STR-TRUSS-T8-TC02"
+   ],
+   [
+    "STR-TRUSS-T9-BC01",
+    "STR-TRUSS-T9-V21"
+   ],
+   [
+    "STR-TRUSS-T9-BC01",
+    "STR-TRUSS-T9-D32"
+   ],
+   [
+    "STR-TRUSS-T9-TC02",
+    "STR-TRUSS-T9-V21"
+   ],
+   [
+    "STR-TRUSS-T9-D32",
+    "STR-TRUSS-T9-TC02"
+   ]
+  ],
+  "IfcMember:MEMBER x IfcMember:MEMBER": [
+   [
+    "STR-TRUSS-T8-D32",
+    "STR-TRUSS-T8-V21"
+   ],
+   [
+    "STR-TRUSS-T9-D32",
+    "STR-TRUSS-T9-V21"
+   ],
+   [
+    "STR-TRUSS-T10-D32",
+    "STR-TRUSS-T10-V21"
+   ],
+   [
+    "STR-TRUSS-T11-D32",
+    "STR-TRUSS-T11-V21"
+   ],
+   [
+    "STR-TRUSS-T8-D32",
+    "STR-TRUSS-T8-V22"
+   ],
+   [
+    "STR-TRUSS-T8-D33",
+    "STR-TRUSS-T8-V22"
+   ],
+   [
+    "STR-TRUSS-T9-D32",
+    "STR-TRUSS-T9-V22"
+   ],
+   [
+    "STR-TRUSS-T9-D33",
+    "STR-TRUSS-T9-V22"
+   ]
+  ],
+  "IfcMember:BRACE x IfcMember:MEMBER": [
+   [
+    "STR-BRACE-ROOF-7-8-00b",
+    "STR-TRUSS-T8-V21"
+   ],
+   [
+    "STR-BRACE-ROOF-10-11-00a",
+    "STR-TRUSS-T10-V21"
+   ],
+   [
+    "STR-BRACE-ROOF-10-11-00b",
+    "STR-TRUSS-T11-V21"
+   ],
+   [
+    "STR-BRACE-ROOF-7-8-00a",
+    "STR-TRUSS-T8-V22"
+   ],
+   [
+    "STR-BRACE-ROOF-7-8-01b",
+    "STR-TRUSS-T8-V22"
+   ],
+   [
+    "STR-BRACE-ROOF-10-11-00b",
+    "STR-TRUSS-T10-V22"
+   ],
+   [
+    "STR-BRACE-ROOF-10-11-01a",
+    "STR-TRUSS-T10-V22"
+   ],
+   [
+    "STR-BRACE-ROOF-10-11-00a",
+    "STR-TRUSS-T11-V22"
+   ]
+  ],
+  "IfcMember:BRACE x IfcMember:BRACE": [
+   [
+    "STR-BRACE-ROOF-7-8-00a",
+    "STR-BRACE-ROOF-7-8-00b"
+   ],
+   [
+    "STR-BRACE-ROOF-10-11-00a",
+    "STR-BRACE-ROOF-10-11-00b"
+   ],
+   [
+    "STR-BRACE-WALL-B-10-11a",
+    "STR-BRACE-WALL-B-10-11b"
+   ],
+   [
+    "STR-BRACE-ROOF-7-8-00a",
+    "STR-BRACE-ROOF-7-8-01b"
+   ],
+   [
+    "STR-BRACE-ROOF-7-8-00b",
+    "STR-BRACE-ROOF-7-8-01a"
+   ],
+   [
+    "STR-BRACE-ROOF-7-8-01a",
+    "STR-BRACE-ROOF-7-8-01b"
+   ],
+   [
+    "STR-BRACE-ROOF-10-11-00a",
+    "STR-BRACE-ROOF-10-11-01b"
+   ],
+   [
+    "STR-BRACE-ROOF-10-11-00b",
+    "STR-BRACE-ROOF-10-11-01a"
+   ]
+  ],
+  "IfcDoor:DOOR x IfcWall:SOLIDWALL": [
+   [
+    "DR-HALL-W-FRONT",
+    "ENV-WALL-HALL-W"
+   ],
+   [
+    "DR-HALL-W-WING",
+    "ENV-WALL-HALL-W"
+   ],
+   [
+    "DR-STAGE-BOH-1",
+    "ENV-WALL-STAGE-REAR"
+   ],
+   [
+    "DR-STAGE-BOH-2",
+    "ENV-WALL-STAGE-REAR"
+   ],
+   [
+    "DR-HALL-E-FRONT",
+    "ENV-WALL-HALL-E"
+   ],
+   [
+    "DR-HALL-E-WING",
+    "ENV-WALL-HALL-E"
+   ],
+   [
+    "DR-HALL-W-CROSS",
+    "ENV-WALL-HALL-W"
+   ],
+   [
+    "DR-HALL-E-CROSS",
+    "ENV-WALL-HALL-E"
+   ]
+  ],
+  "IfcMember:CHORD x IfcMember:CHORD": [
+   [
+    "STR-TRUSS-T8-TC10",
+    "STR-TRUSS-T8-TC12"
+   ],
+   [
+    "STR-TRUSS-T9-TC10",
+    "STR-TRUSS-T9-TC12"
+   ],
+   [
+    "STR-TRUSS-T10-TC10",
+    "STR-TRUSS-T10-TC12"
+   ],
+   [
+    "STR-TRUSS-T11-TC10",
+    "STR-TRUSS-T11-TC12"
+   ],
+   [
+    "STR-TRUSS-T7-TC10",
+    "STR-TRUSS-T7-TC12"
+   ],
+   [
+    "STR-TRUSS-T6-TC10",
+    "STR-TRUSS-T6-TC12"
+   ],
+   [
+    "STR-TRUSS-T5-TC10",
+    "STR-TRUSS-T5-TC12"
+   ],
+   [
+    "STR-TRUSS-T4-TC10",
+    "STR-TRUSS-T4-TC12"
+   ]
+  ],
+  "IfcSlab:LANDING x IfcWall:SOLIDWALL": [
+   [
+    "ARC-SLAB-AMB-W-LANDING",
+    "ENV-WALL-HALL-W"
+   ],
+   [
+    "ARC-SLAB-AMB-E-LANDING",
+    "ENV-WALL-HALL-E"
+   ]
+  ],
+  "IfcColumn:COLUMN x IfcSlab:LANDING": [
+   [
+    "ARC-SLAB-AMB-W-LANDING",
+    "STR-COL-B6"
+   ],
+   [
+    "ARC-SLAB-AMB-E-LANDING",
+    "STR-COL-G6"
+   ],
+   [
+    "ARC-SLAB-AMB-W-LANDING",
+    "STR-COL-A6"
+   ],
+   [
+    "ARC-SLAB-AMB-E-LANDING",
+    "STR-COL-H6"
+   ]
+  ],
+  "IfcWall:SOLIDWALL x IfcWindow:WINDOW": [
+   [
+    "ENV-WALL-HALL-REAR",
+    "WN-BOOTH-VIEW"
+   ]
+  ],
+  "IfcSlab:FLOOR x IfcWall:PARTITIONING": [
+   [
+    "ARC-BOOTH-FLOOR",
+    "ARC-WALL-BOOTH-S"
+   ],
+   [
+    "ARC-BOOTH-FLOOR",
+    "ARC-WALL-BOOTH-W"
+   ],
+   [
+    "ARC-BOOTH-FLOOR",
+    "ARC-WALL-BOOTH-E"
+   ]
+  ],
+  "IfcDoor:DOOR x IfcSlab:FLOOR": [
+   [
+    "ARC-BOOTH-FLOOR",
+    "DR-BOOTH"
+   ]
+  ],
+  "IfcDoor:DOOR x IfcWall:PARTITIONING": [
+   [
+    "ARC-WALL-BOOTH-S",
+    "DR-BOOTH"
+   ],
+   [
+    "ARC-WALL-WC-W-W",
+    "DR-WC-W-MAIN"
+   ],
+   [
+    "ARC-WALL-WC-E-E",
+    "DR-WC-E-MAIN"
+   ],
+   [
+    "ARC-WALL-BOH-CORRIDOR",
+    "DR-BOH-01"
+   ],
+   [
+    "ARC-WALL-BOH-CORRIDOR",
+    "DR-BOH-02"
+   ],
+   [
+    "ARC-WALL-BOH-CORRIDOR",
+    "DR-BOH-03"
+   ],
+   [
+    "ARC-WALL-BOH-CORRIDOR",
+    "DR-BOH-04"
+   ],
+   [
+    "ARC-WALL-BOH-CORRIDOR",
+    "DR-BOH-05"
+   ]
+  ],
+  "IfcWall:PARTITIONING x IfcWall:PARTITIONING": [
+   [
+    "ARC-WALL-BOOTH-S",
+    "ARC-WALL-BOOTH-W"
+   ],
+   [
+    "ARC-WALL-BOOTH-E",
+    "ARC-WALL-BOOTH-S"
+   ],
+   [
+    "ARC-WALL-WC-W-S",
+    "ARC-WALL-WC-W-W"
+   ],
+   [
+    "ARC-WALL-WC-W-ACC",
+    "ARC-WALL-WC-W-S"
+   ],
+   [
+    "ARC-WALL-WC-W-E",
+    "ARC-WALL-WC-W-S"
+   ],
+   [
+    "ARC-WALL-WC-E-S",
+    "ARC-WALL-WC-E-W"
+   ],
+   [
+    "ARC-WALL-WC-E-ACC",
+    "ARC-WALL-WC-E-S"
+   ],
+   [
+    "ARC-WALL-WC-E-E",
+    "ARC-WALL-WC-E-S"
+   ]
+  ],
+  "IfcColumn:COLUMN x IfcRailing:GUARDRAIL": [
+   [
+    "ARC-RAIL-UPPER-FOYER-EDGE",
+    "STR-COL-C2"
+   ],
+   [
+    "ARC-RAIL-UPPER-FOYER-EDGE",
+    "STR-COL-D2"
+   ],
+   [
+    "ARC-RAIL-UPPER-FOYER-EDGE",
+    "STR-COL-E2"
+   ],
+   [
+    "ARC-RAIL-UPPER-FOYER-EDGE",
+    "STR-COL-G2"
+   ]
+  ],
+  "IfcWall:SOLIDWALL x IfcWall:SOLIDWALL": [
+   [
+    "ARC-WALL-LIFT-S",
+    "ARC-WALL-LIFT-W"
+   ],
+   [
+    "ARC-WALL-LIFT-E",
+    "ARC-WALL-LIFT-S"
+   ]
+  ]
+ },
+ "prop_keys_sample": {
+  "ENV-WALL-HALL-W": [
+   "ifc_class",
+   "predefined_type",
+   "storey",
+   "object_type",
+   "assembly",
+   "kind",
+   "props_json"
+  ],
+  "STR-BRACE-WALL-B-3-4a": [
+   "ifc_class",
+   "predefined_type",
+   "storey",
+   "object_type",
+   "assembly",
+   "kind",
+   "props_json",
+   "strut_json"
+  ]
+ },
+ "named": {
+  "STR-STRUT-GABLE-3-DE": {
+   "aabb": [
+    24.71,
+    16.21,
+    7.26,
+    34.29,
+    16.36,
+    7.41
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "STR-STRUT-GABLE-11-DE": {
+   "aabb": [
+    24.71,
+    79.64,
+    3.775,
+    34.29,
+    79.79,
+    3.925
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "STR-BRACE-GABLE-11-DEb": {
+   "aabb": [
+    24.746,
+    79.64,
+    3.948,
+    34.254,
+    79.79,
+    13.652
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "ENV-FLASHING-E": {
+   "aabb": [
+    54.35,
+    15.85,
+    13.95,
+    55.0,
+    80.15,
+    14.0
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "ENV-FLASHING-W": {
+   "aabb": [
+    4.0,
+    15.85,
+    13.95,
+    4.65,
+    80.15,
+    14.0
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "ENV-FLASHING-REAR": {
+   "aabb": [
+    4.0,
+    15.475,
+    13.95,
+    55.0,
+    15.85,
+    14.0
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "ENV-FLASHING-STAGE": {
+   "aabb": [
+    4.0,
+    80.15,
+    13.95,
+    55.0,
+    80.525,
+    14.0
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "STR-COL-D3": {
+   "aabb": [
+    24.3,
+    15.8,
+    -0.9,
+    24.7,
+    16.2,
+    14.0
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "STR-COL-E3": {
+   "aabb": [
+    34.3,
+    15.8,
+    -0.9,
+    34.7,
+    16.2,
+    14.0
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "STR-COL-D11": {
+   "aabb": [
+    24.3,
+    79.8,
+    -0.9,
+    24.7,
+    80.2,
+    14.0
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "STR-COL-E11": {
+   "aabb": [
+    34.3,
+    79.8,
+    -0.9,
+    34.7,
+    80.2,
+    14.0
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "DR-WC-W-MAIN": {
+   "aabb": [
+    4.975,
+    11.525,
+    0.0,
+    5.025,
+    12.725,
+    2.4
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "DR-WC-E-MAIN": {
+   "aabb": [
+    53.975,
+    11.525,
+    0.0,
+    54.025,
+    12.725,
+    2.4
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "ARC-WALL-WC-W-E": {
+   "aabb": [
+    13.925,
+    8.4,
+    0.0,
+    14.075,
+    15.85,
+    3.0
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "ARC-WALL-WC-W-S": {
+   "aabb": [
+    5.0,
+    8.325,
+    0.0,
+    14.0,
+    8.475,
+    3.0
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "ARC-WALL-WC-E-W": {
+   "aabb": [
+    44.925,
+    8.4,
+    0.0,
+    45.075,
+    15.85,
+    3.0
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "STR-COL-B2": {
+   "aabb": [
+    4.3,
+    7.8,
+    -0.9,
+    4.7,
+    8.2,
+    7.65
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "STR-COL-C2": {
+   "aabb": [
+    14.3,
+    7.8,
+    -0.9,
+    14.7,
+    8.2,
+    7.65
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "STR-COL-D2": {
+   "aabb": [
+    24.3,
+    7.8,
+    -0.9,
+    24.7,
+    8.2,
+    7.65
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "STR-COL-F2": {
+   "aabb": [
+    44.3,
+    7.8,
+    -0.9,
+    44.7,
+    8.2,
+    7.65
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "STR-COL-G2": {
+   "aabb": [
+    54.3,
+    7.8,
+    -0.9,
+    54.7,
+    8.2,
+    7.65
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "DR-EXT-W-FOYER": {
+   "aabb": [
+    -0.025,
+    2.0,
+    0.0,
+    0.025,
+    4.4,
+    2.4
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "DR-EXT-E-FOYER": {
+   "aabb": [
+    58.975,
+    2.0,
+    0.0,
+    59.025,
+    4.4,
+    2.4
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "ARC-STAIR-FOYER-1": {
+   "aabb": [
+    3.75,
+    5.09,
+    0.0,
+    14.25,
+    7.85,
+    3.985
+   ],
+   "verts": 184,
+   "faces": 138
+  },
+  "ARC-STAIR-FOYER-2": {
+   "aabb": [
+    14.75,
+    5.09,
+    0.0,
+    25.25,
+    7.85,
+    3.985
+   ],
+   "verts": 184,
+   "faces": 138
+  },
+  "ARC-STAIR-FOYER-3": {
+   "aabb": [
+    33.75,
+    5.09,
+    0.0,
+    44.25,
+    7.85,
+    3.985
+   ],
+   "verts": 184,
+   "faces": 138
+  },
+  "ARC-STAIR-FOYER-4": {
+   "aabb": [
+    44.75,
+    5.09,
+    0.0,
+    55.25,
+    7.85,
+    3.985
+   ],
+   "verts": 184,
+   "faces": 138
+  },
+  "ARC-WALL-LIFT-W": {
+   "aabb": [
+    14.9,
+    13.45,
+    0.0,
+    15.1,
+    15.85,
+    7.65
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "ARC-WALL-LIFT-S": {
+   "aabb": [
+    15.0,
+    13.35,
+    0.0,
+    17.4,
+    13.55,
+    7.65
+   ],
+   "verts": 32,
+   "faces": 24
+  },
+  "STR-BRACE-WALL-B-3-4a": {
+   "aabb": [
+    4.425,
+    16.335,
+    0.563,
+    4.575,
+    23.665,
+    13.437
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "STR-BRACE-WALL-B-3-4b": {
+   "aabb": [
+    4.425,
+    16.335,
+    0.563,
+    4.575,
+    23.665,
+    13.437
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "STR-BRACE-WALL-G-10-11a": {
+   "aabb": [
+    54.425,
+    72.335,
+    0.563,
+    54.575,
+    79.665,
+    13.437
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "ENV-WALL-HALL-W": {
+   "aabb": [
+    4.2,
+    16.15,
+    -0.3,
+    4.8,
+    79.85,
+    14.0
+   ],
+   "verts": 128,
+   "faces": 96
+  },
+  "ENV-WALL-HALL-E": {
+   "aabb": [
+    54.2,
+    16.15,
+    -0.3,
+    54.8,
+    79.85,
+    14.0
+   ],
+   "verts": 128,
+   "faces": 96
+  },
+  "ENV-WALL-HALL-REAR": {
+   "aabb": [
+    4.35,
+    15.85,
+    -0.3,
+    54.65,
+    16.15,
+    14.0
+   ],
+   "verts": 128,
+   "faces": 96
+  },
+  "ENV-WALL-GABLE-REAR": {
+   "aabb": [
+    4.5,
+    15.475,
+    14.0,
+    54.5,
+    15.775,
+    17.625
+   ],
+   "verts": 10,
+   "faces": 7
+  },
+  "ENV-WALL-GABLE-STAGE": {
+   "aabb": [
+    4.5,
+    80.225,
+    14.0,
+    54.5,
+    80.525,
+    17.625
+   ],
+   "verts": 10,
+   "faces": 7
+  },
+  "ENV-WALL-HALL-W-UPPER": {
+   "aabb": [
+    4.0,
+    15.85,
+    14.0,
+    4.2,
+    80.15,
+    15.9
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "STR-BRACE-GABLE-3-DEa": {
+   "aabb": [
+    24.759,
+    16.21,
+    7.422,
+    34.241,
+    16.36,
+    13.663
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "STR-BRACE-GABLE-3-DEb": {
+   "aabb": [
+    24.759,
+    16.21,
+    7.422,
+    34.241,
+    16.36,
+    13.663
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "STR-BRACE-GABLE-11-DEa": {
+   "aabb": [
+    24.746,
+    79.64,
+    3.948,
+    34.254,
+    79.79,
+    13.652
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "WN-BOOTH-VIEW": {
+   "aabb": [
+    25.5,
+    15.975,
+    5.485,
+    33.5,
+    16.025,
+    6.685
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "ENV-WALL-STAGE-REAR": {
+   "aabb": [
+    4.35,
+    79.85,
+    -0.3,
+    54.65,
+    80.15,
+    14.0
+   ],
+   "verts": 56,
+   "faces": 42
+  },
+  "STR-TRUSS-T3-TC-01": null,
+  "ENV-ROOF-HALL-E": {
+   "aabb": [
+    29.5,
+    15.5,
+    16.11,
+    55.0,
+    80.5,
+    18.4
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "ENV-ROOF-HALL-W": {
+   "aabb": [
+    4.0,
+    15.5,
+    16.11,
+    29.5,
+    80.5,
+    18.4
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "ARC-SLAB-UPPER-FOYER": {
+   "aabb": [
+    0.15,
+    7.85,
+    3.735,
+    58.85,
+    15.85,
+    3.985
+   ],
+   "verts": 8,
+   "faces": 6
+  },
+  "ARC-RAIL-UPPER-FOYER-EDGE": {
+   "aabb": [
+    0.2,
+    7.85,
+    3.985,
+    58.8,
+    7.9,
+    5.085
+   ],
+   "verts": 72,
+   "faces": 54
+  },
+  "ARC-SLAB-REAR-PLATFORM": {
+   "aabb": [
+    4.65,
+    16.15,
+    -0.25,
+    54.35,
+    19.1,
+    3.985
+   ],
+   "verts": 8,
+   "faces": 6
+  }
+ },
+ "truss_T3_names": [
+  "STR-TRUSS-T3-BC01",
+  "STR-TRUSS-T3-BC03",
+  "STR-TRUSS-T3-BC05",
+  "STR-TRUSS-T3-BC07",
+  "STR-TRUSS-T3-BC09",
+  "STR-TRUSS-T3-BC11",
+  "STR-TRUSS-T3-BC13",
+  "STR-TRUSS-T3-BC15",
+  "STR-TRUSS-T3-BC17",
+  "STR-TRUSS-T3-BC19",
+  "STR-TRUSS-T3-D32",
+  "STR-TRUSS-T3-D33"
+ ],
+ "wall_W_ray_x_braced_bay_y20_z6": [
+  2.2,
+  2.4,
+  2.6,
+  2.8
+ ],
+ "wall_W_ray_x_unbraced_bay_y52_z6": [
+  2.35,
+  2.65
+ ],
+ "wall_rear_ray_y_bayDE_z9": [
+  1.85,
+  2.15
+ ],
+ "refuges": {
+  "ACC-REFUGE-1-1": [
+   10.45,
+   8.3,
+   3.985,
+   11.35,
+   9.7,
+   4.005
+  ],
+  "ACC-REFUGE-1-2": [
+   9.45,
+   8.3,
+   3.985,
+   10.35,
+   9.7,
+   4.005
+  ],
+  "ACC-REFUGE-2-1": [
+   17.65,
+   8.3,
+   3.985,
+   18.55,
+   9.7,
+   4.005
+  ],
+  "ACC-REFUGE-2-2": [
+   18.65,
+   8.3,
+   3.985,
+   19.55,
+   9.7,
+   4.005
+  ],
+  "ACC-REFUGE-3-1": [
+   40.45,
+   8.3,
+   3.985,
+   41.35,
+   9.7,
+   4.005
+  ],
+  "ACC-REFUGE-3-2": [
+   39.45,
+   8.3,
+   3.985,
+   40.35,
+   9.7,
+   4.005
+  ],
+  "ACC-REFUGE-4-1": [
+   47.65,
+   8.3,
+   3.985,
+   48.55,
+   9.7,
+   4.005
+  ],
+  "ACC-REFUGE-4-2": [
+   48.65,
+   8.3,
+   3.985,
+   49.55,
+   9.7,
+   4.005
+  ]
+ },
+ "stairs": {
+  "ARC-STAIR-PLATFORM-W": [
+   13.1,
+   64.5,
+   0.0,
+   14.5,
+   66.9,
+   0.9
+  ],
+  "ARC-STAIR-EXT-W-CROSS": [
+   -3.45,
+   39.2,
+   -0.3,
+   -0.15,
+   42.8,
+   1.15
+  ],
+  "ARC-STAIR-EXT-E-CROSS": [
+   59.15,
+   39.2,
+   -0.3,
+   62.45,
+   42.8,
+   1.15
+  ],
+  "ARC-STAIR-FOYER-1": [
+   3.75,
+   5.09,
+   0.0,
+   14.25,
+   7.85,
+   3.985
+  ],
+  "ARC-STAIR-FOYER-2": [
+   14.75,
+   5.09,
+   0.0,
+   25.25,
+   7.85,
+   3.985
+  ],
+  "ARC-STAIR-FOYER-3": [
+   33.75,
+   5.09,
+   0.0,
+   44.25,
+   7.85,
+   3.985
+  ],
+  "ARC-STAIR-FOYER-4": [
+   44.75,
+   5.09,
+   0.0,
+   55.25,
+   7.85,
+   3.985
+  ]
+ },
+ "doors": {
+  "DR-BOH-01": [
+   4.475,
+   82.725,
+   0.0,
+   5.675,
+   82.775,
+   2.4
+  ],
+  "DR-BOH-02": [
+   14.4,
+   82.725,
+   0.0,
+   15.6,
+   82.775,
+   2.4
+  ],
+  "DR-BOH-03": [
+   25.4,
+   82.725,
+   0.0,
+   26.6,
+   82.775,
+   2.4
+  ],
+  "DR-BOH-04": [
+   35.4,
+   82.725,
+   0.0,
+   36.6,
+   82.775,
+   2.4
+  ],
+  "DR-BOH-05": [
+   40.9,
+   82.725,
+   0.0,
+   41.9,
+   82.775,
+   2.4
+  ],
+  "DR-BOH-06": [
+   44.8,
+   82.725,
+   0.0,
+   46.0,
+   82.775,
+   2.4
+  ],
+  "DR-BOH-07": [
+   52.825,
+   82.725,
+   0.0,
+   54.025,
+   82.775,
+   2.4
+  ],
+  "DR-WC-W-MAIN": [
+   4.975,
+   11.525,
+   0.0,
+   5.025,
+   12.725,
+   2.4
+  ],
+  "DR-WC-E-MAIN": [
+   53.975,
+   11.525,
+   0.0,
+   54.025,
+   12.725,
+   2.4
+  ],
+  "DR-LIFT-L00": [
+   15.65,
+   13.425,
+   0.0,
+   16.75,
+   13.475,
+   2.1
+  ],
+  "DR-LIFT-L02": [
+   15.65,
+   13.425,
+   3.985,
+   16.75,
+   13.475,
+   6.085
+  ],
+  "DR-BOOTH": [
+   25.55,
+   10.975,
+   3.985,
+   26.45,
+   11.025,
+   6.085
+  ],
+  "DR-HALL-W-FRONT": [
+   4.475,
+   60.0,
+   0.0,
+   4.525,
+   63.6,
+   2.4
+  ],
+  "DR-HALL-W-WING": [
+   4.475,
+   68.4,
+   0.0,
+   4.525,
+   70.8,
+   2.4
+  ],
+  "DR-HALL-W-CROSS": [
+   4.475,
+   39.2,
+   1.15,
+   4.525,
+   42.8,
+   3.55
+  ],
+  "DR-HALL-E-FRONT": [
+   54.475,
+   60.0,
+   0.0,
+   54.525,
+   63.6,
+   2.4
+  ],
+  "DR-HALL-E-WING": [
+   54.475,
+   68.4,
+   0.0,
+   54.525,
+   70.8,
+   2.4
+  ],
+  "DR-HALL-E-CROSS": [
+   54.475,
+   39.2,
+   1.15,
+   54.525,
+   42.8,
+   3.55
+  ],
+  "DR-HALL-REAR-A1": [
+   11.3,
+   15.975,
+   3.985,
+   13.7,
+   16.025,
+   6.385
+  ],
+  "DR-HALL-REAR-A2": [
+   19.8,
+   15.975,
+   3.985,
+   22.2,
+   16.025,
+   6.385
+  ],
+  "DR-HALL-REAR-A4": [
+   36.8,
+   15.975,
+   3.985,
+   39.2,
+   16.025,
+   6.385
+  ],
+  "DR-HALL-REAR-A5": [
+   45.3,
+   15.975,
+   3.985,
+   47.7,
+   16.025,
+   6.385
+  ],
+  "DR-STAGE-BOH-1": [
+   10.0,
+   79.975,
+   0.0,
+   11.8,
+   80.025,
+   2.4
+  ],
+  "DR-STAGE-BOH-2": [
+   47.2,
+   79.975,
+   0.0,
+   49.0,
+   80.025,
+   2.4
+  ],
+  "DR-EXT-W-FOYER": [
+   -0.025,
+   2.0,
+   0.0,
+   0.025,
+   4.4,
+   2.4
+  ],
+  "DR-EXT-W-AMB-S": [
+   -0.025,
+   16.6,
+   0.0,
+   0.025,
+   19.0,
+   2.4
+  ],
+  "DR-EXT-W-AMB-FRONT": [
+   -0.025,
+   60.0,
+   0.0,
+   0.025,
+   63.6,
+   2.4
+  ],
+  "DR-EXT-W-AMB-WING": [
+   -0.025,
+   68.4,
+   0.0,
+   0.025,
+   70.8,
+   2.4
+  ],
+  "DR-EXT-W-AMB-CROSS": [
+   -0.025,
+   39.2,
+   1.15,
+   0.025,
+   42.8,
+   3.55
+  ],
+  "DR-EXT-W-BOH": [
+   -0.025,
+   80.3,
+   0.0,
+   0.025,
+   82.7,
+   2.4
+  ],
+  "DR-EXT-E-FOYER": [
+   58.975,
+   2.0,
+   0.0,
+   59.025,
+   4.4,
+   2.4
+  ],
+  "DR-EXT-E-AMB-S": [
+   58.975,
+   16.6,
+   0.0,
+   59.025,
+   19.0,
+   2.4
+  ],
+  "DR-EXT-E-AMB-FRONT": [
+   58.975,
+   60.0,
+   0.0,
+   59.025,
+   63.6,
+   2.4
+  ],
+  "DR-EXT-E-AMB-WING": [
+   58.975,
+   68.4,
+   0.0,
+   59.025,
+   70.8,
+   2.4
+  ],
+  "DR-EXT-E-AMB-CROSS": [
+   58.975,
+   39.2,
+   1.15,
+   59.025,
+   42.8,
+   3.55
+  ],
+  "DR-EXT-E-BOH": [
+   58.975,
+   80.3,
+   0.0,
+   59.025,
+   82.7,
+   2.4
+  ],
+  "DR-EXT-MAIN-1": [
+   7.7,
+   -0.025,
+   0.0,
+   11.3,
+   0.025,
+   2.4
+  ],
+  "DR-EXT-MAIN-2": [
+   17.7,
+   -0.025,
+   0.0,
+   21.3,
+   0.025,
+   2.4
+  ],
+  "DR-EXT-MAIN-3": [
+   27.7,
+   -0.025,
+   0.0,
+   31.3,
+   0.025,
+   2.4
+  ],
+  "DR-EXT-MAIN-4": [
+   37.7,
+   -0.025,
+   0.0,
+   41.3,
+   0.025,
+   2.4
+  ],
+  "DR-EXT-MAIN-5": [
+   47.7,
+   -0.025,
+   0.0,
+   51.3,
+   0.025,
+   2.4
+  ]
+ },
+ "columns_grid6_3": {
+  "STR-COL-A3": [
+   -0.2,
+   15.8,
+   -0.9,
+   0.2,
+   16.2,
+   7.65
+  ],
+  "STR-COL-B3": [
+   4.2,
+   15.7,
+   -0.9,
+   4.8,
+   16.3,
+   14.0
+  ],
+  "STR-COL-C3": [
+   14.3,
+   15.8,
+   -0.9,
+   14.7,
+   16.2,
+   14.0
+  ],
+  "STR-COL-D3": [
+   24.3,
+   15.8,
+   -0.9,
+   24.7,
+   16.2,
+   14.0
+  ],
+  "STR-COL-E3": [
+   34.3,
+   15.8,
+   -0.9,
+   34.7,
+   16.2,
+   14.0
+  ],
+  "STR-COL-F3": [
+   44.3,
+   15.8,
+   -0.9,
+   44.7,
+   16.2,
+   14.0
+  ],
+  "STR-COL-G3": [
+   54.2,
+   15.7,
+   -0.9,
+   54.8,
+   16.3,
+   14.0
+  ],
+  "STR-COL-H3": [
+   58.8,
+   15.8,
+   -0.9,
+   59.2,
+   16.2,
+   7.65
+  ],
+  "STR-COL-A6": [
+   -0.2,
+   38.3,
+   -0.9,
+   0.2,
+   38.7,
+   5.3
+  ],
+  "STR-COL-B6": [
+   4.2,
+   38.2,
+   -0.9,
+   4.8,
+   38.8,
+   14.0
+  ],
+  "STR-COL-G6": [
+   54.2,
+   38.2,
+   -0.9,
+   54.8,
+   38.8,
+   14.0
+  ],
+  "STR-COL-H6": [
+   58.8,
+   38.3,
+   -0.9,
+   59.2,
+   38.7,
+   5.3
+  ]
+ },
+ "lift": {
+  "ARC-LIFT-CAR": [
+   15.3,
+   13.75,
+   0.0,
+   17.1,
+   15.55,
+   2.3
+  ],
+  "ARC-WALL-LIFT-S": [
+   15.0,
+   13.35,
+   0.0,
+   17.4,
+   13.55,
+   7.65
+  ],
+  "DR-LIFT-L00": [
+   15.65,
+   13.425,
+   0.0,
+   16.75,
+   13.475,
+   2.1
+  ],
+  "DR-LIFT-L02": [
+   15.65,
+   13.425,
+   3.985,
+   16.75,
+   13.475,
+   6.085
+  ],
+  "ARC-WALL-LIFT-W": [
+   14.9,
+   13.45,
+   0.0,
+   15.1,
+   15.85,
+   7.65
+  ],
+  "ARC-WALL-LIFT-E": [
+   17.3,
+   13.45,
+   0.0,
+   17.5,
+   15.85,
+   7.65
+  ]
+ },
+ "foyer_stair_min_headroom": {
+  "ARC-STAIR-FOYER-1": [
+   4.265,
+   [
+    11.62,
+    5.55,
+    3.99,
+    "ENV-ROOF-FOYER"
+   ]
+  ],
+  "ARC-STAIR-FOYER-2": [
+   4.265,
+   [
+    15.01,
+    5.55,
+    3.99,
+    "ENV-ROOF-FOYER"
+   ]
+  ],
+  "ARC-STAIR-FOYER-3": [
+   4.265,
+   [
+    41.62,
+    5.55,
+    3.99,
+    "ENV-ROOF-FOYER"
+   ]
+  ],
+  "ARC-STAIR-FOYER-4": [
+   4.265,
+   [
+    45.54,
+    6.01,
+    3.99,
+    "ENV-ROOF-FOYER"
+   ]
+  ]
+ },
+ "foyer_stair_profile_mid": {
+  "ARC-STAIR-FOYER-1": [
+   [
+    4.01,
+    0.17
+   ],
+   [
+    4.28,
+    0.35
+   ],
+   [
+    4.54,
+    0.52
+   ],
+   [
+    4.8,
+    0.69
+   ],
+   [
+    5.06,
+    0.87
+   ],
+   [
+    5.33,
+    1.04
+   ],
+   [
+    5.59,
+    1.21
+   ],
+   [
+    5.85,
+    1.39
+   ],
+   [
+    6.11,
+    1.39
+   ],
+   [
+    6.38,
+    1.56
+   ],
+   [
+    6.64,
+    1.73
+   ],
+   [
+    6.9,
+    1.91
+   ],
+   [
+    7.16,
+    2.08
+   ],
+   [
+    7.42,
+    2.08
+   ],
+   [
+    7.69,
+    2.08
+   ],
+   [
+    7.95,
+    2.08
+   ],
+   [
+    8.21,
+    2.08
+   ],
+   [
+    8.47,
+    2.08
+   ],
+   [
+    8.74,
+    2.25
+   ],
+   [
+    9.0,
+    2.43
+   ],
+   [
+    9.26,
+    2.6
+   ],
+   [
+    9.53,
+    2.77
+   ],
+   [
+    9.79,
+    2.95
+   ],
+   [
+    10.05,
+    3.12
+   ],
+   [
+    10.31,
+    3.12
+   ],
+   [
+    10.57,
+    3.29
+   ],
+   [
+    10.84,
+    3.47
+   ],
+   [
+    11.1,
+    3.64
+   ],
+   [
+    11.36,
+    3.81
+   ],
+   [
+    11.62,
+    3.99
+   ],
+   [
+    11.89,
+    3.99
+   ],
+   [
+    12.15,
+    3.99
+   ],
+   [
+    12.41,
+    3.99
+   ],
+   [
+    12.68,
+    3.99
+   ],
+   [
+    12.94,
+    3.99
+   ],
+   [
+    13.2,
+    3.99
+   ],
+   [
+    13.46,
+    3.99
+   ],
+   [
+    13.72,
+    3.99
+   ],
+   [
+    13.99,
+    3.99
+   ]
+  ],
+  "ARC-STAIR-FOYER-2": [
+   [
+    15.01,
+    3.99
+   ],
+   [
+    15.28,
+    3.98
+   ],
+   [
+    15.54,
+    3.98
+   ],
+   [
+    15.8,
+    3.98
+   ],
+   [
+    16.06,
+    3.98
+   ],
+   [
+    16.32,
+    3.98
+   ],
+   [
+    16.59,
+    3.98
+   ],
+   [
+    16.85,
+    3.98
+   ],
+   [
+    17.11,
+    3.98
+   ],
+   [
+    17.38,
+    3.98
+   ],
+   [
+    17.64,
+    3.81
+   ],
+   [
+    17.9,
+    3.64
+   ],
+   [
+    18.16,
+    3.47
+   ],
+   [
+    18.43,
+    3.29
+   ],
+   [
+    18.69,
+    3.12
+   ],
+   [
+    18.95,
+    2.95
+   ],
+   [
+    19.21,
+    2.95
+   ],
+   [
+    19.48,
+    2.77
+   ],
+   [
+    19.74,
+    2.6
+   ],
+   [
+    20.0,
+    2.43
+   ],
+   [
+    20.26,
+    2.25
+   ],
+   [
+    20.52,
+    2.08
+   ],
+   [
+    20.79,
+    2.08
+   ],
+   [
+    21.05,
+    2.08
+   ],
+   [
+    21.31,
+    2.08
+   ],
+   [
+    21.57,
+    2.08
+   ],
+   [
+    21.84,
+    2.08
+   ],
+   [
+    22.1,
+    1.91
+   ],
+   [
+    22.36,
+    1.73
+   ],
+   [
+    22.62,
+    1.56
+   ],
+   [
+    22.89,
+    1.39
+   ],
+   [
+    23.15,
+    1.21
+   ],
+   [
+    23.41,
+    1.21
+   ],
+   [
+    23.68,
+    1.04
+   ],
+   [
+    23.94,
+    0.87
+   ],
+   [
+    24.2,
+    0.69
+   ],
+   [
+    24.46,
+    0.52
+   ],
+   [
+    24.73,
+    0.35
+   ],
+   [
+    24.99,
+    0.17
+   ]
+  ],
+  "ARC-STAIR-FOYER-3": [
+   [
+    34.01,
+    0.17
+   ],
+   [
+    34.27,
+    0.35
+   ],
+   [
+    34.54,
+    0.52
+   ],
+   [
+    34.8,
+    0.69
+   ],
+   [
+    35.06,
+    0.87
+   ],
+   [
+    35.33,
+    1.04
+   ],
+   [
+    35.59,
+    1.21
+   ],
+   [
+    35.85,
+    1.39
+   ],
+   [
+    36.11,
+    1.39
+   ],
+   [
+    36.38,
+    1.56
+   ],
+   [
+    36.64,
+    1.73
+   ],
+   [
+    36.9,
+    1.91
+   ],
+   [
+    37.16,
+    2.08
+   ],
+   [
+    37.42,
+    2.08
+   ],
+   [
+    37.69,
+    2.08
+   ],
+   [
+    37.95,
+    2.08
+   ],
+   [
+    38.21,
+    2.08
+   ],
+   [
+    38.48,
+    2.08
+   ],
+   [
+    38.74,
+    2.25
+   ],
+   [
+    39.0,
+    2.43
+   ],
+   [
+    39.26,
+    2.6
+   ],
+   [
+    39.52,
+    2.77
+   ],
+   [
+    39.79,
+    2.95
+   ],
+   [
+    40.05,
+    3.12
+   ],
+   [
+    40.31,
+    3.12
+   ],
+   [
+    40.58,
+    3.29
+   ],
+   [
+    40.84,
+    3.47
+   ],
+   [
+    41.1,
+    3.64
+   ],
+   [
+    41.36,
+    3.81
+   ],
+   [
+    41.62,
+    3.98
+   ],
+   [
+    41.89,
+    3.98
+   ],
+   [
+    42.15,
+    3.98
+   ],
+   [
+    42.41,
+    3.99
+   ],
+   [
+    42.67,
+    3.98
+   ],
+   [
+    42.94,
+    3.98
+   ],
+   [
+    43.2,
+    3.98
+   ],
+   [
+    43.46,
+    3.98
+   ],
+   [
+    43.73,
+    3.98
+   ],
+   [
+    43.99,
+    3.98
+   ]
+  ],
+  "ARC-STAIR-FOYER-4": [
+   [
+    45.01,
+    3.98
+   ],
+   [
+    45.27,
+    3.98
+   ],
+   [
+    45.54,
+    3.98
+   ],
+   [
+    45.8,
+    3.98
+   ],
+   [
+    46.06,
+    3.98
+   ],
+   [
+    46.33,
+    3.98
+   ],
+   [
+    46.59,
+    3.99
+   ],
+   [
+    46.85,
+    3.98
+   ],
+   [
+    47.11,
+    3.98
+   ],
+   [
+    47.38,
+    3.98
+   ],
+   [
+    47.64,
+    3.81
+   ],
+   [
+    47.9,
+    3.64
+   ],
+   [
+    48.16,
+    3.47
+   ],
+   [
+    48.42,
+    3.29
+   ],
+   [
+    48.69,
+    3.12
+   ],
+   [
+    48.95,
+    2.95
+   ],
+   [
+    49.21,
+    2.95
+   ],
+   [
+    49.48,
+    2.77
+   ],
+   [
+    49.74,
+    2.6
+   ],
+   [
+    50.0,
+    2.43
+   ],
+   [
+    50.26,
+    2.25
+   ],
+   [
+    50.52,
+    2.08
+   ],
+   [
+    50.79,
+    2.08
+   ],
+   [
+    51.05,
+    2.08
+   ],
+   [
+    51.31,
+    2.08
+   ],
+   [
+    51.58,
+    2.08
+   ],
+   [
+    51.84,
+    2.08
+   ],
+   [
+    52.1,
+    1.91
+   ],
+   [
+    52.36,
+    1.73
+   ],
+   [
+    52.62,
+    1.56
+   ],
+   [
+    52.89,
+    1.39
+   ],
+   [
+    53.15,
+    1.21
+   ],
+   [
+    53.41,
+    1.21
+   ],
+   [
+    53.67,
+    1.04
+   ],
+   [
+    53.94,
+    0.87
+   ],
+   [
+    54.2,
+    0.69
+   ],
+   [
+    54.46,
+    0.52
+   ],
+   [
+    54.73,
+    0.35
+   ],
+   [
+    54.99,
+    0.17
+   ]
+  ]
+ },
+ "storey_base_z_range": {
+  "L00": [
+   -1.5,
+   1.04,
+   1765
+  ],
+  "L01": [
+   -0.25,
+   3.95,
+   2178
+  ],
+  "L02": [
+   -0.25,
+   5.49,
+   40
+  ],
+  "L03": [
+   4.3,
+   7.42,
+   56
+  ],
+  "L04": [
+   7.65,
+   12.6,
+   32
+  ],
+  "L05": [
+   13.6,
+   17.85,
+   543
+  ]
+ },
+ "storey_names": [
+  "L00",
+  "L01",
+  "L02",
+  "L03",
+  "L04",
+  "L05",
+  "None"
+ ],
+ "custom_prop_keys_any": [
+  "assembly",
+  "host",
+  "ifc_class",
+  "kind",
+  "object_type",
+  "opening_json",
+  "predefined_type",
+  "props_json",
+  "storey",
+  "strut_json"
+ ]
+}

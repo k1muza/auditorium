@@ -1,0 +1,2692 @@
+{
+ "_meta": {
+  "schema": "church-auditorium-proposal/1.0",
+  "generated": "2026-11-02",
+  "note": "Values tagged src: M = measured from model geometry, P = authored model property, E = derived preliminary estimate, C = requires confirmation, X = excluded. Bracketed values are unfilled fields."
+ },
+ "doc": {
+  "title": "PROPOSED 3,000-SEAT CHURCH AUDITORIUM",
+  "subtitle": "Preliminary Architectural & Structural Engineering Design Proposal",
+  "location": "Zimbabwe",
+  "status": "Preliminary Design — For Review",
+  "docNo": "[DOC NO.]",
+  "rev": "[REV]",
+  "date": "[ISSUE DATE]",
+  "preparedBy": "[PREPARED BY]",
+  "checkedBy": "[CHECKED BY]",
+  "client": "[CLIENT]",
+  "site": "[SITE ADDRESS]",
+  "model": "PL06-21c8b6d8b4",
+  "modelFile": "church_3000_concept_PL06-21c8b6d8b4_VIEWING_COPY.blend",
+  "modelScene": "CA3000_Concept",
+  "modelFlag": "CONCEPT - UNVERIFIED - NOT FOR CONSTRUCTION"
+ },
+ "metrics": [
+  {
+   "label": "Seating capacity",
+   "value": "3,000",
+   "unit": "fixed seats",
+   "src": "M",
+   "note": "Congregation seats counted in model (SEAT-C)"
+  },
+  {
+   "label": "Building footprint",
+   "value": "5,236",
+   "unit": "m²",
+   "src": "M",
+   "note": "59.30 × 88.30 m to external wall face"
+  },
+  {
+   "label": "Gross floor area",
+   "value": "5,501",
+   "unit": "m²",
+   "src": "P",
+   "note": "Sum of 28 space allowances, L00 + L02"
+  },
+  {
+   "label": "Overall length × width",
+   "value": "88.3 × 59.3",
+   "unit": "m",
+   "src": "M",
+   "note": "External wall line; excludes canopy and external steps"
+  },
+  {
+   "label": "Maximum roof height",
+   "value": "18.400",
+   "unit": "m",
+   "src": "M",
+   "note": "Top of hall roof above L00 ±0.000"
+  },
+  {
+   "label": "Main structural span",
+   "value": "50.000",
+   "unit": "m",
+   "src": "M",
+   "note": "Truss span, grid B to G"
+  },
+  {
+   "label": "Structural bays",
+   "value": "8",
+   "unit": "hall bays",
+   "src": "M",
+   "note": "9 trusses on grids 3–11; 11 grid bays overall"
+  },
+  {
+   "label": "Estimated roof area",
+   "value": "5,332",
+   "unit": "m²",
+   "src": "E",
+   "note": "Roof plane areas, hall corrected for 4.57° slope"
+  }
+ ],
+ "copy": {
+  "overview": [
+   "This document presents the preliminary architectural and structural concept for a 3,000-seat church auditorium in Zimbabwe. It is compiled directly from the project’s concept model (revision PL06) and is issued so that the building committee, prospective contributors and consulting engineers can review the proposal before engineering design begins.",
+   "The building is a single long-span hall of 50 metres clear between steel portal columns, roofed by nine trusses at grid lines 3 to 11. Congregation seating is arranged in six blocks across 41 rows: a gently sloped front section, a level mid cross-aisle carrying the wheelchair band, and a uniformly tiered rear section rising to a rear platform at +4.600 m.",
+   "A two-level foyer at the entrance front, continuous ambulatories along both long sides, and a back-of-house wing behind the platform enclose the hall. All structural members in the model are space reservations or placeholder sections; no element has yet been analysed or designed."
+  ],
+  "vision": [
+   "The auditorium is conceived as one room. Every seat looks toward a 20-metre-wide platform beneath a single, uninterrupted roof, so that the congregation reads itself as one body rather than a set of separate galleries.",
+   "Option A in the model — a single-level hall with a tiered rear section — was retained in preference to a floor-plus-balcony scheme. It avoids a suspended or cantilevered balcony structure and keeps the structural system to a long-span roof on columns, at the cost of a deeper hall and a maximum viewing distance of 45.45 m.",
+   "The serving spaces sit outside the column lines: ambulatories carry circulation and egress ramps along both sides, the foyer and upper foyer gather people at the entrance, and the back-of-house wing supports the platform. The structure is regular and repetitive, and the trusses are intended to remain legible from the seating."
+  ],
+  "principles": [
+   {
+    "n": "01",
+    "t": "One room",
+    "b": "A single 50 m clear span; no columns or balconies within the seating."
+   },
+   {
+    "n": "02",
+    "t": "Rake and sightline",
+    "b": "Front slope at 1:10.56, level cross aisle at +1.150, rear tiers on a uniform 150 mm riser."
+   },
+   {
+    "n": "03",
+    "t": "Structure as order",
+    "b": "Nine repeating trusses on a 59.0 × 88.0 m grid set the rhythm of roof, walls and lighting."
+   },
+   {
+    "n": "04",
+    "t": "Served and serving",
+    "b": "Foyer, ambulatories and back-of-house sit outside the hall columns and carry all circulation."
+   }
+  ],
+  "interior": [
+   "Interior views are exported from the concept model. Finishes, colours and lighting in the renders are indicative only."
+  ],
+  "structure": [
+   "The primary structure is a series of nine long-span steel trusses spanning 50.000 m between hall portal columns on grid lines B and G. Trusses bear at +14.000 m and rise at 1:12.5 to an apex depth of approximately 3.3 m at grid line D–E centre.",
+   "Purlins at 5.0 m centres on plan span between trusses. Roof-plane X-bracing is placed in bays 3–4, 7–8 and 10–11, with wall bracing within the hall cavity walls in the end bays and knee braces at grid lines B and G (4–10) indicating a moment-frame concept (assumption A-27).",
+   "Lower wings — foyer, ambulatories and back-of-house — are framed on 0.40 m perimeter column reservations with their own roof beams. Foundations are shown as pad footings at every column position as reference locations only; no geotechnical information is available."
+  ]
+ },
+ "glance": {
+  "arch": [
+   {
+    "label": "Grid extent (A–H × 1–12)",
+    "value": "59.000 × 88.000",
+    "unit": "m",
+    "src": "M",
+    "status": "Unverified"
+   },
+   {
+    "label": "Footprint to external face",
+    "value": "5,236",
+    "unit": "m²",
+    "src": "M",
+    "status": "Unverified"
+   },
+   {
+    "label": "Space allowances (28 spaces)",
+    "value": "5,501",
+    "unit": "m²",
+    "src": "P",
+    "status": "Concept allowance"
+   },
+   {
+    "label": "Auditorium seating hall (SP-01)",
+    "value": "2,378.14",
+    "unit": "m²",
+    "src": "P",
+    "status": "Concept allowance"
+   },
+   {
+    "label": "Platform (SP-02), +0.900",
+    "value": "20.0 × 10.0",
+    "unit": "m",
+    "src": "M",
+    "status": "Unverified"
+   },
+   {
+    "label": "Top of roof",
+    "value": "+18.400",
+    "unit": "m",
+    "src": "M",
+    "status": "Unverified"
+   },
+   {
+    "label": "Levels L00 – L05",
+    "value": "±0.000 – +13.600",
+    "unit": "m",
+    "src": "M",
+    "status": "L03 sequence to confirm"
+   }
+  ],
+  "struct": [
+   {
+    "label": "Truss span B–G",
+    "value": "50.000",
+    "unit": "m",
+    "src": "M",
+    "status": "Unverified"
+   },
+   {
+    "label": "Trusses / hall bays",
+    "value": "9 / 8",
+    "unit": "no.",
+    "src": "M",
+    "status": "Unverified"
+   },
+   {
+    "label": "Bay spacing",
+    "value": "8.0 typ.; 6.5, 9.5 at grid 6",
+    "unit": "m",
+    "src": "M",
+    "status": "To confirm"
+   },
+   {
+    "label": "Truss bearing / apex chord",
+    "value": "+14.000 / +17.475",
+    "unit": "m",
+    "src": "M",
+    "status": "Placeholder"
+   },
+   {
+    "label": "Roof pitch",
+    "value": "4.57",
+    "unit": "deg",
+    "src": "M",
+    "status": "Unverified"
+   },
+   {
+    "label": "Columns / pad footings",
+    "value": "76 / 76",
+    "unit": "no.",
+    "src": "M",
+    "status": "Space reservation"
+   },
+   {
+    "label": "Steel centreline length (all)",
+    "value": "4,620",
+    "unit": "m",
+    "src": "E",
+    "status": "Sections not designed"
+   }
+  ],
+  "func": [
+   {
+    "label": "Congregation seats",
+    "value": "3,000",
+    "unit": "seats",
+    "src": "M",
+    "status": "Counted"
+   },
+   {
+    "label": "Choir seats (not in target)",
+    "value": "329",
+    "unit": "seats",
+    "src": "M",
+    "status": "Counted"
+   },
+   {
+    "label": "Wheelchair spaces / companion seats",
+    "value": "32 / 30",
+    "unit": "no.",
+    "src": "M",
+    "status": "Dimensions unverified"
+   },
+   {
+    "label": "Assessed hall occupants",
+    "value": "3,451",
+    "unit": "persons",
+    "src": "P",
+    "status": "Placeholder method"
+   },
+   {
+    "label": "Building occupants incl. staff",
+    "value": "3,481",
+    "unit": "persons",
+    "src": "P",
+    "status": "Placeholder method"
+   },
+   {
+    "label": "External exits / hall exits",
+    "value": "17 / 10",
+    "unit": "doors",
+    "src": "M",
+    "status": "Fire rating TBC"
+   },
+   {
+    "label": "Max. viewing distance to platform",
+    "value": "45.45",
+    "unit": "m",
+    "src": "P",
+    "status": "Unverified"
+   }
+  ],
+  "model": [
+   {
+    "label": "Model revision",
+    "value": "PL06-21c8b6d8b4",
+    "unit": "",
+    "src": "P",
+    "status": "Viewing copy"
+   },
+   {
+    "label": "Model objects (mesh / other)",
+    "value": "5,051 / 46",
+    "unit": "",
+    "src": "M",
+    "status": "—"
+   },
+   {
+    "label": "Collections (classified)",
+    "value": "28",
+    "unit": "",
+    "src": "M",
+    "status": "—"
+   },
+   {
+    "label": "Structural member ends checked",
+    "value": "352",
+    "unit": "",
+    "src": "P",
+    "status": "Automated self-check"
+   },
+   {
+    "label": "Unassigned ground coverage",
+    "value": "0",
+    "unit": "fraction",
+    "src": "P",
+    "status": "Automated self-check"
+   }
+  ],
+  "verif": [
+   {
+    "label": "Structural analysis",
+    "value": "Not started",
+    "unit": "",
+    "src": "C",
+    "status": "Outstanding"
+   },
+   {
+    "label": "Member design (SANS 10162-1)",
+    "value": "Not started",
+    "unit": "",
+    "src": "C",
+    "status": "Outstanding"
+   },
+   {
+    "label": "Geotechnical investigation",
+    "value": "None",
+    "unit": "",
+    "src": "C",
+    "status": "Outstanding"
+   },
+   {
+    "label": "Fire & egress engineering",
+    "value": "Placeholder checks only",
+    "unit": "",
+    "src": "C",
+    "status": "Outstanding"
+   },
+   {
+    "label": "MEP design",
+    "value": "Space allowances only",
+    "unit": "",
+    "src": "C",
+    "status": "Outstanding"
+   },
+   {
+    "label": "Site survey / levels",
+    "value": "Flat grade assumed",
+    "unit": "",
+    "src": "C",
+    "status": "Outstanding"
+   }
+  ]
+ },
+ "rooms": [
+  {
+   "code": "SP-01",
+   "name": "Auditorium seating hall",
+   "area": "2,378.14",
+   "level": "L00"
+  },
+  {
+   "code": "SP-02",
+   "name": "Platform / pulpit and band (open floor)",
+   "area": "200.00",
+   "level": "L00"
+  },
+  {
+   "code": "SP-02B",
+   "name": "Stage floor behind platform (unallocated)",
+   "area": "117.00",
+   "level": "L00"
+  },
+  {
+   "code": "SP-03",
+   "name": "Platform wing West (choir / stair)",
+   "area": "235.37",
+   "level": "L00"
+  },
+  {
+   "code": "SP-04",
+   "name": "Platform wing East (choir / accessible ramp)",
+   "area": "235.37",
+   "level": "L00"
+  },
+  {
+   "code": "SP-05",
+   "name": "Main foyer",
+   "area": "484.27",
+   "level": "L00"
+  },
+  {
+   "code": "SP-05W",
+   "name": "Foyer side passage West (to ambulatory)",
+   "area": "36.13",
+   "level": "L00"
+  },
+  {
+   "code": "SP-05E",
+   "name": "Foyer side passage East (to ambulatory)",
+   "area": "36.13",
+   "level": "L00"
+  },
+  {
+   "code": "SP-06",
+   "name": "Foyer below upper foyer (centre)",
+   "area": "225.19",
+   "level": "L00"
+  },
+  {
+   "code": "SP-07",
+   "name": "Upper foyer (mezzanine)",
+   "area": "377.44",
+   "level": "L02"
+  },
+  {
+   "code": "SP-08",
+   "name": "Sound / media booth",
+   "area": "43.65",
+   "level": "L02"
+  },
+  {
+   "code": "SP-09",
+   "name": "Lift shaft",
+   "area": "5.76",
+   "level": "L00"
+  },
+  {
+   "code": "SP-AMB-W",
+   "name": "Ambulatory W (circulation / egress ramps)",
+   "area": "270.06",
+   "level": "L00"
+  },
+  {
+   "code": "SP-AMB-E",
+   "name": "Ambulatory E (circulation / egress ramps)",
+   "area": "270.06",
+   "level": "L00"
+  },
+  {
+   "code": "SP-WC-W",
+   "name": "Toilets West (female)",
+   "area": "34.27",
+   "level": "L00"
+  },
+  {
+   "code": "SP-WC-E",
+   "name": "Toilets East (male)",
+   "area": "34.27",
+   "level": "L00"
+  },
+  {
+   "code": "SP-WCA-W1",
+   "name": "Accessible WC W1",
+   "area": "16.39",
+   "level": "L00"
+  },
+  {
+   "code": "SP-WCA-W2",
+   "name": "Accessible WC W2",
+   "area": "16.39",
+   "level": "L00"
+  },
+  {
+   "code": "SP-WCA-E1",
+   "name": "Accessible WC E1",
+   "area": "16.39",
+   "level": "L00"
+  },
+  {
+   "code": "SP-WCA-E2",
+   "name": "Accessible WC E2",
+   "area": "16.39",
+   "level": "L00"
+  },
+  {
+   "code": "SP-BOH-C",
+   "name": "BOH corridor",
+   "area": "152.62",
+   "level": "L00"
+  },
+  {
+   "code": "SP-BOH-01",
+   "name": "Vestry / pastors' office",
+   "area": "50.23",
+   "level": "L00"
+  },
+  {
+   "code": "SP-BOH-02",
+   "name": "Prayer room",
+   "area": "51.00",
+   "level": "L00"
+  },
+  {
+   "code": "SP-BOH-03",
+   "name": "Green room / choir robing",
+   "area": "61.20",
+   "level": "L00"
+  },
+  {
+   "code": "SP-BOH-04",
+   "name": "General storage",
+   "area": "40.80",
+   "level": "L00"
+  },
+  {
+   "code": "SP-BOH-05",
+   "name": "Accessible WC (BOH)",
+   "area": "14.28",
+   "level": "L00"
+  },
+  {
+   "code": "SP-BOH-06",
+   "name": "Staff WCs",
+   "area": "26.52",
+   "level": "L00"
+  },
+  {
+   "code": "SP-BOH-07",
+   "name": "MEP plant room (allowance)",
+   "area": "55.33",
+   "level": "L00"
+  }
+ ],
+ "exits": [
+  {
+   "id": "X01",
+   "obj": "DR-EXT-E-AMB-CROSS",
+   "role": "External exit - cross-aisle landing to external steps",
+   "clear": "3.36",
+   "leaves": 3
+  },
+  {
+   "id": "X02",
+   "obj": "DR-EXT-E-AMB-FRONT",
+   "role": "External exit - opposite hall front exit",
+   "clear": "3.36",
+   "leaves": 3
+  },
+  {
+   "id": "X03",
+   "obj": "DR-EXT-E-AMB-S",
+   "role": "External exit - ambulatory south",
+   "clear": "2.24",
+   "leaves": 2
+  },
+  {
+   "id": "X04",
+   "obj": "DR-EXT-E-AMB-WING",
+   "role": "External exit - opposite hall wing exit",
+   "clear": "2.24",
+   "leaves": 2
+  },
+  {
+   "id": "X05",
+   "obj": "DR-EXT-E-BOH",
+   "role": "External exit - BOH corridor",
+   "clear": "2.24",
+   "leaves": 2
+  },
+  {
+   "id": "X06",
+   "obj": "DR-EXT-E-FOYER",
+   "role": "External exit - foyer side",
+   "clear": "2.24",
+   "leaves": 2
+  },
+  {
+   "id": "X07",
+   "obj": "DR-EXT-MAIN-1",
+   "role": "Main entrance / external exit",
+   "clear": "3.36",
+   "leaves": 3
+  },
+  {
+   "id": "X08",
+   "obj": "DR-EXT-MAIN-2",
+   "role": "Main entrance / external exit",
+   "clear": "3.36",
+   "leaves": 3
+  },
+  {
+   "id": "X09",
+   "obj": "DR-EXT-MAIN-3",
+   "role": "Main entrance / external exit",
+   "clear": "3.36",
+   "leaves": 3
+  },
+  {
+   "id": "X10",
+   "obj": "DR-EXT-MAIN-4",
+   "role": "Main entrance / external exit",
+   "clear": "3.36",
+   "leaves": 3
+  },
+  {
+   "id": "X11",
+   "obj": "DR-EXT-MAIN-5",
+   "role": "Main entrance / external exit",
+   "clear": "3.36",
+   "leaves": 3
+  },
+  {
+   "id": "X12",
+   "obj": "DR-EXT-W-AMB-CROSS",
+   "role": "External exit - cross-aisle landing to external steps",
+   "clear": "3.36",
+   "leaves": 3
+  },
+  {
+   "id": "X13",
+   "obj": "DR-EXT-W-AMB-FRONT",
+   "role": "External exit - opposite hall front exit",
+   "clear": "3.36",
+   "leaves": 3
+  },
+  {
+   "id": "X14",
+   "obj": "DR-EXT-W-AMB-S",
+   "role": "External exit - ambulatory south",
+   "clear": "2.24",
+   "leaves": 2
+  },
+  {
+   "id": "X15",
+   "obj": "DR-EXT-W-AMB-WING",
+   "role": "External exit - opposite hall wing exit",
+   "clear": "2.24",
+   "leaves": 2
+  },
+  {
+   "id": "X16",
+   "obj": "DR-EXT-W-BOH",
+   "role": "External exit - BOH corridor",
+   "clear": "2.24",
+   "leaves": 2
+  },
+  {
+   "id": "X17",
+   "obj": "DR-EXT-W-FOYER",
+   "role": "External exit - foyer side",
+   "clear": "2.24",
+   "leaves": 2
+  }
+ ],
+ "seating": {
+  "blocks": [
+   {
+    "id": "B1",
+    "seats": 366,
+    "rows": "R04–R41",
+    "nrows": 38
+   },
+   {
+    "id": "B2",
+    "seats": 560,
+    "rows": "R01–R41",
+    "nrows": 41
+   },
+   {
+    "id": "B3",
+    "seats": 574,
+    "rows": "R01–R41",
+    "nrows": 41
+   },
+   {
+    "id": "B4",
+    "seats": 574,
+    "rows": "R01–R41",
+    "nrows": 41
+   },
+   {
+    "id": "B5",
+    "seats": 560,
+    "rows": "R01–R41",
+    "nrows": 41
+   },
+   {
+    "id": "B6",
+    "seats": 366,
+    "rows": "R04–R41",
+    "nrows": 38
+   }
+  ],
+  "totalCongregation": "3,000",
+  "other": [
+   {
+    "id": "Choir W lower / upper",
+    "seats": "50 / 129",
+    "note": "Facing pulpit; excluded from target"
+   },
+   {
+    "id": "Choir E lower / upper",
+    "seats": "45 / 105",
+    "note": "Facing pulpit; excluded from target"
+   },
+   {
+    "id": "Wheelchair spaces — mid cross aisle",
+    "seats": "24",
+    "note": "0.90 × 1.40 m each"
+   },
+   {
+    "id": "Wheelchair spaces — front zone",
+    "seats": "6",
+    "note": "Level with front zone"
+   },
+   {
+    "id": "Wheelchair spaces — choir E / W",
+    "seats": "1 / 1",
+    "note": "Step-free, off cross aisle"
+   },
+   {
+    "id": "Companion seats",
+    "seats": "30",
+    "note": "Loose, adjacent to wheelchair spaces"
+   },
+   {
+    "id": "Refuge spaces at L02",
+    "seats": "4",
+    "note": "Protection not designed (OI-16)"
+   }
+  ],
+  "dims": [
+   {
+    "label": "Row pitch (back-to-back)",
+    "value": "950 mm",
+    "src": "M"
+   },
+   {
+    "label": "Seat envelope (w × d × h)",
+    "value": "480 × 600 × 850 mm",
+    "src": "M"
+   },
+   {
+    "label": "Front slope, rows R01–R19",
+    "value": "1 : 10.56",
+    "src": "P"
+   },
+   {
+    "label": "Rear tiers R20–R41, riser",
+    "value": "150 mm uniform",
+    "src": "P"
+   },
+   {
+    "label": "Cross aisle level / rear platform",
+    "value": "+1.150 / +4.600",
+    "src": "M"
+   },
+   {
+    "label": "Straight aisle clear width",
+    "value": "1.25 m",
+    "src": "P"
+   },
+   {
+    "label": "Wall aisle minimum",
+    "value": "1.825 m",
+    "src": "P"
+   },
+   {
+    "label": "Max. seats to an aisle",
+    "value": "7",
+    "src": "P"
+   },
+   {
+    "label": "Aisle riser max / going min",
+    "value": "150 / 950 mm",
+    "src": "P"
+   },
+   {
+    "label": "Sightline C-value min (N1 / N2)",
+    "value": "60 / 120 mm",
+    "src": "P"
+   }
+  ],
+  "sight": [
+   {
+    "label": "Max. eye distance to platform edge",
+    "value": "45.45 m"
+   },
+   {
+    "label": "Seats > 45° off pulpit axis",
+    "value": "466"
+   },
+   {
+    "label": "Seats > 60° off pulpit axis",
+    "value": "108"
+   },
+   {
+    "label": "Max. off-axis angle",
+    "value": "66.17°"
+   },
+   {
+    "label": "Seats relying on IMAG screens",
+    "value": "2,046"
+   },
+   {
+    "label": "Seats trimmed for angle",
+    "value": "76"
+   }
+  ]
+ },
+ "schedules": {
+  "columns": [
+   {
+    "id": "C1",
+    "grid": "A/1, A/2, B/1 … (16)",
+    "type": "Foyer column",
+    "section": "TBD · 0.40x0.40 m reservation",
+    "size": "8.550 m",
+    "grade": "TBC",
+    "qty": 16,
+    "status": "Not designed",
+    "remarks": "Model role: foyer"
+   },
+   {
+    "id": "C2",
+    "grid": "A/3, H/3",
+    "type": "Perimeter column",
+    "section": "TBD · 0.40x0.40 m reservation",
+    "size": "8.550 m",
+    "grade": "TBC",
+    "qty": 2,
+    "status": "Not designed",
+    "remarks": "Model role: perimeter"
+   },
+   {
+    "id": "C3",
+    "grid": "A/4, A/5, A/6 … (16)",
+    "type": "Perimeter column",
+    "section": "TBD · 0.40x0.40 m reservation",
+    "size": "6.200 m",
+    "grade": "TBC",
+    "qty": 16,
+    "status": "Not designed",
+    "remarks": "Model role: perimeter"
+   },
+   {
+    "id": "C4",
+    "grid": "A/12, B/12, C/12 … (8)",
+    "type": "BOH column",
+    "section": "TBD · 0.40x0.40 m reservation",
+    "size": "5.200 m",
+    "grade": "TBC",
+    "qty": 8,
+    "status": "Not designed",
+    "remarks": "Model role: boh"
+   },
+   {
+    "id": "C5",
+    "grid": "A/canopy, B/canopy, C/canopy … (8)",
+    "type": "Canopy column",
+    "section": "TBD · 0.25x0.25 m reservation",
+    "size": "4.500 m",
+    "grade": "TBC",
+    "qty": 8,
+    "status": "Not designed",
+    "remarks": "Model role: canopy"
+   },
+   {
+    "id": "C6",
+    "grid": "B/3, B/4, B/5 … (18)",
+    "type": "Hall portal column",
+    "section": "TBD · 0.60x0.60 m reservation",
+    "size": "14.900 m",
+    "grade": "TBC",
+    "qty": 18,
+    "status": "Not designed",
+    "remarks": "Model role: hall"
+   },
+   {
+    "id": "C7",
+    "grid": "C/3, C/11, D/3 … (8)",
+    "type": "Gable post",
+    "section": "TBD · 0.40x0.40 m reservation",
+    "size": "14.900 m",
+    "grade": "TBC",
+    "qty": 8,
+    "status": "Not designed",
+    "remarks": "Model role: gable"
+   }
+  ],
+  "beams": [
+   {
+    "id": "B1",
+    "grid": "A, H / 3–11",
+    "type": "Ambulatory roof edge beam",
+    "section": "TBD",
+    "size": "7.60 m avg · 121.6 m total",
+    "grade": "TBC",
+    "qty": 16,
+    "status": "Not designed",
+    "remarks": "Top +5.525"
+   },
+   {
+    "id": "B2",
+    "grid": "3–11 / A–B, G–H",
+    "type": "Ambulatory roof beam",
+    "section": "TBD",
+    "size": "4.00 m avg · 72.0 m total",
+    "grade": "TBC",
+    "qty": 18,
+    "status": "Not designed",
+    "remarks": "Top +5.525"
+   },
+   {
+    "id": "B3",
+    "grid": "11–12 / A–H",
+    "type": "BOH roof beam",
+    "section": "TBD",
+    "size": "7.79 m avg · 116.8 m total",
+    "grade": "TBC",
+    "qty": 15,
+    "status": "Not designed",
+    "remarks": "Top +4.525"
+   },
+   {
+    "id": "B4",
+    "grid": "B, G / 3–11",
+    "type": "Hall eaves beam (B, G)",
+    "section": "TBD",
+    "size": "7.40 m avg · 118.4 m total",
+    "grade": "TBC",
+    "qty": 16,
+    "status": "Not designed",
+    "remarks": "Top +13.800"
+   },
+   {
+    "id": "B5",
+    "grid": "1–3 / A–H",
+    "type": "Foyer roof beam",
+    "section": "TBD",
+    "size": "7.79 m avg · 233.8 m total",
+    "grade": "TBC",
+    "qty": 30,
+    "status": "Not designed",
+    "remarks": "Top +7.950"
+   },
+   {
+    "id": "B6",
+    "grid": "2–3 / A–H",
+    "type": "Upper-foyer mezzanine beam",
+    "section": "TBD",
+    "size": "5.73 m avg · 131.8 m total",
+    "grade": "TBC",
+    "qty": 23,
+    "status": "Not designed",
+    "remarks": "Top +4.050"
+   }
+  ],
+  "trusses": [
+   {
+    "id": "T3–T11 · TC",
+    "grid": "3–11 / B–G",
+    "type": "Truss top chord",
+    "section": "TBD (placeholder)",
+    "size": "10 × ~5.0 m per truss",
+    "grade": "TBC",
+    "qty": 90,
+    "status": "Placeholder section",
+    "remarks": "Slope 1:12.5 (4.57°)"
+   },
+   {
+    "id": "T3–T11 · BC",
+    "grid": "3–11 / B–G",
+    "type": "Truss bottom chord",
+    "section": "TBD (placeholder)",
+    "size": "10 × 5.0 m per truss",
+    "grade": "TBC",
+    "qty": 90,
+    "status": "Placeholder section",
+    "remarks": "Level at +14.175 (centreline)"
+   },
+   {
+    "id": "T3–T11 · V",
+    "grid": "3–11 / B–G",
+    "type": "Truss vertical",
+    "section": "TBD (placeholder)",
+    "size": "11 per truss",
+    "grade": "TBC",
+    "qty": 99,
+    "status": "Placeholder section",
+    "remarks": "Depth 1.500 m at bearing"
+   },
+   {
+    "id": "T3–T11 · D",
+    "grid": "3–11 / B–G",
+    "type": "Truss diagonal",
+    "section": "TBD (placeholder)",
+    "size": "10 per truss",
+    "grade": "TBC",
+    "qty": 90,
+    "status": "Placeholder section",
+    "remarks": "Span 50.000 m B–G"
+   },
+   {
+    "id": "KB",
+    "grid": "B, G / 4–10",
+    "type": "Portal knee brace",
+    "section": "TBD",
+    "size": "3.056 m",
+    "grade": "TBC",
+    "qty": 14,
+    "status": "Concept (A-27)",
+    "remarks": "Moment knee – concept"
+   }
+  ],
+  "purlins": [
+   {
+    "id": "P1",
+    "grid": "Bays 10–11, 3–4, 4–5, 7–8, 8–9, 9–10",
+    "type": "Roof purlin",
+    "section": "TBD",
+    "size": "7.65 m",
+    "grade": "TBC",
+    "qty": 66,
+    "status": "Not designed",
+    "remarks": "11 lines per bay at 5.0 m (on plan)"
+   },
+   {
+    "id": "P2",
+    "grid": "Bays 5–6",
+    "type": "Roof purlin",
+    "section": "TBD",
+    "size": "6.15 m",
+    "grade": "TBC",
+    "qty": 11,
+    "status": "Not designed",
+    "remarks": "11 lines per bay at 5.0 m (on plan)"
+   },
+   {
+    "id": "P3",
+    "grid": "Bays 6–7",
+    "type": "Roof purlin",
+    "section": "TBD",
+    "size": "9.15 m",
+    "grade": "TBC",
+    "qty": 11,
+    "status": "Not designed",
+    "remarks": "11 lines per bay at 5.0 m (on plan)"
+   }
+  ],
+  "bracing": [
+   {
+    "id": "RB",
+    "grid": "Bays 3–4, 7–8, 10–11",
+    "type": "Roof plane X-bracing",
+    "section": "TBD",
+    "size": "9.43 m avg",
+    "grade": "TBC",
+    "qty": 60,
+    "status": "Not designed",
+    "remarks": "20 members per braced bay"
+   },
+   {
+    "id": "WB",
+    "grid": "B, G / 3–4, 10–11",
+    "type": "Wall X-bracing (in cavity)",
+    "section": "TBD",
+    "size": "14.79 m avg",
+    "grade": "TBC",
+    "qty": 8,
+    "status": "Not designed",
+    "remarks": "Hall cavity wall"
+   },
+   {
+    "id": "GB",
+    "grid": "3, 11 / D–E",
+    "type": "Gable bracing",
+    "section": "TBD",
+    "size": "11.07 / 13.58 m",
+    "grade": "TBC",
+    "qty": 4,
+    "status": "Not designed",
+    "remarks": "Feet collected by gable strut"
+   },
+   {
+    "id": "GS",
+    "grid": "3, 11 / D–E",
+    "type": "Gable strut",
+    "section": "TBD",
+    "size": "9.600 m",
+    "grade": "TBC",
+    "qty": 2,
+    "status": "Not designed",
+    "remarks": "Load path to pad footings"
+   }
+  ],
+  "footings": [
+   {
+    "id": "F1",
+    "grid": "Perimeter, gable, foyer, BOH",
+    "type": "Pad footing (reference)",
+    "section": "—",
+    "size": "1.80 × 1.80 × 0.60 m",
+    "grade": "TBC",
+    "qty": 50,
+    "status": "Reference only",
+    "remarks": "No geotechnical data"
+   },
+   {
+    "id": "F2",
+    "grid": "Hall portal columns",
+    "type": "Pad footing (reference)",
+    "section": "—",
+    "size": "2.40 × 2.40 × 0.60 m",
+    "grade": "TBC",
+    "qty": 18,
+    "status": "Reference only",
+    "remarks": "No geotechnical data"
+   },
+   {
+    "id": "F3",
+    "grid": "Canopy columns",
+    "type": "Pad footing (reference)",
+    "section": "—",
+    "size": "1.00 × 1.00 × 0.50 m",
+    "grade": "TBC",
+    "qty": 8,
+    "status": "Reference only",
+    "remarks": "No geotechnical data"
+   }
+  ]
+ },
+ "columnsFull": [
+  {
+   "id": "COL-A1",
+   "grid": "A/1",
+   "role": "foyer",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "7.650",
+   "length": "8.550",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-A2",
+   "grid": "A/2",
+   "role": "foyer",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "7.650",
+   "length": "8.550",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-A3",
+   "grid": "A/3",
+   "role": "perimeter",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "7.650",
+   "length": "8.550",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-A4",
+   "grid": "A/4",
+   "role": "perimeter",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "5.300",
+   "length": "6.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-A5",
+   "grid": "A/5",
+   "role": "perimeter",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "5.300",
+   "length": "6.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-A6",
+   "grid": "A/6",
+   "role": "perimeter",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "5.300",
+   "length": "6.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-A7",
+   "grid": "A/7",
+   "role": "perimeter",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "5.300",
+   "length": "6.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-A8",
+   "grid": "A/8",
+   "role": "perimeter",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "5.300",
+   "length": "6.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-A9",
+   "grid": "A/9",
+   "role": "perimeter",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "5.300",
+   "length": "6.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-A10",
+   "grid": "A/10",
+   "role": "perimeter",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "5.300",
+   "length": "6.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-A11",
+   "grid": "A/11",
+   "role": "perimeter",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "5.300",
+   "length": "6.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-A12",
+   "grid": "A/12",
+   "role": "boh",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "4.300",
+   "length": "5.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-CANOPY-A",
+   "grid": "A/canopy",
+   "role": "canopy",
+   "section": "0.25x0.25",
+   "base": "-0.900",
+   "top": "3.600",
+   "length": "4.500",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-B1",
+   "grid": "B/1",
+   "role": "foyer",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "7.650",
+   "length": "8.550",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-B2",
+   "grid": "B/2",
+   "role": "foyer",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "7.650",
+   "length": "8.550",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-B3",
+   "grid": "B/3",
+   "role": "hall",
+   "section": "0.60x0.60",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-B4",
+   "grid": "B/4",
+   "role": "hall",
+   "section": "0.60x0.60",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-B5",
+   "grid": "B/5",
+   "role": "hall",
+   "section": "0.60x0.60",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-B6",
+   "grid": "B/6",
+   "role": "hall",
+   "section": "0.60x0.60",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-B7",
+   "grid": "B/7",
+   "role": "hall",
+   "section": "0.60x0.60",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-B8",
+   "grid": "B/8",
+   "role": "hall",
+   "section": "0.60x0.60",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-B9",
+   "grid": "B/9",
+   "role": "hall",
+   "section": "0.60x0.60",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-B10",
+   "grid": "B/10",
+   "role": "hall",
+   "section": "0.60x0.60",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-B11",
+   "grid": "B/11",
+   "role": "hall",
+   "section": "0.60x0.60",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-B12",
+   "grid": "B/12",
+   "role": "boh",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "4.300",
+   "length": "5.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-CANOPY-B",
+   "grid": "B/canopy",
+   "role": "canopy",
+   "section": "0.25x0.25",
+   "base": "-0.900",
+   "top": "3.600",
+   "length": "4.500",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-C1",
+   "grid": "C/1",
+   "role": "foyer",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "7.650",
+   "length": "8.550",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-C2",
+   "grid": "C/2",
+   "role": "foyer",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "7.650",
+   "length": "8.550",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-C3",
+   "grid": "C/3",
+   "role": "gable",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-C11",
+   "grid": "C/11",
+   "role": "gable",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-C12",
+   "grid": "C/12",
+   "role": "boh",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "4.300",
+   "length": "5.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-CANOPY-C",
+   "grid": "C/canopy",
+   "role": "canopy",
+   "section": "0.25x0.25",
+   "base": "-0.900",
+   "top": "3.600",
+   "length": "4.500",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-D1",
+   "grid": "D/1",
+   "role": "foyer",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "7.650",
+   "length": "8.550",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-D2",
+   "grid": "D/2",
+   "role": "foyer",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "7.650",
+   "length": "8.550",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-D3",
+   "grid": "D/3",
+   "role": "gable",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-D11",
+   "grid": "D/11",
+   "role": "gable",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-D12",
+   "grid": "D/12",
+   "role": "boh",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "4.300",
+   "length": "5.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-CANOPY-D",
+   "grid": "D/canopy",
+   "role": "canopy",
+   "section": "0.25x0.25",
+   "base": "-0.900",
+   "top": "3.600",
+   "length": "4.500",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-E1",
+   "grid": "E/1",
+   "role": "foyer",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "7.650",
+   "length": "8.550",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-E2",
+   "grid": "E/2",
+   "role": "foyer",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "7.650",
+   "length": "8.550",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-E3",
+   "grid": "E/3",
+   "role": "gable",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-E11",
+   "grid": "E/11",
+   "role": "gable",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-E12",
+   "grid": "E/12",
+   "role": "boh",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "4.300",
+   "length": "5.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-CANOPY-E",
+   "grid": "E/canopy",
+   "role": "canopy",
+   "section": "0.25x0.25",
+   "base": "-0.900",
+   "top": "3.600",
+   "length": "4.500",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-F1",
+   "grid": "F/1",
+   "role": "foyer",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "7.650",
+   "length": "8.550",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-F2",
+   "grid": "F/2",
+   "role": "foyer",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "7.650",
+   "length": "8.550",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-F3",
+   "grid": "F/3",
+   "role": "gable",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-F11",
+   "grid": "F/11",
+   "role": "gable",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-F12",
+   "grid": "F/12",
+   "role": "boh",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "4.300",
+   "length": "5.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-CANOPY-F",
+   "grid": "F/canopy",
+   "role": "canopy",
+   "section": "0.25x0.25",
+   "base": "-0.900",
+   "top": "3.600",
+   "length": "4.500",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-G1",
+   "grid": "G/1",
+   "role": "foyer",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "7.650",
+   "length": "8.550",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-G2",
+   "grid": "G/2",
+   "role": "foyer",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "7.650",
+   "length": "8.550",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-G3",
+   "grid": "G/3",
+   "role": "hall",
+   "section": "0.60x0.60",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-G4",
+   "grid": "G/4",
+   "role": "hall",
+   "section": "0.60x0.60",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-G5",
+   "grid": "G/5",
+   "role": "hall",
+   "section": "0.60x0.60",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-G6",
+   "grid": "G/6",
+   "role": "hall",
+   "section": "0.60x0.60",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-G7",
+   "grid": "G/7",
+   "role": "hall",
+   "section": "0.60x0.60",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-G8",
+   "grid": "G/8",
+   "role": "hall",
+   "section": "0.60x0.60",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-G9",
+   "grid": "G/9",
+   "role": "hall",
+   "section": "0.60x0.60",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-G10",
+   "grid": "G/10",
+   "role": "hall",
+   "section": "0.60x0.60",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-G11",
+   "grid": "G/11",
+   "role": "hall",
+   "section": "0.60x0.60",
+   "base": "-0.900",
+   "top": "14.000",
+   "length": "14.900",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-G12",
+   "grid": "G/12",
+   "role": "boh",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "4.300",
+   "length": "5.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-CANOPY-G",
+   "grid": "G/canopy",
+   "role": "canopy",
+   "section": "0.25x0.25",
+   "base": "-0.900",
+   "top": "3.600",
+   "length": "4.500",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-H1",
+   "grid": "H/1",
+   "role": "foyer",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "7.650",
+   "length": "8.550",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-H2",
+   "grid": "H/2",
+   "role": "foyer",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "7.650",
+   "length": "8.550",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-H3",
+   "grid": "H/3",
+   "role": "perimeter",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "7.650",
+   "length": "8.550",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-H4",
+   "grid": "H/4",
+   "role": "perimeter",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "5.300",
+   "length": "6.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-H5",
+   "grid": "H/5",
+   "role": "perimeter",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "5.300",
+   "length": "6.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-H6",
+   "grid": "H/6",
+   "role": "perimeter",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "5.300",
+   "length": "6.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-H7",
+   "grid": "H/7",
+   "role": "perimeter",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "5.300",
+   "length": "6.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-H8",
+   "grid": "H/8",
+   "role": "perimeter",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "5.300",
+   "length": "6.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-H9",
+   "grid": "H/9",
+   "role": "perimeter",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "5.300",
+   "length": "6.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-H10",
+   "grid": "H/10",
+   "role": "perimeter",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "5.300",
+   "length": "6.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-H11",
+   "grid": "H/11",
+   "role": "perimeter",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "5.300",
+   "length": "6.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-H12",
+   "grid": "H/12",
+   "role": "boh",
+   "section": "0.40x0.40",
+   "base": "-0.900",
+   "top": "4.300",
+   "length": "5.200",
+   "status": "Space reservation only"
+  },
+  {
+   "id": "COL-CANOPY-H",
+   "grid": "H/canopy",
+   "role": "canopy",
+   "section": "0.25x0.25",
+   "base": "-0.900",
+   "top": "3.600",
+   "length": "4.500",
+   "status": "Space reservation only"
+  }
+ ],
+ "quantities": [
+  {
+   "group": "Structural steel",
+   "items": [
+    {
+     "ref": "Q1.1",
+     "item": "Columns (76 no.)",
+     "qty": "718.1",
+     "unit": "m",
+     "basis": "M",
+     "note": "Centreline length; sections not designed"
+    },
+    {
+     "ref": "Q1.2",
+     "item": "Roof trusses T3–T11 (369 members)",
+     "qty": "1,638.8",
+     "unit": "m",
+     "basis": "M",
+     "note": "Centreline length; placeholder sections"
+    },
+    {
+     "ref": "Q1.3",
+     "item": "Purlins (88 no.)",
+     "qty": "673.2",
+     "unit": "m",
+     "basis": "M",
+     "note": "Excludes sag rods, cleats"
+    },
+    {
+     "ref": "Q1.4",
+     "item": "Beams (118 no.)",
+     "qty": "794.4",
+     "unit": "m",
+     "basis": "M",
+     "note": "Wing roofs, eaves, mezzanine"
+    },
+    {
+     "ref": "Q1.5",
+     "item": "Bracing, knee braces, struts",
+     "qty": "795.3",
+     "unit": "m",
+     "basis": "M",
+     "note": "88 members"
+    },
+    {
+     "ref": "Q1.6",
+     "item": "Structural steel mass",
+     "qty": "—",
+     "unit": "t",
+     "basis": "C",
+     "note": "Requires member design"
+    }
+   ]
+  },
+  {
+   "group": "Concrete",
+   "items": [
+    {
+     "ref": "Q2.1",
+     "item": "Pad footings (76 no., reference sizes)",
+     "qty": "163.4",
+     "unit": "m³",
+     "basis": "E",
+     "note": "Geometric volume of placeholders"
+    },
+    {
+     "ref": "Q2.2",
+     "item": "Ground-floor slabs (foyer, hall front, BOH, ambulatories)",
+     "qty": "2,650",
+     "unit": "m²",
+     "basis": "M",
+     "note": "Plan area; thickness not designed"
+    },
+    {
+     "ref": "Q2.3",
+     "item": "Seating rake and cross aisle",
+     "qty": "2,105",
+     "unit": "m²",
+     "basis": "E",
+     "note": "Plan area incl. rear tiers R20–R41"
+    },
+    {
+     "ref": "Q2.4",
+     "item": "Upper foyer slab (L02)",
+     "qty": "470",
+     "unit": "m²",
+     "basis": "M",
+     "note": "Gross, before stair openings"
+    }
+   ]
+  },
+  {
+   "group": "Envelope",
+   "items": [
+    {
+     "ref": "Q3.1",
+     "item": "Roof covering — hall (2 planes)",
+     "qty": "3,326",
+     "unit": "m²",
+     "basis": "E",
+     "note": "Slope-corrected; laps excluded"
+    },
+    {
+     "ref": "Q3.2",
+     "item": "Roof covering — foyer, ambulatories, BOH",
+     "qty": "2,007",
+     "unit": "m²",
+     "basis": "M",
+     "note": "Plan area of roof objects"
+    },
+    {
+     "ref": "Q3.3",
+     "item": "External walls (lower wings)",
+     "qty": "1,931",
+     "unit": "m²",
+     "basis": "P",
+     "note": "Length × height properties; openings not deducted"
+    },
+    {
+     "ref": "Q3.4",
+     "item": "Hall walls (cavity, 14.3 m)",
+     "qty": "3,260",
+     "unit": "m²",
+     "basis": "P",
+     "note": "Two leaves; openings not deducted"
+    },
+    {
+     "ref": "Q3.5",
+     "item": "Rainwater: gutters / downpipes",
+     "qty": "4 / 28",
+     "unit": "no.",
+     "basis": "M",
+     "note": "Sizes by hydraulic engineer"
+    }
+   ]
+  },
+  {
+   "group": "Floors, finishes & components",
+   "items": [
+    {
+     "ref": "Q4.1",
+     "item": "Floor finishes — sum of space allowances",
+     "qty": "5,501",
+     "unit": "m²",
+     "basis": "P",
+     "note": "Finish types not specified"
+    },
+    {
+     "ref": "Q4.2",
+     "item": "Fixed congregation seats",
+     "qty": "3,000",
+     "unit": "no.",
+     "basis": "M",
+     "note": "Plus 329 loose choir seats"
+    },
+    {
+     "ref": "Q4.3",
+     "item": "Doors — external / internal",
+     "qty": "17 / 28",
+     "unit": "no.",
+     "basis": "M",
+     "note": "Fire ratings TBC"
+    },
+    {
+     "ref": "Q4.4",
+     "item": "Stairs / ramps",
+     "qty": "5 / 7",
+     "unit": "no.",
+     "basis": "M",
+     "note": "Handrails not detailed"
+    },
+    {
+     "ref": "Q4.5",
+     "item": "Lift",
+     "qty": "1",
+     "unit": "no.",
+     "basis": "C",
+     "note": "Type and capacity not selected"
+    },
+    {
+     "ref": "Q4.6",
+     "item": "Emergency aisle step lights",
+     "qty": "115",
+     "unit": "no.",
+     "basis": "M",
+     "note": "Allowance"
+    }
+   ]
+  }
+ ],
+ "excluded": [
+  "Site works, earthworks, retaining and external paving (site levels unknown)",
+  "Mechanical, electrical, plumbing and fire services (space allowances only)",
+  "Audio-visual systems, rigging and certified rigging points",
+  "Professional fees, statutory fees, contingencies, escalation and VAT",
+  "Loose furniture, choir seating, signage and liturgical fittings"
+ ],
+ "risks": [
+  {
+   "ref": "DR-01",
+   "disc": "Structural",
+   "finding": "All truss members carry placeholder sections; the 50 m span has not been analysed for dead, live or wind load.",
+   "sev": "Critical",
+   "response": "Appoint structural engineer; establish loading basis and analyse primary frames.",
+   "party": "Structural engineer (TBA)",
+   "status": "Open"
+  },
+  {
+   "ref": "DR-02",
+   "disc": "Geotechnical",
+   "finding": "All 76 footings are reference locations only; no geotechnical data exists.",
+   "sev": "Critical",
+   "response": "Commission site investigation before foundation design.",
+   "party": "Client / geotechnical engineer",
+   "status": "Open"
+  },
+  {
+   "ref": "DR-03",
+   "disc": "Fire & egress",
+   "finding": "Required exit widths and travel distances in the model use a placeholder method; 527 hall positions exceed the travel flag.",
+   "sev": "Critical",
+   "response": "Fire engineer to confirm occupancy, exit capacity and travel limits under applicable Zimbabwean requirements.",
+   "party": "Fire engineer (TBA)",
+   "status": "Open"
+  },
+  {
+   "ref": "DR-04",
+   "disc": "Structural",
+   "finding": "Lateral stability relies on knee braces at B/G 4–10, roof bracing in three bays and cavity-wall bracing; system not verified (A-27).",
+   "sev": "Major",
+   "response": "Confirm stability strategy in both directions; review brace positions.",
+   "party": "Structural engineer (TBA)",
+   "status": "Open"
+  },
+  {
+   "ref": "DR-05",
+   "disc": "Structural",
+   "finding": "Hall walls are 14.3 m high cavity walls with X-bracing in the cavity; wall and wind design not undertaken.",
+   "sev": "Major",
+   "response": "Assess wall type, wind girts and connection to frame.",
+   "party": "Structural engineer (TBA)",
+   "status": "Open"
+  },
+  {
+   "ref": "DR-06",
+   "disc": "Accessibility",
+   "finding": "Four L02 refuge spaces modelled; protection and assisted evacuation not designed (OI-16).",
+   "sev": "Major",
+   "response": "Develop refuge and evacuation-lift or assisted strategy.",
+   "party": "Architect / fire engineer",
+   "status": "Open"
+  },
+  {
+   "ref": "DR-07",
+   "disc": "AV / Structure",
+   "finding": "Main LED wall 12.8 × 7.2 m and line arrays shown as allowances; rigging loads not provided.",
+   "sev": "Major",
+   "response": "Obtain rigging loads; design certified rigging points.",
+   "party": "AV consultant / structural engineer",
+   "status": "Open"
+  },
+  {
+   "ref": "DR-08",
+   "disc": "Civil / Hydraulic",
+   "finding": "Gutter, downpipe and overflow sizes not set for 4 gutters and 28 downpipes.",
+   "sev": "Major",
+   "response": "Hydraulic design for catchment and rainfall intensity.",
+   "party": "Hydraulic engineer (TBA)",
+   "status": "Open"
+  },
+  {
+   "ref": "DR-09",
+   "disc": "Site",
+   "finding": "External stairs and ramps assume flat grade; site levels unknown.",
+   "sev": "Major",
+   "response": "Topographic survey; set finished floor level.",
+   "party": "Client / land surveyor",
+   "status": "Open"
+  },
+  {
+   "ref": "DR-10",
+   "disc": "Functional",
+   "finding": "466 seats sit more than 45° off the pulpit axis; 2,046 seats rely on IMAG screens.",
+   "sev": "Minor",
+   "response": "Confirm acceptability with client; review screen positions.",
+   "party": "Architect / client",
+   "status": "Open"
+  },
+  {
+   "ref": "DR-11",
+   "disc": "Structural",
+   "finding": "Irregular bays at grid 6 (6.5 m and 9.5 m) differ from the 8.0 m typical bay.",
+   "sev": "Minor",
+   "response": "Confirm truss positions and purlin spans.",
+   "party": "Architect / structural engineer",
+   "status": "Open"
+  },
+  {
+   "ref": "DR-12",
+   "disc": "Model",
+   "finding": "True north is not defined; level L03 (+4.300) sits below L02 (+4.600).",
+   "sev": "Minor",
+   "response": "Set geolocation and true north; rename or reorder levels.",
+   "party": "Model author",
+   "status": "Open"
+  }
+ ],
+ "phases": [
+  {
+   "n": "1",
+   "name": "Conceptual model",
+   "status": "current",
+   "label": "Current — PL06",
+   "note": "Concept geometry, spaces and metadata modelled; all values unverified."
+  },
+  {
+   "n": "2",
+   "name": "Multidisciplinary review",
+   "status": "current",
+   "label": "In progress",
+   "note": "This document; review by committee and consultants."
+  },
+  {
+   "n": "3",
+   "name": "Engineering analysis",
+   "status": "outstanding",
+   "label": "Outstanding",
+   "note": "Loading basis, frame analysis, geotechnical input."
+  },
+  {
+   "n": "4",
+   "name": "Detailed design",
+   "status": "outstanding",
+   "label": "Outstanding",
+   "note": "Member and connection design, services design."
+  },
+  {
+   "n": "5",
+   "name": "Statutory approvals",
+   "status": "outstanding",
+   "label": "Outstanding",
+   "note": "Submission to the local authority."
+  },
+  {
+   "n": "6",
+   "name": "Construction documentation",
+   "status": "outstanding",
+   "label": "Outstanding",
+   "note": "Construction drawings, specifications, bills of quantities."
+  }
+ ],
+ "recommendations": [
+  "Confirm the brief: seating target, choir provision and the single-level arrangement (Option A).",
+  "Commission a topographic survey and geotechnical investigation of the site.",
+  "Appoint a structural engineer to establish the loading basis and analyse the 50 m truss frames.",
+  "Appoint a fire engineer to verify occupancy, exit widths, travel distances and refuge provisions.",
+  "Obtain AV rigging loads and MEP plant allowances before roof design is fixed.",
+  "Engage a quantity surveyor to price the measured quantities once sections are designed."
+ ],
+ "drawings": [
+  {
+   "no": "A-100",
+   "title": "General arrangement plan — L00",
+   "scale": "1:300",
+   "size": "A3",
+   "rev": "[REV]",
+   "status": "Concept — unverified",
+   "file": "drawings/A-100_plan_L00.svg"
+  },
+  {
+   "no": "A-110",
+   "title": "Seating and congregation layout",
+   "scale": "1:500",
+   "size": "A4",
+   "rev": "[REV]",
+   "status": "Concept — unverified",
+   "file": "drawings/A-110_seating.svg"
+  },
+  {
+   "no": "A-200",
+   "title": "Front elevation (model −Y)",
+   "scale": "1:500",
+   "size": "A3",
+   "rev": "[REV]",
+   "status": "Concept — unverified",
+   "file": "drawings/A-200_elev_south.svg"
+  },
+  {
+   "no": "A-201",
+   "title": "Rear elevation (model +Y)",
+   "scale": "1:500",
+   "size": "A3",
+   "rev": "[REV]",
+   "status": "Concept — unverified",
+   "file": "drawings/A-201_elev_north.svg"
+  },
+  {
+   "no": "A-202",
+   "title": "Side elevation (model +X)",
+   "scale": "1:500",
+   "size": "A3",
+   "rev": "[REV]",
+   "status": "Concept — unverified",
+   "file": "drawings/A-202_elev_east.svg"
+  },
+  {
+   "no": "A-203",
+   "title": "Side elevation (model −X)",
+   "scale": "1:500",
+   "size": "A3",
+   "rev": "[REV]",
+   "status": "Concept — unverified",
+   "file": "drawings/A-203_elev_west.svg"
+  },
+  {
+   "no": "A-301",
+   "title": "Longitudinal section A–A",
+   "scale": "1:500",
+   "size": "A3",
+   "rev": "[REV]",
+   "status": "Concept — unverified",
+   "file": "drawings/A-301_section_AA.svg"
+  },
+  {
+   "no": "S-100",
+   "title": "Structural frame axonometric",
+   "scale": "NTS",
+   "size": "A3",
+   "rev": "[REV]",
+   "status": "Concept — unverified",
+   "file": "drawings/S-100_structural_axo.svg"
+  },
+  {
+   "no": "S-200",
+   "title": "Roof framing plan",
+   "scale": "1:400",
+   "size": "A3",
+   "rev": "[REV]",
+   "status": "Concept — unverified",
+   "file": "drawings/S-200_roof_framing.svg"
+  },
+  {
+   "no": "S-300",
+   "title": "Transverse section B–B at truss T6",
+   "scale": "1:300",
+   "size": "A3",
+   "rev": "[REV]",
+   "status": "Concept — unverified",
+   "file": "drawings/S-300_section_T6.svg"
+  },
+  {
+   "no": "S-301",
+   "title": "Truss T6 elevation",
+   "scale": "1:250",
+   "size": "A3",
+   "rev": "[REV]",
+   "status": "Concept — unverified",
+   "file": "drawings/S-301_truss_T6_1-250.svg"
+  }
+ ],
+ "assumptions": [
+  {
+   "ref": "A-13",
+   "item": "Lift shaft enclosure provides no stability contribution.",
+   "source": "Model property (ARC-WALL-LIFT)",
+   "status": "Open"
+  },
+  {
+   "ref": "A-27",
+   "item": "Portal knee braces represent a moment-frame concept at grid lines B and G.",
+   "source": "Model property (STR-KNEE)",
+   "status": "Open"
+  },
+  {
+   "ref": "AES-001",
+   "item": "Entrance canopy follows the low-cost continuous option.",
+   "source": "Model property (ENV-CANOPY)",
+   "status": "Open"
+  },
+  {
+   "ref": "OI-16",
+   "item": "Refuge spaces are allowances; protection and assisted evacuation not designed.",
+   "source": "Model property (ACC-REFUGE)",
+   "status": "Open"
+  },
+  {
+   "ref": "PL05",
+   "item": "Client decision: no extra chairs on the stage floor behind the platform.",
+   "source": "Model property (SPC-SP-02B)",
+   "status": "Recorded"
+  },
+  {
+   "ref": "—",
+   "item": "Door operation outward in the direction of escape with panic hardware.",
+   "source": "Model property (DR-*)",
+   "status": "Assumed"
+  },
+  {
+   "ref": "—",
+   "item": "Site is level; external steps and ramps set for flat grade.",
+   "source": "Model property (ARC-STAIR-EXT, ARC-RAMP-EXT)",
+   "status": "Assumed"
+  },
+  {
+   "ref": "—",
+   "item": "Steel sections follow SANS 10162-1 designation format in schedules.",
+   "source": "Document convention",
+   "status": "Convention only"
+  }
+ ],
+ "calcs": [
+  {
+   "ref": "CS-01",
+   "title": "Loading basis (dead, imposed, wind)",
+   "status": "Not started",
+   "result": "[RESULT]"
+  },
+  {
+   "ref": "CS-02",
+   "title": "Primary truss analysis T3–T11",
+   "status": "Not started",
+   "result": "[RESULT]"
+  },
+  {
+   "ref": "CS-03",
+   "title": "Portal stability and bracing",
+   "status": "Not started",
+   "result": "[RESULT]"
+  },
+  {
+   "ref": "CS-04",
+   "title": "Purlin and cladding design",
+   "status": "Not started",
+   "result": "[RESULT]"
+  },
+  {
+   "ref": "CS-05",
+   "title": "Foundation design",
+   "status": "Not started",
+   "result": "[RESULT]"
+  },
+  {
+   "ref": "CS-06",
+   "title": "Egress capacity and travel distance",
+   "status": "Model placeholder",
+   "result": "Provided 26.88 m vs placeholder 17.25 m"
+  }
+ ],
+ "checks": [
+  {
+   "check": "Structural member ends connected",
+   "value": "352 ends",
+   "basis": "Model script"
+  },
+  {
+   "check": "Ground coverage unassigned to a space",
+   "value": "0",
+   "basis": "Model script"
+  },
+  {
+   "check": "Max. seats to an aisle",
+   "value": "7",
+   "basis": "Model script"
+  },
+  {
+   "check": "Aisle riser max / min going",
+   "value": "0.150 / 0.950 m",
+   "basis": "Model script"
+  },
+  {
+   "check": "Hall exit width provided / placeholder required",
+   "value": "26.88 / 17.25 m",
+   "basis": "Placeholder method"
+  },
+  {
+   "check": "Upper-foyer stair width provided / placeholder required",
+   "value": "10.80 / 8.46 m",
+   "basis": "Placeholder method"
+  },
+  {
+   "check": "Max. travel in hall / to nearest exit",
+   "value": "50.42 / 39.73 m",
+   "basis": "Placeholder method"
+  },
+  {
+   "check": "Ambulatory ramp steepest",
+   "value": "1 : 13.17",
+   "basis": "Model script"
+  }
+ ],
+ "modelRefs": [
+  {
+   "prefix": "00_DOC",
+   "content": "Grid lines (20), level datums L00–L05 (6), labels",
+   "count": "66"
+  },
+  {
+   "prefix": "10_ENV",
+   "content": "Roofs, walls, flashings, canopy",
+   "count": "27"
+  },
+  {
+   "prefix": "20_ARC",
+   "content": "Slabs, rake treads, stairs, ramps, walls, rails, doors",
+   "count": "446"
+  },
+  {
+   "prefix": "30_STR",
+   "content": "Columns, footings, trusses, purlins, beams, bracing",
+   "count": "817"
+  },
+  {
+   "prefix": "40_SEAT",
+   "content": "Congregation, choir, companion seats; wheelchair spaces",
+   "count": "3,391"
+  },
+  {
+   "prefix": "50_SRV",
+   "content": "Lighting, AV, drainage, service zones",
+   "count": "162"
+  },
+  {
+   "prefix": "60_ZONE",
+   "content": "Spaces (28), aisle zones (205)",
+   "count": "233"
+  }
+ ],
+ "revisions": [
+  {
+   "rev": "[REV]",
+   "date": "[ISSUE DATE]",
+   "desc": "First issue for review",
+   "by": "[INITIALS]",
+   "chk": "[INITIALS]",
+   "model": "PL06-21c8b6d8b4"
+  }
+ ],
+ "contents": [
+  {
+   "no": "01",
+   "title": "Project overview",
+   "page": "03"
+  },
+  {
+   "no": "02",
+   "title": "Architectural vision",
+   "page": "04"
+  },
+  {
+   "no": "03",
+   "title": "Project at a glance",
+   "page": "05"
+  },
+  {
+   "no": "04",
+   "title": "Architectural floor plan",
+   "page": "06"
+  },
+  {
+   "no": "05",
+   "title": "Seating and congregation layout",
+   "page": "07"
+  },
+  {
+   "no": "06",
+   "title": "Interior architecture",
+   "page": "08"
+  },
+  {
+   "no": "07",
+   "title": "Structural engineering concept",
+   "page": "10"
+  },
+  {
+   "no": "08",
+   "title": "Roof structure",
+   "page": "11"
+  },
+  {
+   "no": "09",
+   "title": "Structural member schedules",
+   "page": "12"
+  },
+  {
+   "no": "10",
+   "title": "Building elevations and sections",
+   "page": "13"
+  },
+  {
+   "no": "11",
+   "title": "Functional and building services review",
+   "page": "14"
+  },
+  {
+   "no": "12",
+   "title": "Preliminary quantities and cost framework",
+   "page": "15"
+  },
+  {
+   "no": "13",
+   "title": "Design review and engineering risks",
+   "page": "16"
+  },
+  {
+   "no": "14",
+   "title": "Recommendations and next steps",
+   "page": "17"
+  },
+  {
+   "no": "A–F",
+   "title": "Appendices",
+   "page": "18"
+  },
+  {
+   "no": "DS",
+   "title": "Document design system",
+   "page": "25"
+  }
+ ],
+ "images": {
+  "aerial": {
+   "id": "img-aerial",
+   "label": "Exterior aerial perspective",
+   "file": "[renders/01_exterior_aerial.png]"
+  },
+  "cutaway": {
+   "id": "img-cutaway",
+   "label": "Cutaway aerial perspective",
+   "file": "[renders/02_cutaway_aerial.png]"
+  },
+  "fromPlatform": {
+   "id": "img-from-platform",
+   "label": "Interior from platform",
+   "file": "[renders/03_interior_from_platform.png]"
+  },
+  "fromRear": {
+   "id": "img-from-rear",
+   "label": "Interior from rear",
+   "file": "[renders/04_interior_from_rear.png]"
+  },
+  "structure": {
+   "id": "img-structure",
+   "label": "Structure-only view",
+   "file": "[renders/05_structure_only.png]"
+  },
+  "plan": {
+   "id": "img-topdown",
+   "label": "Top-down plan",
+   "file": "[renders/06_top_down_plan.png]"
+  }
+ },
+ "services": [
+  {
+   "n": "11.1",
+   "t": "Congregation circulation",
+   "has": "Five aisles through each seating band; level cross aisle at +1.150; 1.95 m rear cross aisle; ambulatories on both long sides with ramps at 1:13.17 and 1:14.74; two 5.4 m foyer stairs (27 × 170 mm risers) to the upper foyer.",
+   "verify": "Peak entry and dispersal flows between services; foyer queuing capacity."
+  },
+  {
+   "n": "11.2",
+   "t": "Accessibility",
+   "has": "32 wheelchair spaces (24 mid cross aisle, 6 front, 2 choir) with 30 companion seats; lift allowance L00–L02; platform ramp at 1:12; four accessible WCs off the foyer and one in back-of-house.",
+   "verify": "Lift type and capacity; refuge protection and assisted evacuation (OI-16); handrail design."
+  },
+  {
+   "n": "11.3",
+   "t": "Emergency evacuation",
+   "has": "17 external exits and 10 hall exits, effective clear widths 2.24 m and 3.36 m, outward-opening with panic hardware (assumed); 115 aisle step lights; 26.88 m total hall exit width.",
+   "verify": "Occupancy, exit capacity and travel distances (max. 50.42 m in hall) to applicable Zimbabwean requirements; fire ratings."
+  },
+  {
+   "n": "11.4",
+   "t": "Ventilation",
+   "has": "Roof-mounted HVAC / condensing-unit allowance over back-of-house; MEP plant room allowance of 55.33 m².",
+   "verify": "No MEP design. Natural, mixed-mode or mechanical strategy for a 3,481-person assembly to be established."
+  },
+  {
+   "n": "11.5",
+   "t": "Acoustic performance",
+   "has": "Hall enclosed by 14.3 m cavity walls under a metal roof; sound and media booth (43.65 m²) at L02 with an 8.0 m viewing window.",
+   "verify": "Reverberation targets for speech and music, rain noise on the metal roof, absorption — not represented in the model."
+  },
+  {
+   "n": "11.6",
+   "t": "Lighting and audiovisual",
+   "has": "Main LED wall 12.8 × 7.2 m with two side screens; three delay screens for rear rows; main and delay line arrays; front-of-house rig zone below the trusses.",
+   "verify": "Rigging loads and certified rigging points; general and stage lighting not modelled."
+  },
+  {
+   "n": "11.7",
+   "t": "Sanitation",
+   "has": "Toilets East and West (34.27 m² each), four accessible WCs (16.39 m² each), staff WCs and accessible WC in back-of-house; plumbing riser allowances at both toilet groups.",
+   "verify": "Fixture counts for the assessed occupancy; drainage and water supply design."
+  },
+  {
+   "n": "11.8",
+   "t": "Maintenance access",
+   "has": "Inspection access to the stage-end bracing noted behind the main LED wall; gutters and downpipes modelled for layout only.",
+   "verify": "Roof access, gutter cleaning, high-level lamp replacement and truss-zone access — not represented."
+  }
+ ]
+}

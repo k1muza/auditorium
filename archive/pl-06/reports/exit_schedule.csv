@@ -1,0 +1,11 @@
+exit_id,wall,role,x,y,sill_elevation,clear_width_m,load_nearest_exit,load_queue_balanced,placeholder_required_width_m,placeholder_check_balanced,placeholder_required_width_if_nearest_m,placeholder_check_if_nearest,load_shortest_route_to_outside_sensitivity,placeholder_check_route_sensitivity,onward_route,onward_plan_distance_m
+DR-HALL-W-FRONT,W,Hall exit - front zone,4.5,61.8,0.0,3.36,283,428,2.14,OK,1.415,OK,328,OK,ambulatory crossing to opposite external door,4.5
+DR-HALL-W-WING,W,Hall exit - platform wing,4.5,69.6,0.0,2.24,195,267,1.335,OK,0.975,OK,195,OK,ambulatory crossing to opposite external door,4.5
+DR-HALL-W-CROSS,W,Hall exit - mid cross aisle,4.5,41.0,1.15,3.36,583,465,2.325,OK,2.915,OK,817,UNDER,ambulatory landing to external door + external steps,6.0
+DR-HALL-E-FRONT,E,Hall exit - front zone,54.5,61.8,0.0,3.36,297,429,2.145,OK,1.485,OK,328,OK,ambulatory crossing to opposite external door,4.5
+DR-HALL-E-WING,E,Hall exit - platform wing,54.5,69.6,0.0,2.24,195,267,1.335,OK,0.975,OK,195,OK,ambulatory crossing to opposite external door,4.5
+DR-HALL-E-CROSS,E,Hall exit - mid cross aisle,54.5,41.0,1.15,3.36,583,466,2.33,OK,2.915,OK,843,UNDER,ambulatory landing to external door + external steps,6.0
+DR-HALL-REAR-A1,REAR,Hall exit - rear to upper foyer,12.5,16.0,4.6,2.24,237,260,1.3,OK,1.185,OK,84,OK,upper foyer -> stair -> main doors,24.0
+DR-HALL-REAR-A2,REAR,Hall exit - rear to upper foyer,21.0,16.0,4.6,2.24,420,303,1.515,OK,2.1,OK,294,OK,upper foyer -> stair -> main doors,17.5
+DR-HALL-REAR-A4,REAR,Hall exit - rear to upper foyer,38.0,16.0,4.6,2.24,420,304,1.52,OK,2.1,OK,294,OK,upper foyer -> stair -> main doors,17.5
+DR-HALL-REAR-A5,REAR,Hall exit - rear to upper foyer,46.5,16.0,4.6,2.24,237,261,1.305,OK,1.185,OK,72,OK,upper foyer -> stair -> main doors,24.0

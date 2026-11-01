@@ -1,0 +1,7 @@
+$ C:\Users\Kelvin\Desktop\auditorium\.venv\Scripts\python.exe scripts/export_ifc.py model/blender_manifest.json model/church_3000_concept.ifc
+# exit 0  (82.0s)
+
+--- stdout ---
+IFC_SUMMARY {"ifc": "model/church_3000_concept.ifc", "schema": "IFC4", "products": 4668, "openings": 42, "counts": {"IfcBeam:BEAM": 110, "IfcColumn:COLUMN": 68, "IfcDoor:DOOR": 41, "IfcElementAssembly:TRUSS": 9, "IfcFooting:PAD_FOOTING": 68, "IfcFurniture:CHAIR": 3174, "IfcFurniture:USERDEFINED": 1, "IfcMember:BRACE": 72, "IfcMember:CHORD": 180, "IfcMember:MEMBER": 189, "IfcMember:PURLIN": 88, "IfcRailing:GUARDRAIL": 1, "IfcRamp:STRAIGHT_RUN_RAMP": 5, "IfcSlab:FLOOR": 289, "IfcSlab:LANDING": 2, "IfcSlab:ROOF": 6, "IfcSpace:INTERNAL": 25, "IfcSpatialZone:USERDEFINED": 243, "IfcStair:STRAIGHT_RUN_STAIR": 3, "IfcStair:TWO_STRAIGHT_RUN_STAIR": 4, "IfcTransportElement:ELEVATOR": 1, "IfcWall:PARTITIONING": 18, "IfcWall:SOLIDWALL": 19, "IfcWindow:WINDOW": 1}, "seconds": 80.7}
+
+--- stderr ---

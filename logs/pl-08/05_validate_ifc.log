@@ -1,0 +1,28 @@
+$ C:\Users\Kelvin\Desktop\auditorium\.venv\Scripts\python.exe scripts/validate_ifc.py model/church_3000_concept.ifc model/blender_manifest.json reports/ifc_validation.json
+# exit 0  (86.8s)
+
+--- stdout ---
+IFCVAL_SUMMARY {"PASS": 21, "FAIL": 0, "WARN": 0}
+PASS IFC-SCHEMA 0
+PASS IFC-UNITS 1
+PASS IFC-STOREYS [["L00", 0.0], ["L01", 1.2], ["L02", 4.42], ["L03", 4.3], ["L04", 7.65], ["L05", 13.6]]
+PASS IFC-HIERARCHY [1, 1, 1]
+PASS IFC-GRID 20
+PASS IFC-CONTAIN []
+PASS IFC-GUID 0
+PASS IFC-COUNTS 5090
+PASS IFC-SEATS 3000
+PASS IFC-SEAT-TYPE 3000
+PASS IFC-SEAT-POS 4.440892098500626e-16
+PASS IFC-SEAT-POS-LAYOUT {"max_dev_m": 2.0000000020559128e-06, "ids_not_in_layout": 0}
+PASS IFC-MANIFEST-MATRIX 0
+PASS IFC-OPENINGS [46, 46, 46]
+PASS IFC-GEOM {"tessellated": 5136, "failed": 0, "first_failed": []}
+PASS IFC-EXTENTS [-3.45, -4.47, -1.5, 62.45, 88.9, 18.4]
+PASS IFC-STOREY-RULE {"checked": 5090, "mismatches": 0, "first": []}
+PASS IFC-STOREY-NONEMPTY {"L00": 2132, "L01": 2262, "L02": 74, "L03": 21, "L04": 56, "L05": 545}
+PASS IFC-MATERIALS {"without_material": 0, "first": [], "materials": ["Concrete (grade TBC)", "Door assembly (TBC)", "Glazing (TBC)", "Masonry (TBC)", "Masonry partition (TBC)", "Metal flashing (TBC)", "Metal rainwater 
+PASS IFC-QTO {"missing": 0, "first": []}
+PASS IFC-QTO-2 {"missing": 0, "first": []}
+
+--- stderr ---

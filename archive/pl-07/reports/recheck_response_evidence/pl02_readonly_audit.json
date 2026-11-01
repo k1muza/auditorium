@@ -1,0 +1,431 @@
+{
+  "method": "Fresh independent bpy inspection; opened authoritative blend read-only and did not save it",
+  "blend_file": "C:\\Users\\Kelvin\\Desktop\\auditorium\\model\\church_3000_concept.blend",
+  "blend_sha256": "2083c4003bd67eee360132e7bb07c70d9f1455aa6bfc21a193a14e6b185ca5af",
+  "blender_version": "5.2.3 LTS",
+  "scene_revision": "PL03-3e57114669",
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0,
+    "length_unit": "METERS"
+  },
+  "counts": {
+    "scene_objects": 4765,
+    "model_objects": 4765,
+    "by_ifc_class": {
+      "DOC": 66,
+      "IfcAudioVisualAppliance": 10,
+      "IfcBeam": 118,
+      "IfcColumn": 76,
+      "IfcCovering": 4,
+      "IfcDoor": 45,
+      "IfcFooting": 76,
+      "IfcFurniture": 3031,
+      "IfcLightFixture": 115,
+      "IfcMember": 545,
+      "IfcPipeSegment": 32,
+      "IfcRailing": 15,
+      "IfcRamp": 7,
+      "IfcSlab": 308,
+      "IfcSpace": 27,
+      "IfcSpatialZone": 244,
+      "IfcStair": 5,
+      "IfcTransportElement": 1,
+      "IfcWall": 39,
+      "IfcWindow": 1
+    },
+    "congregation_seats": 3000,
+    "wheelchair_objects_named": 30,
+    "screens": 6,
+    "speakers": 4,
+    "doors": 45,
+    "fire_exit_doors": 27,
+    "ramps": 7
+  },
+  "model_extents_m": [
+    -6.596,
+    -6.618,
+    -1.5,
+    73.0492,
+    94.782,
+    18.4
+  ],
+  "column_foundation_coordination": {
+    "columns": 76,
+    "footings": 76,
+    "max_xy_offset_m": 0.0,
+    "max_abs_vertical_gap_m": 0.0,
+    "unmatched_or_misaligned": []
+  },
+  "primary_truss_topology": [
+    {
+      "assembly": "STR-TRUSS-T10",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T11",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T3",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T4",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T5",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T6",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T7",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T8",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T9",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    }
+  ],
+  "sightline_off_axis": {
+    "over_45_deg": 466,
+    "over_60_deg": 108,
+    "over_70_deg": 0,
+    "worst": {
+      "angle_deg": 66.17,
+      "seat": "SEAT-C-R05-B1-S05",
+      "position_m": [
+        9.125,
+        56.6,
+        0.05
+      ]
+    }
+  },
+  "wheelchair_name_groups": {
+    "FE": 3,
+    "FW": 3,
+    "M1": 3,
+    "M2": 4,
+    "M3": 5,
+    "M4": 5,
+    "M5": 4,
+    "M6": 3
+  },
+  "door_property_coverage": {
+    "fire_exit_true": 27,
+    "outward_opening_or_direction_property": 27,
+    "panic_property_or_value": 27,
+    "sample": [
+      {
+        "name": "DR-HALL-W-FRONT",
+        "properties": {
+          "ifc_class": "IfcDoor",
+          "predefined_type": "DOOR",
+          "storey": "L00",
+          "object_type": "",
+          "assembly": "",
+          "kind": "solid",
+          "props_json": "{\"EffectiveClearWidth\": 3.36, \"FireExit\": true, \"FireRating\": \"TBC by fire engineer\", \"IsExternal\": true, \"LeafWidth\": 1.2, \"Leaves\": 3, \"Operation\": \"Outward-opening in the direction of escape, panic bar, hold-open on fire alarm release (assumed)\", \"OverallHeight\": 2.4, \"OverallWidth\": 3.6, \"Role\": \"Hall exit - front zone\"}",
+          "host": "ENV-WALL-HALL-W",
+          "opening_json": "[4.35, 60.0, 0.0, 4.65, 63.6, 2.4]",
+          "EffectiveClearWidth": 3.36,
+          "FireExit": true,
+          "FireRating": "TBC by fire engineer",
+          "IsExternal": true,
+          "LeafWidth": 1.2,
+          "Leaves": 3,
+          "Operation": "Outward-opening in the direction of escape, panic bar, hold-open on fire alarm release (assumed)",
+          "OverallHeight": 2.4,
+          "OverallWidth": 3.6,
+          "Role": "Hall exit - front zone"
+        }
+      },
+      {
+        "name": "DR-HALL-W-WING",
+        "properties": {
+          "ifc_class": "IfcDoor",
+          "predefined_type": "DOOR",
+          "storey": "L00",
+          "object_type": "",
+          "assembly": "",
+          "kind": "solid",
+          "props_json": "{\"EffectiveClearWidth\": 2.24, \"FireExit\": true, \"FireRating\": \"TBC by fire engineer\", \"IsExternal\": true, \"LeafWidth\": 1.2, \"Leaves\": 2, \"Operation\": \"Outward-opening in the direction of escape, panic bar, hold-open on fire alarm release (assumed)\", \"OverallHeight\": 2.4, \"OverallWidth\": 2.4, \"Role\": \"Hall exit - platform wing\"}",
+          "host": "ENV-WALL-HALL-W",
+          "opening_json": "[4.35, 68.4, 0.0, 4.65, 70.8, 2.4]",
+          "EffectiveClearWidth": 2.24,
+          "FireExit": true,
+          "FireRating": "TBC by fire engineer",
+          "IsExternal": true,
+          "LeafWidth": 1.2,
+          "Leaves": 2,
+          "Operation": "Outward-opening in the direction of escape, panic bar, hold-open on fire alarm release (assumed)",
+          "OverallHeight": 2.4,
+          "OverallWidth": 2.4,
+          "Role": "Hall exit - platform wing"
+        }
+      },
+      {
+        "name": "DR-HALL-W-CROSS",
+        "properties": {
+          "ifc_class": "IfcDoor",
+          "predefined_type": "DOOR",
+          "storey": "L01",
+          "object_type": "",
+          "assembly": "",
+          "kind": "solid",
+          "props_json": "{\"EffectiveClearWidth\": 3.36, \"FireExit\": true, \"FireRating\": \"TBC by fire engineer\", \"IsExternal\": true, \"LeafWidth\": 1.2, \"Leaves\": 3, \"Operation\": \"Outward-opening in the direction of escape, panic bar, hold-open on fire alarm release (assumed)\", \"OverallHeight\": 2.4, \"OverallWidth\": 3.6, \"Role\": \"Hall exit - mid cross aisle\"}",
+          "host": "ENV-WALL-HALL-W",
+          "opening_json": "[4.35, 39.2, 1.15, 4.65, 42.8, 3.55]",
+          "EffectiveClearWidth": 3.36,
+          "FireExit": true,
+          "FireRating": "TBC by fire engineer",
+          "IsExternal": true,
+          "LeafWidth": 1.2,
+          "Leaves": 3,
+          "Operation": "Outward-opening in the direction of escape, panic bar, hold-open on fire alarm release (assumed)",
+          "OverallHeight": 2.4,
+          "OverallWidth": 3.6,
+          "Role": "Hall exit - mid cross aisle"
+        }
+      },
+      {
+        "name": "DR-HALL-E-FRONT",
+        "properties": {
+          "ifc_class": "IfcDoor",
+          "predefined_type": "DOOR",
+          "storey": "L00",
+          "object_type": "",
+          "assembly": "",
+          "kind": "solid",
+          "props_json": "{\"EffectiveClearWidth\": 3.36, \"FireExit\": true, \"FireRating\": \"TBC by fire engineer\", \"IsExternal\": true, \"LeafWidth\": 1.2, \"Leaves\": 3, \"Operation\": \"Outward-opening in the direction of escape, panic bar, hold-open on fire alarm release (assumed)\", \"OverallHeight\": 2.4, \"OverallWidth\": 3.6, \"Role\": \"Hall exit - front zone\"}",
+          "host": "ENV-WALL-HALL-E",
+          "opening_json": "[54.35, 60.0, 0.0, 54.65, 63.6, 2.4]",
+          "EffectiveClearWidth": 3.36,
+          "FireExit": true,
+          "FireRating": "TBC by fire engineer",
+          "IsExternal": true,
+          "LeafWidth": 1.2,
+          "Leaves": 3,
+          "Operation": "Outward-opening in the direction of escape, panic bar, hold-open on fire alarm release (assumed)",
+          "OverallHeight": 2.4,
+          "OverallWidth": 3.6,
+          "Role": "Hall exit - front zone"
+        }
+      },
+      {
+        "name": "DR-HALL-E-WING",
+        "properties": {
+          "ifc_class": "IfcDoor",
+          "predefined_type": "DOOR",
+          "storey": "L00",
+          "object_type": "",
+          "assembly": "",
+          "kind": "solid",
+          "props_json": "{\"EffectiveClearWidth\": 2.24, \"FireExit\": true, \"FireRating\": \"TBC by fire engineer\", \"IsExternal\": true, \"LeafWidth\": 1.2, \"Leaves\": 2, \"Operation\": \"Outward-opening in the direction of escape, panic bar, hold-open on fire alarm release (assumed)\", \"OverallHeight\": 2.4, \"OverallWidth\": 2.4, \"Role\": \"Hall exit - platform wing\"}",
+          "host": "ENV-WALL-HALL-E",
+          "opening_json": "[54.35, 68.4, 0.0, 54.65, 70.8, 2.4]",
+          "EffectiveClearWidth": 2.24,
+          "FireExit": true,
+          "FireRating": "TBC by fire engineer",
+          "IsExternal": true,
+          "LeafWidth": 1.2,
+          "Leaves": 2,
+          "Operation": "Outward-opening in the direction of escape, panic bar, hold-open on fire alarm release (assumed)",
+          "OverallHeight": 2.4,
+          "OverallWidth": 2.4,
+          "Role": "Hall exit - platform wing"
+        }
+      }
+    ]
+  },
+  "access_and_safety_objects": {
+    "external_cross_aisle_ramps": [
+      "ARC-RAMP-EXT-W-CROSS",
+      "ARC-RAMP-EXT-E-CROSS"
+    ],
+    "aisle_handrails": [
+      "ARC-RAIL-AISLE-F-A1",
+      "ARC-RAIL-AISLE-R-A1",
+      "ARC-RAIL-AISLE-F-A2",
+      "ARC-RAIL-AISLE-R-A2",
+      "ARC-RAIL-AISLE-F-A3",
+      "ARC-RAIL-AISLE-R-A3",
+      "ARC-RAIL-AISLE-F-A4",
+      "ARC-RAIL-AISLE-R-A4",
+      "ARC-RAIL-AISLE-F-A5",
+      "ARC-RAIL-AISLE-R-A5"
+    ],
+    "aisle_lights": 115,
+    "choir_access_steps": [],
+    "choir_rails": [],
+    "choir_wheelchairs": [],
+    "refuge_objects": [
+      "ACC-REFUGE-W-1",
+      "ACC-REFUGE-W-2",
+      "ACC-REFUGE-E-1",
+      "ACC-REFUGE-E-2"
+    ]
+  },
+  "av_objects": {
+    "screens": [
+      {
+        "name": "SRV-AV-SCREEN-MAIN-W",
+        "properties": {
+          "ifc_class": "IfcAudioVisualAppliance",
+          "predefined_type": "DISPLAY",
+          "storey": "L01",
+          "object_type": "",
+          "assembly": "",
+          "kind": "solid",
+          "props_json": "{\"Faces\": \"-Y\", \"Height\": 3.6, \"Rigging\": \"Rigging loads TBC by AV consultant - placeholder only; structural engineer to design certified rigging points\", \"Role\": \"Main IMAG screen\", \"Width\": 6.4}"
+        }
+      },
+      {
+        "name": "SRV-AV-SCREEN-MAIN-E",
+        "properties": {
+          "ifc_class": "IfcAudioVisualAppliance",
+          "predefined_type": "DISPLAY",
+          "storey": "L01",
+          "object_type": "",
+          "assembly": "",
+          "kind": "solid",
+          "props_json": "{\"Faces\": \"-Y\", \"Height\": 3.6, \"Rigging\": \"Rigging loads TBC by AV consultant - placeholder only; structural engineer to design certified rigging points\", \"Role\": \"Main IMAG screen\", \"Width\": 6.4}"
+        }
+      },
+      {
+        "name": "SRV-AV-SCREEN-MAIN-C",
+        "properties": {
+          "ifc_class": "IfcAudioVisualAppliance",
+          "predefined_type": "DISPLAY",
+          "storey": "L03",
+          "object_type": "",
+          "assembly": "",
+          "kind": "solid",
+          "props_json": "{\"Faces\": \"-Y\", \"Height\": 7.2, \"Rigging\": \"Rigging loads TBC by AV consultant - placeholder only; structural engineer to design certified rigging points\", \"Role\": \"Main centre LED/IMAG wall over the band area (also screens the stage-end bracing - keep inspection access)\", \"Width\": 12.8}"
+        }
+      },
+      {
+        "name": "SRV-AV-SCREEN-DELAY-W",
+        "properties": {
+          "ifc_class": "IfcAudioVisualAppliance",
+          "predefined_type": "DISPLAY",
+          "storey": "L04",
+          "object_type": "",
+          "assembly": "",
+          "kind": "solid",
+          "props_json": "{\"Faces\": \"-Y\", \"Height\": 3.15, \"Rigging\": \"Rigging loads TBC by AV consultant - placeholder only; structural engineer to design certified rigging points\", \"Role\": \"Delay screen for rear rows\", \"Width\": 5.6}"
+        }
+      },
+      {
+        "name": "SRV-AV-SCREEN-DELAY-C",
+        "properties": {
+          "ifc_class": "IfcAudioVisualAppliance",
+          "predefined_type": "DISPLAY",
+          "storey": "L04",
+          "object_type": "",
+          "assembly": "",
+          "kind": "solid",
+          "props_json": "{\"Faces\": \"-Y\", \"Height\": 3.15, \"Rigging\": \"Rigging loads TBC by AV consultant - placeholder only; structural engineer to design certified rigging points\", \"Role\": \"Delay screen for rear rows\", \"Width\": 5.6}"
+        }
+      },
+      {
+        "name": "SRV-AV-SCREEN-DELAY-E",
+        "properties": {
+          "ifc_class": "IfcAudioVisualAppliance",
+          "predefined_type": "DISPLAY",
+          "storey": "L04",
+          "object_type": "",
+          "assembly": "",
+          "kind": "solid",
+          "props_json": "{\"Faces\": \"-Y\", \"Height\": 3.15, \"Rigging\": \"Rigging loads TBC by AV consultant - placeholder only; structural engineer to design certified rigging points\", \"Role\": \"Delay screen for rear rows\", \"Width\": 5.6}"
+        }
+      }
+    ],
+    "speakers": [
+      {
+        "name": "SRV-AV-SPEAKER-MAIN-L",
+        "properties": {
+          "ifc_class": "IfcAudioVisualAppliance",
+          "predefined_type": "SPEAKER",
+          "storey": "L04",
+          "object_type": "",
+          "assembly": "",
+          "kind": "solid",
+          "props_json": "{\"Rigging\": \"Rigging loads TBC by AV consultant - placeholder only; structural engineer to design certified rigging points\", \"Role\": \"Main line array (allowance)\"}"
+        }
+      },
+      {
+        "name": "SRV-AV-SPEAKER-MAIN-R",
+        "properties": {
+          "ifc_class": "IfcAudioVisualAppliance",
+          "predefined_type": "SPEAKER",
+          "storey": "L04",
+          "object_type": "",
+          "assembly": "",
+          "kind": "solid",
+          "props_json": "{\"Rigging\": \"Rigging loads TBC by AV consultant - placeholder only; structural engineer to design certified rigging points\", \"Role\": \"Main line array (allowance)\"}"
+        }
+      },
+      {
+        "name": "SRV-AV-SPEAKER-DELAY-L",
+        "properties": {
+          "ifc_class": "IfcAudioVisualAppliance",
+          "predefined_type": "SPEAKER",
+          "storey": "L04",
+          "object_type": "",
+          "assembly": "",
+          "kind": "solid",
+          "props_json": "{\"Rigging\": \"Rigging loads TBC by AV consultant - placeholder only; structural engineer to design certified rigging points\", \"Role\": \"Delay speaker (allowance)\"}"
+        }
+      },
+      {
+        "name": "SRV-AV-SPEAKER-DELAY-R",
+        "properties": {
+          "ifc_class": "IfcAudioVisualAppliance",
+          "predefined_type": "SPEAKER",
+          "storey": "L04",
+          "object_type": "",
+          "assembly": "",
+          "kind": "solid",
+          "props_json": "{\"Rigging\": \"Rigging loads TBC by AV consultant - placeholder only; structural engineer to design certified rigging points\", \"Role\": \"Delay speaker (allowance)\"}"
+        }
+      }
+    ]
+  },
+  "represented_system_keyword_hits": {
+    "GUTTER": 4,
+    "DOWNPIPE": 28,
+    "DRAIN": 0,
+    "ACOUST": 0,
+    "DUCT": 0,
+    "DIFFUSER": 0,
+    "AIR-HANDLING": 0,
+    "SPRINK": 0,
+    "DETECTOR": 0,
+    "EXIT-SIGN": 0,
+    "EMERGENCY-LIGHT": 0,
+    "LIGHTNING": 0,
+    "ROOF-WALK": 0,
+    "LADDER": 0,
+    "FALL-ARREST": 0,
+    "ACCESS-HATCH": 0,
+    "SANITARY-FIXTURE": 0
+  }
+}

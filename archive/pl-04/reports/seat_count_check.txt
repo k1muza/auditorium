@@ -1,0 +1,57 @@
+SEAT COUNT CROSS-CHECK  revision PL04-7e854e086c
+
+Target (config)                                   : 3000
+Layout engine seats (scripts/auditorium_layout.py) : 3000
+Blender manifest objects in 40_SEAT_Congregation  : 3000
+Saved .blend re-opened (reports/blend_verification.json): 3000
+IFC IfcFurniture SeatType=congregation (reports/ifc_validation.json): 3000
+reports/seating_schedule.csv data rows            : 3000 (unique ids 3000)
+CSV ids == Blender ids                             : True
+CSV coordinates vs Blender placements mismatches (>0.1 mm): 0
+Rows where CSV count != re-opened .blend count     : none
+
+Seats per row (CSV / .blend):
+  R01:  38 / 38
+  R02:  47 / 47
+  R03:  55 / 55
+  R04:  58 / 58
+  R05:  67 / 67
+  R06:  75 / 75
+  R07:  76 / 76
+  R08:  76 / 76
+  R09:  76 / 76
+  R10:  76 / 76
+  R11:  76 / 76
+  R12:  76 / 76
+  R13:  76 / 76
+  R14:  76 / 76
+  R15:  76 / 76
+  R16:  76 / 76
+  R17:  76 / 76
+  R18:  76 / 76
+  R19:  76 / 76
+  R20:  76 / 76
+  R21:  76 / 76
+  R22:  76 / 76
+  R23:  76 / 76
+  R24:  76 / 76
+  R25:  76 / 76
+  R26:  76 / 76
+  R27:  76 / 76
+  R28:  76 / 76
+  R29:  76 / 76
+  R30:  76 / 76
+  R31:  76 / 76
+  R32:  76 / 76
+  R33:  76 / 76
+  R34:  76 / 76
+  R35:  76 / 76
+  R36:  76 / 76
+  R37:  76 / 76
+  R38:  76 / 76
+  R39:  76 / 76
+  R40:  76 / 76
+  R41:  76 / 76
+
+Excluded from the 3,000: choir seats (144), loose companion chairs (30), wheelchair spaces (30).
+RESULT: PASS - all sources agree on exactly 3000

@@ -1,0 +1,23 @@
+$ C:\Users\Kelvin\Desktop\auditorium\.venv\Scripts\python.exe scripts/validate_ifc.py model/church_3000_concept.ifc model/blender_manifest.json reports/ifc_validation.json
+# exit 0  (34.0s)
+
+--- stdout ---
+IFCVAL_SUMMARY {"PASS": 16, "FAIL": 0, "WARN": 0}
+PASS IFC-SCHEMA 0
+PASS IFC-UNITS 1
+PASS IFC-STOREYS [["L00", 0.0], ["L01", 1.15], ["L02", 3.84], ["L03", 5.75], ["L04", 8.25], ["L05", 14.0]]
+PASS IFC-HIERARCHY [1, 1, 1]
+PASS IFC-GRID 20
+PASS IFC-CONTAIN []
+PASS IFC-GUID 0
+PASS IFC-COUNTS 4599
+PASS IFC-SEATS 3000
+PASS IFC-SEAT-TYPE 3000
+PASS IFC-SEAT-POS 0.0
+PASS IFC-SEAT-POS-LAYOUT {"max_dev_m": 2.0000000020559128e-06, "ids_not_in_layout": 0}
+PASS IFC-MANIFEST-MATRIX 0
+PASS IFC-OPENINGS [42, 42, 42]
+PASS IFC-GEOM {"tessellated": 4641, "failed": 0, "first_failed": []}
+PASS IFC-EXTENTS [-3.45, -0.9, -1.5, 62.45, 88.9, 18.4]
+
+--- stderr ---

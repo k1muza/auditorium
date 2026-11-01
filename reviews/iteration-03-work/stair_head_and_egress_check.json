@@ -1,0 +1,459 @@
+{
+ "rail_islands_xyzxyz": [
+  [
+   0.2,
+   7.85,
+   3.985,
+   4.3,
+   7.9,
+   5.085
+  ],
+  [
+   4.7,
+   7.85,
+   3.985,
+   11.55,
+   7.9,
+   5.085
+  ],
+  [
+   14.25,
+   7.85,
+   3.985,
+   14.3,
+   7.9,
+   5.085
+  ],
+  [
+   14.7,
+   7.85,
+   3.985,
+   14.75,
+   7.9,
+   5.085
+  ],
+  [
+   17.45,
+   7.85,
+   3.985,
+   24.3,
+   7.9,
+   5.085
+  ],
+  [
+   24.7,
+   7.85,
+   3.985,
+   34.3,
+   7.9,
+   5.085
+  ],
+  [
+   34.7,
+   7.85,
+   3.985,
+   41.55,
+   7.9,
+   5.085
+  ],
+  [
+   47.45,
+   7.85,
+   3.985,
+   54.3,
+   7.9,
+   5.085
+  ],
+  [
+   54.7,
+   7.85,
+   3.985,
+   58.8,
+   7.9,
+   5.085
+  ]
+ ],
+ "rail_gaps": [
+  {
+   "x0": 4.3,
+   "x1": 4.7,
+   "width": 0.4
+  },
+  {
+   "x0": 11.55,
+   "x1": 14.25,
+   "width": 2.7
+  },
+  {
+   "x0": 14.3,
+   "x1": 14.7,
+   "width": 0.4
+  },
+  {
+   "x0": 14.75,
+   "x1": 17.45,
+   "width": 2.7
+  },
+  {
+   "x0": 24.3,
+   "x1": 24.7,
+   "width": 0.4
+  },
+  {
+   "x0": 34.3,
+   "x1": 34.7,
+   "width": 0.4
+  },
+  {
+   "x0": 41.55,
+   "x1": 47.45,
+   "width": 5.9
+  },
+  {
+   "x0": 54.3,
+   "x1": 54.7,
+   "width": 0.4
+  }
+ ],
+ "stairs": {
+  "ARC-STAIR-FOYER-1": {
+   "props": {
+    "Going": 0.3,
+    "Riser": 0.173,
+    "Risers": 23,
+    "Role": "Upper foyer egress / access stair",
+    "TopLandingOpening": 2.7,
+    "Width": 2.7
+   },
+   "top_landing_xy": [
+    11.55,
+    5.09,
+    14.25,
+    7.85
+   ]
+  },
+  "ARC-STAIR-FOYER-2": {
+   "props": {
+    "Going": 0.3,
+    "Riser": 0.173,
+    "Risers": 23,
+    "Role": "Upper foyer egress / access stair",
+    "TopLandingOpening": 2.7,
+    "Width": 2.7
+   },
+   "top_landing_xy": [
+    14.75,
+    5.09,
+    17.45,
+    7.85
+   ]
+  },
+  "ARC-STAIR-FOYER-3": {
+   "props": {
+    "Going": 0.3,
+    "Riser": 0.173,
+    "Risers": 23,
+    "Role": "Upper foyer egress / access stair",
+    "TopLandingOpening": 2.7,
+    "Width": 2.7
+   },
+   "top_landing_xy": [
+    41.55,
+    5.09,
+    44.25,
+    7.85
+   ]
+  },
+  "ARC-STAIR-FOYER-4": {
+   "props": {
+    "Going": 0.3,
+    "Riser": 0.173,
+    "Risers": 23,
+    "Role": "Upper foyer egress / access stair",
+    "TopLandingOpening": 2.7,
+    "Width": 2.7
+   },
+   "top_landing_xy": [
+    44.75,
+    5.09,
+    47.45,
+    7.85
+   ]
+  }
+ },
+ "stair_head_openings_total_width": 11.3,
+ "builder_EGR-02": {
+  "id": "EGR-02",
+  "description": "Upper foyer stair capacity (min of stair width and stair-head rail opening) >= placeholder demand",
+  "value": 10.8,
+  "criterion": ">= 7.45 m (rear load 993 x 7.5 mm placeholder)",
+  "result": "PASS"
+ },
+ "seats_where_nearest_travel_is_shorter_than_straight_line_to_listed_nearest_exit": 0,
+ "examples": [],
+ "csv_vs_exit_schedule_nearest_exit": {
+  "DR-HALL-W-FRONT": [
+   315,
+   321
+  ],
+  "DR-HALL-W-WING": [
+   0,
+   100
+  ],
+  "DR-HALL-W-CROSS": [
+   559,
+   575
+  ],
+  "DR-HALL-E-FRONT": [
+   329,
+   335
+  ],
+  "DR-HALL-E-WING": [
+   0,
+   100
+  ],
+  "DR-HALL-E-CROSS": [
+   559,
+   575
+  ],
+  "DR-HALL-REAR-A1": [
+   220,
+   222
+  ],
+  "DR-HALL-REAR-A2": [
+   406,
+   412
+  ],
+  "DR-HALL-REAR-A4": [
+   392,
+   398
+  ],
+  "DR-HALL-REAR-A5": [
+   220,
+   222
+  ]
+ },
+ "csv_vs_exit_schedule_assigned_exit_balanced": {
+  "DR-HALL-W-FRONT": [
+   408,
+   414
+  ],
+  "DR-HALL-W-WING": [
+   156,
+   256
+  ],
+  "DR-HALL-W-CROSS": [
+   447,
+   463
+  ],
+  "DR-HALL-E-FRONT": [
+   409,
+   415
+  ],
+  "DR-HALL-E-WING": [
+   156,
+   256
+  ],
+  "DR-HALL-E-CROSS": [
+   447,
+   463
+  ],
+  "DR-HALL-REAR-A1": [
+   231,
+   235
+  ],
+  "DR-HALL-REAR-A2": [
+   252,
+   256
+  ],
+  "DR-HALL-REAR-A4": [
+   254,
+   258
+  ],
+  "DR-HALL-REAR-A5": [
+   240,
+   244
+  ]
+ },
+ "csv_vs_exit_schedule_shortest_route_exit_sensitivity": {
+  "DR-HALL-W-FRONT": [
+   360,
+   366
+  ],
+  "DR-HALL-W-WING": [
+   0,
+   100
+  ],
+  "DR-HALL-W-CROSS": [
+   1016,
+   1032
+  ],
+  "DR-HALL-E-FRONT": [
+   360,
+   366
+  ],
+  "DR-HALL-E-WING": [
+   0,
+   100
+  ],
+  "DR-HALL-E-CROSS": [
+   1006,
+   1022
+  ],
+  "DR-HALL-REAR-A1": [
+   12,
+   15
+  ],
+  "DR-HALL-REAR-A2": [
+   70,
+   75
+  ],
+  "DR-HALL-REAR-A4": [
+   140,
+   144
+  ],
+  "DR-HALL-REAR-A5": [
+   36,
+   40
+  ]
+ },
+ "straight_line_nearest_counts": {
+  "DR-HALL-W-FRONT": 360,
+  "DR-HALL-E-FRONT": 360,
+  "DR-HALL-W-CROSS": 610,
+  "DR-HALL-E-CROSS": 607,
+  "DR-HALL-REAR-A2": 354,
+  "DR-HALL-REAR-A4": 358,
+  "DR-HALL-REAR-A1": 176,
+  "DR-HALL-REAR-A5": 175
+ },
+ "nearest_travel_gt_balanced_travel": 0,
+ "nearest_travel_max": 39.73,
+ "nearest_travel_over30": 330,
+ "balanced_travel_max": 50.87,
+ "balanced_travel_over30": 572,
+ "external_travel_max": 61.17,
+ "external_travel_over60": 10,
+ "stairs_iter3": {
+  "ARC-STAIR-FOYER-1": {
+   "aabb": [
+    3.75,
+    5.09,
+    0.0,
+    14.25,
+    7.85,
+    3.985
+   ],
+   "landing_x": [
+    11.55,
+    14.25
+   ],
+   "landing_y": [
+    5.09,
+    7.85
+   ],
+   "near_cols_dx_dy": [
+    [
+     "STR-COL-B2",
+     0.0,
+     0.0
+    ],
+    [
+     "STR-COL-C2",
+     0.05,
+     0.0
+    ]
+   ]
+  },
+  "ARC-STAIR-FOYER-2": {
+   "aabb": [
+    14.75,
+    5.09,
+    0.0,
+    25.25,
+    7.85,
+    3.985
+   ],
+   "landing_x": [
+    14.75,
+    17.45
+   ],
+   "landing_y": [
+    5.09,
+    7.85
+   ],
+   "near_cols_dx_dy": [
+    [
+     "STR-COL-C2",
+     0.05,
+     0.0
+    ],
+    [
+     "STR-COL-D2",
+     0.0,
+     0.0
+    ]
+   ]
+  },
+  "ARC-STAIR-FOYER-3": {
+   "aabb": [
+    33.75,
+    5.09,
+    0.0,
+    44.25,
+    7.85,
+    3.985
+   ],
+   "landing_x": [
+    41.55,
+    44.25
+   ],
+   "landing_y": [
+    5.09,
+    7.85
+   ],
+   "near_cols_dx_dy": [
+    [
+     "STR-COL-E2",
+     0.0,
+     0.0
+    ],
+    [
+     "STR-COL-F2",
+     0.05,
+     0.0
+    ]
+   ]
+  },
+  "ARC-STAIR-FOYER-4": {
+   "aabb": [
+    44.75,
+    5.09,
+    0.0,
+    55.25,
+    7.85,
+    3.985
+   ],
+   "landing_x": [
+    44.75,
+    47.45
+   ],
+   "landing_y": [
+    5.09,
+    7.85
+   ],
+   "near_cols_dx_dy": [
+    [
+     "STR-COL-F2",
+     0.05,
+     0.0
+    ],
+    [
+     "STR-COL-G2",
+     0.0,
+     0.0
+    ]
+   ]
+  }
+ }
+}

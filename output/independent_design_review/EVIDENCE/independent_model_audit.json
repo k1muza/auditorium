@@ -1,0 +1,547 @@
+{
+  "method": "Independent bpy read; source blend not saved",
+  "blend_file": "C:\\Users\\Kelvin\\Desktop\\auditorium\\model\\church_3000_concept.blend",
+  "blend_sha256": "60993e41f798f68ae12a065a47039515ae73871cb2e4150707df14541971ed80",
+  "blender_version": "5.2.3 LTS",
+  "scene_revision": "PL01-7cafe48b2e",
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0,
+    "length_unit": "METERS"
+  },
+  "counts": {
+    "scene_objects_including_documentation": 4683,
+    "model_objects_with_ifc_class": 4683,
+    "by_ifc_class": {
+      "DOC:": 66,
+      "IfcBeam:BEAM": 110,
+      "IfcColumn:COLUMN": 68,
+      "IfcCovering:USERDEFINED": 4,
+      "IfcDoor:DOOR": 41,
+      "IfcFooting:PAD_FOOTING": 68,
+      "IfcFurniture:CHAIR": 3174,
+      "IfcFurniture:USERDEFINED": 1,
+      "IfcMember:BRACE": 72,
+      "IfcMember:CHORD": 180,
+      "IfcMember:MEMBER": 189,
+      "IfcMember:PURLIN": 88,
+      "IfcMember:STRUT": 2,
+      "IfcRailing:GUARDRAIL": 1,
+      "IfcRamp:STRAIGHT_RUN_RAMP": 5,
+      "IfcSlab:FLOOR": 292,
+      "IfcSlab:LANDING": 2,
+      "IfcSlab:ROOF": 6,
+      "IfcSpace:INTERNAL": 25,
+      "IfcSpatialZone:USERDEFINED": 243,
+      "IfcStair:STRAIGHT_RUN_STAIR": 3,
+      "IfcStair:TWO_STRAIGHT_RUN_STAIR": 4,
+      "IfcTransportElement:ELEVATOR": 1,
+      "IfcWall:PARTITIONING": 18,
+      "IfcWall:SOLIDWALL": 19,
+      "IfcWindow:WINDOW": 1
+    }
+  },
+  "model_extents_m": [
+    -6.596,
+    -6.618,
+    -1.5,
+    73.0492,
+    94.782,
+    18.4
+  ],
+  "column_foundation_coordination": {
+    "columns": 68,
+    "footings": 68,
+    "max_xy_offset_m": 0.0,
+    "max_abs_vertical_gap_m": 0.0,
+    "pairs": [
+      {
+        "column": "STR-COL-A1",
+        "footing": "STR-FTG-A1",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-B1",
+        "footing": "STR-FTG-B1",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-C1",
+        "footing": "STR-FTG-C1",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-D1",
+        "footing": "STR-FTG-D1",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-E1",
+        "footing": "STR-FTG-E1",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-F1",
+        "footing": "STR-FTG-F1",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-G1",
+        "footing": "STR-FTG-G1",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-H1",
+        "footing": "STR-FTG-H1",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-A2",
+        "footing": "STR-FTG-A2",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-B2",
+        "footing": "STR-FTG-B2",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-C2",
+        "footing": "STR-FTG-C2",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-D2",
+        "footing": "STR-FTG-D2",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-E2",
+        "footing": "STR-FTG-E2",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-F2",
+        "footing": "STR-FTG-F2",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-G2",
+        "footing": "STR-FTG-G2",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-H2",
+        "footing": "STR-FTG-H2",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-A3",
+        "footing": "STR-FTG-A3",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-B3",
+        "footing": "STR-FTG-B3",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-C3",
+        "footing": "STR-FTG-C3",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-D3",
+        "footing": "STR-FTG-D3",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-E3",
+        "footing": "STR-FTG-E3",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-F3",
+        "footing": "STR-FTG-F3",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-G3",
+        "footing": "STR-FTG-G3",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-H3",
+        "footing": "STR-FTG-H3",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-A4",
+        "footing": "STR-FTG-A4",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-B4",
+        "footing": "STR-FTG-B4",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-G4",
+        "footing": "STR-FTG-G4",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-H4",
+        "footing": "STR-FTG-H4",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-A5",
+        "footing": "STR-FTG-A5",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-B5",
+        "footing": "STR-FTG-B5",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-G5",
+        "footing": "STR-FTG-G5",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-H5",
+        "footing": "STR-FTG-H5",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-A6",
+        "footing": "STR-FTG-A6",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-B6",
+        "footing": "STR-FTG-B6",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-G6",
+        "footing": "STR-FTG-G6",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-H6",
+        "footing": "STR-FTG-H6",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-A7",
+        "footing": "STR-FTG-A7",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-B7",
+        "footing": "STR-FTG-B7",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-G7",
+        "footing": "STR-FTG-G7",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-H7",
+        "footing": "STR-FTG-H7",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-A8",
+        "footing": "STR-FTG-A8",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-B8",
+        "footing": "STR-FTG-B8",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-G8",
+        "footing": "STR-FTG-G8",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-H8",
+        "footing": "STR-FTG-H8",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-A9",
+        "footing": "STR-FTG-A9",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-B9",
+        "footing": "STR-FTG-B9",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-G9",
+        "footing": "STR-FTG-G9",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-H9",
+        "footing": "STR-FTG-H9",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-A10",
+        "footing": "STR-FTG-A10",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-B10",
+        "footing": "STR-FTG-B10",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-G10",
+        "footing": "STR-FTG-G10",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-H10",
+        "footing": "STR-FTG-H10",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-A11",
+        "footing": "STR-FTG-A11",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-B11",
+        "footing": "STR-FTG-B11",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-C11",
+        "footing": "STR-FTG-C11",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-D11",
+        "footing": "STR-FTG-D11",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-E11",
+        "footing": "STR-FTG-E11",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-F11",
+        "footing": "STR-FTG-F11",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-G11",
+        "footing": "STR-FTG-G11",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-H11",
+        "footing": "STR-FTG-H11",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-A12",
+        "footing": "STR-FTG-A12",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-B12",
+        "footing": "STR-FTG-B12",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-C12",
+        "footing": "STR-FTG-C12",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-D12",
+        "footing": "STR-FTG-D12",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-E12",
+        "footing": "STR-FTG-E12",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-F12",
+        "footing": "STR-FTG-F12",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-G12",
+        "footing": "STR-FTG-G12",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      },
+      {
+        "column": "STR-COL-H12",
+        "footing": "STR-FTG-H12",
+        "xy_offset_m": 0.0,
+        "vertical_gap_m": 0.0
+      }
+    ]
+  },
+  "truss_topology": [
+    {
+      "assembly": "STR-TRUSS-T10",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T11",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T3",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T4",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T5",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T6",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T7",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T8",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T9",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    }
+  ],
+  "sightline_off_axis": {
+    "seat_count": 3000,
+    "modelled_pulpit_xy_m": [
+      29.5,
+      65.5999984741211
+    ],
+    "count_over_45_deg": 542,
+    "count_over_60_deg": 184,
+    "count_over_70_deg": 24,
+    "maximum": {
+      "seat_id": "SEAT-C-R03-B6-S10",
+      "x_m": 52.125,
+      "y_m": 58.5,
+      "z_floor_m": 0.0,
+      "off_axis_to_pulpit_deg": 72.58,
+      "plan_distance_to_pulpit_m": 23.71
+    },
+    "note": "Geometric diagnostic, not a statutory acceptance test."
+  },
+  "represented_system_keyword_hits": {
+    "GUTTER": 0,
+    "DOWNPIPE": 0,
+    "DRAIN": 0,
+    "ACOUST": 0,
+    "DUCT": 0,
+    "DIFFUSER": 0,
+    "SPRINK": 0,
+    "DETECTOR": 0,
+    "EXIT-SIGN": 0,
+    "EMERGENCY-LIGHT": 0,
+    "LIGHTNING": 0
+  }
+}

@@ -1,0 +1,11 @@
+$ C:\Program Files\Blender Foundation\Blender 5.2\blender.exe --background --factory-startup model/church_3000_concept.blend --python C:\Users\Kelvin\Desktop\auditorium\reports\review_response_evidence\independent_blender_audit.py
+# exit 0  (7.1s)
+
+--- stdout ---
+00:04.703  blend            | Read blend: "C:\Users\Kelvin\Desktop\auditorium\model\church_3000_concept.blend"
+{"output": "C:\\Users\\Kelvin\\Desktop\\auditorium\\reports\\review_response_evidence\\independent_model_audit.json", "sightline": {"seat_count": 3000, "modelled_pulpit_xy_m": [29.5, 65.5999984741211], "count_over_45_deg": 466, "count_over_60_deg": 108, "count_over_70_deg": 0, "maximum": {"seat_id": "SEAT-C-R05-B1-S05", "x_m": 9.125, "y_m": 56.6, "z_floor_m": 0.05, "off_axis_to_pulpit_deg": 66.17, "plan_distance_to_pulpit_m": 22.27}, "note": "Geometric diagnostic, not a statutory acceptance test."}}
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit
+
+--- stderr ---

@@ -1,0 +1,786 @@
+{
+  "_comment": "Editable concept parameters for the 3,000-seat church auditorium coordination model. Units: metres. Every value here is a CONCEPT ASSUMPTION unless the assumptions register says otherwise; none is a verified code, survey or engineering value.",
+  "project": {
+    "name": "3,000-Seat Church Auditorium - Coordination Concept",
+    "short_code": "CA3000",
+    "country": "Zimbabwe (site not yet identified)",
+    "milestone": "M1 Architecture-and-structure coordination concept",
+    "status_label": "CONCEPT - UNVERIFIED - NOT FOR CONSTRUCTION",
+    "units": "metre",
+    "coordinate_system": "Local project coordinates. Origin (0,0,0) = intersection of grid A and grid 1 at Level 00 finished floor. +X = along numbered gridlines toward grid H. +Y = toward the platform (grid 12). +Z = up. Project north ASSUMED = +Y; true north unknown (no survey)."
+  },
+  "grid": {
+    "x_lines": {
+      "A": 0.0,
+      "B": 4.5,
+      "C": 14.5,
+      "D": 24.5,
+      "E": 34.5,
+      "F": 44.5,
+      "G": 54.5,
+      "H": 59.0
+    },
+    "y_lines": {
+      "1": 0.0,
+      "2": 8.0,
+      "3": 16.0,
+      "4": 24.0,
+      "5": 32.0,
+      "6": 38.5,
+      "7": 48.0,
+      "8": 56.0,
+      "9": 64.0,
+      "10": 72.0,
+      "11": 80.0,
+      "12": 88.0
+    }
+  },
+  "walls": {
+    "external_thickness": 0.3,
+    "hall_thickness": 0.3,
+    "internal_thickness": 0.15,
+    "door_height": 2.4
+  },
+  "seating": {
+    "target_congregation_seats": 3000,
+    "seat_width": 0.5,
+    "chair_depth": 0.6,
+    "chair_back_offset": 0.05,
+    "chair_height": 0.85,
+    "row_pitch": 0.95,
+    "blocks": [
+      10,
+      14,
+      14,
+      14,
+      14,
+      10
+    ],
+    "aisle_width": 1.5,
+    "front_rows": 19,
+    "rear_rows": 21,
+    "omit": [
+      {
+        "rows": [
+          1,
+          2
+        ],
+        "blocks": [
+          1,
+          6
+        ],
+        "reason": "Extreme side viewing angle at platform edge; area reused for front wheelchair positions"
+      }
+    ],
+    "stagger_offset": 0.25,
+    "front_level_rows": 2,
+    "cross_aisle_passage": 2.4,
+    "wheelchair_band_depth": 1.5,
+    "eye_height_seated": 1.15,
+    "eye_offset_from_tread_back": 0.4,
+    "eye_height_wheelchair": 1.2
+  },
+  "sightlines": {
+    "c_value_target": 0.06,
+    "c_value_staggered_target_n2": 0.12,
+    "focal_height_above_platform": 0.6,
+    "elevation_rounding": 0.005,
+    "max_aisle_riser": 0.19,
+    "cross_aisle_rounding": 0.05,
+    "rear_uniform_bands": [
+      1,
+      10,
+      10
+    ],
+    "rise_search_step": 0.005
+  },
+  "accessibility": {
+    "wheelchair_space_width": 0.9,
+    "wheelchair_space_depth": 1.4,
+    "companion_seat_width": 0.5,
+    "band_pairs_per_block": [
+      2,
+      3,
+      3,
+      3,
+      3,
+      2
+    ],
+    "rear_pairs_per_block": [
+      0,
+      2,
+      2,
+      2,
+      2,
+      0
+    ],
+    "front_pairs_per_side": 3,
+    "concept_target_fraction": 0.01,
+    "refuge_spaces_per_stair": 2,
+    "refuge_depth": 1.4
+  },
+  "stage": {
+    "front_edge_y": 64.0,
+    "front_clear_zone": 3.0,
+    "platform_height": 0.9,
+    "platform_x": [
+      14.5,
+      44.5
+    ],
+    "platform_y": [
+      64.0,
+      76.0
+    ],
+    "choir_x": [
+      17.5,
+      41.5
+    ],
+    "choir_tiers": [
+      [
+        76.0,
+        77.2,
+        1.2
+      ],
+      [
+        77.2,
+        78.4,
+        1.5
+      ],
+      [
+        78.4,
+        79.6,
+        1.8
+      ]
+    ],
+    "pulpit_xy": [
+      29.5,
+      65.6
+    ],
+    "access_ramp_gradient": 12.0,
+    "access_ramp_width": 1.5
+  },
+  "foyer": {
+    "mezzanine_y": [
+      7.85,
+      16.0
+    ],
+    "booth_x": [
+      25.0,
+      34.0
+    ],
+    "booth_y": [
+      11.0,
+      15.85
+    ],
+    "booth_floor_raise": 0.6,
+    "booth_height": 2.7,
+    "stair_bays": [
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ],
+      [
+        "F",
+        "G"
+      ]
+    ],
+    "stair_width": 2.7,
+    "stair_max_riser": 0.175,
+    "stair_going": 0.3,
+    "stair_mid_landing": 1.5,
+    "stair_top_landing": 1.2,
+    "lift_xy": [
+      15.0,
+      13.45,
+      17.4,
+      15.85
+    ],
+    "toilet_blocks": {
+      "W": [
+        5.0,
+        8.4,
+        14.0,
+        15.85
+      ],
+      "E": [
+        45.0,
+        8.4,
+        54.0,
+        15.85
+      ]
+    },
+    "main_door_bays": [
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "D",
+        "E"
+      ],
+      [
+        "E",
+        "F"
+      ],
+      [
+        "F",
+        "G"
+      ]
+    ],
+    "main_door_width": 3.6,
+    "roof_top": 8.5
+  },
+  "ambulatory": {
+    "south_level_end_y": 19.6,
+    "north_level_start_y": 60.6,
+    "landing_margin": 1.0,
+    "max_ramp_run": 9.0,
+    "intermediate_landing": 1.5,
+    "roof_top": 6.0
+  },
+  "back_of_house": {
+    "corridor_depth": 2.6,
+    "rooms": [
+      [
+        "BOH-01",
+        "Vestry / pastors' office",
+        0.15,
+        10.0
+      ],
+      [
+        "BOH-02",
+        "Prayer room",
+        10.0,
+        20.0
+      ],
+      [
+        "BOH-03",
+        "Green room / choir robing",
+        20.0,
+        32.0
+      ],
+      [
+        "BOH-04",
+        "General storage",
+        32.0,
+        40.0
+      ],
+      [
+        "BOH-05",
+        "Accessible WC (BOH)",
+        40.0,
+        42.8
+      ],
+      [
+        "BOH-06",
+        "Staff WCs",
+        42.8,
+        48.0
+      ],
+      [
+        "BOH-07",
+        "MEP plant room (allowance)",
+        48.0,
+        58.85
+      ]
+    ],
+    "roof_top": 5.0
+  },
+  "doors": {
+    "hall_front": {
+      "y_center": 61.8,
+      "width": 3.6
+    },
+    "hall_wing": {
+      "y_center": 69.6,
+      "width": 2.4
+    },
+    "hall_cross_aisle": {
+      "width": 3.6
+    },
+    "hall_rear_aisles": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "hall_rear_width": 2.4,
+    "ambulatory_south_ext_y": 17.8,
+    "foyer_side_ext_y": 3.2,
+    "boh_ext_y": 81.5,
+    "cross_aisle_external": {
+      "width": 3.6,
+      "landing": 1.5,
+      "max_riser": 0.175,
+      "going": 0.3
+    },
+    "stage_rear_doors_x": [
+      10.9,
+      48.1
+    ],
+    "external_width": 2.4
+  },
+  "structure": {
+    "hall_column": 0.6,
+    "other_column": 0.4,
+    "pad_hall": 2.4,
+    "pad_other": 1.8,
+    "pad_thickness": 0.6,
+    "pad_top_z": -0.9,
+    "truss_bearing_z": 14.0,
+    "truss_depth_eaves": 1.5,
+    "truss_depth_ridge": 3.5,
+    "truss_panels": 10,
+    "chord_section": 0.35,
+    "web_section": 0.2,
+    "purlin_section": [
+      0.2,
+      0.3
+    ],
+    "brace_section": 0.15,
+    "roof_braced_bays": [
+      [
+        "3",
+        "4"
+      ],
+      [
+        "7",
+        "8"
+      ],
+      [
+        "10",
+        "11"
+      ]
+    ],
+    "wall_braced_bays": [
+      [
+        "3",
+        "4"
+      ],
+      [
+        "10",
+        "11"
+      ]
+    ],
+    "gable_braced_bays": [
+      [
+        "D",
+        "E"
+      ]
+    ],
+    "beam_width": 0.3,
+    "foyer_roof_beam_depth": 0.6,
+    "mezz_beam_depth": 0.6,
+    "low_roof_beam_depth": 0.45,
+    "eaves_tie_depth": 0.4,
+    "slab_thickness": 0.25,
+    "roof_build_up": 0.25,
+    "hall_wall_top": 15.9
+  },
+  "services": {
+    "zones": [
+      [
+        "SRV-01",
+        "Roof-mounted HVAC / condensing unit allowance",
+        [
+          40.0,
+          80.6,
+          5.0,
+          58.5,
+          87.5,
+          7.0
+        ]
+      ],
+      [
+        "SRV-02",
+        "Front-of-house lighting / AV rig allowance (below trusses)",
+        [
+          10.0,
+          56.5,
+          12.6,
+          49.0,
+          63.5,
+          13.8
+        ]
+      ],
+      [
+        "SRV-03",
+        "Electrical / data riser allowance",
+        [
+          48.3,
+          82.4,
+          0.0,
+          49.8,
+          83.6,
+          5.0
+        ]
+      ],
+      [
+        "SRV-04",
+        "Plumbing riser allowance (west toilets)",
+        [
+          5.2,
+          14.0,
+          0.0,
+          6.0,
+          15.4,
+          8.0
+        ]
+      ],
+      [
+        "SRV-05",
+        "Plumbing riser allowance (east toilets)",
+        [
+          53.0,
+          14.0,
+          0.0,
+          53.8,
+          15.4,
+          8.0
+        ]
+      ]
+    ]
+  },
+  "egress_placeholders": {
+    "_status": "PLACEHOLDER FACTORS FOR CONCEPT FLAGGING ONLY - NOT LOCAL CODE VALUES",
+    "level_width_mm_per_person": 5.0,
+    "stair_width_mm_per_person": 7.5,
+    "travel_flag_within_hall_m": 30.0,
+    "travel_flag_total_m": 60.0,
+    "walk_speed_m_s": 1.0,
+    "door_flow_p_per_m_s": 1.3,
+    "choir_and_platform_occupants": 200,
+    "staff_boh_occupants": 30
+  },
+  "balcony_option": {
+    "floor_seats": 2000,
+    "balcony_seats": 1000,
+    "balcony_rows": 13,
+    "balcony_front_over_floor_row": 18,
+    "balcony_row_pitch": 0.9,
+    "balcony_floor_level": 6.0,
+    "soffit_depth": 0.8,
+    "parapet_height": 0.8,
+    "view_target_above_platform": 2.5,
+    "_note": "Option B is a COMPUTED schematic for comparison only - not modelled in Blender/IFC"
+  },
+  "assumptions": [
+    [
+      "A-01",
+      "Site",
+      "Flat site; external grade = Level 00 (0.000) on all sides",
+      "No survey/contours provided",
+      "Concept assumption",
+      "Low"
+    ],
+    [
+      "A-02",
+      "Orientation",
+      "Project north = +Y (towards platform); true north unknown",
+      "No site/orientation data",
+      "Concept assumption",
+      "Low"
+    ],
+    [
+      "A-03",
+      "Seat module",
+      "0.50 m seat centres, 0.60 m chair depth, 0.95 m row pitch (0.35 m clear seatway, seats down)",
+      "Common auditorium practice; not checked against local code",
+      "Concept assumption - verify",
+      "Medium"
+    ],
+    [
+      "A-04",
+      "Seats between aisles",
+      "Max 14 seats between two aisles (7 to nearest aisle); 10 seats in side blocks",
+      "Conventional (non-continental) seating practice; local rule unknown",
+      "Concept assumption - verify",
+      "Medium"
+    ],
+    [
+      "A-05",
+      "Aisle widths",
+      "1.50 m interior aisles ({aisle_straight_clear} m straight clear path with 0.25 m row stagger); wall aisles >= {wall_aisle_min} m to column faces (computed)",
+      "Concept allowance; statutory widths depend on occupant load and local code",
+      "Concept assumption - verify",
+      "Medium"
+    ],
+    [
+      "A-06",
+      "Sightlines",
+      "C-value 0.06 m over row in front AND 0.12 m over the row two in front (staggered seats, 0.25 m offset); focal point 0.6 m above platform front edge; seated eye 1.15 m, wheelchair eye 1.20 m",
+      "Typical concept sightline criteria; client/architect to confirm focal point (screens assumed for rear rows)",
+      "Concept assumption - verify",
+      "Medium"
+    ],
+    [
+      "A-07",
+      "Platform",
+      "Platform +0.90 m above front floor, 30 m x 12 m, choir risers 3 tiers (~144 choir seats, excluded from 3,000)",
+      "Brief requires large platform/choir; size is a concept allowance",
+      "Concept assumption",
+      "Medium"
+    ],
+    [
+      "A-08",
+      "Wheelchair positions",
+      "30 wheelchair spaces (approx. 1% of 3,000) each with an adjacent loose companion chair, dispersed front / mid cross-aisle / rear; these are IN ADDITION to the 3,000 fixed congregation seats",
+      "Placeholder fraction; local accessibility requirement unknown",
+      "Concept assumption - verify",
+      "Low"
+    ],
+    [
+      "A-09",
+      "Egress capacity factors",
+      "5.0 mm/person level routes and doors, 7.5 mm/person stairs used ONLY to flag obvious under-provision; exit loads from a queue-balanced assignment (walk 1.0 m/s, door flow 1.3 p/m/s) and also reported for nearest-exit use",
+      "Placeholder; NOT a local code value",
+      "Placeholder - must be replaced by local code",
+      "Low"
+    ],
+    [
+      "A-10",
+      "Travel distance flags",
+      "Flag within-hall plan travel > 30 m and total plan travel to an external door > 60 m",
+      "Placeholder flags only; local limits unknown",
+      "Placeholder - must be replaced by local code",
+      "Low"
+    ],
+    [
+      "A-11",
+      "Primary structure",
+      "Steel roof trusses spanning 50 m at 8 m centres on steel columns; truss depth 1.5 m eaves / 3.5 m ridge (span/14 at ridge)",
+      "Concept proportioning rule of thumb; no loads, analysis or member design",
+      "Concept assumption - engineer to develop",
+      "Low"
+    ],
+    [
+      "A-12",
+      "Member sizes",
+      "Columns 0.6 m (hall) / 0.4 m (other), chords 0.35 m, webs 0.20 m, braces 0.15 m are SPACE-RESERVATION placeholders, not designed sizes",
+      "No analysis performed",
+      "Placeholder",
+      "Low"
+    ],
+    [
+      "A-13",
+      "Lateral stability",
+      "Transverse: truss-to-column portal action (moment knee) with braced gable bays as alternative/supplement; longitudinal: vertical X-bracing in end bays; roof plane bracing in end and middle bays",
+      "Concept scheme only; wind/seismic actions unknown",
+      "Concept assumption - engineer to confirm",
+      "Low"
+    ],
+    [
+      "A-14",
+      "Foundations",
+      "Pad footing REFERENCE locations under each column (2.4 m / 1.8 m square x 0.6 m, top at -0.90 m) - indicative only",
+      "No geotechnical report; bearing capacity unknown",
+      "Placeholder - geotechnical input required",
+      "Low"
+    ],
+    [
+      "A-15",
+      "Levels",
+      "Level 00 = 0.000 finished floor (foyer, front of hall, ambulatory ends, BOH); cross-aisle and upper foyer levels computed by sightline generator",
+      "Generated",
+      "Model-derived",
+      "High"
+    ],
+    [
+      "A-16",
+      "Occupancy for egress flagging",
+      "3,000 fixed seats + 30 wheelchair + 30 companion + 200 platform/choir + 30 staff/BOH",
+      "Concept tally; legal occupant load to be set by local authority/fire engineer",
+      "Concept assumption - verify",
+      "Medium"
+    ],
+    [
+      "A-17",
+      "Toilet provision",
+      "Two foyer toilet blocks (~65 m2 each) + 4 foyer accessible WCs + BOH accessible WC and staff WCs as SPACE ALLOWANCES; fixture counts not determined",
+      "Local sanitary provision rules unknown",
+      "Allowance - verify",
+      "Low"
+    ],
+    [
+      "A-18",
+      "Materials",
+      "Steel frame, masonry/infill walls and metal roof assumed for space planning only",
+      "No material/procurement brief",
+      "Concept assumption",
+      "Low"
+    ],
+    [
+      "A-19",
+      "Services",
+      "MEP plant room, roof plant, risers and AV/lighting rig shown as space allowances only",
+      "No MEP design at this stage",
+      "Allowance",
+      "Low"
+    ],
+    [
+      "A-20",
+      "Option choice",
+      "Option A single-level raked hall selected over Option B floor + balcony for this milestone (see basis_of_design.md comparison)",
+      "Concept comparison; client/architect decision pending",
+      "Recommendation - pending client review",
+      "Medium"
+    ],
+    [
+      "A-21",
+      "Refuge / assisted evacuation",
+      "Wheelchair users on the rear platform / upper foyer (+L02) wait in refuge spaces beside each foyer stair head and are evacuated by assisted means or a designated evacuation lift; refuge enclosure / fire separation not yet designed",
+      "No fire strategy yet; required to make upper-level wheelchair spaces workable",
+      "Concept assumption - fire engineer to confirm",
+      "Low"
+    ],
+    [
+      "A-22",
+      "Rear aisle steps",
+      "Rear rake = one transition row off the cross aisle + 2 bands of 10 rows, each band with ONE uniform riser (one riser per row, 0.95 m going); riser changes only at the 2 band boundaries (values in reports/geometry_checks.json)",
+      "Concept detailing rule to keep aisle risers uniform; local stair/aisle-step rules unknown",
+      "Concept assumption - verify",
+      "Medium"
+    ],
+    [
+      "A-23",
+      "IFC materials",
+      "Placeholder material names (steel / concrete / masonry / metal roof - grades TBC) assigned in IFC for quantity take-off structure only",
+      "No material specification",
+      "Placeholder",
+      "Low"
+    ]
+  ],
+  "open_issues": [
+    [
+      "OI-01",
+      "CRITICAL-PATH",
+      "Local statutory review",
+      "Applicable Zimbabwean building, fire, occupancy and accessibility requirements have not been identified; all widths, distances, counts and gradients are unverified.",
+      "Local architect / fire engineer / authority"
+    ],
+    [
+      "OI-02",
+      "CRITICAL-PATH",
+      "Site",
+      "No site boundary, survey, setbacks, access, parking, contours or orientation. Footprint 59 x 88 m must be tested against an actual site.",
+      "Client / surveyor"
+    ],
+    [
+      "OI-03",
+      "CRITICAL-PATH",
+      "Geotechnics and foundations",
+      "No geotechnical report; foundation type, depth and sizes are reference placeholders only.",
+      "Geotechnical + structural engineer"
+    ],
+    [
+      "OI-04",
+      "CRITICAL-PATH",
+      "Structural design",
+      "No loads (dead, live, wind, seismic, rain/ponding), analysis, member design, connection design or deflection/vibration checks. 50 m truss span and lateral system require engineering development.",
+      "Structural engineer"
+    ],
+    [
+      "OI-05",
+      "MAJOR",
+      "Egress design",
+      "Exit widths, number of exits, travel distances, aisle widths and stair/ramp capacities are checked only against placeholder factors. Fire engineering / code-based egress design required.",
+      "Fire engineer / architect"
+    ],
+    [
+      "OI-06",
+      "MAJOR",
+      "Aisle steps",
+      "Rear-section aisle risers vary row by row (computed values in reports/row_schedule.csv); non-uniform risers, step nosings, handrails and lighting must be resolved in design development.",
+      "Architect"
+    ],
+    [
+      "OI-07",
+      "MAJOR",
+      "Cross-aisle riser",
+      "A single riser between the front-section slope and the cross aisle exists at aisle mouths (value in reports/geometry_checks.json); detail (ramp, step marking, handrail) required.",
+      "Architect"
+    ],
+    [
+      "OI-08",
+      "MAJOR",
+      "Ramps",
+      "Ambulatory ramp gradients/landings are generated against placeholder limits; handrails, edge protection and cross-falls not modelled.",
+      "Architect / access consultant"
+    ],
+    [
+      "OI-09",
+      "MAJOR",
+      "Acoustics and AV",
+      "No acoustic analysis (reverberation, noise, sound reinforcement) and no screen/AV design; rear-row viewing relies on screens assumption.",
+      "Acoustic / AV consultant"
+    ],
+    [
+      "OI-10",
+      "MAJOR",
+      "MEP and fire services",
+      "No HVAC, electrical, plumbing, drainage, fire detection/suppression, emergency lighting or hydrant design; only space allowances shown.",
+      "MEP engineers"
+    ],
+    [
+      "OI-11",
+      "MINOR",
+      "Sanitary fixtures",
+      "Toilet fixture counts and layouts not designed; blocks are area allowances.",
+      "Architect"
+    ],
+    [
+      "OI-12",
+      "MINOR",
+      "Envelope",
+      "Glazing, cladding, insulation, rainwater goods and roof drainage not designed.",
+      "Architect"
+    ],
+    [
+      "OI-13",
+      "MINOR",
+      "Cost",
+      "No cost plan; no budget provided.",
+      "Quantity surveyor"
+    ],
+    [
+      "OI-14",
+      "MINOR",
+      "Water storage",
+      "On-site water storage/backup power (often needed locally) not allocated - site dependent.",
+      "Client / MEP engineer"
+    ],
+    [
+      "OI-15",
+      "MINOR",
+      "IFC openings",
+      "Wall openings are modelled as geometric gaps with IfcOpeningElement voids; door/window types and fire ratings not assigned.",
+      "BIM coordinator"
+    ],
+    [
+      "OI-16",
+      "MAJOR",
+      "Refuge and assisted evacuation",
+      "Refuge spaces are space allowances on the open upper foyer; protected enclosure, communication, evacuation lift and management plan are not designed.",
+      "Fire engineer / architect"
+    ],
+    [
+      "OI-17",
+      "MAJOR",
+      "Travel distance in a 50 m wide hall",
+      "Front-section centre seats are ~25 m laterally from any side-wall exit; no central exit is possible in front of the platform. Measured distances exceed the 30 m placeholder flag; options (vomitories under rear rake, narrower/deeper plan, sprinklers/smoke control per local code) need fire-engineering assessment.",
+      "Fire engineer / architect"
+    ]
+  ]
+}

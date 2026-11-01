@@ -1,0 +1,11 @@
+{
+  "revision": "PL08-590d273e35",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python_venv": "3.10.1",
+  "blender_exe": "C:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "blender_version": "5.2.3 LTS",
+  "ifcopenshell": "0.8.5",
+  "matplotlib": "3.10.9",
+  "blender_mcp": "NOT AVAILABLE in this session - Blender driven headless via command line (blender --background --python)",
+  "bonsai": "not installed; IFC written with IfcOpenShell API from the Blender scene manifest"
+}

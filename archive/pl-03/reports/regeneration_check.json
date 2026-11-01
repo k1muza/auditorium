@@ -1,0 +1,15 @@
+{
+  "revision": "PL03-3e57114669",
+  "build_1_manifest_sha256": "5b28de363173940c63f747d007d501612336cdb926a043ac180008264891ae5f",
+  "build_2_manifest_sha256": "5b28de363173940c63f747d007d501612336cdb926a043ac180008264891ae5f",
+  "identical": true,
+  "objects": [
+    4699,
+    4699
+  ],
+  "seats": [
+    3000,
+    3000
+  ],
+  "note": "Two independent headless Blender builds from the same config/scripts; the manifest (all object names, meshes, world matrices, properties) must be byte-identical. .blend binaries differ only by timestamps."
+}

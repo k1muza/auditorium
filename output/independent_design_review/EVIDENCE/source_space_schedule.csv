@@ -1,0 +1,26 @@
+space_id,name,level,use,area_m2,x0,y0,x1,y1,status,revision
+SP-01,Auditorium seating hall,L00,"Assembly - congregation seating (3,000 fixed seats)",2378.14,4.65,16.15,54.35,64.0,Concept allowance - unverified,PL01-7cafe48b2e
+SP-02,"Platform / pulpit, side choirs and band",L00,"Platform, pulpit, side choir risers (facing inward), band area at rear",475.5,14.5,64.0,44.5,79.85,Concept allowance - unverified,PL01-7cafe48b2e
+SP-03,Platform wing West (musicians / access),L00,Wing / stair to platform,156.12,4.65,64.0,14.5,79.85,Concept allowance - unverified,PL01-7cafe48b2e
+SP-04,Platform wing East (accessible ramp),L00,Wing / accessible ramp,156.12,44.5,64.0,54.35,79.85,Concept allowance - unverified,PL01-7cafe48b2e
+SP-05,Main foyer,L00,"Foyer, welcome, stairs, circulation",484.27,0.15,0.15,58.85,8.4,Concept allowance - unverified,PL01-7cafe48b2e
+SP-05W,Foyer side passage West (to ambulatory),L00,Circulation,36.13,0.15,8.4,5.0,15.85,Concept allowance - unverified,PL01-7cafe48b2e
+SP-05E,Foyer side passage East (to ambulatory),L00,Circulation,36.13,54.0,8.4,58.85,15.85,Concept allowance - unverified,PL01-7cafe48b2e
+SP-06,Foyer below upper foyer (centre),L00,Foyer circulation / info,225.19,14.0,8.4,45.0,15.85,Concept allowance - unverified,PL01-7cafe48b2e
+SP-WC-W,Toilets West (female),L00,Sanitary allowance - fixtures TBC,34.27,5.0,8.4,9.6,15.85,Concept allowance - unverified,PL01-7cafe48b2e
+SP-WCA-W,Accessible WCs W (2 cubicles),L00,2 accessible WC cubicles allowance,32.78,9.6,8.4,14.0,15.85,Concept allowance - unverified,PL01-7cafe48b2e
+SP-WC-E,Toilets East (male),L00,Sanitary allowance - fixtures TBC,34.27,49.4,8.4,54.0,15.85,Concept allowance - unverified,PL01-7cafe48b2e
+SP-WCA-E,Accessible WCs E (2 cubicles),L00,2 accessible WC cubicles allowance,32.78,45.0,8.4,49.4,15.85,Concept allowance - unverified,PL01-7cafe48b2e
+SP-07,Upper foyer (mezzanine),L02,"Rear hall exits, refuge spaces, booth access",420.19,0.15,7.85,58.85,15.85,Concept allowance - unverified,PL01-7cafe48b2e
+SP-08,Sound / media booth,L02,Media / sound control,43.65,25.0,11.0,34.0,15.85,Concept allowance - unverified,PL01-7cafe48b2e
+SP-09,Lift shaft,L00,Lift allowance L00-L02,5.76,15.0,13.45,17.4,15.85,Concept allowance - unverified,PL01-7cafe48b2e
+SP-AMB-W,Ambulatory W (circulation / egress ramps),L00,Circulation / exit route,270.06,0.15,15.85,4.35,80.15,Concept allowance - unverified,PL01-7cafe48b2e
+SP-AMB-E,Ambulatory E (circulation / egress ramps),L00,Circulation / exit route,270.06,54.65,15.85,58.85,80.15,Concept allowance - unverified,PL01-7cafe48b2e
+SP-BOH-C,BOH corridor,L00,Circulation,152.62,0.15,80.15,58.85,82.75,Concept allowance - unverified,PL01-7cafe48b2e
+SP-BOH-01,Vestry / pastors' office,L00,Back of house,50.23,0.15,82.75,10.0,87.85,Concept allowance - unverified,PL01-7cafe48b2e
+SP-BOH-02,Prayer room,L00,Back of house,51.0,10.0,82.75,20.0,87.85,Concept allowance - unverified,PL01-7cafe48b2e
+SP-BOH-03,Green room / choir robing,L00,Back of house,61.2,20.0,82.75,32.0,87.85,Concept allowance - unverified,PL01-7cafe48b2e
+SP-BOH-04,General storage,L00,Back of house,40.8,32.0,82.75,40.0,87.85,Concept allowance - unverified,PL01-7cafe48b2e
+SP-BOH-05,Accessible WC (BOH),L00,Back of house,14.28,40.0,82.75,42.8,87.85,Concept allowance - unverified,PL01-7cafe48b2e
+SP-BOH-06,Staff WCs,L00,Back of house,26.52,42.8,82.75,48.0,87.85,Concept allowance - unverified,PL01-7cafe48b2e
+SP-BOH-07,MEP plant room (allowance),L00,Back of house,55.33,48.0,82.75,58.85,87.85,Concept allowance - unverified,PL01-7cafe48b2e

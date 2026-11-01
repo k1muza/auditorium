@@ -1,0 +1,6 @@
+L00 1803 [('IfcFurniture', 1555), ('IfcColumn', 68), ('IfcFooting', 68), ('IfcDoor', 40), ('IfcWall', 33), ('IfcSlab', 12)]
+L02 31 [('IfcBeam', 15), ('IfcFurniture', 8), ('IfcSlab', 3), ('IfcWall', 3), ('IfcDoor', 1), ('IfcRailing', 1)]
+L01 1888 [('IfcFurniture', 1612), ('IfcSlab', 276)]
+L03 229 [('IfcMember', 148), ('IfcBeam', 65), ('IfcElementAssembly', 9), ('IfcSlab', 5), ('IfcWall', 2)]
+L04 31 [('IfcBeam', 30), ('IfcSlab', 1)]
+L03 member placement z [(17.6, 16), (16.4, 16), (16.8, 16), (17.2, 16), (16.0, 16), (16.9, 12), (16.1, 12), (16.5, 12)]

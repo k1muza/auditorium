@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="omelette-owns-print" content="1">
+<script src="./image-slot.js"></script>
+<style>
+@font-face{font-family:'Archivo';font-style:normal;font-weight:400 600;font-display:swap;src:url(fonts/Archivo-400.woff2) format('woff2')}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:300 500;font-display:swap;src:url(fonts/Newsreader-300.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/IBMPlexMono-400.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/IBMPlexMono-500.woff2) format('woff2')}
+html,body{margin:0;background:#C9C6BF;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+a{color:#8C5E36;text-decoration:none} a:hover{color:#1E1E1C}
+@page{size:A4 portrait;margin:0}
+@page a3{size:A3 landscape;margin:0}
+@media print{html,body{background:none}[data-doc]{zoom:1 !important;padding:0 !important;gap:0 !important}[data-page]{box-shadow:none !important;break-after:page}[data-sheet-wrap]{display:block !important;width:210mm;height:297mm;position:relative;overflow:hidden;break-after:page;break-inside:avoid}[data-sheet-wrap]>[data-page]{position:absolute !important;left:0;top:0;transform-origin:0 0;transform:translateY(297mm) rotate(-90deg) scale(0.70711);break-after:auto !important}html[data-sheets="a3"] [data-sheet-wrap]{display:contents !important}html[data-sheets="a3"] [data-sheet-wrap]>[data-page]{position:relative !important;transform:none !important;page:a3;break-after:page !important}}
+</style>
+</helmet>
+
+<div data-doc="" style="display:flex;flex-direction:column;align-items:center;gap:10mm;padding:10mm 0;zoom:{{ zoom }}">
+
+<!-- ============ 01 COVER ============ -->
+<section data-page="" data-screen-label="01 Cover" style="width:210mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#1F2022;color:#EDE8DE;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.25)">
+  <div style="position:absolute;top:12mm;left:18mm;right:18mm;display:flex;justify-content:space-between;font:500 6.5pt/1 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#9E998F">
+    <span>Document {{ d.doc.docNo }}</span><span>Model {{ d.doc.model }}</span>
+  </div>
+  <div style="position:absolute;top:24mm;left:0;right:0;height:158mm">
+    <sc-if value="{{ coverAxo }}" hint-placeholder-val="{{ true }}">
+      <img loading="lazy" decoding="async" src="drawings/X-000_cover_cutaway_axo.svg" alt="Cutaway axonometric generated from the concept model" style="display:block;width:100%;height:100%;object-fit:cover;object-position:52% 50%">
+    </sc-if>
+    <sc-if value="{{ coverRender }}" hint-placeholder-val="{{ false }}">
+      <image-slot id="img-cover" shape="rect" fit="cover" placeholder="RENDER 01 · Exterior aerial perspective · drop Blender export here"></image-slot>
+    </sc-if>
+  </div>
+  <div style="position:absolute;top:184mm;left:18mm;font:400 6pt/1.4 'IBM Plex Mono',monospace;color:#8E8A82;letter-spacing:.04em">
+    <sc-if value="{{ coverAxo }}" hint-placeholder-val="{{ true }}"><span>Cutaway axonometric, generated from model geometry · NTS</span></sc-if>
+    <sc-if value="{{ coverRender }}" hint-placeholder-val="{{ false }}"><span>Exterior aerial perspective · rendered from the concept model</span></sc-if>
+  </div>
+  <div style="position:absolute;left:18mm;right:18mm;bottom:16mm;display:flex;flex-direction:column;gap:6mm">
+    <h1 style="margin:0;font:300 31pt/1.04 Newsreader,serif;letter-spacing:.005em;color:#F1ECE2;max-width:160mm;text-wrap:balance">PROPOSED 3,000-SEAT CHURCH AUDITORIUM</h1>
+    <p style="margin:0;font:400 11pt/1.35 Archivo,sans-serif;color:#C9C3B8;max-width:140mm">Preliminary Architectural &amp; Structural Engineering Design Proposal</p>
+    <div style="width:22mm;height:0;border-top:0.75pt solid #B98A5C"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1.6fr;gap:4mm;border-top:0.5pt solid #3A3C3F;padding-top:3.5mm">
+      <div style="display:flex;flex-direction:column;gap:1.6mm"><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#8E8A82">Location</span><span style="font:400 9pt/1.2 Archivo,sans-serif">Zimbabwe</span></div>
+      <div style="display:flex;flex-direction:column;gap:1.6mm"><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#8E8A82">Revision</span><span style="font:400 9pt/1.2 Archivo,sans-serif">{{ d.doc.rev }}</span></div>
+      <div style="display:flex;flex-direction:column;gap:1.6mm"><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#8E8A82">Issue date</span><span style="font:400 9pt/1.2 Archivo,sans-serif">{{ d.doc.date }}</span></div>
+      <div style="display:flex;flex-direction:column;gap:1.6mm"><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#8E8A82">Status</span><span style="font:400 9pt/1.2 Archivo,sans-serif;color:#E0B98F">Preliminary Design — For Review</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 CONTENTS & DOCUMENT CONTROL ============ -->
+<section data-page="" data-screen-label="02 Contents" style="width:210mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#F5F2EC;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;top:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:500 6.2pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:#5B636B;border-bottom:0.5pt solid #D5D2CA;padding-bottom:2.2mm"><span>Proposed 3,000-seat church auditorium</span><span>Contents · Document control</span></div>
+  <div style="position:absolute;top:24mm;left:25mm;right:15mm;bottom:22mm;display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;row-gap:9mm;align-content:start">
+    <div style="font:500 7pt/1.3 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.05em;padding-top:2mm">CONTENTS</div>
+    <div style="display:flex;flex-direction:column">
+      <sc-for list="{{ d.contents }}" as="c" hint-placeholder-count="16">
+        <div style="display:grid;grid-template-columns:12mm 1fr 10mm;align-items:baseline;padding:1.55mm 0;border-bottom:0.35pt solid #D5D2CA">
+          <span style="font:500 7pt/1 'IBM Plex Mono',monospace;color:#5B636B">{{ c.no }}</span>
+          <span style="font:400 11.5pt/1.2 Newsreader,serif">{{ c.title }}</span>
+          <span style="font:400 7pt/1 'IBM Plex Mono',monospace;text-align:right">{{ c.page }}</span>
+        </div>
+      </sc-for>
+    </div>
+    <div style="font:500 7pt/1.3 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.05em">DOCUMENT CONTROL</div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:0.75pt solid #1E1E1C">
+      <div style="padding:2mm 2mm 2mm 0;border-bottom:0.35pt solid #D5D2CA;display:flex;flex-direction:column;gap:1.2mm"><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.07em;color:#5B636B">Document no.</span><span style="font:400 8.5pt/1.2 Archivo,sans-serif">{{ d.doc.docNo }}</span></div>
+      <div style="padding:2mm 2mm;border-bottom:0.35pt solid #D5D2CA;display:flex;flex-direction:column;gap:1.2mm"><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.07em;color:#5B636B">Revision</span><span style="font:400 8.5pt/1.2 Archivo,sans-serif">{{ d.doc.rev }}</span></div>
+      <div style="padding:2mm 2mm;border-bottom:0.35pt solid #D5D2CA;display:flex;flex-direction:column;gap:1.2mm"><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.07em;color:#5B636B">Issue date</span><span style="font:400 8.5pt/1.2 Archivo,sans-serif">{{ d.doc.date }}</span></div>
+      <div style="padding:2mm 2mm 2mm 0;border-bottom:0.35pt solid #D5D2CA;display:flex;flex-direction:column;gap:1.2mm"><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.07em;color:#5B636B">Status</span><span style="font:400 8.5pt/1.2 Archivo,sans-serif">{{ d.doc.status }}</span></div>
+      <div style="padding:2mm 2mm;border-bottom:0.35pt solid #D5D2CA;display:flex;flex-direction:column;gap:1.2mm"><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.07em;color:#5B636B">Prepared by</span><span style="font:400 8.5pt/1.2 Archivo,sans-serif">{{ d.doc.preparedBy }}</span></div>
+      <div style="padding:2mm 2mm;border-bottom:0.35pt solid #D5D2CA;display:flex;flex-direction:column;gap:1.2mm"><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.07em;color:#5B636B">Checked by</span><span style="font:400 8.5pt/1.2 Archivo,sans-serif">{{ d.doc.checkedBy }}</span></div>
+      <div style="grid-column:1 / -1;padding:2mm 0;border-bottom:0.35pt solid #D5D2CA;display:flex;flex-direction:column;gap:1.2mm"><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.07em;color:#5B636B">Model source</span><span style="font:400 7.5pt/1.3 'IBM Plex Mono',monospace">{{ d.doc.modelFile }} · scene {{ d.doc.modelScene }}</span></div>
+    </div>
+    <div style="font:500 7pt/1.3 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.05em">HOW TO READ VALUES</div>
+    <div style="display:flex;flex-direction:column;gap:2.2mm">
+      <p style="margin:0;font:400 8.5pt/1.5 Archivo,sans-serif;color:#1E1E1C;max-width:120mm">Every value in this document carries a source mark. Values in square brackets are fields not yet supplied.</p>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2mm 6mm;font:400 7.5pt/1.3 Archivo,sans-serif">
+        <div style="display:flex;gap:2.4mm;align-items:center"><span style="display:inline-flex;align-items:center;justify-content:center;width:3.6mm;height:3.6mm;border:0.5pt solid #1E1E1C;font:500 5.8pt/1 'IBM Plex Mono',monospace">M</span>Measured from model geometry</div>
+        <div style="display:flex;gap:2.4mm;align-items:center"><span style="display:inline-flex;align-items:center;justify-content:center;width:3.6mm;height:3.6mm;border:0.5pt solid #1E1E1C;font:500 5.8pt/1 'IBM Plex Mono',monospace">P</span>Authored model property</div>
+        <div style="display:flex;gap:2.4mm;align-items:center"><span style="display:inline-flex;align-items:center;justify-content:center;width:3.6mm;height:3.6mm;border:0.5pt solid #1E1E1C;font:500 5.8pt/1 'IBM Plex Mono',monospace">E</span>Derived preliminary estimate</div>
+        <div style="display:flex;gap:2.4mm;align-items:center"><span style="display:inline-flex;align-items:center;justify-content:center;width:3.6mm;height:3.6mm;border:0.5pt solid #1E1E1C;font:500 5.8pt/1 'IBM Plex Mono',monospace">C</span>Requires confirmation</div>
+        <div style="display:flex;gap:2.4mm;align-items:center"><span style="display:inline-flex;align-items:center;justify-content:center;width:3.6mm;height:3.6mm;border:0.5pt solid #1E1E1C;font:500 5.8pt/1 'IBM Plex Mono',monospace">X</span>Excluded from this document</div>
+      </div>
+      <p style="margin:2mm 0 0;font:400 7.5pt/1.5 Archivo,sans-serif;color:#5B636B;max-width:125mm;padding-top:2.5mm;border-top:0.35pt solid #D5D2CA">The concept model is flagged in its own metadata as “{{ d.doc.modelFlag }}”. Nothing in this document constitutes approved architectural or structural design.</p>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:400 6.2pt/1 'IBM Plex Mono',monospace;color:#5B636B;border-top:0.5pt solid #D5D2CA;padding-top:2.2mm"><span>{{ d.doc.docNo }} · Rev {{ d.doc.rev }} · {{ d.doc.date }}</span><span>Preliminary — for review · Not for construction</span><span style="color:#1E1E1C">02</span></div>
+</section>
+
+<!-- ============ 03 PROJECT OVERVIEW ============ -->
+<section data-page="" data-screen-label="03 Project overview" style="width:210mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#F5F2EC;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;top:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:500 6.2pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:#5B636B;border-bottom:0.5pt solid #D5D2CA;padding-bottom:2.2mm"><span>Proposed 3,000-seat church auditorium</span><span>01 · Project overview</span></div>
+  <div style="position:absolute;top:24mm;left:25mm;right:15mm;bottom:22mm;display:flex;flex-direction:column;gap:8mm">
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;align-items:end;padding-bottom:5mm;border-bottom:0.75pt solid #1E1E1C">
+      <div style="font:500 8pt/1 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.04em">01</div>
+      <h2 style="margin:0;font:400 27pt/1.04 Newsreader,serif;letter-spacing:-.01em">Project overview</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm">
+      <div style="font:400 7pt/1.45 Archivo,sans-serif;color:#5B636B;padding-top:1mm">Compiled from concept model {{ d.doc.model }}. All dimensions in metres unless noted.</div>
+      <div style="display:flex;flex-direction:column;gap:3.2mm">
+        <p style="margin:0;font:400 13pt/1.42 Newsreader,serif;text-wrap:pretty">{{ d.copy.overview.0 }}</p>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:6mm">
+          <p style="margin:0;font:400 8.6pt/1.55 Archivo,sans-serif;text-wrap:pretty">{{ d.copy.overview.1 }}</p>
+          <p style="margin:0;font:400 8.6pt/1.55 Archivo,sans-serif;text-wrap:pretty">{{ d.copy.overview.2 }}</p>
+        </div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;margin-top:auto">
+      <div style="display:flex;flex-direction:column;gap:1.5mm;padding-top:1mm"><span style="font:500 6.5pt/1.3 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.05em">TABLE 1.1</span><span style="font:400 7pt/1.45 Archivo,sans-serif;color:#5B636B">Principal project metrics. Model-derived; none verified.</span></div>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:0.75pt solid #1E1E1C">
+        <sc-for list="{{ d.metrics }}" as="m" hint-placeholder-count="8">
+          <div style="display:flex;flex-direction:column;gap:1.6mm;padding:3.4mm 4mm 3.6mm 0;border-bottom:0.35pt solid #D5D2CA;min-height:22mm;box-sizing:border-box">
+            <div style="display:flex;justify-content:space-between;align-items:center"><span style="font:500 6pt/1 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.07em;color:#5B636B">{{ m.label }}</span><sc-if value="{{ showTags }}" hint-placeholder-val="{{ true }}"><span style="display:inline-flex;align-items:center;justify-content:center;width:3.4mm;height:3.4mm;border:0.5pt solid #5B636B;font:500 5.5pt/1 'IBM Plex Mono',monospace;color:#5B636B">{{ m.src }}</span></sc-if></div>
+            <div style="display:flex;align-items:baseline;gap:2mm"><span style="font:300 23pt/1 Newsreader,serif;letter-spacing:-.01em;font-variant-numeric:lining-nums tabular-nums">{{ m.value }}</span><span style="font:400 7pt/1 'IBM Plex Mono',monospace;color:#5B636B">{{ m.unit }}</span></div>
+            <span style="font:400 6.8pt/1.35 Archivo,sans-serif;color:#5B636B">{{ m.note }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:400 6.2pt/1 'IBM Plex Mono',monospace;color:#5B636B;border-top:0.5pt solid #D5D2CA;padding-top:2.2mm"><span>{{ d.doc.docNo }} · Rev {{ d.doc.rev }} · {{ d.doc.date }}</span><span>Preliminary — for review · Not for construction</span><span style="color:#1E1E1C">03</span></div>
+</section>
+
+<!-- ============ 04 ARCHITECTURAL VISION (A3 spread) ============ -->
+<div data-sheet-wrap="" style="display:contents"><section data-page="" data-screen-label="04 Architectural vision" style="width:420mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#F5F2EC;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;top:0;left:0;width:210mm;height:297mm">
+    <image-slot id="img-aerial" shape="rect" fit="cover" placeholder="RENDER 01 · Exterior aerial perspective (Blender)"></image-slot>
+    <div style="position:absolute;left:24%;top:30%;width:5.2mm;height:5.2mm;border-radius:50%;background:#F5F2EC;border:0.75pt solid #8C5E36;display:flex;align-items:center;justify-content:center;font:500 7pt/1 'IBM Plex Mono',monospace;color:#8C5E36;pointer-events:none">1</div>
+    <div style="position:absolute;left:58%;top:22%;width:5.2mm;height:5.2mm;border-radius:50%;background:#F5F2EC;border:0.75pt solid #8C5E36;display:flex;align-items:center;justify-content:center;font:500 7pt/1 'IBM Plex Mono',monospace;color:#8C5E36;pointer-events:none">2</div>
+    <div style="position:absolute;left:70%;top:58%;width:5.2mm;height:5.2mm;border-radius:50%;background:#F5F2EC;border:0.75pt solid #8C5E36;display:flex;align-items:center;justify-content:center;font:500 7pt/1 'IBM Plex Mono',monospace;color:#8C5E36;pointer-events:none">3</div>
+    <div style="position:absolute;left:30%;top:68%;width:5.2mm;height:5.2mm;border-radius:50%;background:#F5F2EC;border:0.75pt solid #8C5E36;display:flex;align-items:center;justify-content:center;font:500 7pt/1 'IBM Plex Mono',monospace;color:#8C5E36;pointer-events:none">4</div>
+    <div style="position:absolute;left:12mm;bottom:12mm;right:40mm;padding:2.4mm 3mm;background:#F5F2EC;font:400 6.5pt/1.4 Archivo,sans-serif;color:#1E1E1C;pointer-events:none;display:flex;gap:3mm"><span style="font:500 6.2pt/1.4 'IBM Plex Mono',monospace;color:#8C5E36">FIG. 2.1</span><span>Exterior aerial perspective from the concept model. Callouts 1–4 refer to the principles opposite; positions are set per render.</span></div>
+  </div>
+  <div style="position:absolute;top:0;bottom:0;left:210mm;width:0;border-left:0.35pt solid #D5D2CA"></div>
+  <div style="position:absolute;top:9mm;left:235mm;right:15mm;display:flex;justify-content:space-between;font:500 6.2pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:#5B636B;border-bottom:0.5pt solid #D5D2CA;padding-bottom:2.2mm"><span>Proposed 3,000-seat church auditorium</span><span>02 · Architectural vision</span></div>
+  <div style="position:absolute;top:24mm;left:235mm;right:15mm;bottom:22mm;display:flex;flex-direction:column;gap:6mm">
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;align-items:end;padding-bottom:5mm;border-bottom:0.75pt solid #1E1E1C">
+      <div style="font:500 8pt/1 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.04em">02</div>
+      <h2 style="margin:0;font:400 27pt/1.04 Newsreader,serif;letter-spacing:-.01em">Architectural vision</h2>
+    </div>
+    <p style="margin:0;font:400 12.5pt/1.42 Newsreader,serif;text-wrap:pretty">{{ d.copy.vision.0 }}</p>
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:6mm">
+      <p style="margin:0;font:400 8.4pt/1.55 Archivo,sans-serif;text-wrap:pretty">{{ d.copy.vision.1 }}</p>
+      <p style="margin:0;font:400 8.4pt/1.55 Archivo,sans-serif;text-wrap:pretty">{{ d.copy.vision.2 }}</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:0.75pt solid #1E1E1C">
+      <sc-for list="{{ d.copy.principles }}" as="p" hint-placeholder-count="4">
+        <div style="display:grid;grid-template-columns:8mm 1fr;gap:2mm;padding:2.8mm 4mm 3mm 0;border-bottom:0.35pt solid #D5D2CA">
+          <span style="width:5.2mm;height:5.2mm;border-radius:50%;border:0.75pt solid #8C5E36;display:flex;align-items:center;justify-content:center;font:500 6.5pt/1 'IBM Plex Mono',monospace;color:#8C5E36">{{ p.n }}</span>
+          <div style="display:flex;flex-direction:column;gap:1mm"><span style="font:500 8.5pt/1.25 Archivo,sans-serif">{{ p.t }}</span><span style="font:400 7.4pt/1.45 Archivo,sans-serif;color:#5B636B">{{ p.b }}</span></div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 38mm;column-gap:4mm;margin-top:auto;align-items:end">
+      <div style="height:62mm;position:relative"><image-slot id="img-cutaway" shape="rect" fit="cover" placeholder="RENDER 02 · Cutaway aerial perspective"></image-slot></div>
+      <div style="display:flex;flex-direction:column;gap:1.4mm"><span style="font:500 6.2pt/1.4 'IBM Plex Mono',monospace;color:#8C5E36">FIG. 2.2</span><span style="font:400 6.8pt/1.45 Archivo,sans-serif;color:#5B636B">Cutaway aerial perspective showing the tiered rear seating, cross aisle and platform beneath the truss roof.</span></div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:9mm;left:235mm;right:15mm;display:flex;justify-content:space-between;font:400 6.2pt/1 'IBM Plex Mono',monospace;color:#5B636B;border-top:0.5pt solid #D5D2CA;padding-top:2.2mm"><span>{{ d.doc.docNo }} · Rev {{ d.doc.rev }} · {{ d.doc.date }}</span><span>Preliminary — for review · Not for construction</span><span style="color:#1E1E1C">04</span></div>
+</section></div>
+
+<!-- ============ 05 PROJECT AT A GLANCE ============ -->
+<section data-page="" data-screen-label="05 Project at a glance" style="width:210mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#F5F2EC;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;top:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:500 6.2pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:#5B636B;border-bottom:0.5pt solid #D5D2CA;padding-bottom:2.2mm"><span>Proposed 3,000-seat church auditorium</span><span>03 · Project at a glance</span></div>
+  <div style="position:absolute;top:24mm;left:25mm;right:15mm;bottom:22mm;display:flex;flex-direction:column;gap:6mm">
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;align-items:end;padding-bottom:5mm;border-bottom:0.75pt solid #1E1E1C">
+      <div style="font:500 8pt/1 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.04em">03</div>
+      <h2 style="margin:0;font:400 27pt/1.04 Newsreader,serif;letter-spacing:-.01em">Project at a glance</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:7mm;row-gap:6mm">
+      <div style="display:flex;flex-direction:column">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:1.6mm;border-bottom:0.75pt solid #1E1E1C"><span style="font:500 8.5pt/1.2 Archivo,sans-serif">Architectural</span><span style="font:500 6pt/1 'IBM Plex Mono',monospace;color:#8C5E36">TABLE 3.1</span></div>
+        <sc-for list="{{ glArch }}" as="r" hint-placeholder-count="7">
+          <div style="display:grid;grid-template-columns:1fr auto 5mm;gap:2mm;align-items:baseline;padding:1.5mm 1mm;border-bottom:0.35pt solid #D5D2CA;background:{{ r.zebra }}"><span style="font:400 7.2pt/1.3 Archivo,sans-serif">{{ r.label }}<br><span style="font:400 5.8pt/1.3 'IBM Plex Mono',monospace;color:#5B636B">{{ r.status }}</span></span><span style="font:500 7.6pt/1.2 'IBM Plex Mono',monospace;text-align:right;white-space:nowrap">{{ r.value }} <span style="color:#5B636B;font-weight:400">{{ r.unit }}</span></span><sc-if value="{{ showTags }}" hint-placeholder-val="{{ true }}"><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;color:#5B636B;text-align:right">{{ r.src }}</span></sc-if></div>
+        </sc-for>
+      </div>
+      <div style="display:flex;flex-direction:column">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:1.6mm;border-bottom:0.75pt solid #1E1E1C"><span style="font:500 8.5pt/1.2 Archivo,sans-serif">Structural</span><span style="font:500 6pt/1 'IBM Plex Mono',monospace;color:#8C5E36">TABLE 3.2</span></div>
+        <sc-for list="{{ glStruct }}" as="r" hint-placeholder-count="7">
+          <div style="display:grid;grid-template-columns:1fr auto 5mm;gap:2mm;align-items:baseline;padding:1.5mm 1mm;border-bottom:0.35pt solid #D5D2CA;background:{{ r.zebra }}"><span style="font:400 7.2pt/1.3 Archivo,sans-serif">{{ r.label }}<br><span style="font:400 5.8pt/1.3 'IBM Plex Mono',monospace;color:#5B636B">{{ r.status }}</span></span><span style="font:500 7.6pt/1.2 'IBM Plex Mono',monospace;text-align:right;white-space:nowrap">{{ r.value }} <span style="color:#5B636B;font-weight:400">{{ r.unit }}</span></span><sc-if value="{{ showTags }}" hint-placeholder-val="{{ true }}"><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;color:#5B636B;text-align:right">{{ r.src }}</span></sc-if></div>
+        </sc-for>
+      </div>
+      <div style="display:flex;flex-direction:column">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:1.6mm;border-bottom:0.75pt solid #1E1E1C"><span style="font:500 8.5pt/1.2 Archivo,sans-serif">Functional capacity</span><span style="font:500 6pt/1 'IBM Plex Mono',monospace;color:#8C5E36">TABLE 3.3</span></div>
+        <sc-for list="{{ glFunc }}" as="r" hint-placeholder-count="7">
+          <div style="display:grid;grid-template-columns:1fr auto 5mm;gap:2mm;align-items:baseline;padding:1.5mm 1mm;border-bottom:0.35pt solid #D5D2CA;background:{{ r.zebra }}"><span style="font:400 7.2pt/1.3 Archivo,sans-serif">{{ r.label }}<br><span style="font:400 5.8pt/1.3 'IBM Plex Mono',monospace;color:#5B636B">{{ r.status }}</span></span><span style="font:500 7.6pt/1.2 'IBM Plex Mono',monospace;text-align:right;white-space:nowrap">{{ r.value }} <span style="color:#5B636B;font-weight:400">{{ r.unit }}</span></span><sc-if value="{{ showTags }}" hint-placeholder-val="{{ true }}"><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;color:#5B636B;text-align:right">{{ r.src }}</span></sc-if></div>
+        </sc-for>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:5mm">
+        <div style="display:flex;flex-direction:column">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:1.6mm;border-bottom:0.75pt solid #1E1E1C"><span style="font:500 8.5pt/1.2 Archivo,sans-serif">Model development status</span><span style="font:500 6pt/1 'IBM Plex Mono',monospace;color:#8C5E36">TABLE 3.4</span></div>
+          <sc-for list="{{ glModel }}" as="r" hint-placeholder-count="5">
+            <div style="display:grid;grid-template-columns:1fr auto;gap:2mm;align-items:baseline;padding:1.5mm 1mm;border-bottom:0.35pt solid #D5D2CA;background:{{ r.zebra }}"><span style="font:400 7.2pt/1.3 Archivo,sans-serif">{{ r.label }}</span><span style="font:500 7.4pt/1.2 'IBM Plex Mono',monospace;text-align:right">{{ r.value }}</span></div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:1.6mm;border-bottom:0.75pt solid #1E1E1C"><span style="font:500 8.5pt/1.2 Archivo,sans-serif">Engineering verification status</span><span style="font:500 6pt/1 'IBM Plex Mono',monospace;color:#8C5E36">TABLE 3.5</span></div>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr))">
+        <sc-for list="{{ d.glance.verif }}" as="r" hint-placeholder-count="6">
+          <div style="display:flex;flex-direction:column;gap:1.2mm;padding:2.4mm 3mm 2.6mm 0;border-bottom:0.35pt solid #D5D2CA"><span style="font:400 7.2pt/1.3 Archivo,sans-serif">{{ r.label }}</span><span style="display:flex;gap:1.6mm;align-items:center;font:500 6.4pt/1.2 'IBM Plex Mono',monospace;color:#8A3324"><span style="width:2mm;height:2mm;border:0.6pt solid #8A3324;border-radius:50%;flex:none"></span>{{ r.value }}</span></div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:400 6.2pt/1 'IBM Plex Mono',monospace;color:#5B636B;border-top:0.5pt solid #D5D2CA;padding-top:2.2mm"><span>{{ d.doc.docNo }} · Rev {{ d.doc.rev }} · {{ d.doc.date }}</span><span>Preliminary — for review · Not for construction</span><span style="color:#1E1E1C">05</span></div>
+</section>
+
+<!-- ============ 06 FLOOR PLAN (A3 sheet) ============ -->
+<div data-sheet-wrap="" style="display:contents"><section data-page="" data-screen-label="06 Floor plan A-100" style="width:420mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#FFFFFF;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;inset:8mm;border:0.75pt solid #1E1E1C;display:grid;grid-template-columns:minmax(0,1fr) 62mm">
+    <div style="position:relative;padding:1.5mm;display:flex;flex-direction:column;justify-content:space-between">
+      <img loading="lazy" decoding="async" src="drawings/A-100_plan_L00.svg" alt="Ground floor plan L00 derived from model geometry" style="display:block;width:339mm;height:247.67mm">
+      <div style="display:grid;grid-template-columns:30mm repeat(4,minmax(0,1fr));column-gap:4mm;border-top:0.35pt solid #1E1E1C;padding-top:2mm">
+        <div style="display:flex;flex-direction:column;gap:1mm"><span style="font:500 6pt/1.2 'IBM Plex Mono',monospace;color:#8C5E36">SCHEDULE</span><span style="font:400 6.2pt/1.35 Archivo,sans-serif;color:#5B636B">Space allowances from model properties, m²</span></div>
+        <sc-for list="{{ roomCols }}" as="col" hint-placeholder-count="4">
+          <div style="display:flex;flex-direction:column">
+            <sc-for list="{{ col.rows }}" as="r" hint-placeholder-count="7">
+              <div style="display:grid;grid-template-columns:15mm 1fr 11mm;gap:1mm;font:400 5.6pt/1.55 'IBM Plex Mono',monospace"><span>{{ r.code }}</span><span style="font-family:Archivo,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ r.name }}</span><span style="text-align:right">{{ r.area }}</span></div>
+            </sc-for>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="border-left:0.75pt solid #1E1E1C;display:flex;flex-direction:column;font-size:6pt">
+      <div style="padding:3mm;display:flex;flex-direction:column;gap:1.5mm;flex:1;overflow:hidden">
+        <span style="font:500 6pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;color:#5B636B">EXITS · EFFECTIVE CLEAR WIDTH (m)</span>
+        <sc-for list="{{ d.exits }}" as="x" hint-placeholder-count="17">
+          <div style="display:grid;grid-template-columns:7mm 1fr 7mm;gap:1mm;font:400 5.6pt/1.45 Archivo,sans-serif;border-bottom:0.25pt solid #E2E0DA"><span style="font-family:'IBM Plex Mono',monospace;color:#8C5E36;font-weight:500">{{ x.id }}</span><span>{{ x.role }}</span><span style="font-family:'IBM Plex Mono',monospace;text-align:right">{{ x.clear }}</span></div>
+        </sc-for>
+        <span style="font:500 6pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;color:#5B636B;margin-top:2mm">LEGEND</span>
+        <div style="display:flex;flex-direction:column;gap:1.1mm;font:400 5.8pt/1.3 Archivo,sans-serif">
+          <div style="display:flex;gap:2mm;align-items:center"><span style="width:8mm;height:2.2mm;background:#1D1D1B;flex:none"></span>Wall, column — cut</div>
+          <div style="display:flex;gap:2mm;align-items:center"><span style="width:8mm;height:2.2mm;background:#C8CCD0;flex:none"></span>Congregation seating</div>
+          <div style="display:flex;gap:2mm;align-items:center"><span style="width:8mm;height:2.2mm;background:#9AA1A8;flex:none"></span>Choir seating</div>
+          <div style="display:flex;gap:2mm;align-items:center"><span style="width:8mm;height:2.2mm;border:0.6pt solid #9A6A3F;box-sizing:border-box;flex:none"></span>Wheelchair / refuge space</div>
+          <div style="display:flex;gap:2mm;align-items:center"><span style="width:8mm;height:2.2mm;background:#E7E5DF;flex:none"></span>Space allowance (SP-)</div>
+          <div style="display:flex;gap:2mm;align-items:center"><span style="width:8mm;border-top:0.6pt dashed #1D1D1B;flex:none"></span>Canopy over (assumption)</div>
+        </div>
+      </div>
+      <div style="border-top:0.75pt solid #1E1E1C;padding:2.4mm 3mm;background:#1E1E1C;color:#F5F2EC;font:500 6.2pt/1.35 'IBM Plex Mono',monospace;letter-spacing:.05em">CONCEPT — UNVERIFIED<br>NOT FOR CONSTRUCTION</div>
+      <div style="border-top:0.75pt solid #1E1E1C;padding:2.4mm 3mm;display:flex;flex-direction:column;gap:1mm"><span style="font:500 5.6pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;color:#5B636B">PROJECT</span><span style="font:500 7.4pt/1.25 Archivo,sans-serif">Proposed 3,000-Seat Church Auditorium</span><span style="font:400 6.4pt/1.25 Archivo,sans-serif;color:#5B636B">Zimbabwe · {{ d.doc.site }}</span></div>
+      <div style="border-top:0.35pt solid #1E1E1C;padding:2.4mm 3mm;display:flex;flex-direction:column;gap:1mm"><span style="font:500 5.6pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;color:#5B636B">DRAWING TITLE</span><span style="font:400 12pt/1.15 Newsreader,serif">General arrangement plan — Level L00</span></div>
+      <div style="border-top:0.35pt solid #1E1E1C;display:grid;grid-template-columns:1fr 1fr">
+        <div style="padding:1.8mm 3mm;border-right:0.35pt solid #1E1E1C;border-bottom:0.35pt solid #1E1E1C"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">DRAWING NO.</div><div style="font:500 9pt/1.4 'IBM Plex Mono',monospace">A-100</div></div>
+        <div style="padding:1.8mm 3mm;border-bottom:0.35pt solid #1E1E1C"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">REVISION</div><div style="font:500 9pt/1.4 'IBM Plex Mono',monospace">{{ d.doc.rev }}</div></div>
+        <div style="padding:1.8mm 3mm;border-right:0.35pt solid #1E1E1C;border-bottom:0.35pt solid #1E1E1C"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">SCALE</div><div style="font:400 7.4pt/1.5 'IBM Plex Mono',monospace">1:300 @ A3</div></div>
+        <div style="padding:1.8mm 3mm;border-bottom:0.35pt solid #1E1E1C"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">DATE</div><div style="font:400 7.4pt/1.5 'IBM Plex Mono',monospace">{{ d.doc.date }}</div></div>
+        <div style="padding:1.8mm 3mm;border-right:0.35pt solid #1E1E1C"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">MODEL</div><div style="font:400 6.4pt/1.5 'IBM Plex Mono',monospace">{{ d.doc.model }}</div></div>
+        <div style="padding:1.8mm 3mm"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">VERIFICATION</div><div style="font:500 6.4pt/1.5 'IBM Plex Mono',monospace;color:#8A3324">Unverified</div></div>
+      </div>
+      <div style="border-top:0.75pt solid #1E1E1C;padding:1.8mm 3mm;display:flex;justify-content:space-between;font:400 6pt/1 'IBM Plex Mono',monospace;color:#5B636B"><span>Bounding-box schematic from model</span><span style="color:#1E1E1C">06</span></div>
+    </div>
+  </div>
+</section></div>
+
+<!-- ============ 07 SEATING ============ -->
+<section data-page="" data-screen-label="07 Seating layout" style="width:210mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#F5F2EC;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;top:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:500 6.2pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:#5B636B;border-bottom:0.5pt solid #D5D2CA;padding-bottom:2.2mm"><span>Proposed 3,000-seat church auditorium</span><span>05 · Seating and congregation layout</span></div>
+  <div style="position:absolute;top:22mm;left:25mm;right:15mm;bottom:20mm;display:flex;flex-direction:column;gap:4.5mm">
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;align-items:end;padding-bottom:3.5mm;border-bottom:0.75pt solid #1E1E1C">
+      <div style="font:500 8pt/1 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.04em">05</div>
+      <h2 style="margin:0;font:400 22pt/1.04 Newsreader,serif;letter-spacing:-.01em">Seating and congregation layout</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:139mm 1fr;column-gap:4mm">
+      <img loading="lazy" decoding="async" src="drawings/A-110_seating.svg" alt="Seating plan from model" style="display:block;width:139mm;height:154mm;background:#FFFFFF">
+      <div style="display:flex;flex-direction:column;gap:2.4mm;font:400 6.2pt/1.4 Archivo,sans-serif;color:#5B636B">
+        <span style="font:500 6.2pt/1.3 'IBM Plex Mono',monospace;color:#8C5E36">FIG. 5.1</span>
+        <span>A-110 · 1:500. Seats from model objects SEAT-C, -H, -K; blocks shaded alternately.</span>
+        <span style="display:flex;gap:1.5mm;align-items:center"><span style="width:2mm;height:2mm;border-radius:50%;background:#9A6A3F;flex:none"></span>SO · setting-out point, platform front edge centre</span>
+        <span>Dotted rings: 10 m distance intervals from SO (geometric).</span>
+        <span>Accent ring: 45.45 m maximum viewing distance (model property).</span>
+        <span style="display:flex;gap:1.5mm;align-items:center"><span style="width:3mm;height:2mm;border:0.6pt solid #9A6A3F;flex:none"></span>Wheelchair space</span>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:5mm">
+      <div style="display:flex;flex-direction:column">
+        <div style="display:flex;justify-content:space-between;padding-bottom:1.4mm;border-bottom:0.75pt solid #1E1E1C"><span style="font:500 7.6pt/1.2 Archivo,sans-serif">Capacity schedule</span><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;color:#8C5E36">T 5.1</span></div>
+        <div style="display:grid;grid-template-columns:1fr 18mm 10mm;font:500 5.4pt/1 'IBM Plex Mono',monospace;color:#5B636B;padding:1.4mm 0;border-bottom:0.35pt solid #D5D2CA"><span>BLOCK</span><span>ROWS</span><span style="text-align:right">SEATS</span></div>
+        <sc-for list="{{ seatBlocks }}" as="b" hint-placeholder-count="6">
+          <div style="display:grid;grid-template-columns:1fr 18mm 10mm;font:400 6.6pt/1 'IBM Plex Mono',monospace;padding:1.3mm 0;border-bottom:0.35pt solid #D5D2CA;background:{{ b.zebra }}"><span>{{ b.id }}</span><span>{{ b.rows }}</span><span style="text-align:right">{{ b.seats }}</span></div>
+        </sc-for>
+        <div style="display:grid;grid-template-columns:1fr 10mm;font:500 6.8pt/1 'IBM Plex Mono',monospace;padding:1.6mm 0;border-bottom:0.75pt solid #1E1E1C"><span>Congregation total</span><span style="text-align:right">{{ d.seating.totalCongregation }}</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column">
+        <div style="display:flex;justify-content:space-between;padding-bottom:1.4mm;border-bottom:0.75pt solid #1E1E1C"><span style="font:500 7.6pt/1.2 Archivo,sans-serif">Row, aisle &amp; access</span><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;color:#8C5E36">T 5.2</span></div>
+        <sc-for list="{{ seatDims }}" as="r" hint-placeholder-count="10">
+          <div style="display:grid;grid-template-columns:1fr auto;gap:2mm;font:400 6.2pt/1.25 Archivo,sans-serif;padding:1.05mm 0;border-bottom:0.35pt solid #D5D2CA;background:{{ r.zebra }}"><span>{{ r.label }}</span><span style="font-family:'IBM Plex Mono',monospace;text-align:right">{{ r.value }}</span></div>
+        </sc-for>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:3mm">
+        <div style="display:flex;flex-direction:column">
+          <div style="display:flex;justify-content:space-between;padding-bottom:1.4mm;border-bottom:0.75pt solid #1E1E1C"><span style="font:500 7.6pt/1.2 Archivo,sans-serif">Sightline analysis</span><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;color:#8C5E36">T 5.3</span></div>
+          <sc-for list="{{ seatSight }}" as="r" hint-placeholder-count="6">
+            <div style="display:grid;grid-template-columns:1fr auto;gap:2mm;font:400 6.2pt/1.25 Archivo,sans-serif;padding:1.05mm 0;border-bottom:0.35pt solid #D5D2CA;background:{{ r.zebra }}"><span>{{ r.label }}</span><span style="font-family:'IBM Plex Mono',monospace;text-align:right">{{ r.value }}</span></div>
+          </sc-for>
+        </div>
+        <span style="font:400 5.9pt/1.4 Archivo,sans-serif;color:#5B636B">Sightline and off-axis values are computed by the model script and have not been checked. Seating outside the target: 329 choir, 30 companion.</span>
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:400 6.2pt/1 'IBM Plex Mono',monospace;color:#5B636B;border-top:0.5pt solid #D5D2CA;padding-top:2.2mm"><span>{{ d.doc.docNo }} · Rev {{ d.doc.rev }} · {{ d.doc.date }}</span><span>Preliminary — for review · Not for construction</span><span style="color:#1E1E1C">07</span></div>
+</section>
+
+<!-- ============ 08 INTERIOR ARCHITECTURE ============ -->
+<section data-page="" data-screen-label="08 Interior architecture" style="width:210mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#F5F2EC;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;top:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:500 6.2pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:#5B636B;border-bottom:0.5pt solid #D5D2CA;padding-bottom:2.2mm"><span>Proposed 3,000-seat church auditorium</span><span>06 · Interior architecture</span></div>
+  <div style="position:absolute;top:22mm;left:25mm;right:15mm;bottom:20mm;display:flex;flex-direction:column;gap:4mm">
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;align-items:end;padding-bottom:3.5mm;border-bottom:0.75pt solid #1E1E1C">
+      <div style="font:500 8pt/1 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.04em">06</div>
+      <h2 style="margin:0;font:400 22pt/1.04 Newsreader,serif;letter-spacing:-.01em">Interior architecture</h2>
+    </div>
+    <div style="height:84mm;position:relative"><image-slot id="img-from-rear" shape="rect" fit="cover" placeholder="RENDER 04 · Interior from rear towards the platform"></image-slot>
+      <div style="position:absolute;left:3mm;top:3mm;padding:1.2mm 2mm;background:#F5F2EC;font:500 6pt/1 'IBM Plex Mono',monospace;color:#8C5E36;pointer-events:none">FIG. 6.1</div></div>
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm"><span style="font:400 6.6pt/1.4 Archivo,sans-serif;color:#5B636B">From the rear platform at +4.600 towards the 20 m platform and the 12.8 × 7.2 m main LED wall.</span><span style="font:400 6.6pt/1.4 Archivo,sans-serif;color:#5B636B">{{ d.copy.interior.0 }}</span></div>
+    <div style="height:70mm;position:relative"><image-slot id="img-from-platform" shape="rect" fit="cover" placeholder="RENDER 03 · Interior from the platform towards the congregation"></image-slot>
+      <div style="position:absolute;left:3mm;top:3mm;padding:1.2mm 2mm;background:#F5F2EC;font:500 6pt/1 'IBM Plex Mono',monospace;color:#8C5E36;pointer-events:none">FIG. 6.2</div></div>
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm"><span style="font:400 6.6pt/1.4 Archivo,sans-serif;color:#5B636B">From the platform: front slope, level cross aisle with wheelchair band, rear tiers.</span><span></span></div>
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;align-items:start;margin-top:auto">
+      <div style="display:flex;flex-direction:column;gap:1.2mm"><span style="font:500 6.2pt/1.3 'IBM Plex Mono',monospace;color:#8C5E36">FIG. 6.3</span><span style="font:400 6.6pt/1.4 Archivo,sans-serif;color:#5B636B">Section A–A, 1:500 (A-301). Tiered seating against the truss zone: bottom chord +14.175, roof +18.400.</span></div>
+      <img loading="lazy" decoding="async" src="drawings/A-301_section_AA.svg" alt="Longitudinal section A-A" style="display:block;width:128mm;height:auto;background:#FFFFFF">
+    </div>
+  </div>
+  <div style="position:absolute;bottom:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:400 6.2pt/1 'IBM Plex Mono',monospace;color:#5B636B;border-top:0.5pt solid #D5D2CA;padding-top:2.2mm"><span>{{ d.doc.docNo }} · Rev {{ d.doc.rev }} · {{ d.doc.date }}</span><span>Preliminary — for review · Not for construction</span><span style="color:#1E1E1C">08</span></div>
+</section>
+
+<!-- ============ 09 CHAPTER OPENER ============ -->
+<section data-page="" data-screen-label="09 Chapter opener Structure" style="width:210mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#2A2C2F;color:#EDE8DE;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;top:24mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:500 6.5pt/1 'IBM Plex Mono',monospace;letter-spacing:.08em;color:#9E998F"><span>PART B</span><span>SECTIONS 07 – 10</span></div>
+  <div style="position:absolute;top:46mm;left:25mm;font:300 120pt/0.8 Newsreader,serif;color:#B98A5C;letter-spacing:-.03em">07</div>
+  <div style="position:absolute;left:25mm;right:15mm;bottom:30mm;display:flex;flex-direction:column;gap:6mm">
+    <h2 style="margin:0;font:300 34pt/1.04 Newsreader,serif;letter-spacing:-.01em;max-width:150mm">Structure</h2>
+    <div style="width:22mm;border-top:0.75pt solid #B98A5C"></div>
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2mm 8mm;font:400 8.5pt/1.5 Archivo,sans-serif;color:#C9C3B8;max-width:150mm">
+      <span>07 Structural engineering concept</span><span>08 Roof structure</span><span>09 Structural member schedules</span><span>10 Building elevations and sections</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10 STRUCTURAL CONCEPT (A3 spread) ============ -->
+<div data-sheet-wrap="" style="display:contents"><section data-page="" data-screen-label="10 Structural concept" style="width:420mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#F5F2EC;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;top:9mm;left:15mm;right:15mm;display:flex;justify-content:space-between;font:500 6.2pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:#5B636B;border-bottom:0.5pt solid #D5D2CA;padding-bottom:2.2mm"><span>Proposed 3,000-seat church auditorium</span><span>07 · Structural engineering concept</span></div>
+  <div style="position:absolute;top:22mm;left:15mm;right:15mm;bottom:20mm;display:grid;grid-template-columns:minmax(0,1fr) 104mm;column-gap:10mm">
+    <div style="position:relative;background:#FFFFFF;display:flex;align-items:center;justify-content:center">
+      <img loading="lazy" decoding="async" src="drawings/S-100_structural_axo.svg" alt="Structural frame axonometric from model member centrelines" style="display:block;width:100%;height:auto;max-height:100%">
+      <div style="position:absolute;left:4mm;top:4mm;display:flex;flex-direction:column;gap:1mm"><span style="font:500 6.2pt/1.3 'IBM Plex Mono',monospace;color:#8C5E36">FIG. 7.1 · S-100</span><span style="font:400 6.4pt/1.4 Archivo,sans-serif;color:#5B636B;max-width:80mm">Structural frame axonometric from model member centrelines. NTS. Footings dashed: reference positions only.</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:5mm">
+      <div style="display:flex;flex-direction:column;gap:3mm;padding-bottom:4mm;border-bottom:0.75pt solid #1E1E1C">
+        <div style="font:500 8pt/1 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.04em">07</div>
+        <h2 style="margin:0;font:400 25pt/1.04 Newsreader,serif;letter-spacing:-.01em">Structural engineering concept</h2>
+      </div>
+      <p style="margin:0;font:400 8.3pt/1.55 Archivo,sans-serif;text-wrap:pretty">{{ d.copy.structure.0 }}</p>
+      <p style="margin:0;font:400 8.3pt/1.55 Archivo,sans-serif;text-wrap:pretty">{{ d.copy.structure.1 }}</p>
+      <p style="margin:0;font:400 8.3pt/1.55 Archivo,sans-serif;text-wrap:pretty">{{ d.copy.structure.2 }}</p>
+      <div style="display:flex;flex-direction:column;margin-top:auto">
+        <div style="display:flex;justify-content:space-between;padding-bottom:1.4mm;border-bottom:0.75pt solid #1E1E1C"><span style="font:500 8pt/1.2 Archivo,sans-serif">Callout key</span><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;color:#8C5E36">TABLE 7.1</span></div>
+        <sc-for list="{{ callouts }}" as="c" hint-placeholder-count="9">
+          <div style="display:grid;grid-template-columns:7mm 1fr 12mm;gap:2mm;align-items:center;padding:1.3mm 0;border-bottom:0.35pt solid #D5D2CA">
+            <span style="width:4.6mm;height:4.6mm;border-radius:50%;border:0.6pt solid #8C5E36;display:flex;align-items:center;justify-content:center;font:500 6pt/1 'IBM Plex Mono',monospace;color:#8C5E36">{{ c.n }}</span>
+            <span style="display:flex;flex-direction:column;gap:0.4mm"><span style="font:500 7pt/1.25 Archivo,sans-serif">{{ c.t }}</span><span style="font:400 6pt/1.3 'IBM Plex Mono',monospace;color:#5B636B">{{ c.ref }}</span></span>
+            <span style="font:500 6.8pt/1 'IBM Plex Mono',monospace;text-align:right">{{ c.q }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:9mm;left:15mm;right:15mm;display:flex;justify-content:space-between;font:400 6.2pt/1 'IBM Plex Mono',monospace;color:#5B636B;border-top:0.5pt solid #D5D2CA;padding-top:2.2mm"><span>{{ d.doc.docNo }} · Rev {{ d.doc.rev }} · {{ d.doc.date }}</span><span>Preliminary — for review · Not for construction</span><span style="color:#1E1E1C">10</span></div>
+</section></div>
+
+<!-- ============ 11 ROOF STRUCTURE (A3 sheet) ============ -->
+<div data-sheet-wrap="" style="display:contents"><section data-page="" data-screen-label="11 Roof structure S-200" style="width:420mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#FFFFFF;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;inset:8mm;border:0.75pt solid #1E1E1C;display:grid;grid-template-columns:minmax(0,1fr) 62mm">
+    <div style="position:relative;padding:1.5mm;display:flex;flex-direction:column;gap:2mm">
+      <div style="display:grid;grid-template-columns:259mm minmax(0,1fr);column-gap:4mm">
+        <div style="position:relative"><img loading="lazy" decoding="async" src="drawings/S-200_roof_framing.svg" alt="Roof framing plan" style="display:block;width:259mm;height:178.5mm">
+          <div style="position:absolute;right:2mm;bottom:2mm;background:#FFFFFF;padding:1mm 1.5mm;font:500 6.4pt/1.3 'IBM Plex Mono',monospace">1 · ROOF FRAMING PLAN · 1:400</div></div>
+        <div style="display:flex;flex-direction:column;gap:3mm;padding-top:2mm;font:400 6.2pt/1.45 Archivo,sans-serif">
+          <span style="font:500 6pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;color:#5B636B">MEMBER KEY</span>
+          <div style="display:flex;flex-direction:column;gap:1.4mm">
+            <div style="display:flex;gap:2mm;align-items:center"><span style="width:9mm;border-top:1.4pt solid #1D1D1B;flex:none"></span>T3–T11 truss top chord, 50.000 m span</div>
+            <div style="display:flex;gap:2mm;align-items:center"><span style="width:9mm;border-top:0.7pt solid #1D1D1B;flex:none"></span>Beams: eaves, wing roofs</div>
+            <div style="display:flex;gap:2mm;align-items:center"><span style="width:9mm;border-top:0.5pt solid #6E747B;flex:none"></span>Purlins, 11 lines per bay</div>
+            <div style="display:flex;gap:2mm;align-items:center"><span style="width:9mm;border-top:0.5pt solid #9A6A3F;flex:none"></span>Roof X-bracing, bays 3–4, 7–8, 10–11</div>
+            <div style="display:flex;gap:2mm;align-items:center"><span style="width:9mm;border-top:0.5pt dashed #1D1D1B;flex:none"></span>Gutter (size TBC)</div>
+            <div style="display:flex;gap:2mm;align-items:center"><span style="width:2.2mm;height:2.2mm;border-radius:50%;border:0.4pt solid #1D1D1B;margin:0 3.4mm;flex:none"></span>Downpipe, 28 no.</div>
+          </div>
+          <span style="font:500 6pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;color:#5B636B;margin-top:2mm">ROOF DATA</span>
+          <sc-for list="{{ roofData }}" as="r" hint-placeholder-count="8">
+            <div style="display:grid;grid-template-columns:1fr auto;gap:2mm;border-bottom:0.25pt solid #E2E0DA;padding-bottom:0.6mm"><span>{{ r.k }}</span><span style="font-family:'IBM Plex Mono',monospace;text-align:right">{{ r.v }}</span></div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="position:relative"><img loading="lazy" decoding="async" src="drawings/S-300_section_T6.svg" alt="Transverse section through truss T6" style="display:block;width:253.33mm;height:90mm">
+        <div style="position:absolute;left:258mm;bottom:4mm;font:500 6.4pt/1.3 'IBM Plex Mono',monospace;width:76mm">2 · TRANSVERSE SECTION B–B<br>AT TRUSS T6 · 1:300</div></div>
+    </div>
+    <div style="border-left:0.75pt solid #1E1E1C;display:flex;flex-direction:column">
+      <div style="padding:3mm;display:flex;flex-direction:column;gap:1.8mm;flex:1;font:400 6pt/1.45 Archivo,sans-serif">
+        <span style="font:500 6pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;color:#5B636B">NOTES</span>
+        <span>1. Geometry from member centrelines in model {{ d.doc.model }}. All sections are placeholders.</span>
+        <span>2. Roof covering: “Hall metal roof (concept)” per model. Profile, gauge and fixings [ROOF SPECIFICATION].</span>
+        <span>3. Drainage: 4 eaves gutters to 28 downpipes discharging to grade / soakaway (concept). Catchment and sizes by hydraulic engineer.</span>
+        <span>4. Bay spacing 8.0 m typical; 6.5 m (5–6) and 9.5 m (6–7) to be confirmed (DR-11).</span>
+        <span>5. Truss member IDs follow STR-TRUSS-Tn-TCxx / BCxx / Vxx / Dxx.</span>
+      </div>
+      <div style="border-top:0.75pt solid #1E1E1C;padding:2.4mm 3mm;background:#1E1E1C;color:#F5F2EC;font:500 6.2pt/1.35 'IBM Plex Mono',monospace;letter-spacing:.05em">CONCEPT — UNVERIFIED<br>NOT FOR CONSTRUCTION</div>
+      <div style="border-top:0.75pt solid #1E1E1C;padding:2.4mm 3mm;display:flex;flex-direction:column;gap:1mm"><span style="font:500 5.6pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;color:#5B636B">PROJECT</span><span style="font:500 7.4pt/1.25 Archivo,sans-serif">Proposed 3,000-Seat Church Auditorium</span><span style="font:400 6.4pt/1.25 Archivo,sans-serif;color:#5B636B">Zimbabwe · {{ d.doc.site }}</span></div>
+      <div style="border-top:0.35pt solid #1E1E1C;padding:2.4mm 3mm;display:flex;flex-direction:column;gap:1mm"><span style="font:500 5.6pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;color:#5B636B">DRAWING TITLE</span><span style="font:400 12pt/1.15 Newsreader,serif">Roof framing plan and transverse section</span></div>
+      <div style="border-top:0.35pt solid #1E1E1C;display:grid;grid-template-columns:1fr 1fr">
+        <div style="padding:1.8mm 3mm;border-right:0.35pt solid #1E1E1C;border-bottom:0.35pt solid #1E1E1C"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">DRAWING NO.</div><div style="font:500 9pt/1.4 'IBM Plex Mono',monospace">S-200</div></div>
+        <div style="padding:1.8mm 3mm;border-bottom:0.35pt solid #1E1E1C"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">REVISION</div><div style="font:500 9pt/1.4 'IBM Plex Mono',monospace">{{ d.doc.rev }}</div></div>
+        <div style="padding:1.8mm 3mm;border-right:0.35pt solid #1E1E1C;border-bottom:0.35pt solid #1E1E1C"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">SCALE</div><div style="font:400 7.4pt/1.5 'IBM Plex Mono',monospace">1:400, 1:300 @ A3</div></div>
+        <div style="padding:1.8mm 3mm;border-bottom:0.35pt solid #1E1E1C"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">DATE</div><div style="font:400 7.4pt/1.5 'IBM Plex Mono',monospace">{{ d.doc.date }}</div></div>
+        <div style="padding:1.8mm 3mm;border-right:0.35pt solid #1E1E1C"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">MODEL</div><div style="font:400 6.4pt/1.5 'IBM Plex Mono',monospace">{{ d.doc.model }}</div></div>
+        <div style="padding:1.8mm 3mm"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">VERIFICATION</div><div style="font:500 6.4pt/1.5 'IBM Plex Mono',monospace;color:#8A3324">Unverified</div></div>
+      </div>
+      <div style="border-top:0.75pt solid #1E1E1C;padding:1.8mm 3mm;display:flex;justify-content:space-between;font:400 6pt/1 'IBM Plex Mono',monospace;color:#5B636B"><span>08 · Roof structure</span><span style="color:#1E1E1C">11</span></div>
+    </div>
+  </div>
+</section></div>
+
+<!-- ============ 12 MEMBER SCHEDULES (A3) ============ -->
+<div data-sheet-wrap="" style="display:contents"><section data-page="" data-screen-label="12 Member schedules" style="width:420mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#F5F2EC;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;top:9mm;left:15mm;right:15mm;display:flex;justify-content:space-between;font:500 6.2pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:#5B636B;border-bottom:0.5pt solid #D5D2CA;padding-bottom:2.2mm"><span>Proposed 3,000-seat church auditorium</span><span>09 · Structural member schedules</span></div>
+  <div style="position:absolute;top:22mm;left:15mm;right:15mm;bottom:20mm;display:flex;flex-direction:column;gap:5mm">
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;align-items:end;padding-bottom:3.5mm;border-bottom:0.75pt solid #1E1E1C">
+      <div style="font:500 8pt/1 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.04em">09</div>
+      <div style="display:flex;justify-content:space-between;align-items:end;gap:4mm"><h2 style="margin:0;font:400 24pt/1.04 Newsreader,serif;letter-spacing:-.01em">Structural member schedules</h2><span style="font:400 6.6pt/1.4 Archivo,sans-serif;color:#5B636B;max-width:110mm;text-align:right">Grouped by member type. Section designations follow the SANS 10162-1 format and are to be determined by the structural engineer. The full member-by-member listing continues in Appendix C.</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:10mm;align-items:start">
+      <sc-for list="{{ schedCols }}" as="col" hint-placeholder-count="2">
+        <div style="display:flex;flex-direction:column;gap:5mm">
+          <div style="display:grid;grid-template-columns:13mm 28mm 27mm 25mm 31mm 10mm 9mm 19mm minmax(0,1fr);column-gap:1.4mm;font:500 5.4pt/1.2 'IBM Plex Mono',monospace;letter-spacing:.04em;color:#5B636B;padding:0 1mm">
+            <span>ID</span><span>GRID / LOCATION</span><span>TYPE</span><span>SECTION</span><span>LENGTH / DIMS</span><span>GRADE</span><span style="text-align:right">QTY</span><span>STATUS</span><span>REMARKS</span>
+          </div>
+          <sc-for list="{{ col.groups }}" as="g" hint-placeholder-count="3">
+            <div style="display:flex;flex-direction:column">
+              <div style="display:flex;justify-content:space-between;align-items:baseline;padding:0 1mm 1.2mm;border-bottom:0.75pt solid #1E1E1C"><span style="font:500 8pt/1.2 Archivo,sans-serif">{{ g.title }}</span><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;color:#8C5E36">{{ g.table }}</span></div>
+              <sc-for list="{{ g.rows }}" as="r" hint-placeholder-count="4">
+                <div style="display:grid;grid-template-columns:13mm 28mm 27mm 25mm 31mm 10mm 9mm 19mm minmax(0,1fr);column-gap:1.4mm;align-items:baseline;padding:1.3mm 1mm;border-bottom:0.3pt solid #D5D2CA;background:{{ r.zebra }};font:400 6.4pt/1.35 Archivo,sans-serif">
+                  <span style="font:500 6.2pt/1.35 'IBM Plex Mono',monospace">{{ r.id }}</span><span>{{ r.grid }}</span><span>{{ r.type }}</span><span style="font-family:'IBM Plex Mono',monospace;font-size:5.8pt">{{ r.section }}</span><span style="font-family:'IBM Plex Mono',monospace;font-size:5.8pt">{{ r.size }}</span><span style="font-family:'IBM Plex Mono',monospace;font-size:5.8pt">{{ r.grade }}</span><span style="font-family:'IBM Plex Mono',monospace;text-align:right">{{ r.qty }}</span><span style="color:#8A3324;font-size:6pt">{{ r.status }}</span><span style="color:#5B636B;font-size:6pt">{{ r.remarks }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </sc-for>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:9mm;left:15mm;right:15mm;display:flex;justify-content:space-between;font:400 6.2pt/1 'IBM Plex Mono',monospace;color:#5B636B;border-top:0.5pt solid #D5D2CA;padding-top:2.2mm"><span>{{ d.doc.docNo }} · Rev {{ d.doc.rev }} · {{ d.doc.date }}</span><span>Preliminary — for review · Not for construction</span><span style="color:#1E1E1C">12</span></div>
+</section></div>
+
+<!-- ============ 13 ELEVATIONS & SECTIONS (A3 sheet) ============ -->
+<div data-sheet-wrap="" style="display:contents"><section data-page="" data-screen-label="13 Elevations and sections A-200" style="width:420mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#FFFFFF;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;inset:8mm;border:0.75pt solid #1E1E1C;display:grid;grid-template-columns:minmax(0,1fr) 62mm">
+    <div style="padding:2mm;display:grid;grid-template-columns:196mm 140mm;column-gap:3mm;row-gap:2mm;align-content:start">
+      <div style="display:flex;flex-direction:column;gap:1mm"><img loading="lazy" decoding="async" src="drawings/A-202_elev_east.svg" alt="Side elevation" style="display:block;width:196mm;height:54mm"><span style="font:500 6.2pt/1.3 'IBM Plex Mono',monospace">1 · SIDE ELEVATION (MODEL +X) · 1:500 · A-202</span></div>
+      <div style="display:flex;flex-direction:column;gap:1mm"><img loading="lazy" decoding="async" src="drawings/A-200_elev_south.svg" alt="Front elevation" style="display:block;width:140mm;height:54mm"><span style="font:500 6.2pt/1.3 'IBM Plex Mono',monospace">2 · FRONT ELEVATION (MODEL −Y) · 1:500 · A-200</span></div>
+      <div style="display:flex;flex-direction:column;gap:1mm"><img loading="lazy" decoding="async" src="drawings/A-203_elev_west.svg" alt="Side elevation" style="display:block;width:196mm;height:54mm"><span style="font:500 6.2pt/1.3 'IBM Plex Mono',monospace">3 · SIDE ELEVATION (MODEL −X) · 1:500 · A-203</span></div>
+      <div style="display:flex;flex-direction:column;gap:1mm"><img loading="lazy" decoding="async" src="drawings/A-201_elev_north.svg" alt="Rear elevation" style="display:block;width:140mm;height:54mm"><span style="font:500 6.2pt/1.3 'IBM Plex Mono',monospace">4 · REAR ELEVATION (MODEL +Y) · 1:500 · A-201</span></div>
+      <div style="display:flex;flex-direction:column;gap:1mm;grid-column:1 / -1"><div style="display:flex;gap:3mm;align-items:end"><img loading="lazy" decoding="async" src="drawings/A-301_section_AA.svg" alt="Longitudinal section A-A" style="display:block;width:219mm;height:59mm"><div style="display:flex;flex-direction:column;gap:1.2mm;font:400 6pt/1.45 Archivo,sans-serif;color:#5B636B;padding-bottom:2mm"><span style="font:500 6pt/1 'IBM Plex Mono',monospace;color:#1E1E1C">LEVELS (MODEL DATUMS)</span><span>L00 ±0.000 · ground</span><span>L01 +1.150 · cross aisle</span><span>L02 +4.600 · rear platform, upper foyer</span><span>L03 +4.300 · sequence to confirm</span><span>L04 +7.650 · foyer roof zone</span><span>L05 +13.600 · hall eaves zone</span></div></div><span style="font:500 6.2pt/1.3 'IBM Plex Mono',monospace">5 · LONGITUDINAL SECTION A–A AT GRID D/E CENTRE (x = 29.5 m) · 1:500 · A-301</span></div>
+      <div style="display:flex;flex-direction:column;gap:1mm;grid-column:1 / -1"><img loading="lazy" decoding="async" src="drawings/A-302_section_BB_1-500.svg" alt="Transverse section B-B" style="display:block;width:164mm;height:auto"><span style="font:500 6.2pt/1.3 'IBM Plex Mono',monospace">6 · TRANSVERSE SECTION B–B AT GRID 6 · 1:500 · A-302</span></div>
+    </div>
+    <div style="border-left:0.75pt solid #1E1E1C;display:flex;flex-direction:column">
+      <div style="padding:3mm;display:flex;flex-direction:column;gap:1.8mm;flex:1;font:400 6pt/1.45 Archivo,sans-serif">
+        <span style="font:500 6pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;color:#5B636B">NOTES</span>
+        <span>1. Elevations are projected outlines of envelope objects; openings other than external doors not modelled.</span>
+        <span>2. Orientation is given in model axes. True north is not defined (DR-12).</span>
+        <span>3. Cut elements shown solid; elements beyond in hairline.</span>
+        <span>4. External steps and ramps assume flat grade.</span>
+      </div>
+      <div style="border-top:0.75pt solid #1E1E1C;padding:2.4mm 3mm;background:#1E1E1C;color:#F5F2EC;font:500 6.2pt/1.35 'IBM Plex Mono',monospace;letter-spacing:.05em">CONCEPT — UNVERIFIED<br>NOT FOR CONSTRUCTION</div>
+      <div style="border-top:0.75pt solid #1E1E1C;padding:2.4mm 3mm;display:flex;flex-direction:column;gap:1mm"><span style="font:500 5.6pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;color:#5B636B">PROJECT</span><span style="font:500 7.4pt/1.25 Archivo,sans-serif">Proposed 3,000-Seat Church Auditorium</span><span style="font:400 6.4pt/1.25 Archivo,sans-serif;color:#5B636B">Zimbabwe · {{ d.doc.site }}</span></div>
+      <div style="border-top:0.35pt solid #1E1E1C;padding:2.4mm 3mm;display:flex;flex-direction:column;gap:1mm"><span style="font:500 5.6pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;color:#5B636B">DRAWING TITLE</span><span style="font:400 12pt/1.15 Newsreader,serif">Building elevations and sections</span></div>
+      <div style="border-top:0.35pt solid #1E1E1C;display:grid;grid-template-columns:1fr 1fr">
+        <div style="padding:1.8mm 3mm;border-right:0.35pt solid #1E1E1C;border-bottom:0.35pt solid #1E1E1C"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">DRAWING NO.</div><div style="font:500 9pt/1.4 'IBM Plex Mono',monospace">A-200</div></div>
+        <div style="padding:1.8mm 3mm;border-bottom:0.35pt solid #1E1E1C"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">REVISION</div><div style="font:500 9pt/1.4 'IBM Plex Mono',monospace">{{ d.doc.rev }}</div></div>
+        <div style="padding:1.8mm 3mm;border-right:0.35pt solid #1E1E1C;border-bottom:0.35pt solid #1E1E1C"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">SCALE</div><div style="font:400 7.4pt/1.5 'IBM Plex Mono',monospace">1:500 @ A3</div></div>
+        <div style="padding:1.8mm 3mm;border-bottom:0.35pt solid #1E1E1C"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">DATE</div><div style="font:400 7.4pt/1.5 'IBM Plex Mono',monospace">{{ d.doc.date }}</div></div>
+        <div style="padding:1.8mm 3mm;border-right:0.35pt solid #1E1E1C"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">MODEL</div><div style="font:400 6.4pt/1.5 'IBM Plex Mono',monospace">{{ d.doc.model }}</div></div>
+        <div style="padding:1.8mm 3mm"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">VERIFICATION</div><div style="font:500 6.4pt/1.5 'IBM Plex Mono',monospace;color:#8A3324">Unverified</div></div>
+      </div>
+      <div style="border-top:0.75pt solid #1E1E1C;padding:1.8mm 3mm;display:flex;justify-content:space-between;font:400 6pt/1 'IBM Plex Mono',monospace;color:#5B636B"><span>10 · Elevations and sections</span><span style="color:#1E1E1C">13</span></div>
+    </div>
+  </div>
+</section></div>
+
+<!-- ============ 14 FUNCTIONAL & SERVICES ============ -->
+<section data-page="" data-screen-label="14 Functional and services" style="width:210mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#F5F2EC;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;top:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:500 6.2pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:#5B636B;border-bottom:0.5pt solid #D5D2CA;padding-bottom:2.2mm"><span>Proposed 3,000-seat church auditorium</span><span>11 · Functional and building services review</span></div>
+  <div style="position:absolute;top:21mm;left:25mm;right:15mm;bottom:19mm;display:flex;flex-direction:column;gap:3.5mm">
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;align-items:end;padding-bottom:3mm;border-bottom:0.75pt solid #1E1E1C">
+      <div style="font:500 8pt/1 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.04em">11</div>
+      <h2 style="margin:0;font:400 22pt/1.04 Newsreader,serif;letter-spacing:-.01em">Functional and building services review</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;align-items:end">
+      <div style="display:flex;flex-direction:column;gap:1.2mm"><span style="font:500 6.2pt/1.3 'IBM Plex Mono',monospace;color:#8C5E36">FIG. 11.1</span><span style="font:400 6.2pt/1.4 Archivo,sans-serif;color:#5B636B">Exit positions X01–X17 on A-100, reduced. See schedule on sheet 06.</span>
+        <div style="display:flex;flex-direction:column;gap:1mm;margin-top:3mm;font:400 6.2pt/1.35 Archivo,sans-serif"><span style="display:flex;gap:1.6mm;align-items:center"><span style="width:3.4mm;height:3.4mm;background:#1E1E1C;flex:none"></span>Represented in model</span><span style="display:flex;gap:1.6mm;align-items:center"><span style="width:3.4mm;height:3.4mm;border:0.6pt dotted #8A3324;box-sizing:border-box;flex:none"></span>Requires verification</span></div></div>
+      <img loading="lazy" decoding="async" src="drawings/A-100_plan_L00.svg" alt="Plan with exit positions" style="display:block;width:128mm;height:auto;background:#FFFFFF">
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:6mm;row-gap:0">
+      <sc-for list="{{ d.services }}" as="s" hint-placeholder-count="8">
+        <div style="display:flex;flex-direction:column;gap:1.2mm;padding:2.2mm 0 2.4mm;border-top:0.75pt solid #1E1E1C">
+          <div style="display:flex;gap:2mm;align-items:baseline"><span style="font:500 6pt/1 'IBM Plex Mono',monospace;color:#8C5E36">{{ s.n }}</span><span style="font:500 8pt/1.2 Archivo,sans-serif">{{ s.t }}</span></div>
+          <div style="display:grid;grid-template-columns:3.4mm 1fr;gap:1.6mm;font:400 6.3pt/1.42 Archivo,sans-serif"><span style="width:3.4mm;height:3.4mm;background:#1E1E1C;margin-top:0.4mm"></span><span>{{ s.has }}</span></div>
+          <div style="display:grid;grid-template-columns:3.4mm 1fr;gap:1.6mm;font:400 6.3pt/1.42 Archivo,sans-serif;color:#5B636B"><span style="width:3.4mm;height:3.4mm;border:0.6pt dotted #8A3324;box-sizing:border-box;margin-top:0.4mm"></span><span>{{ s.verify }}</span></div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:400 6.2pt/1 'IBM Plex Mono',monospace;color:#5B636B;border-top:0.5pt solid #D5D2CA;padding-top:2.2mm"><span>{{ d.doc.docNo }} · Rev {{ d.doc.rev }} · {{ d.doc.date }}</span><span>Preliminary — for review · Not for construction</span><span style="color:#1E1E1C">14</span></div>
+</section>
+
+<!-- ============ 15 QUANTITIES & COST FRAMEWORK ============ -->
+<section data-page="" data-screen-label="15 Quantities and cost" style="width:210mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#F5F2EC;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;top:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:500 6.2pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:#5B636B;border-bottom:0.5pt solid #D5D2CA;padding-bottom:2.2mm"><span>Proposed 3,000-seat church auditorium</span><span>12 · Preliminary quantities and cost framework</span></div>
+  <div style="position:absolute;top:21mm;left:25mm;right:15mm;bottom:19mm;display:flex;flex-direction:column;gap:3.2mm">
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;align-items:end;padding-bottom:3mm;border-bottom:0.75pt solid #1E1E1C">
+      <div style="font:500 8pt/1 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.04em">12</div>
+      <h2 style="margin:0;font:400 22pt/1.04 Newsreader,serif;letter-spacing:-.01em">Preliminary quantities and cost framework</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm">
+      <span style="font:500 6.2pt/1.3 'IBM Plex Mono',monospace;color:#8C5E36">TABLE 12.1</span>
+      <span style="font:400 7pt/1.5 Archivo,sans-serif;color:#1E1E1C">Quantities are taken from the concept model and grouped by basis. Rates and amounts are left for a quantity surveyor; no prices or totals are given in this document.</span>
+    </div>
+    <div style="display:grid;grid-template-columns:10mm minmax(0,1fr) 18mm 8mm 7mm 14mm 14mm 40mm;column-gap:1.6mm;font:500 5.2pt/1.2 'IBM Plex Mono',monospace;letter-spacing:.04em;color:#5B636B;padding:0 1mm 1mm">
+      <span>REF</span><span>ITEM</span><span style="text-align:right">QTY</span><span>UNIT</span><span>BASIS</span><span style="text-align:right">RATE</span><span style="text-align:right">AMOUNT</span><span>NOTES</span>
+    </div>
+    <sc-for list="{{ qtyGroups }}" as="g" hint-placeholder-count="4">
+      <div style="display:flex;flex-direction:column">
+        <div style="padding:0 1mm 1mm;border-bottom:0.75pt solid #1E1E1C;font:500 7.4pt/1.2 Archivo,sans-serif">{{ g.group }}</div>
+        <sc-for list="{{ g.items }}" as="q" hint-placeholder-count="5">
+          <div style="display:grid;grid-template-columns:10mm minmax(0,1fr) 18mm 8mm 7mm 14mm 14mm 40mm;column-gap:1.6mm;align-items:baseline;padding:1.05mm 1mm;border-bottom:0.3pt solid #D5D2CA;background:{{ q.zebra }};font:400 6.3pt/1.3 Archivo,sans-serif">
+            <span style="font:500 5.8pt/1.3 'IBM Plex Mono',monospace;color:#5B636B">{{ q.ref }}</span><span>{{ q.item }}</span><span style="font-family:'IBM Plex Mono',monospace;text-align:right">{{ q.qty }}</span><span style="font-family:'IBM Plex Mono',monospace">{{ q.unit }}</span><span style="display:inline-flex;align-items:center;justify-content:center;width:3.4mm;height:3.4mm;border:0.5pt solid #5B636B;font:500 5.4pt/1 'IBM Plex Mono',monospace;color:#5B636B">{{ q.basis }}</span><span style="font-family:'IBM Plex Mono',monospace;text-align:right;color:#8E959C">[QS]</span><span style="font-family:'IBM Plex Mono',monospace;text-align:right;color:#8E959C">[QS]</span><span style="color:#5B636B;font-size:5.8pt">{{ q.note }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </sc-for>
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;margin-top:1mm">
+      <div style="display:flex;flex-direction:column;gap:1mm"><span style="font:500 6.2pt/1.3 'IBM Plex Mono',monospace;color:#8C5E36">EXCLUDED WORKS</span><span style="display:inline-flex;align-items:center;justify-content:center;width:3.4mm;height:3.4mm;border:0.5pt solid #5B636B;font:500 5.4pt/1 'IBM Plex Mono',monospace;color:#5B636B">X</span></div>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:6mm">
+        <sc-for list="{{ d.excluded }}" as="x" hint-placeholder-count="5">
+          <span style="font:400 6.4pt/1.4 Archivo,sans-serif;padding:1mm 0;border-bottom:0.3pt solid #D5D2CA">{{ x }}</span>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:400 6.2pt/1 'IBM Plex Mono',monospace;color:#5B636B;border-top:0.5pt solid #D5D2CA;padding-top:2.2mm"><span>{{ d.doc.docNo }} · Rev {{ d.doc.rev }} · {{ d.doc.date }}</span><span>Preliminary — for review · Not for construction</span><span style="color:#1E1E1C">15</span></div>
+</section>
+
+<!-- ============ 16 DESIGN REVIEW & RISKS ============ -->
+<section data-page="" data-screen-label="16 Design review and risks" style="width:210mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#F5F2EC;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;top:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:500 6.2pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:#5B636B;border-bottom:0.5pt solid #D5D2CA;padding-bottom:2.2mm"><span>Proposed 3,000-seat church auditorium</span><span>13 · Design review and engineering risks</span></div>
+  <div style="position:absolute;top:21mm;left:25mm;right:15mm;bottom:19mm;display:flex;flex-direction:column;gap:3.2mm">
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;align-items:end;padding-bottom:3mm;border-bottom:0.75pt solid #1E1E1C">
+      <div style="font:500 8pt/1 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.04em">13</div>
+      <h2 style="margin:0;font:400 22pt/1.04 Newsreader,serif;letter-spacing:-.01em">Design review and engineering risks</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;padding:3mm 0;border-bottom:0.35pt solid #D5D2CA">
+      <span style="font:500 6.2pt/1.3 'IBM Plex Mono',monospace;color:#8A3324">STATEMENT</span>
+      <p style="margin:0;font:400 10pt/1.45 Newsreader,serif;text-wrap:pretty">The concept model is a coordination and briefing tool. It does not constitute approved structural engineering. Member sizes, connections, foundations and stability have not been analysed or designed, and no element shown may be used for construction, procurement or statutory submission until designed and signed off by a registered professional engineer.</p>
+    </div>
+    <div style="display:flex;gap:6mm;font:400 6.2pt/1 Archivo,sans-serif;color:#5B636B;padding-left:42mm">
+      <span style="display:flex;gap:1.6mm;align-items:center"><span style="font:500 7pt/1 'IBM Plex Mono',monospace;color:#8A3324;letter-spacing:.06em">●●●</span>Critical</span>
+      <span style="display:flex;gap:1.6mm;align-items:center"><span style="font:500 7pt/1 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.06em">●●○</span>Major</span>
+      <span style="display:flex;gap:1.6mm;align-items:center"><span style="font:500 7pt/1 'IBM Plex Mono',monospace;color:#5B636B;letter-spacing:.06em">●○○</span>Minor</span>
+      <span>Severity proposed for review.</span>
+    </div>
+    <div style="display:grid;grid-template-columns:11mm 16mm minmax(0,1fr) 13mm 38mm 22mm 10mm;column-gap:1.6mm;font:500 5.2pt/1.2 'IBM Plex Mono',monospace;letter-spacing:.04em;color:#5B636B;padding:0 1mm 1mm;border-bottom:0.75pt solid #1E1E1C">
+      <span>REF</span><span>DISCIPLINE</span><span>FINDING</span><span>SEVERITY</span><span>PROPOSED RESPONSE</span><span>RESPONSIBLE</span><span>STATUS</span>
+    </div>
+    <div style="display:flex;flex-direction:column;margin-top:-3.2mm">
+      <sc-for list="{{ risks }}" as="r" hint-placeholder-count="12">
+        <div style="display:grid;grid-template-columns:11mm 16mm minmax(0,1fr) 13mm 38mm 22mm 10mm;column-gap:1.6mm;align-items:baseline;padding:1.5mm 1mm;border-bottom:0.3pt solid #D5D2CA;background:{{ r.zebra }};font:400 6.2pt/1.38 Archivo,sans-serif">
+          <span style="font:500 5.8pt/1.3 'IBM Plex Mono',monospace">{{ r.ref }}</span><span style="color:#5B636B">{{ r.disc }}</span><span>{{ r.finding }}</span><span style="display:flex;flex-direction:column;gap:0.5mm;font:500 5.8pt/1.2 'IBM Plex Mono',monospace;color:{{ r.sevColor }}"><span style="letter-spacing:.06em">{{ r.sevGlyph }}</span><span>{{ r.sev }}</span></span><span>{{ r.response }}</span><span style="color:#5B636B">{{ r.party }}</span><span style="font:500 5.6pt/1.3 'IBM Plex Mono',monospace;color:#8A3324">{{ r.status }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:400 6.2pt/1 'IBM Plex Mono',monospace;color:#5B636B;border-top:0.5pt solid #D5D2CA;padding-top:2.2mm"><span>{{ d.doc.docNo }} · Rev {{ d.doc.rev }} · {{ d.doc.date }}</span><span>Preliminary — for review · Not for construction</span><span style="color:#1E1E1C">16</span></div>
+</section>
+
+<!-- ============ 17 RECOMMENDATIONS & NEXT STEPS ============ -->
+<section data-page="" data-screen-label="17 Recommendations and next steps" style="width:210mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#F5F2EC;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;top:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:500 6.2pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:#5B636B;border-bottom:0.5pt solid #D5D2CA;padding-bottom:2.2mm"><span>Proposed 3,000-seat church auditorium</span><span>14 · Recommendations and next steps</span></div>
+  <div style="position:absolute;top:24mm;left:25mm;right:15mm;bottom:22mm;display:flex;flex-direction:column;gap:8mm">
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;align-items:end;padding-bottom:5mm;border-bottom:0.75pt solid #1E1E1C">
+      <div style="font:500 8pt/1 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.04em">14</div>
+      <h2 style="margin:0;font:400 27pt/1.04 Newsreader,serif;letter-spacing:-.01em">Recommendations and next steps</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:3mm">
+      <div style="display:flex;justify-content:space-between"><span style="font:500 8pt/1.2 Archivo,sans-serif">From concept to construction</span><span style="font:500 6pt/1 'IBM Plex Mono',monospace;color:#8C5E36">FIG. 14.1</span></div>
+      <div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));position:relative;padding-top:2mm">
+        <div style="position:absolute;top:5.1mm;left:3mm;right:12%;border-top:0.75pt solid #1E1E1C"></div>
+        <sc-for list="{{ phases }}" as="p" hint-placeholder-count="6">
+          <div style="display:flex;flex-direction:column;gap:2.2mm;padding-right:3mm;position:relative">
+            <span style="width:6.2mm;height:6.2mm;border-radius:50%;border:0.75pt solid #1E1E1C;background:{{ p.fill }};color:{{ p.ink }};display:flex;align-items:center;justify-content:center;font:500 6.4pt/1 'IBM Plex Mono',monospace;position:relative">{{ p.n }}</span>
+            <span style="font:500 8pt/1.2 Archivo,sans-serif">{{ p.name }}</span>
+            <span style="font:500 5.8pt/1.2 'IBM Plex Mono',monospace;color:{{ p.statusColor }};text-transform:uppercase;letter-spacing:.05em">{{ p.label }}</span>
+            <span style="font:400 6.4pt/1.42 Archivo,sans-serif;color:#5B636B">{{ p.note }}</span>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:flex;gap:6mm;font:400 6.2pt/1 Archivo,sans-serif;color:#5B636B;margin-top:1mm">
+        <span style="display:flex;gap:1.6mm;align-items:center"><span style="width:3mm;height:3mm;border-radius:50%;background:#8C5E36;border:0.6pt solid #1E1E1C;flex:none"></span>Current, per project records</span>
+        <span style="display:flex;gap:1.6mm;align-items:center"><span style="width:3mm;height:3mm;border-radius:50%;background:#F5F2EC;border:0.6pt solid #1E1E1C;flex:none"></span>Outstanding</span>
+        <span>No stage is recorded as complete.</span>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;margin-top:4mm">
+      <span style="font:500 6.5pt/1.3 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.05em">RECOMMENDATIONS</span>
+      <div style="display:flex;flex-direction:column;border-top:0.75pt solid #1E1E1C">
+        <sc-for list="{{ recs }}" as="r" hint-placeholder-count="6">
+          <div style="display:grid;grid-template-columns:9mm 1fr;padding:2.6mm 0;border-bottom:0.35pt solid #D5D2CA"><span style="font:500 6.6pt/1.5 'IBM Plex Mono',monospace;color:#8C5E36">{{ r.n }}</span><span style="font:400 10.5pt/1.4 Newsreader,serif">{{ r.t }}</span></div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:400 6.2pt/1 'IBM Plex Mono',monospace;color:#5B636B;border-top:0.5pt solid #D5D2CA;padding-top:2.2mm"><span>{{ d.doc.docNo }} · Rev {{ d.doc.rev }} · {{ d.doc.date }}</span><span>Preliminary — for review · Not for construction</span><span style="color:#1E1E1C">17</span></div>
+</section>
+
+<!-- ============ 18 APPENDIX A — DRAWING REGISTER ============ -->
+<section data-page="" data-screen-label="18 Appendix A Drawing register" style="width:210mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#F5F2EC;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;top:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:500 6.2pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:#5B636B;border-bottom:0.5pt solid #D5D2CA;padding-bottom:2.2mm"><span>Proposed 3,000-seat church auditorium</span><span>Appendix A · Technical drawing register</span></div>
+  <div style="position:absolute;top:24mm;left:25mm;right:15mm;bottom:22mm;display:flex;flex-direction:column;gap:6mm">
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;align-items:end;padding-bottom:5mm;border-bottom:0.75pt solid #1E1E1C">
+      <div style="font:500 8pt/1 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.04em">APPENDIX A</div>
+      <h2 style="margin:0;font:400 27pt/1.04 Newsreader,serif;letter-spacing:-.01em">Technical drawing register</h2>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div style="display:grid;grid-template-columns:14mm minmax(0,1fr) 13mm 9mm 13mm 28mm;column-gap:2mm;font:500 5.4pt/1.2 'IBM Plex Mono',monospace;letter-spacing:.04em;color:#5B636B;padding:0 1mm 1.2mm;border-bottom:0.75pt solid #1E1E1C"><span>NO.</span><span>TITLE</span><span>SCALE</span><span>SIZE</span><span>REV</span><span>STATUS</span></div>
+      <sc-for list="{{ drawings }}" as="g" hint-placeholder-count="11">
+        <div style="display:grid;grid-template-columns:14mm minmax(0,1fr) 13mm 9mm 13mm 28mm;column-gap:2mm;align-items:baseline;padding:1.8mm 1mm;border-bottom:0.35pt solid #D5D2CA;background:{{ g.zebra }};font:400 7.2pt/1.3 Archivo,sans-serif"><span style="font:500 7pt/1.3 'IBM Plex Mono',monospace">{{ g.no }}</span><span>{{ g.title }}<br><span style="font:400 5.8pt/1.3 'IBM Plex Mono',monospace;color:#5B636B">{{ g.file }}</span></span><span style="font-family:'IBM Plex Mono',monospace;font-size:6.6pt">{{ g.scale }}</span><span style="font-family:'IBM Plex Mono',monospace;font-size:6.6pt">{{ g.size }}</span><span style="font-family:'IBM Plex Mono',monospace;font-size:6.6pt">{{ g.rev }}</span><span style="font:500 6pt/1.3 'IBM Plex Mono',monospace;color:#8A3324">{{ g.status }}</span></div>
+      </sc-for>
+    </div>
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;margin-top:auto">
+      <span style="font:500 6.5pt/1.3 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.05em">APPENDIX TEMPLATES</span>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:6mm;font:400 7pt/1.4 Archivo,sans-serif">
+        <span style="padding:1.4mm 0;border-bottom:0.35pt solid #D5D2CA">B · Full-size technical drawing (A3)</span>
+        <span style="padding:1.4mm 0;border-bottom:0.35pt solid #D5D2CA">C · Structural schedule, continuing</span>
+        <span style="padding:1.4mm 0;border-bottom:0.35pt solid #D5D2CA">D · Assumptions register · calculation summaries</span>
+        <span style="padding:1.4mm 0;border-bottom:0.35pt solid #D5D2CA">E · Verification report · model references</span>
+        <span style="padding:1.4mm 0;border-bottom:0.35pt solid #D5D2CA">F · Revision history</span>
+        <span style="padding:1.4mm 0;border-bottom:0.35pt solid #D5D2CA">Quantity schedules use Table 12.1 format</span>
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:400 6.2pt/1 'IBM Plex Mono',monospace;color:#5B636B;border-top:0.5pt solid #D5D2CA;padding-top:2.2mm"><span>{{ d.doc.docNo }} · Rev {{ d.doc.rev }} · {{ d.doc.date }}</span><span>Preliminary — for review · Not for construction</span><span style="color:#1E1E1C">18</span></div>
+</section>
+
+<!-- ============ 19 APPENDIX B — DRAWING SHEET TEMPLATE ============ -->
+<div data-sheet-wrap="" style="display:contents"><section data-page="" data-screen-label="19 Appendix B Drawing sheet S-301" style="width:420mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#FFFFFF;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;inset:8mm;border:0.75pt solid #1E1E1C;display:grid;grid-template-columns:minmax(0,1fr) 62mm">
+    <div style="padding:6mm;display:flex;flex-direction:column;gap:6mm">
+      <div style="display:flex;flex-direction:column;gap:2mm"><img loading="lazy" decoding="async" src="drawings/S-301_truss_T6_1-250.svg" alt="Truss T6 elevation" style="display:block;width:298mm;height:104mm"><span style="font:500 6.4pt/1.3 'IBM Plex Mono',monospace">1 · TRUSS T6 ELEVATION AT GRID 6 · 1:250</span></div>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5mm;flex:1">
+        <div style="border:0.5pt dashed #8E959C;display:flex;flex-direction:column;justify-content:space-between;padding:3mm"><span style="font:500 6pt/1.3 'IBM Plex Mono',monospace;color:#5B636B">2 · [DETAIL] TRUSS BEARING AT B/6 · 1:20</span><span style="font:400 6pt/1.4 'IBM Plex Mono',monospace;color:#8E959C">Reserved for engineer’s detail. Not modelled.</span></div>
+        <div style="border:0.5pt dashed #8E959C;display:flex;flex-direction:column;justify-content:space-between;padding:3mm"><span style="font:500 6pt/1.3 'IBM Plex Mono',monospace;color:#5B636B">3 · [DETAIL] APEX SPLICE · 1:20</span><span style="font:400 6pt/1.4 'IBM Plex Mono',monospace;color:#8E959C">Reserved for engineer’s detail. Not modelled.</span></div>
+        <div style="border:0.5pt dashed #8E959C;display:flex;flex-direction:column;justify-content:space-between;padding:3mm"><span style="font:500 6pt/1.3 'IBM Plex Mono',monospace;color:#5B636B">4 · [DETAIL] KNEE BRACE B6 · 1:20</span><span style="font:400 6pt/1.4 'IBM Plex Mono',monospace;color:#8E959C">Reserved for engineer’s detail. Not modelled.</span></div>
+      </div>
+    </div>
+    <div style="border-left:0.75pt solid #1E1E1C;display:flex;flex-direction:column">
+      <div style="padding:3mm;display:flex;flex-direction:column;gap:1.8mm;flex:1;font:400 6pt/1.45 Archivo,sans-serif">
+        <span style="font:500 6pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;color:#5B636B">NOTES</span>
+        <span>1. Template sheet for full-size technical drawings. Drawing area 338 × 277 mm.</span>
+        <span>2. Truss T6: 41 members (TC 10, BC 10, V 11, D 10). Span 50.000 m. Sections are placeholders.</span>
+        <span>3. Detail frames are reserved space; do not populate with unverified details.</span>
+      </div>
+      <div style="border-top:0.75pt solid #1E1E1C;padding:3mm;display:flex;flex-direction:column;gap:1.4mm">
+        <span style="font:500 5.6pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;color:#5B636B">REVISIONS</span>
+        <div style="display:grid;grid-template-columns:9mm 1fr 14mm;font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B;border-bottom:0.35pt solid #1E1E1C;padding-bottom:1mm"><span>REV</span><span>DESCRIPTION</span><span>DATE</span></div>
+        <sc-for list="{{ d.revisions }}" as="v" hint-placeholder-count="1">
+          <div style="display:grid;grid-template-columns:9mm 1fr 14mm;font:400 5.8pt/1.3 'IBM Plex Mono',monospace;border-bottom:0.25pt solid #E2E0DA;padding-bottom:0.8mm"><span>{{ v.rev }}</span><span style="font-family:Archivo,sans-serif">{{ v.desc }}</span><span>{{ v.date }}</span></div>
+        </sc-for>
+      </div>
+      <div style="border-top:0.75pt solid #1E1E1C;padding:2.4mm 3mm;background:#1E1E1C;color:#F5F2EC;font:500 6.2pt/1.35 'IBM Plex Mono',monospace;letter-spacing:.05em">CONCEPT — UNVERIFIED<br>NOT FOR CONSTRUCTION</div>
+      <div style="border-top:0.75pt solid #1E1E1C;padding:2.4mm 3mm;display:flex;flex-direction:column;gap:1mm"><span style="font:500 5.6pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;color:#5B636B">PROJECT</span><span style="font:500 7.4pt/1.25 Archivo,sans-serif">Proposed 3,000-Seat Church Auditorium</span><span style="font:400 6.4pt/1.25 Archivo,sans-serif;color:#5B636B">Zimbabwe · {{ d.doc.site }}</span></div>
+      <div style="border-top:0.35pt solid #1E1E1C;padding:2.4mm 3mm;display:flex;flex-direction:column;gap:1mm"><span style="font:500 5.6pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;color:#5B636B">DRAWING TITLE</span><span style="font:400 12pt/1.15 Newsreader,serif">Truss T6 elevation</span></div>
+      <div style="border-top:0.35pt solid #1E1E1C;display:grid;grid-template-columns:1fr 1fr">
+        <div style="padding:1.8mm 3mm;border-right:0.35pt solid #1E1E1C;border-bottom:0.35pt solid #1E1E1C"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">DRAWING NO.</div><div style="font:500 9pt/1.4 'IBM Plex Mono',monospace">S-301</div></div>
+        <div style="padding:1.8mm 3mm;border-bottom:0.35pt solid #1E1E1C"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">REVISION</div><div style="font:500 9pt/1.4 'IBM Plex Mono',monospace">{{ d.doc.rev }}</div></div>
+        <div style="padding:1.8mm 3mm;border-right:0.35pt solid #1E1E1C;border-bottom:0.35pt solid #1E1E1C"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">SCALE</div><div style="font:400 7.4pt/1.5 'IBM Plex Mono',monospace">1:250 @ A3</div></div>
+        <div style="padding:1.8mm 3mm;border-bottom:0.35pt solid #1E1E1C"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">DATE</div><div style="font:400 7.4pt/1.5 'IBM Plex Mono',monospace">{{ d.doc.date }}</div></div>
+        <div style="padding:1.8mm 3mm;border-right:0.35pt solid #1E1E1C"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">MODEL</div><div style="font:400 6.4pt/1.5 'IBM Plex Mono',monospace">{{ d.doc.model }}</div></div>
+        <div style="padding:1.8mm 3mm"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">VERIFICATION</div><div style="font:500 6.4pt/1.5 'IBM Plex Mono',monospace;color:#8A3324">Unverified</div></div>
+      </div>
+      <div style="border-top:0.75pt solid #1E1E1C;padding:1.8mm 3mm;display:flex;justify-content:space-between;font:400 6pt/1 'IBM Plex Mono',monospace;color:#5B636B"><span>Appendix B</span><span style="color:#1E1E1C">19</span></div>
+    </div>
+  </div>
+</section></div>
+
+<!-- ============ 20 APPENDIX C — COLUMN SCHEDULE (1) ============ -->
+<section data-page="" data-screen-label="20 Appendix C Column schedule" style="width:210mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#F5F2EC;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;top:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:500 6.2pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:#5B636B;border-bottom:0.5pt solid #D5D2CA;padding-bottom:2.2mm"><span>Proposed 3,000-seat church auditorium</span><span>Appendix C · Structural schedules</span></div>
+  <div style="position:absolute;top:21mm;left:25mm;right:15mm;bottom:19mm;display:flex;flex-direction:column;gap:3mm">
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;align-items:end;padding-bottom:3mm;border-bottom:0.75pt solid #1E1E1C">
+      <div style="font:500 8pt/1 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.04em">APPENDIX C</div>
+      <h2 style="margin:0;font:400 22pt/1.04 Newsreader,serif;letter-spacing:-.01em">Column schedule</h2>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:500 7.4pt/1.2 Archivo,sans-serif">Table C.1 · Columns, all 76 model objects</span><span style="font:400 6pt/1 'IBM Plex Mono',monospace;color:#5B636B">Rows {{ colRangeA }} of 76 · continues</span></div>
+    <div style="display:grid;grid-template-columns:22mm 12mm 18mm 22mm 16mm 16mm 16mm minmax(0,1fr);column-gap:2mm;font:500 5.2pt/1.2 'IBM Plex Mono',monospace;letter-spacing:.04em;color:#5B636B;padding:0 1mm 1.2mm;border-bottom:0.75pt solid #1E1E1C"><span>MEMBER ID</span><span>GRID</span><span>ROLE</span><span>RESERVATION (m)</span><span style="text-align:right">BASE</span><span style="text-align:right">TOP</span><span style="text-align:right">LENGTH</span><span>STATUS</span></div>
+    <div style="display:flex;flex-direction:column;margin-top:-3mm">
+      <sc-for list="{{ colsA }}" as="c" hint-placeholder-count="40">
+        <div style="display:grid;grid-template-columns:22mm 12mm 18mm 22mm 16mm 16mm 16mm minmax(0,1fr);column-gap:2mm;align-items:baseline;padding:0.95mm 1mm;border-bottom:0.3pt solid #D5D2CA;background:{{ c.zebra }};font:400 6.2pt/1.3 'IBM Plex Mono',monospace"><span style="font-weight:500">{{ c.id }}</span><span>{{ c.grid }}</span><span style="font-family:Archivo,sans-serif">{{ c.role }}</span><span>{{ c.section }}</span><span style="text-align:right">{{ c.base }}</span><span style="text-align:right">{{ c.top }}</span><span style="text-align:right">{{ c.length }}</span><span style="font-family:Archivo,sans-serif;color:#8A3324">{{ c.status }}</span></div>
+      </sc-for>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:400 6.2pt/1 'IBM Plex Mono',monospace;color:#5B636B;border-top:0.5pt solid #D5D2CA;padding-top:2.2mm"><span>{{ d.doc.docNo }} · Rev {{ d.doc.rev }} · {{ d.doc.date }}</span><span>Preliminary — for review · Not for construction</span><span style="color:#1E1E1C">20</span></div>
+</section>
+
+<!-- ============ 21 APPENDIX C — COLUMN SCHEDULE (continued) ============ -->
+<section data-page="" data-screen-label="21 Appendix C continued" style="width:210mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#F5F2EC;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;top:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:500 6.2pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:#5B636B;border-bottom:0.5pt solid #D5D2CA;padding-bottom:2.2mm"><span>Proposed 3,000-seat church auditorium</span><span>Appendix C · Structural schedules</span></div>
+  <div style="position:absolute;top:21mm;left:25mm;right:15mm;bottom:19mm;display:flex;flex-direction:column;gap:3mm">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:2mm;border-bottom:0.35pt solid #D5D2CA"><span style="font:500 7.4pt/1.2 Archivo,sans-serif">Table C.1 · Columns <span style="font-weight:400;color:#5B636B">(continued)</span></span><span style="font:400 6pt/1 'IBM Plex Mono',monospace;color:#5B636B">Rows {{ colRangeB }} of 76 · end of table</span></div>
+    <div style="display:grid;grid-template-columns:22mm 12mm 18mm 22mm 16mm 16mm 16mm minmax(0,1fr);column-gap:2mm;font:500 5.2pt/1.2 'IBM Plex Mono',monospace;letter-spacing:.04em;color:#5B636B;padding:0 1mm 1.2mm;border-bottom:0.75pt solid #1E1E1C"><span>MEMBER ID</span><span>GRID</span><span>ROLE</span><span>RESERVATION (m)</span><span style="text-align:right">BASE</span><span style="text-align:right">TOP</span><span style="text-align:right">LENGTH</span><span>STATUS</span></div>
+    <div style="display:flex;flex-direction:column;margin-top:-3mm">
+      <sc-for list="{{ colsB }}" as="c" hint-placeholder-count="36">
+        <div style="display:grid;grid-template-columns:22mm 12mm 18mm 22mm 16mm 16mm 16mm minmax(0,1fr);column-gap:2mm;align-items:baseline;padding:0.95mm 1mm;border-bottom:0.3pt solid #D5D2CA;background:{{ c.zebra }};font:400 6.2pt/1.3 'IBM Plex Mono',monospace"><span style="font-weight:500">{{ c.id }}</span><span>{{ c.grid }}</span><span style="font-family:Archivo,sans-serif">{{ c.role }}</span><span>{{ c.section }}</span><span style="text-align:right">{{ c.base }}</span><span style="text-align:right">{{ c.top }}</span><span style="text-align:right">{{ c.length }}</span><span style="font-family:Archivo,sans-serif;color:#8A3324">{{ c.status }}</span></div>
+      </sc-for>
+    </div>
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;margin-top:auto;padding-top:3mm;border-top:0.75pt solid #1E1E1C">
+      <span style="font:500 6.2pt/1.3 'IBM Plex Mono',monospace;color:#8C5E36">CONTINUATION RULE</span>
+      <span style="font:400 6.6pt/1.45 Archivo,sans-serif;color:#5B636B">Tables break between rows only. Each continuation page repeats the table number, title with “(continued)”, column header and row range. Remaining schedules (beams, trusses, purlins, bracing, footings) follow in the same format.</span>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:400 6.2pt/1 'IBM Plex Mono',monospace;color:#5B636B;border-top:0.5pt solid #D5D2CA;padding-top:2.2mm"><span>{{ d.doc.docNo }} · Rev {{ d.doc.rev }} · {{ d.doc.date }}</span><span>Preliminary — for review · Not for construction</span><span style="color:#1E1E1C">21</span></div>
+</section>
+
+<!-- ============ 22 APPENDIX D — ASSUMPTIONS & CALCULATIONS ============ -->
+<section data-page="" data-screen-label="22 Appendix D Assumptions and calculations" style="width:210mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#F5F2EC;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;top:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:500 6.2pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:#5B636B;border-bottom:0.5pt solid #D5D2CA;padding-bottom:2.2mm"><span>Proposed 3,000-seat church auditorium</span><span>Appendix D · Assumptions · Calculations</span></div>
+  <div style="position:absolute;top:24mm;left:25mm;right:15mm;bottom:22mm;display:flex;flex-direction:column;gap:6mm">
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;align-items:end;padding-bottom:5mm;border-bottom:0.75pt solid #1E1E1C">
+      <div style="font:500 8pt/1 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.04em">APPENDIX D</div>
+      <h2 style="margin:0;font:400 27pt/1.04 Newsreader,serif;letter-spacing:-.01em">Assumptions register and calculation summaries</h2>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div style="display:flex;justify-content:space-between;padding-bottom:1.4mm;border-bottom:0.75pt solid #1E1E1C"><span style="font:500 8pt/1.2 Archivo,sans-serif">Assumptions register</span><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;color:#8C5E36">TABLE D.1</span></div>
+      <sc-for list="{{ assumptions }}" as="a" hint-placeholder-count="8">
+        <div style="display:grid;grid-template-columns:16mm minmax(0,1fr) 46mm 20mm;column-gap:2mm;align-items:baseline;padding:1.7mm 1mm;border-bottom:0.3pt solid #D5D2CA;background:{{ a.zebra }};font:400 7pt/1.4 Archivo,sans-serif"><span style="font:500 6.4pt/1.3 'IBM Plex Mono',monospace">{{ a.ref }}</span><span>{{ a.item }}</span><span style="font:400 6pt/1.35 'IBM Plex Mono',monospace;color:#5B636B">{{ a.source }}</span><span style="font:500 6pt/1.3 'IBM Plex Mono',monospace;color:#8C5E36">{{ a.status }}</span></div>
+      </sc-for>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div style="display:flex;justify-content:space-between;padding-bottom:1.4mm;border-bottom:0.75pt solid #1E1E1C"><span style="font:500 8pt/1.2 Archivo,sans-serif">Calculation summaries</span><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;color:#8C5E36">TABLE D.2</span></div>
+      <sc-for list="{{ calcs }}" as="c" hint-placeholder-count="6">
+        <div style="display:grid;grid-template-columns:16mm minmax(0,1fr) 28mm 56mm;column-gap:2mm;align-items:baseline;padding:1.7mm 1mm;border-bottom:0.3pt solid #D5D2CA;background:{{ c.zebra }};font:400 7pt/1.4 Archivo,sans-serif"><span style="font:500 6.4pt/1.3 'IBM Plex Mono',monospace">{{ c.ref }}</span><span>{{ c.title }}</span><span style="font:500 6pt/1.3 'IBM Plex Mono',monospace;color:#8A3324">{{ c.status }}</span><span style="font:400 6.2pt/1.35 'IBM Plex Mono',monospace;color:#5B636B">{{ c.result }}</span></div>
+      </sc-for>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:400 6.2pt/1 'IBM Plex Mono',monospace;color:#5B636B;border-top:0.5pt solid #D5D2CA;padding-top:2.2mm"><span>{{ d.doc.docNo }} · Rev {{ d.doc.rev }} · {{ d.doc.date }}</span><span>Preliminary — for review · Not for construction</span><span style="color:#1E1E1C">22</span></div>
+</section>
+
+<!-- ============ 23 APPENDIX E — VERIFICATION & MODEL REFERENCES ============ -->
+<section data-page="" data-screen-label="23 Appendix E Verification and model" style="width:210mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#F5F2EC;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;top:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:500 6.2pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:#5B636B;border-bottom:0.5pt solid #D5D2CA;padding-bottom:2.2mm"><span>Proposed 3,000-seat church auditorium</span><span>Appendix E · Verification · Model references</span></div>
+  <div style="position:absolute;top:24mm;left:25mm;right:15mm;bottom:22mm;display:flex;flex-direction:column;gap:6mm">
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;align-items:end;padding-bottom:5mm;border-bottom:0.75pt solid #1E1E1C">
+      <div style="font:500 8pt/1 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.04em">APPENDIX E</div>
+      <h2 style="margin:0;font:400 27pt/1.04 Newsreader,serif;letter-spacing:-.01em">Verification report and model references</h2>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div style="display:flex;justify-content:space-between;padding-bottom:1.4mm;border-bottom:0.75pt solid #1E1E1C"><span style="font:500 8pt/1.2 Archivo,sans-serif">Model self-checks (automated, unverified)</span><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;color:#8C5E36">TABLE E.1</span></div>
+      <sc-for list="{{ checks }}" as="c" hint-placeholder-count="8">
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) 42mm 30mm;column-gap:2mm;align-items:baseline;padding:1.6mm 1mm;border-bottom:0.3pt solid #D5D2CA;background:{{ c.zebra }};font:400 7pt/1.4 Archivo,sans-serif"><span>{{ c.check }}</span><span style="font:500 6.6pt/1.3 'IBM Plex Mono',monospace;text-align:right">{{ c.value }}</span><span style="font:400 6pt/1.3 'IBM Plex Mono',monospace;color:#5B636B;text-align:right">{{ c.basis }}</span></div>
+      </sc-for>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div style="display:flex;justify-content:space-between;padding-bottom:1.4mm;border-bottom:0.75pt solid #1E1E1C"><span style="font:500 8pt/1.2 Archivo,sans-serif">Model collections and naming</span><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;color:#8C5E36">TABLE E.2</span></div>
+      <sc-for list="{{ modelRefs }}" as="m" hint-placeholder-count="7">
+        <div style="display:grid;grid-template-columns:22mm minmax(0,1fr) 16mm;column-gap:2mm;align-items:baseline;padding:1.6mm 1mm;border-bottom:0.3pt solid #D5D2CA;background:{{ m.zebra }};font:400 7pt/1.4 Archivo,sans-serif"><span style="font:500 6.4pt/1.3 'IBM Plex Mono',monospace">{{ m.prefix }}</span><span>{{ m.content }}</span><span style="font:500 6.4pt/1.3 'IBM Plex Mono',monospace;text-align:right">{{ m.count }}</span></div>
+      </sc-for>
+      <span style="font:400 6.2pt/1.45 Archivo,sans-serif;color:#5B636B;margin-top:2mm">Object names follow DISCIPLINE-ELEMENT-LOCATION, e.g. STR-COL-B6, STR-TRUSS-T6-TC02, SEAT-C-R01-B2-S10, DR-EXT-MAIN-1. Collection counts include nested objects.</span>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:400 6.2pt/1 'IBM Plex Mono',monospace;color:#5B636B;border-top:0.5pt solid #D5D2CA;padding-top:2.2mm"><span>{{ d.doc.docNo }} · Rev {{ d.doc.rev }} · {{ d.doc.date }}</span><span>Preliminary — for review · Not for construction</span><span style="color:#1E1E1C">23</span></div>
+</section>
+
+<!-- ============ 24 APPENDIX F — REVISION HISTORY ============ -->
+<section data-page="" data-screen-label="24 Appendix F Revision history" style="width:210mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#F5F2EC;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;top:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:500 6.2pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:#5B636B;border-bottom:0.5pt solid #D5D2CA;padding-bottom:2.2mm"><span>Proposed 3,000-seat church auditorium</span><span>Appendix F · Revision history</span></div>
+  <div style="position:absolute;top:24mm;left:25mm;right:15mm;bottom:22mm;display:flex;flex-direction:column;gap:6mm">
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;align-items:end;padding-bottom:5mm;border-bottom:0.75pt solid #1E1E1C">
+      <div style="font:500 8pt/1 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.04em">APPENDIX F</div>
+      <h2 style="margin:0;font:400 27pt/1.04 Newsreader,serif;letter-spacing:-.01em">Revision history</h2>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div style="display:grid;grid-template-columns:14mm 24mm minmax(0,1fr) 16mm 16mm 32mm;column-gap:2mm;font:500 5.4pt/1.2 'IBM Plex Mono',monospace;letter-spacing:.04em;color:#5B636B;padding:0 1mm 1.2mm;border-bottom:0.75pt solid #1E1E1C"><span>REV</span><span>DATE</span><span>DESCRIPTION</span><span>BY</span><span>CHECKED</span><span>MODEL</span></div>
+      <sc-for list="{{ d.revisions }}" as="v" hint-placeholder-count="1">
+        <div style="display:grid;grid-template-columns:14mm 24mm minmax(0,1fr) 16mm 16mm 32mm;column-gap:2mm;align-items:baseline;padding:1.8mm 1mm;border-bottom:0.35pt solid #D5D2CA;font:400 7pt/1.35 'IBM Plex Mono',monospace"><span style="font-weight:500">{{ v.rev }}</span><span>{{ v.date }}</span><span style="font-family:Archivo,sans-serif">{{ v.desc }}</span><span>{{ v.by }}</span><span>{{ v.chk }}</span><span>{{ v.model }}</span></div>
+      </sc-for>
+      <div style="height:22mm;border-bottom:0.35pt solid #D5D2CA"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm">
+      <span style="font:500 6.5pt/1.3 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.05em">MODEL REVISIONS</span>
+      <div style="display:flex;flex-direction:column;font:400 7pt/1.4 Archivo,sans-serif">
+        <div style="display:grid;grid-template-columns:30mm 1fr;padding:1.6mm 0;border-bottom:0.35pt solid #D5D2CA"><span style="font:500 6.6pt/1.3 'IBM Plex Mono',monospace">PL05</span><span>Referenced by client decision recorded in the model (no extra chairs on stage floor).</span></div>
+        <div style="display:grid;grid-template-columns:30mm 1fr;padding:1.6mm 0;border-bottom:0.35pt solid #D5D2CA"><span style="font:500 6.6pt/1.3 'IBM Plex Mono',monospace">PL06-21c8b6d8b4</span><span>Current. Source of all values in this document. Viewing copy.</span></div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;margin-top:auto">
+      <span style="font:500 6.5pt/1.3 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.05em">REVIEW SIGN-OFF</span>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:5mm">
+        <div style="display:flex;flex-direction:column;gap:9mm"><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;color:#5B636B">BUILDING COMMITTEE</span><span style="border-top:0.5pt solid #1E1E1C;padding-top:1.2mm;font:400 5.8pt/1 'IBM Plex Mono',monospace;color:#5B636B">Name · signature · date</span></div>
+        <div style="display:flex;flex-direction:column;gap:9mm"><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;color:#5B636B">ARCHITECT</span><span style="border-top:0.5pt solid #1E1E1C;padding-top:1.2mm;font:400 5.8pt/1 'IBM Plex Mono',monospace;color:#5B636B">Name · signature · date</span></div>
+        <div style="display:flex;flex-direction:column;gap:9mm"><span style="font:500 5.8pt/1 'IBM Plex Mono',monospace;color:#5B636B">STRUCTURAL ENGINEER</span><span style="border-top:0.5pt solid #1E1E1C;padding-top:1.2mm;font:400 5.8pt/1 'IBM Plex Mono',monospace;color:#5B636B">Name · signature · date</span></div>
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:400 6.2pt/1 'IBM Plex Mono',monospace;color:#5B636B;border-top:0.5pt solid #D5D2CA;padding-top:2.2mm"><span>{{ d.doc.docNo }} · Rev {{ d.doc.rev }} · {{ d.doc.date }}</span><span>Preliminary — for review · Not for construction</span><span style="color:#1E1E1C">24</span></div>
+</section>
+
+<!-- ============ 25 DESIGN SYSTEM — TYPE, COLOUR, GRID ============ -->
+<section data-page="" data-screen-label="25 Design system type colour grid" style="width:210mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#F5F2EC;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;top:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:500 6.2pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:#5B636B;border-bottom:0.5pt solid #D5D2CA;padding-bottom:2.2mm"><span>Proposed 3,000-seat church auditorium</span><span>DS · Document design system</span></div>
+  <div style="position:absolute;top:24mm;left:25mm;right:15mm;bottom:22mm;display:flex;flex-direction:column;gap:6mm">
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;align-items:end;padding-bottom:5mm;border-bottom:0.75pt solid #1E1E1C">
+      <div style="font:500 8pt/1 'IBM Plex Mono',monospace;color:#8C5E36;letter-spacing:.04em">DS-01</div>
+      <h2 style="margin:0;font:400 27pt/1.04 Newsreader,serif;letter-spacing:-.01em">Type, colour and grid</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;border-top:0.75pt solid #1E1E1C">
+      <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;padding:2.6mm 0;border-bottom:0.35pt solid #D5D2CA;align-items:baseline"><span style="font:400 6pt/1.4 'IBM Plex Mono',monospace;color:#5B636B">Display · Newsreader 300<br>31 / 32.5 pt</span><span style="font:300 31pt/1.04 Newsreader,serif">Auditorium</span></div>
+      <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;padding:2.6mm 0;border-bottom:0.35pt solid #D5D2CA;align-items:baseline"><span style="font:400 6pt/1.4 'IBM Plex Mono',monospace;color:#5B636B">H1 · Newsreader 400<br>27 / 28 pt · −1%</span><span style="font:400 27pt/1.04 Newsreader,serif;letter-spacing:-.01em">Project overview</span></div>
+      <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;padding:2.6mm 0;border-bottom:0.35pt solid #D5D2CA;align-items:baseline"><span style="font:400 6pt/1.4 'IBM Plex Mono',monospace;color:#5B636B">Lead · Newsreader 400<br>13 / 18.5 pt</span><span style="font:400 13pt/1.42 Newsreader,serif">A single long-span hall of 50 metres.</span></div>
+      <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;padding:2.6mm 0;border-bottom:0.35pt solid #D5D2CA;align-items:baseline"><span style="font:400 6pt/1.4 'IBM Plex Mono',monospace;color:#5B636B">Body · Archivo 400<br>8.6 / 13.3 pt</span><span style="font:400 8.6pt/1.55 Archivo,sans-serif">Purlins at 5.0 m centres on plan span between trusses.</span></div>
+      <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;padding:2.6mm 0;border-bottom:0.35pt solid #D5D2CA;align-items:baseline"><span style="font:400 6pt/1.4 'IBM Plex Mono',monospace;color:#5B636B">Table · Archivo 400<br>6.2–7.2 pt · tabular</span><span style="font:400 7pt/1.3 Archivo,sans-serif;font-variant-numeric:tabular-nums">Hall portal column · 18 · 14.900 m</span></div>
+      <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;padding:2.6mm 0;border-bottom:0.35pt solid #D5D2CA;align-items:baseline"><span style="font:400 6pt/1.4 'IBM Plex Mono',monospace;color:#5B636B">Data · IBM Plex Mono<br>5.2–9 pt · 400 / 500</span><span style="font:500 7.5pt/1.3 'IBM Plex Mono',monospace">STR-COL-B6 · A-100 · Rev [REV] · +14.000</span></div>
+      <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;padding:2.6mm 0;border-bottom:0.35pt solid #D5D2CA;align-items:baseline"><span style="font:400 6pt/1.4 'IBM Plex Mono',monospace;color:#5B636B">Label · Plex Mono 500<br>6.2 pt · caps · +7%</span><span style="font:500 6.2pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:#5B636B">Running header · table header</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:2mm">
+      <div style="display:flex;flex-direction:column;gap:1.2mm"><div style="height:14mm;background:#1E1E1C"></div><span style="font:500 5.8pt/1.3 'IBM Plex Mono',monospace">Charcoal<br>#1E1E1C</span></div>
+      <div style="display:flex;flex-direction:column;gap:1.2mm"><div style="height:14mm;background:#F5F2EC;border:0.35pt solid #D5D2CA;box-sizing:border-box"></div><span style="font:500 5.8pt/1.3 'IBM Plex Mono',monospace">Paper<br>#F5F2EC</span></div>
+      <div style="display:flex;flex-direction:column;gap:1.2mm"><div style="height:14mm;background:#5B636B"></div><span style="font:500 5.8pt/1.3 'IBM Plex Mono',monospace">Slate<br>#5B636B</span></div>
+      <div style="display:flex;flex-direction:column;gap:1.2mm"><div style="height:14mm;background:#D5D2CA"></div><span style="font:500 5.8pt/1.3 'IBM Plex Mono',monospace">Rule<br>#D5D2CA</span></div>
+      <div style="display:flex;flex-direction:column;gap:1.2mm"><div style="height:14mm;background:#8C5E36"></div><span style="font:500 5.8pt/1.3 'IBM Plex Mono',monospace">Bronze<br>#8C5E36</span></div>
+      <div style="display:flex;flex-direction:column;gap:1.2mm"><div style="height:14mm;background:#8A3324"></div><span style="font:500 5.8pt/1.3 'IBM Plex Mono',monospace">Oxide · risk<br>#8A3324</span></div>
+      <div style="display:flex;flex-direction:column;gap:1.2mm"><div style="height:14mm;background:#FFFFFF;border:0.35pt solid #D5D2CA;box-sizing:border-box"></div><span style="font:500 5.8pt/1.3 'IBM Plex Mono',monospace">Drawing<br>#FFFFFF</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:38mm 1fr;column-gap:4mm;margin-top:auto">
+      <div style="display:flex;flex-direction:column;gap:1.4mm;font:400 6.2pt/1.45 Archivo,sans-serif;color:#5B636B"><span style="font:500 6.2pt/1.3 'IBM Plex Mono',monospace;color:#8C5E36">A4 GRID</span><span>Margins: top 24, bottom 22, binding 25, outer 15 mm. Rail 38 mm + gutter 4 + text 128 mm. Running header at 9 mm, folio at 9 mm from foot.</span><span>A3 sheets: 8 mm border, 62 mm title block, drawing area 338 × 277 mm.</span></div>
+      <div style="height:62mm;position:relative;background:#FFFFFF;border:0.35pt solid #D5D2CA">
+        <div style="position:absolute;left:25%;top:8%;bottom:7.4%;width:0;border-left:0.5pt dashed #8C5E36"></div>
+        <div style="position:absolute;left:11.9%;top:8%;bottom:7.4%;width:18.1%;background:rgba(140,94,54,.08)"></div>
+        <div style="position:absolute;left:32%;right:7.1%;top:8%;bottom:7.4%;background:rgba(30,30,28,.05);border:0.35pt solid #8E959C"></div>
+        <div style="position:absolute;left:11.9%;right:7.1%;top:3%;height:0;border-top:0.35pt solid #8E959C"></div>
+        <div style="position:absolute;left:11.9%;right:7.1%;bottom:3%;height:0;border-top:0.35pt solid #8E959C"></div>
+        <span style="position:absolute;left:12.5%;top:10%;font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#8C5E36">RAIL 38</span>
+        <span style="position:absolute;left:33%;top:10%;font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">TEXT 128</span>
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:9mm;left:25mm;right:15mm;display:flex;justify-content:space-between;font:400 6.2pt/1 'IBM Plex Mono',monospace;color:#5B636B;border-top:0.5pt solid #D5D2CA;padding-top:2.2mm"><span>{{ d.doc.docNo }} · Rev {{ d.doc.rev }} · {{ d.doc.date }}</span><span>Preliminary — for review · Not for construction</span><span style="color:#1E1E1C">25</span></div>
+</section>
+
+<!-- ============ 26 DESIGN SYSTEM — DRAWING LANGUAGE (A3) ============ -->
+<div data-sheet-wrap="" style="display:contents"><section data-page="" data-screen-label="26 Design system drawing language" style="width:420mm;height:297mm;position:relative;flex:none;overflow:hidden;background:#FFFFFF;color:#1E1E1C;font-family:Archivo,sans-serif;box-shadow:0 2px 14px rgba(0,0,0,.18)">
+  <div style="position:absolute;inset:8mm;border:0.75pt solid #1E1E1C;display:grid;grid-template-columns:minmax(0,1fr) 62mm">
+    <div style="padding:6mm;display:flex;flex-direction:column;gap:5mm">
+      <div style="display:flex;justify-content:space-between;align-items:end;padding-bottom:3mm;border-bottom:0.75pt solid #1E1E1C"><h2 style="margin:0;font:400 22pt/1.04 Newsreader,serif">Engineering drawing language</h2><span style="font:500 6.2pt/1 'IBM Plex Mono',monospace;color:#8C5E36">DS-02</span></div>
+      <img loading="lazy" decoding="async" src="drawings/DS-001_drawing_language.svg" alt="Drawing language legend" style="display:block;width:326mm;height:auto">
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6mm;font:400 6.6pt/1.5 Archivo,sans-serif;color:#1E1E1C">
+        <span>Drawings must print legibly in monochrome. Status is carried by line type and mark, never by colour alone; bronze is reserved for annotation.</span>
+        <span>All drawings are generated as true-scale SVG in millimetres from model geometry. Stated scales hold only when the sheet prints at 100%.</span>
+        <span>Model geometry is drawn solid. Assumptions and reference-only items are dashed. Unresolved items are dotted and carry a review reference.</span>
+      </div>
+    </div>
+    <div style="border-left:0.75pt solid #1E1E1C;display:flex;flex-direction:column">
+      <div style="padding:3mm;flex:1"></div>
+      <div style="border-top:0.75pt solid #1E1E1C;padding:2.4mm 3mm;background:#1E1E1C;color:#F5F2EC;font:500 6.2pt/1.35 'IBM Plex Mono',monospace;letter-spacing:.05em">DOCUMENT STANDARD</div>
+      <div style="border-top:0.35pt solid #1E1E1C;padding:2.4mm 3mm;display:flex;flex-direction:column;gap:1mm"><span style="font:500 5.6pt/1 'IBM Plex Mono',monospace;letter-spacing:.07em;color:#5B636B">DRAWING TITLE</span><span style="font:400 12pt/1.15 Newsreader,serif">Drawing language and symbols</span></div>
+      <div style="border-top:0.35pt solid #1E1E1C;display:grid;grid-template-columns:1fr 1fr">
+        <div style="padding:1.8mm 3mm;border-right:0.35pt solid #1E1E1C"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">DRAWING NO.</div><div style="font:500 9pt/1.4 'IBM Plex Mono',monospace">DS-02</div></div>
+        <div style="padding:1.8mm 3mm"><div style="font:500 5.2pt/1 'IBM Plex Mono',monospace;color:#5B636B">SCALE</div><div style="font:400 7.4pt/1.5 'IBM Plex Mono',monospace">1:1</div></div>
+      </div>
+      <div style="border-top:0.75pt solid #1E1E1C;padding:1.8mm 3mm;display:flex;justify-content:space-between;font:400 6pt/1 'IBM Plex Mono',monospace;color:#5B636B"><span>Design system</span><span style="color:#1E1E1C">26</span></div>
+    </div>
+  </div>
+</section></div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;coverImage&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Model line drawing&quot;,&quot;Render slot&quot;],&quot;default&quot;:&quot;Model line drawing&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Cover&quot;},&quot;showProvenance&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Data&quot;},&quot;zoomMode&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Fit to window&quot;,&quot;Actual size&quot;],&quot;default&quot;:&quot;Fit to window&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;View&quot;}}">
+class Component extends DCLogic {
+  state = { d: null, zoom: 1 };
+  componentDidMount() {
+    const sheets = new URLSearchParams(location.search).get('sheets');
+    if (sheets) document.documentElement.dataset.sheets = sheets;
+    fetch('./data/project.json').then(r => r.json()).then(d => this.setState({ d })).catch(e => console.error('project.json', e));
+    this.fit = () => {
+      const actual = this.props.zoomMode === 'Actual size';
+      const z = actual ? 1 : Math.min(1, (window.innerWidth - 24) / 1587);
+      this.setState({ zoom: Math.round(z * 1000) / 1000 });
+    };
+    this.fit();
+    window.addEventListener('resize', this.fit);
+    this.eager = () => document.querySelectorAll('img[loading="lazy"]').forEach(i => { i.loading = 'eager'; });
+    window.addEventListener('beforeprint', this.eager);
+  }
+  componentDidUpdate(prev) { if (prev.zoomMode !== this.props.zoomMode) this.fit(); }
+  componentWillUnmount() { window.removeEventListener('resize', this.fit); window.removeEventListener('beforeprint', this.eager); }
+  renderVals() {
+    const d = this.state.d || { doc: {}, copy: { overview: [], vision: [], structure: [], interior: [], principles: [] }, glance: {}, seating: {}, schedules: {}, images: {} };
+    const z = a => (a || []).map((r, i) => Object.assign({}, typeof r === 'object' ? r : { t: r }, { zebra: i % 2 ? '#EEEBE4' : 'transparent' }));
+    const sev = { Critical: ['#8A3324', '●●●'], Major: ['#8C5E36', '●●○'], Minor: ['#5B636B', '●○○'] };
+    const rooms = d.rooms || [];
+    const per = Math.ceil(rooms.length / 4) || 7;
+    const roomCols = [0, 1, 2, 3].map(i => ({ rows: rooms.slice(i * per, (i + 1) * per) }));
+    const cols = d.columnsFull || [];
+    const split = 40;
+    const sc = d.schedules || {};
+    const S = d.seating || {};
+    const coverRender = this.props.coverImage === 'Render slot';
+    return {
+      d,
+      zoom: this.state.zoom,
+      showTags: this.props.showProvenance !== false,
+      coverRender,
+      coverAxo: !coverRender,
+      glArch: z(d.glance.arch), glStruct: z(d.glance.struct), glFunc: z(d.glance.func), glModel: z(d.glance.model),
+      roomCols,
+      seatBlocks: z(S.blocks), seatDims: z(S.dims), seatSight: z(S.sight),
+      schedGroups: [
+        ['Column schedule', 'TABLE 9.1', sc.columns], ['Beam schedule', 'TABLE 9.2', sc.beams], ['Truss schedule', 'TABLE 9.3', sc.trusses],
+        ['Purlin schedule', 'TABLE 9.4', sc.purlins], ['Bracing schedule', 'TABLE 9.5', sc.bracing], ['Footing schedule', 'TABLE 9.6', sc.footings]
+      ].map(([title, table, rows]) => ({ title, table, rows: z(rows) })),
+      schedCols: (() => { const g = [['Column schedule', 'TABLE 9.1', sc.columns], ['Beam schedule', 'TABLE 9.2', sc.beams], ['Truss schedule', 'TABLE 9.3', sc.trusses], ['Purlin schedule', 'TABLE 9.4', sc.purlins], ['Bracing schedule', 'TABLE 9.5', sc.bracing], ['Footing schedule', 'TABLE 9.6', sc.footings]].map(([title, table, rows]) => ({ title, table, rows: z(rows) })); return [{ groups: g.slice(0, 3) }, { groups: g.slice(3) }]; })(),
+      qtyGroups: (d.quantities || []).map(g => ({ group: g.group, items: z(g.items) })),
+      risks: z(d.risks).map(r => Object.assign(r, { sevColor: (sev[r.sev] || sev.Minor)[0], sevGlyph: (sev[r.sev] || sev.Minor)[1] })),
+      phases: (d.phases || []).map(p => Object.assign({}, p, { fill: p.status === 'current' ? '#8C5E36' : (p.status === 'complete' ? '#1E1E1C' : '#F5F2EC'), ink: p.status === 'outstanding' ? '#1E1E1C' : '#F5F2EC', statusColor: p.status === 'outstanding' ? '#5B636B' : '#8C5E36' })),
+      recs: (d.recommendations || []).map((t, i) => ({ n: String(i + 1).padStart(2, '0'), t })),
+      drawings: z(d.drawings), assumptions: z(d.assumptions), calcs: z(d.calcs), checks: z(d.checks), modelRefs: z(d.modelRefs),
+      colsA: z(cols.slice(0, split)), colsB: z(cols.slice(split)).map((r, i) => Object.assign(r, { zebra: (i + split) % 2 ? '#EEEBE4' : 'transparent' })),
+      colRangeA: cols.length ? '1–' + Math.min(split, cols.length) : '',
+      colRangeB: cols.length > split ? (split + 1) + '–' + cols.length : '',
+      callouts: [
+        { n: '1', t: 'Columns', ref: 'STR-COL · 0.60 / 0.40 / 0.25 m reservations', q: '76' },
+        { n: '2', t: 'Primary roof trusses T3–T11', ref: 'STR-TRUSS · span 50.000 m', q: '9' },
+        { n: '3', t: 'Purlins', ref: 'STR-PURLIN · 11 lines per bay', q: '88' },
+        { n: '4', t: 'Roof plane X-bracing', ref: 'STR-BRACE-ROOF · bays 3–4, 7–8, 10–11', q: '60' },
+        { n: '5', t: 'Portal knee braces', ref: 'STR-KNEE · B, G / 4–10 · A-27', q: '14' },
+        { n: '6', t: 'Pad footings (reference only)', ref: 'STR-FTG · no geotechnical data', q: '76' },
+        { n: '7', t: 'Gable strut and bracing', ref: 'STR-STRUT / STR-BRACE-GABLE · grids 3, 11', q: '6' },
+        { n: '8', t: 'Wing and eaves beams', ref: 'STR-BEAM · AMB, BOH, FOY, EAVES, MEZZ', q: '118' },
+        { n: '9', t: 'Entrance canopy columns', ref: 'STR-COL-CANOPY-A–H', q: '8' }
+      ],
+      roofData: [
+        { k: 'Truss span (B–G)', v: '50.000 m' }, { k: 'Trusses / hall bays', v: '9 / 8' }, { k: 'Typical bay', v: '8.000 m' },
+        { k: 'Roof pitch', v: '1:12.5 · 4.57°' }, { k: 'Bearing / top of roof', v: '+14.000 / +18.400' },
+        { k: 'Truss depth at bearing', v: '1.500 m' }, { k: 'Hall roof area (2 planes)', v: '3,326 m²' }, { k: 'Gutters / downpipes', v: '4 / 28' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

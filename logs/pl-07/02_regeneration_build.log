@@ -1,0 +1,11 @@
+$ C:\Program Files\Blender Foundation\Blender 5.2\blender.exe --background --factory-startup --python scripts/build_auditorium.py -- --out C:\Users\Kelvin\Desktop\auditorium\logs\regen_scratch\regen.blend --manifest C:\Users\Kelvin\Desktop\auditorium\logs\regen_scratch\regen_manifest.json --revision PL07-ea0efb2777
+# exit 0  (16.1s)
+
+--- stdout ---
+Info: Saved as "regen.blend"
+BUILD_SUMMARY {"revision": "PL07-ea0efb2777", "blender": "5.2.3 LTS", "blend": "C:\\Users\\Kelvin\\Desktop\\auditorium\\logs\\regen_scratch\\regen.blend", "objects_exported": 5051, "unique_meshes": 1675, "manifest_sha256": "fb1bab898b5ccf1d83ba63dd3eb5f703e847833406a81e289f8e2cabecb9246e", "congregation_seats_in_scene": 3000, "build_seconds": 6.08, "renders": {}, "total_scene_objects": 5117}
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit
+
+--- stderr ---

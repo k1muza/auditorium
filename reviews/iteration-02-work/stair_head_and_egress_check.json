@@ -1,0 +1,253 @@
+{
+ "rail_islands_xyzxyz": [
+  [
+   0.2,
+   7.85,
+   3.985,
+   4.3,
+   7.9,
+   5.085
+  ],
+  [
+   4.7,
+   7.85,
+   3.985,
+   12.8,
+   7.9,
+   5.085
+  ],
+  [
+   14.0,
+   7.85,
+   3.985,
+   14.3,
+   7.9,
+   5.085
+  ],
+  [
+   14.7,
+   7.85,
+   3.985,
+   22.8,
+   7.9,
+   5.085
+  ],
+  [
+   24.0,
+   7.85,
+   3.985,
+   24.3,
+   7.9,
+   5.085
+  ],
+  [
+   24.7,
+   7.85,
+   3.985,
+   34.3,
+   7.9,
+   5.085
+  ],
+  [
+   34.7,
+   7.85,
+   3.985,
+   42.8,
+   7.9,
+   5.085
+  ],
+  [
+   44.0,
+   7.85,
+   3.985,
+   44.3,
+   7.9,
+   5.085
+  ],
+  [
+   44.7,
+   7.85,
+   3.985,
+   52.8,
+   7.9,
+   5.085
+  ],
+  [
+   54.0,
+   7.85,
+   3.985,
+   54.3,
+   7.9,
+   5.085
+  ],
+  [
+   54.7,
+   7.85,
+   3.985,
+   58.8,
+   7.9,
+   5.085
+  ]
+ ],
+ "rail_gaps": [
+  {
+   "x0": 4.3,
+   "x1": 4.7,
+   "width": 0.4
+  },
+  {
+   "x0": 12.8,
+   "x1": 14.0,
+   "width": 1.2
+  },
+  {
+   "x0": 14.3,
+   "x1": 14.7,
+   "width": 0.4
+  },
+  {
+   "x0": 22.8,
+   "x1": 24.0,
+   "width": 1.2
+  },
+  {
+   "x0": 24.3,
+   "x1": 24.7,
+   "width": 0.4
+  },
+  {
+   "x0": 34.3,
+   "x1": 34.7,
+   "width": 0.4
+  },
+  {
+   "x0": 42.8,
+   "x1": 44.0,
+   "width": 1.2
+  },
+  {
+   "x0": 44.3,
+   "x1": 44.7,
+   "width": 0.4
+  },
+  {
+   "x0": 52.8,
+   "x1": 54.0,
+   "width": 1.2
+  },
+  {
+   "x0": 54.3,
+   "x1": 54.7,
+   "width": 0.4
+  }
+ ],
+ "stairs": {
+  "ARC-STAIR-FOYER-1": {
+   "props": {
+    "Going": 0.3,
+    "Riser": 0.173,
+    "Risers": 23,
+    "Role": "Upper foyer egress / access stair",
+    "Width": 2.7
+   },
+   "top_landing_xy": [
+    12.8,
+    5.15,
+    14.0,
+    7.85
+   ]
+  },
+  "ARC-STAIR-FOYER-2": {
+   "props": {
+    "Going": 0.3,
+    "Riser": 0.173,
+    "Risers": 23,
+    "Role": "Upper foyer egress / access stair",
+    "Width": 2.7
+   },
+   "top_landing_xy": [
+    22.8,
+    5.15,
+    24.0,
+    7.85
+   ]
+  },
+  "ARC-STAIR-FOYER-3": {
+   "props": {
+    "Going": 0.3,
+    "Riser": 0.173,
+    "Risers": 23,
+    "Role": "Upper foyer egress / access stair",
+    "Width": 2.7
+   },
+   "top_landing_xy": [
+    42.8,
+    5.15,
+    44.0,
+    7.85
+   ]
+  },
+  "ARC-STAIR-FOYER-4": {
+   "props": {
+    "Going": 0.3,
+    "Riser": 0.173,
+    "Risers": 23,
+    "Role": "Upper foyer egress / access stair",
+    "Width": 2.7
+   },
+   "top_landing_xy": [
+    52.8,
+    5.15,
+    54.0,
+    7.85
+   ]
+  }
+ },
+ "stair_head_openings_total_width": 4.8,
+ "builder_EGR-02": {
+  "id": "EGR-02",
+  "description": "Upper foyer stairs width >= placeholder demand",
+  "value": 10.8,
+  "criterion": ">= 7.48 m (rear load 997 x 7.5 mm placeholder)",
+  "result": "PASS"
+ },
+ "seats_where_nearest_travel_is_shorter_than_straight_line_to_listed_nearest_exit": 557,
+ "examples": [
+  [
+   "SEAT-C-R26-B3-S01",
+   "DR-HALL-W-CROSS",
+   "17.88",
+   18.53
+  ],
+  [
+   "SEAT-C-R26-B3-S02",
+   "DR-HALL-W-CROSS",
+   "18.38",
+   19.0
+  ],
+  [
+   "SEAT-C-R26-B3-S03",
+   "DR-HALL-W-CROSS",
+   "18.88",
+   19.47
+  ],
+  [
+   "SEAT-C-R39-B5-S14",
+   "DR-HALL-E-CROSS",
+   "5.52",
+   20.79
+  ],
+  [
+   "SEAT-C-R39-B5-S13",
+   "DR-HALL-E-CROSS",
+   "6.02",
+   21.01
+  ],
+  [
+   "SEAT-C-R39-B5-S12",
+   "DR-HALL-E-CROSS",
+   "6.52",
+   21.24
+  ]
+ ]
+}

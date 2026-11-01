@@ -1,0 +1,479 @@
+{
+  "method": "Blender MCP live-scene read; source blend opened but never saved",
+  "mcp_connection": {
+    "background": true,
+    "blender_version": "5.2.3 LTS",
+    "scene": "CA3000_Concept"
+  },
+  "blend_file": "C:\\Users\\Kelvin\\Desktop\\auditorium\\model\\church_3000_concept.blend",
+  "blend_sha256": "8fbaec2b57a68f3e0bbc70a2c226bb9ca4bce27d2cd08909c64e0c2bdb92aef9",
+  "revision": "PL06-966bde8984",
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0,
+    "length_unit": "METERS"
+  },
+  "counts": {
+    "scene_objects": 5097,
+    "model_objects": 5097,
+    "by_ifc_class": {
+      "DOC": 66,
+      "IfcAudioVisualAppliance": 10,
+      "IfcBeam": 118,
+      "IfcColumn": 76,
+      "IfcCovering": 4,
+      "IfcDoor": 45,
+      "IfcFooting": 76,
+      "IfcFurniture": 3360,
+      "IfcLightFixture": 115,
+      "IfcMember": 545,
+      "IfcPipeSegment": 32,
+      "IfcRailing": 15,
+      "IfcRamp": 7,
+      "IfcSlab": 308,
+      "IfcSpace": 28,
+      "IfcSpatialZone": 246,
+      "IfcStair": 5,
+      "IfcTransportElement": 1,
+      "IfcWall": 39,
+      "IfcWindow": 1
+    },
+    "congregation_seats": 3000,
+    "choir_seats": 329,
+    "companion_chairs": 30,
+    "wheelchair_named_objects": 32,
+    "doors": 45,
+    "fire_exit_doors": 27
+  },
+  "model_extents_m": [
+    -6.596,
+    -6.618,
+    -1.5,
+    73.0492,
+    94.782,
+    18.4
+  ],
+  "column_foundation_coordination": {
+    "columns": 76,
+    "footings": 76,
+    "max_xy_offset_m": 0.0,
+    "max_abs_vertical_gap_m": 0.0,
+    "unmatched_or_misaligned": []
+  },
+  "primary_truss_topology": [
+    {
+      "assembly": "STR-TRUSS-T10",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T11",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T3",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T4",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T5",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T6",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T7",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T8",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    },
+    {
+      "assembly": "STR-TRUSS-T9",
+      "members": 41,
+      "isolated_nonbearing_endpoints": []
+    }
+  ],
+  "congregation_off_axis": {
+    "over_45_deg": 466,
+    "over_60_deg": 108,
+    "over_70_deg": 0,
+    "worst": {
+      "angle_deg": 66.17,
+      "seat": "SEAT-C-R05-B1-S05",
+      "position_m": [
+        9.125,
+        56.6,
+        0.05
+      ]
+    }
+  },
+  "choir_geometry": {
+    "sections": {
+      "E-lower": {
+        "count": 45,
+        "bbox_m": [
+          42.89,
+          64.175,
+          0.0,
+          51.11,
+          66.725,
+          0.85
+        ],
+        "storeys": [
+          "L00"
+        ],
+        "facing_values": [
+          "pulpit (179.5 deg from +X)"
+        ]
+      },
+      "E-upper": {
+        "count": 105,
+        "bbox_m": [
+          42.227,
+          68.536,
+          0.0,
+          51.773,
+          74.864,
+          0.85
+        ],
+        "storeys": [
+          "L00"
+        ],
+        "facing_values": [
+          "pulpit (-160.8 deg from +X)"
+        ]
+      },
+      "W-lower": {
+        "count": 50,
+        "bbox_m": [
+          7.689,
+          64.165,
+          0.0,
+          16.861,
+          66.727,
+          0.85
+        ],
+        "storeys": [
+          "L00"
+        ],
+        "facing_values": [
+          "pulpit (0.5 deg from +X)"
+        ]
+      },
+      "W-upper": {
+        "count": 129,
+        "bbox_m": [
+          7.201,
+          68.408,
+          0.0,
+          18.262,
+          74.992,
+          0.85
+        ],
+        "storeys": [
+          "L00"
+        ],
+        "facing_values": [
+          "pulpit (-20.0 deg from +X)"
+        ]
+      }
+    },
+    "minimum_chair_centre_distance_m": 0.5,
+    "minimum_lateral_clearance_to_hall_side_wall_inner_face_m": 2.551,
+    "wheelchair_places": [
+      "ACC-WCS-CHOIR-W-01",
+      "ACC-WCS-CHOIR-E-01"
+    ]
+  },
+  "platform": {
+    "name": "ARC-PLATFORM",
+    "bbox_m": [
+      19.5,
+      64.0,
+      0.0,
+      39.5,
+      74.0,
+      0.9
+    ],
+    "dimensions_m": [
+      20.0,
+      10.0,
+      0.9
+    ],
+    "platform_or_stage_railings": [],
+    "ramps": [
+      "ARC-RAMP-PLATFORM-E"
+    ],
+    "stairs": [
+      "ARC-STAIR-PLATFORM-W"
+    ]
+  },
+  "door_property_coverage": {
+    "fire_exit_true": 27,
+    "outward_operation": 27,
+    "panic_operation": 27,
+    "effective_width_present": 27,
+    "samples": [
+      {
+        "name": "DR-HALL-W-FRONT",
+        "props": {
+          "Role": "Hall exit - front zone",
+          "EffectiveClearWidth": 3.36,
+          "Leaves": 3,
+          "LeafWidth": 1.2,
+          "Operation": "Outward-opening in the direction of escape, panic bar, hold-open on fire alarm release (assumed)",
+          "FireExit": true,
+          "FireRating": "TBC by fire engineer"
+        }
+      },
+      {
+        "name": "DR-HALL-W-WING",
+        "props": {
+          "Role": "Hall exit - platform wing",
+          "EffectiveClearWidth": 2.24,
+          "Leaves": 2,
+          "LeafWidth": 1.2,
+          "Operation": "Outward-opening in the direction of escape, panic bar, hold-open on fire alarm release (assumed)",
+          "FireExit": true,
+          "FireRating": "TBC by fire engineer"
+        }
+      },
+      {
+        "name": "DR-HALL-W-CROSS",
+        "props": {
+          "Role": "Hall exit - mid cross aisle",
+          "EffectiveClearWidth": 3.36,
+          "Leaves": 3,
+          "LeafWidth": 1.2,
+          "Operation": "Outward-opening in the direction of escape, panic bar, hold-open on fire alarm release (assumed)",
+          "FireExit": true,
+          "FireRating": "TBC by fire engineer"
+        }
+      },
+      {
+        "name": "DR-HALL-E-FRONT",
+        "props": {
+          "Role": "Hall exit - front zone",
+          "EffectiveClearWidth": 3.36,
+          "Leaves": 3,
+          "LeafWidth": 1.2,
+          "Operation": "Outward-opening in the direction of escape, panic bar, hold-open on fire alarm release (assumed)",
+          "FireExit": true,
+          "FireRating": "TBC by fire engineer"
+        }
+      },
+      {
+        "name": "DR-HALL-E-WING",
+        "props": {
+          "Role": "Hall exit - platform wing",
+          "EffectiveClearWidth": 2.24,
+          "Leaves": 2,
+          "LeafWidth": 1.2,
+          "Operation": "Outward-opening in the direction of escape, panic bar, hold-open on fire alarm release (assumed)",
+          "FireExit": true,
+          "FireRating": "TBC by fire engineer"
+        }
+      },
+      {
+        "name": "DR-HALL-E-CROSS",
+        "props": {
+          "Role": "Hall exit - mid cross aisle",
+          "EffectiveClearWidth": 3.36,
+          "Leaves": 3,
+          "LeafWidth": 1.2,
+          "Operation": "Outward-opening in the direction of escape, panic bar, hold-open on fire alarm release (assumed)",
+          "FireExit": true,
+          "FireRating": "TBC by fire engineer"
+        }
+      }
+    ]
+  },
+  "access_objects": {
+    "external_cross_aisle_ramps": [
+      "ARC-RAMP-EXT-W-CROSS",
+      "ARC-RAMP-EXT-E-CROSS"
+    ],
+    "aisle_handrails": [
+      "ARC-RAIL-AISLE-F-A1",
+      "ARC-RAIL-AISLE-R-A1",
+      "ARC-RAIL-AISLE-F-A2",
+      "ARC-RAIL-AISLE-R-A2",
+      "ARC-RAIL-AISLE-F-A3",
+      "ARC-RAIL-AISLE-R-A3",
+      "ARC-RAIL-AISLE-F-A4",
+      "ARC-RAIL-AISLE-R-A4",
+      "ARC-RAIL-AISLE-F-A5",
+      "ARC-RAIL-AISLE-R-A5"
+    ],
+    "aisle_lights": 115,
+    "refuges": [
+      "ACC-REFUGE-W-1",
+      "ACC-REFUGE-W-2",
+      "ACC-REFUGE-E-1",
+      "ACC-REFUGE-E-2"
+    ],
+    "wheelchair_L02": 0
+  },
+  "represented_system_keyword_hits": {
+    "SCREEN": 6,
+    "SPEAKER": 4,
+    "GUTTER": 4,
+    "DOWNPIPE": 28,
+    "DRAIN": 0,
+    "ACOUST": 0,
+    "DUCT": 0,
+    "DIFFUSER": 0,
+    "AIR-HANDLING": 0,
+    "SPRINK": 0,
+    "DETECTOR": 0,
+    "EXIT-SIGN": 0,
+    "EMERGENCY-LIGHT": 0,
+    "LIGHTNING": 0,
+    "ROOF-WALK": 0,
+    "LADDER": 0,
+    "FALL-ARREST": 0,
+    "ACCESS-HATCH": 0,
+    "SANITARY-FIXTURE": 0
+  },
+  "geometry_check_summary": {
+    "pass": 36,
+    "warn": 5,
+    "fail": 0,
+    "nonpass": [
+      {
+        "id": "EGR-01R",
+        "description": "Sensitivity: exit width if everyone takes the shortest route to an EXTERNAL door",
+        "value": {
+          "DR-HALL-W-FRONT": [
+            328,
+            1.64,
+            3.36
+          ],
+          "DR-HALL-W-WING": [
+            195,
+            0.975,
+            2.24
+          ],
+          "DR-HALL-W-CROSS": [
+            817,
+            4.085,
+            3.36
+          ],
+          "DR-HALL-E-FRONT": [
+            328,
+            1.64,
+            3.36
+          ],
+          "DR-HALL-E-WING": [
+            195,
+            0.975,
+            2.24
+          ],
+          "DR-HALL-E-CROSS": [
+            843,
+            4.215,
+            3.36
+          ],
+          "DR-HALL-REAR-A1": [
+            84,
+            0.42,
+            2.24
+          ],
+          "DR-HALL-REAR-A2": [
+            294,
+            1.47,
+            2.24
+          ],
+          "DR-HALL-REAR-A4": [
+            294,
+            1.47,
+            2.24
+          ],
+          "DR-HALL-REAR-A5": [
+            72,
+            0.36,
+            2.24
+          ]
+        },
+        "criterion": "width >= load x 5 mm (placeholder) - cross-aisle exits attract this route (OI-17)",
+        "result": "WARN"
+      },
+      {
+        "id": "EGR-03N",
+        "description": "Max within-hall plan travel to the NEAREST hall exit",
+        "value": {
+          "max_m": 39.73,
+          "occupants_over_flag": 330
+        },
+        "criterion": "<= 30.0 m placeholder flag (OI-17)",
+        "result": "WARN"
+      },
+      {
+        "id": "EGR-03",
+        "description": "Max within-hall plan travel to the queue-balanced hall exit",
+        "value": 50.42,
+        "criterion": "<= 30.0 m placeholder flag",
+        "result": "WARN"
+      },
+      {
+        "id": "EGR-04",
+        "description": "Max plan travel to an external door",
+        "value": 61.12,
+        "criterion": "<= 60.0 m placeholder flag",
+        "result": "WARN"
+      },
+      {
+        "id": "SGT-H2",
+        "description": "Seats more than 60 deg off the pulpit (after trimming the worst seats)",
+        "value": 108,
+        "criterion": "0 (remaining seats are screen-dependent; OI-19)",
+        "result": "WARN"
+      }
+    ],
+    "metrics": {
+      "choir_seats": 329,
+      "platform_clear_centre_width": 20.0,
+      "platform_choir_occupants": 391,
+      "egress": {
+        "occupants_assigned_in_hall": 3060,
+        "platform_choir_added": 391,
+        "total_hall_exit_width": 26.88,
+        "total_required_width_placeholder": 17.25,
+        "rear_load_to_upper_foyer": 1128,
+        "upper_foyer_stair_width": 10.8,
+        "upper_foyer_stair_required_placeholder": 8.46,
+        "max_travel_hall": 50.42,
+        "max_travel_hall_to_nearest_exit": 39.73,
+        "count_nearest_travel_over_flag": 330,
+        "max_travel_total": 61.12,
+        "boh_staff": 30,
+        "building_total_occupants": 3481,
+        "count_travel_hall_over_flag": 527,
+        "count_travel_total_over_flag": 4
+      },
+      "offaxis_pulpit": {
+        "over_45": 466,
+        "over_60": 108,
+        "over_70": 0,
+        "max_deg": 66.17,
+        "relying_on_screens": 2046,
+        "without_usable_view": 0
+      },
+      "max_viewing_distance_to_platform_edge": 45.45
+    }
+  }
+}

@@ -1,0 +1,880 @@
+{
+ "schema": "IFC4",
+ "length_scale": 1,
+ "units": [
+  [
+   "AREAUNIT",
+   null,
+   "SQUARE_METRE"
+  ],
+  [
+   "VOLUMEUNIT",
+   null,
+   "CUBIC_METRE"
+  ],
+  [
+   "LENGTHUNIT",
+   null,
+   "METRE"
+  ]
+ ],
+ "hierarchy": [
+  1,
+  1,
+  1
+ ],
+ "storeys": [
+  [
+   "L00",
+   "Level 00 - Ground / front of hall",
+   0.0
+  ],
+  [
+   "L01",
+   "Level 01 - Mid cross aisle / rear rake",
+   1.15
+  ],
+  [
+   "L02",
+   "Level 02 - Rear platform / upper foyer",
+   3.985
+  ],
+  [
+   "L03",
+   "Level 03 - Low-roof structure (BOH / ambulatory)",
+   4.3
+  ],
+  [
+   "L04",
+   "Level 04 - Foyer roof structure",
+   7.65
+  ],
+  [
+   "L05",
+   "Level 05 - Hall roof structure (eaves ties / trusses)",
+   13.6
+  ]
+ ],
+ "n_elements": 4349,
+ "uncontained": [],
+ "tessellated": 4608,
+ "storey_band_violations_count": 1,
+ "storey_band_violations": [
+  [
+   "IfcSpace",
+   "SPC-SP-08",
+   "L02",
+   4.585,
+   7.285
+  ]
+ ],
+ "storey_zmin_range": {
+  "L03": [
+   4.3,
+   7.42,
+   55
+  ],
+  "L05": [
+   13.6,
+   17.85,
+   539
+  ],
+  "L04": [
+   7.65,
+   8.25,
+   31
+  ],
+  "L01": [
+   -0.25,
+   3.85,
+   2056
+  ],
+  "L00": [
+   -1.5,
+   0.99,
+   1661
+  ],
+  "L02": [
+   -0.25,
+   4.58,
+   23
+  ]
+ },
+ "watch": {
+  "STR-BRACE-GABLE-11-DEa": {
+   "class": "IfcMember",
+   "ptype": "BRACE",
+   "otype": null,
+   "storey": "L01",
+   "z": [
+    2.95,
+    13.65
+   ],
+   "psets": {
+    "Pset_CA3000_Concept": {
+     "Collection": "30_STR_Bracing",
+     "Revision": "IT02-325e67e273",
+     "DesignStatus": "Concept - unverified",
+     "id": 70443
+    },
+    "Qto_MemberBaseQuantities": {
+     "GrossVolume": 0.3188,
+     "Length": 14.1676,
+     "id": 70448
+    }
+   }
+  },
+  "STR-BRACE-GABLE-3-DEa": {
+   "class": "IfcMember",
+   "ptype": "BRACE",
+   "otype": null,
+   "storey": "L03",
+   "z": [
+    7.422,
+    13.663
+   ],
+   "psets": {
+    "Pset_CA3000_Concept": {
+     "Collection": "30_STR_Bracing",
+     "Revision": "IT02-325e67e273",
+     "DesignStatus": "Concept - unverified",
+     "id": 70493
+    },
+    "Qto_MemberBaseQuantities": {
+     "GrossVolume": 0.2523,
+     "Length": 11.214,
+     "id": 70498
+    }
+   }
+  },
+  "WN-BOOTH-VIEW": {
+   "class": "IfcWindow",
+   "ptype": "WINDOW",
+   "otype": null,
+   "storey": "L03",
+   "z": [
+    5.485,
+    6.685
+   ],
+   "psets": {
+    "Pset_CA3000_Concept": {
+     "IsExternal": true,
+     "OverallHeight": 1.2,
+     "OverallWidth": 8.0,
+     "Role": "Sound/media booth viewing window",
+     "Collection": "10_ENV_Envelope",
+     "Revision": "IT02-325e67e273",
+     "DesignStatus": "Concept - unverified",
+     "id": 88282
+    },
+    "Pset_WindowCommon": {
+     "IsExternal": true,
+     "id": 88291
+    }
+   }
+  },
+  "SRV-02-ZONE": {
+   "class": "IfcSpatialZone",
+   "ptype": "USERDEFINED",
+   "otype": "ServiceAllowance",
+   "storey": null,
+   "z": [
+    12.6,
+    13.8
+   ],
+   "psets": {
+    "Pset_CA3000_Concept": {
+     "Status": "Space allowance only - no MEP design",
+     "Collection": "50_SRV_Allowances",
+     "Revision": "IT02-325e67e273",
+     "DesignStatus": "Concept - unverified",
+     "id": 67604
+    }
+   }
+  },
+  "STR-BEAM-MEZZ-2-CD": {
+   "class": "IfcBeam",
+   "ptype": "BEAM",
+   "otype": null,
+   "storey": "L01",
+   "z": [
+    3.135,
+    3.735
+   ],
+   "psets": {
+    "Pset_CA3000_Concept": {
+     "Collection": "30_STR_Beams",
+     "Revision": "IT02-325e67e273",
+     "DesignStatus": "Concept - unverified",
+     "id": 70118
+    },
+    "Qto_BeamBaseQuantities": {
+     "GrossVolume": 1.728,
+     "Length": 9.6,
+     "id": 70123
+    }
+   }
+  },
+  "ARC-CHOIR-TIER-1": {
+   "class": "IfcSlab",
+   "ptype": "FLOOR",
+   "otype": null,
+   "storey": "L01",
+   "z": [
+    0.0,
+    1.2
+   ],
+   "psets": {
+    "Pset_CA3000_Concept": {
+     "Description": "Choir riser tier 1",
+     "Collection": "20_ARC_Floors",
+     "Revision": "IT02-325e67e273",
+     "DesignStatus": "Concept - unverified",
+     "id": 1204
+    },
+    "Qto_SlabBaseQuantities": {
+     "GrossVolume": 34.56,
+     "GrossArea": 28.8,
+     "id": 1210
+    }
+   }
+  },
+  "ENV-WALL-HALL-W": {
+   "class": "IfcWall",
+   "ptype": "SOLIDWALL",
+   "otype": null,
+   "storey": "L00",
+   "z": [
+    -0.3,
+    14.0
+   ],
+   "psets": {
+    "Pset_CA3000_Concept": {
+     "BracedBays": "cavity wall (2 leaves) with X-bracing in cavity",
+     "Height": 14.3,
+     "IsExternal": true,
+     "Length": 63.7,
+     "Thickness": 0.3,
+     "Collection": "10_ENV_Envelope",
+     "Revision": "IT02-325e67e273",
+     "DesignStatus": "Concept - unverified",
+     "id": 13154
+    },
+    "Pset_WallCommon": {
+     "IsExternal": true,
+     "LoadBearing": false,
+     "id": 13164
+    },
+    "Qto_WallBaseQuantities": {
+     "GrossVolume": 287.525,
+     "Length": 63.7,
+     "Height": 14.3,
+     "Width": 0.6,
+     "id": 13168
+    }
+   }
+  },
+  "ENV-WALL-GABLE-REAR": {
+   "class": "IfcWall",
+   "ptype": "SOLIDWALL",
+   "otype": null,
+   "storey": "L05",
+   "z": [
+    14.0,
+    17.625
+   ],
+   "psets": {
+    "Pset_CA3000_Concept": {
+     "Description": "Gable cladding outside the gable truss plane",
+     "IsExternal": true,
+     "Collection": "10_ENV_Envelope",
+     "Revision": "IT02-325e67e273",
+     "DesignStatus": "Concept - unverified",
+     "id": 12713
+    },
+    "Pset_WallCommon": {
+     "IsExternal": true,
+     "LoadBearing": false,
+     "id": 12720
+    },
+    "Qto_WallBaseQuantities": {
+     "GrossVolume": 39.375,
+     "Length": 50.0,
+     "Height": 3.625,
+     "Width": 0.3,
+     "id": 12724
+    }
+   }
+  },
+  "ENV-ROOF-HALL-E": {
+   "class": "IfcSlab",
+   "ptype": "ROOF",
+   "otype": null,
+   "storey": "L05",
+   "z": [
+    16.11,
+    18.4
+   ],
+   "psets": {
+    "Pset_CA3000_Concept": {
+     "Description": "Hall metal roof (concept)",
+     "IsExternal": true,
+     "Collection": "10_ENV_Envelope",
+     "Revision": "IT02-325e67e273",
+     "DesignStatus": "Concept - unverified",
+     "id": 12072
+    },
+    "Qto_SlabBaseQuantities": {
+     "GrossVolume": 414.375,
+     "GrossArea": 1657.5,
+     "id": 12079
+    }
+   }
+  },
+  "ARC-SLAB-REAR-PLATFORM": {
+   "class": "IfcSlab",
+   "ptype": "FLOOR",
+   "otype": null,
+   "storey": "L02",
+   "z": [
+    -0.25,
+    3.985
+   ],
+   "psets": {
+    "Pset_CA3000_Concept": {
+     "Description": "Rear cross aisle / rear wheelchair platform",
+     "Collection": "20_ARC_Floors",
+     "Revision": "IT02-325e67e273",
+     "DesignStatus": "Concept - unverified",
+     "id": 9085
+    },
+    "Qto_SlabBaseQuantities": {
+     "GrossVolume": 620.9145,
+     "GrossArea": 146.615,
+     "id": 9091
+    }
+   }
+  },
+  "ACC-REFUGE-1-1": {
+   "class": "IfcSpatialZone",
+   "ptype": "USERDEFINED",
+   "otype": "RefugeSpace",
+   "storey": null,
+   "z": [
+    3.985,
+    4.005
+   ],
+   "psets": {
+    "Pset_CA3000_Concept": {
+     "Depth": 1.4,
+     "Stair": "ARC-STAIR-FOYER-1",
+     "Status": "Concept refuge allowance - enclosure/fire separation not designed (OI-16)",
+     "Width": 0.9,
+     "Collection": "40_SEAT_Accessible",
+     "Revision": "IT02-325e67e273",
+     "DesignStatus": "Concept - unverified",
+     "id": 224
+    }
+   }
+  },
+  "ARC-WALL-LIFT-E": {
+   "class": "IfcWall",
+   "ptype": "SOLIDWALL",
+   "otype": null,
+   "storey": "L00",
+   "z": [
+    0.0,
+    7.65
+   ],
+   "psets": {
+    "Pset_CA3000_Concept": {
+     "Description": "Lift shaft enclosure - stability contribution NOT assumed (A-13)",
+     "Height": 7.65,
+     "IsExternal": false,
+     "Length": 2.4,
+     "Thickness": 0.2,
+     "Collection": "20_ARC_Walls",
+     "Revision": "IT02-325e67e273",
+     "DesignStatus": "Concept - unverified",
+     "id": 10390
+    },
+    "Pset_WallCommon": {
+     "IsExternal": false,
+     "LoadBearing": false,
+     "id": 10400
+    },
+    "Qto_WallBaseQuantities": {
+     "GrossVolume": 3.672,
+     "Length": 2.4,
+     "Height": 7.65,
+     "Width": 0.2,
+     "id": 10404
+    }
+   }
+  },
+  "SRV-01-ZONE": {
+   "class": "IfcSpatialZone",
+   "ptype": "USERDEFINED",
+   "otype": "ServiceAllowance",
+   "storey": null,
+   "z": [
+    5.0,
+    7.0
+   ],
+   "psets": {
+    "Pset_CA3000_Concept": {
+     "Status": "Space allowance only - no MEP design",
+     "Collection": "50_SRV_Allowances",
+     "Revision": "IT02-325e67e273",
+     "DesignStatus": "Concept - unverified",
+     "id": 67581
+    }
+   }
+  },
+  "ARC-BOOTH-FLOOR": {
+   "class": "IfcSlab",
+   "ptype": "FLOOR",
+   "otype": null,
+   "storey": "L02",
+   "z": [
+    3.985,
+    4.585
+   ],
+   "psets": {
+    "Pset_CA3000_Concept": {
+     "Description": "Raised booth floor",
+     "StoreyOverride": "L02: raised booth platform within the upper foyer",
+     "Collection": "20_ARC_Floors",
+     "Revision": "IT02-325e67e273",
+     "DesignStatus": "Concept - unverified",
+     "id": 1177
+    },
+    "Qto_SlabBaseQuantities": {
+     "GrossVolume": 26.19,
+     "GrossArea": 43.65,
+     "id": 1184
+    }
+   }
+  },
+  "SPC-SP-08": {
+   "class": "IfcSpace",
+   "ptype": "INTERNAL",
+   "otype": null,
+   "storey": "L02",
+   "z": [
+    4.585,
+    7.285
+   ],
+   "psets": {
+    "Pset_CA3000_Concept": {
+     "GrossFloorArea": 43.65,
+     "Status": "Concept allowance - unverified",
+     "StoreyOverride": "L02: raised booth platform within the upper foyer",
+     "Use": "Media / sound control",
+     "Collection": "60_ZONE_Spaces",
+     "Revision": "IT02-325e67e273",
+     "DesignStatus": "Concept - unverified",
+     "id": 67068
+    },
+    "Qto_SpaceBaseQuantities": {
+     "GrossFloorArea": 43.65,
+     "id": 67077
+    }
+   }
+  }
+ },
+ "elements_without_material_by_class": {
+  "IfcElementAssembly": 9
+ },
+ "materials": [
+  "Concrete (grade TBC)",
+  "Door assembly (TBC)",
+  "Glazing (TBC)",
+  "Masonry (TBC)",
+  "Masonry partition (TBC)",
+  "Metal roof sheeting (TBC)",
+  "Metal wall cladding (TBC)",
+  "Proprietary item (TBC)",
+  "Reinforced concrete (grade TBC)",
+  "Seating (TBC)",
+  "Structural steel (grade TBC)"
+ ],
+ "material_by_class_sample": {
+  "IfcColumn": {
+   "Structural steel (grade TBC)": 68
+  },
+  "IfcBeam": {
+   "Structural steel (grade TBC)": 110
+  },
+  "IfcMember": {
+   "Structural steel (grade TBC)": 529
+  },
+  "IfcSlab": {
+   "Concrete (grade TBC)": 291,
+   "Metal roof sheeting (TBC)": 6
+  },
+  "IfcWall": {
+   "Masonry partition (TBC)": 21,
+   "Masonry (TBC)": 12,
+   "Metal wall cladding (TBC)": 4
+  },
+  "IfcFooting": {
+   "Reinforced concrete (grade TBC)": 68
+  },
+  "IfcFurniture": {
+   "Proprietary item (TBC)": 1,
+   "Seating (TBC)": 3174
+  },
+  "IfcDoor": {
+   "Door assembly (TBC)": 41
+  },
+  "IfcStair": {
+   "Concrete (grade TBC)": 7
+  },
+  "IfcRamp": {
+   "Concrete (grade TBC)": 5
+  }
+ },
+ "qto_names": {
+  "Qto_BeamBaseQuantities": 110,
+  "Qto_ColumnBaseQuantities": 68,
+  "Qto_FootingBaseQuantities": 68,
+  "Qto_MemberBaseQuantities": 529,
+  "Qto_SlabBaseQuantities": 297,
+  "Qto_WallBaseQuantities": 37
+ },
+ "qto_missing_by_class": {
+  "IfcDoor": 41,
+  "IfcRailing": 1,
+  "IfcRamp": 5,
+  "IfcStair": 7,
+  "IfcWindow": 1,
+  "IfcElementAssembly": 9,
+  "IfcFurniture": 3175,
+  "IfcTransportElement": 1
+ },
+ "qto_sample": {
+  "IfcBeam": [
+   "STR-BEAM-AMBEDGE-A-10-11",
+   {
+    "Qto_BeamBaseQuantities": {
+     "GrossVolume": 1.026,
+     "Length": 7.6,
+     "id": 67698
+    }
+   }
+  ],
+  "IfcColumn": [
+   "STR-COL-A1",
+   {
+    "Qto_ColumnBaseQuantities": {
+     "GrossVolume": 1.368,
+     "Length": 8.55,
+     "id": 72255
+    }
+   }
+  ],
+  "IfcFooting": [
+   "STR-FTG-A1",
+   {
+    "Qto_FootingBaseQuantities": {
+     "GrossVolume": 1.944,
+     "id": 74425
+    }
+   }
+  ],
+  "IfcMember": [
+   "STR-BRACE-GABLE-11-DEa",
+   {
+    "Qto_MemberBaseQuantities": {
+     "GrossVolume": 0.3188,
+     "Length": 14.1676,
+     "id": 70448
+    }
+   }
+  ],
+  "IfcSlab": [
+   "ARC-BOOTH-FLOOR",
+   {
+    "Qto_SlabBaseQuantities": {
+     "GrossVolume": 26.19,
+     "GrossArea": 43.65,
+     "id": 1184
+    }
+   }
+  ],
+  "IfcWall": [
+   "ARC-WALL-BOH-BOH-02",
+   {
+    "Qto_WallBaseQuantities": {
+     "GrossVolume": 3.2034,
+     "Length": 5.025,
+     "Height": 4.25,
+     "Width": 0.15,
+     "id": 9957
+    }
+   }
+  ]
+ },
+ "column_length_vs_geom_maxdev": 0.0,
+ "columns_with_length_q": 68,
+ "wall_ptypes": {
+  "PARTITIONING": 18,
+  "SOLIDWALL": 19
+ },
+ "lift_walls": {
+  "ARC-WALL-LIFT-E": "SOLIDWALL",
+  "ARC-WALL-LIFT-S": "SOLIDWALL",
+  "ARC-WALL-LIFT-W": "SOLIDWALL"
+ },
+ "refuge_zones": [
+  [
+   "ACC-REFUGE-1-1",
+   "RefugeSpace",
+   null,
+   [
+    11.7,
+    8.3,
+    3.98,
+    12.6,
+    9.7,
+    4.0
+   ]
+  ],
+  [
+   "ACC-REFUGE-1-2",
+   "RefugeSpace",
+   null,
+   [
+    10.7,
+    8.3,
+    3.98,
+    11.6,
+    9.7,
+    4.0
+   ]
+  ],
+  [
+   "ACC-REFUGE-2-1",
+   "RefugeSpace",
+   null,
+   [
+    21.7,
+    8.3,
+    3.98,
+    22.6,
+    9.7,
+    4.0
+   ]
+  ],
+  [
+   "ACC-REFUGE-2-2",
+   "RefugeSpace",
+   null,
+   [
+    20.7,
+    8.3,
+    3.98,
+    21.6,
+    9.7,
+    4.0
+   ]
+  ],
+  [
+   "ACC-REFUGE-3-1",
+   "RefugeSpace",
+   null,
+   [
+    41.7,
+    8.3,
+    3.98,
+    42.6,
+    9.7,
+    4.0
+   ]
+  ],
+  [
+   "ACC-REFUGE-3-2",
+   "RefugeSpace",
+   null,
+   [
+    40.7,
+    8.3,
+    3.98,
+    41.6,
+    9.7,
+    4.0
+   ]
+  ],
+  [
+   "ACC-REFUGE-4-1",
+   "RefugeSpace",
+   null,
+   [
+    51.7,
+    8.3,
+    3.98,
+    52.6,
+    9.7,
+    4.0
+   ]
+  ],
+  [
+   "ACC-REFUGE-4-2",
+   "RefugeSpace",
+   null,
+   [
+    50.7,
+    8.3,
+    3.98,
+    51.6,
+    9.7,
+    4.0
+   ]
+  ]
+ ],
+ "zone_rel": {
+  "IfcRelReferencedInSpatialStructure": 5
+ },
+ "congregation_seats": 3000,
+ "seat_not_in_csv": 0,
+ "seat_pos_max_dev": 2.0000000020559128e-06,
+ "seat_storeys": {
+  "L00": 1404,
+  "L01": 1596
+ },
+ "space_bbox_overlaps_3d": [
+  [
+   "SPC-SP-05",
+   "SPC-SP-07"
+  ],
+  [
+   "SPC-SP-06",
+   "SPC-SP-09"
+  ],
+  [
+   "SPC-SP-07",
+   "SPC-SP-08"
+  ],
+  [
+   "SPC-SP-07",
+   "SPC-SP-09"
+  ]
+ ],
+ "space_areas": {
+  "SPC-SP-01": {
+   "Qto_SpaceBaseQuantities": 2378.14
+  },
+  "SPC-SP-02": {
+   "Qto_SpaceBaseQuantities": 475.5
+  },
+  "SPC-SP-03": {
+   "Qto_SpaceBaseQuantities": 156.12
+  },
+  "SPC-SP-04": {
+   "Qto_SpaceBaseQuantities": 156.12
+  },
+  "SPC-SP-05": {
+   "Qto_SpaceBaseQuantities": 484.27
+  },
+  "SPC-SP-05E": {
+   "Qto_SpaceBaseQuantities": 36.13
+  },
+  "SPC-SP-05W": {
+   "Qto_SpaceBaseQuantities": 36.13
+  },
+  "SPC-SP-06": {
+   "Qto_SpaceBaseQuantities": 225.19
+  },
+  "SPC-SP-07": {
+   "Qto_SpaceBaseQuantities": 420.19
+  },
+  "SPC-SP-08": {
+   "Qto_SpaceBaseQuantities": 43.65
+  },
+  "SPC-SP-09": {
+   "Qto_SpaceBaseQuantities": 5.76
+  },
+  "SPC-SP-AMB-E": {
+   "Qto_SpaceBaseQuantities": 270.06
+  },
+  "SPC-SP-AMB-W": {
+   "Qto_SpaceBaseQuantities": 270.06
+  },
+  "SPC-SP-BOH-01": {
+   "Qto_SpaceBaseQuantities": 50.23
+  },
+  "SPC-SP-BOH-02": {
+   "Qto_SpaceBaseQuantities": 51.0
+  },
+  "SPC-SP-BOH-03": {
+   "Qto_SpaceBaseQuantities": 61.2
+  },
+  "SPC-SP-BOH-04": {
+   "Qto_SpaceBaseQuantities": 40.8
+  },
+  "SPC-SP-BOH-05": {
+   "Qto_SpaceBaseQuantities": 14.28
+  },
+  "SPC-SP-BOH-06": {
+   "Qto_SpaceBaseQuantities": 26.52
+  },
+  "SPC-SP-BOH-07": {
+   "Qto_SpaceBaseQuantities": 55.33
+  },
+  "SPC-SP-BOH-C": {
+   "Qto_SpaceBaseQuantities": 152.62
+  },
+  "SPC-SP-WC-E": {
+   "Qto_SpaceBaseQuantities": 34.27
+  },
+  "SPC-SP-WC-W": {
+   "Qto_SpaceBaseQuantities": 34.27
+  },
+  "SPC-SP-WCA-E": {
+   "Qto_SpaceBaseQuantities": 32.78
+  },
+  "SPC-SP-WCA-W": {
+   "Qto_SpaceBaseQuantities": 32.78
+  }
+ },
+ "grids": [
+  [
+   "Structural grid",
+   [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H"
+   ],
+   [
+    "1",
+    "10",
+    "11",
+    "12",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+   ]
+  ]
+ ],
+ "string_claim_hits": {
+  "kN": [
+   "0tsvp9nWXDGAs_50kNzQpW",
+   "3Opth5IEr6_BZK0$kNx5ws",
+   "0rRY5hEu5ElA5hdQkNjEj4",
+   "3BJorY58PFyvxsZAVWQknZ"
+  ]
+ },
+ "schema_validation_messages": 0,
+ "schema_validation_first": []
+}

@@ -1,0 +1,7 @@
+$ C:\Users\Kelvin\Desktop\auditorium\.venv\Scripts\python.exe scripts/make_drawings.py model/blender_manifest.json exports
+# exit 0  (15.6s)
+
+--- stdout ---
+DRAWINGS ["balcony_option_section.png", "floor_plan.png", "long_section.png", "model_axonometric.png", "model_cutaway.png", "structural_grid.png", "upper_foyer_plan.png"]
+
+--- stderr ---

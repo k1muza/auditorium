@@ -1,0 +1,151 @@
+{
+  "revision": "PL07-ea0efb2777",
+  "iteration": 7,
+  "source_hashes": {
+    "config/auditorium_params.json": "76608eec0ccbb0e786dc6d9d403b4b2ed6baadda6a8aee868880c1da0f27932b",
+    "scripts/auditorium_layout.py": "8975f5f25aee3043f19cb4af4f48d83341281c294ed005179ad0cd48f1f7c4dd",
+    "scripts/build_auditorium.py": "988f3187f2ccd3643a51881192af5bf525385c1c3c48b9595d34faf5fcbcb6f0",
+    "scripts/verify_blend.py": "5d62c1b9ab72485c7410b41616f4333e82d1c349eb64bd18f91800cf61ef5975",
+    "scripts/export_ifc.py": "f568e61847fb12c324e3d47562b02b27ebb3ff194a07c09b3ce7958dc320fee9",
+    "scripts/validate_ifc.py": "a77ebccf63bd47e237f6fdadf80fda3a16b804e33d7b9de73940054e6f9694ab",
+    "scripts/make_drawings.py": "82dd1dabb80004fa7da73f3b76fb6dfe548c368cfc6c031cad5a3817ea463ee5",
+    "scripts/generate_reports.py": "31c1a3f6a814f2e22253b55bff9fb5a95841f8834293a39b6242f0da0d924da8",
+    "scripts/run_pipeline.py": "44c1907d15e9911a7c03e7902f7b3c7f1b21399961dc7328e5fa5480b7e14477",
+    "tests/test_layout.py": "dff3e97ddb03e40d689b36a6ca3f39c3b1cdb67c33689f06f5ead01c7d0852a5"
+  },
+  "outputs": {
+    "exports/balcony_option_section.png": {
+      "sha256": "9e821f0be4e4ecc831b5463212687d2d477ad301b6f97fd3f8878799d3fb748a",
+      "bytes": 155478
+    },
+    "exports/floor_plan.png": {
+      "sha256": "15b39113c0fe22f8e524681d3904d9551bfd6a70084454ab32d7864c1014ae16",
+      "bytes": 729431
+    },
+    "exports/long_section.png": {
+      "sha256": "de35506a91183becaa788a5a38e69b62e51b832c55e9316c86b61ed32ecbf68e",
+      "bytes": 231004
+    },
+    "exports/model_axonometric.png": {
+      "sha256": "3c9f65470b50cf9b7644c2edf7e573b8088274799bccd7466c77e673145574d6",
+      "bytes": 1778667
+    },
+    "exports/model_cutaway.png": {
+      "sha256": "aad3f78a79858ede31dd037fe57c41aa9476c409d0b5240a73c51bab6af652be",
+      "bytes": 2174987
+    },
+    "exports/structural_grid.png": {
+      "sha256": "bb319a291117a0ad23e1627c71a9250a8758b621cfe88121ab159b326575e396",
+      "bytes": 905400
+    },
+    "exports/upper_foyer_plan.png": {
+      "sha256": "16f24f200ae7951638a3c514ea3ebaedeef638f2f0b8b845c674b880ceceb5ee",
+      "bytes": 181944
+    },
+    "model/blender_manifest.json": {
+      "sha256": "fb1bab898b5ccf1d83ba63dd3eb5f703e847833406a81e289f8e2cabecb9246e",
+      "bytes": 2878203
+    },
+    "model/church_3000_concept.blend": {
+      "sha256": "7180c4d1225f37ace8d9b8911acc348f95e5dcc0b6eb564c7758c66f0cd734c0",
+      "bytes": 1548992
+    },
+    "model/church_3000_concept.blend1": {
+      "sha256": "8fbaec2b57a68f3e0bbc70a2c226bb9ca4bce27d2cd08909c64e0c2bdb92aef9",
+      "bytes": 1544134
+    },
+    "model/church_3000_concept.ifc": {
+      "sha256": "d993e8559b96cc9e55ed5414651bf941ac0e39b187a5050f17fd8e3a67d81d04",
+      "bytes": 9273480
+    },
+    "reports/accessible_positions.csv": {
+      "sha256": "0d82d944f02dc40ba886b904d1fb26cbaed5f61ef5301fe4f245aa246495c817",
+      "bytes": 1810
+    },
+    "reports/assumptions.md": {
+      "sha256": "a220e8e5b806b3754b20ae479b5b1e74fb2a4f4136851261d94107af9094223e",
+      "bytes": 8935
+    },
+    "reports/basis_of_design.md": {
+      "sha256": "5afd11e8ed1fcf3c8b8ae84d11e37139907da7d37cd87e292fb9405b9a4deba0",
+      "bytes": 9936
+    },
+    "reports/blend_verification.json": {
+      "sha256": "660be3623d812a4b68055a2d10c6a682306ccb3ca51311f519a3033b62089fd9",
+      "bytes": 10814
+    },
+    "reports/design_review_response.md": {
+      "sha256": "56d1c3e46c1bb01ef71dada766b0ec0fa78f78f8824a153ff9d05d006d6b287b",
+      "bytes": 11943
+    },
+    "reports/element_schedule.csv": {
+      "sha256": "d2fb3b73fe978a4405a89acf52eeb8c4d271e545d3a7fcb74a8ff06b1d7fadc7",
+      "bytes": 1610
+    },
+    "reports/environment.json": {
+      "sha256": "49dfa63cccd363d2ed049c222287f049f91500269b996273a922b7e90cb09e1a",
+      "bytes": 501
+    },
+    "reports/exit_schedule.csv": {
+      "sha256": "21c467d0771e37fe6fe5a4d588748b18bf728a994a54e6c4424c13492bdadf67",
+      "bytes": 1797
+    },
+    "reports/geometry_checks.json": {
+      "sha256": "b696e0b072decc0dc817d75726cd16ac9252b8c795cdec6e17a90b20de1fe53d",
+      "bytes": 19670
+    },
+    "reports/ifc_validation.json": {
+      "sha256": "2d080c3b02e6083e88543d3dca623d2d816db388453772553ef8042d853554ae",
+      "bytes": 7589
+    },
+    "reports/model_index.md": {
+      "sha256": "2a5b13afadacdde74238d24d5fccb3b7e1920fe657a131f1e3b9f890f0fec1e7",
+      "bytes": 1934
+    },
+    "reports/open_issues.md": {
+      "sha256": "5a9c7d6a7df58f7df9cb6b09a5defa0449a89e748259ad40bbb6b6f11939c2c3",
+      "bytes": 7425
+    },
+    "reports/recheck_response_evidence/pl02_readonly_audit.json": {
+      "sha256": "2afab74f989e7e9516387385c670fdd83119b6d16e145e19dc67ece832ae8c22",
+      "bytes": 15784
+    },
+    "reports/recheck_response_evidence/pl02_readonly_audit.py": {
+      "sha256": "1f83adf90f5a0bbdaabc89394b082bd36d45b7dcb5a015505734f63e6964973b",
+      "bytes": 8713
+    },
+    "reports/regeneration_check.json": {
+      "sha256": "f1c5462617d0a397dbd9721b9863a360123391f732d2951b4a0372fbb65fccf1",
+      "bytes": 558
+    },
+    "reports/review_response_evidence/independent_blender_audit.py": {
+      "sha256": "fea304205ae6caa89ef63b7482d6439a82037723befcd166051321f0bd10dae9",
+      "bytes": 5248
+    },
+    "reports/review_response_evidence/independent_model_audit.json": {
+      "sha256": "fecf4a3751adc758f8ec4de123b1097deebe56e1ed86cf55137d9f35570f73f1",
+      "bytes": 15019
+    },
+    "reports/review_response_evidence/sightline_off_axis_samples.csv": {
+      "sha256": "74b0d23b445db5c26ba20343fe4e497d0301774458e619cf32dd5d5ceea277e5",
+      "bytes": 144563
+    },
+    "reports/row_schedule.csv": {
+      "sha256": "58e2da437351635e0cd0606768b7820e08c646388be1268fcf2b9b63ec93bc89",
+      "bytes": 3327
+    },
+    "reports/seat_count_check.txt": {
+      "sha256": "5258d0563e4ce97cc2028b5eff5f2fc3190538d01702b376a35a21ca322d1e3c",
+      "bytes": 1504
+    },
+    "reports/seating_schedule.csv": {
+      "sha256": "85962444dc263b9bb7ab564a6ecf24c7ec39d5c62286eaf71e8d5ff2d5f6f533",
+      "bytes": 484952
+    },
+    "reports/space_schedule.csv": {
+      "sha256": "5656069e8e41df2acf996d5c4330596f9920a55587a898cbe8e7366bcde97a51",
+      "bytes": 4244
+    }
+  },
+  "pipeline_seconds": 576.6
+}

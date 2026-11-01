@@ -1,0 +1,7 @@
+$ C:\Users\Kelvin\Desktop\auditorium\.venv\Scripts\python.exe scripts/generate_reports.py model/blender_manifest.json reports
+# exit 0  (2.6s)
+
+--- stdout ---
+REPORTS {"seat_rows": 3000, "seat_count_ok": true, "auto_issues": 4, "coordinate_mismatches": 0}
+
+--- stderr ---

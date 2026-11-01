@@ -1,0 +1,376 @@
+{
+ "schema": "IFC4",
+ "header_desc": "('ViewDefinition[DesignTransferView]',)",
+ "projects": 1,
+ "units": [
+  [
+   "VOLUMEUNIT",
+   null,
+   "CUBIC_METRE"
+  ],
+  [
+   "LENGTHUNIT",
+   null,
+   "METRE"
+  ],
+  [
+   "AREAUNIT",
+   null,
+   "SQUARE_METRE"
+  ]
+ ],
+ "length_scale": 1,
+ "sites": [
+  [
+   "Site (not surveyed)",
+   null,
+   null
+  ]
+ ],
+ "buildings": [
+  "Church auditorium (concept)"
+ ],
+ "storeys": [
+  [
+   "L00",
+   "Level 00 - Ground / front of hall",
+   0.0
+  ],
+  [
+   "L01",
+   "Level 01 - Mid cross aisle",
+   1.15
+  ],
+  [
+   "L02",
+   "Level 02 - Rear platform / upper foyer",
+   3.84
+  ],
+  [
+   "L03",
+   "Level 03 - Low roofs / hall structure",
+   5.75
+  ],
+  [
+   "L04",
+   "Level 04 - Foyer roof",
+   8.25
+  ],
+  [
+   "L05",
+   "Level 05 - Hall truss bearing",
+   14.0
+  ]
+ ],
+ "class_counts": {
+  "IfcBeam": 110,
+  "IfcColumn": 68,
+  "IfcDoor": 41,
+  "IfcFooting": 68,
+  "IfcMember": 529,
+  "IfcRailing": 1,
+  "IfcRamp": 5,
+  "IfcSlab": 297,
+  "IfcStair": 7,
+  "IfcWall": 38,
+  "IfcWindow": 1,
+  "IfcElementAssembly": 9,
+  "IfcOpeningElement": 42,
+  "IfcFurniture": 3175,
+  "IfcTransportElement": 1,
+  "IfcGrid": 1,
+  "IfcBuilding": 1,
+  "IfcBuildingStorey": 6,
+  "IfcSite": 1,
+  "IfcSpace": 23,
+  "IfcSpatialZone": 235
+ },
+ "uncontained_elements": 0,
+ "uncontained_examples": [],
+ "spaces_not_in_spatial_tree": [],
+ "furniture": 3175,
+ "furniture_psets": {
+  "Pset_CA3000_Concept": 3175
+ },
+ "seat_types": {
+  "None": 1,
+  "congregation": 3000,
+  "choir": 144,
+  "companion": 30
+ },
+ "counts_flag": {
+  "None": 1,
+  "True": 3000,
+  "False": 174
+ },
+ "seat_storeys": {
+  "L00": 1404,
+  "L01": 1596
+ },
+ "cong_seat_ifc": 3000,
+ "cong_seat_not_in_schedule": 0,
+ "cong_dup_names": 0,
+ "cong_seat_pos_max_dev": 2.0000000020559128e-06,
+ "types": {
+  "IfcFurnitureType": 1
+ },
+ "element_quantity_sets": 23,
+ "qto_names": {
+  "Qto_SpaceBaseQuantities": 23
+ },
+ "spaces": [
+  [
+   "SPC-SP-01",
+   "Auditorium seating hall",
+   2378.14,
+   null
+  ],
+  [
+   "SPC-SP-02",
+   "Platform / pulpit and choir",
+   475.5,
+   null
+  ],
+  [
+   "SPC-SP-03",
+   "Platform wing West (musicians / access)",
+   156.12,
+   null
+  ],
+  [
+   "SPC-SP-04",
+   "Platform wing East (accessible ramp)",
+   156.12,
+   null
+  ],
+  [
+   "SPC-SP-05",
+   "Main foyer",
+   451.99,
+   null
+  ],
+  [
+   "SPC-SP-06",
+   "Foyer below upper foyer (centre)",
+   248.0,
+   null
+  ],
+  [
+   "SPC-SP-07",
+   "Upper foyer (mezzanine)",
+   469.6,
+   null
+  ],
+  [
+   "SPC-SP-08",
+   "Sound / media booth",
+   43.65,
+   null
+  ],
+  [
+   "SPC-SP-09",
+   "Lift shaft",
+   5.76,
+   null
+  ],
+  [
+   "SPC-SP-AMB-E",
+   "Ambulatory E (circulation / egress ramps)",
+   270.06,
+   null
+  ],
+  [
+   "SPC-SP-AMB-W",
+   "Ambulatory W (circulation / egress ramps)",
+   270.06,
+   null
+  ],
+  [
+   "SPC-SP-BOH-01",
+   "Vestry / pastors' office",
+   50.23,
+   null
+  ],
+  [
+   "SPC-SP-BOH-02",
+   "Prayer room",
+   51.0,
+   null
+  ],
+  [
+   "SPC-SP-BOH-03",
+   "Green room / choir robing",
+   61.2,
+   null
+  ],
+  [
+   "SPC-SP-BOH-04",
+   "General storage",
+   40.8,
+   null
+  ],
+  [
+   "SPC-SP-BOH-05",
+   "Accessible WC (BOH)",
+   14.28,
+   null
+  ],
+  [
+   "SPC-SP-BOH-06",
+   "Staff WCs",
+   26.52,
+   null
+  ],
+  [
+   "SPC-SP-BOH-07",
+   "MEP plant room (allowance)",
+   55.33,
+   null
+  ],
+  [
+   "SPC-SP-BOH-C",
+   "BOH corridor",
+   152.62,
+   null
+  ],
+  [
+   "SPC-SP-WC-E",
+   "Toilets East (male)",
+   33.12,
+   null
+  ],
+  [
+   "SPC-SP-WC-W",
+   "Toilets West (female)",
+   33.12,
+   null
+  ],
+  [
+   "SPC-SP-WCA-E",
+   "Accessible WCs E (2 cubicles)",
+   31.68,
+   null
+  ],
+  [
+   "SPC-SP-WCA-W",
+   "Accessible WCs W (2 cubicles)",
+   31.68,
+   null
+  ]
+ ],
+ "grids": [
+  [
+   "Structural grid",
+   8,
+   12,
+   [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H"
+   ],
+   [
+    "1",
+    "10",
+    "11",
+    "12",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+   ]
+  ]
+ ],
+ "column_psets_sample": {
+  "Pset_CA3000_Concept": {
+   "DesignStatus": "Space reservation only - not designed",
+   "Grid": "A/1",
+   "NominalSection": "0.40x0.40 placeholder",
+   "Role": "foyer",
+   "Collection": "30_STR_Columns",
+   "Revision": "IT01-45b0e08c36",
+   "id": 69743
+  },
+  "Pset_ColumnCommon": {
+   "LoadBearing": true,
+   "Reference": "A/1",
+   "id": 69751
+  }
+ },
+ "column_sample_name": "STR-COL-A1",
+ "truss_assembly_parts": [
+  [
+   "STR-TRUSS-T10",
+   41
+  ],
+  [
+   "STR-TRUSS-T11",
+   41
+  ],
+  [
+   "STR-TRUSS-T3",
+   41
+  ],
+  [
+   "STR-TRUSS-T4",
+   41
+  ],
+  [
+   "STR-TRUSS-T5",
+   41
+  ],
+  [
+   "STR-TRUSS-T6",
+   41
+  ],
+  [
+   "STR-TRUSS-T7",
+   41
+  ],
+  [
+   "STR-TRUSS-T8",
+   41
+  ],
+  [
+   "STR-TRUSS-T9",
+   41
+  ]
+ ],
+ "material_assoc": 0,
+ "materials": [],
+ "classification_refs": 0,
+ "fills": 42,
+ "voids": 42,
+ "door_sample_psets": {
+  "Pset_CA3000_Concept": {
+   "IsExternal": false,
+   "OverallHeight": 2.4,
+   "OverallWidth": 1.2,
+   "Role": "Door to Vestry / pastors' office",
+   "Collection": "20_ARC_Walls",
+   "Revision": "IT01-45b0e08c36",
+   "DesignStatus": "Concept - unverified",
+   "id": 9413
+  },
+  "Pset_DoorCommon": {
+   "IsExternal": false,
+   "id": 9422
+  }
+ },
+ "door_sample": "DR-BOH-01",
+ "rep_types": {
+  "Tessellation": 1467,
+  "MappedRepresentation": 3174
+ },
+ "string_claim_hits": {
+  "kN": 284
+ }
+}

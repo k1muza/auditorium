@@ -1,0 +1,13 @@
+{
+  "name": "auditorium-proposal",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "npx --yes http-server -p 8080 -c-1 .",
+    "pdf": "node tools/print-pdf.mjs",
+    "pdf:a4": "node tools/print-pdf.mjs --a4"
+  },
+  "devDependencies": {
+    "puppeteer": "^23.0.0"
+  }
+}

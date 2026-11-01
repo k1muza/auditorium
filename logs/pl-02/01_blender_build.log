@@ -1,0 +1,13 @@
+$ C:\Program Files\Blender Foundation\Blender 5.2\blender.exe --background --factory-startup --python scripts/build_auditorium.py -- --out model/church_3000_concept.blend --manifest model/blender_manifest.json --revision PL02-18dac43917 --render exports
+# exit 0  (24.2s)
+
+--- stdout ---
+00:19.235  render           | Saved: 'C:\Users\Kelvin\Desktop\auditorium\exports\model_axonometric.png'
+00:21.563  render           | Saved: 'C:\Users\Kelvin\Desktop\auditorium\exports\model_cutaway.png'
+Info: Saved as "church_3000_concept.blend"
+BUILD_SUMMARY {"revision": "PL02-18dac43917", "blender": "5.2.3 LTS", "blend": "model\\church_3000_concept.blend", "objects_exported": 4857, "unique_meshes": 1684, "manifest_sha256": "32e375f09a54d87424a4c89a31c6f015e7ca56166ba1033c5d3f9a00121dcfeb", "congregation_seats_in_scene": 3000, "build_seconds": 5.28, "renders": {"model_axonometric.png": true, "model_cutaway.png": true}, "total_scene_objects": 4923}
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit
+
+--- stderr ---

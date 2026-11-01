@@ -1,0 +1,144 @@
+{
+  "iteration": 3,
+  "model_revision": "IT03-1e06f520e1",
+  "categories": {
+    "seating_geometry": {
+      "score": 9.3,
+      "evidence": [
+        "reviews/iteration-03-work/reviewer_blend_check.json",
+        "reviews/iteration-03-work/reviewer_ifc_check.json",
+        "reports/seating_schedule.csv",
+        "reports/row_schedule.csv",
+        "reports/geometry_checks.json",
+        "exports/long_section.png"
+      ],
+      "notes": "Re-verified on a copy of model/church_3000_concept.blend (Blender 5.2.3 headless): 3,000 mesh objects SEAT-C-Rrr-Bb-Sss, all in 40_SEAT_Congregation, none hidden, 0 duplicate locations, all 0.48 x 0.60 x 0.85 m; rows R01-R02 = 56, R03-R40 = 76. All 3,000 seating_schedule.csv ids match the .blend (max deviation 1.5e-6 m) and the IFC (3,000 IfcFurniture SeatType=congregation, CountsTowardTarget=True; max deviation 2e-6 m; 1,404 L00 / 1,596 L01). BVH mesh test of 3,174 chairs against 1,167 non-slab solids: 0 intersections. SGT-01/02 C-values 0.0603 / 0.1202 and GEO-05 uniform rear riser bands 0.150/0.120/0.135 unchanged from iteration 2. No regression. Remaining deductions unchanged: 44.5 m max eye distance relies on unmodelled screens; four different aisle riser heights between cross aisle and rear platform remain a detailing item."
+    },
+    "circulation_accessibility": {
+      "score": 7.6,
+      "evidence": [
+        "reviews/iteration-03-work/stair_head_and_egress_check.json",
+        "reviews/iteration-03-work/reviewer_blend_check.json",
+        "reviews/iteration-03-work/crop_foyer.png",
+        "exports/floor_plan.png",
+        "exports/upper_foyer_plan.png",
+        "reports/exit_schedule.csv",
+        "reports/geometry_checks.json",
+        "reports/open_issues.md",
+        "reports/assumptions.md"
+      ],
+      "notes": "Resolved and verified from model geometry: stair-head landings are now 2.70 x 2.76 m (ARC-STAIR-FOYER-1 landing x 11.55-14.25, y 5.09-7.85, etc.) and the guardrail ARC-RAIL-UPPER-FOYER-EDGE is open over each full landing (rail gaps 11.55-14.25, 14.75-17.45, 41.55-47.45 incl. column F2; 2.7 m per stair), so EGR-02 10.8 m vs 7.45 m is now genuine; paired landings flank columns C2/F2 and the flights pass south of the grid-2 columns with 0 mesh clashes and 4.27 m headroom. Nearest-exit definition is now consistent: 0 seats list travel shorter than straight-line to the listed nearest exit (was 557); nearest/balanced/route loads in seating_schedule.csv reconcile with exit_schedule.csv after the 60 wheelchair-position occupants and 200 platform/choir occupants. NEW REGRESSION: moving the toilet entrances to the side passages left the foyer accessible WCs with no entrance - SPC-SP-WCA-W (x 9.6-14.0) and SPC-SP-WCA-E (x 45.0-49.4) are enclosed by solid partitions ARC-WALL-WC-*-ACC, -S, -E/-W (8-vertex boxes, no openings) and the hall wall; the only doors DR-WC-W-MAIN (x=5.0) and DR-WC-E-MAIN (x=54.0) open into the female/male toilets; floor_plan.png shows no door to 'Acc. WC W/E' while A-17 claims 4 foyer accessible WCs. Persisting: travel to nearest hall exit 39.7 m (330 occupants > 30 m flag), queue-balanced 50.9 m, external 61.2 m (10 > 60 m), and the shortest-route-to-outside sensitivity loads the cross-aisle exits with 1,032/1,022 persons (5.16/5.11 m vs 3.6 m) - all logged with a restriction on use (OI-05, OI-17) but no layout mitigation modelled in three iterations. Foyer stair flights pass 10 mm from columns B2/D2/E2/G2 and have no guard/handrail on their open sides (rising to +3.985 m). Not a critical blocker because use restrictions are explicit, but the accessible WC regression contradicts a brief requirement."
+    },
+    "structural_concept": {
+      "score": 8.9,
+      "evidence": [
+        "exports/structural_grid.png",
+        "reviews/iteration-03-work/reviewer_blend_check.json",
+        "reviews/iteration-03-work/reviewer_ifc_check.json",
+        "reports/assumptions.md",
+        "reports/basis_of_design.md",
+        "config/auditorium_params.json"
+      ],
+      "notes": "Verified: grid A-H x 1-12 with line 6 at y=38.5; 68 columns on footings; 9 trusses bearing +14.00; A-11 and basis_of_design.md section 5 now give bays 8/8/6.5/9.5/8/8/8/8 m consistent with the grid. New horizontal struts STR-STRUT-GABLE-3-DE (z 7.26-7.41) and STR-STRUT-GABLE-11-DE (z 3.775-3.925) sit at the brace feet (STR-BRACE-GABLE-3-DEa base 7.422; grid-11 brace base raised to 3.948) and span between posts D/E, giving a described load path (A-13). Strut and brace plane are not physically connected to the posts: strut x 24.71-34.29, y 16.21-16.36 vs STR-COL-D3 x 24.3-24.7, y 15.8-16.2 (10 mm gap in both x and y; same at grid 11). Wall bracing still in the wall cavity (ray test 4 faces at y=20 vs 2 at y=52); 0 new member/wall mesh clashes. All members 'Concept - unverified'; no capacities, loads or code claims. Remaining deductions: portal moment-knee bays still not identified; no gable elevation showing the brace/strut load path; 9.5 m bay purlin span not flagged."
+    },
+    "bim_semantics": {
+      "score": 9.1,
+      "evidence": [
+        "model/church_3000_concept.ifc",
+        "reviews/iteration-03-work/reviewer_ifc_check.json",
+        "reports/ifc_validation.json",
+        "reports/element_schedule.csv"
+      ],
+      "notes": "Independent ifcopenshell 0.8.5 check of a copy: IFC4, 0 schema validation messages, SI metre/m2/m3, 1 project/site/building, IfcGrid A-H/1-12, 0 uncontained elements, 4,614 products tessellated. Storeys renamed as neutral height datums ('Level 01 - datum +1.150 ...'), resolving the iteration-2 misleading storey names; geometry-derived storey band check finds only WN-BOOTH-VIEW and SPC-SP-08 above their storey, both with a declared StoreyOverride. Quantities now on all 41 doors (Qto_DoorBaseQuantities widths equal OverallWidth), the window, railing, 4 coverings, stairs/ramps/lift (project-named CA3000_BaseQuantities) and chair type quantities. Closure flashings exported as IfcCovering USERDEFINED 'Closure flashing'. Deductions: stair/ramp quantities are bounding-box derived and contradict the elements' own properties (ARC-STAIR-FOYER-1 Width 2.76 vs Width 2.7; ARC-RAMP-AMB-W-S Rise 1.4 vs Rise 1.15); coverings not related to their walls (0 IfcRelCoversBldgElements) and ENV-FLASHING-W/E (x 4.0-4.65 / 54.35-55.0, z 13.95-14.0) embedded 50 mm into the hall wall tops; accessible WC spaces have no door in the model; 9 IfcElementAssembly trusses without material."
+    },
+    "parametric_reproduction": {
+      "score": 9.5,
+      "evidence": [
+        "scripts/build_auditorium.py",
+        "scripts/auditorium_layout.py",
+        "config/auditorium_params.json",
+        "reports/regeneration_check.json",
+        "reports/model_revision.json",
+        "reviews/iteration-03-work/regen/out/regen_build.log",
+        "reviews/iteration-03-work/regen/out/regen_manifest.json",
+        "reviews/iteration-03-work/regen/unit_tests.log"
+      ],
+      "notes": "Reviewer rebuilt the model from copies of scripts/, config/ and tests/ in headless Blender 5.2.3: 4,614 objects, 3,000 seats, manifest SHA-256 f2a52670... byte-identical to model/blender_manifest.json and reports/regeneration_check.json. 28/28 unit tests pass from the copy. All 10 source and 26 output SHA-256 values in reports/model_revision.json re-hashed and match; archive/iteration-03 is byte-identical to current outputs; archives 01/02 preserved; all 8 logs in logs/iteration-03 show exit 0. Minor: IFC still exported from the manifest rather than read from the .blend (consistency confirmed via seat ids/positions and element counts)."
+    },
+    "documentation": {
+      "score": 8.7,
+      "evidence": [
+        "exports/floor_plan.png",
+        "exports/upper_foyer_plan.png",
+        "exports/structural_grid.png",
+        "exports/long_section.png",
+        "reports/basis_of_design.md",
+        "reports/assumptions.md",
+        "reports/open_issues.md",
+        "reports/space_schedule.csv",
+        "reports/exit_schedule.csv"
+      ],
+      "notes": "Resolved from iteration 2: OI-06 rewritten (one riser per band, changes at band boundaries) consistent with A-22/GEO-05; A-11 and basis_of_design.md bays generated from the grid; 0.155 m riser consistent; floor_plan.png legend moved clear of grid bubbles; exit_schedule.csv has nearest, balanced and route-sensitivity columns with consistent definitions. Drawings legible, gridded, dimensioned, revisioned and labelled CONCEPT - UNVERIFIED. Deductions: floor_plan.png and A-17 present 4 foyer accessible WCs that have no door in the model; upper_foyer_plan.png still does not dimension the stair-head openings and its seating overprints the top grid bubbles C-F; EGR-02, basis_of_design.md and the upper-foyer plan note use the queue-balanced rear load (993) although nearest-exit (shortest in-hall travel) is declared the single definition, under which the four rear exits carry 1,254 persons (9.41 m stair demand, still < 10.8 m); open_issues.md note still says EGR-01N shows which doors would be overloaded although none are under the new definition (the overload appears only in EGR-01R)."
+    },
+    "validation_traceability": {
+      "score": 8.9,
+      "evidence": [
+        "logs/iteration-03/00_unit_tests.log",
+        "logs/iteration-03/05_validate_ifc.log",
+        "tests/test_layout.py",
+        "reports/geometry_checks.json",
+        "reports/ifc_validation.json",
+        "reports/model_revision.json",
+        "reviews/iteration-03-work/stair_head_and_egress_check.json",
+        "reviews/iteration-03-work/regen/unit_tests.log"
+      ],
+      "notes": "Iteration-2 false positives resolved: EGR-02 now reflects measured stair-head openings, and tests/test_layout.py test_stair_head_openings_from_rail_geometry measures rail gaps over each top landing (genuine, independent of stair metadata); test_travel_not_shorter_than_straight_line covers the nearest-exit metric (reviewer's independent check: 0 violations). Storey overrides tested. No invented standards, calculations or compliance/approval claims found ('kN' hits in the IFC are GlobalId substrings). Deductions: no test that every IfcSpace/room is reachable through a door, which let the accessible-WC regression pass all 28 tests and all IFC checks; no stair-to-column clearance test (10 mm); no check that exported quantities agree with element properties (stair width, ramp rise); EGR-02 uses a different load basis than the declared nearest-exit definition; brace/strut-to-column connectivity not checked (10 mm gaps)."
+    }
+  },
+  "critical_blockers": [],
+  "findings": [
+    {
+      "severity": "MAJOR",
+      "issue": "Regression: the four foyer accessible WCs have no entrance. Moving the toilet doors to the side-passage walls put DR-WC-W-MAIN/DR-WC-E-MAIN into the female/male toilet rooms; the accessible WC rooms are enclosed by solid partitions and the hall wall. The brief requires accessible toilets; A-17 and floor_plan.png present them as provided.",
+      "evidence": "reviews/iteration-03-work/model/manifest_copy.json and reviews/iteration-03-work/reviewer_blend_check.json: SPC-SP-WCA-W x 9.6-14.0 y 8.4-15.85, SPC-SP-WCA-E x 45.0-49.4; ARC-WALL-WC-W-ACC / -S / -E (and E equivalents) are 8-vertex solid boxes; DR-WC-W-MAIN x 4.975-5.025 y 11.525-12.725 (inside SPC-SP-WC-W); archive/iteration-02/model/blender_manifest.json had DR-WC-W-MAIN at x 11.8-13.0 on the south wall; reviews/iteration-03-work/crop_foyer.png; reports/assumptions.md A-17",
+      "fix": "Give each accessible WC its own door from public circulation (e.g. through ARC-WALL-WC-W-E / ARC-WALL-WC-E-W into the open under-mezzanine zones x 14-25 / 34-45), add a door-reachability check (every IfcSpace except shafts has a door to circulation) and a unit test."
+    },
+    {
+      "severity": "MAJOR",
+      "issue": "Single-level premise still produces in-hall travel beyond the placeholder flags (nearest 39.7 m, 330 occupants; queue-balanced 50.9 m; 61.2 m to an external door), and the shortest-route-to-outside sensitivity overloads the cross-aisle exits (1,032 / 1,022 persons vs 3.6 m). Logged with a restriction on use, but no mitigation has been modelled in three iterations.",
+      "evidence": "reports/geometry_checks.json EGR-03N, EGR-03, EGR-04, EGR-01R; reports/exit_schedule.csv; reviews/iteration-03-work/stair_head_and_egress_check.json (nearest_travel_over30 330, external_travel_over60 10)",
+      "fix": "Model at least one mitigation in the layout engine (vomitories under the rear rake, additional exits at grid 5/7 or through the platform wings, or a narrower/deeper plan) and report the change in travel and loads; or widen the cross-aisle exits/landings to the route-sensitivity demand."
+    },
+    {
+      "severity": "MINOR",
+      "issue": "Foyer stair flights are 10 mm from the grid-2 columns and have no guarding/handrail on their open sides, although they rise to +3.985 m beside the open foyer.",
+      "evidence": "reviews/iteration-03-work/stair_head_and_egress_check.json stairs_iter3 (flights y 5.09-7.79 vs STR-COL-B2/D2/E2/G2 y 7.8-8.2); reviews/iteration-03-work/reviewer_blend_check.json (only railing is ARC-RAIL-UPPER-FOYER-EDGE)",
+      "fix": "Shift flights south to leave a column finish/encasement allowance (>= 100-150 mm), add stair guard/handrail elements (IfcRailing), add a stair-column clearance check, and log stair handrails in open issues."
+    },
+    {
+      "severity": "MINOR",
+      "issue": "Gable struts and brace planes do not physically connect to gable posts D/E (10 mm gap in x and y), so the claimed load path to the pad footings is not represented geometrically; portal knee bays still not identified.",
+      "evidence": "reviews/iteration-03-work/reviewer_blend_check.json named: STR-STRUT-GABLE-3-DE x 24.71-34.29 y 16.21-16.36 vs STR-COL-D3 x 24.3-24.7 y 15.8-16.2; STR-STRUT-GABLE-11-DE y 79.64-79.79 vs STR-COL-D11 y 79.8-80.2; reports/assumptions.md A-13",
+      "fix": "Place the gable bracing/strut on the column centreline plane (or add connection stubs), add a connectivity check that every brace/strut end touches a column, beam or footing, add a gable elevation and identify portal knee bays."
+    },
+    {
+      "severity": "MINOR",
+      "issue": "Exported stair/ramp quantities are bounding-box derived and contradict element properties; closure flashings are not related to the walls they close and are partly embedded in them.",
+      "evidence": "reviews/iteration-03-work/reviewer_ifc_check.json: ARC-STAIR-FOYER-1 CA3000_BaseQuantities Width 2.76 vs Pset Width 2.7; ARC-RAMP-AMB-W-S Rise 1.4 vs Pset Rise 1.15; covering_rel 0 (IfcRelCoversBldgElements); ENV-FLASHING-W x 4.0-4.65 z 13.95-14.0 vs ENV-WALL-HALL-W x 4.2-4.8 top 14.0",
+      "fix": "Compute stair/ramp quantities from design parameters (clear width, rise above finished floor), relate each IfcCovering to its wall via IfcRelCoversBldgElements, seat flashings on the wall top, and add a validator check comparing quantities with properties."
+    },
+    {
+      "severity": "MINOR",
+      "issue": "Egress load basis is inconsistent with the declared single nearest-exit definition: EGR-02 and the plan/basis text use the queue-balanced rear load 993 while nearest-exit loads at the rear doors total 1,254; the open_issues note still says EGR-01N shows overloaded doors although none are overloaded under the new definition.",
+      "evidence": "reports/geometry_checks.json EGR-02 criterion 'rear load 993'; reports/exit_schedule.csv load_nearest_exit A1/A2/A4/A5 = 222/412/398/222; exports/upper_foyer_plan.png title block; reports/open_issues.md 'Notes on the egress warnings'",
+      "fix": "Report EGR-02 against the larger of nearest and balanced rear loads (1,254 x 7.5 mm = 9.41 m) and rewrite the open_issues note to point to EGR-01R for the cross-aisle overload."
+    },
+    {
+      "severity": "MINOR",
+      "issue": "Drawing legibility: upper_foyer_plan.png does not dimension the 2.7 m stair-head openings and its seating overprints the top grid bubbles C-F.",
+      "evidence": "exports/upper_foyer_plan.png (top edge and stair heads)",
+      "fix": "Clip the seating to the plan frame below the grid bubbles and add opening dimensions at each stair head."
+    }
+  ],
+  "reviewer_summary": "Iteration 3 review of revision IT03-1e06f520e1 (final permitted iteration). This evaluates concept engineering-coordination model quality only; it does not certify safety, code compliance, fire/egress approval or construction readiness. Verified on copies: exactly 3,000 congregation seats in .blend, IFC and CSV with matching ids/positions; 0 chair mesh clashes; manifest regenerated byte-identically from copied sources; 28/28 unit tests pass; IFC4 0 schema messages; all hashes in reports/model_revision.json match and archive/iteration-03 equals current outputs. Confirmed changes vs iteration 2: stair-head landings and guard openings now 2.7 m (EGR-02 genuine, measured by a real test); one consistent nearest-exit definition (0 travel/straight-line violations, was 557) with route-to-outside kept as a WARN sensitivity; gable struts at brace feet and grid-11 brace foot raised; closure flashings close the gable/wall slot; storeys renamed as neutral datums with tested overrides; quantities on doors/windows/railing/coverings/stairs/ramps/chair type; A-11, OI-06 and riser text corrected; floor-plan legend moved. Regression found: moving the toilet entrances left the four foyer accessible WCs with no door (MAJOR, brief requirement), undetected by any test. Persisting: travel distances beyond placeholder flags and cross-aisle route overload with no modelled mitigation (restricted use, logged); minor stair-column clearance, strut-to-post gaps, bounding-box quantities, unrelated coverings, load-basis wording and drawing items. No fabricated calculations or compliance/approval claims; no critical blockers. Weighted score 8.79 (iteration 1: 8.405; iteration 2: 8.585), below the 9.0 threshold. Status: NOT_ACCEPTED_FOR_THIS_MILESTONE."
+}

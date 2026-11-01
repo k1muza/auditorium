@@ -1,0 +1,46 @@
+$ C:\Users\Kelvin\Desktop\auditorium\.venv\Scripts\python.exe -m unittest discover -s tests -v
+# exit 0  (23.0s)
+
+--- stdout ---
+
+--- stderr ---
+test_choir_chairs_on_their_tier (test_layout.Choir) ... ok
+test_side_choirs_face_inward_and_rear_clear (test_layout.Choir) ... ok
+test_repeatable (test_layout.Determinism) ... ok
+test_all_occupants_assigned (test_layout.Egress) ... ok
+test_balanced_widths_meet_placeholder (test_layout.Egress) ... ok
+test_connectivity_check_catches_a_gap (test_layout.Egress) ... ok
+test_door_sets_reduce_effective_width (test_layout.Egress) ... ok
+test_every_room_has_a_door_and_views_are_usable (test_layout.Egress) ... ok
+test_no_wheelchair_places_on_lift_only_level (test_layout.Egress) ... ok
+test_refuges_cover_upper_level_wheelchair_spaces (test_layout.Egress) ... ok
+test_stair_heads_open_full_width_and_guarded_at_sides (test_layout.Egress) ... ok
+test_stair_risers (test_layout.Egress) ... ok
+test_total_capacity_independent_of_assignment (test_layout.Egress) ... ok
+test_travel_not_shorter_than_straight_line (test_layout.Egress) ... ok
+test_width_check_can_fail (test_layout.Egress) ... ok
+test_doors_clear_of_columns (test_layout.Geometry) ... ok
+test_mesh_faces_valid (test_layout.Geometry) ... ok
+test_no_seat_in_aisle (test_layout.Geometry) ... ok
+test_no_seat_overlap (test_layout.Geometry) ... ok
+test_rows_monotonic_and_sightlines (test_layout.Geometry) ... ok
+test_seats_inside_hall (test_layout.Geometry) ... ok
+test_unique_element_names (test_layout.Geometry) ... ok
+test_wheelchair_positions_level_and_sighted (test_layout.Geometry) ... ok
+test_exactly_target (test_layout.SeatCount) ... ok
+test_excluded_seats_not_counted (test_layout.SeatCount) ... ok
+test_parametric_change_changes_count (test_layout.SeatCount) ... ok
+test_target_mismatch_raises (test_layout.SeatCount) ... ok
+test_trim_removes_only_the_worst_offaxis_seats (test_layout.SeatCount) ... ok
+test_unique_ids (test_layout.SeatCount) ... ok
+test_no_empty_storey_and_no_space_overlap (test_layout.Semantics) ... ok
+test_no_shear_walls_claimed (test_layout.Semantics) ... ok
+test_rear_risers_uniform_in_bands (test_layout.Semantics) ... ok
+test_roof_structure_on_hall_roof_level (test_layout.Semantics) ... ok
+test_storey_overrides_applied (test_layout.Semantics) ... ok
+test_storey_rule (test_layout.Semantics) ... ok
+
+----------------------------------------------------------------------
+Ran 35 tests in 19.911s
+
+OK

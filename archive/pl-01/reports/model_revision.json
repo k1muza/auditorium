@@ -1,0 +1,127 @@
+{
+  "revision": "PL01-7cafe48b2e",
+  "iteration": 1,
+  "source_hashes": {
+    "config/auditorium_params.json": "ade356aef083e5ea5919962eb9ebb25877b4de4aa075dee839a05f48f4bea9d5",
+    "scripts/auditorium_layout.py": "b8eddb4221e459aa56d1cb73ab3c9aaf6c872cde960603386f80be3abb6f1a9f",
+    "scripts/build_auditorium.py": "c4e7f49ea7d9a78aeb09f0d49db63247ddf6fcb8aa7e87101d982f8c5cbd9bb4",
+    "scripts/verify_blend.py": "11e2cab3f0af39791b4ae05f34be956b82e0c5a80cf24397d55085832aa34da5",
+    "scripts/export_ifc.py": "23c0d21dea68aca7cb5013e9e62bcf9e9a07fbfdf4a1de7ecf1614afce1f0aaf",
+    "scripts/validate_ifc.py": "a77ebccf63bd47e237f6fdadf80fda3a16b804e33d7b9de73940054e6f9694ab",
+    "scripts/make_drawings.py": "bb49bf8ae89f09d31f5785b018745b0fbc0e7a0a01724f1324d1de9a2d002861",
+    "scripts/generate_reports.py": "5331705c932c5c2667b0bcd69855bcc7b08671ad280a1bd8e0dd0aa611d69765",
+    "scripts/run_pipeline.py": "50923387bb7e314e7b5a8eab787bd2ebc2b669fc5c13d0cc3dabed297e721e5f",
+    "tests/test_layout.py": "94f3feeea4f4a4cd4860223f0be51ad30acb0751db16b858b212ffc3b2cc7426"
+  },
+  "outputs": {
+    "exports/balcony_option_section.png": {
+      "sha256": "04f60ef5e899bd43ce63ac30a428dcaf521254080d6de335f56cb4a782718fa9",
+      "bytes": 154109
+    },
+    "exports/floor_plan.png": {
+      "sha256": "8f2a1571f6750ef137675114508fa2f03b3087f5d8dd8476c0903f4b7ddd701a",
+      "bytes": 622924
+    },
+    "exports/long_section.png": {
+      "sha256": "12733af29f6ee02bcfcf097fbff809b3cf5bdf0ef8c19e590650622702e82453",
+      "bytes": 232562
+    },
+    "exports/model_axonometric.png": {
+      "sha256": "b76450a942abaeadc148bff819c165fbf1c9664ea73db0ca3ab0aafda05eec9e",
+      "bytes": 1728232
+    },
+    "exports/model_cutaway.png": {
+      "sha256": "a7f70186d7bacc921b265ae2ead154f6a3b7bab95e732a4958e309d8a2f8778a",
+      "bytes": 2107096
+    },
+    "exports/structural_grid.png": {
+      "sha256": "a144e9d23526f780dd22a9f4ecce60c65f4472992e904fd2910b2a77303fef6a",
+      "bytes": 900714
+    },
+    "exports/upper_foyer_plan.png": {
+      "sha256": "76d7b05edb9487a8696b8ecaf444ffaaea194bf65bbd9d1ed0c69ce1e3075736",
+      "bytes": 185658
+    },
+    "model/blender_manifest.json": {
+      "sha256": "a21ece8f8131b7e166ed23341ce7d3881dcf6c8a2e1eee8cac5a02f8e8193936",
+      "bytes": 2570975
+    },
+    "model/church_3000_concept.blend": {
+      "sha256": "60993e41f798f68ae12a065a47039515ae73871cb2e4150707df14541971ed80",
+      "bytes": 1398985
+    },
+    "model/church_3000_concept.blend1": {
+      "sha256": "ea94cce77cc28e9cc56e24bbd1e26e4014dba331d8c95eef45d5ac15af9c486a",
+      "bytes": 1397244
+    },
+    "model/church_3000_concept.ifc": {
+      "sha256": "3bd8a6ae89c9c2260e747a3e8494c9f294308c661dfeaba20b1b636ead9dfa96",
+      "bytes": 8364040
+    },
+    "reports/accessible_positions.csv": {
+      "sha256": "70198d9586d268ad410ef37661ccfedc0c5d45557c87e0198a6c2dc56bd2d642",
+      "bytes": 1793
+    },
+    "reports/assumptions.md": {
+      "sha256": "f9d0eebcffb9a8de145d26d7860e63f04114c70c6c57ba76bfcc9f1a339822d9",
+      "bytes": 7370
+    },
+    "reports/basis_of_design.md": {
+      "sha256": "4dfc4de073408a519499eeb38c922d174fb472141dfe0ad495c3c2bd1d66b806",
+      "bytes": 9159
+    },
+    "reports/blend_verification.json": {
+      "sha256": "af45bd65f8e7a9ec69e7b72aad5da534c813f02b281c86a27deaafa5845d1f27",
+      "bytes": 9490
+    },
+    "reports/element_schedule.csv": {
+      "sha256": "952123840598285ea1779df09d840091ce83d41d3b570d0f8dc8022c2acbea3b",
+      "bytes": 1298
+    },
+    "reports/environment.json": {
+      "sha256": "325a6a11e03f32f27b4d84e38c7622c183742e1fd10051d2f0d383af8a655745",
+      "bytes": 501
+    },
+    "reports/exit_schedule.csv": {
+      "sha256": "05f7c3402c40c22961d5aa17f72b9365067d912559d834aa7aa9aab631544c2a",
+      "bytes": 1794
+    },
+    "reports/geometry_checks.json": {
+      "sha256": "cb9f1c2632cf473a3cac496e2f8d19e259d5d299aa65eeadb1e2876c3bf681ec",
+      "bytes": 16485
+    },
+    "reports/ifc_validation.json": {
+      "sha256": "34238aa388cab2477d3d543f629c75728e85fdddbeae939c0bfef249bcc94e63",
+      "bytes": 7294
+    },
+    "reports/model_index.md": {
+      "sha256": "75769f085e4c7dfc726b6bd94030a1ca4f27e472c5bd82544572f6f3666c7a9d",
+      "bytes": 1424
+    },
+    "reports/open_issues.md": {
+      "sha256": "4573e1fd707eb93cc21f952a3d8463a238f7f33c4fb5e5e86d93c5b9785e36b3",
+      "bytes": 6395
+    },
+    "reports/regeneration_check.json": {
+      "sha256": "3ecd31ce8c41477648303132a93367b4129acd18f97b20e6fb5e99856f908801",
+      "bytes": 558
+    },
+    "reports/row_schedule.csv": {
+      "sha256": "ec65f045fbc7c1a5787980757cbd8c4192c53530c66baa8a91dcde96bb6c247c",
+      "bytes": 3279
+    },
+    "reports/seat_count_check.txt": {
+      "sha256": "24acedc073879b61b3ec560c4bbb0c1960d865f25ad5f10b43a661152c4e7ec4",
+      "bytes": 1487
+    },
+    "reports/seating_schedule.csv": {
+      "sha256": "60b71fda89f669df6bca7067c24fecd81fce8a1378ad2d357b9ee9f610904ff8",
+      "bytes": 486380
+    },
+    "reports/space_schedule.csv": {
+      "sha256": "7ac9798b1b034185df70b9d0449ae52ded82ddfd6a3f2185c0a044b1c3107e2f",
+      "bytes": 3557
+    }
+  },
+  "pipeline_seconds": 328.1
+}

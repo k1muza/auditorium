@@ -1,0 +1,414 @@
+{
+  "blend_file": "C:\\Users\\Kelvin\\Desktop\\auditorium\\reviews\\iteration-01-work\\mutated.blend",
+  "blender_version": "5.2.3 LTS",
+  "revision": "IT01-45b0e08c36",
+  "checks": [
+    {
+      "id": "BLD-UNITS",
+      "description": "Scene units metric, scale 1.0, metres",
+      "result": "PASS",
+      "value": [
+        "METRIC",
+        1.0,
+        "METERS"
+      ],
+      "criterion": "METRIC / 1.0 / METERS"
+    },
+    {
+      "id": "BLD-SEATS",
+      "description": "Congregation chair objects in 40_SEAT_Congregation",
+      "result": "FAIL",
+      "value": 2999,
+      "criterion": "== 3000"
+    },
+    {
+      "id": "BLD-SEATS-PROP",
+      "description": "Objects flagged CountsTowardTarget=True",
+      "result": "FAIL",
+      "value": 2999,
+      "criterion": "== 3000"
+    },
+    {
+      "id": "BLD-NAMES-SEAT",
+      "description": "Congregation chair names match SEAT-C-Rrr-Bb-Sss",
+      "result": "PASS",
+      "value": [],
+      "criterion": "0 mismatches"
+    },
+    {
+      "id": "BLD-NAMES-DUP",
+      "description": "No Blender duplicate-suffix names (.001)",
+      "result": "PASS",
+      "value": [],
+      "criterion": "0"
+    },
+    {
+      "id": "BLD-NAMES-PREFIX",
+      "description": "All model objects use discipline prefixes",
+      "result": "PASS",
+      "value": [],
+      "criterion": "0"
+    },
+    {
+      "id": "BLD-SEMANTICS",
+      "description": "Every model object carries ifc_class and storey properties",
+      "result": "PASS",
+      "value": [],
+      "criterion": "0"
+    },
+    {
+      "id": "BLD-FLOOR-SUPPORT",
+      "description": "Every chair has floor under all 9 sample points",
+      "result": "FAIL",
+      "value": [
+        "SEAT-C-R20-B1-S01"
+      ],
+      "criterion": "0 unsupported"
+    },
+    {
+      "id": "BLD-FLOOR-CONTACT",
+      "description": "Chairs not buried (>5 mm) and not floating (>100 mm at highest floor point)",
+      "result": "PASS",
+      "value": {
+        "failing": 0,
+        "max_burial_m": 0.0,
+        "max_min_gap_m": 0.0066
+      },
+      "criterion": "burial <= 0.005 m, min gap <= 0.10 m"
+    },
+    {
+      "id": "BLD-CLASH",
+      "description": "Hard clashes in the coordination clash matrix (AABB / member sampling, 5 mm tolerance)",
+      "result": "FAIL",
+      "value": {
+        "clashes": 3,
+        "candidate_pairs_tested": 110193
+      },
+      "criterion": "0 clashes"
+    },
+    {
+      "id": "BLD-CLASH-CONTROL",
+      "description": "Clash detector positive control (column B5 embedded in hall wall W detected) and negative control (rail stops short of column A2)",
+      "result": "PASS",
+      "value": {
+        "positive_detected": true,
+        "negative_detected": false
+      },
+      "criterion": "positive True, negative False"
+    },
+    {
+      "id": "BLD-RAMP-CLEAR",
+      "description": "Ambulatory ramp clear width between column faces",
+      "result": "PASS",
+      "value": 4.0,
+      "criterion": ">= 3.0 m concept (ramps penetrated by perimeter columns, listed in column_penetrations_of_ramps)"
+    },
+    {
+      "id": "BLD-SIGHT",
+      "description": "Min C-value (row-to-row, from chair object positions)",
+      "result": "PASS",
+      "value": 0.0601,
+      "criterion": ">= 0.06 m (wheelchair positions checked in layout report)"
+    },
+    {
+      "id": "BLD-ROW-LEVEL",
+      "description": "All chairs in a row share one base elevation",
+      "result": "PASS",
+      "value": [],
+      "criterion": "0 rows"
+    },
+    {
+      "id": "BLD-AISLE",
+      "description": "Min interior aisle clear between chair edges (per row)",
+      "result": "FAIL",
+      "value": 0.52,
+      "criterion": ">= 1.5 m"
+    },
+    {
+      "id": "BLD-WALL-AISLE",
+      "description": "Min wall-aisle clear chair edge to column face",
+      "result": "FAIL",
+      "value": -0.34,
+      "criterion": ">= 1.5 m"
+    },
+    {
+      "id": "BLD-EXTENTS",
+      "description": "Model extents plausible for 59 x 88 m building (metres, not mm)",
+      "result": "PASS",
+      "value": [
+        -3.45,
+        -0.9,
+        -1.5,
+        62.45,
+        88.9,
+        18.4
+      ],
+      "criterion": "~59-70 x ~88-92 x <25 m"
+    }
+  ],
+  "counts": {
+    "by_collection": {
+      "10_ENV_Envelope": 50,
+      "20_ARC_Circulation": 14,
+      "20_ARC_Floors": 291,
+      "20_ARC_Furniture": 1,
+      "20_ARC_Walls": 36,
+      "30_STR_Beams": 110,
+      "30_STR_Bracing": 72,
+      "30_STR_Columns": 68,
+      "30_STR_Foundations": 68,
+      "30_STR_Roof_Trusses": 457,
+      "40_SEAT_Accessible": 30,
+      "40_SEAT_Choir": 144,
+      "40_SEAT_Companion": 30,
+      "40_SEAT_Congregation": 2999,
+      "50_SRV_Allowances": 5,
+      "60_ZONE_Aisles": 200,
+      "60_ZONE_Spaces": 23
+    },
+    "by_ifc_class": {
+      "IfcBeam:BEAM": 110,
+      "IfcColumn:COLUMN": 68,
+      "IfcDoor:DOOR": 41,
+      "IfcFooting:PAD_FOOTING": 68,
+      "IfcFurniture:CHAIR": 3173,
+      "IfcFurniture:USERDEFINED": 1,
+      "IfcMember:BRACE": 72,
+      "IfcMember:CHORD": 180,
+      "IfcMember:MEMBER": 189,
+      "IfcMember:PURLIN": 88,
+      "IfcRailing:GUARDRAIL": 1,
+      "IfcRamp:STRAIGHT_RUN_RAMP": 5,
+      "IfcSlab:FLOOR": 289,
+      "IfcSlab:LANDING": 2,
+      "IfcSlab:ROOF": 6,
+      "IfcSpace:INTERNAL": 23,
+      "IfcSpatialZone:USERDEFINED": 235,
+      "IfcStair:STRAIGHT_RUN_STAIR": 3,
+      "IfcStair:TWO_STRAIGHT_RUN_STAIR": 4,
+      "IfcTransportElement:ELEVATOR": 1,
+      "IfcWall:PARTITIONING": 20,
+      "IfcWall:SHEAR": 4,
+      "IfcWall:SOLIDWALL": 14,
+      "IfcWindow:WINDOW": 1
+    },
+    "seats_per_row": {
+      "1": 56,
+      "2": 56,
+      "3": 76,
+      "4": 76,
+      "5": 76,
+      "6": 76,
+      "7": 76,
+      "8": 76,
+      "9": 76,
+      "10": 75,
+      "11": 76,
+      "12": 76,
+      "13": 76,
+      "14": 76,
+      "15": 76,
+      "16": 76,
+      "17": 76,
+      "18": 76,
+      "19": 76,
+      "20": 76,
+      "21": 76,
+      "22": 76,
+      "23": 76,
+      "24": 76,
+      "25": 76,
+      "26": 76,
+      "27": 76,
+      "28": 76,
+      "29": 76,
+      "30": 76,
+      "31": 76,
+      "32": 76,
+      "33": 76,
+      "34": 76,
+      "35": 76,
+      "36": 76,
+      "37": 76,
+      "38": 76,
+      "39": 76,
+      "40": 76
+    }
+  },
+  "clash_matrix": [
+    "chair-aisle",
+    "chair-beam",
+    "chair-chair",
+    "chair-column",
+    "chair-door",
+    "chair-lift",
+    "chair-member",
+    "chair-rail",
+    "chair-ramp",
+    "chair-stair_ramp",
+    "chair-wall",
+    "chair-wcspace",
+    "door-beam",
+    "door-column",
+    "door-member",
+    "door-rail",
+    "door-ramp",
+    "door-stair_ramp",
+    "rail-column",
+    "ramp-beam",
+    "ramp-lift",
+    "ramp-member",
+    "service-beam",
+    "service-column",
+    "service-member",
+    "stair_ramp-beam",
+    "stair_ramp-column",
+    "stair_ramp-lift",
+    "stair_ramp-member",
+    "wcspace-column",
+    "wcspace-rail",
+    "wcspace-ramp",
+    "wcspace-stair_ramp",
+    "wcspace-wall"
+  ],
+  "clashes": [
+    {
+      "a": "SEAT-C-R11-B3-S05",
+      "a_group": "chair",
+      "b": "SEAT-C-R11-B3-S06",
+      "b_group": "chair"
+    },
+    {
+      "a": "SEAT-C-R20-B1-S01",
+      "a_group": "chair",
+      "b": "ENV-WALL-HALL-W",
+      "b_group": "wall"
+    },
+    {
+      "a": "SEAT-C-R20-B1-S01",
+      "a_group": "chair",
+      "b": "STR-COL-B6",
+      "b_group": "column"
+    }
+  ],
+  "column_penetrations_of_ramps": [
+    {
+      "element": "ARC-RAMP-AMB-W-S",
+      "column": "STR-COL-A4"
+    },
+    {
+      "element": "ARC-RAMP-AMB-W-S",
+      "column": "STR-COL-A5"
+    },
+    {
+      "element": "ARC-RAMP-AMB-W-S",
+      "column": "STR-COL-B4"
+    },
+    {
+      "element": "ARC-RAMP-AMB-W-S",
+      "column": "STR-COL-B5"
+    },
+    {
+      "element": "ARC-RAMP-AMB-W-N",
+      "column": "STR-COL-A7"
+    },
+    {
+      "element": "ARC-RAMP-AMB-W-N",
+      "column": "STR-COL-A8"
+    },
+    {
+      "element": "ARC-RAMP-AMB-W-N",
+      "column": "STR-COL-B7"
+    },
+    {
+      "element": "ARC-RAMP-AMB-W-N",
+      "column": "STR-COL-B8"
+    },
+    {
+      "element": "ARC-RAMP-AMB-E-S",
+      "column": "STR-COL-G4"
+    },
+    {
+      "element": "ARC-RAMP-AMB-E-S",
+      "column": "STR-COL-G5"
+    },
+    {
+      "element": "ARC-RAMP-AMB-E-S",
+      "column": "STR-COL-H4"
+    },
+    {
+      "element": "ARC-RAMP-AMB-E-S",
+      "column": "STR-COL-H5"
+    },
+    {
+      "element": "ARC-RAMP-AMB-E-N",
+      "column": "STR-COL-G7"
+    },
+    {
+      "element": "ARC-RAMP-AMB-E-N",
+      "column": "STR-COL-G8"
+    },
+    {
+      "element": "ARC-RAMP-AMB-E-N",
+      "column": "STR-COL-H7"
+    },
+    {
+      "element": "ARC-RAMP-AMB-E-N",
+      "column": "STR-COL-H8"
+    }
+  ],
+  "sightline_c_from_chairs": {
+    "2": 0.0739,
+    "3": 0.061,
+    "4": 0.0605,
+    "5": 0.0614,
+    "6": 0.0632,
+    "7": 0.0657,
+    "8": 0.0686,
+    "9": 0.0628,
+    "10": 0.0671,
+    "11": 0.0622,
+    "12": 0.0673,
+    "13": 0.063,
+    "14": 0.0686,
+    "15": 0.0648,
+    "16": 0.0613,
+    "17": 0.0677,
+    "18": 0.0644,
+    "19": 0.0615,
+    "20": 0.1499,
+    "21": 0.0615,
+    "22": 0.0601,
+    "23": 0.0678,
+    "24": 0.0656,
+    "25": 0.0635,
+    "26": 0.0616,
+    "27": 0.0695,
+    "28": 0.0675,
+    "29": 0.0656,
+    "30": 0.0638,
+    "31": 0.0621,
+    "32": 0.0605,
+    "33": 0.0688,
+    "34": 0.0671,
+    "35": 0.0655,
+    "36": 0.0639,
+    "37": 0.0625,
+    "38": 0.0611,
+    "39": 0.0695,
+    "40": 0.0681
+  },
+  "model_extents": [
+    -3.45,
+    -0.9,
+    -1.5,
+    62.45,
+    88.9,
+    18.4
+  ],
+  "summary": {
+    "pass": 11,
+    "fail": 6,
+    "warn": 0
+  }
+}

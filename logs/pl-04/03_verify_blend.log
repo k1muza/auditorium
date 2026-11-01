@@ -1,0 +1,11 @@
+$ C:\Program Files\Blender Foundation\Blender 5.2\blender.exe --background --factory-startup model/church_3000_concept.blend --python scripts/verify_blend.py -- --config config/auditorium_params.json --out reports/blend_verification.json
+# exit 0  (19.8s)
+
+--- stdout ---
+00:04.250  blend            | Read blend: "C:\Users\Kelvin\Desktop\auditorium\model\church_3000_concept.blend"
+VERIFY_SUMMARY {"summary": {"pass": 18, "fail": 0, "warn": 0}, "seats": 3000, "clashes": 0, "cmin": 0.0603}
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit
+
+--- stderr ---
