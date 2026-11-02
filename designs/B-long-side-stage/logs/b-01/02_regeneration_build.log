@@ -1,0 +1,11 @@
+$ C:\Program Files\Blender Foundation\Blender 5.2\blender.exe --background --factory-startup --python C:\Users\Kelvin\Desktop\auditorium\shared\bim\build_blender.py -- --layout C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\src\layout.py --config C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\config\params.json --revision B01-5f175dba4d --out C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\logs\regen_scratch\regen.blend --manifest C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\logs\regen_scratch\regen_manifest.json
+# exit 0  (10.6s)
+
+--- stdout ---
+Info: Saved as "regen.blend"
+BUILD_SUMMARY {"revision": "B01-5f175dba4d", "blender": "5.2.3 LTS", "blend": "C:\\Users\\Kelvin\\Desktop\\auditorium\\designs\\B-long-side-stage\\logs\\regen_scratch\\regen.blend", "objects_exported": 4739, "unique_meshes": 1447, "manifest_sha256": "a9eed4b41d55c0b3eef59f822389548d185a165ade2f413089c61696f720463e", "congregation_seats_in_scene": 3000, "build_seconds": 3.42, "renders": {}, "total_scene_objects": 4796}
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit
+
+--- stderr ---

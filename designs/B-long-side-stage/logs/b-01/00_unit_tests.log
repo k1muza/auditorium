@@ -1,0 +1,23 @@
+$ C:\Users\Kelvin\Desktop\auditorium\.venv\Scripts\python.exe -m unittest discover -s tests -v
+# exit 0  (8.5s)
+
+--- stdout ---
+
+--- stderr ---
+test_c_values (test_layout.TestOptionB) ... ok
+test_chairs_face_the_platform_focus (test_layout.TestOptionB) ... ok
+test_deterministic (test_layout.TestOptionB) ... ok
+test_egress_tally (test_layout.TestOptionB) ... ok
+test_exactly_3000_unique_seats (test_layout.TestOptionB) ... ok
+test_grid_written_from_seating (test_layout.TestOptionB) ... ok
+test_no_failing_layout_checks (test_layout.TestOptionB) ... ok
+test_rows_level_and_rising (test_layout.TestOptionB) ... ok
+test_seat_count_responds_to_parameters (test_layout.TestOptionB) ... ok
+test_storeys_follow_the_validator_rule (test_layout.TestOptionB) ... ok
+test_unique_prefixed_element_names (test_layout.TestOptionB) ... ok
+test_wheelchair_spaces_one_percent (test_layout.TestOptionB) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 5.450s
+
+OK

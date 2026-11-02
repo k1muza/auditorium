@@ -1,0 +1,25 @@
+$ C:\Program Files\Blender Foundation\Blender 5.2\blender.exe --background --factory-startup C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\model\church_3000_B.blend --python C:\Users\Kelvin\Desktop\auditorium\shared\render_views.py -- C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\renders\B01-5f175dba4d
+# exit 0  (34.8s)
+
+--- stdout ---
+00:04.657  blend            | Read blend: "C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\model\church_3000_B.blend"
+00:14.297  render           | Saved: 'C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\renders\B01-5f175dba4d\01_exterior_aerial.png'
+00:18.000  render           | Saved: 'C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\renders\B01-5f175dba4d\02_cutaway_aerial.png'
+00:21.329  render           | Saved: 'C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\renders\B01-5f175dba4d\03_interior_from_platform.png'
+00:23.204  render           | Saved: 'C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\renders\B01-5f175dba4d\04_interior_from_rear.png'
+00:25.125  render           | Saved: 'C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\renders\B01-5f175dba4d\04b_interior_from_side_seats.png'
+00:30.141  render           | Saved: 'C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\renders\B01-5f175dba4d\05_structure_only.png'
+00:33.782  render           | Saved: 'C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\renders\B01-5f175dba4d\06_top_plan.png'
+RENDERED 01_exterior_aerial.png True
+RENDERED 02_cutaway_aerial.png True
+RENDERED 03_interior_from_platform.png True
+RENDERED 04_interior_from_rear.png True
+RENDERED 04b_interior_from_side_seats.png True
+RENDERED 05_structure_only.png True
+RENDERED 06_top_plan.png True
+DONE - .blend not saved
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit
+
+--- stderr ---

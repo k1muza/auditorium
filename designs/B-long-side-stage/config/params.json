@@ -1,0 +1,471 @@
+{
+  "_comment": "Option B (long-side stage) design parameters. Every value is a CONCEPT ASSUMPTION or a NEW ARCHITECTURAL PROPOSAL unless tagged as carried from the common brief. Units: metres, degrees. Nothing here is a verified code, survey or engineering value.",
+  "project": {
+    "name": "3,000-Seat Church Auditorium - Option B (long-side stage) Coordination Concept",
+    "short_code": "CA3000-B",
+    "design_id": "B-long-side-stage",
+    "scene_name": "CA3000B_Concept",
+    "country": "Zimbabwe (site not yet identified)",
+    "milestone": "Competing concept for comparison with Option A (PL08)",
+    "status_label": "CONCEPT - UNVERIFIED - NOT FOR CONSTRUCTION",
+    "units": "metre",
+    "coordinate_system": "Local project coordinates. Origin (0,0,0) = grid A/2 (south-west corner of the hall, on the hall rear wall line; the foyer lies at negative y) at Level 00 finished floor. +X = along the long side (grid A -> L). +Y = towards the platform (north). +Z = up. Same handedness and +Y-to-platform convention as Option A. Project north ASSUMED = +Y; true north unknown (no survey)."
+  },
+  "grid": {
+    "_note": "Hall 80.0 m along the stage wall (grid A -> L, 8.0 m bays). Grid lines 3, 4, 5 are COMPUTED by the layout engine from the seating (hall depth follows the last row) and written to the model; the values here are overwritten. Grid 1 = foyer facade, 2 = hall rear wall, 3 = platform focus F (reference, no columns), 4 = stage wall, 5 = back-of-house rear wall. A0 / L1 = outer walls of the side ambulatories.",
+    "x_lines": {
+      "A0": -5.25,
+      "A": 0.0,
+      "B": 8.0,
+      "C": 16.0,
+      "D": 24.0,
+      "E": 32.0,
+      "F": 40.0,
+      "G": 48.0,
+      "H": 56.0,
+      "J": 64.0,
+      "K": 72.0,
+      "L": 80.0,
+      "L1": 85.25
+    },
+    "y_lines": {
+      "1": -10.0,
+      "2": 0.0,
+      "3": 44.15,
+      "4": 49.65,
+      "5": 58.65
+    }
+  },
+  "walls": {
+    "external_thickness": 0.3,
+    "hall_thickness": 0.3,
+    "internal_thickness": 0.15,
+    "door_height": 2.4,
+    "_envelope": "NEW PROPOSAL: the envelope stands OUTSIDE the column lines (wall inner face on the column outer face), so columns, wall bracing and posts sit in a clear zone inside the wall and the masonry is continuous.",
+    "offset_outside_grid": 0.45
+  },
+  "seating": {
+    "_source": "Seat, row and aisle dimensions carried unchanged from Option A (common basis) so the comparison is like-for-like.",
+    "target_congregation_seats": 3000,
+    "seat_width": 0.5,
+    "chair_depth": 0.6,
+    "row_pitch": 0.95,
+    "max_seats_per_block_row": 14,
+    "aisle_width": 1.5,
+    "wall_aisle": 1.5,
+    "front_rows": 12,
+    "max_rows": 36,
+    "stagger": true,
+    "cross_aisle_passage": 2.4,
+    "wheelchair_band_depth": 1.5,
+    "rear_passage": 2.4,
+    "front_clear_zone": 3.0,
+    "eye_height_seated": 1.15,
+    "eye_offset_from_chair_centre": 0.1,
+    "eye_height_wheelchair": 1.2,
+    "max_bearing_from_pulpit_deg": 85.0,
+    "trim_rule": "Seats with the largest eye-to-pulpit distance are removed until exactly 3,000 remain (the opposite of Option A's off-axis trim, because B's weakness is distance at the rear corners, not angle).",
+    "_proposal": "NEW PROPOSAL: rows are concentric arcs centred on the platform focus, so every chair faces the platform centre (no head-turn beyond the offset between focus and pulpit).",
+    "fan_half_angle_deg": 85.0,
+    "front_blocks": 6,
+    "rear_blocks": 12,
+    "_fan_study": "Width x fan-angle x block study (2026-11-02, tools in this session): 80 m hall, +-85 deg fan, 6 front / 12 rear blocks gives 31 rows and a 49.7 m deep hall; 72 m needs 33 rows (deeper, only 7 % less roof); +-80 deg needs 33 rows; +-90 deg seats beside the platform.",
+    "front_passage_note": "The 3.0 m front clear zone round the platform doubles as the front cross passage.",
+    "_wheelchair_band": "The cross aisle steps up one riser from the last front row so wheelchair users in the band see over row 12 (C >= 0.06)."
+  },
+  "sightlines": {
+    "_source": "C-value targets, focal-point rule and riser limits carried from Option A (common basis).",
+    "c_value_target": 0.06,
+    "c_value_staggered_target_n2": 0.12,
+    "focal_height_above_platform": 0.6,
+    "front_max_gradient_1_in": 12.0,
+    "max_aisle_riser": 0.19,
+    "min_aisle_riser": 0.1,
+    "elevation_rounding": 0.005,
+    "offaxis_flag_deg": [
+      45.0,
+      60.0
+    ]
+  },
+  "stage": {
+    "_proposal": "NEW PROPOSAL: thrust 'D' platform on the long north wall. Rear band 26 m x 5.5 m against the stage wall for band / musicians, plus a semicircular thrust (radius 5.5 m) carrying the pulpit 1.8 m behind its front edge. Height 0.90 m (lower than A's 1.00 m because the nearest rows are closer and the room is shallower).",
+    "rear_band_width": 26.0,
+    "rear_band_depth": 5.5,
+    "thrust_radius": 5.5,
+    "platform_height": 0.9,
+    "pulpit_back_from_edge": 1.8,
+    "ramp_gradient_1_in": 12.0,
+    "ramp_width": 1.5,
+    "ramp_landing": 1.5,
+    "stair_width": 2.0,
+    "stair_riser": 0.15,
+    "stair_going": 0.3,
+    "choir": {
+      "_carried": "Carried from Option A client decisions PL01/PL04/PL08 as a CLIENT PREFERENCE (not re-approved for B): choir on the two sides of the platform on the hall floor, in straight rows facing across to the platform; the platform rear is kept for the band.",
+      "row_pitch": 0.95,
+      "chair_spacing": 0.55,
+      "clearance": 1.2,
+      "target_chairs": 380,
+      "wheelchair_places_per_side": 1
+    }
+  },
+  "accessibility": {
+    "_source": "Wheelchair-space size and 1 % concept target carried from Option A; locations are a NEW PROPOSAL.",
+    "wheelchair_space_width": 0.9,
+    "wheelchair_space_depth": 1.4,
+    "companion_seat_width": 0.5,
+    "concept_target_fraction": 0.01,
+    "front_pairs_per_side": 3,
+    "cross_aisle_pairs": 24,
+    "ramp_gradient_1_in": 12.0,
+    "ramp_max_run": 9.0,
+    "ramp_landing": 1.5,
+    "ramp_width": 2.0,
+    "_route": "Step-free to the wheelchair band: front aisles slope <= 1:12 to the cross-aisle passage, which is level with the last front row; the band is a strip one 0.10 m step higher (so wheelchair users see over row 12), reached by 1:12 ramps at both ends. Corner ramps were tried and removed (clash with the platform ramp)."
+  },
+  "foyer": {
+    "_proposal": "NEW PROPOSAL: 10 m deep entrance foyer along the whole south long side under the same mono-pitch roof as the hall (one roof plane, external eaves gutter on the entrance facade, no box gutters). Two wide central stairs from the rear passage doors (+L02) to the foyer (client preference for two central foyer stairs, carried from Option A PL02). Sound/media booth between the stair heads, raised over the foyer, viewing over the rear passage. The two rear corners of the hall rectangle that the fan leaves free become side foyers with the toilets.",
+    "depth": 10.0,
+    "stair_width": 6.0,
+    "stair_max_riser": 0.175,
+    "stair_going": 0.3,
+    "stair_landing": 1.8,
+    "stair_x_centers": [
+      28.0,
+      52.0
+    ],
+    "main_door_width": 3.6,
+    "main_door_x_centers": [
+      4.0,
+      12.0,
+      20.0,
+      36.0,
+      44.0,
+      60.0,
+      68.0,
+      76.0
+    ],
+    "booth": {
+      "x": [
+        40.4,
+        46.2
+      ],
+      "depth": 4.2,
+      "floor_raise": 0.45,
+      "height": 2.4,
+      "door_x": 42.5,
+      "_note": "Booth sits just east of the centre line: the truss on grid F passes over the centre line 0.35 m too low for a raised booth."
+    },
+    "lift_x": [
+      56.6,
+      59.0
+    ],
+    "rear_door_width": 6.0,
+    "_stairs_note": "Two wide central stairs, 6.0 m each, in bays D-E and G-H so the 6 m rear doors clear the grid-2 columns; the booth sits in bay F-G between them (first study with 4.8 m stairs saturated them).",
+    "_doors_note": "Entrance doors centred between the 8 m facade columns."
+  },
+  "back_of_house": {
+    "corridor_depth": 3.0,
+    "rooms": [
+      [
+        "BOH-01",
+        "Vestry / pastors' office",
+        0.15,
+        10.0
+      ],
+      [
+        "BOH-02",
+        "Prayer room",
+        10.0,
+        20.0
+      ],
+      [
+        "BOH-03",
+        "Green room / choir robing",
+        20.0,
+        34.0
+      ],
+      [
+        "BOH-04",
+        "Band / instrument store (stage level access)",
+        34.0,
+        46.0
+      ],
+      [
+        "BOH-05",
+        "General storage",
+        46.0,
+        56.0
+      ],
+      [
+        "BOH-06",
+        "Accessible WC (BOH)",
+        56.0,
+        58.8
+      ],
+      [
+        "BOH-07",
+        "Staff WCs",
+        58.8,
+        64.0
+      ],
+      [
+        "BOH-08",
+        "MEP plant room (allowance)",
+        64.0,
+        79.85
+      ]
+    ],
+    "roof_top": 5.0,
+    "depth": 9.0
+  },
+  "doors": {
+    "external_width": 2.4,
+    "hall_exit_width": 3.6,
+    "leaf_max_width": 1.2,
+    "deduction_per_leaf": 0.08,
+    "door_hardware": "Outward-opening in the direction of escape, panic bar, hold-open on fire alarm release (assumed)",
+    "stage_exit_width": 3.6,
+    "goods_door_x": 36.0,
+    "boh_exit_width": 3.6
+  },
+  "structure": {
+    "_proposal": "NEW PROPOSAL: 11 mono-pitch steel trusses on grid lines A-L, continuous over three supports: foyer facade (grid 1), hall rear wall (grid 2) and stage wall (grid 4). Main span grid 2 -> 4 (computed, ~49.7 m), back-span 8 m over the foyer. Roof rises 5 deg towards the stage. Parallel-chord Pratt trusses, 3.0 m deep. Side ambulatories and back-of-house under low lean-to / flat roofs.",
+    "hall_column": 0.6,
+    "other_column": 0.4,
+    "pad_hall": 2.4,
+    "pad_other": 1.8,
+    "pad_thickness": 0.6,
+    "pad_top_z": -0.9,
+    "truss_bearing_z_rear": 9.0,
+    "roof_pitch_deg": 5.0,
+    "truss_depth": 3.0,
+    "chord_section": 0.35,
+    "web_section": 0.2,
+    "purlin_section": [
+      0.2,
+      0.3
+    ],
+    "purlin_spacing_target": 2.5,
+    "brace_section": 0.15,
+    "roof_braced_bays": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "E",
+        "F"
+      ],
+      [
+        "F",
+        "G"
+      ],
+      [
+        "K",
+        "L"
+      ]
+    ],
+    "beam_width": 0.3,
+    "low_roof_beam_depth": 0.45,
+    "eaves_tie_depth": 0.4,
+    "slab_thickness": 0.25,
+    "roof_build_up": 0.25,
+    "connect_tolerance": 0.01,
+    "truss_panel_target": 4.0,
+    "side_post_bays": 6,
+    "side_braced_bays": [
+      1,
+      5
+    ],
+    "long_braced_bays": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "K",
+        "L"
+      ]
+    ]
+  },
+  "egress_placeholders": {
+    "_status": "PLACEHOLDER FACTORS FOR CONCEPT FLAGGING ONLY - NOT LOCAL CODE VALUES (identical to Option A for comparability)",
+    "level_width_mm_per_person": 5.0,
+    "stair_width_mm_per_person": 7.5,
+    "travel_flag_within_hall_m": 30.0,
+    "travel_flag_total_m": 60.0,
+    "platform_occupants": 60,
+    "staff_boh_occupants": 30
+  },
+  "av": {
+    "_proposal": "NEW PROPOSAL: one wide LED wall above the band behind the pulpit, plus two IMAG screens on the platform-side corners angled towards the far side blocks. No delay screens are needed if every seat is within 8 x screen height (checked).",
+    "screens": [
+      {
+        "name": "MAIN-C",
+        "center_offset": [
+          0.0,
+          0.0,
+          7.1
+        ],
+        "width": 16.0,
+        "height": 6.0,
+        "yaw_deg": 0.0,
+        "role": "Main centre LED wall above the band, on the stage wall (8 x 6.0 m = 48 m reach)"
+      },
+      {
+        "name": "SIDE-W",
+        "center_offset": [
+          -20.0,
+          1.5,
+          7.4
+        ],
+        "width": 8.0,
+        "height": 4.5,
+        "yaw_deg": -55.0,
+        "role": "IMAG screen above the west choir, turned towards the west blocks (which face east towards the platform)"
+      },
+      {
+        "name": "SIDE-E",
+        "center_offset": [
+          20.0,
+          1.5,
+          7.4
+        ],
+        "width": 8.0,
+        "height": 4.5,
+        "yaw_deg": 55.0,
+        "role": "IMAG screen above the east choir, turned towards the east blocks (which face west towards the platform)"
+      }
+    ],
+    "speakers": [
+      {
+        "name": "MAIN-L",
+        "center_offset": [
+          -9.0,
+          -8.0,
+          8.5
+        ],
+        "size": [
+          1.0,
+          1.0,
+          4.0
+        ],
+        "role": "Main line array (allowance)"
+      },
+      {
+        "name": "MAIN-C",
+        "center_offset": [
+          0.8,
+          -10.0,
+          7.3
+        ],
+        "size": [
+          1.0,
+          1.0,
+          3.0
+        ],
+        "role": "Centre cluster (allowance)"
+      },
+      {
+        "name": "MAIN-R",
+        "center_offset": [
+          9.0,
+          -8.0,
+          8.5
+        ],
+        "size": [
+          1.0,
+          1.0,
+          4.0
+        ],
+        "role": "Main line array (allowance)"
+      },
+      {
+        "name": "OUT-W",
+        "center_offset": [
+          -20.0,
+          -12.0,
+          7.4
+        ],
+        "size": [
+          0.8,
+          0.8,
+          2.4
+        ],
+        "role": "Out-fill for the west side blocks (allowance)"
+      },
+      {
+        "name": "OUT-E",
+        "center_offset": [
+          20.0,
+          -12.0,
+          7.4
+        ],
+        "size": [
+          0.8,
+          0.8,
+          2.4
+        ],
+        "role": "Out-fill for the east side blocks (allowance)"
+      }
+    ],
+    "max_viewing_angle_deg": 45.0,
+    "max_distance_to_height_ratio": 8.0,
+    "max_unaided_pulpit_distance_m": 30.0,
+    "rigging_load_note": "Rigging loads TBC by AV consultant - placeholder only; structural engineer to design certified rigging points",
+    "_yaw_convention": "yaw_deg rotates the screen normal (default -Y, towards the congregation) counter-clockwise in plan: +yaw turns it towards +X (east).",
+    "_rigging_note": "Screens and speakers hang below the truss bottom chords, clear of truss planes (checked by the clash matrix)."
+  },
+  "assumptions_extra": [
+    [
+      "B-01",
+      "Flat site at a single grade; all floors at or above grade (no excavation). A sloping site could lower the front of the hall and shorten the ramps - review once surveyed.",
+      "Proposal",
+      "Medium"
+    ],
+    [
+      "B-02",
+      "Long-span roof: 11 steel trusses continuous over the foyer facade, hall rear wall and stage wall; main span = hall depth (computed, about 50 m), back-span 8 m; 3.0 m deep, mono-pitch 5 deg; member sizes are placeholders.",
+      "Proposal",
+      "Low"
+    ],
+    [
+      "B-03",
+      "Choir on the hall floor beside the platform in straight rows facing the platform carries Option A client preference (PL01/PL04/PL08); not re-approved for Option B.",
+      "Carried preference",
+      "Medium"
+    ],
+    [
+      "B-04",
+      "Seat, aisle, row, sightline (C-value) and egress placeholder factors identical to Option A for a like-for-like comparison; none is a verified local code value.",
+      "Common basis",
+      "High"
+    ]
+  ],
+  "ambulatory": {
+    "_proposal": "NEW PROPOSAL (same idea as Option A): covered side ambulatories outside both hall side walls giving a step-free route at grade from the foyer to the front-corner hall doors, and covered egress.",
+    "width": 4.5,
+    "roof_top": 4.8,
+    "ext_door_y_from_north": 3.0
+  },
+  "rear_corners": {
+    "_proposal": "NEW PROPOSAL: the hall rear corners outside the fan become side foyers at grade with toilets (W female, E male) and accessible WCs, entered from the main foyer; a stair from a rear-passage door descends into each.",
+    "toilet_block": [
+      0.15,
+      0.15,
+      13.0,
+      7.5
+    ],
+    "wca_width": 2.6,
+    "wca_depth": 2.4,
+    "arc_wall_facet_deg": 10.0,
+    "rear_passage_door_deg": 52.0,
+    "stair_width": 3.0,
+    "foyer_door_x": [
+      20.0,
+      60.0
+    ],
+    "ambulatory_door_y": 12.5
+  }
+}

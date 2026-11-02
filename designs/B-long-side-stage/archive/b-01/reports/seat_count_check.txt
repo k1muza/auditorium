@@ -1,0 +1,12 @@
+Seat count check - B-long-side-stage revision B01-5f175dba4d
+
+Layout engine seats (src/layout.py)              : 3000
+Blender manifest objects in 40_SEAT_Congregation : 3000
+Saved .blend re-opened (blend_verification.json) : 3000
+IFC congregation seats (ifc_validation.json)     : 3000
+seating_schedule.csv rows (unique ids)           : 3000 (3000)
+CSV ids == manifest names                         : True
+
+Excluded and counted separately: choir chairs 263, wheelchair spaces 30, companion chairs 30.
+
+RESULT: PASS - all sources agree on exactly 3,000

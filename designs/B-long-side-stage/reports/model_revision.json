@@ -1,0 +1,129 @@
+{
+  "design_id": "B-long-side-stage",
+  "revision": "B01-5f175dba4d",
+  "iteration": 1,
+  "units": "m",
+  "source_hashes": {
+    "config/params.json": "d19b8acd7dac31656b7c764712d517bedbf0c51a283eec588d72742a92aece73",
+    "src/layout.py": "c99267316b30d6961259acbd7444d881d63254e2b616230197f27561a167ccc3",
+    "src/reports.py": "d0382e994ba7ac7d73e23a759793c8e7c9b56ef4eb962fb2463abd1d8a8fbd1f",
+    "src/drawings.py": "0c8ec145e5044f22ce81dc6f3627bb5fd9b422936a32e5c43a96f7561ce57d31",
+    "tests/test_layout.py": "e8b23aba493651eb3642cf416d1f833ed36af11bf81e3e933a6da526e5f13930",
+    "../../shared/bim/geometry.py": "e24a0b2f94edac554b225ad81e385ee4efb63746b5ad2e4290646f32a12d24a7",
+    "../../shared/bim/build_blender.py": "95c6a9deb318822ec85435e54aa52ea7693623210ec86a790875987861b29a90",
+    "../../shared/bim/verify_blend.py": "a8b887a647d43a1899059c33e5c31885ce30eb4c840a24e5db79f76ab4c4e9cb",
+    "../../shared/bim/export_ifc.py": "63e72c166381e5480977948fa68f83535afdd002cfdbc35ee18fbaa4ce29ac75",
+    "../../shared/bim/validate_ifc.py": "afc360f18265ebdbae3360ccecdb87203edae4feff475c6e789566db5a88ac04",
+    "../../shared/drawings/sheets.py": "e08e3a20e6083ee3fd18b065b4987a346f455bc6d10677f43bef88ee60f2e699",
+    "../../shared/pipeline.py": "99b11afba30aadd2b2c9ddb23551c19dc48443dea801dbfa1bf50f1c59fce8d3",
+    "../../shared/render_views.py": "78894ec01a471503b61cfb4f436a4c0f58668e27dfa91b61669d3d414005b681"
+  },
+  "outputs": {
+    "exports/floor_plan.png": {
+      "sha256": "22f72f0d42532046d2a7b540e3ffd7df04c943101da47e929ba993aecaab2d93",
+      "bytes": 911364
+    },
+    "exports/model_axonometric.png": {
+      "sha256": "dd31eb17194581e7560f576bb81b3f3be2bc976d44dfcc689228c2536c6ec010",
+      "bytes": 1637837
+    },
+    "exports/model_cutaway.png": {
+      "sha256": "17a9d2472fe17bc953081d0b221905b285dec023fd406fae67e6f3d78db8c52e",
+      "bytes": 2190034
+    },
+    "exports/seating_plan.png": {
+      "sha256": "22af3ba8d46458fe3bc5db9bf9e5088e7c1da1030d1fca35682167c31ad390f5",
+      "bytes": 889188
+    },
+    "exports/section_AA.png": {
+      "sha256": "92cd9b74d07840161f6d471fc4fe28fd885121b0f47b57e0c06e880c362c9be1",
+      "bytes": 115851
+    },
+    "exports/section_BB.png": {
+      "sha256": "9e8ac66d66781da98b48dcf1c88cd216356488be4b7b666ee4012ca78df73fae",
+      "bytes": 109782
+    },
+    "exports/structural_grid.png": {
+      "sha256": "e94dc4faae183e3097d16ed8d59ac44ca529cee6951a3d8b22d0eb3b4e6d1070",
+      "bytes": 266488
+    },
+    "model/blender_manifest.json": {
+      "sha256": "a9eed4b41d55c0b3eef59f822389548d185a165ade2f413089c61696f720463e",
+      "bytes": 3367814
+    },
+    "model/church_3000_B.blend": {
+      "sha256": "880bc4ebb6c74ffa698b6f69e43757ee93be07a0930f02203451abf0f3b32bec",
+      "bytes": 1551398
+    },
+    "model/church_3000_B.ifc": {
+      "sha256": "458cae1f3a6dd24342227bdab7ef472526a9b2e40f2e12ce186a9ebc84d6fc22",
+      "bytes": 10181320
+    },
+    "reports/accessible_positions.csv": {
+      "sha256": "94f5439845eff66d65cae9d1536d3c6838611aa0e53fd16059b224df5659c4c0",
+      "bytes": 2608
+    },
+    "reports/assumptions.md": {
+      "sha256": "655c82292d7e7c7af7225346d11380f3e49ee485c89a3b661302344f7c291ea5",
+      "bytes": 5949
+    },
+    "reports/basis_of_design.md": {
+      "sha256": "43499a165557b421ae5172c824846969cb163a98595a2b9fb033f96f64b4577d",
+      "bytes": 1827
+    },
+    "reports/blend_verification.json": {
+      "sha256": "cdc6dab33b38d718bac508706ed8254ea49b140268af5f54d41ea4be5b193c49",
+      "bytes": 4352
+    },
+    "reports/egress_travel.csv": {
+      "sha256": "d116e0ebbdbe01dd1f480b55cb70bb957c2384af1e48e2473c17882ae1aa2f43",
+      "bytes": 267602
+    },
+    "reports/element_schedule.csv": {
+      "sha256": "917d13f596ca417fe794551bc3995f81f2e29c26b06a7a9b76f2579be6292da8",
+      "bytes": 2546
+    },
+    "reports/environment.json": {
+      "sha256": "972fb99243e1b2551c589dce0bc16512c719fceadd8105425550c7bac6872917",
+      "bytes": 317
+    },
+    "reports/exit_schedule.csv": {
+      "sha256": "6a476f6e9604d3a64bfc01516cc2101cd8cf520519349d206f6d22e4b6438503",
+      "bytes": 2047
+    },
+    "reports/geometry_checks.json": {
+      "sha256": "3ace38f0e58c8349274b6c90d88757bc17703787b3a9aab4706c72bdfa51bce4",
+      "bytes": 16153
+    },
+    "reports/ifc_validation.json": {
+      "sha256": "e668b37995b223ea42b398c02206a8568cb665dc7887f56b360204f9a20f6d9f",
+      "bytes": 7200
+    },
+    "reports/open_issues.md": {
+      "sha256": "86441284ea961063540d00342e9465acd7f65ca896f73ac7727c0e80f4714b31",
+      "bytes": 1947
+    },
+    "reports/regeneration_check.json": {
+      "sha256": "6831ee151321eddb02a9a1898bbdea519db6a262555f4261b1930e07d0cb0917",
+      "bytes": 375
+    },
+    "reports/row_schedule.csv": {
+      "sha256": "b5356ba6a78aaca4ac7b2a3478457c7ae37e3dda2f666f65d7c371bfff87aa0e",
+      "bytes": 1939
+    },
+    "reports/seat_count_check.txt": {
+      "sha256": "9aef899bd6becea67e03402698ee92f5f8a105b497460c75141efa58407b2c6d",
+      "bytes": 564
+    },
+    "reports/seating_schedule.csv": {
+      "sha256": "c0ddf526b95e7a1dc185b2e3e2169442412b58ce57145a6823458455cfaf2a3d",
+      "bytes": 298931
+    },
+    "reports/space_schedule.csv": {
+      "sha256": "76ec3bec12c019a02ba718ec84cfca51b60c94ca0cd89f62e1b62ade4a9a1ffe",
+      "bytes": 3353
+    }
+  },
+  "renders": "renders/B01-5f175dba4d/",
+  "pipeline_seconds": 310.6
+}

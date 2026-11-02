@@ -1,0 +1,13 @@
+$ C:\Program Files\Blender Foundation\Blender 5.2\blender.exe --background --factory-startup --python C:\Users\Kelvin\Desktop\auditorium\shared\bim\build_blender.py -- --layout C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\src\layout.py --config C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\config\params.json --revision B01-5f175dba4d --out C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\model\church_3000_B.blend --manifest C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\model\blender_manifest.json --render C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\exports
+# exit 0  (16.9s)
+
+--- stdout ---
+00:13.812  render           | Saved: 'C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\exports\model_axonometric.png'
+00:15.078  render           | Saved: 'C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\exports\model_cutaway.png'
+Info: Saved as "church_3000_B.blend"
+BUILD_SUMMARY {"revision": "B01-5f175dba4d", "blender": "5.2.3 LTS", "blend": "C:\\Users\\Kelvin\\Desktop\\auditorium\\designs\\B-long-side-stage\\model\\church_3000_B.blend", "objects_exported": 4739, "unique_meshes": 1447, "manifest_sha256": "a9eed4b41d55c0b3eef59f822389548d185a165ade2f413089c61696f720463e", "congregation_seats_in_scene": 3000, "build_seconds": 3.51, "renders": {"model_axonometric.png": true, "model_cutaway.png": true}, "total_scene_objects": 4796}
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit
+
+--- stderr ---

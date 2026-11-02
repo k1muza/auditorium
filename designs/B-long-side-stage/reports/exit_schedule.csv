@@ -1,0 +1,11 @@
+design_id,revision,exit_id,wall,level,kind,x,y,sill_z,door_width,clear_width,capacity_width,stair_behind,assigned_occupants,required_width_placeholder,final_exit,role
+B-long-side-stage,B01-5f175dba4d,DR-HALL-W-FRONT,W,L00,to_ambulatory,-0.45,46.4,0.0,3.6,3.36,3.36,,68,0.34,DR-EXT-AMB-W1,Hall exit - front corner (grade) to ambulatory
+B-long-side-stage,B01-5f175dba4d,DR-HALL-W-REAR,W,L02,to_ambulatory,-0.45,28.308,2.98,3.6,3.36,2.4,ARC-STAIR-AMB-W,208,1.56,DR-EXT-AMB-W2,Hall exit - rear passage end (L02) to ambulatory stair
+B-long-side-stage,B01-5f175dba4d,DR-HALL-E-FRONT,E,L00,to_ambulatory,80.45,46.4,0.0,3.6,3.36,3.36,,37,0.185,DR-EXT-AMB-E1,Hall exit - front corner (grade) to ambulatory
+B-long-side-stage,B01-5f175dba4d,DR-HALL-E-REAR,E,L02,to_ambulatory,80.45,28.308,2.98,3.6,3.36,2.4,ARC-STAIR-AMB-E,239,1.792,DR-EXT-AMB-E2,Hall exit - rear passage end (L02) to ambulatory stair
+B-long-side-stage,B01-5f175dba4d,DR-HALL-S1,S,L02,to_foyer_stair,28.0,-0.45,2.98,6.0,5.6,5.6,ARC-STAIR-FOYER-W,504,3.78,DR-EXT-S03,Hall exit - rear landing (L02) to foyer stair
+B-long-side-stage,B01-5f175dba4d,DR-HALL-S2,S,L02,to_foyer_stair,52.0,-0.45,2.98,6.0,5.6,5.6,ARC-STAIR-FOYER-E,516,3.87,DR-EXT-S05,Hall exit - rear landing (L02) to foyer stair
+B-long-side-stage,B01-5f175dba4d,DR-STAGE-W,N,L00,to_boh,21.4,50.55,0.0,3.6,3.44,3.44,,620,3.1,DR-EXT-BOH-1,Hall exit beside the platform to the back-of-house corridor (protected route to BOH exits)
+B-long-side-stage,B01-5f175dba4d,DR-STAGE-E,N,L00,to_boh,67.7,50.55,0.0,3.6,3.44,3.44,,391,1.955,DR-EXT-BOH-2,Hall exit beside the platform to the back-of-house corridor (protected route to BOH exits)
+B-long-side-stage,B01-5f175dba4d,DR-HALL-ARC-W,arc-W,L02,to_corner_stair,5.645,16.69,2.98,3.6,3.36,3.0,ARC-STAIR-CORNER-W,400,3.0,DR-EXT-AMB-W2,Hall exit - rear passage (L02) to side-foyer stair
+B-long-side-stage,B01-5f175dba4d,DR-HALL-ARC-E,arc-E,L02,to_corner_stair,74.355,16.69,2.98,3.6,3.36,3.0,ARC-STAIR-CORNER-E,400,3.0,DR-EXT-AMB-E2,Hall exit - rear passage (L02) to side-foyer stair

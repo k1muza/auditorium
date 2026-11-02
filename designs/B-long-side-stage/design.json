@@ -1,0 +1,26 @@
+{
+  "design_id": "B-long-side-stage",
+  "short_id": "B",
+  "title": "Option B - long-side stage (wide, shallow fan)",
+  "status": "COMPETING CONCEPT - under development (refinement iterations tracked in REVISIONS.md)",
+  "units": "m",
+  "coordinate_system": "x along the long side (grid A -> L), y towards the platform (grid 2 = hall rear = 0), z up; same +Y-to-platform convention as Option A",
+  "rev_prefix": "B",
+  "build": {
+    "layout": "src/layout.py",
+    "config": "config/params.json",
+    "blend": "model/church_3000_B.blend",
+    "manifest": "model/blender_manifest.json",
+    "ifc": "model/church_3000_B.ifc",
+    "drawings": "src/drawings.py",
+    "reports": "src/reports.py",
+    "tests": "tests"
+  },
+  "sources": ["config/params.json", "src/layout.py", "src/reports.py", "src/drawings.py", "tests/test_layout.py",
+              "../../shared/bim/geometry.py", "../../shared/bim/build_blender.py", "../../shared/bim/verify_blend.py",
+              "../../shared/bim/export_ifc.py", "../../shared/bim/validate_ifc.py", "../../shared/drawings/sheets.py",
+              "../../shared/pipeline.py", "../../shared/render_views.py"],
+  "outputs": {"model": "model/", "reports": "reports/", "drawings": "exports/", "renders": "renders/", "logs": "logs/",
+              "revision archive (outputs + exact sources)": "archive/<rev>/", "reviews": "reviews/", "proposal": "proposal/"},
+  "entrypoint": ".venv/Scripts/python tools/build.py --design B --iteration N"
+}

@@ -1,0 +1,160 @@
+{
+  "blend": "C:\\Users\\Kelvin\\Desktop\\auditorium\\designs\\B-long-side-stage\\model\\church_3000_B.blend",
+  "revision": "B01-5f175dba4d",
+  "blender": "5.2.3 LTS",
+  "checks": [
+    {
+      "id": "BLD-UNITS",
+      "description": "Scene units metric, scale 1.0, metres",
+      "value": [
+        "METRIC",
+        1.0,
+        "METERS"
+      ],
+      "criterion": "METRIC / 1.0 / METERS",
+      "result": "PASS"
+    },
+    {
+      "id": "BLD-SEATS",
+      "description": "Congregation chair objects in 40_SEAT_Congregation",
+      "value": 3000,
+      "criterion": "== 3000",
+      "result": "PASS"
+    },
+    {
+      "id": "BLD-SEATS-PROP",
+      "description": "Objects flagged CountsTowardTarget=True",
+      "value": 3000,
+      "criterion": "== 3000",
+      "result": "PASS"
+    },
+    {
+      "id": "BLD-NAMES-SEAT",
+      "description": "Congregation chair names match SEAT-C-Rrr-Bbb-Sss",
+      "value": [],
+      "criterion": "all match",
+      "result": "PASS"
+    },
+    {
+      "id": "BLD-NAMES-DUP",
+      "description": "No Blender duplicate-suffix names (.001)",
+      "value": [],
+      "criterion": "none",
+      "result": "PASS"
+    },
+    {
+      "id": "BLD-NAMES-PREFIX",
+      "description": "All model objects use discipline prefixes",
+      "value": [],
+      "criterion": "none",
+      "result": "PASS"
+    },
+    {
+      "id": "BLD-SEMANTICS",
+      "description": "Every model object carries ifc_class and storey properties",
+      "value": [],
+      "criterion": "none",
+      "result": "PASS"
+    },
+    {
+      "id": "BLD-FLOOR-SUPPORT",
+      "description": "Every chair has floor under all 9 sample points",
+      "value": {
+        "chairs": 3293,
+        "unsupported": 0,
+        "first": []
+      },
+      "criterion": "0 unsupported",
+      "result": "PASS"
+    },
+    {
+      "id": "BLD-FLOOR-CONTACT",
+      "description": "Chairs not buried (>5 mm) and not floating (>100 mm at the highest floor point)",
+      "value": {
+        "buried": 0,
+        "floating": 0,
+        "first": []
+      },
+      "criterion": "0 / 0",
+      "result": "PASS"
+    },
+    {
+      "id": "BLD-CLASH",
+      "description": "Hard clashes in the coordination clash matrix (BVH overlap where AABBs penetrate > 5 mm)",
+      "value": {
+        "pairs_tested": 184929,
+        "clashes": 0,
+        "first": []
+      },
+      "criterion": "0",
+      "result": "PASS"
+    },
+    {
+      "id": "BLD-CLASH-CONTROL",
+      "description": "Clash detector controls: probe inside a column detected (AABB), probe 1 m clear not detected (BVH)",
+      "value": {
+        "positive": true,
+        "negative": true,
+        "column": "STR-COL-BOOTH-1"
+      },
+      "criterion": "both true",
+      "result": "PASS"
+    },
+    {
+      "id": "BLD-CONNECT",
+      "description": "Every structural strut end touches another member or a column (from Blender objects)",
+      "value": {
+        "members": 1046,
+        "loose": 0,
+        "first": []
+      },
+      "criterion": "0 loose",
+      "result": "PASS"
+    },
+    {
+      "id": "BLD-DOOR-CLEAR",
+      "description": "Door openings clear of columns (1.0 m each side of the wall)",
+      "value": [],
+      "criterion": "none",
+      "result": "PASS"
+    },
+    {
+      "id": "BLD-ROW-LEVEL",
+      "description": "All congregation chairs in a row share one base elevation",
+      "value": {},
+      "criterion": "one level per row",
+      "result": "PASS"
+    },
+    {
+      "id": "BLD-SIGHT",
+      "description": "Min C-value over the row in front, from chair object positions (radial model)",
+      "value": 0.0602,
+      "criterion": ">= 0.06",
+      "result": "PASS"
+    },
+    {
+      "id": "BLD-SIGHT-N2",
+      "description": "Min C-value over 2 rows in front (staggered), from chair objects",
+      "value": 0.1203,
+      "criterion": ">= 0.12",
+      "result": "PASS"
+    },
+    {
+      "id": "BLD-EXTENTS",
+      "description": "Model extents plausible vs the declared footprint (metres, not mm)",
+      "value": [
+        -5.4,
+        -14.6,
+        85.4,
+        60.0
+      ],
+      "criterion": "~89.1 x 70.3 m",
+      "result": "PASS"
+    }
+  ],
+  "summary": {
+    "PASS": 17,
+    "FAIL": 0,
+    "WARN": 0
+  }
+}
