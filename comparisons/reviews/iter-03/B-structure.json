@@ -1,0 +1,72 @@
+{
+  "design_id": "B-long-side-stage",
+  "revision": "B03-44bc3ae457",
+  "reviewer": "structural_engineering + constructability_maintenance + cost_drivers (specialist)",
+  "scores": {
+    "structural_engineering": 7.0,
+    "constructability_maintenance": 6.5,
+    "cost_drivers": 5.0
+  },
+  "weighted_score": 1.95,
+  "weighted_score_note": "Partial: sum(score x weight/100) over the three assigned disciplines only (weights 15/10/5, max 3.0) = 1.95; normalised to the 30% assigned = 6.50/10. History: iter-01 B01 1.70 (5.67), iter-02 B02 1.90 (6.33). Option A PL08 (unchanged) 1.975 (6.58).",
+  "critical_blockers": [],
+  "iter02_findings_status": [
+    {"id": "B2-STR-01", "status": "RESOLVED", "evidence": "Reviewer script on model/blender_manifest.json: all 11 distinct roof-brace node lines (y = -12.0, 0.0, 3.789, 7.579, 15.157, 22.736, 30.314, 37.893, 45.471, 49.261, 53.05) coincide with a purlin line (max offset 0.000 m). There are 35 purlin lines: 1.89 m half-panels in the hall and 2.0 m in the foyer, including the eaves lines at y = 0.0 and 53.05. The eaves girders STR-BRACE-ROOF-EAVES2/4-* now have chords/struts."},
+    {"id": "B2-STR-02", "status": "LARGELY RESOLVED", "evidence": "STR-TRUSS-F verticals 3.15 m clear (3.5 m centre-line depth); span 53.05 m, so span/depth ~15.2 (was ~17.2). Bottom-chord restraint for uplift is still not modelled."},
+    {"id": "B2-STR-03", "status": "PARTIALLY RESOLVED", "evidence": "Foyer bracing added: STR-BRACE-ROOF-FOYER-AB and -KL. The rafter still frames into the truss end at top-chord level: STR-BEAM-FOYER-F ends at (40, 0.0, 12.2), while the STR-COL-F2 cap is at +8.65 (~3.5 m below). The pin detail is flagged TBC in structure.iteration3."},
+    {"id": "B2-STR-04", "status": "PARTIALLY RESOLVED", "evidence": "SRV-GUTTER-WEIR-E/W modelled at the gutter ends (x 80.9-81.3 and -1.3..-0.9, y -13.8..-13.2). They discharge over the ends of ENV-CANOPY (x -4.55..84.55, y -16.6..-12.6), i.e. clear of the central doors but onto the canopy at the ambulatory ends. The gutter is now higher (+11.26 to +11.61, was +7.93); see B3-STR-02."},
+    {"id": "B2-STR-05", "status": "PARTIALLY RESOLVED", "evidence": "Column metric fixed (column_count 56 = 56 STR-COL = 56 STR-FTG; basis_of_design line 18 says 56); foyer.proposal now says 12 m; metric renamed 'structural_members' 627 (no longer claims an end check). Text is stale elsewhere: see B3-STR-04."},
+    {"id": "B2-COST-01", "status": "WORSE (by design choice)", "evidence": "comparison.md B03: trusses 2,487 m + purlins 2,800 m + bracing 1,097 m = 6,384 m (B02 5,303 m; A 3,106 m)."}
+  ],
+  "findings": [
+    {
+      "id": "B3-COST-01",
+      "severity": "MAJOR",
+      "discipline": "cost_drivers",
+      "finding": "Regression in cost drivers from the iter-03 changes (node-aligned purlins, deeper trusses, client-requested higher bearing). Linear roof steel is now ~6,384 m, about 2.05x Option A's 3,106 m (A's purlins are understated; see A review A-STR-01). Purlins alone are 2,800 m (350 members, 1.89 m spacing). Roof area is 6,844 m2 (+28% vs A). Taller enclosure: external wall area rose from 4,279 to 5,093 m2 and hall air volume from 30,149 to 40,190 m3 (+33%), so B's advantages in volume and wall area over A (5,824 m2, 49,768 m3) have mostly gone. Roof top is now +17.78 m against A's +18.4 m. Only the column count (56 vs 76) and pad concrete (140 vs 163 m3) remain clearly lower.",
+      "evidence": "comparisons/out/comparison.md (B03-44bc3ae457, sha256 356464e19ccc094f): Truss 2486.6 m / Purlin 2800.0 m / Bracing 1097.4 m, Roof 6844.1 m2, External wall 5093.0 m2, Hall air volume 40190.0 m3, Roof top 17.78; metrics purlin_count 350, purlin_lines 35",
+      "fix": "Treat the 5.5 m clearance over the rear passage as a client decision to be costed; test 10 m truss spacing (fewer trusses and purlin bays, deeper purlins) and the narrower hall from the fan study; consider purlins at full panel points (3.79 m) with sheeting rails or deeper-profile sheeting only if the manufacturer confirms the span. Obtain a QS tonnage comparison of A and B once members are sized."
+    },
+    {
+      "id": "B3-STR-01",
+      "severity": "MINOR",
+      "discipline": "structural_engineering",
+      "finding": "Taller supports raise slenderness and wind demands that the concept does not address. The grid-1 facade columns are 0.40 m placeholders standing ~11.75 m from pad to top, with masonry only to +6.0 and cladding/louvres above. The side-wall posts are 0.40 m and ~12 m tall. The hall side and stage masonry walls are now 13.5 m high, outside the column line, restrained only by posts and columns at ~8-8.8 m centres, with no bond beams or wind girts modelled. The foyer rafter still bears on the truss end post ~3.5 m above the grid-2 column cap, so the end post carries an eccentric reaction.",
+      "evidence": "STR-COL-F1 bbox z -0.9..10.85 (0.40 x 0.40); STR-COL-A-P3 z -0.9..11.1 (0.40); ENV-WALL-EXT-S top 6.0, ENV-CLAD-S z 6.0-11.74; ENV-WALL-HALL-E height 13.519, ENV-WALL-HALL-N 13.466; STR-BEAM-FOYER-F end (40, 0.0, 12.2) vs STR-COL-F2 top 8.65",
+      "fix": "Reserve space for horizontal wind girts or bond beams at about mid-height of the 13.5 m walls and the facade cladding zone; flag the facade and side-post column slenderness for the engineer (likely larger sections or intermediate restraint); detail a pinned seating bracket for the rafter on the truss end post, or carry the rafter on the column via a corbel."
+    },
+    {
+      "id": "B3-STR-02",
+      "severity": "MINOR",
+      "discipline": "constructability_maintenance",
+      "finding": "Maintenance and erection regressions from the raised roof. The single eaves gutter rose from +7.93 to +11.26..11.61 m, ~7.7 m above the canopy, so it now needs a MEWP or a permanent ladder and anchor line rather than access from the canopy. The overflow weirs discharge over the canopy ends near the covered ambulatory routes. Truss bearings are now +8.8 to +13.3 (column caps 8.65 / 13.29), so lift heights are similar to Option A while the trusses are longer (53 m) and 11 in number. open_issues still lists gutter access only as TBC and models none.",
+      "evidence": "SRV-GUTTER-S z 11.26-11.61; ENV-CANOPY z 3.6-3.85, x -4.55..84.55; SRV-GUTTER-WEIR-E/W at x ~81 / ~-1, y -13.5; STR-COL-F2 top 8.65, STR-COL-F4 top 13.29; metrics truss_span 53.05; reports/open_issues.md line 14",
+      "fix": "Model a roof access point (internal hatch or external caged ladder at a gable end) and an eaves anchor line; extend the weir spouts past the canopy ends or into downpipes to the rainwater tank with a visible overflow at grade; add splice locations and crane standing positions to the erection open issue."
+    },
+    {
+      "id": "B3-STR-03",
+      "severity": "MINOR",
+      "discipline": "structural_engineering",
+      "finding": "No bottom-chord lateral restraint (fly braces or ties) is modelled for uplift reversal on a 53.05 m simply supported truss under a ~5,500 m2 lightweight roof. Lateral load paths now look complete in concept: eaves girders with chords along grids 2 and 4, roof strips AB/EF/FG/KL, end-wall and long-wall vertical bracing, and foyer end-bay bracing. Only the collector from the grid-4 girder to side-wall braced bay 5 (one bay from grid 4) relies on the end-truss chord.",
+      "evidence": "30_STR_Bracing families: STR-BRACE-ROOF-{AB,EF,FG,KL,EAVES2-*,EAVES4-*,FOYER-AB,FOYER-KL}, STR-BRACE-WALL-{2AB,2KL,4AB,4KL,A1,A5,L1,L5}; no bottom-chord restraint members; config side_braced_bays [1, 5]",
+      "fix": "Reserve bottom-chord ties/fly braces at alternate panel points; move the side-wall braced bay from 5 to 6 (adjacent to grid 4), or state that the end truss acts as the collector."
+    },
+    {
+      "id": "B3-STR-04",
+      "severity": "MINOR",
+      "discipline": "structural_engineering",
+      "finding": "Stale structural text: assumption B-02 says 'about 51 m, 3.0 m deep' and structure.proposal says '~50 m ... 3.0 m deep', but the model has a 53.05 m span and 3.5 m depth. structure.iteration3 says 'bearing raised to +9.5 m', while the model's truss bottom chord at grid 2 is ~+8.8 (top chord +12.32, column cap +8.65); params truss_bearing_z_rear 9.5 is overridden by the rake-derived rule.",
+      "evidence": "reports/assumptions.md lines 10, 26, 28; STR-TRUSS-F first diagonal (40, 0.0, 12.32) -> (40, 3.79, 9.16); STR-COL-F2 top 8.65; metrics truss_span 53.05; config structure.truss_bearing_z_rear 9.5, min_clear_over_rear_passage",
+      "fix": "Generate the span, depth and bearing levels in the assumptions and BoD text from the computed model values."
+    }
+  ],
+  "strengths": [
+    "All iter-01/02 structural premise issues are closed: simply supported Pratt trusses (diagonals top at support -> bottom towards midspan, verified), no back-span uplift, 3.5 m depth (span/depth ~15.2), and every roof-brace node on a purlin/strut line (verified, 0.000 m offset).",
+    "Complete concept lateral system for both directions, including eaves wind girders along both long walls and foyer end-bay bracing; the clash matrix passes (BLD-CLASH 0 over 194,191 pairs, with controls); 56 columns / 56 footings.",
+    "STR-CLR 5.53 m clear over the rear passage meets the client's request, and it is checked in the model rather than asserted.",
+    "Gutter overflow weirs are modelled at the gutter ends, away from the central entrance doors; the single roof plane with no box gutters and the envelope outside the column line remain good buildability choices.",
+    "Honest status: open_issues lists splices, erection/crane plan, movement joint, uplift, deflection and gutter access as not designed."
+  ],
+  "limitations": "No loads, rainfall, wind or geotechnical data are available, so member adequacy, slenderness, deflection and uplift could not be assessed; span/depth remarks are rules of thumb. Read-only checks were run on model/blender_manifest.json (truss F nodes and diagonals, brace-node vs purlin alignment, column/footing counts, column, wall, gutter, weir and canopy extents), params.json and the reports; comparisons/out/comparison.md was used for quantities. Renders in renders/B03-44bc3ae457/ and the exports drawings were not inspected in detail. Crane availability in Zimbabwe was not verified.",
+  "certification_disclaimer": "This review is a structured QA metric for a concept coordination model by an AI reviewer. It is not a professional engineering certification, structural design check, code-compliance statement, fire approval or cost estimate. No loads, analysis or member design were performed; all member sizes in the model are space-reservation placeholders. A registered Zimbabwean structural engineer must design and certify the structure."
+}

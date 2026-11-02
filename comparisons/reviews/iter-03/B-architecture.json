@@ -1,0 +1,43 @@
+{
+  "design_id": "B-long-side-stage",
+  "revision": "B03-44bc3ae457",
+  "reviewer": "architecture + church_functionality + aesthetics (independent specialist, final re-review of iter-02 findings)",
+  "scores": {"architecture": 6.3, "church_functionality": 7.2, "aesthetics": 5.0},
+  "weighted_score": 2.28,
+  "critical_blockers": [],
+  "findings": [
+    {"id": "B3-ARC-01", "severity": "MAJOR", "discipline": "church_functionality",
+     "finding": "Status of iter-02 B2-ARC-03 (ministry floor): now a named space, but too small. SPC-SP02M is only 43.3 m2 and 2.5 m deep. That is about one altar-call row for a 3,000-seat congregation, about a third of A's 117 m2 SP-02F, and smaller than the about 90 m2 ring that existed in B02 before the 2.0 m front passage was carved out of it. Altar calls, communion lines and praise dance will spill into the front passage, the escape route the change was meant to protect.",
+     "evidence": "manifest SPC-SP02M IfcSpace GrossFloorArea 43.3; space_schedule.csv SP-02M 43.3 m2; params.json seating._iteration3 (4.5 m zone = 2.5 m ministry + 2.0 m passage); A space_schedule SP-02F 117.0 m2.",
+     "fix": "Drop the inner 1-2 rows of the two centre blocks (about 40-60 seats, recovered at the rear corners or by one extra rear row) to deepen SP-02M to 5-6 m, about 100 m2. Keep the 2.0 m passage outside it."},
+    {"id": "B3-ARC-02", "severity": "MAJOR", "discipline": "church_functionality",
+     "finding": "Status of iter-02 B2-ARC-01 (choir): mostly addressed. The choir now faces the congregation on tiers rising to the stage wall (412 chairs, risers to +0.80), so it is visible and correctly oriented. However, most of it is still in the far front corners. The main west riser rows run from x 1.9 to 15.8 (ARC-CHOIR-RISER-W-R07A) and the platform starts at x 25.0, so most choir chairs are 9-23 m from the platform edge. They are separated from the band by the platform stair and ramp zones and from the conductor by about 25-35 m. The choir also sits behind the 80-deg side blocks, whose occupants face the platform and see the choir side-on. The new choir arrangement departs from the client's recorded preference and is honestly flagged 'client to confirm'.",
+     "evidence": "manifest ARC-CHOIR-RISER-W-R01A..R07A (x 1.9-15.8), W-R01B..R05B (x about 21.2-22.4), E-R01A..R05A (x about 56.1-59.0), E-R01B..R07A (x about 65-78); ARC-PLATFORM bbox x 25.0-55.0; metrics choir_seats 412; floor_plan.png B03; renders/B03-44bc3ae457/04_interior_from_rear.png; open_issues.md choir note.",
+     "fix": "Pull the main choir blocks towards the platform: shift the platform stair and ramp to the outer ends of the choir, or put them behind the choir, so the choir block abuts the platform sides (x about 13-25 and 55-67). Alternatively trim the outer 4-5 m of each choir block and add a tier. Get client sign-off on choir orientation before freezing."},
+    {"id": "B3-ARC-03", "severity": "MAJOR", "discipline": "architecture",
+     "finding": "Plan efficiency and entry are unresolved, and some figures got worse. The footprint has grown to 7,303 m2 (33% more than A's 5,473 m2 for the same 3,000 seats), and the truss span to 53.05 m. About two-thirds of the congregation still arrives and leaves at the +3.325 rear passage by stairs, a climb of about 19-20 risers from the foyer. The side foyers remain residual corner triangles (about 229 m2) with toilets reshaped to fit the stairs. In-hall travel has also lengthened (max 45.4 m, 535 occupants over the 30 m placeholder flag); that is for life safety to judge, but it is driven by the plan shape.",
+     "evidence": "comparison.md footprint 7302.7 m2 vs 5473.4, truss span 53.05, own-engine max in-hall travel 45.4 m / 535 over flag; ARC-REAR-PASSAGE bbox z 3.33; open_issues.md 'Two-thirds of the congregation leaves at the rear-passage level (+L02) by stairs'; floor_plan.png B03 (side foyers 229 m2, toilets 69 m2).",
+     "fix": "Sink the bowl by 1.0-1.5 m (front rows and platform below foyer grade, BOH ramped) so the rear passage sits about 2 m above the foyer. Pull the rear corners in (chamfer the hall rectangle along the fan) to cut the footprint and turn the side foyers into designed, daylit spaces."},
+    {"id": "B3-ARC-04", "severity": "MINOR", "discipline": "church_functionality",
+     "finding": "Status of iter-02 B2-ARC-05 (booth): partly addressed. The floor top is now +4.22, 0.895 m above the rear passage (+3.325), so the sightline over standing people is fixed. The booth is still 3.3 m east of the axis (x 40.4-46.2) and only 24.4 m2.",
+     "evidence": "manifest ARC-BOOTH bbox x 40.4-46.2, z 3.98-4.22; ARC-REAR-PASSAGE top z 3.33; space_schedule.csv SP-08 24.36 m2; open_issues.md booth note.",
+     "fix": "Re-set the truss grid half a bay so the booth can centre on x = 40, and enlarge it to about 40 m2 (broadcast and lighting positions)."},
+    {"id": "B3-ARC-05", "severity": "MINOR", "discipline": "church_functionality",
+     "finding": "Side-on seating is essentially unchanged since B02: 232 seats more than 75 deg off the pulpit (B02 228), max bearing 80 deg, and 1,564 seats rely on screens. With only 3 screens (A has 6), screen coverage for the side blocks is unverified.",
+     "evidence": "comparison.md seats > 75 deg 232, screens 3; open_issues.md (1564 seats rely on screens).",
+     "fix": "Give the pulpit a thrust position that the preacher can move along, and add two side-facing IMAG screens aimed at the 70-80 deg blocks. Verify the viewing angles to each screen."},
+    {"id": "B3-ARC-06", "severity": "MINOR", "discipline": "aesthetics",
+     "finding": "Status of iter-02 B2-ARC-07 (massing): somewhat improved but still weak. The taller roof (top +17.78 m) gives the interior more generous volume (13.4 m3/seat against 10.05), and the foyer glazing rose to 159.9 m2. But the exterior is still a single huge mono-pitch plane with the low eave toward the entrance and no identity element. The stage wall still shows exposed X-bracing either side of the platform.",
+     "evidence": "renders/B03-44bc3ae457/01_exterior_aerial.png and 04_interior_from_rear.png; comparison.md roof top 17.78 m, glazing 159.9 m2, hall volume per seat 13.4 m3.",
+     "fix": "Add an entrance volume or lantern and an identity element, express the foyer as a glazed pavilion under the deep eave, and move or line the stage-wall bracing with a designed stage-wall feature."}
+  ],
+  "strengths": [
+    "Verified fixes since iter-02: platform 30 x 6.5 m + thrust = 234 m2 (ARC-PLATFORM bbox x 25-55, y 41.25-52.75; was 174.6); choir 412 chairs facing the congregation on tiers rising to the stage wall; named ministry space SPC-SP02M; booth floor +0.9 m above the rear passage; ground-floor lift door; flights of at most 12 risers; refuges at L02.",
+    "Still the stronger worship geometry of the two options: mean pulpit distance 28.57 m against A's 35.52 m, max 40.13 m against 57.58 m, max head turn 18.6 deg, and 0 seats turning more than 30 deg against 670 in A.",
+    "The raised roof answers the client's 'roof too low' comment: the truss bottom chord is at least 5.5 m above the rear passage and the hall volume is 13.4 m3/seat. The interior now reads as a generous worship space.",
+    "A generous 1,039 m2 main foyer, larger toilets than A, and back-of-house exit passages now enclosed.",
+    "Reports are now consistent with the model (80 deg fan, choir change flagged for the client)."
+  ],
+  "limitations": "Scores cover only architecture (15%), church_functionality (15%) and aesthetics (5%). weighted_score = 2.28 is the partial contribution of these three disciplines (35% of total weight); normalised to 0-10 it is 6.5. I verified the changes against model/blender_manifest.json (B03; mesh bounding boxes computed from manifest vertices), params.json, REVISIONS.md, the schedules, floor_plan.png, the regenerated comparison.md and the B03 renders. I did not open the .blend or IFC. I did not geometrically check sightlines from the choir to the conductor or from the side blocks to the screens. No site data were available.",
+  "certification_disclaimer": "This review is a structured concept-stage QA opinion from an AI reviewer. It is not professional architectural certification, code-compliance verification, fire or accessibility approval, or engineering sign-off. All dimensions in the model are unverified pending review by registered Zimbabwean professionals and the authorities."
+}

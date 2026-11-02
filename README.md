@@ -13,6 +13,19 @@ CONCEPT - UNVERIFIED - NOT FOR CONSTRUCTION. Reviewer scores are QA metrics, not
 | `agents/` | Specialist reviewer briefs and the multidisciplinary review rubric |
 | `tools/` | Repository tools: baseline verification, revision reproduction, per-design builds |
 
+Build / verify / document (from the repository root, Windows venv):
+```
+.venv/Scripts/python tools/build.py --design B --iteration 3          # Option B full pipeline -> designs/B-long-side-stage/
+.venv/Scripts/python tools/build.py --design A                        # Option A: non-destructive reproduction of PL08
+.venv/Scripts/python tools/build.py --design A --revision pl-02       # ... or of the recovered PL02
+.venv/Scripts/python comparisons/compare.py                           # A-vs-B measurements + figures -> comparisons/out/
+.venv/Scripts/python comparisons/score_reviews.py                     # rubric-weighted review scores
+.venv/Scripts/python documentation/proposal/build_proposal.py --design A|B   # engineering design proposal (HTML + PDF)
+.venv/Scripts/python documentation/proposal/build_proposal.py --compare      # comparative feasibility report
+```
+Current state: Option A PL08-590d273e35 (frozen), Option B B03-44bc3ae457. Recommendation: `comparisons/RECOMMENDATION.md`.
+Migration record: `documentation/migration/MIGRATION_AND_CHANGE_REPORT.md`.
+
 Verification (read-only on every design):
 ```
 .venv/Scripts/python tools/verify_baseline.py                                # 729 pre-restructure files, byte-exact
