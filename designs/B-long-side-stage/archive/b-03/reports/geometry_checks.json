@@ -1,0 +1,806 @@
+{
+  "design_id": "B-long-side-stage",
+  "revision": "B03-44bc3ae457",
+  "checks": [
+    {
+      "id": "EGR-01",
+      "description": "Each hall exit capacity width (door clear width, or the stair behind it if narrower) >= placeholder demand (queue-balanced assignment)",
+      "value": {
+        "DR-HALL-W-FRONT": [
+          129,
+          3.36,
+          0.645
+        ],
+        "DR-HALL-W-REAR": [
+          138,
+          2.0,
+          1.035
+        ],
+        "DR-HALL-E-FRONT": [
+          66,
+          3.36,
+          0.33
+        ],
+        "DR-HALL-E-REAR": [
+          166,
+          2.0,
+          1.245
+        ],
+        "DR-HALL-S1": [
+          565,
+          5.6,
+          4.237
+        ],
+        "DR-HALL-S2": [
+          581,
+          5.6,
+          4.357
+        ],
+        "DR-STAGE-W": [
+          597,
+          3.44,
+          2.985
+        ],
+        "DR-STAGE-E": [
+          394,
+          3.44,
+          1.97
+        ],
+        "DR-HALL-ARC-W": [
+          448,
+          3.36,
+          3.36
+        ],
+        "DR-HALL-ARC-E": [
+          448,
+          3.36,
+          3.36
+        ]
+      },
+      "criterion": "capacity >= load x factor",
+      "result": "PASS"
+    },
+    {
+      "id": "EGR-06",
+      "description": "Remaining hall exit width with the largest exit blocked >= total placeholder demand",
+      "value": {
+        "remaining": 29.92,
+        "demand": 17.66
+      },
+      "criterion": ">=",
+      "result": "PASS"
+    },
+    {
+      "id": "EGR-03N",
+      "description": "Max within-hall plan travel to the NEAREST hall exit",
+      "value": {
+        "max": 45.4,
+        "over_flag": 459
+      },
+      "criterion": "<= 30.0 m (placeholder flag)",
+      "result": "WARN"
+    },
+    {
+      "id": "EGR-03",
+      "description": "Max within-hall plan travel to the queue-balanced hall exit",
+      "value": {
+        "max": 45.4,
+        "over_flag": 535
+      },
+      "criterion": "<= 30.0 m (placeholder flag)",
+      "result": "WARN"
+    },
+    {
+      "id": "EGR-04",
+      "description": "Max plan travel to a final (external) exit",
+      "value": {
+        "max": 58.51,
+        "over_flag": 0
+      },
+      "criterion": "<= 60.0 m (placeholder flag)",
+      "result": "PASS"
+    },
+    {
+      "id": "EGR-05",
+      "description": "Number of independent hall exits",
+      "value": 10,
+      "criterion": ">= 8",
+      "result": "PASS"
+    },
+    {
+      "id": "EGR-08",
+      "description": "Each final (external) exit clear width >= the hall-exit load discharging to it (placeholder factor)",
+      "value": {
+        "over": {},
+        "loads": {
+          "DR-EXT-AMB-W1": 129,
+          "DR-EXT-AMB-W2": 586,
+          "DR-EXT-AMB-E1": 66,
+          "DR-EXT-AMB-E2": 614,
+          "DR-EXT-S03": 565,
+          "DR-EXT-S05": 581,
+          "DR-EXT-BOH-W": 612,
+          "DR-EXT-BOH-E": 409
+        }
+      },
+      "criterion": "clear >= load x level factor",
+      "result": "PASS"
+    },
+    {
+      "id": "EGR-09",
+      "description": "Every hall exit discharges to a final exit through fire-exit doors only (explicit route, no rooms)",
+      "value": {
+        "DR-HALL-W-FRONT": {
+          "via": [],
+          "final": "DR-EXT-AMB-W1",
+          "doors_fire_exit": true
+        },
+        "DR-HALL-W-REAR": {
+          "via": [],
+          "final": "DR-EXT-AMB-W2",
+          "doors_fire_exit": true
+        },
+        "DR-HALL-E-FRONT": {
+          "via": [],
+          "final": "DR-EXT-AMB-E1",
+          "doors_fire_exit": true
+        },
+        "DR-HALL-E-REAR": {
+          "via": [],
+          "final": "DR-EXT-AMB-E2",
+          "doors_fire_exit": true
+        },
+        "DR-HALL-S1": {
+          "via": [],
+          "final": "DR-EXT-S03",
+          "doors_fire_exit": true
+        },
+        "DR-HALL-S2": {
+          "via": [],
+          "final": "DR-EXT-S05",
+          "doors_fire_exit": true
+        },
+        "DR-STAGE-W": {
+          "via": [],
+          "final": "DR-EXT-BOH-W",
+          "doors_fire_exit": true
+        },
+        "DR-STAGE-E": {
+          "via": [],
+          "final": "DR-EXT-BOH-E",
+          "doors_fire_exit": true
+        },
+        "DR-HALL-ARC-W": {
+          "via": [
+            "DR-CORNER-AMB-W"
+          ],
+          "final": "DR-EXT-AMB-W2",
+          "doors_fire_exit": true
+        },
+        "DR-HALL-ARC-E": {
+          "via": [
+            "DR-CORNER-AMB-E"
+          ],
+          "final": "DR-EXT-AMB-E2",
+          "doors_fire_exit": true
+        }
+      },
+      "criterion": "all doors on every route are FireExit",
+      "result": "PASS"
+    },
+    {
+      "id": "EGR-07",
+      "description": "Occupant tally reconciles (seats + wheelchair + companions + choir + platform + BOH)",
+      "value": 3562,
+      "criterion": "sum of parts",
+      "result": "PASS"
+    },
+    {
+      "id": "SGT-01",
+      "description": "Min C-value over the row in front (all rows, chair positions)",
+      "value": 0.0602,
+      "criterion": ">= 0.06",
+      "result": "PASS"
+    },
+    {
+      "id": "SGT-02",
+      "description": "Min C-value over 2 rows in front (staggered seating)",
+      "value": 0.1203,
+      "criterion": ">= 0.12",
+      "result": "PASS"
+    },
+    {
+      "id": "SGT-WHEELCHAIR_BAND",
+      "description": "C-value for the cross-aisle wheelchair band over the last front row",
+      "value": 0.0883,
+      "criterion": ">= 0.06",
+      "result": "PASS"
+    },
+    {
+      "id": "SGT-H1",
+      "description": "Every seat has a usable view: pulpit within 45 deg and 30 m, or a screen within 45 deg (of both its normal and the chair's facing) and 8x its height",
+      "value": {
+        "without": 0,
+        "relying_on_screens": 1564
+      },
+      "criterion": "0 without",
+      "result": "PASS"
+    },
+    {
+      "id": "SGT-H2",
+      "description": "Seats with the pulpit more than 60 deg from the chair's facing direction",
+      "value": 0,
+      "criterion": "0",
+      "result": "PASS"
+    },
+    {
+      "id": "SEAT-01",
+      "description": "Congregation seat count equals target",
+      "value": 3000,
+      "criterion": "== 3000",
+      "result": "PASS"
+    },
+    {
+      "id": "CLS-01",
+      "description": "Chair / wheelchair-space footprints do not overlap (oriented boxes, 5 mm tolerance)",
+      "value": {
+        "overlaps": 0,
+        "first": []
+      },
+      "criterion": "0",
+      "result": "PASS"
+    },
+    {
+      "id": "CLS-02",
+      "description": "Chairs clear of columns and inside the hall's clear interior",
+      "value": {
+        "n": 0,
+        "first": []
+      },
+      "criterion": "0",
+      "result": "PASS"
+    },
+    {
+      "id": "CIR-03",
+      "description": "Min interior aisle clear width between chair edges (row arc)",
+      "value": 1.523,
+      "criterion": ">= 1.5 (- 20 mm arc tolerance)",
+      "result": "PASS"
+    },
+    {
+      "id": "CIR-04",
+      "description": "Max seats from any seat to an aisle",
+      "value": 7,
+      "criterion": "<= 7",
+      "result": "PASS"
+    },
+    {
+      "id": "CIR-01",
+      "description": "Front clear zone between the platform and the nearest chair",
+      "value": 4.504,
+      "criterion": ">= 4.5",
+      "result": "PASS"
+    },
+    {
+      "id": "GEO-03",
+      "description": "Single step from the cross-aisle passage up to the raised wheelchair band (band sightline)",
+      "value": 0.1,
+      "criterion": "0 or 0.1 - 0.19",
+      "result": "PASS"
+    },
+    {
+      "id": "CIR-07",
+      "description": "Rear-passage side doors open onto the rear passage where it meets the side wall (clear of the posts)",
+      "value": 25.73,
+      "criterion": "door within the passage band",
+      "result": "PASS"
+    },
+    {
+      "id": "GEO-01",
+      "description": "Rear aisle risers uniform and within limits",
+      "value": {
+        "min": 0.135,
+        "max": 0.135
+      },
+      "criterion": "0.1 - 0.19",
+      "result": "PASS"
+    },
+    {
+      "id": "GEO-02",
+      "description": "Front sloped floor gradient",
+      "value": "1:12.7",
+      "criterion": "<= 1:12",
+      "result": "PASS"
+    },
+    {
+      "id": "CIR-05",
+      "description": "Stair risers <= foyer stair max riser",
+      "value": [
+        [
+          "ARC-STAIR-PLATFORM-W",
+          0.15
+        ],
+        [
+          "ARC-STAIR-CORNER-W",
+          0.175
+        ],
+        [
+          "ARC-STAIR-CORNER-E",
+          0.175
+        ],
+        [
+          "ARC-STAIR-FOYER-W",
+          0.175
+        ],
+        [
+          "ARC-STAIR-FOYER-E",
+          0.175
+        ],
+        [
+          "ARC-STAIR-AMB-W",
+          0.175
+        ],
+        [
+          "ARC-STAIR-AMB-E",
+          0.175
+        ]
+      ],
+      "criterion": "<= 0.175",
+      "result": "PASS"
+    },
+    {
+      "id": "ACC-04",
+      "description": "Ramps: gradient <= 1:12 and flights <= max run",
+      "value": [
+        {
+          "name": "ARC-RAMP-BAND-W",
+          "rise": 0.1,
+          "gradient_1_in": 12.0,
+          "width": 1.5,
+          "flights": 1,
+          "run_per_flight": 1.2
+        },
+        {
+          "name": "ARC-RAMP-BAND-E",
+          "rise": 0.1,
+          "gradient_1_in": 12.0,
+          "width": 1.5,
+          "flights": 1,
+          "run_per_flight": 1.2
+        },
+        {
+          "name": "ARC-RAMP-PLATFORM-E",
+          "rise": 0.9,
+          "gradient_1_in": 12.0,
+          "width": 1.5,
+          "flights": 2,
+          "run_per_flight": 5.4
+        },
+        {
+          "name": "ARC-RAMP-CROSS-W",
+          "rise": 0.525,
+          "gradient_1_in": 12.0,
+          "width": 2.38,
+          "flights": 1,
+          "run_per_flight": 6.3,
+          "bbox": [
+            17.18851358485578,
+            43.30701297649604,
+            19.563679198580125,
+            49.60701297649604
+          ]
+        },
+        {
+          "name": "ARC-RAMP-CROSS-E",
+          "rise": 0.525,
+          "gradient_1_in": 12.0,
+          "width": 2.38,
+          "flights": 1,
+          "run_per_flight": 6.3,
+          "bbox": [
+            60.436320801419875,
+            43.30701297649604,
+            62.811486415144216,
+            49.60701297649604
+          ]
+        }
+      ],
+      "criterion": "1:12, <= 9 m per flight",
+      "result": "PASS"
+    },
+    {
+      "id": "ACC-01",
+      "description": "Wheelchair spaces provided vs concept placeholder (1 %)",
+      "value": 30,
+      "criterion": ">= 30",
+      "result": "PASS"
+    },
+    {
+      "id": "ACC-02",
+      "description": "Wheelchair spaces dispersed (front at grade + cross-aisle band, both sides)",
+      "value": [
+        "FE",
+        "FW",
+        "M02",
+        "M03",
+        "M04",
+        "M05",
+        "M06",
+        "M07",
+        "M08",
+        "M09",
+        "M10",
+        "M11"
+      ],
+      "criterion": ">= 4 groups",
+      "result": "PASS"
+    },
+    {
+      "id": "ACC-03",
+      "description": "Step-free route to every wheelchair space: ambulatory -> front-corner door (grade) -> front places; front corner -> cross-end ramp (1:12) -> cross-aisle passage -> band end ramp (1:12) -> band; same route out",
+      "value": {
+        "ramps": [
+          "ARC-RAMP-BAND-W",
+          "ARC-RAMP-BAND-E",
+          "ARC-RAMP-CROSS-W",
+          "ARC-RAMP-CROSS-E"
+        ]
+      },
+      "criterion": "4 ramps, all <= 1:12",
+      "result": "PASS"
+    },
+    {
+      "id": "ACC-08",
+      "description": "Wheelchair users (and companions) are assigned only to step-free (grade) hall exits",
+      "value": [
+        "DR-STAGE-E",
+        "DR-STAGE-W"
+      ],
+      "criterion": "all L00",
+      "result": "PASS"
+    },
+    {
+      "id": "CIR-06",
+      "description": "Egress stair flights <= max risers per flight (landings between flights)",
+      "value": {
+        "max_risers_per_flight": 10,
+        "max_flights": 2
+      },
+      "criterion": "<= 12",
+      "result": "PASS"
+    },
+    {
+      "id": "STR-CLR",
+      "description": "Clear height from the rear-passage floor to the truss bottom chord (room proportion, not headroom)",
+      "value": 5.53,
+      "criterion": ">= 5.5 m",
+      "result": "PASS"
+    },
+    {
+      "id": "SPC-03",
+      "description": "Every enclosed room (toilets, accessible WCs, BOH rooms, booth, lift) has a door",
+      "value": [],
+      "criterion": "none missing",
+      "result": "PASS"
+    }
+  ],
+  "metrics": {
+    "trimmed_seats": 122,
+    "rows": 32,
+    "rejected_candidates": {
+      "bearing from pulpit": 172,
+      "front wheelchair positions": 24,
+      "platform front clear zone": 52,
+      "wall aisle": 342
+    },
+    "choir_seats": 412,
+    "column_count": 56,
+    "truss_count": 11,
+    "truss_main_span": 53.05,
+    "foyer_rafter_span": 12.0,
+    "purlin_count": 350,
+    "brace_count": 100,
+    "beam_count": 11,
+    "egress": {
+      "occupants_assigned_in_hall": 3532,
+      "seats": 3000,
+      "wheelchair": 30,
+      "companions": 30,
+      "choir": 412,
+      "platform": 60,
+      "boh_staff": 30,
+      "building_total_occupants": 3562,
+      "hall_exits": 10,
+      "total_hall_exit_clear_width": 35.52,
+      "total_required_width_placeholder": 23.52,
+      "max_travel_hall": 45.4,
+      "max_travel_total": 58.51,
+      "mean_travel_hall": 19.88,
+      "max_travel_hall_to_nearest_exit": 45.4,
+      "count_nearest_travel_over_flag": 459,
+      "count_travel_hall_over_flag": 535,
+      "count_travel_total_over_flag": 0
+    },
+    "c_min_n1": 0.0602,
+    "c_min_n2": 0.1203,
+    "offaxis_pulpit": {
+      "over_45": 0,
+      "over_60": 0,
+      "max_head_turn_deg": 18.63,
+      "max_bearing_from_pulpit_deg": 79.98,
+      "relying_on_screens": 1564,
+      "without_usable_view": 0
+    },
+    "pulpit_distance": {
+      "max": 40.13,
+      "mean": 28.57,
+      "median": 30.51,
+      "p90": 38.25
+    },
+    "aisle_min_clear": 1.523,
+    "max_seats_to_aisle": 7,
+    "clear_height_over_rear_passage": 5.53,
+    "clear_height_over_front_rows": 12.01,
+    "seats": 3000,
+    "wheelchair_spaces": 30,
+    "cross_aisle_level": 0.625,
+    "top_level": 3.325,
+    "rear_riser": 0.135,
+    "front_slope_gradient_1_in": 12.67,
+    "hall_depth_grid_2_4": 53.05,
+    "hall_width": 80.0,
+    "platform_area": 234.3,
+    "platform_height": 0.9,
+    "truss_span": 53.05,
+    "roof_area_main_m2": 5513.9,
+    "hall_ridge_top": 17.47,
+    "downpipes": 22,
+    "footprint_m": [
+      89.1,
+      75.25
+    ],
+    "space_area_total_m2": 5874.5,
+    "structural_members": 627,
+    "levels": [
+      {
+        "id": "L00",
+        "elevation": 0.0,
+        "name": "Level 00 - datum +0.000 (ground: foyer, front of hall, choir, back-of-house)"
+      },
+      {
+        "id": "L01",
+        "elevation": 0.625,
+        "name": "Level 01 - datum +0.625 (cross aisle, rear rake, platform)"
+      },
+      {
+        "id": "L02",
+        "elevation": 3.325,
+        "name": "Level 02 - datum +3.325 (rear passage, booth, high-level items)"
+      }
+    ],
+    "sightline_model": {
+      "type": "radial",
+      "F": [
+        40.0,
+        46.25
+      ],
+      "thrust_radius": 5.0,
+      "eye_offset": 0.1,
+      "eye_height": 1.15,
+      "focal_height": 1.5,
+      "c_target": 0.06,
+      "c2_target": 0.12
+    },
+    "render_views": {
+      "design_id": "B-long-side-stage",
+      "platform_eye": [
+        40.0,
+        44.05000000000001,
+        2.6
+      ],
+      "platform_look": [
+        40.0,
+        8.0,
+        1.5
+      ],
+      "rear_eye": [
+        42.0,
+        1.1,
+        4.925000000000001
+      ],
+      "rear_look": [
+        40.0,
+        50.05000000000001,
+        2.0
+      ],
+      "side_eye": [
+        2.1628,
+        35.4442,
+        3.9850000000000003
+      ],
+      "side_look": [
+        40.0,
+        43.05000000000001,
+        2.4
+      ],
+      "roof_prefixes": [
+        "ENV-ROOF",
+        "STR-PURLIN",
+        "STR-BRACE-ROOF",
+        "ENV-CLAD",
+        "SRV-GUTTER",
+        "ENV-CANOPY"
+      ],
+      "cutaway_prefixes": [
+        "ENV-WALL-HALL-W",
+        "ENV-WALL-AMB-W",
+        "ENV-WALL-EXT-S",
+        "ARC-WALL-ARC-W"
+      ]
+    },
+    "purlin_lines": 35
+  },
+  "levels": [
+    {
+      "id": "L00",
+      "elevation": 0.0,
+      "name": "Level 00 - datum +0.000 (ground: foyer, front of hall, choir, back-of-house)"
+    },
+    {
+      "id": "L01",
+      "elevation": 0.625,
+      "name": "Level 01 - datum +0.625 (cross aisle, rear rake, platform)"
+    },
+    {
+      "id": "L02",
+      "elevation": 3.325,
+      "name": "Level 02 - datum +3.325 (rear passage, booth, high-level items)"
+    }
+  ],
+  "ramps": [
+    {
+      "name": "ARC-RAMP-BAND-W",
+      "rise": 0.1,
+      "gradient_1_in": 12.0,
+      "width": 1.5,
+      "flights": 1,
+      "run_per_flight": 1.2
+    },
+    {
+      "name": "ARC-RAMP-BAND-E",
+      "rise": 0.1,
+      "gradient_1_in": 12.0,
+      "width": 1.5,
+      "flights": 1,
+      "run_per_flight": 1.2
+    },
+    {
+      "name": "ARC-RAMP-PLATFORM-E",
+      "rise": 0.9,
+      "gradient_1_in": 12.0,
+      "width": 1.5,
+      "flights": 2,
+      "run_per_flight": 5.4
+    },
+    {
+      "name": "ARC-RAMP-CROSS-W",
+      "rise": 0.525,
+      "gradient_1_in": 12.0,
+      "width": 2.38,
+      "flights": 1,
+      "run_per_flight": 6.3,
+      "bbox": [
+        17.18851358485578,
+        43.30701297649604,
+        19.563679198580125,
+        49.60701297649604
+      ]
+    },
+    {
+      "name": "ARC-RAMP-CROSS-E",
+      "rise": 0.525,
+      "gradient_1_in": 12.0,
+      "width": 2.38,
+      "flights": 1,
+      "run_per_flight": 6.3,
+      "bbox": [
+        60.436320801419875,
+        43.30701297649604,
+        62.811486415144216,
+        49.60701297649604
+      ]
+    }
+  ],
+  "stairs": [
+    {
+      "name": "ARC-STAIR-PLATFORM-W",
+      "width": 2.0,
+      "riser": 0.15,
+      "risers": 6
+    },
+    {
+      "name": "ARC-STAIR-CORNER-W",
+      "width": 3.6,
+      "riser": 0.175,
+      "risers": 19,
+      "flights": 2,
+      "foot_y": 7.12,
+      "bbox": [
+        1.8776688805025088,
+        7.122162150001885,
+        5.477668880502509,
+        15.322162150001894
+      ]
+    },
+    {
+      "name": "ARC-STAIR-CORNER-E",
+      "width": 3.6,
+      "riser": 0.175,
+      "risers": 19,
+      "flights": 2,
+      "foot_y": 7.12,
+      "bbox": [
+        74.5223311194975,
+        7.122162150001885,
+        78.12233111949749,
+        15.322162150001894
+      ]
+    },
+    {
+      "name": "ARC-STAIR-FOYER-W",
+      "width": 6.0,
+      "riser": 0.175,
+      "risers": 19,
+      "flights": 2,
+      "foot_y": -9.0,
+      "bbox": [
+        25.0,
+        -9.0,
+        31.0,
+        -0.6
+      ]
+    },
+    {
+      "name": "ARC-STAIR-FOYER-E",
+      "width": 6.0,
+      "riser": 0.175,
+      "risers": 19,
+      "flights": 2,
+      "foot_y": -9.0,
+      "bbox": [
+        49.0,
+        -9.0,
+        55.0,
+        -0.6
+      ]
+    },
+    {
+      "name": "ARC-STAIR-AMB-W",
+      "width": 2.0,
+      "riser": 0.175,
+      "risers": 19,
+      "flights": 2,
+      "foot_y": 17.23,
+      "bbox": [
+        -5.500000000000001,
+        17.230157898801284,
+        -3.500000000000001,
+        27.630157898801293
+      ]
+    },
+    {
+      "name": "ARC-STAIR-AMB-E",
+      "width": 2.0,
+      "riser": 0.175,
+      "risers": 19,
+      "flights": 2,
+      "foot_y": 17.23,
+      "bbox": [
+        83.5,
+        17.230157898801284,
+        85.5,
+        27.630157898801293
+      ]
+    }
+  ]
+}

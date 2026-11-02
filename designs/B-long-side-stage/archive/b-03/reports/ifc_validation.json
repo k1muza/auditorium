@@ -1,0 +1,270 @@
+{
+  "ifc": "C:\\Users\\Kelvin\\Desktop\\auditorium\\designs\\B-long-side-stage\\model\\church_3000_B.ifc",
+  "ifcopenshell": "0.8.5",
+  "schema": "IFC4",
+  "checks": [
+    {
+      "id": "IFC-SCHEMA",
+      "description": "ifcopenshell.validate schema/attribute validation (express_rules=False)",
+      "result": "PASS",
+      "value": 0,
+      "criterion": "0 messages"
+    },
+    {
+      "id": "IFC-UNITS",
+      "description": "Length unit is metre (scale to SI = 1.0)",
+      "result": "PASS",
+      "value": 1,
+      "criterion": "1.0"
+    },
+    {
+      "id": "IFC-STOREYS",
+      "description": "Storeys and elevations match Blender levels",
+      "result": "PASS",
+      "value": [
+        [
+          "L00",
+          0.0
+        ],
+        [
+          "L01",
+          0.625
+        ],
+        [
+          "L02",
+          3.325
+        ]
+      ],
+      "criterion": "[('L00', 0.0), ('L01', 0.625), ('L02', 3.325)]"
+    },
+    {
+      "id": "IFC-HIERARCHY",
+      "description": "One IfcProject / IfcSite / IfcBuilding",
+      "result": "PASS",
+      "value": [
+        1,
+        1,
+        1
+      ],
+      "criterion": "[1,1,1]"
+    },
+    {
+      "id": "IFC-GRID",
+      "description": "IfcGrid axes match project grid",
+      "result": "PASS",
+      "value": 18,
+      "criterion": "18 axes A-H / 1-12"
+    },
+    {
+      "id": "IFC-CONTAIN",
+      "description": "Every IfcElement contained in a storey or aggregated in an assembly",
+      "result": "PASS",
+      "value": [],
+      "criterion": "0"
+    },
+    {
+      "id": "IFC-GUID",
+      "description": "GlobalIds unique",
+      "result": "PASS",
+      "value": 0,
+      "criterion": "0 duplicates"
+    },
+    {
+      "id": "IFC-COUNTS",
+      "description": "Element counts by class/predefined type equal Blender manifest",
+      "result": "PASS",
+      "value": 5017,
+      "criterion": "identical"
+    },
+    {
+      "id": "IFC-SEATS",
+      "description": "Congregation seats (Pset SeatType=congregation, CountsTowardTarget=True)",
+      "result": "PASS",
+      "value": 3000,
+      "criterion": "== 3000"
+    },
+    {
+      "id": "IFC-SEAT-TYPE",
+      "description": "Congregation seats typed by IfcFurnitureType CHAIR (mapped representation)",
+      "result": "PASS",
+      "value": 3000,
+      "criterion": "== 3000"
+    },
+    {
+      "id": "IFC-SEAT-POS",
+      "description": "Max seat placement deviation IFC vs Blender manifest",
+      "result": "PASS",
+      "value": 0.0,
+      "criterion": "< 0.1 mm"
+    },
+    {
+      "id": "IFC-SEAT-POS-LAYOUT",
+      "description": "Max seat placement deviation IFC vs layout engine (independent of Blender)",
+      "result": "PASS",
+      "value": {
+        "max_dev_m": 4.0000000041118255e-06,
+        "ids_not_in_layout": 0
+      },
+      "criterion": "< 1 mm, 0 missing"
+    },
+    {
+      "id": "IFC-MANIFEST-MATRIX",
+      "description": "Manifest objects with an all-zero translation (stale matrix guard)",
+      "result": "PASS",
+      "value": 0,
+      "criterion": "0"
+    },
+    {
+      "id": "IFC-OPENINGS",
+      "description": "Every door/window fills an opening that voids its host wall",
+      "result": "PASS",
+      "value": [
+        58,
+        58,
+        58
+      ],
+      "criterion": "voids == fills == doors+windows"
+    },
+    {
+      "id": "IFC-GEOM",
+      "description": "Every product with a representation tessellates with ifcopenshell.geom",
+      "result": "PASS",
+      "value": {
+        "tessellated": 5075,
+        "failed": 0,
+        "first_failed": []
+      },
+      "criterion": "0 failures"
+    },
+    {
+      "id": "IFC-EXTENTS",
+      "description": "Building element extents plausible in metres (vs the layout's declared footprint)",
+      "result": "PASS",
+      "value": [
+        -5.9,
+        -16.6,
+        -1.5,
+        85.9,
+        62.95,
+        17.78
+      ],
+      "criterion": "~89 x 75 m (+25 % for canopies/eaves)"
+    },
+    {
+      "id": "IFC-STOREY-RULE",
+      "description": "Storey of every element/space/zone matches its height (re-derived from IFC geometry)",
+      "result": "PASS",
+      "value": {
+        "checked": 5017,
+        "mismatches": 0,
+        "first": []
+      },
+      "criterion": "0 mismatches"
+    },
+    {
+      "id": "IFC-STOREY-NONEMPTY",
+      "description": "Every storey holds at least one element",
+      "result": "PASS",
+      "value": {
+        "L00": 1283,
+        "L01": 2547,
+        "L02": 1187
+      },
+      "criterion": "no empty storey"
+    },
+    {
+      "id": "IFC-MATERIALS",
+      "description": "Every built element has a (placeholder) material, directly or via its type",
+      "result": "PASS",
+      "value": {
+        "without_material": 0,
+        "first": [],
+        "materials": [
+          "Concrete (grade TBC)",
+          "Door assembly (TBC)",
+          "Glazing (TBC)",
+          "Masonry (TBC)",
+          "Masonry partition (TBC)",
+          "Metal flashing (TBC)",
+          "Metal rainwater goods (TBC)",
+          "Metal roof sheeting (TBC)",
+          "Metal wall cladding (TBC)",
+          "Proprietary item (TBC)",
+          "Reinforced concrete (grade TBC)",
+          "Seating (TBC)",
+          "Structural steel (grade TBC)"
+        ]
+      },
+      "criterion": "0 without"
+    },
+    {
+      "id": "IFC-QTO",
+      "description": "Columns, beams, members, slabs, walls, footings, stairs, ramps carry quantities with GrossVolume > 0",
+      "result": "PASS",
+      "value": {
+        "missing": 0,
+        "first": []
+      },
+      "criterion": "0 missing"
+    },
+    {
+      "id": "IFC-QTO-2",
+      "description": "Doors/windows (Area), railings (Length), coverings (GrossArea) carry base quantities",
+      "result": "PASS",
+      "value": {
+        "missing": 0,
+        "first": []
+      },
+      "criterion": "0 missing"
+    }
+  ],
+  "schema_validation_messages": [],
+  "counts_by_class": {
+    "IfcAudioVisualAppliance:DISPLAY": 3,
+    "IfcAudioVisualAppliance:SPEAKER": 5,
+    "IfcBeam:BEAM": 22,
+    "IfcColumn:COLUMN": 56,
+    "IfcCovering:CLADDING": 14,
+    "IfcDoor:DOOR": 50,
+    "IfcFooting:PAD_FOOTING": 56,
+    "IfcFurniture:CHAIR": 3442,
+    "IfcFurniture:USERDEFINED": 1,
+    "IfcMember:BRACE": 100,
+    "IfcMember:CHORD": 308,
+    "IfcMember:MEMBER": 319,
+    "IfcMember:PURLIN": 350,
+    "IfcPipeSegment:GUTTER": 1,
+    "IfcPipeSegment:RIGIDSEGMENT": 24,
+    "IfcRailing:GUARDRAIL": 34,
+    "IfcRailing:HANDRAIL": 15,
+    "IfcRamp:STRAIGHT_RUN_RAMP": 5,
+    "IfcSlab:FLOOR": 65,
+    "IfcSlab:LANDING": 3,
+    "IfcSlab:ROOF": 6,
+    "IfcSpace:INTERNAL": 29,
+    "IfcSpatialZone:USERDEFINED": 38,
+    "IfcStair:STRAIGHT_RUN_STAIR": 7,
+    "IfcTransportElement:ELEVATOR": 1,
+    "IfcWall:PARTITIONING": 41,
+    "IfcWall:SOLIDWALL": 14,
+    "IfcWindow:WINDOW": 8
+  },
+  "building_element_extents": [
+    -5.9,
+    -16.6,
+    -1.5,
+    85.9,
+    62.95,
+    17.78
+  ],
+  "elements_per_storey": {
+    "L00": 1283,
+    "L01": 2547,
+    "L02": 1187
+  },
+  "summary": {
+    "PASS": 21,
+    "FAIL": 0,
+    "WARN": 0
+  }
+}

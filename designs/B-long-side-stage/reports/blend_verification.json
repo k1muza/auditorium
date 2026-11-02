@@ -1,6 +1,6 @@
 {
   "blend": "C:\\Users\\Kelvin\\Desktop\\auditorium\\designs\\B-long-side-stage\\model\\church_3000_B.blend",
-  "revision": "B02-3c1014f7b9",
+  "revision": "B03-44bc3ae457",
   "blender": "5.2.3 LTS",
   "checks": [
     {
@@ -60,7 +60,7 @@
       "id": "BLD-FLOOR-SUPPORT",
       "description": "Every chair has floor under all 9 sample points",
       "value": {
-        "chairs": 3407,
+        "chairs": 3442,
         "unsupported": 0,
         "first": []
       },
@@ -82,7 +82,7 @@
       "id": "BLD-CLASH",
       "description": "Hard clashes in the coordination clash matrix (BVH overlap where AABBs penetrate > 5 mm)",
       "value": {
-        "pairs_tested": 193988,
+        "pairs_tested": 194191,
         "clashes": 0,
         "first": []
       },
@@ -104,7 +104,7 @@
       "id": "BLD-CONNECT",
       "description": "Every structural strut end touches another member or a column (from Blender objects)",
       "value": {
-        "members": 995,
+        "members": 1099,
         "loose": 0,
         "first": []
       },
@@ -146,9 +146,9 @@
         -5.9,
         -16.6,
         85.9,
-        61.45
+        62.95
       ],
-      "criterion": "~89.1 x 73.75 m",
+      "criterion": "~89.1 x 75.25 m",
       "result": "PASS"
     }
   ],

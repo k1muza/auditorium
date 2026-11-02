@@ -1,29 +1,30 @@
 design_id,revision,space_id,name,level,use,area_m2,status
-B-long-side-stage,B02-3c1014f7b9,SP-WCA-W1,Accessible WC W1,L00,Accessible WC,6.24,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-WCA-W2,Accessible WC W2,L00,Accessible WC,6.24,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-WC-W,Toilets W (female),L00,Toilets,74.34,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-WCA-E1,Accessible WC E1,L00,Accessible WC,6.24,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-WCA-E2,Accessible WC E2,L00,Accessible WC,6.24,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-WC-E,Toilets E (male),L00,Toilets,74.34,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-08,Sound / media booth,L02,Sound / media booth,24.36,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-09,Lift shaft,L00,Lift,5.76,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-AMB-W,Ambulatory W (covered circulation / egress),L00,Circulation,263.75,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-AMB-E,Ambulatory E (covered circulation / egress),L00,Circulation,263.75,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-BOH-X-W,BOH exit passage W,L00,Circulation (escape),19.98,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-BOH-X-E,BOH exit passage E,L00,Circulation (escape),19.98,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-BOH-C,BOH corridor,L00,Circulation,241.8,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-BOH-01,Vestry / pastors' office,L00,Vestry / pastors' office,54.25,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-BOH-02,Prayer room,L00,Prayer room,52.45,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-BOH-03,Green room / choir robing,L00,Green room / choir robing,59.11,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-BOH-04,Band / instrument store (stage level access),L00,Band / instrument store (stage level access),65.77,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-BOH-05,General storage,L00,General storage,54.67,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-BOH-06,Accessible WC (BOH),L00,Accessible WC (BOH),14.71,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-BOH-07,Staff WCs,L00,Staff WCs,38.57,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-BOH-08,MEP plant room (allowance),L00,MEP plant room (allowance),56.61,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-01,Auditorium seating hall (fan),L00,"Assembly - congregation seating (3,000 fixed seats)",2171.47,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-02,Platform / pulpit (thrust),L00,Platform,174.65,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-03,Front corner W (choir / platform access),L00,"Choir, circulation",262.29,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-04,Front corner E (choir / platform access),L00,"Choir, circulation",262.29,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-05W,"Side foyer W (rear corner, incl. toilets)",L00,Foyer / circulation,233.01,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-05E,"Side foyer E (rear corner, incl. toilets)",L00,Foyer / circulation,233.01,Concept allowance - unverified
-B-long-side-stage,B02-3c1014f7b9,SP-06,Main foyer,L00,Foyer,1038.96,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-WCA-W1,Accessible WC W1,L00,Accessible WC,6.24,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-WCA-W2,Accessible WC W2,L00,Accessible WC,6.24,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-WC-W,Toilets W (female),L00,Toilets,69.14,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-WCA-E1,Accessible WC E1,L00,Accessible WC,6.24,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-WCA-E2,Accessible WC E2,L00,Accessible WC,6.24,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-WC-E,Toilets E (male),L00,Toilets,69.14,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-08,Sound / media booth,L02,Sound / media booth,24.36,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-09,Lift shaft,L00,Lift,5.76,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-AMB-W,Ambulatory W (covered circulation / egress),L00,Circulation,271.25,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-AMB-E,Ambulatory E (covered circulation / egress),L00,Circulation,271.25,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-BOH-X-W,BOH exit passage W (enclosed),L00,Circulation (protected escape),31.32,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-BOH-X-E,BOH exit passage E (enclosed),L00,Circulation (protected escape),31.32,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-BOH-C,BOH corridor (in three segments),L00,Circulation,220.2,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-BOH-01,Vestry / pastors' office,L00,Vestry / pastors' office,54.25,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-BOH-02,Prayer room,L00,Prayer room,41.35,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-BOH-03,Green room / choir robing,L00,Green room / choir robing,70.21,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-BOH-04,Band / instrument store (stage level access),L00,Band / instrument store (stage level access),65.77,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-BOH-05,General storage,L00,General storage,54.67,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-BOH-06,Accessible WC (BOH),L00,Accessible WC (BOH),14.71,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-BOH-07,Staff WCs,L00,Staff WCs,49.67,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-BOH-08,MEP plant room (allowance),L00,MEP plant room (allowance),45.51,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-02M,Ministry / altar-call floor (in front of the thrust),L00,Ministry floor - kept clear of the front cross passage behind it,43.3,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-01,Auditorium seating hall (fan),L00,"Assembly - congregation seating (3,000 fixed seats)",2142.5,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-02,Platform / pulpit (thrust),L00,Platform,234.07,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-03,Front corner W (choir / platform access),L00,"Choir, circulation",275.66,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-04,Front corner E (choir / platform access),L00,"Choir, circulation",275.66,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-05W,"Side foyer W (rear corner, incl. toilets)",L00,Foyer / circulation,229.32,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-05E,"Side foyer E (rear corner, incl. toilets)",L00,Foyer / circulation,220.18,Concept allowance - unverified
+B-long-side-stage,B03-44bc3ae457,SP-06,Main foyer,L00,Foyer,1038.96,Concept allowance - unverified

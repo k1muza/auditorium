@@ -1,0 +1,10 @@
+{
+  "design_id": "B-long-side-stage",
+  "revision": "B03-44bc3ae457",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python_venv": "3.10.1",
+  "blender_version": "5.2.3 LTS",
+  "ifcopenshell": "0.8.5",
+  "matplotlib": "3.10.9",
+  "blender_mcp": "not used - Blender driven headless (blender --background --python)"
+}

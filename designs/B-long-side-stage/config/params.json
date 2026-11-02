@@ -72,7 +72,9 @@
     "_fan_study": "Width x fan-angle x block study (2026-11-02, tools in this session): 80 m hall, +-85 deg fan, 6 front / 12 rear blocks gives 31 rows and a 49.7 m deep hall; 72 m needs 33 rows (deeper, only 7 % less roof); +-80 deg needs 33 rows; +-90 deg seats beside the platform.",
     "front_passage_note": "The 3.0 m front clear zone round the platform doubles as the front cross passage.",
     "_wheelchair_band": "The cross aisle steps up one riser from the last front row so wheelchair users in the band see over row 12 (C >= 0.06).",
-    "_iteration2": "Review response (iter-01): fan narrowed from +-85 to +-80 deg (fewer side-on seats), front clear zone 3.0 -> 4.5 m so a ministry / altar-call floor sits in front of the thrust, separate from the front cross passage; thrust radius 5.5 -> 4.5 m."
+    "_iteration2": "Review response (iter-01): fan narrowed from +-85 to +-80 deg (fewer side-on seats), front clear zone 3.0 -> 4.5 m so a ministry / altar-call floor sits in front of the thrust, separate from the front cross passage; thrust radius 5.5 -> 4.5 m.",
+    "ministry_floor_depth": 2.5,
+    "_iteration3": "The 4.5 m front zone is split into a 2.5 m ministry / altar-call floor (named space SP-02M) and a 2.0 m front cross passage behind it."
   },
   "sightlines": {
     "_source": "C-value targets, focal-point rule and riser limits carried from Option A (common basis).",
@@ -89,10 +91,10 @@
     ]
   },
   "stage": {
-    "_proposal": "NEW PROPOSAL: thrust 'D' platform on the long north wall. Rear band 26 m x 5.5 m against the stage wall for band / musicians, plus a semicircular thrust (radius 5.5 m) carrying the pulpit 1.8 m behind its front edge. Height 0.90 m (lower than A's 1.00 m because the nearest rows are closer and the room is shallower).",
-    "rear_band_width": 26.0,
-    "rear_band_depth": 5.5,
-    "thrust_radius": 4.5,
+    "_proposal": "NEW PROPOSAL: thrust platform on the long north wall - rear band 30 m x 6.5 m against the stage wall for band / musicians plus a semicircular thrust (radius 5.0 m) carrying the pulpit 1.8 m behind its front edge; about 234 m2 at +0.90 m.",
+    "rear_band_width": 30.0,
+    "rear_band_depth": 6.5,
+    "thrust_radius": 5.0,
     "platform_height": 0.9,
     "pulpit_back_from_edge": 1.8,
     "ramp_gradient_1_in": 12.0,
@@ -111,8 +113,11 @@
       "riser_height": 0.2,
       "max_tiers": 4,
       "rows_per_tier": 2,
-      "_iteration2": "Choir on tiered risers (0.2 m per tier, two rows per tier, max +0.80) so it is visible to the congregation; the row nearest the platform stays at grade with the wheelchair choir place."
-    }
+      "_iteration2": "Choir on tiered risers (0.2 m per tier, two rows per tier, max +0.80) so it is visible to the congregation; the row nearest the platform stays at grade with the wheelchair choir place.",
+      "max_reach": 24.0,
+      "_iteration3": "NEW PROPOSAL (replaces the carried Option A preference for Option B, client to confirm): choir in straight rows beside the band facing the congregation, on tiers rising towards the stage wall (0.2 m per two rows, max +0.80), within 18 m of the platform side - visible and close to the band (review ARC-B iter-2: choir remote / tiers rising the wrong way)."
+    },
+    "_iteration3": "Platform enlarged (review ARC-B iter-2: platform shrank to 175 m2)."
   },
   "accessibility": {
     "_source": "Wheelchair-space size and 1 % concept target carried from Option A; locations are a NEW PROPOSAL.",
@@ -128,10 +133,11 @@
     "ramp_width": 2.0,
     "_route": "Step-free to the wheelchair band: front aisles slope <= 1:12 to the cross-aisle passage, which is level with the last front row; the band is a strip one 0.10 m step higher (so wheelchair users see over row 12), reached by 1:12 ramps at both ends. Corner ramps were tried and removed (clash with the platform ramp).",
     "cross_end_ramp_width": 1.6,
-    "_iteration2": "Front wheelchair places moved to rows 1-2 of the two centre blocks (near the axis); 1:12 ramps beside the cross-aisle end steps give a step-free route from the front corners to the band and back out; wheelchair users are assigned only to grade exits."
+    "_iteration2": "Front wheelchair places moved to rows 1-2 of the two centre blocks (near the axis); 1:12 ramps beside the cross-aisle end steps give a step-free route from the front corners to the band and back out; wheelchair users are assigned only to grade exits.",
+    "_iteration3": "Cross-aisle ends: full-width 1:12 ramps replace the steps; band places limited to the inner rear blocks (bearing within the fan); two refuge spaces on the rear landing at L02 by the east stair and lift."
   },
   "foyer": {
-    "_proposal": "NEW PROPOSAL: 10 m deep entrance foyer along the whole south long side under the same mono-pitch roof as the hall (one roof plane, external eaves gutter on the entrance facade, no box gutters). Two wide central stairs from the rear passage doors (+L02) to the foyer (client preference for two central foyer stairs, carried from Option A PL02). Sound/media booth between the stair heads, raised over the foyer, viewing over the rear passage. The two rear corners of the hall rectangle that the fan leaves free become side foyers with the toilets.",
+    "_proposal": "NEW PROPOSAL: 12 m deep entrance foyer along the whole south long side under the same mono-pitch roof as the hall (one roof plane, external eaves gutter on the entrance facade, no box gutters). Two wide central stairs from the rear passage doors (+L02) to the foyer (client preference for two central foyer stairs, carried from Option A PL02). Sound/media booth between the stair heads, raised over the foyer, viewing over the rear passage. The two rear corners of the hall rectangle that the fan leaves free become side foyers with the toilets.",
     "depth": 12.0,
     "stair_width": 6.0,
     "stair_max_riser": 0.175,
@@ -158,7 +164,7 @@
         46.2
       ],
       "depth": 4.2,
-      "floor_raise": 0.45,
+      "floor_raise": 0.9,
       "height": 2.4,
       "door_x": 42.5,
       "_note": "Booth sits just east of the centre line: the truss on grid F passes over the centre line 0.35 m too low for a raised booth."
@@ -172,7 +178,9 @@
     "_doors_note": "Entrance doors centred between the 8 m facade columns.",
     "max_flight_risers": 12,
     "stair_mid_landing": 1.5,
-    "_iteration2": "Stairs split into flights of <= 12 risers with 1.5 m landings, centre handrails on the 6 m stairs; foyer deepened to 12 m to keep the stair feet clear of the facade."
+    "_iteration2": "Stairs split into flights of <= 12 risers with 1.5 m landings, centre handrails on the 6 m stairs; foyer deepened to 12 m to keep the stair feet clear of the facade.",
+    "refuge_x": 46.0,
+    "_iteration3": "Booth floor raised to 0.9 m above the rear passage (sightline over standing people); taller foyer glazing; rear landing extended to the L02 lift door."
   },
   "back_of_house": {
     "corridor_depth": 3.0,
@@ -187,12 +195,12 @@
         "BOH-02",
         "Prayer room",
         10.0,
-        19.6
+        17.6
       ],
       [
         "BOH-03",
         "Green room / choir robing",
-        23.2,
+        21.2,
         34.0
       ],
       [
@@ -217,18 +225,19 @@
         "BOH-07",
         "Staff WCs",
         58.8,
-        65.9
+        67.9
       ],
       [
         "BOH-08",
         "MEP plant room (allowance)",
-        69.5,
+        71.5,
         79.85
       ]
     ],
     "roof_top": 5.0,
     "depth": 9.0,
-    "_iteration2": "Two 3.6 m exit passages (x 19.6-23.2 and 65.9-69.5) run from the corridor straight to final exits in the north wall, aligned with the stage-side hall exits (review critical blocker)."
+    "_iteration2": "Two 3.6 m exit passages (x 19.6-23.2 and 65.9-69.5) run from the corridor straight to final exits in the north wall, aligned with the stage-side hall exits (review critical blocker).",
+    "_iteration3": "Exit passages enclosed from the stage wall to the final exits; the corridor reaches them only through self-closing fire doors."
   },
   "doors": {
     "external_width": 2.4,
@@ -248,9 +257,9 @@
     "pad_other": 1.8,
     "pad_thickness": 0.6,
     "pad_top_z": -0.9,
-    "truss_bearing_z_rear": 9.0,
+    "truss_bearing_z_rear": 9.5,
     "roof_pitch_deg": 5.0,
-    "truss_depth": 3.0,
+    "truss_depth": 3.5,
     "chord_section": 0.35,
     "web_section": 0.2,
     "purlin_section": [
@@ -300,7 +309,10 @@
       ]
     ],
     "foyer_rafter_depth": 0.6,
-    "_iteration2": "Continuity over grid 2 released: hall trusses span grid 2 -> 4 only, foyer roof on simply supported 12 m rafters (removes back-span uplift). Eaves-line horizontal wind girders along grids 2 and 4 in every bay. Webs re-oriented to a true Pratt pattern."
+    "_iteration2": "Continuity over grid 2 released: hall trusses span grid 2 -> 4 only, foyer roof on simply supported 12 m rafters (removes back-span uplift). Eaves-line horizontal wind girders along grids 2 and 4 in every bay. Webs re-oriented to a true Pratt pattern.",
+    "_iteration3": "Trusses deepened to 3.5 m (span/depth about 15) with the bearing raised to +9.5 m; purlins on every truss node and half-panel (brace nodes are purlin/strut nodes); foyer roof bracing in the end bays; gutter overflow weirs modelled. The foyer rafter to truss-end connection must be a true pin (detail TBC).",
+    "min_clear_over_rear_passage": 5.5,
+    "_roof_height": "User review 2026-11-02: roof read too low over the rear rows (2.7 m clear above the rear passage in B02). Bearing height is now derived from the rake so the truss bottom chord is >= 5.5 m above the rear-passage floor."
   },
   "egress_placeholders": {
     "_status": "PLACEHOLDER FACTORS FOR CONCEPT FLAGGING ONLY - NOT LOCAL CODE VALUES (identical to Option A for comparability)",
@@ -319,12 +331,12 @@
         "center_offset": [
           0.0,
           0.0,
-          7.1
+          9.4
         ],
         "width": 16.0,
-        "height": 6.0,
+        "height": 7.0,
         "yaw_deg": 0.0,
-        "role": "Main centre LED wall above the band, on the stage wall (8 x 6.0 m = 48 m reach)"
+        "role": "Main centre LED wall above the band, on the stage wall (8 x 7.0 m = 56 m reach)"
       },
       {
         "name": "SIDE-W",
@@ -468,20 +480,21 @@
     "toilet_block": [
       0.15,
       0.15,
-      13.0,
-      7.5
+      17.0,
+      5.5
     ],
     "wca_width": 2.6,
     "wca_depth": 2.4,
     "arc_wall_facet_deg": 5.0,
     "rear_passage_door_deg": 52.0,
-    "stair_width": 3.0,
+    "stair_width": 3.6,
     "foyer_door_x": [
       20.0,
       60.0
     ],
     "ambulatory_door_y": 12.5,
-    "_acoustics": "Concave rear wall: 5 deg facets plus an absorptive / diffusive finish allowance to suppress focused echoes back to the platform (review AC-B); acoustic design not done."
+    "_acoustics": "Concave rear wall: 5 deg facets plus an absorptive / diffusive finish allowance to suppress focused echoes back to the platform (review AC-B); acoustic design not done.",
+    "_iteration3": "Toilet blocks reshaped to 17 x 5.5 m (same order of area) so the 3.6 m side-foyer stairs, now with landings, clear them."
   },
   "drainage": {
     "gutter": [

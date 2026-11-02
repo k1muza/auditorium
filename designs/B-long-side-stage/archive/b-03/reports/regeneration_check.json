@@ -1,0 +1,15 @@
+{
+  "design_id": "B-long-side-stage",
+  "revision": "B03-44bc3ae457",
+  "build_1_manifest_sha256": "356464e19ccc094f284d8ae1a5c64159700c0fbf518a867ca8b60c1ce1169c83",
+  "build_2_manifest_sha256": "356464e19ccc094f284d8ae1a5c64159700c0fbf518a867ca8b60c1ce1169c83",
+  "identical": true,
+  "objects": [
+    5017,
+    5017
+  ],
+  "seats": [
+    3000,
+    3000
+  ]
+}

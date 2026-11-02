@@ -50,5 +50,57 @@
         "iter-01/B-structure.json"
       ]
     }
+  },
+  "iter-02": {
+    "A": {
+      "revisions_reviewed": [
+        "PL08-590d273e35"
+      ],
+      "scores": {
+        "architecture": 6.0,
+        "church_functionality": 5.5,
+        "aesthetics": 4.0,
+        "life_safety": 5.5,
+        "accessibility": 7.0,
+        "acoustics_av": 5.5,
+        "structural_engineering": 7.0,
+        "constructability_maintenance": 6.0,
+        "cost_drivers": 6.5
+      },
+      "weighted": 5.975,
+      "critical_blockers": 0,
+      "major_findings": 11,
+      "accepted": false,
+      "sources": [
+        "iter-01/A-architecture.json",
+        "iter-01/A-safety.json",
+        "iter-01/A-structure.json"
+      ]
+    },
+    "B": {
+      "revisions_reviewed": [
+        "B02-3c1014f7b9"
+      ],
+      "scores": {
+        "architecture": 6.2,
+        "church_functionality": 6.8,
+        "aesthetics": 4.5,
+        "life_safety": 5.0,
+        "accessibility": 6.5,
+        "acoustics_av": 6.0,
+        "structural_engineering": 6.5,
+        "constructability_maintenance": 6.5,
+        "cost_drivers": 5.5
+      },
+      "weighted": 6.075,
+      "critical_blockers": 0,
+      "major_findings": 11,
+      "accepted": false,
+      "sources": [
+        "iter-02/B-architecture.json",
+        "iter-02/B-safety.json",
+        "iter-02/B-structure.json"
+      ]
+    }
   }
 }

@@ -1,11 +1,11 @@
 design_id,revision,exit_id,wall,level,kind,x,y,sill_z,door_width,clear_width,capacity_width,stair_behind,assigned_occupants,required_width_placeholder,final_exit,role
-B-long-side-stage,B02-3c1014f7b9,DR-HALL-W-FRONT,W,L00,to_ambulatory,-0.45,47.85,0.0,3.6,3.36,3.36,,121,0.605,DR-EXT-AMB-W1,Hall exit - front corner (grade) to ambulatory
-B-long-side-stage,B02-3c1014f7b9,DR-HALL-W-REAR,W,L02,to_ambulatory,-0.45,26.362,3.325,3.6,3.36,2.0,ARC-STAIR-AMB-W,157,1.177,DR-EXT-AMB-W2,Hall exit - rear passage end (L02) to ambulatory stair
-B-long-side-stage,B02-3c1014f7b9,DR-HALL-E-FRONT,E,L00,to_ambulatory,80.45,47.85,0.0,3.6,3.36,3.36,,73,0.365,DR-EXT-AMB-E1,Hall exit - front corner (grade) to ambulatory
-B-long-side-stage,B02-3c1014f7b9,DR-HALL-E-REAR,E,L02,to_ambulatory,80.45,26.362,3.325,3.6,3.36,2.0,ARC-STAIR-AMB-E,181,1.357,DR-EXT-AMB-E2,Hall exit - rear passage end (L02) to ambulatory stair
-B-long-side-stage,B02-3c1014f7b9,DR-HALL-S1,S,L02,to_foyer_stair,28.0,-0.45,3.325,6.0,5.6,5.6,ARC-STAIR-FOYER-W,588,4.41,DR-EXT-S03,Hall exit - rear landing (L02) to foyer stair
-B-long-side-stage,B02-3c1014f7b9,DR-HALL-S2,S,L02,to_foyer_stair,52.0,-0.45,3.325,6.0,5.6,5.6,ARC-STAIR-FOYER-E,600,4.5,DR-EXT-S05,Hall exit - rear landing (L02) to foyer stair
-B-long-side-stage,B02-3c1014f7b9,DR-STAGE-W,N,L00,to_boh,21.4,52.0,0.0,3.6,3.44,3.44,,602,3.01,DR-EXT-BOH-W,Hall exit beside the platform to the back-of-house corridor (protected route to BOH exits)
-B-long-side-stage,B02-3c1014f7b9,DR-STAGE-E,N,L00,to_boh,67.7,52.0,0.0,3.6,3.44,3.44,,375,1.875,DR-EXT-BOH-E,Hall exit beside the platform to the back-of-house corridor (protected route to BOH exits)
-B-long-side-stage,B02-3c1014f7b9,DR-HALL-ARC-W,arc-W,L02,to_corner_stair,3.627,18.373,3.325,3.6,3.36,3.0,ARC-STAIR-CORNER-W,400,3.0,DR-EXT-AMB-W2,Hall exit - rear passage (L02) to side-foyer stair
-B-long-side-stage,B02-3c1014f7b9,DR-HALL-ARC-E,arc-E,L02,to_corner_stair,76.373,18.373,3.325,3.6,3.36,3.0,ARC-STAIR-CORNER-E,400,3.0,DR-EXT-AMB-E2,Hall exit - rear passage (L02) to side-foyer stair
+B-long-side-stage,B03-44bc3ae457,DR-HALL-W-FRONT,W,L00,to_ambulatory,-0.45,49.35,0.0,3.6,3.36,3.36,,129,0.645,DR-EXT-AMB-W1,Hall exit - front corner (grade) to ambulatory
+B-long-side-stage,B03-44bc3ae457,DR-HALL-W-REAR,W,L02,to_ambulatory,-0.45,25.73,3.325,3.6,3.36,2.0,ARC-STAIR-AMB-W,138,1.035,DR-EXT-AMB-W2,Hall exit - rear passage end (L02) to ambulatory stair
+B-long-side-stage,B03-44bc3ae457,DR-HALL-E-FRONT,E,L00,to_ambulatory,80.45,49.35,0.0,3.6,3.36,3.36,,66,0.33,DR-EXT-AMB-E1,Hall exit - front corner (grade) to ambulatory
+B-long-side-stage,B03-44bc3ae457,DR-HALL-E-REAR,E,L02,to_ambulatory,80.45,25.73,3.325,3.6,3.36,2.0,ARC-STAIR-AMB-E,166,1.245,DR-EXT-AMB-E2,Hall exit - rear passage end (L02) to ambulatory stair
+B-long-side-stage,B03-44bc3ae457,DR-HALL-S1,S,L02,to_foyer_stair,28.0,-0.45,3.325,6.0,5.6,5.6,ARC-STAIR-FOYER-W,565,4.237,DR-EXT-S03,Hall exit - rear landing (L02) to foyer stair
+B-long-side-stage,B03-44bc3ae457,DR-HALL-S2,S,L02,to_foyer_stair,52.0,-0.45,3.325,6.0,5.6,5.6,ARC-STAIR-FOYER-E,581,4.357,DR-EXT-S05,Hall exit - rear landing (L02) to foyer stair
+B-long-side-stage,B03-44bc3ae457,DR-STAGE-W,N,L00,to_boh,19.4,53.5,0.0,3.6,3.44,3.44,,597,2.985,DR-EXT-BOH-W,Hall exit beside the platform to the back-of-house corridor (protected route to BOH exits)
+B-long-side-stage,B03-44bc3ae457,DR-STAGE-E,N,L00,to_boh,69.7,53.5,0.0,3.6,3.44,3.44,,394,1.97,DR-EXT-BOH-E,Hall exit beside the platform to the back-of-house corridor (protected route to BOH exits)
+B-long-side-stage,B03-44bc3ae457,DR-HALL-ARC-W,arc-W,L02,to_corner_stair,3.678,17.984,3.325,3.6,3.36,3.36,ARC-STAIR-CORNER-W,448,3.36,DR-EXT-AMB-W2,Hall exit - rear passage (L02) to side-foyer stair
+B-long-side-stage,B03-44bc3ae457,DR-HALL-ARC-E,arc-E,L02,to_corner_stair,76.322,17.984,3.325,3.6,3.36,3.36,ARC-STAIR-CORNER-E,448,3.36,DR-EXT-AMB-E2,Hall exit - rear passage (L02) to side-foyer stair

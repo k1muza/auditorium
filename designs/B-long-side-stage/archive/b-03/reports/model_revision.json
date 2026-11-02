@@ -1,0 +1,133 @@
+{
+  "design_id": "B-long-side-stage",
+  "revision": "B03-44bc3ae457",
+  "iteration": 3,
+  "units": "m",
+  "source_hashes": {
+    "config/params.json": "f81053ac3ae5b801c9b2de0eac399e30c8e06741b7fa04fc7e8049467184569f",
+    "src/layout.py": "25bdca4a02ee1d704ce26ceb8ccd76c160cb4d66f63f12d7b1e23f1321c0fdbb",
+    "src/reports.py": "5af693842eefe3195f11f5e5b5cd9d5d213710888bf3b6c60406728cad01c4df",
+    "src/drawings.py": "0c8ec145e5044f22ce81dc6f3627bb5fd9b422936a32e5c43a96f7561ce57d31",
+    "tests/test_layout.py": "e8b23aba493651eb3642cf416d1f833ed36af11bf81e3e933a6da526e5f13930",
+    "../../shared/bim/geometry.py": "e24a0b2f94edac554b225ad81e385ee4efb63746b5ad2e4290646f32a12d24a7",
+    "../../shared/bim/build_blender.py": "95c6a9deb318822ec85435e54aa52ea7693623210ec86a790875987861b29a90",
+    "../../shared/bim/verify_blend.py": "a8b887a647d43a1899059c33e5c31885ce30eb4c840a24e5db79f76ab4c4e9cb",
+    "../../shared/bim/export_ifc.py": "63e72c166381e5480977948fa68f83535afdd002cfdbc35ee18fbaa4ce29ac75",
+    "../../shared/bim/validate_ifc.py": "afc360f18265ebdbae3360ccecdb87203edae4feff475c6e789566db5a88ac04",
+    "../../shared/drawings/sheets.py": "e08e3a20e6083ee3fd18b065b4987a346f455bc6d10677f43bef88ee60f2e699",
+    "../../shared/pipeline.py": "99b11afba30aadd2b2c9ddb23551c19dc48443dea801dbfa1bf50f1c59fce8d3",
+    "../../shared/render_views.py": "78894ec01a471503b61cfb4f436a4c0f58668e27dfa91b61669d3d414005b681"
+  },
+  "outputs": {
+    "exports/floor_plan.png": {
+      "sha256": "3c3ef565643b3b4bfd75fa1eecef0cdb46df3b0c0c2fd19e2a7efa9ef5e1db77",
+      "bytes": 927689
+    },
+    "exports/model_axonometric.png": {
+      "sha256": "c0bbe9d9f909c032cf4526977fc886b39609adcb8ab42814ea4d5260dafdb617",
+      "bytes": 1756210
+    },
+    "exports/model_cutaway.png": {
+      "sha256": "3c2ca0412be34b0a443d05ce02d1ff0b93f68f5d76f5b1155701ee3ac6f769bb",
+      "bytes": 2271989
+    },
+    "exports/seating_plan.png": {
+      "sha256": "0a1282da264c91bd2bca6b0a42c0471867e0af23ca62df804ce0e2065f446410",
+      "bytes": 898537
+    },
+    "exports/section_AA.png": {
+      "sha256": "4dae7eeb81d437a61b37458cbf9ab3c2360df0356745c887c514f3e3c0adad28",
+      "bytes": 118645
+    },
+    "exports/section_BB.png": {
+      "sha256": "4037ae12676156976c7d1cf90de0dab76650508048c55df0a63380dd513ee68c",
+      "bytes": 110558
+    },
+    "exports/structural_grid.png": {
+      "sha256": "91456d5f5fde1a0c8facbde5edb9e80f2355172570fb6aa1ab3e5e2bc9fb9a9d",
+      "bytes": 275033
+    },
+    "model/blender_manifest.json": {
+      "sha256": "356464e19ccc094f284d8ae1a5c64159700c0fbf518a867ca8b60c1ce1169c83",
+      "bytes": 3581634
+    },
+    "model/church_3000_B.blend": {
+      "sha256": "ed9987dac0e70cab12df4771028aa4f99e67165c3e5a9021c2c68f9883a0f15f",
+      "bytes": 1638525
+    },
+    "model/church_3000_B.blend1": {
+      "sha256": "83e93034d3e7ea04fc776df7af69ceb7f0579cf26b4ed2bb8f2b3eea88d9343b",
+      "bytes": 1638572
+    },
+    "model/church_3000_B.ifc": {
+      "sha256": "b9a30558ecad32c4298653e138400152aab1c640df914f99dcb95fa3d357f4b9",
+      "bytes": 10802786
+    },
+    "reports/accessible_positions.csv": {
+      "sha256": "2ef0ab858ce64b9616b21f35c78d47e517969dca031809c256eaf5f692204795",
+      "bytes": 2653
+    },
+    "reports/assumptions.md": {
+      "sha256": "46a13876447a514196395675b523fc630b106a737f9b765d7d3a70681c899e4b",
+      "bytes": 8610
+    },
+    "reports/basis_of_design.md": {
+      "sha256": "56be7d71eb04d3d83567a687077e5b809a6fa3fef8dbf9efeaa41f2d2b0aaf16",
+      "bytes": 1864
+    },
+    "reports/blend_verification.json": {
+      "sha256": "e8a28b7c166005f8f5ed5093a476aed1ac4a103d923de72faa87bb9be109ecad",
+      "bytes": 4354
+    },
+    "reports/egress_travel.csv": {
+      "sha256": "327efc84c3249f7ed1ec6991ff49e455c9496be2046a179eb8a009557ad1a64e",
+      "bytes": 279081
+    },
+    "reports/element_schedule.csv": {
+      "sha256": "ec2f42768605d522109cfb6519eb9a30674460961cfdb47280f2c25123c40f9d",
+      "bytes": 2618
+    },
+    "reports/environment.json": {
+      "sha256": "eca3b874e738b07de81969708c856ccb2469c16c1bbeadc909c87ea9fd8e9bcb",
+      "bytes": 317
+    },
+    "reports/exit_schedule.csv": {
+      "sha256": "08cfb60d667d85b7044bb181877f4034101548e0a20e640081eb4c09a4be7317",
+      "bytes": 2062
+    },
+    "reports/geometry_checks.json": {
+      "sha256": "22221262ba6d5c2569a4db2f56fc1fa0437d4b4cf29c56ea5478e6c5477b9867",
+      "bytes": 20070
+    },
+    "reports/ifc_validation.json": {
+      "sha256": "104245480c27bccfb9e1faee75b343660274748b6a63225ee99f190b3d2ccf4e",
+      "bytes": 7259
+    },
+    "reports/open_issues.md": {
+      "sha256": "36cc225cad4012f7d1b6cff52622ff1c06f3a1d4b2e7bf34e6c48503d45fbb71",
+      "bytes": 2680
+    },
+    "reports/regeneration_check.json": {
+      "sha256": "1bd628c5f7d17f61f537a16dca80304f65e800d5911e0fc65f1804a15042e5fb",
+      "bytes": 375
+    },
+    "reports/row_schedule.csv": {
+      "sha256": "39c39d517f8de5793d391f9dedc2872d4674a4a6fc8445cede31f3155195523c",
+      "bytes": 2050
+    },
+    "reports/seat_count_check.txt": {
+      "sha256": "5716bee107fe514b22f1d885e215bb766c8f3d49eb233e26c13f50966bde34d8",
+      "bytes": 564
+    },
+    "reports/seating_schedule.csv": {
+      "sha256": "9886dbdf9eba8a158747366c3259f568865f986cec13f3cedba380607f333b8a",
+      "bytes": 300541
+    },
+    "reports/space_schedule.csv": {
+      "sha256": "4feb974180a749093888e6ac49384c95e6284cab7ba28b34b9c112da466a8235",
+      "bytes": 3866
+    }
+  },
+  "renders": "renders/B03-44bc3ae457/",
+  "pipeline_seconds": 333.5
+}

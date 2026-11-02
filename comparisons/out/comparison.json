@@ -7,8 +7,8 @@
     },
     "B": {
       "design_id": "B-long-side-stage",
-      "revision": "B02-3c1014f7b9",
-      "manifest_sha256": "91d9a2b8f5ab334c290f0554e6ee0e18a7776fde6a27499d463e81d41e0b88e1"
+      "revision": "B03-44bc3ae457",
+      "manifest_sha256": "356464e19ccc094f284d8ae1a5c64159700c0fbf518a867ca8b60c1ce1169c83"
     }
   },
   "A": {
@@ -144,32 +144,32 @@
   },
   "B": {
     "design_id": "B-long-side-stage",
-    "revision": "B02-3c1014f7b9",
-    "manifest_sha256": "91d9a2b8f5ab334c290f0554e6ee0e18a7776fde6a27499d463e81d41e0b88e1",
+    "revision": "B03-44bc3ae457",
+    "manifest_sha256": "356464e19ccc094f284d8ae1a5c64159700c0fbf518a867ca8b60c1ce1169c83",
     "seats": 3000,
     "rows": 32,
     "pulpit_distance_m": {
-      "mean": 28.65,
-      "median": 30.55,
-      "p90": 38.24,
-      "max": 40.17,
-      "share_within_20m": 0.194,
-      "share_within_30m": 0.476
+      "mean": 28.57,
+      "median": 30.51,
+      "p90": 38.25,
+      "max": 40.13,
+      "share_within_20m": 0.199,
+      "share_within_30m": 0.479
     },
     "platform_edge_distance_m": {
-      "mean": 23.94,
+      "mean": 23.58,
       "max": 38.17
     },
     "head_turn_to_pulpit_deg": {
-      "mean": 3.4,
-      "max": 14.7,
+      "mean": 4.0,
+      "max": 18.6,
       "over_45": 0,
       "over_30": 0
     },
     "bearing_from_pulpit_deg": {
       "max": 80.0,
-      "over_60": 774,
-      "over_75": 228
+      "over_60": 772,
+      "over_75": 232
     },
     "rake_top_seat_floor_m": 3.325,
     "c_value_min_from_chair_objects": {
@@ -179,67 +179,67 @@
     },
     "footprint_m": [
       91.8,
-      78.05
+      79.55
     ],
-    "footprint_area_m2": 7165.0,
-    "space_gfa_m2": 5784.8,
-    "hall_floor_area_m2": 2870.7,
-    "hall_area_per_seat_m2": 0.957,
-    "hall_air_volume_m3": 30149.0,
-    "hall_volume_per_seat_m3": 10.05,
-    "volume_samples": 2888,
-    "roof_area_m2": 6705.0,
-    "roof_plan_area_m2": 6684.5,
-    "roof_top_m": 14.32,
+    "footprint_area_m2": 7302.7,
+    "space_gfa_m2": 5874.5,
+    "hall_floor_area_m2": 2927.9,
+    "hall_area_per_seat_m2": 0.976,
+    "hall_air_volume_m3": 40190.0,
+    "hall_volume_per_seat_m3": 13.4,
+    "volume_samples": 2910,
+    "roof_area_m2": 6844.1,
+    "roof_plan_area_m2": 6823.1,
+    "roof_top_m": 17.78,
     "truss_count": 11,
-    "truss_span_m": 51.55,
+    "truss_span_m": 53.05,
     "structure": {
       "columns": 56,
-      "column_length_m": 445.2,
+      "column_length_m": 575.8,
       "pad_footings": 56,
       "footing_concrete_m3": 140.0,
       "truss_members_length_m": [
-        2308.1,
+        2486.6,
         627
       ],
       "purlins_length_m": [
-        2000.0,
-        250
+        2800.0,
+        350
       ],
       "bracing_length_m": [
-        994.9,
-        96
+        1097.4,
+        100
       ],
       "beams_length_m": [
         226.0,
         22
       ]
     },
-    "external_wall_area_m2": 4279.0,
-    "glazing_area_m2": 94.3,
+    "external_wall_area_m2": 5093.0,
+    "glazing_area_m2": 159.9,
     "exits": {
       "hall_exits": 10,
       "hall_exit_door_width_m": 40.8,
       "final_exits": 14,
       "final_exit_door_width_m": 50.4,
       "direct_seat_to_nearest_hall_exit_m": {
-        "mean": 15.62,
-        "max": 31.53,
+        "mean": 16.15,
+        "max": 32.8,
         "method": "straight line seat -> nearest hall exit door (lower bound, same code for both)"
       }
     },
     "egress_own_engine": {
-      "max_travel_hall": 43.73,
-      "max_travel_hall_to_nearest_exit": 43.73,
-      "count_travel_hall_over_flag": 486,
-      "count_nearest_travel_over_flag": 410,
-      "max_travel_total": 57.39,
+      "max_travel_hall": 45.4,
+      "max_travel_hall_to_nearest_exit": 45.4,
+      "count_travel_hall_over_flag": 535,
+      "count_nearest_travel_over_flag": 459,
+      "max_travel_total": 58.51,
       "count_travel_total_over_flag": 0,
       "total_hall_exit_width": null,
-      "total_hall_exit_clear_width": 34.8,
-      "total_required_width_placeholder": 23.3,
+      "total_hall_exit_clear_width": 35.52,
+      "total_required_width_placeholder": 23.52,
       "rear_load_to_upper_foyer": null,
-      "building_total_occupants": 3527
+      "building_total_occupants": 3562
     },
     "accessibility": {
       "wheelchair_spaces": 30,
@@ -247,13 +247,13 @@
         "L00",
         "L01"
       ],
-      "stairs": 9,
-      "stair_risers_total": 128,
+      "stairs": 7,
+      "stair_risers_total": 120,
       "ramps": 5,
       "lifts": 1
     },
-    "choir_chairs": 377,
-    "platform_area_m2": 174.6,
+    "choir_chairs": 412,
+    "platform_area_m2": 234.1,
     "screens": 3,
     "checks": {
       "blend": {

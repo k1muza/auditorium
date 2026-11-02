@@ -107,9 +107,13 @@ def main(manifest_path, out_dir):
            "- Excavation-free flat site assumed; survey, geotechnical report and storm-water strategy required (Zimbabwean rainy-season intensities).",
            f"- Egress: {eg['count_travel_hall_over_flag']} occupants exceed the 30 m in-hall placeholder flag (max {eg['max_travel_hall']} m); "
            "the stage-side exits cross the back-of-house corridor into dedicated exit passages, which need fire separation (TBC).",
-           "- Side seats reach 85 deg bearing from the pulpit: preaching to a 170 deg fan needs a speaker who turns, and IMAG reliance "
+           f"- Side seats reach {m['offaxis_pulpit']['max_bearing_from_pulpit_deg']:.0f} deg bearing from the pulpit: preaching to a "
+           f"{2 * P['seating']['fan_half_angle_deg']:.0f} deg fan needs a speaker who turns, and IMAG reliance "
            f"({m['offaxis_pulpit']['relying_on_screens']} seats rely on screens - placeholder 30 m unaided limit).",
-           f"- Choir: {m['choir_seats']} chairs fit in the front corners (Option A PL08: 386). Client to confirm size / location for Option B.",
+           f"- Choir: {m['choir_seats']} chairs on tiers beside the band, facing the congregation (Option A PL08: 386, facing inward). "
+           "This changes the client's Option A preference (choir facing inward) - client to confirm for Option B.",
+           "- Two-thirds of the congregation leaves at the rear-passage level (+L02) by stairs; the rake height is inherent to "
+           "the shared C-value targets and to a 32-row fan.",
            "- Acoustic infill above the faceted rear-passage wall and over the rear wall between truss chords is not modelled (gap below roof).",
            "- Booth sits 0.4-6.2 m east of the centre line because the grid-F truss passes over the axis.",
            "- Concave faceted rear wall: absorptive / diffusive finish allowance only; focused-echo risk to be checked by an acoustician.",
