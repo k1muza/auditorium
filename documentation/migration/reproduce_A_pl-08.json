@@ -1,0 +1,12 @@
+{
+  "design": "A",
+  "archive": "pl-08",
+  "revision": "PL08-590d273e35",
+  "source_hash_mismatch": [],
+  "unit_tests": "OK",
+  "rebuilt_manifest_sha256": "155c6b8dbb09bdd4c70fd9c34f65417aca5e06663b3a7d49e3848c3f509ca95c",
+  "archived_manifest_sha256": "155c6b8dbb09bdd4c70fd9c34f65417aca5e06663b3a7d49e3848c3f509ca95c",
+  "manifest_identical": true,
+  "congregation_seats": 3000,
+  "REPRODUCED": true
+}

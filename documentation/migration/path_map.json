@@ -1,0 +1,23 @@
+{
+  "_comment": "Old (pre-restructure, tag baseline-pre-restructure) path prefix -> new path prefix. Used by tools/verify_baseline.py.",
+  "map": {
+    "config": "designs/A-end-stage/config",
+    "scripts": "designs/A-end-stage/scripts",
+    "tests": "designs/A-end-stage/tests",
+    "model": "designs/A-end-stage/model",
+    "reports": "designs/A-end-stage/reports",
+    "exports": "designs/A-end-stage/exports",
+    "renders": "designs/A-end-stage/renders",
+    "logs": "designs/A-end-stage/logs",
+    "archive": "designs/A-end-stage/archive",
+    "output": "designs/A-end-stage/output",
+    "reviews": "designs/A-end-stage/reviews",
+    "FINAL_REPORT.md": "designs/A-end-stage/FINAL_REPORT.md",
+    "RUN_PROMPT.md": "designs/A-end-stage/RUN_PROMPT.md",
+    "design/data": "designs/A-end-stage/proposal/legacy-PL06-21c8b6d8b4/data",
+    "design/model": "designs/A-end-stage/proposal/legacy-PL06-21c8b6d8b4/model",
+    "design/drawings": "designs/A-end-stage/proposal/legacy-PL06-21c8b6d8b4/drawings",
+    "design": "documentation/proposal/template",
+    "BASELINE_SHA256.txt": "documentation/migration/BASELINE_SHA256.txt"
+  }
+}

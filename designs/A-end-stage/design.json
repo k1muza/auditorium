@@ -1,0 +1,20 @@
+{
+  "design_id": "A-end-stage",
+  "short_id": "A",
+  "title": "Option A - end-stage auditorium",
+  "status": "FROZEN BASELINE for the A-vs-B study (do not modify while Option B is developed)",
+  "current_revision": "PL08-590d273e35",
+  "baseline_note": "Client chose PL08 (latest, carries client decisions PL03-PL08) as the Option A comparison baseline on 2026-11-02. PL02-18dac43917 and every earlier revision are kept and reproducible from archive/<rev>/source/.",
+  "units": "m",
+  "coordinate_system": "x across the hall (west->east), y along the hall (stage at y=0 -> rear), z up; origin at grid A/1",
+  "entrypoint": "scripts/run_pipeline.py --iteration N --tag PL  (writes only inside this folder; Blender from BLENDER_EXE)",
+  "config": "config/auditorium_params.json",
+  "outputs": {
+    "model": "model/", "reports": "reports/", "exports (drawings)": "exports/", "renders": "renders/",
+    "logs": "logs/", "revision archive": "archive/", "reviews": "reviews/ and output/", "proposal": "proposal/"
+  },
+  "reproducible_revisions": {
+    "pl-08": "PL08-590d273e35 - archive/pl-08/source (verified: tools/reproduce_revision.py)",
+    "pl-02": "PL02-18dac43917 - archive/pl-02/source (sources recovered by exact SHA-256 from Claude Code file history; verified)"
+  }
+}

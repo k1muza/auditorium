@@ -1,3 +1,29 @@
+# 3,000-seat church auditorium - multi-design concept study
+
+CONCEPT - UNVERIFIED - NOT FOR CONSTRUCTION. Reviewer scores are QA metrics, not engineering certification.
+
+| Path | Purpose |
+|---|---|
+| `DESIGN_BRIEF.md`, `QUALITY_RUBRIC.md` | Project-wide brief and BIM rubric (common to all designs; original text kept) |
+| `designs/A-end-stage/` | Option A - end stage. **Frozen baseline PL08-590d273e35.** Self-contained: config, scripts, tests, model, reports, exports, renders, logs, archive, reviews, proposal |
+| `designs/B-long-side-stage/` | Option B - stage on the long side (competing design) |
+| `shared/` | Reusable code for new designs (geometry primitives, Blender builder, IFC export, environment discovery) |
+| `documentation/` | Shared publication design system (`proposal/template/`), migration records, project-wide briefs |
+| `comparisons/` | A-vs-B study, measured from each design's own outputs |
+| `agents/` | Specialist reviewer briefs and the multidisciplinary review rubric |
+| `tools/` | Repository tools: baseline verification, revision reproduction, per-design builds |
+
+Verification (read-only on every design):
+```
+.venv/Scripts/python tools/verify_baseline.py                                # 729 pre-restructure files, byte-exact
+.venv/Scripts/python tools/reproduce_revision.py --design A --revision pl-08  # rebuild A in a temp folder, compare manifest
+```
+Each design writes only inside its own folder. Blender is found via `BLENDER_EXE`, PATH, or the standard install folder.
+
+---
+
+## Original starter README (kept for reference)
+
 # Auditorium BIM — Builder / Independent Reviewer workflow
 
 This is a **starter project for running an AI-assisted architectural/BIM concept loop**, not an auditorium design, an engineering calculation, or an approved construction plan. It does not include Blender itself, Codex, Claude or model files; the AI builder generates those when you run it with compatible installed tooling.
