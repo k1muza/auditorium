@@ -1,0 +1,72 @@
+{
+  "design_id": "A-end-stage",
+  "revision": "PL08-590d273e35",
+  "reviewer": "structural_engineering + constructability_maintenance + cost_drivers (specialist)",
+  "scores": {
+    "structural_engineering": 7.0,
+    "constructability_maintenance": 6.0,
+    "cost_drivers": 6.5
+  },
+  "weighted_score": 1.975,
+  "weighted_score_note": "Partial: sum(score x weight/100) over the three assigned disciplines only (weights 15/10/5, max 3.0) = 1.975; normalised to the 30% assigned = 6.58/10.",
+  "critical_blockers": [],
+  "findings": [
+    {
+      "id": "A-STR-01",
+      "severity": "MAJOR",
+      "discipline": "constructability_maintenance",
+      "finding": "Purlins are modelled only at truss panel points, i.e. at 5.0 m centres along the slope (5.02 m top-chord panels), spanning 8-9.5 m between trusses. Typical trapezoidal metal roof sheeting does not span ~5 m between purlins, so secondary purlins would be needed and the modelled purlin quantity (673 m, 88 members) materially under-represents the roof secondary steel.",
+      "evidence": "model/blender_manifest.json STR-TRUSS-T7-TC* length 5.02 m (10 panels over 50 m); 88 STR-PURLIN-* = 11 panel lines x 8 bays; comparisons/out/comparison.md purlin length 673.2 m (A) vs 1,920 m (B at ~2.5 m spacing)",
+      "fix": "Add intermediate purlins at a sheeting-compatible spacing (engineer/manufacturer to set) carried on the top chord between panel points (chord designed for local bending) or shorten the truss panels; re-run the quantities."
+    },
+    {
+      "id": "A-STR-02",
+      "severity": "MAJOR",
+      "discipline": "constructability_maintenance",
+      "finding": "Hall eaves gutters sit at about +15.9 to +16.1 m and the 14 hall downpipes discharge onto the ambulatory roofs (cascade). The smaller ambulatory gutters (0.35 x 0.20 placeholder) then take hall plus ambulatory run-off above the ambulatories, which are also escape and accessible routes. Each hall gutter collects ~25.5 x 65 m (~1,650 m2 plan). Cleaning gutters at 16 m during the rainy season needs roof access and fall protection, which are not modelled.",
+      "evidence": "SRV-GUTTER-HALL-E bbox z 15.86-16.11, y 15.5-80.5; SRV-DOWNPIPE-HALL-E-1 z 6.0-15.86, Role 'Hall downpipe discharging to the ambulatory roof'; SRV-GUTTER-AMB-E z 5.8-6.0; config drainage.amb_gutter [0.35, 0.2]; reports/open_issues.md OI-12, OI-21",
+      "fix": "Run hall downpipes to grade (or into a sized sump on the ambulatory gutter) instead of spilling onto the low roof; give the gutters overflows that discharge away from exits; add a roof access hatch or ladder and a permanent eaves walkway or anchor line; the hydraulic engineer sizes everything for Zimbabwean storm intensities."
+    },
+    {
+      "id": "A-STR-03",
+      "severity": "MINOR",
+      "discipline": "structural_engineering",
+      "finding": "Portal knee braces land on the truss bottom chord mid-panel (x = 7.2 m, between panel points at 4.5 m and 9.5 m), which puts bending into the bottom chord. The knee-braced portal concept on 14 m columns with a 1.5 m-deep truss end is plausible, but its stiffness is unverified.",
+      "evidence": "STR-KNEE-B4 strut (4.9, 24, 12.0) -> (7.2, 24, 14.0); STR-TRUSS-T*-BC panel nodes at x = 4.5 / 9.5; config structure.portal_knee reach 2.7 m, drop 2.0 m",
+      "fix": "Move the knee-brace head to the first panel point (x = 9.5) or add a web member at the knee node; the engineer to compare portal action with a fully braced alternative (e.g. bracing in the cavity walls on more grids)."
+    },
+    {
+      "id": "A-STR-04",
+      "severity": "MINOR",
+      "discipline": "structural_engineering",
+      "finding": "Truss proportions: 50 m span, 3.5 m deep at the ridge (span/14) tapering to 1.5 m at the eaves. The diagonals correctly slope down towards midspan (Pratt, in tension under gravity), checked from the member endpoints. Under wind uplift on the lightweight 5,332 m2 roof, forces reverse and the bottom chord goes into compression, but no bottom-chord lateral restraint (fly braces or ties) is modelled.",
+      "evidence": "STR-TRUSS-T7-D*: upper end on the support side (e.g. top x=4.5 z15.68 -> bottom x=9.5 z14.18); verticals 1.5-3.5 m; 30_STR contains only top-chord-plane roof bracing (STR-BRACE-ROOF-*), no bottom-chord restraint members",
+      "fix": "Reserve space for bottom-chord restraint ties or fly braces at panel points and record uplift reversal in the basis of design."
+    },
+    {
+      "id": "A-STR-05",
+      "severity": "MINOR",
+      "discipline": "constructability_maintenance",
+      "finding": "Erection: nine 50 m trusses bear at +14.0 m, with the ridge at +18.4 m and a 3.5 m depth. They exceed road-transport length and depth, so they must be fabricated in segments, spliced on site and lifted by heavy mobile crane(s), whose local availability is unconfirmed. Splices, temporary stability and crane access are honestly flagged but not modelled.",
+      "evidence": "config structure.truss_bearing_z 14.0, truss_depth_ridge 3.5; basis_of_design.md s5; open_issues.md OI-21",
+      "fix": "Show truss splice positions, a ground-assembly and laydown zone and crane standing positions; confirm crane availability; erect the first truss pair with roof bracing bay 3-4 as a stable unit."
+    },
+    {
+      "id": "A-COST-01",
+      "severity": "MINOR",
+      "discipline": "cost_drivers",
+      "finding": "The tall hall drives envelope and volume: external wall area 5,824 m2, hall air volume 49,768 m3 (16.6 m3/seat), 76 columns including 14.9 m hall columns, and 163 m3 of pad concrete. This is offset by less primary steel (trusses 1,637 m + purlins 673 m + bracing 796 m = 3,106 m) and a smaller 5,332 m2 roof. The purlin figure is understated (see A-STR-01).",
+      "evidence": "comparisons/out/comparison.md rows External wall area, Hall air volume, Columns, Footing concrete, Truss/Purlin/Bracing length, Roof area",
+      "fix": "Test a lower truss bearing level (e.g. limit the rear rake height) to cut wall area and volume; add the missing secondary purlins to the steel quantity before any cost comparison."
+    }
+  ],
+  "strengths": [
+    "Clear rectangular grid (A-H x 1-12) with 9 identical-span trusses on mostly regular 8 m bays: simple, repetitive fabrication.",
+    "Explicit, traceable lateral concept in both directions: knee-braced portals on grids 4-10, braced gable bays D-E with collector struts, longitudinal X-bracing in bays 3-4 and 10-11 on lines B and G, and three roof bracing bays (assumptions A-13, A-27).",
+    "Genuine connectivity check (STR-CON: 352 member ends touch supports); the Pratt diagonal orientation was independently verified as correct.",
+    "Duo-pitch roof drains to two side gutters with no internal box gutters, halving the catchment per gutter compared with a single mono-pitch eaves.",
+    "Honest status: no loads or analysis claimed; OI-04 and OI-21 flag truss design, erection and high-level maintenance."
+  ],
+  "limitations": "No loads, wind or rainfall data, or geotechnical data exist, so member adequacy, deflection, uplift and foundation sizes could not be assessed; crane capacity and availability in Zimbabwe were not verified. Read-only checks on model/blender_manifest.json (truss T7 member endpoints, knee-brace endpoints, gutter/downpipe/wall/column bounding boxes) and the reports; exports/structural_grid.png was not inspected in detail. Quantities are from comparisons/out/comparison.md as a cross-check.",
+  "certification_disclaimer": "This review is a structured QA metric for a concept coordination model by an AI reviewer. It is not a professional engineering certification, structural design check, code-compliance statement, fire approval or cost estimate. No loads, analysis or member design were performed; all member sizes in the model are space-reservation placeholders. A registered Zimbabwean structural engineer must design and certify the structure."
+}

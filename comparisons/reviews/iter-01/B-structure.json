@@ -1,0 +1,80 @@
+{
+  "design_id": "B-long-side-stage",
+  "revision": "B01-5f175dba4d",
+  "reviewer": "structural_engineering + constructability_maintenance + cost_drivers (specialist)",
+  "scores": {
+    "structural_engineering": 5.5,
+    "constructability_maintenance": 6.0,
+    "cost_drivers": 5.5
+  },
+  "weighted_score": 1.7,
+  "weighted_score_note": "Partial: sum(score x weight/100) over the three assigned disciplines only (weights 15/10/5, max 3.0) = 1.70; normalised to the 30% assigned = 5.67/10.",
+  "critical_blockers": [],
+  "findings": [
+    {
+      "id": "B-STR-01",
+      "severity": "MAJOR",
+      "discipline": "structural_engineering",
+      "finding": "Continuity over three supports with very unequal spans (back-span 10.0 m, main span 50.1 m) turns the foyer-facade support into a permanent hold-down. Elementary statics for a two-span continuous member under an equal uniform load w: support moment at grid 2 = w(L1^3 + L2^3) / (8(L1 + L2)) = w(1,000 + 125,751) / (8 x 60.1) ~= 264w; end reaction at grid 1 = wL1/2 - M/L1 = 5w - 26.4w ~= -21w. That is a net UPLIFT under gravity, which reverses to compression under wind uplift. The back-span barely reduces the main-span sagging moment, but it adds hogging (bottom chord in compression over grid 2) and sensitivity to differential settlement. The grid-1 columns are also the smallest in the model (0.40 m) on 1.8 m pads.",
+      "evidence": "config/params.json structure._proposal 'continuous over three supports'; manifest STR-TRUSS-F-BC02 starts at y = -10.0 and the chords run through grid 2; metrics truss_back_span 10.0, truss_main_span 50.1; STR-COL-F1 '0.40x0.40 placeholder', STR-FTG-F1 1.8 m pad",
+      "fix": "Either (a) release continuity: a simply supported main truss from grid 2 to grid 4 plus a separate foyer roof (grid 1-2) framed off the hall columns; or (b) keep continuity but treat the grid-1 columns and footings explicitly as tension hold-downs and add bottom-chord restraint over grid 2. Record the chosen support condition in assumption B-02."
+    },
+    {
+      "id": "B-STR-02",
+      "severity": "MAJOR",
+      "discipline": "structural_engineering",
+      "finding": "There is no defined load path for wind on the 80 m long faces (y-direction). The columns are pin-topped under the truss bottom chord (no knee braces or portal action), and the only y-direction vertical bracing is in the end walls A and L (bays 1 and 5). The roof bracing bays (A-B, E-F, F-G, K-L) are strips running along y between grids 2 and 4: they serve gable (x-direction) wind, not a horizontal girder spanning 80 m in x that could carry long-wall wind to the end walls. The assumptions register has no lateral-stability entry and open_issues says 'lateral stability ... NOT designed'.",
+      "evidence": "src/layout.py structure(): column z_top = bc(y) - cs/2, no knee members; side_braced_bays [1, 5] on lines A and L only; roof_braced_bays [[A,B],[E,F],[F,G],[K,L]] braced along y; reports/assumptions.md (no lateral entry); reports/open_issues.md",
+      "fix": "Add eaves-line horizontal bracing girders in the roof plane along grids 2 and 4 (and 1) spanning A-L, with vertical bracing in the end walls; or give every grid line portal action (knee braces / fixed-base columns). Consider an intermediate braced frame (e.g. grid F) to halve the 80 m diaphragm span. Record it as an assumption, as Option A does in A-13."
+    },
+    {
+      "id": "B-STR-03",
+      "severity": "MAJOR",
+      "discipline": "constructability_maintenance",
+      "finding": "The whole main roof (~81.8 x 62.2 m, ~5,090 m2 plan) drains to ONE external eaves gutter over the main entrance. That gutter uses the same placeholder section as A's hall gutters (0.45 x 0.25) and has 12 downpipes (~420 m2 plan each). The catchment per metre of gutter is ~62 m, against ~25.5 m in Option A. If the gutter overflows in a Zimbabwean rainy-season storm, the water falls onto the entrance canopy and doors directly below (canopy at +3.6, gutter at +8.2).",
+      "evidence": "SRV-GUTTER-S bbox x -0.9..80.9, y -11.65..-11.2, z 8.21-8.46; ENV-ROOF-MAIN bbox y -11.2..51.0, z 8.51-14.2; SRV-DOWNPIPE-S01..S12; ENV-CANOPY y -14.6..-10.6, z 3.6",
+      "fix": "Hydraulic engineer to size a large eaves/box or siphonic gutter with overflow weirs at the gutter ends, away from the doors; consider splitting the catchment (e.g. a second gutter for the upper half); pipe the downpipes into the rainwater tank allowance SRV-01 with an overflow to a soakaway."
+    },
+    {
+      "id": "B-STR-04",
+      "severity": "MINOR",
+      "discipline": "structural_engineering",
+      "finding": "The trusses are described as 'Parallel-chord Pratt' and the code comment says the diagonals are in tension under gravity, but the modelled main-span diagonals slope DOWN towards the supports (lower end on the support side, e.g. top at y=3.58 z9.31 -> bottom at y=0.00 z6.00). That is a Howe arrangement, in which the 4.5-5.6 m diagonals are in compression under gravity, which is less efficient in steel. Span/depth 50.1 / 3.0 ~= 16.7 is on the shallow side of common concept proportions.",
+      "evidence": "manifest STR-TRUSS-F diagonals (16, length 4.48-5.62 m); src/layout.py structure() Pratt comment; config structure.truss_depth 3.0; reports/assumptions.md structure.proposal",
+      "fix": "Flip the main-span diagonals to slope down towards midspan (a true Pratt) or relabel the trusses as Howe; review a 3.5-4.0 m depth with the engineer (check the bottom chord stays clear of the +2.98 rear passage and the rigging)."
+    },
+    {
+      "id": "B-STR-05",
+      "severity": "MINOR",
+      "discipline": "structural_engineering",
+      "finding": "The reports and model disagree in several places. Assumption B-02 and structure._proposal state an 8 m back-span and a ~49.7 m main span, but the model has 10.0 m and 50.1 m. basis_of_design and metrics give 54 columns, but the manifest has 56 STR-COL objects (STR-COL-BOOTH-1/2 have no STR-FTG footing). The metric 'structural_member_ends_checked: 715' is only the truss member count (layout.py:1416 connections_checked = member_count): no connection check is actually run, unlike A's STR-CON.",
+      "evidence": "reports/assumptions.md B-02; metrics truss_back_span 10.0; 56 STR-COL vs 54 STR-FTG in model/blender_manifest.json; src/layout.py:1416; reports/geometry_checks.json line 449",
+      "fix": "Generate the report text from computed values; add footings (or a stated transfer) for the booth columns; implement and report a real member-end connectivity check. The reviewer's own coarse check found every brace, purlin and beam end within 0.45 m of a truss member or column."
+    },
+    {
+      "id": "B-STR-06",
+      "severity": "MINOR",
+      "discipline": "constructability_maintenance",
+      "finding": "Erection and movement are not covered. The 11 trusses are continuous over 60.1 m (10 + 50.1 m), so they must be spliced on site, including in the hogging zone over grid 2. The building is one 80 m long roof plane with no movement joint and ~62 m sheeting runs at 5 deg. Open issues omit erection, crane access, truss splices and roof/gutter maintenance access (Option A has OI-21). On the positive side, bearing levels are lower than A (columns to +5.8 at grid 2 and +10.2 at grid 4; roof top +14.2 vs +18.4), which eases lifts, and the gutter at +8.2 m is reachable from the canopy roof.",
+      "evidence": "metrics truss_back_span 10.0, truss_main_span 50.1, hall_width 80.0; ENV-ROOF-MAIN z 8.51-14.2; STR-COL-L2 top 5.82, STR-COL-B4 top 10.21; reports/open_issues.md",
+      "fix": "Add an open issue covering erection sequence, splice positions away from peak-moment zones, crane positions, temporary bracing, a thermal movement joint or sheet end-lap strategy, and roof access/anchor lines."
+    },
+    {
+      "id": "B-COST-01",
+      "severity": "MINOR",
+      "discipline": "cost_drivers",
+      "finding": "Steel is the dominant cost driver, and by linear length it is ~76% higher than A: trusses 2,667 m (715 members) + purlins 1,920 m + bracing 876 m = 5,462 m, against A's 3,106 m. The roof is 6,355 m2 (+19%). Offsets: 56 vs 76 columns, 138 vs 163 m3 of pad concrete, 4,138 vs 5,824 m2 of external wall, and 27,968 vs 49,768 m3 of hall air volume (less envelope, cooling load and acoustic treatment volume). A's purlin figure is understated (A review A-STR-01), which narrows the steel gap.",
+      "evidence": "comparisons/out/comparison.md (same measuring code for both); config structure.truss_panel_target 4.0, purlin_spacing_target 2.5",
+      "fix": "Before fixing the grid, test 10 m truss spacing with heavier purlins and the narrower 72 m hall from the fan study; obtain a QS tonnage estimate once members are sized."
+    }
+  ],
+  "strengths": [
+    "The envelope stands outside the column line (checked: ENV-WALL-HALL-E x 80.3-80.6 vs STR-COL-L2 x 79.7-80.3). This gives continuous masonry with columns and bracing in a clear zone inside it, which suits local masonry practice and simplifies weatherproofing.",
+    "A single mono-pitch roof with one external eaves gutter and no box or valley gutters means fewer leak points, and the gutter at +8.2 m is far easier to maintain than A's at +16 m.",
+    "The structure is lower overall (roof top +14.2 m vs +18.4 m; truss bearings 5.8-10.2 m), which eases erection heights and reduces wall area and hall volume.",
+    "Plausible x-direction (gable) stability path: end-wall posts at ~8.35 m, longitudinal braced bays on grids 2 and 4, and roof bracing strips. All purlin and brace ends connect to supports (reviewer's independent coarse check).",
+    "Status honestly declared: no structural design, wind uplift, lateral stability or foundation design is claimed."
+  ],
+  "limitations": "No loads, rainfall intensity, wind or geotechnical data are available. The continuity statics in B-STR-01 uses an equal uniform load per unit length only to show the sign of the end reaction; it is not a design calculation. Read-only checks on model/blender_manifest.json (STR-TRUSS-F member endpoints, column/wall/gutter/roof bounding boxes, member-end proximity) and src/layout.py structure(); exports/structural_grid.png, section_AA.png and the structure-only render were not inspected in detail. Crane availability and local fabrication capacity were not verified. Quantities are from comparisons/out/comparison.md as a cross-check.",
+  "certification_disclaimer": "This review is a structured QA metric for a concept coordination model by an AI reviewer. It is not a professional engineering certification, structural design check, code-compliance statement, fire approval or cost estimate. No loads, analysis or member design were performed; all member sizes in the model are space-reservation placeholders. A registered Zimbabwean structural engineer must design and certify the structure."
+}

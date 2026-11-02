@@ -99,16 +99,20 @@ def main(manifest_path, out_dir):
     oi += [f"- **{c['id']}** ({c['result']}): {c['description']} - value {json.dumps(c['value'], default=str)[:200]}, criterion {c['criterion']}"
            for c in warns] or ["- none"]
     oi += ["", "## Unverified design items (for the professional team)", "",
-           f"- Roof: {m['truss_count']} trusses spanning {m['truss_span']} m (+ {m['truss_back_span']} m back-span); member sizes, connections, "
-           "deflection, wind uplift, lateral stability and foundations are NOT designed.",
+           f"- Roof: {m['truss_count']} trusses simply supported over {m['truss_span']} m; foyer on {m['foyer_rafter_span']} m rafters; member sizes, "
+           "connections, splices (transport length), erection / crane plan, deflection, wind uplift and foundations are NOT designed.",
+           "- No movement joint is shown in the 80 m long building; thermal movement joints / roof expansion details TBC.",
+           "- Single eaves gutter drains the whole main roof (about 60 m of roof per metre of gutter): overflow weirs, gutter access "
+           "(fall protection) and rainwater-harvesting tank capacity TBC.",
            "- Excavation-free flat site assumed; survey, geotechnical report and storm-water strategy required (Zimbabwean rainy-season intensities).",
            f"- Egress: {eg['count_travel_hall_over_flag']} occupants exceed the 30 m in-hall placeholder flag (max {eg['max_travel_hall']} m); "
-           "the stage-side exits discharge through the back-of-house corridor, which would need protection as an escape route.",
+           "the stage-side exits cross the back-of-house corridor into dedicated exit passages, which need fire separation (TBC).",
            "- Side seats reach 85 deg bearing from the pulpit: preaching to a 170 deg fan needs a speaker who turns, and IMAG reliance "
            f"({m['offaxis_pulpit']['relying_on_screens']} seats rely on screens - placeholder 30 m unaided limit).",
            f"- Choir: {m['choir_seats']} chairs fit in the front corners (Option A PL08: 386). Client to confirm size / location for Option B.",
            "- Acoustic infill above the faceted rear-passage wall and over the rear wall between truss chords is not modelled (gap below roof).",
            "- Booth sits 0.4-6.2 m east of the centre line because the grid-F truss passes over the axis.",
+           "- Concave faceted rear wall: absorptive / diffusive finish allowance only; focused-echo risk to be checked by an acoustician.",
            "- Rainwater harvesting tank shown as an allowance only; capacity, treatment and overflow not designed.",
            "- Acoustics (RT, early reflections across a wide fan), AV design, MEP, fire engineering and accessibility audits not done."]
     (out / "open_issues.md").write_text("\n".join(oi) + "\n", encoding="utf-8")
@@ -131,7 +135,7 @@ def main(manifest_path, out_dir):
            f"- Platform {m['platform_area']} m2 at +{m['platform_height']:.2f}; choir {m['choir_seats']} chairs; wheelchair spaces "
            f"{m['wheelchair_spaces']} (+ companions)",
            f"- Structure: {m['column_count']} columns, {m['truss_count']} trusses (span {m['truss_span']} m), {m['purlin_count']} purlins, "
-           f"{m['brace_count']} braces; main roof {m['roof_area_main_m2']} m2 (sloped)",
+           f"{m['brace_count']} braces (incl. eaves-line wind girders); main roof {m['roof_area_main_m2']} m2 (sloped)",
            f"- Egress (placeholders): {eg['hall_exits']} hall exits, capacity width {eg['total_hall_exit_clear_width']} m vs "
            f"{eg['total_required_width_placeholder']} m required; max in-hall travel {eg['max_travel_hall']} m (nearest exit "
            f"{eg['max_travel_hall_to_nearest_exit']} m), mean {eg['mean_travel_hall']} m, max to outside {eg['max_travel_total']} m",

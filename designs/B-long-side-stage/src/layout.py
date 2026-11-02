@@ -285,8 +285,9 @@ class LayoutB:
                                  "reason": reason, "dist": math.hypot(x - Pul0[0], y - Pul0[1])})
         self.candidates = cand
         nfb = len(self.front_aisles) - 1
-        for c in cand:  # front wheelchair positions replace the outer-end seats of rows 1-2 in the outermost front blocks
-            if c["reason"] is None and c["row"] in (1, 2) and c["block"] in (1, nfb):
+        self.front_wc_blocks = (nfb // 2, nfb // 2 + 1)
+        for c in cand:  # front wheelchair positions replace rows 1-2 of the two centre blocks (review ACC-B: on-axis view)
+            if c["reason"] is None and c["row"] in (1, 2) and c["block"] in self.front_wc_blocks:
                 c["reason"] = "front wheelchair positions"
         ok = [c for c in cand if c["reason"] is None]
         byrow, tot, nrows = {}, 0, 0
@@ -581,15 +582,15 @@ class LayoutB:
         ww, wd = A["wheelchair_space_width"], A["wheelchair_space_depth"]
         F = self.F
         places = []
-        # front: along the row 1/2 radius at the outer ends of the two outermost front blocks
-        nfb = len(self.front_aisles) - 1
+        # front: rows 1-2 of the two centre blocks, either side of the centre aisle (grade, near the axis)
         r = (self.radii[0] + self.radii[1]) / 2
-        for side, sgn, blk in (("W", -1, 1), ("E", 1, nfb)):
-            a_edge = self.front_aisles[0 if sgn < 0 else -1]
-            th = a_edge - sgn * ((S["aisle_width"] / 2) / r)
-            for k in range(A["front_pairs_per_side"]):
-                th_c = th - sgn * ((k + 0.5) * (ww + A["companion_seat_width"])) / r
-                places.append((f"F{side}", k + 1, r, th_c, 0.0, f"Front {side} (grade, beside block {blk})"))
+        for side, blk in (("W", self.front_wc_blocks[0]), ("E", self.front_wc_blocks[1])):
+            a0 = self.front_aisles[blk - 1] + (S["aisle_width"] / 2 + 0.1) / r
+            a1 = self.front_aisles[blk] - (S["aisle_width"] / 2 + 0.1) / r
+            n = A["front_pairs_per_side"]
+            for k in range(n):
+                th_c = a0 + (a1 - a0) * (k + 0.5) / n
+                places.append((f"F{side}", k + 1, r, th_c, rnd(self.slope_z(r + wd / 2) + 0.005, 4), f"Front {side} (grade, centre block {blk})"))
         # cross-aisle band: behind the 2.4 m passage, distributed over the rear blocks, clear of aisle mouths
         rb = self.radii[S["front_rows"]] - 0.55 - wd / 2 - 0.05
         rear = self.rear_aisles
@@ -702,6 +703,11 @@ class LayoutB:
         r_mid = (self.R_rows_back + self.R_out) / 2
         x_in = self.W / 2 - COL_FACE
         y_rp = self.F[1] - math.sqrt(max(r_mid ** 2 - x_in ** 2, 0.0))   # rear passage centreline meets the side column face
+        # door centred in the band where the rear passage meets the wall; side-wall posts move clear of it (structure())
+        y_band = sorted(self.F[1] - math.sqrt(max(r ** 2 - x_in ** 2, 0.0)) for r in (self.R_rows_back, self.R_out))
+        y_rp = (y_band[0] + y_band[1]) / 2
+        self.post_avoid = (y_rp - hx / 2 - 0.45, y_rp + hx / 2 + 0.45)
+        self.rear_door_in_band = y_band[0] + hx / 2 - 0.3 <= y_rp <= y_band[1] - hx / 2 + 0.3
         self.rear_passage_side_y = y_rp
         for side, xw, sgn in (("W", -off, -1), ("E", W + off, 1)):
             ops, recs = [], []
@@ -865,14 +871,16 @@ class LayoutB:
                  {"IsExternal": True, "Description": "Continuous entrance canopy (shade + rain at the doors)"}, "Entrance canopy")
         # eaves gutter on the entrance facade (low edge of the main roof) + downpipes on the facade
         zg = self.tc(y0r) + zb - 0.05
-        self.box("SRV-GUTTER-S", "50_SRV_Drainage", "IfcPipeSegment", "GUTTER", (x0r, y0r - 0.45, zg - 0.25, x1r, y0r, zg),
-                 {"Role": "Main roof eaves gutter (external, entrance facade) - concept, size TBC"})
+        gw, gd_ = P["drainage"]["gutter"]
+        self.box("SRV-GUTTER-S", "50_SRV_Drainage", "IfcPipeSegment", "GUTTER", (x0r, y0r - gw, zg - gd_, x1r, y0r, zg),
+                 {"Role": "Main roof eaves gutter (external, entrance facade, overflow weirs away from the doors) - concept, size TBC"})
         self.downpipes = 0
-        for k, xd in enumerate([x0r + 2.0 + i * (x1r - x0r - 4.0) / 11 for i in range(12)]):
+        nd = P["drainage"]["downpipes"]
+        for k, xd in enumerate([x0r + 2.0 + i * (x1r - x0r - 4.0) / (nd - 1) for i in range(nd)]):
             if any(abs(xd - d) < 2.6 for d in F_["main_door_x_centers"]):
                 xd += 3.0
             self.box(f"SRV-DOWNPIPE-S{k + 1:02d}", "50_SRV_Drainage", "IfcPipeSegment", "RIGIDSEGMENT",
-                     (xd - 0.075, y0r - 0.3, 0.0, xd + 0.075, y0r - 0.15, zg - 0.25),
+                     (xd - 0.075, y0r - 0.3, 0.0, xd + 0.075, y0r - 0.15, zg - gd_),
                      {"Role": "Downpipe to rainwater harvesting tank / soakaway (concept)"})
             self.downpipes += 1
 
@@ -1003,19 +1011,38 @@ class LayoutB:
         ya, yb_ = wall_y(x0), wall_y(x0 + sw)
         y_top = min(ya, yb_)
         parts = [("prism_xy", (ccw([(x0, y_top - land), (x0 + sw, y_top - land), (x0 + sw, yb_), (x0, ya)]), 0.0, h))]
-        y = y_top - land
-        for k in range(n - 1):
-            parts.append(("box", (x0, y - g, 0.0, x0 + sw, y, h - riser * (k + 1))))
-            y -= g
+        run, y, n, riser, nfl = self.stair_run(x0, sw, y_top - land, h)
+        parts += run
         name = f"ARC-STAIR-CORNER-{side}"
         self.add(Element(name, "20_ARC_Circulation", "IfcStair", "STRAIGHT_RUN_STAIR", None, parts,
-                         props={"Riser": rnd(riser, 3), "Risers": n, "Going": g, "Width": sw}))
-        self.stairs.append({"name": name, "width": sw, "riser": rnd(riser, 3), "risers": n, "foot_y": rnd(y, 2),
+                         props={"Riser": rnd(riser, 3), "Risers": n, "Going": g, "Width": sw, "Flights": nfl}))
+        self.stairs.append({"name": name, "width": sw, "riser": rnd(riser, 3), "risers": n, "flights": nfl, "foot_y": rnd(y, 2),
                             "bbox": (x0, y, x0 + sw, y_top)})
-        for k, xr in enumerate((x0 + 0.05, x0 + sw - 0.05)):
-            self.strut(f"ARC-RAIL-CORNER-{side}-{k + 1}", "20_ARC_Circulation", "IfcRailing", "HANDRAIL",
-                       (xr, y_top - land + 0.05, h + 0.9), (xr, y + 0.3, 0.9 + riser), 0.05, 0.05,
-                       {"Height": 0.9, "Role": "Stair handrail / guard"})
+        self.stair_rails(f"ARC-RAIL-CORNER-{side}", x0, sw, y_top - land + 0.05, y, h, riser)
+
+    def stair_run(self, x0, sw, y_start, h, sign=-1):
+        """Straight stair descending from height h at y_start along sign*y, in flights of <= max_flight_risers with
+        landings between. Returns (parts, y_end, risers, riser, flights) - review LS-B (no 18-riser single flights)."""
+        F_ = self.P["foyer"]
+        n = math.ceil(round(h / F_["stair_max_riser"], 6))
+        riser = h / n
+        g, land = F_["stair_going"], F_["stair_mid_landing"]
+        nfl = math.ceil(n / F_["max_flight_risers"])
+        per = math.ceil(n / nfl)
+        parts, y = [], y_start
+        for k in range(1, n):
+            length = land if k % per == 0 else g
+            y2 = y + sign * length
+            parts.append(("box", (x0, min(y, y2), 0.0, x0 + sw, max(y, y2), h - riser * k)))
+            y = y2
+        return parts, y, n, riser, nfl
+
+    def stair_rails(self, prefix, x0, sw, y_top, y_end, h, riser, centre=False):
+        xs = [x0 + 0.05, x0 + sw - 0.05] + ([x0 + sw / 2] if centre else [])
+        for k, xr in enumerate(xs):
+            self.strut(f"{prefix}-{k + 1}", "20_ARC_Circulation", "IfcRailing", "HANDRAIL", (xr, y_top, h + 0.9),
+                       (xr, y_end + (0.3 if y_end < y_top else -0.3), 0.9 + riser), 0.05, 0.05,
+                       {"Height": 0.9, "Role": "Stair centre handrail" if k == 2 else "Stair handrail / guard"})
 
     # ------------------------------------------------------------------ foyer
     def foyer(self):
@@ -1028,26 +1055,18 @@ class LayoutB:
         xs0, xs1 = self.facade_x
         self.box("ARC-SLAB-FOYER", "20_ARC_Floors", "IfcSlab", "FLOOR", (xs0 + t / 2, yf - off + t / 2, -0.25, xs1 - t / 2, -off - t / 2, 0.0),
                  {"Description": "Foyer slab (grade)"})
-        n = math.ceil(round(h / F_["stair_max_riser"], 6))
-        riser = h / n
-        g, sw, land = F_["stair_going"], F_["stair_width"], F_["stair_landing"]
+        sw, land = F_["stair_width"], F_["stair_landing"]
         y_wall = -off - t / 2
         for k, xcn in enumerate(F_["stair_x_centers"]):
             x0 = xcn - sw / 2
-            parts = [("box", (x0, y_wall - land, 0.0, x0 + sw, y_wall, h))]
-            y = y_wall - land
-            for j in range(n - 1):
-                parts.append(("box", (x0, y - g, 0.0, x0 + sw, y, h - riser * (j + 1))))
-                y -= g
+            run, y, n, riser, nfl = self.stair_run(x0, sw, y_wall - land, h)
+            parts = [("box", (x0, y_wall - land, 0.0, x0 + sw, y_wall, h))] + run
             name = f"ARC-STAIR-FOYER-{'W' if k == 0 else 'E'}"
             self.add(Element(name, "20_ARC_Circulation", "IfcStair", "STRAIGHT_RUN_STAIR", None, parts,
-                             props={"Riser": rnd(riser, 3), "Risers": n, "Going": g, "Width": sw}))
-            self.stairs.append({"name": name, "width": sw, "riser": rnd(riser, 3), "risers": n, "foot_y": rnd(y, 2),
+                             props={"Riser": rnd(riser, 3), "Risers": n, "Going": F_["stair_going"], "Width": sw, "Flights": nfl}))
+            self.stairs.append({"name": name, "width": sw, "riser": rnd(riser, 3), "risers": n, "flights": nfl, "foot_y": rnd(y, 2),
                                 "bbox": (x0, y, x0 + sw, y_wall)})
-            for j, xr in enumerate((x0 + 0.05, x0 + sw - 0.05)):
-                self.strut(f"ARC-RAIL-FOYER-{'W' if k == 0 else 'E'}-{j + 1}", "20_ARC_Circulation", "IfcRailing", "HANDRAIL",
-                           (xr, y_wall - land + 0.05, h + 0.9), (xr, y + 0.3, 0.9 + riser), 0.05, 0.05,
-                           {"Height": 0.9, "Role": "Stair handrail / guard"})
+            self.stair_rails(f"ARC-RAIL-FOYER-{'W' if k == 0 else 'E'}", x0, sw, y_wall - land + 0.05, y, h, riser, centre=True)
         self.foyer_stair_foot = y
         # booth: raised floor on a deck between the stair heads, over the foyer
         bx, bd = F_["booth"]["x"], F_["booth"]["depth"]
@@ -1066,8 +1085,12 @@ class LayoutB:
                             "z": bf, "use": "Sound / media booth", "door": "DR-BOOTH"})
         # booth support columns (2) at its south corners
         for k, xx in enumerate((bx[0] + 0.2, bx[1] - 0.2)):
-            self.box(f"STR-COL-BOOTH-{k + 1}", "30_STR_Columns", "IfcColumn", "COLUMN", (xx - 0.15, y_wall - bd + 0.05, 0.0, xx + 0.15, y_wall - bd + 0.35, bf - 0.25),
+            yy = y_wall - bd + 0.2
+            self.box(f"STR-COL-BOOTH-{k + 1}", "30_STR_Columns", "IfcColumn", "COLUMN", (xx - 0.15, yy - 0.15, -0.9, xx + 0.15, yy + 0.15, bf - 0.25),
                      {"Role": "booth support", "NominalSection": "0.30x0.30 placeholder", "DesignStatus": "Space reservation only - not designed"})
+            self.box(f"STR-FTG-BOOTH-{k + 1}", "30_STR_Foundations", "IfcFooting", "PAD_FOOTING", (xx - 0.6, yy - 0.6, -1.5, xx + 0.6, yy + 0.6, -0.9),
+                     {"DesignStatus": "Reference location only - no geotechnical data, not designed"})
+            self.columns[f"STR-COL-BOOTH-{k + 1}"] = (xx, yy, 0.3)
         # lift (shaft allowance from the foyer to L02)
         lx = F_["lift_x"]
         self.box("ARC-LIFT", "20_ARC_Circulation", "IfcTransportElement", "ELEVATOR", (lx[0], y_wall - 2.4, 0.0, lx[1], y_wall, h + 2.4),
@@ -1075,6 +1098,11 @@ class LayoutB:
         self.spaces.append({"id": "SP-09", "name": "Lift shaft", "level": "L00", "poly": rect(lx[0], y_wall - 2.4, lx[1], y_wall),
                             "use": "Lift", "door": "DR-LIFT-L02"})
         self.lift = (lx[0], y_wall - 2.4, lx[1], y_wall)
+        ysw_ = y_wall - 2.4 - 0.075
+        self.wall("ARC-WALL-LIFT-S", "x", ysw_, lx[0] - 0.15, lx[1] + 0.15, 0.0, h + 2.4, [(lx[0] + 0.2, lx[1] - 0.2, 0.0, 2.1)], 0.15,
+                  col="20_ARC_Walls", pre="PARTITIONING", props={"IsExternal": False, "Description": "Lift shaft front wall"})
+        self.door("DR-LIFT-L00", "ARC-WALL-LIFT-S", "x", ysw_, (lx[0] + lx[1]) / 2, lx[1] - lx[0] - 0.4, 0.0, 2.1, "Lift door at L00 (foyer)",
+                  fire_exit=False, external=False, col="20_ARC_Walls", thickness=0.15)
 
     # ------------------------------------------------------------------ ambulatories
     def ambulatories(self):
@@ -1104,25 +1132,18 @@ class LayoutB:
                      (min(xa, xb) - (0.3 if side == "W" else 0), y0, AM["roof_top"] - 0.25, max(xa, xb) + (0.3 if side == "E" else 0), y1, AM["roof_top"]),
                      {"IsExternal": True, "Description": f"Ambulatory {side} roof (low)"})
             # stair in the ambulatory from the rear-passage side door (L02) down, running south along the ambulatory
-            n = math.ceil(round(h / F_["stair_max_riser"], 6))
-            riser = h / n
-            g, sw = F_["stair_going"], min(2.4, AM["width"] - 0.2)
+            sw = AM["stair_width"]
             yd = self.rear_passage_side_y
             land = 3.8
             sx0 = xa + 0.1 if side == "W" else xb - 0.1 - sw
-            parts = [("box", (sx0, yd - land / 2, 0.0, sx0 + sw, yd + land / 2, h))]
-            y = yd - land / 2
-            for j in range(n - 1):
-                parts.append(("box", (sx0, y - g, 0.0, sx0 + sw, y, h - riser * (j + 1))))
-                y -= g
+            run, y, n, riser, nfl = self.stair_run(sx0, sw, yd - land / 2, h)
+            parts = [("box", (sx0, yd - land / 2, 0.0, sx0 + sw, yd + land / 2, h))] + run
             name = f"ARC-STAIR-AMB-{side}"
             self.add(Element(name, "20_ARC_Circulation", "IfcStair", "STRAIGHT_RUN_STAIR", None, parts,
-                             props={"Riser": rnd(riser, 3), "Risers": n, "Going": g, "Width": sw}))
-            self.stairs.append({"name": name, "width": sw, "riser": rnd(riser, 3), "risers": n, "foot_y": rnd(y, 2),
+                             props={"Riser": rnd(riser, 3), "Risers": n, "Going": F_["stair_going"], "Width": sw, "Flights": nfl}))
+            self.stairs.append({"name": name, "width": sw, "riser": rnd(riser, 3), "risers": n, "flights": nfl, "foot_y": rnd(y, 2),
                                 "bbox": (sx0, y, sx0 + sw, yd + land / 2)})
-            self.strut(f"ARC-RAIL-AMB-{side}", "20_ARC_Circulation", "IfcRailing", "HANDRAIL",
-                       (sx0 + sw / 2 + sgn * (sw / 2 - 0.05) * -1, yd - land / 2 + 0.05, h + 0.9), (sx0 + sw / 2 + sgn * (sw / 2 - 0.05) * -1, y + 0.3, 0.9 + riser),
-                       0.05, 0.05, {"Height": 0.9, "Role": "Stair handrail / guard (open side)"})
+            self.stair_rails(f"ARC-RAIL-AMB-{side}", sx0, sw, yd - land / 2 + 0.05, y, h, riser)
             self.spaces.append({"id": f"SP-AMB-{side}", "name": f"Ambulatory {side} (covered circulation / egress)", "level": "L00",
                                 "poly": rect(xa, y0, xb, y1), "use": "Circulation"})
             self.amb_x = getattr(self, "amb_x", {})
@@ -1149,13 +1170,28 @@ class LayoutB:
             if poly_area(lp) > 0.01:
                 self.add(Element(f"ARC-SLAB-CROSSEND-{side}", "20_ARC_Floors", "IfcSlab", "LANDING", None,
                                  [("prism_xy", (lp, 0.0, rise))], props={"Description": "Cross-aisle end landing"}))
+            A_ = P["accessibility"]
+            rw = A_["cross_end_ramp_width"]
+            rx = (xr0, xr0 + rw) if side == "W" else (xr1 - rw, xr1)
+            run = rise * A_["ramp_gradient_1_in"]
+            self.add(Element(f"ARC-RAMP-CROSS-{side}", "20_ARC_Circulation", "IfcRamp", "STRAIGHT_RUN_RAMP", None,
+                             [("prism8", [(rx[0], ystart, 0.0), (rx[1], ystart, 0.0), (rx[1], ystart + run, 0.0), (rx[0], ystart + run, 0.0),
+                                          (rx[0], ystart, rise), (rx[1], ystart, rise), (rx[1], ystart + run, 0.0), (rx[0], ystart + run, 0.0)])],
+                             props={"Rise": rnd(rise, 3), "Gradient_1_in": A_["ramp_gradient_1_in"], "Width": rw, "Flights": 1,
+                                    "Role": "Step-free link: front corner (grade) to the cross-aisle passage"}))
+            self.ramps.append({"name": f"ARC-RAMP-CROSS-{side}", "rise": rnd(rise, 3), "gradient_1_in": A_["ramp_gradient_1_in"],
+                               "width": rw, "flights": 1, "run_per_flight": rnd(run, 2), "bbox": (rx[0], ystart, rx[1], ystart + run)})
+            if side == "W":
+                xr0 = rx[1] + 0.05
+            else:
+                xr1 = rx[0] - 0.05
             nst = max(2, math.ceil(round(rise / 0.17, 6)))
             rs = rise / nst
             sparts = [("box", (xr0, ystart + k * 0.3, 0.0, xr1, ystart + (k + 1) * 0.3, rise - rs * (k + 1))) for k in range(nst - 1)]
             self.add(Element(f"ARC-STAIR-CROSS-{side}", "20_ARC_Circulation", "IfcStair", "STRAIGHT_RUN_STAIR", None, sparts,
                              props={"Riser": rnd(rs, 3), "Risers": nst, "Going": 0.3, "Width": rnd(xr1 - xr0, 2)}))
             self.stairs.append({"name": f"ARC-STAIR-CROSS-{side}", "width": rnd(xr1 - xr0, 2), "riser": rnd(rs, 3), "risers": nst})
-            self.corner_ramps[side] = (xr0, ystart, xr1, ystart + (nst - 1) * 0.3)
+            self.corner_ramps[side] = (min(xr0, rx[0]), ystart, max(xr1, rx[1]), ystart + run)
         cl = CH["clearance"]
         # choir: straight rows facing across to the platform (west wing faces +x, east wing faces -x)
         ylo_edge = []
@@ -1201,21 +1237,28 @@ class LayoutB:
                     k_row += 1
                     rows.append((x, ok_y))
                 x += pitch if side == "W" else -pitch
-            blocks = []
+            tr, tmax, tper = CH["riser_height"], CH["max_tiers"], CH["rows_per_tier"]
+            nrw = len(rows)
             for i, (x, ys) in enumerate(rows):
+                tier = min((nrw - 1 - i) // tper, tmax)      # rows further from the platform stand higher
+                zc = rnd(tr * tier, 3)
+                if zc > 0:
+                    self.box(f"ARC-CHOIR-RISER-{side}-R{i + 1:02d}", "20_ARC_Floors", "IfcSlab", "FLOOR",
+                             (x - pitch / 2, min(ys) - CHAIR_HALF_W - 0.4, 0.0, x + pitch / 2, max(ys) + CHAIR_HALF_W + 0.1, zc),
+                             {"Description": f"Choir riser tier {tier} (+{zc:.2f})"})
                 for j, y in enumerate(ys):
                     name = f"SEAT-H-{side}-R{i + 1:02d}-S{j + 1:02d}"
-                    self.add(Element(name, "40_SEAT_Choir", "IfcFurniture", "CHAIR", None, (), origin=(rnd(x, 4), rnd(y, 4), 0.0),
+                    self.add(Element(name, "40_SEAT_Choir", "IfcFurniture", "CHAIR", None, (), origin=(rnd(x, 4), rnd(y, 4), zc),
                                      rot_z=-90.0 if side == "W" else 90.0, mesh_key="CHAIR",
                                      props={"SeatType": "choir", "CountsTowardTarget": False, "FixedSeat": False, "ChoirSection": side,
                                             "Facing": "+X (towards the platform)" if side == "W" else "-X (towards the platform)"},
                                      object_type="Choir seat (excluded from the 3,000)"))
-                    self.choir.append({"name": name, "x": x, "y": y, "side": side, "rot": -90.0 if side == "W" else 90.0})
+                    self.choir.append({"name": name, "x": x, "y": y, "z": zc, "side": side, "rot": -90.0 if side == "W" else 90.0})
                     n_total += 1
             self.choir_blocks[side] = rows
-            # wheelchair choir place at the corridor end of the first row
+            # wheelchair choir place at the corridor end of the row nearest the platform (grade tier)
             if rows:
-                x, ys = rows[0]
+                x, ys = rows[-1]
                 y = ys[0] + 0.3 + 0.7 + 0.05
                 if y + 0.7 <= ysw_in - 1.2:
                     c = chair_corners(x, y, -90.0 if side == "W" else 90.0, 0.45, 0.7)
@@ -1240,13 +1283,14 @@ class LayoutB:
         x0, x1 = -off - t / 2, self.W + off + t / 2
         self.box("ARC-SLAB-BOH", "20_ARC_Floors", "IfcSlab", "FLOOR", (x0, ys0, -0.25, x1, yn - t / 2, 0.0), {"Description": "Back-of-house slab"})
         bw_ = P["doors"]["boh_exit_width"]
-        bdx = (4.0, self.W - 4.0)
+        bdx = self.stage_door_x                       # passages line up with the stage-side hall exits (review LS-B critical)
+        self.boh_passages = [(x - bw_ / 2, x + bw_ / 2) for x in bdx]
         ops = [(x - bw_ / 2, x + bw_ / 2, 0.0, DH) for x in bdx]
         wname = "ENV-WALL-EXT-N"
         self.wall(wname, "x", yn, x0 - 0.0, x1, 0.0, B["roof_top"] - 0.3, ops, t, props={"Description": "Back-of-house north wall"})
         for k, xd in enumerate(bdx):
-            self.ext_doors.append(self.door(f"DR-EXT-BOH-{k + 1}", wname, "x", yn, xd, bw_, 0.0, DH, "Back-of-house final exit",
-                                            record={"kind": "external", "wall": "N"}))
+            self.ext_doors.append(self.door(f"DR-EXT-BOH-{'W' if k == 0 else 'E'}", wname, "x", yn, xd, bw_, 0.0, DH,
+                                            "Final exit at the end of a back-of-house exit passage", record={"kind": "external", "wall": "N"}))
         for side, xw in (("W", -off), ("E", self.W + off)):
             self.box(f"ENV-WALL-BOH-{side}", "10_ENV_Envelope", "IfcWall", "SOLIDWALL", (xw - t / 2, ys0, 0.0, xw + t / 2, yn - t / 2, B["roof_top"] - 0.3),
                      {"Length": rnd(yn - ys0, 3), "Thickness": t, "Height": B["roof_top"] - 0.3, "IsExternal": True})
@@ -1254,10 +1298,18 @@ class LayoutB:
                  {"IsExternal": True, "Description": "Back-of-house low roof (plant platform allowance)"})
         yc = ys0 + B["corridor_depth"]
         rooms = B["rooms"]
-        ops = []
+        ops = [(a, b, 0.0, DH) for a, b in self.boh_passages]     # open passage mouths (no door)
         for code, name, xa, xb in rooms:
             xd = (xa + xb) / 2
             ops.append((xd - 0.6, xd + 0.6, 0.0, DH))
+        for k, (a, b) in enumerate(self.boh_passages):
+            sd = "W" if k == 0 else "E"
+            for j, xw in enumerate((a - ti / 2, b + ti / 2)):
+                self.box(f"ARC-WALL-BOH-EXIT-{sd}{j + 1}", "20_ARC_Walls", "IfcWall", "PARTITIONING", (xw - ti / 2, yc + ti, 0.0, xw + ti / 2, yn - t / 2, 3.2),
+                         {"Length": rnd(yn - t / 2 - yc - ti, 3), "Thickness": ti, "Height": 3.2, "IsExternal": False,
+                          "Description": "Back-of-house exit passage wall (fire separation TBC)"})
+            self.spaces.append({"id": f"SP-BOH-X-{sd}", "name": f"BOH exit passage {sd}", "level": "L00", "poly": rect(a, yc + ti, b, yn - t / 2),
+                                "use": "Circulation (escape)"})
         cw = "ARC-WALL-BOH-CORRIDOR"
         self.wall(cw, "x", yc + ti / 2, x0 + t, x1 - t, 0.0, 3.2, ops, ti, col="20_ARC_Walls", pre="PARTITIONING",
                   props={"IsExternal": False})
@@ -1266,7 +1318,7 @@ class LayoutB:
             xd = (xa + xb) / 2
             self.door(f"DR-{code}", cw, "x", yc + ti / 2, xd, 1.2, 0.0, DH, name, fire_exit=False, external=False, col="20_ARC_Walls",
                       thickness=ti)
-            if xb < self.W - 0.5:
+            if xb < self.W - 0.5 and not any(abs(xb - a) < 0.2 or abs(xb - b) < 0.2 for a, b in self.boh_passages):
                 on_grid = any(abs(xb - v) < 0.35 for v in self.gx.values())
                 ye = yb - P["structure"]["other_column"] / 2 if on_grid else yn - t / 2
                 self.box(f"ARC-WALL-{code}-E", "20_ARC_Walls", "IfcWall", "PARTITIONING", (xb - ti / 2, yc + ti, 0.0, xb + ti / 2, ye, 3.2),
@@ -1303,10 +1355,14 @@ class LayoutB:
             for gy_k, y, role in (("1", yf, "foyer facade (truss back-span support)"), ("2", 0.0, "hall rear (truss support)"),
                                   ("4", ysw, "stage wall (truss support)")):
                 size = hc if gy_k in ("2", "4") else oc
-                column(f"STR-COL-{k}{gy_k}", x, y, self.bc(y) - cs / 2, size, role, STR["pad_hall"] if size == hc else STR["pad_other"])
+                ztop = self.bc(y) - cs / 2 if gy_k != "1" else self.tc(y) + cs / 2 - STR["foyer_rafter_depth"]
+                column(f"STR-COL-{k}{gy_k}", x, y, ztop, size, role.replace("truss back-span support", "foyer rafter support"),
+                       STR["pad_hall"] if size == hc else STR["pad_other"])
         # side-wall posts between grid 2 and 4 (wind posts / gable frame)
         nb = STR["side_post_bays"]
         self.side_posts_y = [ysw * i / nb for i in range(nb + 1)]
+        lo, hi = self.post_avoid
+        self.side_posts_y = [(lo if y - lo < hi - y else hi) if lo < y < hi else y for y in self.side_posts_y]
         for k in ("A", "L"):
             for i in range(1, nb):
                 y = self.side_posts_y[i]
@@ -1318,8 +1374,6 @@ class LayoutB:
         self.metrics["column_count"] = len(cols)
         # ---- trusses: continuous over grids 1, 2, 4; Pratt webs; panel points
         ypan = []
-        nb_back = max(1, round((0.0 - yf) / STR["truss_panel_target"]))
-        ypan += [yf + (0.0 - yf) * i / nb_back for i in range(nb_back)]
         nb_main = max(2, round(ysw / STR["truss_panel_target"]))
         if nb_main % 2:
             nb_main += 1
@@ -1346,18 +1400,24 @@ class LayoutB:
             for i in range(len(ypan) - 1):
                 a, b = ypan[i], ypan[i + 1]
                 # Pratt: diagonals slope down towards the nearest support (0 or ysw) - tension under gravity
-                near_rear = (a + b) / 2 < ysw / 2 and (a + b) / 2 > 0
-                if (a + b) / 2 < 0:
+                # Pratt: each diagonal runs from the top chord at its support-side node down to the bottom chord towards
+                # mid-span, so it is in tension under gravity (review STR-B minor: previous orientation was Howe)
+                if (a + b) / 2 < ysw / 2:
                     p0, p1 = (x, a, self.tc(a)), (x, b, self.bc(b))
-                elif near_rear:
-                    p0, p1 = (x, a, self.bc(a)), (x, b, self.tc(b))
                 else:
-                    p0, p1 = (x, a, self.tc(a)), (x, b, self.bc(b))
+                    p0, p1 = (x, a, self.bc(a)), (x, b, self.tc(b))
                 mem("D", p0, p1, ws)
             self.truss_count += 1
         self.metrics["truss_count"] = self.truss_count
         self.metrics["truss_main_span"] = rnd(ysw, 2)
-        self.metrics["truss_back_span"] = rnd(-yf, 2)
+        # foyer: simply supported rafters grid 1 -> 2 (continuity over grid 2 released - review STR-B: back-span uplift)
+        rd = STR["foyer_rafter_depth"]
+        for k in xs_keys:
+            x = self.gx[k]
+            za, zb = self.tc(yf) + cs / 2 - rd / 2, self.tc(0.0) + cs / 2 - rd / 2
+            self.strut(f"STR-BEAM-FOYER-{k}", "30_STR_Beams", "IfcBeam", "BEAM", (x, yf, za), (x, 0.0, zb), STR["beam_width"], rd,
+                       {"Role": "Foyer roof rafter, simply supported grid 1 -> 2 (no continuity with the hall truss)"})
+        self.metrics["foyer_rafter_span"] = rnd(-yf, 2)
         # ---- purlins along x between trusses at TC level
         ps = STR["purlin_section"]
         npur = max(2, round((ysw - yf) / STR["purlin_spacing_target"]))
@@ -1403,6 +1463,18 @@ class LayoutB:
                     nbr += 1
                     self.strut(f"STR-BRACE-WALL-{k}{bay}-{nbr:03d}", "30_STR_Bracing", "IfcMember", "BRACE",
                                (x, p0[0], p0[1]), (x, p1[0], p1[1]), bs, bs, {"Role": "Transverse braced bay (side wall)"})
+        # eaves-line horizontal bracing along both long walls in every bay (wind on the 80 m faces -> end walls; review STR-B)
+        braced = {tuple(b) for b in STR["roof_braced_bays"]}
+        for ka, kb in zip(xs_keys, xs_keys[1:]):
+            if (ka, kb) in braced:
+                continue
+            xa, xb = self.gx[ka], self.gx[kb]
+            for tag, (a, b) in (("2", (ypan[0], ypan[1])), ("4", (ypan[-2], ypan[-1]))):
+                for p0, p1 in (((xa, a), (xb, b)), ((xa, b), (xb, a))):
+                    nbr += 1
+                    self.strut(f"STR-BRACE-ROOF-EAVES{tag}-{ka}{kb}-{nbr:03d}", "30_STR_Bracing", "IfcMember", "BRACE",
+                               (p0[0], p0[1], self.tc(p0[1]) - cs / 2 - bs / 2), (p1[0], p1[1], self.tc(p1[1]) - cs / 2 - bs / 2), bs, bs,
+                               {"Role": f"Eaves-line wind girder along grid {tag}"})
         self.metrics["brace_count"] = nbr
         # ---- low roofs: ambulatory and BOH beams
         bw, bd = STR["beam_width"], STR["low_roof_beam_depth"]
@@ -1617,6 +1689,8 @@ class LayoutB:
                     for pk, dr in legs:
                         for e, d in routes_from_passage(pk, a):
                             options.append((e, along + abs(dr) + d))
+            if kind in ("wc", "companion"):
+                options = [o for o in options if ex[o[0]]["level"] == "L00"]
             best = min(options, key=lambda o: o[1])
             results.append({"occupant": oid, "kind": kind, "x": s["x"], "y": s["y"], "exit": best[0], "travel_hall": rnd(best[1], 2),
                             "travel_nearest": rnd(best[1], 2), "options": options})
@@ -1637,10 +1711,17 @@ class LayoutB:
                             "travel_hall": rnd(best[1], 2), "travel_nearest": rnd(best[1], 2), "options": opts})
         # final exits: distance from each hall exit to its nearest external door (+ stair length for L02 exits)
         finals = {}
+        extd = {d["id"]: d for d in self.ext_doors}
+        doors_by_name = {el.name: el for el in self.elements if el.ifc_class == "IfcDoor"}
+        self.discharge = {}
         for e in self.exits:
-            best = min(self.ext_doors, key=lambda d: math.hypot(d["x"] - e["x"], d["y"] - e["y"]))
-            stair = 0.0 if e["level"] == "L00" else 6.0
+            route = self.discharge_route(e["id"])
+            cands = [extd[d] for d in route["finals"]]
+            best = min(cands, key=lambda d: math.hypot(d["x"] - e["x"], d["y"] - e["y"]))
+            stair = 0.0 if e["level"] == "L00" else 8.0
             finals[e["id"]] = (best["id"], math.hypot(best["x"] - e["x"], best["y"] - e["y"]) + stair)
+            self.discharge[e["id"]] = {"via": route["via"], "final": best["id"],
+                                       "doors_fire_exit": all(doors_by_name[d].props.get("FireExit") for d in route["via"] + [best["id"]])}
         # queue-balanced assignment: start nearest, then move occupants from overloaded exits to their next-best exit
         load = {}
         for r_ in results:
@@ -1718,9 +1799,27 @@ class LayoutB:
         self.final_exit_loads = fin_load
         self.check("EGR-08", "Each final (external) exit clear width >= the hall-exit load discharging to it (placeholder factor)", not over,
                    {"over": over, "loads": fin_load}, "clear >= load x level factor")
+        bad_routes = {k: v for k, v in self.discharge.items() if not v["doors_fire_exit"]}
+        self.check("EGR-09", "Every hall exit discharges to a final exit through fire-exit doors only (explicit route, no rooms)",
+                   not bad_routes, self.discharge, "all doors on every route are FireExit")
         self.check("EGR-07", "Occupant tally reconciles (seats + wheelchair + companions + choir + platform + BOH)",
                    total_occ == len(self.seats) + 2 * len(self.wc_positions) + len(self.choir) + npl + E["staff_boh_occupants"],
                    total_occ, "sum of parts")
+
+    def discharge_route(self, eid):
+        """Explicit route from a hall exit to the final exits it may use (doors passed through, then candidate final doors)."""
+        amb = lambda s: [d["id"] for d in self.ext_doors if d["id"].startswith(f"DR-EXT-AMB-{s}")]  # noqa: E731
+        main = [d["id"] for d in self.ext_doors if d["id"].startswith("DR-EXT-S")]
+        if eid.startswith("DR-HALL-S"):
+            return {"via": [], "finals": main}
+        if eid.startswith("DR-HALL-ARC-"):
+            s_ = eid[-1]
+            return {"via": [f"DR-CORNER-AMB-{s_}"], "finals": amb(s_)}
+        if eid.startswith(("DR-HALL-W-", "DR-HALL-E-")):
+            return {"via": [], "finals": amb(eid[8])}
+        if eid.startswith("DR-STAGE-"):
+            return {"via": [], "finals": [f"DR-EXT-BOH-{eid[-1]}"]}
+        raise KeyError(eid)
 
     # ------------------------------------------------------------------ sightlines
     def sightline_checks(self):
@@ -1847,6 +1946,8 @@ class LayoutB:
         self.check("GEO-03", "Single step from the cross-aisle passage up to the raised wheelchair band (band sightline)",
                    self.cross_step == 0 or SL["min_aisle_riser"] - 1e-9 <= self.cross_step <= SL["max_aisle_riser"],
                    rnd(self.cross_step, 3), f"0 or {SL['min_aisle_riser']} - {SL['max_aisle_riser']}")
+        self.check("CIR-07", "Rear-passage side doors open onto the rear passage where it meets the side wall (clear of the posts)",
+                   self.rear_door_in_band, rnd(self.rear_passage_side_y, 2), "door within the passage band")
         rear_r = [self.rows[i]["rise"] for i in range(S["front_rows"] + 1, self.nrows)]
         self.check("GEO-01", "Rear aisle risers uniform and within limits", max(rear_r) <= SL["max_aisle_riser"] and min(rear_r) >= SL["min_aisle_riser"] - 1e-9,
                    {"min": min(rear_r), "max": max(rear_r)}, f"{SL['min_aisle_riser']} - {SL['max_aisle_riser']}")
@@ -1864,11 +1965,19 @@ class LayoutB:
         zones = {w["group"][0] for w in self.wc_positions}
         self.check("ACC-02", "Wheelchair spaces dispersed (front at grade + cross-aisle band, both sides)", len({w["group"] for w in self.wc_positions}) >= 4,
                    sorted({w["group"] for w in self.wc_positions}), ">= 4 groups")
-        band = [r for r in self.ramps if r["name"].startswith("ARC-RAMP-BAND")]
-        self.check("ACC-03", "Step-free route to every wheelchair space: ambulatory -> front-corner door -> front passage (grade) -> sloped "
-                   "front aisle (<= 1:12) -> cross-aisle passage (level with the last front row) -> band end ramp (1:12) -> band",
-                   len(band) == 2 and all(r["gradient_1_in"] >= 12 - 1e-6 for r in band) and self.front_gradient_max <= 1 / 12 + 1e-9,
-                   {"band_ramps": len(band), "front_aisle_gradient": f"1:{1 / self.front_gradient_max:.1f}"}, "all <= 1:12")
+        band = [r for r in self.ramps if r["name"].startswith(("ARC-RAMP-BAND", "ARC-RAMP-CROSS"))]
+        self.check("ACC-03", "Step-free route to every wheelchair space: ambulatory -> front-corner door (grade) -> front places; "
+                   "front corner -> cross-end ramp (1:12) -> cross-aisle passage -> band end ramp (1:12) -> band; same route out",
+                   len(band) == 4 and all(r["gradient_1_in"] >= 12 - 1e-6 for r in band),
+                   {"ramps": [r["name"] for r in band]}, "4 ramps, all <= 1:12")
+        wc_ex = {r["exit"] for r in self.egress_results if r["kind"] in ("wc", "companion")}
+        lv = {e["id"]: e["level"] for e in self.exits}
+        self.check("ACC-08", "Wheelchair users (and companions) are assigned only to step-free (grade) hall exits", all(lv[e] == "L00" for e in wc_ex),
+                   sorted(wc_ex), "all L00")
+        mx = max(r["flights"] for r in self.stairs if "flights" in r)
+        per = max(math.ceil(r["risers"] / r["flights"]) for r in self.stairs if "flights" in r)
+        self.check("CIR-06", "Egress stair flights <= max risers per flight (landings between flights)", per <= self.P["foyer"]["max_flight_risers"],
+                   {"max_risers_per_flight": per, "max_flights": mx}, f"<= {self.P['foyer']['max_flight_risers']}")
         # trusses clear of the highest standing eye in the rear passage
         clr = self.bc(0.3) - (self.top_level + 2.1)
         self.check("STR-CLR", "Truss bottom chord above the rear passage headroom line (+2.1 m)", clr >= 0.5, rnd(clr, 2), ">= 0.5 m")

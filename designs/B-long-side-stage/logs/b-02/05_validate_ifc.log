@@ -1,0 +1,28 @@
+$ C:\Users\Kelvin\Desktop\auditorium\.venv\Scripts\python.exe C:\Users\Kelvin\Desktop\auditorium\shared\bim\validate_ifc.py C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\model\church_3000_B.ifc C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\model\blender_manifest.json C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\reports\ifc_validation.json C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\src\layout.py C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\config\params.json
+# exit 0  (107.4s)
+
+--- stdout ---
+IFCVAL_SUMMARY {"PASS": 21, "FAIL": 0, "WARN": 0}
+PASS IFC-SCHEMA 0
+PASS IFC-UNITS 1
+PASS IFC-STOREYS [["L00", 0.0], ["L01", 0.625], ["L02", 3.325]]
+PASS IFC-HIERARCHY [1, 1, 1]
+PASS IFC-GRID 18
+PASS IFC-CONTAIN []
+PASS IFC-GUID 0
+PASS IFC-COUNTS 4865
+PASS IFC-SEATS 3000
+PASS IFC-SEAT-TYPE 3000
+PASS IFC-SEAT-POS 0.0
+PASS IFC-SEAT-POS-LAYOUT {"max_dev_m": 4.0000000041118255e-06, "ids_not_in_layout": 0}
+PASS IFC-MANIFEST-MATRIX 0
+PASS IFC-OPENINGS [54, 54, 54]
+PASS IFC-GEOM {"tessellated": 4919, "failed": 0, "first_failed": []}
+PASS IFC-EXTENTS [-5.9, -16.6, -1.5, 85.9, 61.45, 14.32]
+PASS IFC-STOREY-RULE {"checked": 4865, "mismatches": 0, "first": []}
+PASS IFC-STOREY-NONEMPTY {"L00": 1039, "L01": 2749, "L02": 1077}
+PASS IFC-MATERIALS {"without_material": 0, "first": [], "materials": ["Concrete (grade TBC)", "Door assembly (TBC)", "Glazing (TBC)", "Masonry (TBC)", "Masonry partition (TBC)", "Metal rainwater goods (TBC)", "Metal roo
+PASS IFC-QTO {"missing": 0, "first": []}
+PASS IFC-QTO-2 {"missing": 0, "first": []}
+
+--- stderr ---

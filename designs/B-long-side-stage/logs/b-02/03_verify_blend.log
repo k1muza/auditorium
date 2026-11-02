@@ -1,0 +1,28 @@
+$ C:\Program Files\Blender Foundation\Blender 5.2\blender.exe --background --factory-startup C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\model\church_3000_B.blend --python C:\Users\Kelvin\Desktop\auditorium\shared\bim\verify_blend.py -- --out C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\reports\blend_verification.json
+# exit 0  (8.4s)
+
+--- stdout ---
+00:04.578  blend            | Read blend: "C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\model\church_3000_B.blend"
+VERIFY_SUMMARY {"PASS": 17, "FAIL": 0, "WARN": 0}
+PASS BLD-UNITS ["METRIC", 1.0, "METERS"]
+PASS BLD-SEATS 3000
+PASS BLD-SEATS-PROP 3000
+PASS BLD-NAMES-SEAT []
+PASS BLD-NAMES-DUP []
+PASS BLD-NAMES-PREFIX []
+PASS BLD-SEMANTICS []
+PASS BLD-FLOOR-SUPPORT {"chairs": 3407, "unsupported": 0, "first": []}
+PASS BLD-FLOOR-CONTACT {"buried": 0, "floating": 0, "first": []}
+PASS BLD-CLASH {"pairs_tested": 193988, "clashes": 0, "first": []}
+PASS BLD-CLASH-CONTROL {"positive": true, "negative": true, "column": "STR-COL-BOOTH-1"}
+PASS BLD-CONNECT {"members": 995, "loose": 0, "first": []}
+PASS BLD-DOOR-CLEAR []
+PASS BLD-ROW-LEVEL {}
+PASS BLD-SIGHT 0.0602
+PASS BLD-SIGHT-N2 0.1203
+PASS BLD-EXTENTS [-5.9, -16.6, 85.9, 61.45]
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit
+
+--- stderr ---

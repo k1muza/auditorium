@@ -28,14 +28,14 @@
         ],
         [
           "L01",
-          0.51
+          0.625
         ],
         [
           "L02",
-          2.98
+          3.325
         ]
       ],
-      "criterion": "[('L00', 0.0), ('L01', 0.51), ('L02', 2.98)]"
+      "criterion": "[('L00', 0.0), ('L01', 0.625), ('L02', 3.325)]"
     },
     {
       "id": "IFC-HIERARCHY",
@@ -73,7 +73,7 @@
       "id": "IFC-COUNTS",
       "description": "Element counts by class/predefined type equal Blender manifest",
       "result": "PASS",
-      "value": 4739,
+      "value": 4865,
       "criterion": "identical"
     },
     {
@@ -94,7 +94,7 @@
       "id": "IFC-SEAT-POS",
       "description": "Max seat placement deviation IFC vs Blender manifest",
       "result": "PASS",
-      "value": 4.440892098500626e-16,
+      "value": 0.0,
       "criterion": "< 0.1 mm"
     },
     {
@@ -119,9 +119,9 @@
       "description": "Every door/window fills an opening that voids its host wall",
       "result": "PASS",
       "value": [
-        53,
-        53,
-        53
+        54,
+        54,
+        54
       ],
       "criterion": "voids == fills == doors+windows"
     },
@@ -130,7 +130,7 @@
       "description": "Every product with a representation tessellates with ifcopenshell.geom",
       "result": "PASS",
       "value": {
-        "tessellated": 4792,
+        "tessellated": 4919,
         "failed": 0,
         "first_failed": []
       },
@@ -141,21 +141,21 @@
       "description": "Building element extents plausible in metres (vs the layout's declared footprint)",
       "result": "PASS",
       "value": [
-        -5.4,
-        -14.6,
+        -5.9,
+        -16.6,
         -1.5,
-        85.4,
-        60.0,
-        14.2
+        85.9,
+        61.45,
+        14.32
       ],
-      "criterion": "~89 x 70 m (+25 % for canopies/eaves)"
+      "criterion": "~89 x 74 m (+25 % for canopies/eaves)"
     },
     {
       "id": "IFC-STOREY-RULE",
       "description": "Storey of every element/space/zone matches its height (re-derived from IFC geometry)",
       "result": "PASS",
       "value": {
-        "checked": 4739,
+        "checked": 4865,
         "mismatches": 0,
         "first": []
       },
@@ -166,9 +166,9 @@
       "description": "Every storey holds at least one element",
       "result": "PASS",
       "value": {
-        "L00": 1129,
-        "L01": 2414,
-        "L02": 1196
+        "L00": 1039,
+        "L01": 2749,
+        "L02": 1077
       },
       "criterion": "no empty storey"
     },
@@ -221,44 +221,44 @@
   "counts_by_class": {
     "IfcAudioVisualAppliance:DISPLAY": 3,
     "IfcAudioVisualAppliance:SPEAKER": 5,
-    "IfcBeam:BEAM": 11,
+    "IfcBeam:BEAM": 22,
     "IfcColumn:COLUMN": 56,
-    "IfcDoor:DOOR": 45,
-    "IfcFooting:PAD_FOOTING": 54,
-    "IfcFurniture:CHAIR": 3293,
+    "IfcDoor:DOOR": 46,
+    "IfcFooting:PAD_FOOTING": 56,
+    "IfcFurniture:CHAIR": 3407,
     "IfcFurniture:USERDEFINED": 1,
-    "IfcMember:BRACE": 80,
-    "IfcMember:CHORD": 352,
-    "IfcMember:MEMBER": 363,
-    "IfcMember:PURLIN": 240,
+    "IfcMember:BRACE": 96,
+    "IfcMember:CHORD": 308,
+    "IfcMember:MEMBER": 319,
+    "IfcMember:PURLIN": 250,
     "IfcPipeSegment:GUTTER": 1,
-    "IfcPipeSegment:RIGIDSEGMENT": 12,
-    "IfcRailing:GUARDRAIL": 36,
-    "IfcRailing:HANDRAIL": 11,
-    "IfcRamp:STRAIGHT_RUN_RAMP": 3,
-    "IfcSlab:FLOOR": 38,
+    "IfcPipeSegment:RIGIDSEGMENT": 22,
+    "IfcRailing:GUARDRAIL": 34,
+    "IfcRailing:HANDRAIL": 15,
+    "IfcRamp:STRAIGHT_RUN_RAMP": 5,
+    "IfcSlab:FLOOR": 73,
     "IfcSlab:LANDING": 3,
     "IfcSlab:ROOF": 6,
-    "IfcSpace:INTERNAL": 26,
+    "IfcSpace:INTERNAL": 28,
     "IfcSpatialZone:USERDEFINED": 36,
     "IfcStair:STRAIGHT_RUN_STAIR": 9,
     "IfcTransportElement:ELEVATOR": 1,
-    "IfcWall:PARTITIONING": 32,
+    "IfcWall:PARTITIONING": 41,
     "IfcWall:SOLIDWALL": 14,
     "IfcWindow:WINDOW": 8
   },
   "building_element_extents": [
-    -5.4,
-    -14.6,
+    -5.9,
+    -16.6,
     -1.5,
-    85.4,
-    60.0,
-    14.2
+    85.9,
+    61.45,
+    14.32
   ],
   "elements_per_storey": {
-    "L00": 1129,
-    "L01": 2414,
-    "L02": 1196
+    "L00": 1039,
+    "L01": 2749,
+    "L02": 1077
   },
   "summary": {
     "PASS": 21,

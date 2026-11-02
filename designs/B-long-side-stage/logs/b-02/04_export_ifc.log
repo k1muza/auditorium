@@ -1,0 +1,7 @@
+$ C:\Users\Kelvin\Desktop\auditorium\.venv\Scripts\python.exe C:\Users\Kelvin\Desktop\auditorium\shared\bim\export_ifc.py C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\model\blender_manifest.json C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\model\church_3000_B.ifc
+# exit 0  (146.8s)
+
+--- stdout ---
+IFC_SUMMARY {"ifc": "C:\\Users\\Kelvin\\Desktop\\auditorium\\designs\\B-long-side-stage\\model\\church_3000_B.ifc", "schema": "IFC4", "products": 4936, "openings": 54, "counts": {"IfcAudioVisualAppliance:DISPLAY": 3, "IfcAudioVisualAppliance:SPEAKER": 5, "IfcBeam:BEAM": 22, "IfcColumn:COLUMN": 56, "IfcDoor:DOOR": 46, "IfcElementAssembly:TRUSS": 11, "IfcFooting:PAD_FOOTING": 56, "IfcFurniture:CHAIR": 3407, "IfcFurniture:USERDEFINED": 1, "IfcMember:BRACE": 96, "IfcMember:CHORD": 308, "IfcMember:MEMBER": 319, "IfcMember:PURLIN": 250, "IfcPipeSegment:GUTTER": 1, "IfcPipeSegment:RIGIDSEGMENT": 22, "IfcRailing:GUARDRAIL": 34, "IfcRailing:HANDRAIL": 15, "IfcRamp:STRAIGHT_RUN_RAMP": 5, "IfcSlab:FLOOR": 73, "IfcSlab:LANDING": 3, "IfcSlab:ROOF": 6, "IfcSpace:INTERNAL": 28, "IfcSpatialZone:USERDEFINED": 36, "IfcStair:STRAIGHT_RUN_STAIR": 9, "IfcTransportElement:ELEVATOR": 1, "IfcWall:PARTITIONING": 41, "IfcWall:SOLIDWALL": 14, "IfcWindow:WINDOW": 8}, "seconds": 144.4}
+
+--- stderr ---

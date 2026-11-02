@@ -1,0 +1,7 @@
+$ C:\Users\Kelvin\Desktop\auditorium\.venv\Scripts\python.exe C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\src\drawings.py C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\model\blender_manifest.json C:\Users\Kelvin\Desktop\auditorium\designs\B-long-side-stage\exports
+# exit 0  (19.2s)
+
+--- stdout ---
+DRAWINGS ["floor_plan.png", "model_axonometric.png", "model_cutaway.png", "seating_plan.png", "section_AA.png", "section_BB.png", "structural_grid.png"]
+
+--- stderr ---
