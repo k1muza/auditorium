@@ -1,0 +1,4 @@
+fan_half_angle_deg,status,fixed_congregation_chairs,choir_chairs_generated,rows,truss_span_m,main_roof_area_m2,max_pulpit_bearing_deg,screen_reliance_chairs,max_hall_plan_travel_m,assigned_people_over_30m_flag,failed_geometry_check_ids
+80,saved B03,3000,412,32,53.05,5513.9,79.98,1564,45.4,535,
+75,unbuilt sensitivity only,3000,602,33,54.0,5591.9,74.97,1688,44.91,511,
+70,unbuilt sensitivity only,3000,809,35,55.9,5747.9,69.98,1810,44.69,539,CLS-01

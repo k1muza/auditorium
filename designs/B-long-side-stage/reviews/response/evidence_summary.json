@@ -1,0 +1,51 @@
+{
+  "revision": "B03-44bc3ae457",
+  "manifest_sha256": "356464e19ccc094f284d8ae1a5c64159700c0fbf518a867ca8b60c1ce1169c83",
+  "source": {
+    "model": "model\\blender_manifest.json",
+    "geometry": "reports/geometry_checks.json",
+    "seats": "reports/seating_schedule.csv",
+    "travel": "reports/egress_travel.csv",
+    "exits": "reports/exit_schedule.csv",
+    "spaces": "reports/space_schedule.csv"
+  },
+  "seat_manifest_xy_position_crosscheck": "3000 of 3000 within 0.002 m in XY",
+  "occupancy": {
+    "fixed_chairs": 3000,
+    "wheelchair_additional": 30,
+    "companions_additional": 30,
+    "choir_chairs": 412,
+    "platform_assumption": 60,
+    "boh_assumption": 30,
+    "provisional_building_load": 3562
+  },
+  "egress": {
+    "occupants_in_hall": 3532,
+    "max_assigned_plan_m": 45.4,
+    "over_30m_nearest": 459,
+    "over_30m_assigned": 535,
+    "method_limit": "Seat -> row -> aisle -> passage -> hall exit; downstream L02 stair uses a fixed 8 m allowance"
+  },
+  "bearing": {
+    "max_deg": 79.98,
+    "p90_deg": 72.72,
+    "over_45_deg": 1362,
+    "over_60_deg": 772,
+    "screen_reliance_from_layout_placeholder": 1564
+  },
+  "areas": {
+    "legacy_hall_zone_m2": 2927.89,
+    "hall_with_ministry_m2": 2971.19,
+    "grid_rectangle_m2": 4244.0,
+    "main_roof_slope_m2": 5513.9,
+    "all_modelled_roof_slope_m2": 6844.1,
+    "envelope_and_floor_xy_extent_m": [
+      91.8,
+      79.55
+    ],
+    "layout_facade_extent_m": [
+      89.1,
+      75.25
+    ]
+  }
+}

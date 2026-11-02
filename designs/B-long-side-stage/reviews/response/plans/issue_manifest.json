@@ -1,0 +1,30 @@
+{
+  "option": "B",
+  "revision": "B03-44bc3ae457",
+  "manifest_sha256": "356464e19ccc094f284d8ae1a5c64159700c0fbf518a867ca8b60c1ce1169c83",
+  "review_sha256": "a48fcd32fd8fec189c310066119a3c4027951f0daaf3181b84dc9d61fac18e20",
+  "sheets": [
+    {
+      "sheet": "B-P100-R1",
+      "file": "B-P100-R1.png",
+      "sha256": "c2c81cbd5ed50a1c0a3d5186d4544e9a293b455b788dd5293960815325995e90",
+      "size_px": [
+        2480,
+        1753
+      ],
+      "paper": "A3 landscape at 150 dpi",
+      "geometry": "unchanged source model"
+    },
+    {
+      "sheet": "B-P110-R1",
+      "file": "B-P110-R1.png",
+      "sha256": "188f4382f8bc9847247fbd330fbef486e87aa72a52ecab68e9778ff202edf0a3",
+      "size_px": [
+        2480,
+        1753
+      ],
+      "paper": "A3 landscape at 150 dpi",
+      "geometry": "unchanged source model"
+    }
+  ]
+}

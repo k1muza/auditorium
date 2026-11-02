@@ -1,0 +1,10 @@
+measure,value,unit,source_or_method,qualification,revision
+Grid rectangle A-L / 2-4,4244.0,m2,grid 80 m x 53.05 m,"Bounding rectangle, not floor take-off",B03-44bc3ae457
+Legacy hall-zone subtotal,2927.89,m2,SP-01 + SP-02 + SP-03 + SP-04,"Explains 2,927.9 m2 in reviewed proposal; omits SP-02M",B03-44bc3ae457
+Hall-zone subtotal with ministry floor,2971.19,m2,SP-01 + SP-02M + SP-02 + SP-03 + SP-04,Concept polygons; not certified net/gross area,B03-44bc3ae457
+Seating hall zone,2142.5,m2,SP-01,Includes seating and fan circulation,B03-44bc3ae457
+Main foyer zone,1038.96,m2,SP-06,Concept polygon,B03-44bc3ae457
+Main sloped roof,5513.9,m2,layout.py roof_geometry / main roof polygon,Excludes other roof planes; not total roof area,B03-44bc3ae457
+Envelope and floor XY bounding extent,91.8 x 79.55,m,comparisons/compare.py: min/max world XY of 10_ENV and 20_ARC_Floors objects,"Bounding dimensions, not a footprint area",B03-44bc3ae457
+Layout facade XY extent,89.1 x 75.25,m,geometry_checks.json footprint_m / facade and grid geometry,Narrower boundary than all envelope and floor objects,B03-44bc3ae457
+All modelled sloped roof surfaces,6844.1,m2,comparisons/compare.py: sum 3D area of upward ENV-ROOF faces,Concept surface take-off; check overlaps and scope before pricing,B03-44bc3ae457

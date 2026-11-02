@@ -1,0 +1,7 @@
+zone_or_type,persons,source,status,revision
+Congregation fixed chairs,3000,40_SEAT_Congregation / seating_schedule.csv,Confirmed count,B03-44bc3ae457
+Wheelchair places,30,40_SEAT_Accessible / accessible_positions.csv,Additional to fixed chairs,B03-44bc3ae457
+Companion chairs,30,40_SEAT_Accessible / accessible_positions.csv,One per wheelchair place,B03-44bc3ae457
+Choir chairs,412,model metrics / 40_SEAT_Choir,Confirmed model count,B03-44bc3ae457
+Platform party,60,config/params.json egress_placeholders,Assumed occupancy,B03-44bc3ae457
+Back-of-house staff,30,config/params.json egress_placeholders,Assumed occupancy,B03-44bc3ae457
