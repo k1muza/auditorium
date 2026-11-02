@@ -22,7 +22,8 @@ def sha(p):
 
 
 def main():
-    pmap = json.loads((MIG / "path_map.json").read_text(encoding="utf-8"))["map"]
+    pm = json.loads((MIG / "path_map.json").read_text(encoding="utf-8"))
+    pmap, intended = pm["map"], pm.get("intentionally_modified", {})
     rows = [ln.split(" *", 1) if " *" in ln else ln.split("  ", 1)
             for ln in (MIG / "BASELINE_SHA256.txt").read_text(encoding="utf-8").splitlines() if ln.strip()]
     ok, bad = 0, []
@@ -37,7 +38,11 @@ def main():
         if not p.is_file():
             bad.append(f"MISSING {old} -> {new}")
         elif sha(p) != h:
-            bad.append(f"CHANGED {old} -> {new}")
+            if old in intended:
+                print(f"  intentionally modified (recorded): {old} - {intended[old]}")
+                ok += 1
+            else:
+                bad.append(f"CHANGED {old} -> {new}")
         else:
             ok += 1
     print(f"baseline files verified: {ok}/{len(rows)}")

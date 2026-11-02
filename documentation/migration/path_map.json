@@ -19,5 +19,9 @@
     "design/drawings": "designs/A-end-stage/proposal/legacy-PL06-21c8b6d8b4/drawings",
     "design": "documentation/proposal/template",
     "BASELINE_SHA256.txt": "documentation/migration/BASELINE_SHA256.txt"
+  },
+  "intentionally_modified": {
+    ".gitignore": "added venv/pycache/renders ignores during the restructure",
+    "README.md": "new multi-design header added; original text kept below it"
   }
 }
