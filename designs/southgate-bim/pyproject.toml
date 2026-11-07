@@ -1,0 +1,16 @@
+[project]
+name = "southgate-bim"
+version = "0.1.0"
+description = "Southgate Worship Center - native IFC (Bonsai / IfcOpenShell) BIM project migrated from design F"
+requires-python = ">=3.10"
+dependencies = [
+  "ifcopenshell==0.9.0.post1",   # same IfcOpenShell build as Bonsai 0.9.0-post1
+  "ifc5d==0.9.0",                # IfcOpenShell quantity take-off (installed with --no-deps)
+  "numpy>=1.26",
+  "pyyaml>=6",
+  "pytest>=8",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

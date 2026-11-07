@@ -1,0 +1,35 @@
+# Measurement rules for BOQ items that the geometry alone does not provide.
+# STATUS: NOT APPROVED - placeholders that document WHAT must be decided. No rule here is
+# applied to produce a quantity until `approved: true` and a measurement standard is chosen
+# (e.g. ASAQS Standard System of Measuring Building Work / SANS 1200 / NRM2 - to be confirmed by the QS).
+measurement_standard: TO_BE_CONFIRMED
+derived_items:
+  footing_excavation:
+    basis: "IfcFooting plan area + working space on each side x depth from formation to ground level"
+    parameters: {working_space_m: null, ground_level_m: 0.225, battering: null}
+    approved: false
+    blocked_by: [OW-001 foundation design, geotechnical report]
+  footing_blinding:
+    basis: "IfcFooting underside area x blinding thickness"
+    parameters: {thickness_m: null}
+    approved: false
+  footing_formwork:
+    basis: "IfcFooting vertical side area (Qto_FootingBaseQuantities.OuterSurfaceArea minus top/bottom)"
+    approved: false
+  reinforcement:
+    basis: "kg from bar schedules; interim kg/m3 ratios only if the engineer provides them"
+    parameters: {kg_per_m3_by_element: null}
+    approved: false
+  backfill:
+    basis: "excavation volume - footing volume - blinding volume"
+    approved: false
+  roof_sheet_fasteners:
+    basis: "fasteners per sheet per purlin line from an approved fixing specification"
+    parameters: {fasteners_per_purlin_crossing: null}
+    approved: false
+  steel_mass:
+    basis: "Qto Length x catalogue kg/m for the final section (interim: source nominal kg/m, SOUTHGATE_Quantities)"
+    approved: false
+  wall_finishes:
+    basis: "Qto_WallBaseQuantities.NetSideArea per face once wall build-ups are specified"
+    approved: false

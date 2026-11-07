@@ -1,0 +1,951 @@
+{
+ "file": "work/option_b/candidates/20261107-115532/southgate_optionB_candidate.ifc",
+ "sha256": "32622e105a690a1f9f8be03547945ea1306ae96b7324ef9e73823be97a087d18",
+ "gates": {
+  "A1_schema_valid": {
+   "pass": true,
+   "info": 0
+  },
+  "A2_unique_globalids": {
+   "pass": true,
+   "info": []
+  },
+  "B1_trusses_contained_in_roof_storey": {
+   "pass": true,
+   "info": {
+    "SOUTHGATE-TRUSS-T01": "03 Roof",
+    "SOUTHGATE-TRUSS-T02": "03 Roof",
+    "SOUTHGATE-TRUSS-T03": "03 Roof",
+    "SOUTHGATE-TRUSS-T04": "03 Roof",
+    "SOUTHGATE-TRUSS-T05": "03 Roof",
+    "SOUTHGATE-TRUSS-T06": "03 Roof",
+    "SOUTHGATE-TRUSS-T07": "03 Roof",
+    "SOUTHGATE-TRUSS-T08": "03 Roof",
+    "SOUTHGATE-TRUSS-T09": "03 Roof",
+    "SOUTHGATE-TRUSS-T10": "03 Roof",
+    "SOUTHGATE-TRUSS-T11": "03 Roof"
+   }
+  },
+  "B2_every_new_element_aggregated_into_a_contained_truss": {
+   "pass": true,
+   "info": []
+  },
+  "B3_every_new_element_typed": {
+   "pass": true,
+   "info": []
+  },
+  "B4_every_new_component_has_material": {
+   "pass": true,
+   "info": []
+  },
+  "B5_angles_native_LShape_profile_with_profile_set_usage": {
+   "pass": true,
+   "info": {
+    "bad": [],
+    "angles_by_profile": {
+     "L70x70x6": 44,
+     "L75x75x6": 184,
+     "L60x60x6": 176,
+     "L100x100x8": 146,
+     "L80x80x8": 156,
+     "L90x90x8": 108
+    }
+   }
+  },
+  "B6_members_and_plates_have_base_quantities": {
+   "pass": true,
+   "info": []
+  },
+  "B7_design_status_present_no_verification_claim": {
+   "pass": true,
+   "info": {
+    "by_status": {
+     "CONCEPT_UNVERIFIED": 6597
+    },
+    "claims": []
+   }
+  },
+  "B8_every_bolt_realises_a_connection_relationship": {
+   "pass": true,
+   "info": {
+    "relationships": 4672,
+    "bolts": 3634,
+    "loose": []
+   }
+  },
+  "B9_engineering_warnings_on_every_truss": {
+   "pass": true,
+   "info": []
+  },
+  "C1_every_component_has_geometry": {
+   "pass": true,
+   "info": []
+  },
+  "C2_truss_count_and_positions": {
+   "pass": true,
+   "info": {
+    "n": 11,
+    "x": [
+     3.25,
+     8.81,
+     14.37,
+     19.93,
+     25.49,
+     31.05,
+     36.61,
+     42.17,
+     47.73,
+     53.29,
+     58.85
+    ]
+   }
+  },
+  "C3_twelve_bays_2700": {
+   "pass": true,
+   "info": {
+    "SOUTHGATE-TRUSS-T01": [
+     12,
+     [
+      2.7
+     ]
+    ],
+    "SOUTHGATE-TRUSS-T02": [
+     12,
+     [
+      2.7
+     ]
+    ],
+    "SOUTHGATE-TRUSS-T03": [
+     12,
+     [
+      2.7
+     ]
+    ],
+    "SOUTHGATE-TRUSS-T04": [
+     12,
+     [
+      2.7
+     ]
+    ],
+    "SOUTHGATE-TRUSS-T05": [
+     12,
+     [
+      2.7
+     ]
+    ],
+    "SOUTHGATE-TRUSS-T06": [
+     12,
+     [
+      2.7
+     ]
+    ],
+    "SOUTHGATE-TRUSS-T07": [
+     12,
+     [
+      2.7
+     ]
+    ],
+    "SOUTHGATE-TRUSS-T08": [
+     12,
+     [
+      2.7
+     ]
+    ],
+    "SOUTHGATE-TRUSS-T09": [
+     12,
+     [
+      2.7
+     ]
+    ],
+    "SOUTHGATE-TRUSS-T10": [
+     12,
+     [
+      2.7
+     ]
+    ],
+    "SOUTHGATE-TRUSS-T11": [
+     12,
+     [
+      2.7
+     ]
+    ]
+   }
+  },
+  "C4_pitch_15deg": {
+   "pass": true,
+   "info": {
+    "SOUTHGATE-TRUSS-T01": [
+     15.0
+    ],
+    "SOUTHGATE-TRUSS-T02": [
+     15.0
+    ],
+    "SOUTHGATE-TRUSS-T03": [
+     15.0
+    ],
+    "SOUTHGATE-TRUSS-T04": [
+     15.0
+    ],
+    "SOUTHGATE-TRUSS-T05": [
+     15.0
+    ],
+    "SOUTHGATE-TRUSS-T06": [
+     15.0
+    ],
+    "SOUTHGATE-TRUSS-T07": [
+     15.0
+    ],
+    "SOUTHGATE-TRUSS-T08": [
+     15.0
+    ],
+    "SOUTHGATE-TRUSS-T09": [
+     15.0
+    ],
+    "SOUTHGATE-TRUSS-T10": [
+     15.0
+    ],
+    "SOUTHGATE-TRUSS-T11": [
+     15.0
+    ]
+   }
+  },
+  "C5_top_of_steel_below_purlin_seat(-10.13mm)": {
+   "pass": true,
+   "info": {
+    "SOUTHGATE-TRUSS-T01": -0.0105,
+    "SOUTHGATE-TRUSS-T02": -0.0105,
+    "SOUTHGATE-TRUSS-T03": -0.0105,
+    "SOUTHGATE-TRUSS-T04": -0.0105,
+    "SOUTHGATE-TRUSS-T05": -0.0105,
+    "SOUTHGATE-TRUSS-T06": -0.0105,
+    "SOUTHGATE-TRUSS-T07": -0.0105,
+    "SOUTHGATE-TRUSS-T08": -0.0105,
+    "SOUTHGATE-TRUSS-T09": -0.0105,
+    "SOUTHGATE-TRUSS-T10": -0.0105,
+    "SOUTHGATE-TRUSS-T11": -0.0105
+   }
+  },
+  "C6_within_bearings_and_column_line": {
+   "pass": true,
+   "info": {
+    "SOUTHGATE-TRUSS-T01": [
+     0.2807,
+     32.7193
+    ],
+    "SOUTHGATE-TRUSS-T02": [
+     0.2807,
+     32.7193
+    ],
+    "SOUTHGATE-TRUSS-T03": [
+     0.2807,
+     32.7193
+    ],
+    "SOUTHGATE-TRUSS-T04": [
+     0.2807,
+     32.7193
+    ],
+    "SOUTHGATE-TRUSS-T05": [
+     0.2807,
+     32.7193
+    ],
+    "SOUTHGATE-TRUSS-T06": [
+     0.2807,
+     32.7193
+    ],
+    "SOUTHGATE-TRUSS-T07": [
+     0.2807,
+     32.7193
+    ],
+    "SOUTHGATE-TRUSS-T08": [
+     0.2807,
+     32.7193
+    ],
+    "SOUTHGATE-TRUSS-T09": [
+     0.2807,
+     32.7193
+    ],
+    "SOUTHGATE-TRUSS-T10": [
+     0.2807,
+     32.7193
+    ],
+    "SOUTHGATE-TRUSS-T11": [
+     0.2807,
+     32.7193
+    ]
+   }
+  },
+  "C7_bolts_pass_through_their_stack": {
+   "pass": true,
+   "info": {
+    "checked": 3634,
+    "failures": 0,
+    "examples": []
+   }
+  },
+  "C8_plate_holes_coincide_with_bolts": {
+   "pass": true,
+   "info": []
+  },
+  "C9_no_intersections_between_new_members_and_plates": {
+   "pass": true,
+   "info": {
+    "n": 0,
+    "examples": []
+   }
+  },
+  "D1_stored_volumes_match_geometry": {
+   "pass": true,
+   "info": {
+    "n": 0,
+    "examples": []
+   }
+  },
+  "E1_retained_elements_unchanged": {
+   "pass": true,
+   "info": {
+    "retained": 9048,
+    "missing": [],
+    "changed": []
+   }
+  },
+  "E2_superseded_parts_absent": {
+   "pass": true,
+   "info": {
+    "superseded": 1520,
+    "still_present": 0
+   }
+  },
+  "E3_architectural_and_support_counts_unchanged": {
+   "pass": true,
+   "info": {
+    "IfcWall": [
+     116,
+     116
+    ],
+    "IfcDoor": [
+     84,
+     84
+    ],
+    "IfcWindow": [
+     40,
+     40
+    ],
+    "IfcColumn": [
+     99,
+     99
+    ],
+    "IfcFooting": [
+     92,
+     92
+    ],
+    "IfcSlab": [
+     82,
+     82
+    ],
+    "IfcCovering": [
+     960,
+     960
+    ],
+    "IfcCurtainWall": [
+     5,
+     5
+    ],
+    "IfcRoof": [
+     1,
+     1
+    ],
+    "IfcBeam": [
+     44,
+     44
+    ],
+    "IfcFurniture": [
+     2135,
+     2135
+    ],
+    "IfcFurniture_seat_like": [
+     2000,
+     2000
+    ]
+   }
+  },
+  "E4_excluded_buildings_not_introduced": {
+   "pass": true,
+   "info": []
+  }
+ },
+ "counts": {
+  "new_elements": 6597,
+  "by_class": {
+   "IfcMember/": 814,
+   "IfcPlate/": 1456,
+   "IfcElementAssembly/": 693,
+   "IfcMechanicalFastener/": 3634
+  },
+  "trusses": 11
+ },
+ "schema_issues": [],
+ "truss_structure": {
+  "SOUTHGATE-TRUSS-T01": {
+   "container": "03 Roof",
+   "direct_children": {
+    "IfcElementAssembly": 63
+   },
+   "all_parts": 603,
+   "parts_by_class": {
+    "IfcPlate": 134,
+    "IfcMember": 74,
+    "IfcMechanicalFastener": 332,
+    "IfcElementAssembly": 63
+   },
+   "type": "SG-OPTB-TT-G"
+  },
+  "SOUTHGATE-TRUSS-T02": {
+   "container": "03 Roof",
+   "direct_children": {
+    "IfcElementAssembly": 63
+   },
+   "all_parts": 599,
+   "parts_by_class": {
+    "IfcMember": 74,
+    "IfcElementAssembly": 63,
+    "IfcPlate": 132,
+    "IfcMechanicalFastener": 330
+   },
+   "type": "SG-OPTB-TT-R"
+  },
+  "SOUTHGATE-TRUSS-T03": {
+   "container": "03 Roof",
+   "direct_children": {
+    "IfcElementAssembly": 63
+   },
+   "all_parts": 599,
+   "parts_by_class": {
+    "IfcPlate": 132,
+    "IfcMechanicalFastener": 330,
+    "IfcElementAssembly": 63,
+    "IfcMember": 74
+   },
+   "type": "SG-OPTB-TT-R"
+  },
+  "SOUTHGATE-TRUSS-T04": {
+   "container": "03 Roof",
+   "direct_children": {
+    "IfcElementAssembly": 63
+   },
+   "all_parts": 599,
+   "parts_by_class": {
+    "IfcPlate": 132,
+    "IfcMechanicalFastener": 330,
+    "IfcMember": 74,
+    "IfcElementAssembly": 63
+   },
+   "type": "SG-OPTB-TT-T"
+  },
+  "SOUTHGATE-TRUSS-T05": {
+   "container": "03 Roof",
+   "direct_children": {
+    "IfcElementAssembly": 63
+   },
+   "all_parts": 599,
+   "parts_by_class": {
+    "IfcMember": 74,
+    "IfcMechanicalFastener": 330,
+    "IfcPlate": 132,
+    "IfcElementAssembly": 63
+   },
+   "type": "SG-OPTB-TT-T"
+  },
+  "SOUTHGATE-TRUSS-T06": {
+   "container": "03 Roof",
+   "direct_children": {
+    "IfcElementAssembly": 63
+   },
+   "all_parts": 599,
+   "parts_by_class": {
+    "IfcElementAssembly": 63,
+    "IfcMechanicalFastener": 330,
+    "IfcPlate": 132,
+    "IfcMember": 74
+   },
+   "type": "SG-OPTB-TT-T"
+  },
+  "SOUTHGATE-TRUSS-T07": {
+   "container": "03 Roof",
+   "direct_children": {
+    "IfcElementAssembly": 63
+   },
+   "all_parts": 599,
+   "parts_by_class": {
+    "IfcMechanicalFastener": 330,
+    "IfcPlate": 132,
+    "IfcMember": 74,
+    "IfcElementAssembly": 63
+   },
+   "type": "SG-OPTB-TT-T"
+  },
+  "SOUTHGATE-TRUSS-T08": {
+   "container": "03 Roof",
+   "direct_children": {
+    "IfcElementAssembly": 63
+   },
+   "all_parts": 599,
+   "parts_by_class": {
+    "IfcMechanicalFastener": 330,
+    "IfcPlate": 132,
+    "IfcElementAssembly": 63,
+    "IfcMember": 74
+   },
+   "type": "SG-OPTB-TT-T"
+  },
+  "SOUTHGATE-TRUSS-T09": {
+   "container": "03 Roof",
+   "direct_children": {
+    "IfcElementAssembly": 63
+   },
+   "all_parts": 599,
+   "parts_by_class": {
+    "IfcMechanicalFastener": 330,
+    "IfcMember": 74,
+    "IfcPlate": 132,
+    "IfcElementAssembly": 63
+   },
+   "type": "SG-OPTB-TT-T"
+  },
+  "SOUTHGATE-TRUSS-T10": {
+   "container": "03 Roof",
+   "direct_children": {
+    "IfcElementAssembly": 63
+   },
+   "all_parts": 599,
+   "parts_by_class": {
+    "IfcMechanicalFastener": 330,
+    "IfcPlate": 132,
+    "IfcMember": 74,
+    "IfcElementAssembly": 63
+   },
+   "type": "SG-OPTB-TT-T"
+  },
+  "SOUTHGATE-TRUSS-T11": {
+   "container": "03 Roof",
+   "direct_children": {
+    "IfcElementAssembly": 63
+   },
+   "all_parts": 603,
+   "parts_by_class": {
+    "IfcElementAssembly": 63,
+    "IfcMechanicalFastener": 332,
+    "IfcPlate": 134,
+    "IfcMember": 74
+   },
+   "type": "SG-OPTB-TT-G"
+  }
+ },
+ "truss_geometry": {
+  "SOUTHGATE-TRUSS-T01": {
+   "x_mean": 3.25,
+   "x_min": 3.145,
+   "x_max": 3.355,
+   "vertical_positions_s": [
+    -0.0,
+    2.7,
+    5.4,
+    8.1,
+    10.8,
+    13.5,
+    16.2,
+    18.9,
+    21.6,
+    24.3,
+    27.0,
+    29.7,
+    32.4
+   ],
+   "bays": 12,
+   "panel_lengths": [
+    2.7
+   ],
+   "pair_centroid_line_max_dev_mm": null,
+   "top_chord_pitch_deg": [
+    15.0
+   ],
+   "tos_max_perp_m": -0.0105,
+   "bottom_chord_underside_z": 10.8774,
+   "ridge_tos_z": 16.7037,
+   "span_extent_y": [
+    0.2807,
+    32.7193
+   ]
+  },
+  "SOUTHGATE-TRUSS-T02": {
+   "x_mean": 8.81,
+   "x_min": 8.705,
+   "x_max": 8.915,
+   "vertical_positions_s": [
+    -0.0,
+    2.7,
+    5.4,
+    8.1,
+    10.8,
+    13.5,
+    16.2,
+    18.9,
+    21.6,
+    24.3,
+    27.0,
+    29.7,
+    32.4
+   ],
+   "bays": 12,
+   "panel_lengths": [
+    2.7
+   ],
+   "pair_centroid_line_max_dev_mm": null,
+   "top_chord_pitch_deg": [
+    15.0
+   ],
+   "tos_max_perp_m": -0.0105,
+   "bottom_chord_underside_z": 10.8774,
+   "ridge_tos_z": 16.703,
+   "span_extent_y": [
+    0.2807,
+    32.7193
+   ]
+  },
+  "SOUTHGATE-TRUSS-T03": {
+   "x_mean": 14.37,
+   "x_min": 14.265,
+   "x_max": 14.475,
+   "vertical_positions_s": [
+    -0.0,
+    2.7,
+    5.4,
+    8.1,
+    10.8,
+    13.5,
+    16.2,
+    18.9,
+    21.6,
+    24.3,
+    27.0,
+    29.7,
+    32.4
+   ],
+   "bays": 12,
+   "panel_lengths": [
+    2.7
+   ],
+   "pair_centroid_line_max_dev_mm": null,
+   "top_chord_pitch_deg": [
+    15.0
+   ],
+   "tos_max_perp_m": -0.0105,
+   "bottom_chord_underside_z": 10.8774,
+   "ridge_tos_z": 16.703,
+   "span_extent_y": [
+    0.2807,
+    32.7193
+   ]
+  },
+  "SOUTHGATE-TRUSS-T04": {
+   "x_mean": 19.93,
+   "x_min": 19.825,
+   "x_max": 20.035,
+   "vertical_positions_s": [
+    -0.0,
+    2.7,
+    5.4,
+    8.1,
+    10.8,
+    13.5,
+    16.2,
+    18.9,
+    21.6,
+    24.3,
+    27.0,
+    29.7,
+    32.4
+   ],
+   "bays": 12,
+   "panel_lengths": [
+    2.7
+   ],
+   "pair_centroid_line_max_dev_mm": null,
+   "top_chord_pitch_deg": [
+    15.0
+   ],
+   "tos_max_perp_m": -0.0105,
+   "bottom_chord_underside_z": 10.8774,
+   "ridge_tos_z": 16.703,
+   "span_extent_y": [
+    0.2807,
+    32.7193
+   ]
+  },
+  "SOUTHGATE-TRUSS-T05": {
+   "x_mean": 25.49,
+   "x_min": 25.385,
+   "x_max": 25.595,
+   "vertical_positions_s": [
+    -0.0,
+    2.7,
+    5.4,
+    8.1,
+    10.8,
+    13.5,
+    16.2,
+    18.9,
+    21.6,
+    24.3,
+    27.0,
+    29.7,
+    32.4
+   ],
+   "bays": 12,
+   "panel_lengths": [
+    2.7
+   ],
+   "pair_centroid_line_max_dev_mm": null,
+   "top_chord_pitch_deg": [
+    15.0
+   ],
+   "tos_max_perp_m": -0.0105,
+   "bottom_chord_underside_z": 10.8774,
+   "ridge_tos_z": 16.703,
+   "span_extent_y": [
+    0.2807,
+    32.7193
+   ]
+  },
+  "SOUTHGATE-TRUSS-T06": {
+   "x_mean": 31.05,
+   "x_min": 30.945,
+   "x_max": 31.155,
+   "vertical_positions_s": [
+    -0.0,
+    2.7,
+    5.4,
+    8.1,
+    10.8,
+    13.5,
+    16.2,
+    18.9,
+    21.6,
+    24.3,
+    27.0,
+    29.7,
+    32.4
+   ],
+   "bays": 12,
+   "panel_lengths": [
+    2.7
+   ],
+   "pair_centroid_line_max_dev_mm": null,
+   "top_chord_pitch_deg": [
+    15.0
+   ],
+   "tos_max_perp_m": -0.0105,
+   "bottom_chord_underside_z": 10.8774,
+   "ridge_tos_z": 16.703,
+   "span_extent_y": [
+    0.2807,
+    32.7193
+   ]
+  },
+  "SOUTHGATE-TRUSS-T07": {
+   "x_mean": 36.61,
+   "x_min": 36.505,
+   "x_max": 36.715,
+   "vertical_positions_s": [
+    -0.0,
+    2.7,
+    5.4,
+    8.1,
+    10.8,
+    13.5,
+    16.2,
+    18.9,
+    21.6,
+    24.3,
+    27.0,
+    29.7,
+    32.4
+   ],
+   "bays": 12,
+   "panel_lengths": [
+    2.7
+   ],
+   "pair_centroid_line_max_dev_mm": null,
+   "top_chord_pitch_deg": [
+    15.0
+   ],
+   "tos_max_perp_m": -0.0105,
+   "bottom_chord_underside_z": 10.8774,
+   "ridge_tos_z": 16.703,
+   "span_extent_y": [
+    0.2807,
+    32.7193
+   ]
+  },
+  "SOUTHGATE-TRUSS-T08": {
+   "x_mean": 42.17,
+   "x_min": 42.065,
+   "x_max": 42.275,
+   "vertical_positions_s": [
+    -0.0,
+    2.7,
+    5.4,
+    8.1,
+    10.8,
+    13.5,
+    16.2,
+    18.9,
+    21.6,
+    24.3,
+    27.0,
+    29.7,
+    32.4
+   ],
+   "bays": 12,
+   "panel_lengths": [
+    2.7
+   ],
+   "pair_centroid_line_max_dev_mm": null,
+   "top_chord_pitch_deg": [
+    15.0
+   ],
+   "tos_max_perp_m": -0.0105,
+   "bottom_chord_underside_z": 10.8774,
+   "ridge_tos_z": 16.703,
+   "span_extent_y": [
+    0.2807,
+    32.7193
+   ]
+  },
+  "SOUTHGATE-TRUSS-T09": {
+   "x_mean": 47.73,
+   "x_min": 47.625,
+   "x_max": 47.835,
+   "vertical_positions_s": [
+    -0.0,
+    2.7,
+    5.4,
+    8.1,
+    10.8,
+    13.5,
+    16.2,
+    18.9,
+    21.6,
+    24.3,
+    27.0,
+    29.7,
+    32.4
+   ],
+   "bays": 12,
+   "panel_lengths": [
+    2.7
+   ],
+   "pair_centroid_line_max_dev_mm": null,
+   "top_chord_pitch_deg": [
+    15.0
+   ],
+   "tos_max_perp_m": -0.0105,
+   "bottom_chord_underside_z": 10.8774,
+   "ridge_tos_z": 16.703,
+   "span_extent_y": [
+    0.2807,
+    32.7193
+   ]
+  },
+  "SOUTHGATE-TRUSS-T10": {
+   "x_mean": 53.29,
+   "x_min": 53.185,
+   "x_max": 53.395,
+   "vertical_positions_s": [
+    -0.0,
+    2.7,
+    5.4,
+    8.1,
+    10.8,
+    13.5,
+    16.2,
+    18.9,
+    21.6,
+    24.3,
+    27.0,
+    29.7,
+    32.4
+   ],
+   "bays": 12,
+   "panel_lengths": [
+    2.7
+   ],
+   "pair_centroid_line_max_dev_mm": null,
+   "top_chord_pitch_deg": [
+    15.0
+   ],
+   "tos_max_perp_m": -0.0105,
+   "bottom_chord_underside_z": 10.8774,
+   "ridge_tos_z": 16.703,
+   "span_extent_y": [
+    0.2807,
+    32.7193
+   ]
+  },
+  "SOUTHGATE-TRUSS-T11": {
+   "x_mean": 58.85,
+   "x_min": 58.745,
+   "x_max": 58.955,
+   "vertical_positions_s": [
+    -0.0,
+    2.7,
+    5.4,
+    8.1,
+    10.8,
+    13.5,
+    16.2,
+    18.9,
+    21.6,
+    24.3,
+    27.0,
+    29.7,
+    32.4
+   ],
+   "bays": 12,
+   "panel_lengths": [
+    2.7
+   ],
+   "pair_centroid_line_max_dev_mm": null,
+   "top_chord_pitch_deg": [
+    15.0
+   ],
+   "tos_max_perp_m": -0.0105,
+   "bottom_chord_underside_z": 10.8774,
+   "ridge_tos_z": 16.7037,
+   "span_extent_y": [
+    0.2807,
+    32.7193
+   ]
+  }
+ },
+ "mass_by_kind_kg": {
+  "IfcMember|SG-OPTB-VP-L70x70x6": 364.7,
+  "IfcMember|SG-OPTB-D-L75x75x6": 3670.2,
+  "IfcMember|SG-OPTB-V-L60x60x6": 3095.5,
+  "IfcMember|SG-OPTB-V-L75x75x6": 1204.1,
+  "IfcMember|SG-OPTB-D-L100x100x8": 7004.4,
+  "IfcMember|SG-OPTB-VK-L100x100x8": 1442.9,
+  "IfcMember|SG-OPTB-BC-L80x80x8": 6867.2,
+  "IfcMember|SG-OPTB-TC-L80x80x8": 1291.0,
+  "IfcMember|SG-OPTB-TC-L90x90x8": 6574.6,
+  "IfcPlate|SG-OPTB-PACKER-80x70x10": 9.7,
+  "IfcPlate|SG-OPTB-PACKER-80x75x10": 117.8,
+  "IfcPlate|SG-OPTB-PACKER-70x60x10": 52.1,
+  "IfcPlate|SG-OPTB-PACKER-80x100x10": 160.8,
+  "IfcPlate|SG-OPTB-PACKER-80x80x10": 78.3,
+  "IfcPlate|SG-OPTB-GUSSET-10": 2188.9,
+  "IfcPlate|SG-OPTB-SPLICE-8": 474.8,
+  "IfcPlate|SG-OPTB-PACKER-80x90x10": 61.0
+ },
+ "seconds": 2213.8,
+ "all_pass": true
+}

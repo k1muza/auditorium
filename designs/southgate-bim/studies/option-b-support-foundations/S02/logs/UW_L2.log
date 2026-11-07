@@ -1,0 +1,4 @@
+UW_L2 S3 UC 305x305x97    ok=True u=0.44 y=40.5 x=7.1 | q1.2 y=40.5 x=7.1 WBX=CHS 168.3x5 t=280s
+UW_L2 S1 UC 305x305x137   ok=False u=0.35 y=49.9 x=5.8 | q1.2 y=49.9 x=5.8 WBX=CHS 168.3x5 t=328s
+UW_L2 S2 UC 356x368x177   ok=False u=0.32 y=71.0 x=12.6 | q1.2 y=71.0 x=12.6 WBX=CHS 168.3x5 t=41s
+written UW_L2

@@ -1,0 +1,91 @@
+# Option B roof trusses - concept detailing rules used to build the candidate IFC.
+# STATUS: NOT APPROVED. Nothing here is an engineered or approved specification.
+# Every value carries a status and a source so the schedules can say how each quantity was obtained:
+#   R2             = stated in / used by the R2 appraisal (preliminary estimate basis)
+#   MODEL          = measured from the authoritative IFC (unchanged roof envelope)
+#   PLACEHOLDER    = concept-detail placeholder chosen to make the geometry buildable; replace at design stage
+# Revision: OPTB-C01 (candidate 1), 2026-11-07.
+
+revision: OPTB-C01
+reference: "Southgate Worship Center - Roof Structure Options Appraisal, Revision R2, 7 November 2026 - Option B"
+
+setting_out:
+  bottom_chord_centroid_z_m: {value: 10.900, status: R2, note: "R2 bottom-chord datum (config/project.yaml roof_bottom); angle centroid line"}
+  top_of_steel_perp_offset_m:
+    value: -0.0105
+    status: MODEL
+    note: >-
+      Top-chord top of steel sits 10.5 mm (normal) below the R2 12.380 reference plane, i.e. 0.4 mm under the
+      measured underside of every existing purlin (work/option_b/s02_roof_seating.json: -10.13 mm on all rows/lines).
+      R2's 12.380 line was the existing model's member axis (leg centre of 2L100) while the purlins seat on it.
+      Consequence: the top-chord centroid line is ~25-26 mm (vertical) below R2's line; depth at bearing 1.444-1.447 m
+      instead of 1.48 m. Recorded as deviation DEV-01.
+  truss_x_m: {value: [3.25, 8.81, 14.37, 19.93, 25.49, 31.05, 36.61, 42.17, 47.73, 53.29, 58.85], status: R2}
+  bearing_y_m: {value: [0.30, 32.70], status: R2}
+  panel_m: {value: 2.70, status: R2}
+  pitch_deg: {value: 15.0, status: R2}
+
+assembly:
+  gap_between_angles_m: {value: 0.010, status: R2, note: "10 mm gusset gap (R2 truss_engine GAP)"}
+  angle_orientation: {status: PLACEHOLDER, value: "chords: outstanding legs at the outer face (top of TC, underside of BC); verticals: connected leg towards mid-span; diagonals: connected leg on the upper side"}
+  chord_stock_length_m: {value: 6.0, status: R2, note: "Harare stock lists (R1/R2); 12 m unconfirmed"}
+  chord_pieces: {status: PLACEHOLDER, value: "6 BC pieces (2 panels each) and 6 TC pieces (2 panels each); splices at panel points s = 5.4, 10.8, 21.6, 27.0 (both chords), 16.2 (BC) and the ridge apex"}
+  chord_joint_gap_m: {value: 0.005, status: PLACEHOLDER}
+  fit_up_clearance_m: {value: 0.010, status: PLACEHOLDER, note: "minimum clearance between web ends and chords / other webs"}
+  gusset_inset_from_chord_face_m: {value: 0.005, status: PLACEHOLDER}
+  end_cuts: {value: square, status: PLACEHOLDER, note: "all angles square cut; ridge V-notch bridged by apex splice plates"}
+
+plates:
+  gusset_thickness_m: {value: 0.010, status: R2, note: "R2: 2L angles bolted to 10 mm gussets"}
+  splice_plate_thickness_m: {value: 0.008, status: PLACEHOLDER, note: "R2 counts 2 plates per splice (4 kg each) but gives no thickness"}
+  packer_thickness_m: {value: 0.010, status: R2, note: "fills the 10 mm gap"}
+  plate_grade: {value: "S355JR - PROVISIONAL (plate grade not stated in R2)", status: PLACEHOLDER}
+  rigging_tab: {status: PLACEHOLDER, depth_below_chord_m: 0.120, width_m: 0.120, hole_diameter_m: 0.026, hole_below_chord_m: 0.065,
+                lines: [1, 2], note: "equipment pick-up provision on the two rigging truss lines (stage lighting bar, arrays, FOH bar); capacity NOT_AVAILABLE"}
+
+bolts:
+  basis: {status: R2, value: "M20 grade 8.8, 100 kN design resistance per bolt (R2 metrics.py BOLT_KN, study assumption)"}
+  count_rules:
+    web_member_end: {value: "max(2, ceil(F_max / 100 kN)) bolts per end", status: R2}
+    chord_to_gusset: {value: "4 per gusset where the chord is not spliced", status: R2}
+    chord_splice: {value: "8 per splice (4 each side of the joint) through both splice plates, both angles and the gusset", status: R2,
+                   note: "R2 also adds 4 chord-to-gusset bolts at splice nodes; in the model the splice bolts pass through the gusset and serve both (DEV-03)"}
+    packer: {value: "1 per packer", status: R2}
+  diameter_rule: {value: "M20; M16 for 60 mm legs (backmark 35 mm, edge distance to toe 25 mm)", status: PLACEHOLDER}
+  diameters:
+    M20: {d: 0.020, d0: 0.022, head_k: 0.0125, head_s: 0.030, nut_m: 0.016, nut_s: 0.030, washer: [0.021, 0.037, 0.003], thread_pitch: 0.0025,
+          pitch_p1: 0.070, end_e1: 0.040, edge_e2: 0.035, status: PLACEHOLDER}
+    M16: {d: 0.016, d0: 0.018, head_k: 0.010, head_s: 0.024, nut_m: 0.013, nut_s: 0.024, washer: [0.017, 0.030, 0.003], thread_pitch: 0.0020,
+          pitch_p1: 0.055, end_e1: 0.035, edge_e2: 0.030, status: PLACEHOLDER}
+  set_composition: {value: "1 bolt + 1 hexagon nut + 1 washer (under the nut)", status: PLACEHOLDER, note: "washer count not stated in R2"}
+  length_rule: {value: "grip + washer + nut + 2 thread pitches, rounded up to 5 mm", status: PLACEHOLDER}
+  hole_clearance: {value: "normal round holes d0 = d + 2 mm", status: PLACEHOLDER}
+  preload: {value: "not specified; R2 recommends preloaded bolts at chord splices or pre-camber (bolt slip)", status: R2}
+
+packers:
+  max_spacing_m: {value: 1.2, status: R2, note: "R2 take-off rule: 1 per 1.2 m plus 1 per web member"}
+  modelled_rule: {value: "ceil(clear length / 1.2) - 1 packers per clear length between connections, at least 1 per web member", status: PLACEHOLDER}
+  length_m: {value: "2 x end distance e1 of the bolt", status: PLACEHOLDER}
+
+material:
+  members: {value: "S355JR - PROVISIONAL", status: R2, note: "R2 analysis fy 355 MPa (as recorded in the model); S275 sensitivity run; availability/certification to confirm"}
+  density_kg_m3: 7850
+  coating: {value: "two-coat paint system - PROVISIONAL (R2 cost basis); hot-dip galvanising to be decided at design stage (R2 s.11.3)", status: R2}
+  corrosivity: {value: "about C2 (dry interior) - R2 s.11.3", status: R2}
+
+# EN 10056-1 equal angles (dimensions, mass) - SAISC / EN tabulated values; R2 truss_engine catalogue for A, e, kg/m.
+# gauge = single-line backmark from the heel (mm), max_bolt = largest bolt the leg takes on that backmark.
+angles:
+  L60x60x6:   {b: 60,  t: 6, r1: 8,  r2: 4,   A_cm2: 6.91, e_cm: 1.69, kg_m: 5.42, gauge: 35, max_bolt: M16}
+  L70x70x6:   {b: 70,  t: 6, r1: 9,  r2: 4.5, A_cm2: 8.13, e_cm: 1.93, kg_m: 6.38, gauge: 40, max_bolt: M20}
+  L75x75x6:   {b: 75,  t: 6, r1: 8,  r2: 4,   A_cm2: 8.73, e_cm: 2.05, kg_m: 6.85, gauge: 45, max_bolt: M20}
+  L80x80x8:   {b: 80,  t: 8, r1: 10, r2: 5,   A_cm2: 12.3, e_cm: 2.26, kg_m: 9.63, gauge: 45, max_bolt: M20}
+  L90x90x8:   {b: 90,  t: 8, r1: 11, r2: 5.5, A_cm2: 13.9, e_cm: 2.50, kg_m: 10.9, gauge: 50, max_bolt: M20}
+  L100x100x8: {b: 100, t: 8, r1: 12, r2: 6,   A_cm2: 15.5, e_cm: 2.74, kg_m: 12.2, gauge: 55, max_bolt: M20}
+
+truss_types:
+  TT-G: {lines: [0, 10], sections_from_line: "0", name: "Gable truss (half-bay load)"}
+  TT-R: {lines: [1, 2], sections_from_line: "2", name: "Rigging / equipment-bearing truss (stage lighting bar, arrays, FOH bar)",
+         note: "R2 sizes lines 1 and 2 at the heavier of the two (= line 2); R2 recommends designing them for the future scenario (open item OE-06)"}
+  TT-T: {lines: [3, 4, 5, 6, 7, 8, 9], sections_from_line: "4", name: "Typical interior truss"}
+force_basis_line: {"0": "0", "10": "0", "1": "1", "2": "2", "3": "4", "4": "4", "5": "4", "6": "4", "7": "4", "8": "4", "9": "4"}

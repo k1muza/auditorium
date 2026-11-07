@@ -1,0 +1,137 @@
+design,scheme,location,category,x,y,N_comp_kN,N_comp_combo,N_uplift_kN,N_uplift_combo,M_with_uplift_kNm,M_max_kNm,M_max_combo,N_with_M_max_kN,H_max_kN,H_max_combo,N_with_H_max_kN
+S02 S3 (L2),S3,line 0 south,corner column,3.25,0.15,161.6,U4 1.2G+1.3W WSn q1.32,-103.2,U5 0.9G+1.3W WWp q1.32,-102.9,-103.0,U4 1.2G+1.3W WWp q1.32,-80.2,47.2,U4 1.2G+1.3W WWp q1.32,-80.2
+S02 S3 (L2),S3,line 0 north,corner column,3.25,32.84,161.6,U4 1.2G+1.3W WNn q1.32,-103.2,U5 0.9G+1.3W WWp q1.32,102.9,103.0,U4 1.2G+1.3W WWp q1.32,-80.2,47.2,U4 1.2G+1.3W WWp q1.32,-80.2
+S02 S3 (L2),S3,line 1 south,braced-bay column,8.81,0.15,298.1,U4 1.2G+1.3W WNn q1.32,-320.9,U5 0.9G+1.3W WWp q1.32,-170.3,-170.5,U4 1.2G+1.3W WWp q1.32,-291.9,96.0,U5 0.9G+1.3W WWp q1.32,-320.9
+S02 S3 (L2),S3,line 1 north,braced-bay column,8.81,32.84,298.1,U4 1.2G+1.3W WSn q1.32,-320.9,U5 0.9G+1.3W WWp q1.32,170.3,170.5,U4 1.2G+1.3W WWp q1.32,-291.9,96.0,U5 0.9G+1.3W WWp q1.32,-320.9
+S02 S3 (L2),S3,line 2 south,braced-bay column,14.37,0.15,358.5,U4 1.2G+1.3W WWn q1.32,-341.6,U5 0.9G+1.3W WEp q1.32,-97.7,159.3,U5 0.9G+1.3W WSn q1.32,189.7,83.8,U4 1.2G+1.3W WWp q1.32,223.3
+S02 S3 (L2),S3,line 2 north,braced-bay column,14.37,32.84,358.5,U4 1.2G+1.3W WWn q1.32,-341.6,U5 0.9G+1.3W WEp q1.32,97.7,-159.3,U5 0.9G+1.3W WNn q1.32,189.7,83.8,U4 1.2G+1.3W WWp q1.32,223.3
+S02 S3 (L2),S3,line 3 south,typical side column,19.93,0.15,158.9,U4 1.2G+1.3W WSn q1.32,-63.3,U5 0.9G+1.3W WEp q1.32,-98.2,166.4,U5 0.9G+1.3W WSn q1.32,123.0,66.3,U4 1.2G+1.3W WSn q1.32,158.9
+S02 S3 (L2),S3,line 3 north,typical side column,19.93,32.84,158.9,U4 1.2G+1.3W WNn q1.32,-63.3,U5 0.9G+1.3W WEp q1.32,98.2,-166.4,U5 0.9G+1.3W WNn q1.32,123.0,66.3,U4 1.2G+1.3W WNn q1.32,158.9
+S02 S3 (L2),S3,line 4 south,typical side column,25.49,0.15,166.7,U4 1.2G+1.3W WSn q1.32,-71.8,U5 0.9G+1.3W WNp q1.32,-104.6,170.6,U5 0.9G+1.3W WSn q1.32,126.9,66.6,U4 1.2G+1.3W WSn q1.32,166.7
+S02 S3 (L2),S3,line 4 north,typical side column,25.49,32.84,166.7,U4 1.2G+1.3W WNn q1.32,-71.8,U5 0.9G+1.3W WSp q1.32,104.6,-170.6,U5 0.9G+1.3W WNn q1.32,126.9,66.6,U4 1.2G+1.3W WNn q1.32,166.7
+S02 S3 (L2),S3,line 5 south,braced-bay column,31.05,0.15,367.8,U4 1.2G+1.3W WEn q1.32,-319.3,U5 0.9G+1.3W WWp q1.32,-127.9,173.0,U5 0.9G+1.3W WSn q1.32,205.1,81.6,U5 0.9G+1.3W WWp q1.32,-319.3
+S02 S3 (L2),S3,line 5 north,braced-bay column,31.05,32.84,367.8,U4 1.2G+1.3W WEn q1.32,-319.3,U5 0.9G+1.3W WWp q1.32,127.9,-173.0,U5 0.9G+1.3W WNn q1.32,205.1,81.6,U5 0.9G+1.3W WWp q1.32,-319.3
+S02 S3 (L2),S3,line 6 south,braced-bay column,36.61,0.15,311.5,U4 1.2G+1.3W WNn q1.32,-330.1,U5 0.9G+1.3W WEp q1.32,-140.4,170.9,U5 0.9G+1.3W WSn q1.32,53.2,87.7,U5 0.9G+1.3W WEp q1.32,-330.1
+S02 S3 (L2),S3,line 6 north,braced-bay column,36.61,32.84,311.5,U4 1.2G+1.3W WSn q1.32,-330.1,U5 0.9G+1.3W WEp q1.32,140.4,-170.9,U5 0.9G+1.3W WNn q1.32,53.2,87.7,U5 0.9G+1.3W WEp q1.32,-330.1
+S02 S3 (L2),S3,line 7 south,typical side column,42.17,0.15,158.0,U4 1.2G+1.3W WSn q1.32,-65.1,U5 0.9G+1.3W WEp q1.32,-140.4,167.1,U5 0.9G+1.3W WSn q1.32,124.8,66.3,U4 1.2G+1.3W WSn q1.32,158.0
+S02 S3 (L2),S3,line 7 north,typical side column,42.17,32.84,158.0,U4 1.2G+1.3W WNn q1.32,-65.1,U5 0.9G+1.3W WEp q1.32,140.4,-167.1,U5 0.9G+1.3W WNn q1.32,124.8,66.3,U4 1.2G+1.3W WNn q1.32,158.0
+S02 S3 (L2),S3,line 8 south,typical side column,47.73,0.15,155.5,U4 1.2G+1.3W WSn q1.32,-90.6,U5 0.9G+1.3W WWp q1.32,-97.6,159.4,U5 0.9G+1.3W WSn q1.32,123.9,65.7,U4 1.2G+1.3W WSn q1.32,155.5
+S02 S3 (L2),S3,line 8 north,typical side column,47.73,32.84,155.5,U4 1.2G+1.3W WNn q1.32,-90.6,U5 0.9G+1.3W WWp q1.32,97.6,-159.4,U5 0.9G+1.3W WNn q1.32,123.9,65.7,U4 1.2G+1.3W WNn q1.32,155.5
+S02 S3 (L2),S3,line 9 south,typical side column,53.29,0.15,142.4,U4 1.2G+1.3W WNn q1.32,-114.6,U5 0.9G+1.3W WSp q1.32,82.2,-170.5,U4 1.2G+1.3W WEp q1.32,-33.1,76.5,U4 1.2G+1.3W WEp q1.32,-33.1
+S02 S3 (L2),S3,line 9 north,typical side column,53.29,32.84,142.4,U4 1.2G+1.3W WSn q1.32,-114.6,U5 0.9G+1.3W WNp q1.32,-82.2,170.5,U4 1.2G+1.3W WEp q1.32,-33.1,76.5,U4 1.2G+1.3W WEp q1.32,-33.1
+S02 S3 (L2),S3,line 10 south,corner column,58.85,0.15,153.4,U4 1.2G+1.3W WSn q1.32,-101.6,U5 0.9G+1.3W WEp q1.32,-103.0,-103.2,U4 1.2G+1.3W WEp q1.32,-78.2,47.2,U4 1.2G+1.3W WEp q1.32,-78.2
+S02 S3 (L2),S3,line 10 north,corner column,58.85,32.84,153.4,U4 1.2G+1.3W WNn q1.32,-101.6,U5 0.9G+1.3W WEp q1.32,103.0,103.2,U4 1.2G+1.3W WEp q1.32,-78.2,47.2,U4 1.2G+1.3W WEp q1.32,-78.2
+S02 S3 (L2),S3,"west gable, y = 3.0",gable post,3.05,3.0,15.9,U1 1.35G,10.6,U5 0.9G+1.3W WSp q0.935,0.0,0.0,U1 1.35G,15.9,57.2,U4 1.2G+1.3W WSp q1.32,14.1
+S02 S3 (L2),S3,"west gable, y = 8.4",gable post (braced panel),3.05,8.4,465.5,U5 0.9G+1.3W WNp q1.32,-492.4,U4 1.2G+1.3W WSn q1.32,0.0,0.0,U1 1.35G,-8.1,102.5,U5 0.9G+1.3W WNp q1.32,465.5
+S02 S3 (L2),S3,"west gable, y = 13.8",gable post (braced panel),3.05,13.8,539.9,U4 1.2G+1.3W WSn q1.32,-429.9,U5 0.9G+1.3W WNp q1.32,0.0,0.0,U1 1.35G,61.5,97.5,U5 0.9G+1.3W WNp q1.32,-429.9
+S02 S3 (L2),S3,"west gable, y = 19.2",gable post (braced panel),3.05,19.2,539.9,U4 1.2G+1.3W WNn q1.32,-429.9,U5 0.9G+1.3W WSp q1.32,0.0,0.0,U1 1.35G,47.5,97.5,U5 0.9G+1.3W WSp q1.32,-429.9
+S02 S3 (L2),S3,"west gable, y = 24.6",gable post (braced panel),3.05,24.6,465.5,U5 0.9G+1.3W WSp q1.32,-492.4,U4 1.2G+1.3W WNn q1.32,0.0,0.0,U1 1.35G,5.9,102.5,U5 0.9G+1.3W WSp q1.32,465.5
+S02 S3 (L2),S3,"west gable, y = 30.0",gable post,3.05,30.0,15.9,U1 1.35G,10.6,U5 0.9G+1.3W WSp q0.935,0.0,0.0,U1 1.35G,15.9,57.2,U4 1.2G+1.3W WNp q1.32,14.1
+S02 S3 (L2),S3,"east gable, y = 3.0",gable post (braced panel),59.05,3.0,442.0,U5 0.9G+1.3W WNp q1.32,-473.5,U4 1.2G+1.3W WSn q1.32,0.0,0.0,U1 1.35G,-13.2,99.4,U4 1.2G+1.3W WSn q1.32,-473.5
+S02 S3 (L2),S3,"east gable, y = 8.4",gable post (braced panel),59.05,8.4,517.1,U4 1.2G+1.3W WSn q1.32,-409.3,U5 0.9G+1.3W WNp q1.32,0.0,0.0,U1 1.35G,62.3,97.6,U5 0.9G+1.3W WNp q1.32,-409.3
+S02 S3 (L2),S3,"east gable, y = 13.8",gable post,59.05,13.8,19.2,U1 1.35G,12.8,U5 0.9G+1.3W WSp q0.935,0.0,0.0,U1 1.35G,19.2,68.0,U4 1.2G+1.3W WEn q1.32,17.1
+S02 S3 (L2),S3,"east gable, y = 19.2",gable post,59.05,19.2,19.2,U1 1.35G,12.8,U5 0.9G+1.3W WSp q0.935,0.0,0.0,U1 1.35G,19.2,68.0,U4 1.2G+1.3W WEn q1.32,17.1
+S02 S3 (L2),S3,"east gable, y = 24.6",gable post (braced panel),59.05,24.6,517.1,U4 1.2G+1.3W WNn q1.32,-409.3,U5 0.9G+1.3W WSp q1.32,0.0,0.0,U1 1.35G,50.1,97.6,U5 0.9G+1.3W WSp q1.32,-409.3
+S02 S3 (L2),S3,"east gable, y = 30.0",gable post (braced panel),59.05,30.0,442.0,U5 0.9G+1.3W WSp q1.32,-473.5,U4 1.2G+1.3W WNn q1.32,0.0,0.0,U1 1.35G,-1.0,99.4,U4 1.2G+1.3W WNn q1.32,-473.5
+S02 S3 (L1),S3,line 0 south,corner column,3.25,0.15,163.7,U4 1.2G+1.3W WSn q1.32,-102.1,U5 0.9G+1.3W WWp q1.32,-102.9,-103.0,U4 1.2G+1.3W WWp q1.32,-79.1,47.2,U4 1.2G+1.3W WWp q1.32,-79.1
+S02 S3 (L1),S3,line 0 north,corner column,3.25,32.84,163.7,U4 1.2G+1.3W WNn q1.32,-102.1,U5 0.9G+1.3W WWp q1.32,102.9,103.0,U4 1.2G+1.3W WWp q1.32,-79.1,47.2,U4 1.2G+1.3W WWp q1.32,-79.1
+S02 S3 (L1),S3,line 1 south,braced-bay column,8.81,0.15,211.8,U4 1.2G+1.3W WEn q1.32,-235.5,U5 0.9G+1.3W WWp q1.32,-170.3,-170.5,U4 1.2G+1.3W WWp q1.32,-206.5,87.5,U5 0.9G+1.3W WWp q1.32,-235.5
+S02 S3 (L1),S3,line 1 north,braced-bay column,8.81,32.84,211.8,U4 1.2G+1.3W WEn q1.32,-235.5,U5 0.9G+1.3W WWp q1.32,170.3,170.5,U4 1.2G+1.3W WWp q1.32,-206.5,87.5,U5 0.9G+1.3W WWp q1.32,-235.5
+S02 S3 (L1),S3,line 2 south,braced-bay column,14.37,0.15,232.4,U4 1.2G+1.3W WWn q1.32,-259.6,U5 0.9G+1.3W WEp q1.32,-97.7,159.7,U5 0.9G+1.3W WSn q1.32,133.7,72.1,U4 1.2G+1.3W WWp q1.32,137.6
+S02 S3 (L1),S3,line 2 north,braced-bay column,14.37,32.84,232.4,U4 1.2G+1.3W WWn q1.32,-259.6,U5 0.9G+1.3W WEp q1.32,97.7,-159.7,U5 0.9G+1.3W WNn q1.32,133.7,72.1,U4 1.2G+1.3W WWp q1.32,137.6
+S02 S3 (L1),S3,line 3 south,braced-bay column,19.93,0.15,226.4,U4 1.2G+1.3W WEn q1.32,-228.8,U5 0.9G+1.3W WWp q1.32,-140.7,167.2,U5 0.9G+1.3W WSn q1.32,124.5,75.8,U5 0.9G+1.3W WWp q1.32,-228.8
+S02 S3 (L1),S3,line 3 north,braced-bay column,19.93,32.84,226.4,U4 1.2G+1.3W WEn q1.32,-228.8,U5 0.9G+1.3W WWp q1.32,140.7,-167.2,U5 0.9G+1.3W WNn q1.32,124.5,75.8,U5 0.9G+1.3W WWp q1.32,-228.8
+S02 S3 (L1),S3,line 4 south,braced-bay column,25.49,0.15,237.6,U4 1.2G+1.3W WWn q1.32,-237.1,U5 0.9G+1.3W WEp q1.32,-98.1,171.4,U5 0.9G+1.3W WSn q1.32,133.8,72.4,U4 1.2G+1.3W WWp q1.32,150.8
+S02 S3 (L1),S3,line 4 north,braced-bay column,25.49,32.84,237.6,U4 1.2G+1.3W WWn q1.32,-237.1,U5 0.9G+1.3W WEp q1.32,98.1,-171.4,U5 0.9G+1.3W WNn q1.32,133.8,72.4,U4 1.2G+1.3W WWp q1.32,150.8
+S02 S3 (L1),S3,line 5 south,braced-bay column,31.05,0.15,232.2,U4 1.2G+1.3W WEn q1.32,-228.6,U5 0.9G+1.3W WWp q1.32,-128.0,173.8,U5 0.9G+1.3W WSn q1.32,138.7,71.3,U5 0.9G+1.3W WWp q1.32,-228.6
+S02 S3 (L1),S3,line 5 north,braced-bay column,31.05,32.84,232.2,U4 1.2G+1.3W WEn q1.32,-228.6,U5 0.9G+1.3W WWp q1.32,128.0,-173.8,U5 0.9G+1.3W WNn q1.32,138.7,71.3,U5 0.9G+1.3W WWp q1.32,-228.6
+S02 S3 (L1),S3,line 6 south,braced-bay column,36.61,0.15,232.9,U4 1.2G+1.3W WWn q1.32,-238.1,U5 0.9G+1.3W WEp q1.32,-140.4,171.4,U5 0.9G+1.3W WSn q1.32,120.6,75.9,U5 0.9G+1.3W WEp q1.32,-238.1
+S02 S3 (L1),S3,line 6 north,braced-bay column,36.61,32.84,232.9,U4 1.2G+1.3W WWn q1.32,-238.1,U5 0.9G+1.3W WEp q1.32,140.4,-171.4,U5 0.9G+1.3W WNn q1.32,120.6,75.9,U5 0.9G+1.3W WEp q1.32,-238.1
+S02 S3 (L1),S3,line 7 south,typical side column,42.17,0.15,157.4,U4 1.2G+1.3W WSn q1.32,-63.9,U5 0.9G+1.3W WEp q1.32,-140.5,167.2,U5 0.9G+1.3W WSn q1.32,124.2,66.3,U4 1.2G+1.3W WSn q1.32,157.4
+S02 S3 (L1),S3,line 7 north,typical side column,42.17,32.84,157.4,U4 1.2G+1.3W WNn q1.32,-63.9,U5 0.9G+1.3W WEp q1.32,140.5,-167.2,U5 0.9G+1.3W WNn q1.32,124.2,66.3,U4 1.2G+1.3W WNn q1.32,157.4
+S02 S3 (L1),S3,line 8 south,typical side column,47.73,0.15,155.5,U4 1.2G+1.3W WSn q1.32,-90.7,U5 0.9G+1.3W WWp q1.32,-97.6,159.5,U5 0.9G+1.3W WSn q1.32,124.0,65.7,U4 1.2G+1.3W WSn q1.32,155.5
+S02 S3 (L1),S3,line 8 north,typical side column,47.73,32.84,155.5,U4 1.2G+1.3W WNn q1.32,-90.7,U5 0.9G+1.3W WWp q1.32,97.6,-159.5,U5 0.9G+1.3W WNn q1.32,124.0,65.7,U4 1.2G+1.3W WNn q1.32,155.5
+S02 S3 (L1),S3,line 9 south,typical side column,53.29,0.15,141.4,U4 1.2G+1.3W WNn q1.32,-114.8,U5 0.9G+1.3W WSp q1.32,82.3,-170.5,U4 1.2G+1.3W WEp q1.32,-32.6,76.5,U4 1.2G+1.3W WEp q1.32,-32.6
+S02 S3 (L1),S3,line 9 north,typical side column,53.29,32.84,141.4,U4 1.2G+1.3W WSn q1.32,-114.8,U5 0.9G+1.3W WNp q1.32,-82.3,170.5,U4 1.2G+1.3W WEp q1.32,-32.6,76.5,U4 1.2G+1.3W WEp q1.32,-32.6
+S02 S3 (L1),S3,line 10 south,corner column,58.85,0.15,153.5,U4 1.2G+1.3W WSn q1.32,-101.9,U5 0.9G+1.3W WEp q1.32,-103.0,-103.2,U4 1.2G+1.3W WEp q1.32,-78.5,47.2,U4 1.2G+1.3W WEp q1.32,-78.5
+S02 S3 (L1),S3,line 10 north,corner column,58.85,32.84,153.5,U4 1.2G+1.3W WNn q1.32,-101.9,U5 0.9G+1.3W WEp q1.32,103.0,103.2,U4 1.2G+1.3W WEp q1.32,-78.5,47.2,U4 1.2G+1.3W WEp q1.32,-78.5
+S02 S3 (L1),S3,"west gable, y = 3.0",gable post,3.05,3.0,15.9,U1 1.35G,10.6,U5 0.9G+1.3W WSp q0.935,0.0,0.0,U1 1.35G,15.9,57.2,U4 1.2G+1.3W WSp q1.32,14.1
+S02 S3 (L1),S3,"west gable, y = 8.4",gable post (braced panel),3.05,8.4,468.7,U5 0.9G+1.3W WNp q1.32,-497.6,U4 1.2G+1.3W WSn q1.32,0.0,0.0,U1 1.35G,-8.1,102.9,U5 0.9G+1.3W WNp q1.32,468.7
+S02 S3 (L1),S3,"west gable, y = 13.8",gable post (braced panel),3.05,13.8,545.1,U4 1.2G+1.3W WSn q1.32,-433.1,U5 0.9G+1.3W WNp q1.32,0.0,0.0,U1 1.35G,61.5,97.9,U5 0.9G+1.3W WNp q1.32,-433.1
+S02 S3 (L1),S3,"west gable, y = 19.2",gable post (braced panel),3.05,19.2,545.1,U4 1.2G+1.3W WNn q1.32,-433.1,U5 0.9G+1.3W WSp q1.32,0.0,0.0,U1 1.35G,47.4,97.9,U5 0.9G+1.3W WSp q1.32,-433.1
+S02 S3 (L1),S3,"west gable, y = 24.6",gable post (braced panel),3.05,24.6,468.7,U5 0.9G+1.3W WSp q1.32,-497.6,U4 1.2G+1.3W WNn q1.32,0.0,0.0,U1 1.35G,6.1,102.9,U5 0.9G+1.3W WSp q1.32,468.7
+S02 S3 (L1),S3,"west gable, y = 30.0",gable post,3.05,30.0,15.9,U1 1.35G,10.6,U5 0.9G+1.3W WSp q0.935,0.0,0.0,U1 1.35G,15.9,57.2,U4 1.2G+1.3W WNp q1.32,14.1
+S02 S3 (L1),S3,"east gable, y = 3.0",gable post (braced panel),59.05,3.0,437.2,U5 0.9G+1.3W WNp q1.32,-468.3,U4 1.2G+1.3W WSn q1.32,0.0,0.0,U1 1.35G,-13.1,98.5,U4 1.2G+1.3W WSn q1.32,-468.3
+S02 S3 (L1),S3,"east gable, y = 8.4",gable post (braced panel),59.05,8.4,512.0,U4 1.2G+1.3W WSn q1.32,-404.4,U5 0.9G+1.3W WNp q1.32,0.0,0.0,U1 1.35G,62.2,97.0,U5 0.9G+1.3W WNp q1.32,-404.4
+S02 S3 (L1),S3,"east gable, y = 13.8",gable post,59.05,13.8,19.2,U1 1.35G,12.8,U5 0.9G+1.3W WSp q0.935,0.0,0.0,U1 1.35G,19.2,68.0,U4 1.2G+1.3W WEn q1.32,17.1
+S02 S3 (L1),S3,"east gable, y = 19.2",gable post,59.05,19.2,19.2,U1 1.35G,12.8,U5 0.9G+1.3W WSp q0.935,0.0,0.0,U1 1.35G,19.2,68.0,U4 1.2G+1.3W WEn q1.32,17.1
+S02 S3 (L1),S3,"east gable, y = 24.6",gable post (braced panel),59.05,24.6,512.0,U4 1.2G+1.3W WNn q1.32,-404.4,U5 0.9G+1.3W WSp q1.32,0.0,0.0,U1 1.35G,50.0,97.0,U5 0.9G+1.3W WSp q1.32,-404.4
+S02 S3 (L1),S3,"east gable, y = 30.0",gable post (braced panel),59.05,30.0,437.2,U5 0.9G+1.3W WSp q1.32,-468.3,U4 1.2G+1.3W WNn q1.32,0.0,0.0,U1 1.35G,-0.9,98.5,U4 1.2G+1.3W WNn q1.32,-468.3
+S02 S1 (L2),S1,line 0 south,corner column,3.25,0.15,170.1,U4 1.2G+1.3W WSn q1.32,-96.7,U5 0.9G+1.3W WWp q1.32,0.0,0.0,U1 1.35G,84.8,39.5,U4 1.2G+1.3W WWp q1.32,-71.6
+S02 S1 (L2),S1,line 0 north,corner column,3.25,32.84,170.1,U4 1.2G+1.3W WNn q1.32,-96.7,U5 0.9G+1.3W WWp q1.32,0.0,0.0,U1 1.35G,84.1,39.5,U4 1.2G+1.3W WWp q1.32,-71.6
+S02 S1 (L2),S1,line 1 south,braced-bay column,8.81,0.15,275.9,U4 1.2G+1.3W WEn q1.32,-312.6,U5 0.9G+1.3W WWp q1.32,0.0,0.0,U1 1.35G,102.2,85.3,U5 0.9G+1.3W WWp q1.32,-312.6
+S02 S1 (L2),S1,line 1 north,braced-bay column,8.81,32.84,275.9,U4 1.2G+1.3W WEn q1.32,-312.6,U5 0.9G+1.3W WWp q1.32,0.0,0.0,U1 1.35G,104.7,85.3,U5 0.9G+1.3W WWp q1.32,-312.6
+S02 S1 (L2),S1,line 2 south,braced-bay column,14.37,0.15,347.7,U4 1.2G+1.3W WWn q1.32,-335.9,U5 0.9G+1.3W WEp q1.32,0.0,0.0,U1 1.35G,110.3,76.1,U4 1.2G+1.3W WWp q1.32,231.1
+S02 S1 (L2),S1,line 2 north,braced-bay column,14.37,32.84,347.7,U4 1.2G+1.3W WWn q1.32,-335.9,U5 0.9G+1.3W WEp q1.32,0.0,0.0,U1 1.35G,108.2,76.1,U4 1.2G+1.3W WWp q1.32,231.1
+S02 S1 (L2),S1,line 3 south,typical side column,19.93,0.15,168.3,U4 1.2G+1.3W WSn q1.32,-55.4,U5 0.9G+1.3W WEp q1.32,0.0,0.0,U1 1.35G,101.3,53.6,U4 1.2G+1.3W WSn q1.32,168.3
+S02 S1 (L2),S1,line 3 north,typical side column,19.93,32.84,168.3,U4 1.2G+1.3W WNn q1.32,-55.4,U5 0.9G+1.3W WEp q1.32,0.0,0.0,U1 1.35G,101.1,53.6,U4 1.2G+1.3W WNn q1.32,168.3
+S02 S1 (L2),S1,line 4 south,typical side column,25.49,0.15,180.2,U4 1.2G+1.3W WSn q1.32,-64.8,U5 0.9G+1.3W WNp q1.32,0.0,0.0,U1 1.35G,109.2,53.6,U4 1.2G+1.3W WSn q1.32,180.2
+S02 S1 (L2),S1,line 4 north,typical side column,25.49,32.84,180.2,U4 1.2G+1.3W WNn q1.32,-64.8,U5 0.9G+1.3W WSp q1.32,0.0,0.0,U1 1.35G,109.0,53.6,U4 1.2G+1.3W WNn q1.32,180.2
+S02 S1 (L2),S1,line 5 south,braced-bay column,31.05,0.15,360.5,U4 1.2G+1.3W WEn q1.32,-313.2,U5 0.9G+1.3W WWp q1.32,0.0,0.0,U1 1.35G,109.1,75.0,U5 0.9G+1.3W WWp q1.32,-313.2
+S02 S1 (L2),S1,line 5 north,braced-bay column,31.05,32.84,360.5,U4 1.2G+1.3W WEn q1.32,-313.2,U5 0.9G+1.3W WWp q1.32,0.0,0.0,U1 1.35G,107.0,75.0,U5 0.9G+1.3W WWp q1.32,-313.2
+S02 S1 (L2),S1,line 6 south,braced-bay column,36.61,0.15,311.1,U4 1.2G+1.3W WWn q1.32,-324.2,U5 0.9G+1.3W WEp q1.32,0.0,0.0,U1 1.35G,113.1,79.1,U5 0.9G+1.3W WEp q1.32,-324.2
+S02 S1 (L2),S1,line 6 north,braced-bay column,36.61,32.84,311.1,U4 1.2G+1.3W WWn q1.32,-324.2,U5 0.9G+1.3W WEp q1.32,0.0,0.0,U1 1.35G,114.8,79.1,U5 0.9G+1.3W WEp q1.32,-324.2
+S02 S1 (L2),S1,line 7 south,typical side column,42.17,0.15,166.1,U4 1.2G+1.3W WSn q1.32,-53.1,U5 0.9G+1.3W WNp q1.32,0.0,0.0,U1 1.35G,98.4,53.6,U4 1.2G+1.3W WSn q1.32,166.1
+S02 S1 (L2),S1,line 7 north,typical side column,42.17,32.84,166.1,U4 1.2G+1.3W WNn q1.32,-53.1,U5 0.9G+1.3W WSp q1.32,0.0,0.0,U1 1.35G,98.2,53.6,U4 1.2G+1.3W WNn q1.32,166.1
+S02 S1 (L2),S1,line 8 south,typical side column,47.73,0.15,168.7,U4 1.2G+1.3W WSn q1.32,-83.1,U5 0.9G+1.3W WWp q1.32,0.0,0.0,U1 1.35G,100.3,53.6,U4 1.2G+1.3W WSn q1.32,168.7
+S02 S1 (L2),S1,line 8 north,typical side column,47.73,32.84,168.7,U4 1.2G+1.3W WNn q1.32,-83.1,U5 0.9G+1.3W WWp q1.32,0.0,0.0,U1 1.35G,100.2,53.6,U4 1.2G+1.3W WNn q1.32,168.7
+S02 S1 (L2),S1,line 9 south,typical side column,53.29,0.15,159.2,U4 1.2G+1.3W WNn q1.32,-104.3,U5 0.9G+1.3W WSp q1.32,0.0,0.0,U1 1.35G,96.2,63.5,U4 1.2G+1.3W WEp q1.32,-26.2
+S02 S1 (L2),S1,line 9 north,typical side column,53.29,32.84,159.2,U4 1.2G+1.3W WSn q1.32,-104.3,U5 0.9G+1.3W WNp q1.32,0.0,0.0,U1 1.35G,97.2,63.5,U4 1.2G+1.3W WEp q1.32,-26.2
+S02 S1 (L2),S1,line 10 south,corner column,58.85,0.15,160.8,U4 1.2G+1.3W WSn q1.32,-94.6,U5 0.9G+1.3W WEp q1.32,0.0,0.0,U1 1.35G,85.9,39.5,U4 1.2G+1.3W WEp q1.32,-69.1
+S02 S1 (L2),S1,line 10 north,corner column,58.85,32.84,160.8,U4 1.2G+1.3W WNn q1.32,-94.6,U5 0.9G+1.3W WEp q1.32,0.0,0.0,U1 1.35G,85.5,39.5,U4 1.2G+1.3W WEp q1.32,-69.1
+S02 S1 (L2),S1,"west gable, y = 3.0",gable post,3.05,3.0,15.9,U1 1.35G,10.6,U5 0.9G+1.3W WSp q0.935,0.0,0.0,U1 1.35G,15.9,57.2,U4 1.2G+1.3W WSp q1.32,14.1
+S02 S1 (L2),S1,"west gable, y = 8.4",gable post (braced panel),3.05,8.4,580.5,U5 0.9G+1.3W WNp q1.32,-604.1,U4 1.2G+1.3W WSn q1.32,0.0,0.0,U1 1.35G,-10.1,120.6,U5 0.9G+1.3W WNp q1.32,580.5
+S02 S1 (L2),S1,"west gable, y = 13.8",gable post (braced panel),3.05,13.8,653.5,U4 1.2G+1.3W WSn q1.32,-543.4,U5 0.9G+1.3W WNp q1.32,0.0,0.0,U1 1.35G,65.8,110.5,U5 0.9G+1.3W WNp q1.32,-543.4
+S02 S1 (L2),S1,"west gable, y = 19.2",gable post (braced panel),3.05,19.2,653.5,U4 1.2G+1.3W WNn q1.32,-543.4,U5 0.9G+1.3W WSp q1.32,0.0,0.0,U1 1.35G,49.7,110.5,U5 0.9G+1.3W WSp q1.32,-543.4
+S02 S1 (L2),S1,"west gable, y = 24.6",gable post (braced panel),3.05,24.6,580.5,U5 0.9G+1.3W WSp q1.32,-604.1,U4 1.2G+1.3W WNn q1.32,0.0,0.0,U1 1.35G,5.9,120.6,U5 0.9G+1.3W WSp q1.32,580.5
+S02 S1 (L2),S1,"west gable, y = 30.0",gable post,3.05,30.0,15.9,U1 1.35G,10.6,U5 0.9G+1.3W WSp q0.935,0.0,0.0,U1 1.35G,15.9,57.2,U4 1.2G+1.3W WNp q1.32,14.1
+S02 S1 (L2),S1,"east gable, y = 3.0",gable post (braced panel),59.05,3.0,550.5,U5 0.9G+1.3W WNp q1.32,-573.1,U4 1.2G+1.3W WSn q1.32,0.0,0.0,U1 1.35G,-15.5,117.8,U4 1.2G+1.3W WSn q1.32,-573.1
+S02 S1 (L2),S1,"east gable, y = 8.4",gable post (braced panel),59.05,8.4,618.5,U4 1.2G+1.3W WSn q1.32,-516.3,U5 0.9G+1.3W WNp q1.32,0.0,0.0,U1 1.35G,66.6,113.0,U4 1.2G+1.3W WSn q1.32,618.5
+S02 S1 (L2),S1,"east gable, y = 13.8",gable post,59.05,13.8,19.2,U1 1.35G,12.8,U5 0.9G+1.3W WSp q0.935,0.0,0.0,U1 1.35G,19.2,68.0,U4 1.2G+1.3W WEn q1.32,17.1
+S02 S1 (L2),S1,"east gable, y = 19.2",gable post,59.05,19.2,19.2,U1 1.35G,12.8,U5 0.9G+1.3W WSp q0.935,0.0,0.0,U1 1.35G,19.2,68.0,U4 1.2G+1.3W WEn q1.32,17.1
+S02 S1 (L2),S1,"east gable, y = 24.6",gable post (braced panel),59.05,24.6,618.5,U4 1.2G+1.3W WNn q1.32,-516.3,U5 0.9G+1.3W WSp q1.32,0.0,0.0,U1 1.35G,52.6,113.0,U4 1.2G+1.3W WNn q1.32,618.5
+S02 S1 (L2),S1,"east gable, y = 30.0",gable post (braced panel),59.05,30.0,550.5,U5 0.9G+1.3W WSp q1.32,-573.1,U4 1.2G+1.3W WNn q1.32,0.0,0.0,U1 1.35G,-1.4,117.8,U4 1.2G+1.3W WNn q1.32,-573.1
+S01 S3,S3,line 0 south,corner column,3.25,0.15,150.2,U4 1.2G+1.3W WSn q1.2,-89.7,U5 0.9G+1.3W WWp q1.2,-131.7,-131.9,U4 1.2G+1.3W WWp q1.2,-66.6,45.8,U4 1.2G+1.3W WWp q1.2,-66.6
+S01 S3,S3,line 0 north,corner column,3.25,32.84,150.2,U4 1.2G+1.3W WNn q1.2,-89.7,U5 0.9G+1.3W WWp q1.2,131.7,131.9,U4 1.2G+1.3W WWp q1.2,-66.6,45.8,U4 1.2G+1.3W WWp q1.2,-66.6
+S01 S3,S3,line 1 south,braced-bay column,8.81,0.15,280.1,U4 1.2G+1.3W WEn q1.2,-285.1,U5 0.9G+1.3W WWp q1.2,-218.0,-218.3,U4 1.2G+1.3W WWp q1.2,-256.1,93.8,U5 0.9G+1.3W WWp q1.2,-285.1
+S01 S3,S3,line 1 north,braced-bay column,8.81,32.84,280.1,U4 1.2G+1.3W WEn q1.2,-285.1,U5 0.9G+1.3W WWp q1.2,218.0,218.3,U4 1.2G+1.3W WWp q1.2,-256.1,93.8,U5 0.9G+1.3W WWp q1.2,-285.1
+S01 S3,S3,line 2 south,braced-bay column,14.37,0.15,300.5,U4 1.2G+1.3W WWn q1.2,-308.6,U5 0.9G+1.3W WEp q1.2,-125.1,199.3,U5 0.9G+1.3W WSn q1.2,124.8,78.1,U4 1.2G+1.3W WWp q1.2,215.8
+S01 S3,S3,line 2 north,braced-bay column,14.37,32.84,300.5,U4 1.2G+1.3W WWn q1.2,-308.6,U5 0.9G+1.3W WEp q1.2,125.1,-199.3,U5 0.9G+1.3W WNn q1.2,124.8,78.1,U4 1.2G+1.3W WWp q1.2,215.8
+S01 S3,S3,line 3 south,typical side column,19.93,0.15,151.2,U4 1.2G+1.3W WSn q1.2,-52.7,U5 0.9G+1.3W WEp q1.2,-125.7,205.7,U5 0.9G+1.3W WSn q1.2,115.1,64.4,U4 1.2G+1.3W WSn q1.2,151.2
+S01 S3,S3,line 3 north,typical side column,19.93,32.84,151.2,U4 1.2G+1.3W WNn q1.2,-52.7,U5 0.9G+1.3W WEp q1.2,125.7,-205.7,U5 0.9G+1.3W WNn q1.2,115.1,64.4,U4 1.2G+1.3W WNn q1.2,151.2
+S01 S3,S3,line 4 south,typical side column,25.49,0.15,160.4,U4 1.2G+1.3W WSn q1.2,-58.7,U5 0.9G+1.3W WNp q1.2,-125.5,209.2,U5 0.9G+1.3W WSn q1.2,120.3,64.7,U5 0.9G+1.3W WSn q1.2,120.3
+S01 S3,S3,line 4 north,typical side column,25.49,32.84,160.4,U4 1.2G+1.3W WNn q1.2,-58.7,U5 0.9G+1.3W WSp q1.2,125.5,-209.2,U5 0.9G+1.3W WNn q1.2,120.3,64.7,U5 0.9G+1.3W WNn q1.2,120.3
+S01 S3,S3,line 5 south,braced-bay column,31.05,0.15,303.8,U4 1.2G+1.3W WEn q1.2,-282.6,U5 0.9G+1.3W WWp q1.2,-163.8,211.0,U5 0.9G+1.3W WSn q1.2,126.5,79.7,U5 0.9G+1.3W WWp q1.2,-282.6
+S01 S3,S3,line 5 north,braced-bay column,31.05,32.84,303.8,U4 1.2G+1.3W WEn q1.2,-282.6,U5 0.9G+1.3W WWp q1.2,163.8,-211.0,U5 0.9G+1.3W WNn q1.2,126.5,79.7,U5 0.9G+1.3W WWp q1.2,-282.6
+S01 S3,S3,line 6 south,braced-bay column,36.61,0.15,304.4,U4 1.2G+1.3W WWn q1.2,-289.3,U5 0.9G+1.3W WEp q1.2,-179.7,209.0,U5 0.9G+1.3W WSn q1.2,121.1,83.5,U5 0.9G+1.3W WEp q1.2,-289.3
+S01 S3,S3,line 6 north,braced-bay column,36.61,32.84,304.4,U4 1.2G+1.3W WWn q1.2,-289.3,U5 0.9G+1.3W WEp q1.2,179.7,-209.0,U5 0.9G+1.3W WNn q1.2,121.1,83.5,U5 0.9G+1.3W WEp q1.2,-289.3
+S01 S3,S3,line 7 south,typical side column,42.17,0.15,148.6,U4 1.2G+1.3W WSn q1.2,-51.6,U5 0.9G+1.3W WEp q1.2,-179.9,205.3,U5 0.9G+1.3W WSn q1.2,115.2,64.4,U4 1.2G+1.3W WSn q1.2,148.6
+S01 S3,S3,line 7 north,typical side column,42.17,32.84,148.6,U4 1.2G+1.3W WNn q1.2,-51.6,U5 0.9G+1.3W WEp q1.2,179.9,-205.3,U5 0.9G+1.3W WNn q1.2,115.2,64.4,U4 1.2G+1.3W WNn q1.2,148.6
+S01 S3,S3,line 8 south,typical side column,47.73,0.15,149.5,U4 1.2G+1.3W WSn q1.2,-77.1,U5 0.9G+1.3W WWp q1.2,-124.9,198.6,U5 0.9G+1.3W WSn q1.2,117.6,63.9,U5 0.9G+1.3W WSn q1.2,117.6
+S01 S3,S3,line 8 north,typical side column,47.73,32.84,149.5,U4 1.2G+1.3W WNn q1.2,-77.1,U5 0.9G+1.3W WWp q1.2,124.9,-198.6,U5 0.9G+1.3W WNn q1.2,117.6,63.9,U5 0.9G+1.3W WNn q1.2,117.6
+S01 S3,S3,line 9 south,typical side column,53.29,0.15,134.5,U4 1.2G+1.3W WNn q1.2,-90.7,U5 0.9G+1.3W WSp q1.2,102.9,-218.2,U4 1.2G+1.3W WEp q1.2,-23.6,74.4,U4 1.2G+1.3W WEp q1.2,-23.6
+S01 S3,S3,line 9 north,typical side column,53.29,32.84,134.5,U4 1.2G+1.3W WSn q1.2,-90.7,U5 0.9G+1.3W WNp q1.2,-102.9,218.2,U4 1.2G+1.3W WEp q1.2,-23.6,74.4,U4 1.2G+1.3W WEp q1.2,-23.6
+S01 S3,S3,line 10 south,corner column,58.85,0.15,142.9,U4 1.2G+1.3W WSn q1.2,-87.7,U5 0.9G+1.3W WEp q1.2,-131.9,-132.1,U4 1.2G+1.3W WEp q1.2,-64.2,45.8,U4 1.2G+1.3W WEp q1.2,-64.2
+S01 S3,S3,line 10 north,corner column,58.85,32.84,142.9,U4 1.2G+1.3W WNn q1.2,-87.7,U5 0.9G+1.3W WEp q1.2,131.9,132.1,U4 1.2G+1.3W WEp q1.2,-64.2,45.8,U4 1.2G+1.3W WEp q1.2,-64.2
+S01 S3,S3,"west gable, y = 3.0",gable post,3.05,3.0,15.9,U1 1.35G,10.6,U5 0.9G+1.3W WSp q0.85,0.0,0.0,U1 1.35G,15.9,52.0,U4 1.2G+1.3W WSp q1.2,14.1
+S01 S3,S3,"west gable, y = 8.4",gable post (braced panel),3.05,8.4,398.8,U5 0.9G+1.3W WNp q1.2,-420.4,U4 1.2G+1.3W WSn q1.2,0.0,0.0,U1 1.35G,-10.3,89.9,U5 0.9G+1.3W WNp q1.2,398.8
+S01 S3,S3,"west gable, y = 13.8",gable post (braced panel),3.05,13.8,467.9,U4 1.2G+1.3W WSn q1.2,-363.1,U5 0.9G+1.3W WNp q1.2,0.0,0.0,U1 1.35G,63.8,85.4,U5 0.9G+1.3W WNp q1.2,-363.1
+S01 S3,S3,"west gable, y = 19.2",gable post (braced panel),3.05,19.2,467.9,U4 1.2G+1.3W WNn q1.2,-363.1,U5 0.9G+1.3W WSp q1.2,0.0,0.0,U1 1.35G,49.7,85.4,U5 0.9G+1.3W WSp q1.2,-363.1
+S01 S3,S3,"west gable, y = 24.6",gable post (braced panel),3.05,24.6,398.8,U5 0.9G+1.3W WSp q1.2,-420.4,U4 1.2G+1.3W WNn q1.2,0.0,0.0,U1 1.35G,3.7,89.9,U5 0.9G+1.3W WSp q1.2,398.8
+S01 S3,S3,"west gable, y = 30.0",gable post,3.05,30.0,15.9,U1 1.35G,10.6,U5 0.9G+1.3W WSp q0.85,0.0,0.0,U1 1.35G,15.9,52.0,U4 1.2G+1.3W WNp q1.2,14.1
+S01 S3,S3,"east gable, y = 3.0",gable post (braced panel),59.05,3.0,376.9,U5 0.9G+1.3W WNp q1.2,-398.9,U4 1.2G+1.3W WSn q1.2,0.0,0.0,U1 1.35G,-15.8,84.5,U4 1.2G+1.3W WSn q1.2,-398.9
+S01 S3,S3,"east gable, y = 8.4",gable post (braced panel),59.05,8.4,442.5,U4 1.2G+1.3W WSn q1.2,-344.1,U5 0.9G+1.3W WNp q1.2,0.0,0.0,U1 1.35G,64.9,84.9,U5 0.9G+1.3W WNp q1.2,-344.1
+S01 S3,S3,"east gable, y = 13.8",gable post,59.05,13.8,19.2,U1 1.35G,12.8,U5 0.9G+1.3W WSp q0.85,0.0,0.0,U1 1.35G,19.2,61.8,U4 1.2G+1.3W WEn q1.2,17.1
+S01 S3,S3,"east gable, y = 19.2",gable post,59.05,19.2,19.2,U1 1.35G,12.8,U5 0.9G+1.3W WSp q0.85,0.0,0.0,U1 1.35G,19.2,61.8,U4 1.2G+1.3W WEn q1.2,17.1
+S01 S3,S3,"east gable, y = 24.6",gable post (braced panel),59.05,24.6,442.5,U4 1.2G+1.3W WNn q1.2,-344.1,U5 0.9G+1.3W WSp q1.2,0.0,0.0,U1 1.35G,52.8,84.9,U5 0.9G+1.3W WSp q1.2,-344.1
+S01 S3,S3,"east gable, y = 30.0",gable post (braced panel),59.05,30.0,376.9,U5 0.9G+1.3W WSp q1.2,-398.9,U4 1.2G+1.3W WNn q1.2,0.0,0.0,U1 1.35G,-3.6,84.5,U4 1.2G+1.3W WNn q1.2,-398.9

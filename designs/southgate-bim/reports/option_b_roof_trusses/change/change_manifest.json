@@ -1,0 +1,213 @@
+{
+ "revision": "OPTB-C01",
+ "stamp": "20261107-115532",
+ "source": {
+  "path": "bim/southgate.ifc",
+  "sha256": "6cb86f6da743c810ff3281253c0cb72dbca67f8e36f948a88ba9de715b2b035e",
+  "publish_record": {
+   "published": "2026-11-07T09:37:59",
+   "from_build": "20261107-073340_full",
+   "sha256": "6cb86f6da743c810ff3281253c0cb72dbca67f8e36f948a88ba9de715b2b035e"
+  }
+ },
+ "backup": {
+  "path": "work/backups/20261107-115532_southgate_pre-optionB.ifc",
+  "sha256": "6cb86f6da743c810ff3281253c0cb72dbca67f8e36f948a88ba9de715b2b035e"
+ },
+ "reused": [
+  {
+   "GlobalId": "31zg0UZfbVQu8b3rsJZ6ui",
+   "StableId": "SOUTHGATE-TRUSS-T01",
+   "Line": 0,
+   "OldPartCount": 94,
+   "Disposition": "IDENTITY_REUSED - same IfcElementAssembly entity re-populated with the Option B truss; psets replaced"
+  },
+  {
+   "GlobalId": "26p_WFQT5SBAoAX3bjEcp7",
+   "StableId": "SOUTHGATE-TRUSS-T02",
+   "Line": 1,
+   "OldPartCount": 94,
+   "Disposition": "IDENTITY_REUSED - same IfcElementAssembly entity re-populated with the Option B truss; psets replaced"
+  },
+  {
+   "GlobalId": "3eED8C0grN$PO1aKAUyjJY",
+   "StableId": "SOUTHGATE-TRUSS-T03",
+   "Line": 2,
+   "OldPartCount": 94,
+   "Disposition": "IDENTITY_REUSED - same IfcElementAssembly entity re-populated with the Option B truss; psets replaced"
+  },
+  {
+   "GlobalId": "0p_uL7UjLKGw9Ticqnsiaa",
+   "StableId": "SOUTHGATE-TRUSS-T04",
+   "Line": 3,
+   "OldPartCount": 94,
+   "Disposition": "IDENTITY_REUSED - same IfcElementAssembly entity re-populated with the Option B truss; psets replaced"
+  },
+  {
+   "GlobalId": "0x9dcwdUbL_xnhFeSL6$T9",
+   "StableId": "SOUTHGATE-TRUSS-T05",
+   "Line": 4,
+   "OldPartCount": 94,
+   "Disposition": "IDENTITY_REUSED - same IfcElementAssembly entity re-populated with the Option B truss; psets replaced"
+  },
+  {
+   "GlobalId": "1xlOVHjuvPcO4uZjgE976y",
+   "StableId": "SOUTHGATE-TRUSS-T06",
+   "Line": 5,
+   "OldPartCount": 580,
+   "Disposition": "IDENTITY_REUSED - same IfcElementAssembly entity re-populated with the Option B truss; psets replaced"
+  },
+  {
+   "GlobalId": "28Nb7Zr8bGL9_7tagPmPou",
+   "StableId": "SOUTHGATE-TRUSS-T07",
+   "Line": 6,
+   "OldPartCount": 94,
+   "Disposition": "IDENTITY_REUSED - same IfcElementAssembly entity re-populated with the Option B truss; psets replaced"
+  },
+  {
+   "GlobalId": "1Cd4tWrBzRleL69CBHmFhh",
+   "StableId": "SOUTHGATE-TRUSS-T08",
+   "Line": 7,
+   "OldPartCount": 94,
+   "Disposition": "IDENTITY_REUSED - same IfcElementAssembly entity re-populated with the Option B truss; psets replaced"
+  },
+  {
+   "GlobalId": "1rSAuL09DLIAqeL7ms2Mss",
+   "StableId": "SOUTHGATE-TRUSS-T09",
+   "Line": 8,
+   "OldPartCount": 94,
+   "Disposition": "IDENTITY_REUSED - same IfcElementAssembly entity re-populated with the Option B truss; psets replaced"
+  },
+  {
+   "GlobalId": "14gTP_c1bO2PjMmnd2AAqn",
+   "StableId": "SOUTHGATE-TRUSS-T10",
+   "Line": 9,
+   "OldPartCount": 94,
+   "Disposition": "IDENTITY_REUSED - same IfcElementAssembly entity re-populated with the Option B truss; psets replaced"
+  },
+  {
+   "GlobalId": "0vQoewdNHO4fJN3umFQkGT",
+   "StableId": "SOUTHGATE-TRUSS-T11",
+   "Line": 10,
+   "OldPartCount": 94,
+   "Disposition": "IDENTITY_REUSED - same IfcElementAssembly entity re-populated with the Option B truss; psets replaced"
+  }
+ ],
+ "created": {
+  "IfcElementAssembly": 693,
+  "IfcMember": 814,
+  "IfcPlate": 1456,
+  "IfcMechanicalFastener": 3634
+ },
+ "retained_note": "every element not listed as superseded is retained unchanged (verified by s05 regression)",
+ "superseded_types": [
+  {
+   "GlobalId": "1VnWrQoR1NLuZ13q2DXo5$",
+   "Name": "MemberT-2L90x90x8-STR-Painted-Steel-Grey-3"
+  },
+  {
+   "GlobalId": "1MdcIz6CXUHPpAzRLHbR_u",
+   "Name": "MemberT-2L90x90x8-STR-Painted-Steel-Grey-5"
+  },
+  {
+   "GlobalId": "1mxgbpLO1J7Pamx1mFh3Yw",
+   "Name": "MemberT-2L90x90x8-STR-Painted-Steel-Grey-4"
+  },
+  {
+   "GlobalId": "1V83R7zaLQCOvhxmWJeQSg",
+   "Name": "MemberT-2L90x90x8-STR-Painted-Steel-Grey-2"
+  },
+  {
+   "GlobalId": "0bbP630kLMCQieYP7ndlYZ",
+   "Name": "MemberT-2L100x100x10-STR-Painted-Steel-Grey-2"
+  },
+  {
+   "GlobalId": "105RvFt5vPAOSa8mr3Z8CS",
+   "Name": "MemberT-2L90x90x8-STR-Painted-Steel-Grey"
+  },
+  {
+   "GlobalId": "3UWS4WsjfPfAbGXiGl$8x3",
+   "Name": "MemberT-2L70x70x6-STR-Painted-Steel-Grey"
+  },
+  {
+   "GlobalId": "3AD$BhHp1PZRHvNOjDDA_M",
+   "Name": "MemberT-2L100x100x10-STR-Painted-Steel-Grey"
+  }
+ ],
+ "created_total": 6597,
+ "new_types": [
+  "SG-OPTB-BC-L80x80x8",
+  "SG-OPTB-BOLTSET-M16x45-8.8-G22",
+  "SG-OPTB-BOLTSET-M20x50-8.8-G22",
+  "SG-OPTB-BOLTSET-M20x50-8.8-G26",
+  "SG-OPTB-BOLTSET-M20x70-8.8-G42",
+  "SG-OPTB-BUM-BC-2L80x80x8",
+  "SG-OPTB-BUM-D-2L100x100x8",
+  "SG-OPTB-BUM-D-2L75x75x6",
+  "SG-OPTB-BUM-TC-2L80x80x8",
+  "SG-OPTB-BUM-TC-2L90x90x8",
+  "SG-OPTB-BUM-V-2L60x60x6",
+  "SG-OPTB-BUM-V-2L75x75x6",
+  "SG-OPTB-BUM-VK-2L100x100x8",
+  "SG-OPTB-BUM-VP-2L70x70x6",
+  "SG-OPTB-CT-BC-TT-G-0aa85e",
+  "SG-OPTB-CT-BC-TT-R-TAB-6b3d73",
+  "SG-OPTB-CT-BC-TT-T-83ac3c",
+  "SG-OPTB-CT-BH-TT-G-7bae77",
+  "SG-OPTB-CT-BH-TT-R-f13f90",
+  "SG-OPTB-CT-BH-TT-T-d6ed20",
+  "SG-OPTB-CT-BS-TT-G-9a1e5b",
+  "SG-OPTB-CT-BS-TT-G-c21454",
+  "SG-OPTB-CT-BS-TT-R-TAB-3450c5",
+  "SG-OPTB-CT-BS-TT-R-TAB-d6de81",
+  "SG-OPTB-CT-BS-TT-T-450702",
+  "SG-OPTB-CT-BS-TT-T-f60c1b",
+  "SG-OPTB-CT-BV-TT-G-b66488",
+  "SG-OPTB-CT-BV-TT-R-TAB-f84b24",
+  "SG-OPTB-CT-BV-TT-T-8a6d98",
+  "SG-OPTB-CT-TA-TT-G-1994d3",
+  "SG-OPTB-CT-TA-TT-R-e1c762",
+  "SG-OPTB-CT-TA-TT-T-3686bc",
+  "SG-OPTB-CT-TH-TT-G-d36907",
+  "SG-OPTB-CT-TH-TT-R-91b6d0",
+  "SG-OPTB-CT-TH-TT-T-554d30",
+  "SG-OPTB-CT-TS-TT-G-489c94",
+  "SG-OPTB-CT-TS-TT-G-d187e0",
+  "SG-OPTB-CT-TS-TT-R-574722",
+  "SG-OPTB-CT-TS-TT-R-580f5f",
+  "SG-OPTB-CT-TS-TT-T-4cd28d",
+  "SG-OPTB-CT-TS-TT-T-fd4fa1",
+  "SG-OPTB-CT-TV2-TT-G-20dd74",
+  "SG-OPTB-CT-TV2-TT-G-eb07a8",
+  "SG-OPTB-CT-TV2-TT-R-88267c",
+  "SG-OPTB-CT-TV2-TT-R-cce8a3",
+  "SG-OPTB-CT-TV2-TT-R-ce15bb",
+  "SG-OPTB-CT-TV2-TT-T-405b39",
+  "SG-OPTB-CT-TV2-TT-T-86750c",
+  "SG-OPTB-CT-TV2-TT-T-c0312a",
+  "SG-OPTB-D-L100x100x8",
+  "SG-OPTB-D-L75x75x6",
+  "SG-OPTB-GUSSET-10",
+  "SG-OPTB-PACKER-70x60x10",
+  "SG-OPTB-PACKER-80x100x10",
+  "SG-OPTB-PACKER-80x70x10",
+  "SG-OPTB-PACKER-80x75x10",
+  "SG-OPTB-PACKER-80x80x10",
+  "SG-OPTB-PACKER-80x90x10",
+  "SG-OPTB-SPLICE-8",
+  "SG-OPTB-TC-L80x80x8",
+  "SG-OPTB-TC-L90x90x8",
+  "SG-OPTB-TT-G",
+  "SG-OPTB-TT-R",
+  "SG-OPTB-TT-T",
+  "SG-OPTB-V-L60x60x6",
+  "SG-OPTB-V-L75x75x6",
+  "SG-OPTB-VK-L100x100x8",
+  "SG-OPTB-VP-L70x70x6"
+ ],
+ "candidate": {
+  "path": "work/option_b/candidates/20261107-115532/southgate_optionB_candidate.ifc",
+  "sha256": "32622e105a690a1f9f8be03547945ea1306ae96b7324ef9e73823be97a087d18"
+ },
+ "superseded_count": 1520
+}

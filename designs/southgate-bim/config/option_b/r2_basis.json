@@ -1,0 +1,1860 @@
+{
+ "title": "Southgate Worship Center - Roof Structure Options Appraisal, Revision R2, 7 November 2026 - Option B basis",
+ "status": "PRELIMINARY_ESTIMATE - preliminary options appraisal, not a fabrication design; member sizes indicative (R2 s.1, 'must not be used for fabrication')",
+ "sources": {
+  "study_results": {
+   "path": "../F-site-A-2000-astra-v2/studies/roof-truss-selection/work/study_results.json",
+   "sha256": "41b044435c802fdcf4013141325a1d48f948715da7418ea608d00bd239c5b4ca"
+  },
+  "metrics": {
+   "path": "../F-site-A-2000-astra-v2/studies/roof-truss-selection/work/metrics.json",
+   "sha256": "80c561ec4a4995c2b02f697f543b45da1ff40dd327332df8b41fdec3be137dc3"
+  },
+  "cost_summary": {
+   "path": "../F-site-A-2000-astra-v2/studies/roof-truss-selection/work/cost_summary.json",
+   "sha256": "adf031ebf4e54f993d5c66c62dca1489a6dba1e252f7012bfa30d6c8d3f273e2"
+  },
+  "options_and_loads": {
+   "path": "../F-site-A-2000-astra-v2/studies/roof-truss-selection/scripts/options_and_loads.py",
+   "sha256": "88fcdf7a36ab6cd0d22f2ed2b8e6fd3d856fccc5a624e9ee0523d8959af539cd"
+  },
+  "metrics_script": {
+   "path": "../F-site-A-2000-astra-v2/studies/roof-truss-selection/scripts/metrics.py",
+   "sha256": "e6acd026c51c02a4dce8919f01ecb77d3ef39df5e0830b43e7676441ff5fac22"
+  },
+  "cost_model": {
+   "path": "../F-site-A-2000-astra-v2/studies/roof-truss-selection/scripts/cost_model.py",
+   "sha256": "c0e70c3437a4a09a6b0a84d088114ccf6918c3cfe2da9213ea272bab493fbe79"
+  },
+  "truss_engine": {
+   "path": "../F-site-A-2000-astra-v2/studies/roof-truss-selection/scripts/truss_engine.py",
+   "sha256": "c336e2cda0268c6fd9249107ee6f0606ae6e6985fc1dc737772f6b9abba0d497"
+  },
+  "report_pdf": {
+   "path": "../F-site-A-2000-astra-v2/studies/roof-truss-selection/Roof_Structure_Options_Appraisal_R2.pdf",
+   "sha256": "fe9671919542b2268e115a06740ee54edbf9679c6308d7650932d4970a33d83d"
+  },
+  "revision_log": {
+   "path": "../F-site-A-2000-astra-v2/studies/roof-truss-selection/R2_revision_log.md",
+   "sha256": "0a0dc10e9b80042b0f2e28689a856b768a778e1423cdba0b42cc6e2abd9293e3"
+  },
+  "truss_options": {
+   "path": "../F-site-A-2000-astra-v2/studies/roof-truss-selection/data/truss_options.csv",
+   "sha256": "a3fad7b0980abc8991f1c92c7530282f13b2e67b2d3896dc2ccd1f86371e704b"
+  }
+ },
+ "geometry": {
+  "span_m": 32.4,
+  "bearing_y_m": [
+   0.3,
+   32.7
+  ],
+  "pitch_deg": 15.0,
+  "bays": 12,
+  "panel_m": 2.7,
+  "bottom_chord_m": 10.9,
+  "top_chord_line_at_bearing_m": 12.38,
+  "ridge_line_m": 16.72077691738419,
+  "truss_x_m": [
+   3.25,
+   8.81,
+   14.37,
+   19.93,
+   25.49,
+   31.05,
+   36.61,
+   42.17,
+   47.73,
+   53.29,
+   58.85
+  ],
+  "spacing_m": 5.56,
+  "web_pattern": "Warren with verticals; diagonals alternate B(k)->T(k+1) for even k in each half (R2 options_and_loads.build_panelled)",
+  "note": "R2 analysis line 12.380 was the existing model's member axis (leg centre of 2L100), purlins seat on it"
+ },
+ "analysed_lines": {
+  "0": {
+   "line_name": "gable (line 0/10)",
+   "mass_members_kg": 2873.4,
+   "max_util": 0.718,
+   "sections": {
+    "BC": [
+     "2L80x80x8"
+    ],
+    "D": [
+     "2L100x100x8",
+     "2L75x75x6"
+    ],
+    "TC": [
+     "2L80x80x8"
+    ],
+    "V": [
+     "2L60x60x6",
+     "2L75x75x6"
+    ],
+    "VK": [
+     "2L100x100x8"
+    ],
+    "VP": [
+     "2L70x70x6"
+    ]
+   },
+   "chord_sections": {
+    "TC": [
+     "2L80x80x8"
+    ],
+    "BC": [
+     "2L80x80x8"
+    ]
+   },
+   "chord_forces": {
+    "TC": {
+     "Nc_kN": 105.4,
+     "Nt_kN": 122.6,
+     "util_max": 0.555
+    },
+    "BC": {
+     "Nc_kN": 102.1,
+     "Nt_kN": 99.9,
+     "util_max": 0.57
+    }
+   },
+   "webs": [
+    {
+     "group": "VP",
+     "section": "2L70x70x6",
+     "s1": 0.0,
+     "end1": "B",
+     "s2": 0.0,
+     "end2": "T",
+     "Nc_kN": 58.6,
+     "Nt_kN": 56.3,
+     "util": 0.176,
+     "lam": 69.2
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 0.0,
+     "end1": "B",
+     "s2": 2.7,
+     "end2": "T",
+     "Nc_kN": 87.4,
+     "Nt_kN": 93.5,
+     "util": 0.718,
+     "lam": 151.5
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 2.7,
+     "end1": "B",
+     "s2": 2.7,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 1.4,
+     "util": 0.004,
+     "lam": 121.1
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 2.7,
+     "end1": "T",
+     "s2": 5.4,
+     "end2": "B",
+     "Nc_kN": 31.0,
+     "Nt_kN": 31.8,
+     "util": 0.255,
+     "lam": 151.5
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 5.4,
+     "end1": "B",
+     "s2": 5.4,
+     "end2": "T",
+     "Nc_kN": 7.7,
+     "Nt_kN": 13.1,
+     "util": 0.089,
+     "lam": 160.8
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 5.4,
+     "end1": "B",
+     "s2": 8.1,
+     "end2": "T",
+     "Nc_kN": 13.5,
+     "Nt_kN": 9.6,
+     "util": 0.179,
+     "lam": 197.4
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 8.1,
+     "end1": "B",
+     "s2": 8.1,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 2.6,
+     "util": 0.007,
+     "lam": 200.6
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 8.1,
+     "end1": "T",
+     "s2": 10.8,
+     "end2": "B",
+     "Nc_kN": 3.0,
+     "Nt_kN": 6.3,
+     "util": 0.04,
+     "lam": 197.4
+    },
+    {
+     "group": "V",
+     "section": "2L75x75x6",
+     "s1": 10.8,
+     "end1": "B",
+     "s2": 10.8,
+     "end2": "T",
+     "Nc_kN": 8.1,
+     "Nt_kN": 13.2,
+     "util": 0.1,
+     "lam": 190.2
+    },
+    {
+     "group": "D",
+     "section": "2L100x100x8",
+     "s1": 10.8,
+     "end1": "B",
+     "s2": 13.5,
+     "end2": "T",
+     "Nc_kN": 18.8,
+     "Nt_kN": 15.1,
+     "util": 0.128,
+     "lam": 188.5
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 13.5,
+     "end1": "B",
+     "s2": 13.5,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 1.7,
+     "util": 0.005,
+     "lam": 280.1
+    },
+    {
+     "group": "D",
+     "section": "2L100x100x8",
+     "s1": 13.5,
+     "end1": "T",
+     "s2": 16.2,
+     "end2": "B",
+     "Nc_kN": 22.6,
+     "Nt_kN": 25.2,
+     "util": 0.155,
+     "lam": 188.5
+    },
+    {
+     "group": "VK",
+     "section": "2L100x100x8",
+     "s1": 16.2,
+     "end1": "B",
+     "s2": 16.2,
+     "end2": "T",
+     "Nc_kN": 42.0,
+     "Nt_kN": 38.6,
+     "util": 0.292,
+     "lam": 190.2
+    },
+    {
+     "group": "D",
+     "section": "2L100x100x8",
+     "s1": 16.2,
+     "end1": "B",
+     "s2": 18.9,
+     "end2": "T",
+     "Nc_kN": 17.9,
+     "Nt_kN": 25.2,
+     "util": 0.123,
+     "lam": 188.5
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 18.9,
+     "end1": "B",
+     "s2": 18.9,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 1.7,
+     "util": 0.005,
+     "lam": 280.1
+    },
+    {
+     "group": "D",
+     "section": "2L100x100x8",
+     "s1": 18.9,
+     "end1": "T",
+     "s2": 21.6,
+     "end2": "B",
+     "Nc_kN": 18.8,
+     "Nt_kN": 11.1,
+     "util": 0.128,
+     "lam": 188.5
+    },
+    {
+     "group": "V",
+     "section": "2L75x75x6",
+     "s1": 21.6,
+     "end1": "B",
+     "s2": 21.6,
+     "end2": "T",
+     "Nc_kN": 6.4,
+     "Nt_kN": 13.2,
+     "util": 0.079,
+     "lam": 190.2
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 21.6,
+     "end1": "B",
+     "s2": 24.3,
+     "end2": "T",
+     "Nc_kN": 0.7,
+     "Nt_kN": 6.3,
+     "util": 0.014,
+     "lam": 197.4
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 24.3,
+     "end1": "B",
+     "s2": 24.3,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 2.6,
+     "util": 0.007,
+     "lam": 200.6
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 24.3,
+     "end1": "T",
+     "s2": 27.0,
+     "end2": "B",
+     "Nc_kN": 14.0,
+     "Nt_kN": 9.6,
+     "util": 0.185,
+     "lam": 197.4
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 27.0,
+     "end1": "B",
+     "s2": 27.0,
+     "end2": "T",
+     "Nc_kN": 6.1,
+     "Nt_kN": 13.1,
+     "util": 0.07,
+     "lam": 160.8
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 27.0,
+     "end1": "B",
+     "s2": 29.7,
+     "end2": "T",
+     "Nc_kN": 31.0,
+     "Nt_kN": 30.2,
+     "util": 0.255,
+     "lam": 151.5
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 29.7,
+     "end1": "B",
+     "s2": 29.7,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 1.4,
+     "util": 0.004,
+     "lam": 121.1
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 29.7,
+     "end1": "T",
+     "s2": 32.4,
+     "end2": "B",
+     "Nc_kN": 80.0,
+     "Nt_kN": 93.5,
+     "util": 0.657,
+     "lam": 151.5
+    },
+    {
+     "group": "VP",
+     "section": "2L70x70x6",
+     "s1": 32.4,
+     "end1": "B",
+     "s2": 32.4,
+     "end2": "T",
+     "Nc_kN": 58.6,
+     "Nt_kN": 51.7,
+     "util": 0.176,
+     "lam": 69.2
+    }
+   ],
+   "reactions": {
+    "ULS1 1.35G": {
+     "0": [
+      -0.0,
+      37.9
+     ],
+     "37": [
+      0.0,
+      37.9
+     ]
+    },
+    "ULS2 1.2G+1.6Qr": {
+     "0": [
+      -0.0,
+      55.2
+     ],
+     "37": [
+      0.0,
+      55.2
+     ]
+    },
+    "ULS3 1.2G+1.6Qdyn": {
+     "0": [
+      -0.0,
+      33.7
+     ],
+     "37": [
+      -0.0,
+      33.7
+     ]
+    },
+    "ULS4 1.2G+1.3W0down": {
+     "0": [
+      -2.7,
+      60.2
+     ],
+     "37": [
+      -0.0,
+      54.3
+     ]
+    },
+    "ULS5 0.9G+1.3W90up": {
+     "0": [
+      -1.9,
+      -67.1
+     ],
+     "37": [
+      -0.0,
+      -66.6
+     ]
+    },
+    "ULS6 0.9G+1.3W0up": {
+     "0": [
+      -2.6,
+      -20.6
+     ],
+     "37": [
+      0.0,
+      -16.6
+     ]
+    }
+   },
+   "f1_hz": 6.71
+  },
+  "1": {
+   "line_name": "stage lighting (line 1)",
+   "mass_members_kg": 2947.9,
+   "max_util": 0.974,
+   "sections": {
+    "BC": [
+     "2L80x80x8"
+    ],
+    "D": [
+     "2L100x100x8",
+     "2L75x75x6"
+    ],
+    "TC": [
+     "2L80x80x8"
+    ],
+    "V": [
+     "2L60x60x6",
+     "2L75x75x6"
+    ],
+    "VK": [
+     "2L100x100x8"
+    ],
+    "VP": [
+     "2L70x70x6"
+    ]
+   },
+   "chord_sections": {
+    "TC": [
+     "2L80x80x8"
+    ],
+    "BC": [
+     "2L80x80x8"
+    ]
+   },
+   "chord_forces": {
+    "TC": {
+     "Nc_kN": 185.1,
+     "Nt_kN": 98.9,
+     "util_max": 0.974
+    },
+    "BC": {
+     "Nc_kN": 80.3,
+     "Nt_kN": 177.5,
+     "util_max": 0.611
+    }
+   },
+   "webs": [
+    {
+     "group": "VP",
+     "section": "2L70x70x6",
+     "s1": 0.0,
+     "end1": "B",
+     "s2": 0.0,
+     "end2": "T",
+     "Nc_kN": 46.1,
+     "Nt_kN": 99.4,
+     "util": 0.231,
+     "lam": 69.2
+    },
+    {
+     "group": "D",
+     "section": "2L100x100x8",
+     "s1": 0.0,
+     "end1": "B",
+     "s2": 2.7,
+     "end2": "T",
+     "Nc_kN": 153.9,
+     "Nt_kN": 74.0,
+     "util": 0.446,
+     "lam": 113.9
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 2.7,
+     "end1": "B",
+     "s2": 2.7,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 2.3,
+     "util": 0.006,
+     "lam": 121.1
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 2.7,
+     "end1": "T",
+     "s2": 5.4,
+     "end2": "B",
+     "Nc_kN": 24.2,
+     "Nt_kN": 57.6,
+     "util": 0.199,
+     "lam": 151.5
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 5.4,
+     "end1": "B",
+     "s2": 5.4,
+     "end2": "T",
+     "Nc_kN": 12.6,
+     "Nt_kN": 10.8,
+     "util": 0.145,
+     "lam": 160.8
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 5.4,
+     "end1": "B",
+     "s2": 8.1,
+     "end2": "T",
+     "Nc_kN": 24.2,
+     "Nt_kN": 7.1,
+     "util": 0.321,
+     "lam": 197.4
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 8.1,
+     "end1": "B",
+     "s2": 8.1,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 13.1,
+     "util": 0.036,
+     "lam": 200.6
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 8.1,
+     "end1": "T",
+     "s2": 10.8,
+     "end2": "B",
+     "Nc_kN": 8.6,
+     "Nt_kN": 5.6,
+     "util": 0.113,
+     "lam": 197.4
+    },
+    {
+     "group": "V",
+     "section": "2L75x75x6",
+     "s1": 10.8,
+     "end1": "B",
+     "s2": 10.8,
+     "end2": "T",
+     "Nc_kN": 13.0,
+     "Nt_kN": 11.0,
+     "util": 0.16,
+     "lam": 190.2
+    },
+    {
+     "group": "D",
+     "section": "2L100x100x8",
+     "s1": 10.8,
+     "end1": "B",
+     "s2": 13.5,
+     "end2": "T",
+     "Nc_kN": 15.5,
+     "Nt_kN": 27.5,
+     "util": 0.106,
+     "lam": 188.5
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 13.5,
+     "end1": "B",
+     "s2": 13.5,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 4.9,
+     "util": 0.013,
+     "lam": 280.1
+    },
+    {
+     "group": "D",
+     "section": "2L100x100x8",
+     "s1": 13.5,
+     "end1": "T",
+     "s2": 16.2,
+     "end2": "B",
+     "Nc_kN": 40.0,
+     "Nt_kN": 20.5,
+     "util": 0.274,
+     "lam": 188.5
+    },
+    {
+     "group": "VK",
+     "section": "2L100x100x8",
+     "s1": 16.2,
+     "end1": "B",
+     "s2": 16.2,
+     "end2": "T",
+     "Nc_kN": 33.7,
+     "Nt_kN": 67.4,
+     "util": 0.235,
+     "lam": 190.2
+    },
+    {
+     "group": "D",
+     "section": "2L100x100x8",
+     "s1": 16.2,
+     "end1": "B",
+     "s2": 18.9,
+     "end2": "T",
+     "Nc_kN": 31.8,
+     "Nt_kN": 20.5,
+     "util": 0.218,
+     "lam": 188.5
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 18.9,
+     "end1": "B",
+     "s2": 18.9,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 4.9,
+     "util": 0.013,
+     "lam": 280.1
+    },
+    {
+     "group": "D",
+     "section": "2L100x100x8",
+     "s1": 18.9,
+     "end1": "T",
+     "s2": 21.6,
+     "end2": "B",
+     "Nc_kN": 15.5,
+     "Nt_kN": 20.7,
+     "util": 0.106,
+     "lam": 188.5
+    },
+    {
+     "group": "V",
+     "section": "2L75x75x6",
+     "s1": 21.6,
+     "end1": "B",
+     "s2": 21.6,
+     "end2": "T",
+     "Nc_kN": 10.2,
+     "Nt_kN": 11.0,
+     "util": 0.126,
+     "lam": 190.2
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 21.6,
+     "end1": "B",
+     "s2": 24.3,
+     "end2": "T",
+     "Nc_kN": 5.9,
+     "Nt_kN": 5.6,
+     "util": 0.078,
+     "lam": 197.4
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 24.3,
+     "end1": "B",
+     "s2": 24.3,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 13.1,
+     "util": 0.036,
+     "lam": 200.6
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 24.3,
+     "end1": "T",
+     "s2": 27.0,
+     "end2": "B",
+     "Nc_kN": 25.0,
+     "Nt_kN": 7.1,
+     "util": 0.331,
+     "lam": 197.4
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 27.0,
+     "end1": "B",
+     "s2": 27.0,
+     "end2": "T",
+     "Nc_kN": 9.8,
+     "Nt_kN": 10.8,
+     "util": 0.113,
+     "lam": 160.8
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 27.0,
+     "end1": "B",
+     "s2": 29.7,
+     "end2": "T",
+     "Nc_kN": 24.2,
+     "Nt_kN": 55.0,
+     "util": 0.199,
+     "lam": 151.5
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 29.7,
+     "end1": "B",
+     "s2": 29.7,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 2.3,
+     "util": 0.006,
+     "lam": 121.1
+    },
+    {
+     "group": "D",
+     "section": "2L100x100x8",
+     "s1": 29.7,
+     "end1": "T",
+     "s2": 32.4,
+     "end2": "B",
+     "Nc_kN": 141.3,
+     "Nt_kN": 74.0,
+     "util": 0.41,
+     "lam": 113.9
+    },
+    {
+     "group": "VP",
+     "section": "2L70x70x6",
+     "s1": 32.4,
+     "end1": "B",
+     "s2": 32.4,
+     "end2": "T",
+     "Nc_kN": 46.1,
+     "Nt_kN": 91.3,
+     "util": 0.212,
+     "lam": 69.2
+    }
+   ],
+   "reactions": {
+    "ULS1 1.35G": {
+     "0": [
+      -0.0,
+      66.7
+     ],
+     "37": [
+      0.0,
+      66.7
+     ]
+    },
+    "ULS2 1.2G+1.6Qr": {
+     "0": [
+      -0.0,
+      97.2
+     ],
+     "37": [
+      0.0,
+      97.2
+     ]
+    },
+    "ULS3 1.2G+1.6Qdyn": {
+     "0": [
+      -0.0,
+      67.5
+     ],
+     "37": [
+      0.0,
+      67.5
+     ]
+    },
+    "ULS4 1.2G+1.3W0down": {
+     "0": [
+      -4.6,
+      105.7
+     ],
+     "37": [
+      0.0,
+      95.7
+     ]
+    },
+    "ULS5 0.9G+1.3W90up": {
+     "0": [
+      -1.8,
+      -53.2
+     ],
+     "37": [
+      -0.0,
+      -52.7
+     ]
+    },
+    "ULS6 0.9G+1.3W0up": {
+     "0": [
+      -4.5,
+      -44.9
+     ],
+     "37": [
+      -0.0,
+      -38.0
+     ]
+    }
+   },
+   "f1_hz": 5.11
+  },
+  "2": {
+   "line_name": "array/cluster (line 2)",
+   "mass_members_kg": 3033.1,
+   "max_util": 0.774,
+   "sections": {
+    "BC": [
+     "2L80x80x8"
+    ],
+    "D": [
+     "2L100x100x8",
+     "2L75x75x6"
+    ],
+    "TC": [
+     "2L90x90x8"
+    ],
+    "V": [
+     "2L60x60x6",
+     "2L75x75x6"
+    ],
+    "VK": [
+     "2L100x100x8"
+    ],
+    "VP": [
+     "2L70x70x6"
+    ]
+   },
+   "chord_sections": {
+    "TC": [
+     "2L90x90x8"
+    ],
+    "BC": [
+     "2L80x80x8"
+    ]
+   },
+   "chord_forces": {
+    "TC": {
+     "Nc_kN": 193.7,
+     "Nt_kN": 98.2,
+     "util_max": 0.774
+    },
+    "BC": {
+     "Nc_kN": 79.6,
+     "Nt_kN": 185.6,
+     "util_max": 0.609
+    }
+   },
+   "webs": [
+    {
+     "group": "VP",
+     "section": "2L70x70x6",
+     "s1": 0.0,
+     "end1": "B",
+     "s2": 0.0,
+     "end2": "T",
+     "Nc_kN": 45.7,
+     "Nt_kN": 103.8,
+     "util": 0.242,
+     "lam": 69.2
+    },
+    {
+     "group": "D",
+     "section": "2L100x100x8",
+     "s1": 0.0,
+     "end1": "B",
+     "s2": 2.7,
+     "end2": "T",
+     "Nc_kN": 161.3,
+     "Nt_kN": 73.4,
+     "util": 0.468,
+     "lam": 113.9
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 2.7,
+     "end1": "B",
+     "s2": 2.7,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 3.1,
+     "util": 0.008,
+     "lam": 121.1
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 2.7,
+     "end1": "T",
+     "s2": 5.4,
+     "end2": "B",
+     "Nc_kN": 24.0,
+     "Nt_kN": 60.4,
+     "util": 0.197,
+     "lam": 151.5
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 5.4,
+     "end1": "B",
+     "s2": 5.4,
+     "end2": "T",
+     "Nc_kN": 12.7,
+     "Nt_kN": 10.8,
+     "util": 0.147,
+     "lam": 160.8
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 5.4,
+     "end1": "B",
+     "s2": 8.1,
+     "end2": "T",
+     "Nc_kN": 24.7,
+     "Nt_kN": 7.0,
+     "util": 0.327,
+     "lam": 197.4
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 8.1,
+     "end1": "B",
+     "s2": 8.1,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 12.8,
+     "util": 0.035,
+     "lam": 200.6
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 8.1,
+     "end1": "T",
+     "s2": 10.8,
+     "end2": "B",
+     "Nc_kN": 8.3,
+     "Nt_kN": 5.6,
+     "util": 0.11,
+     "lam": 197.4
+    },
+    {
+     "group": "V",
+     "section": "2L75x75x6",
+     "s1": 10.8,
+     "end1": "B",
+     "s2": 10.8,
+     "end2": "T",
+     "Nc_kN": 13.0,
+     "Nt_kN": 10.9,
+     "util": 0.161,
+     "lam": 190.2
+    },
+    {
+     "group": "D",
+     "section": "2L100x100x8",
+     "s1": 10.8,
+     "end1": "B",
+     "s2": 13.5,
+     "end2": "T",
+     "Nc_kN": 15.5,
+     "Nt_kN": 27.1,
+     "util": 0.106,
+     "lam": 188.5
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 13.5,
+     "end1": "B",
+     "s2": 13.5,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 5.3,
+     "util": 0.015,
+     "lam": 280.1
+    },
+    {
+     "group": "D",
+     "section": "2L100x100x8",
+     "s1": 13.5,
+     "end1": "T",
+     "s2": 16.2,
+     "end2": "B",
+     "Nc_kN": 40.7,
+     "Nt_kN": 20.4,
+     "util": 0.279,
+     "lam": 188.5
+    },
+    {
+     "group": "VK",
+     "section": "2L100x100x8",
+     "s1": 16.2,
+     "end1": "B",
+     "s2": 16.2,
+     "end2": "T",
+     "Nc_kN": 33.5,
+     "Nt_kN": 70.1,
+     "util": 0.233,
+     "lam": 190.2
+    },
+    {
+     "group": "D",
+     "section": "2L100x100x8",
+     "s1": 16.2,
+     "end1": "B",
+     "s2": 18.9,
+     "end2": "T",
+     "Nc_kN": 32.5,
+     "Nt_kN": 20.4,
+     "util": 0.223,
+     "lam": 188.5
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 18.9,
+     "end1": "B",
+     "s2": 18.9,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 5.3,
+     "util": 0.015,
+     "lam": 280.1
+    },
+    {
+     "group": "D",
+     "section": "2L100x100x8",
+     "s1": 18.9,
+     "end1": "T",
+     "s2": 21.6,
+     "end2": "B",
+     "Nc_kN": 15.5,
+     "Nt_kN": 20.3,
+     "util": 0.106,
+     "lam": 188.5
+    },
+    {
+     "group": "V",
+     "section": "2L75x75x6",
+     "s1": 21.6,
+     "end1": "B",
+     "s2": 21.6,
+     "end2": "T",
+     "Nc_kN": 10.2,
+     "Nt_kN": 10.9,
+     "util": 0.126,
+     "lam": 190.2
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 21.6,
+     "end1": "B",
+     "s2": 24.3,
+     "end2": "T",
+     "Nc_kN": 5.5,
+     "Nt_kN": 5.6,
+     "util": 0.072,
+     "lam": 197.4
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 24.3,
+     "end1": "B",
+     "s2": 24.3,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 12.8,
+     "util": 0.035,
+     "lam": 200.6
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 24.3,
+     "end1": "T",
+     "s2": 27.0,
+     "end2": "B",
+     "Nc_kN": 25.5,
+     "Nt_kN": 7.1,
+     "util": 0.337,
+     "lam": 197.4
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 27.0,
+     "end1": "B",
+     "s2": 27.0,
+     "end2": "T",
+     "Nc_kN": 9.9,
+     "Nt_kN": 10.8,
+     "util": 0.114,
+     "lam": 160.8
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 27.0,
+     "end1": "B",
+     "s2": 29.7,
+     "end2": "T",
+     "Nc_kN": 24.0,
+     "Nt_kN": 57.8,
+     "util": 0.197,
+     "lam": 151.5
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 29.7,
+     "end1": "B",
+     "s2": 29.7,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 3.1,
+     "util": 0.008,
+     "lam": 121.1
+    },
+    {
+     "group": "D",
+     "section": "2L100x100x8",
+     "s1": 29.7,
+     "end1": "T",
+     "s2": 32.4,
+     "end2": "B",
+     "Nc_kN": 148.6,
+     "Nt_kN": 73.4,
+     "util": 0.431,
+     "lam": 113.9
+    },
+    {
+     "group": "VP",
+     "section": "2L70x70x6",
+     "s1": 32.4,
+     "end1": "B",
+     "s2": 32.4,
+     "end2": "T",
+     "Nc_kN": 45.7,
+     "Nt_kN": 95.8,
+     "util": 0.223,
+     "lam": 69.2
+    }
+   ],
+   "reactions": {
+    "ULS1 1.35G": {
+     "0": [
+      -0.0,
+      71.8
+     ],
+     "37": [
+      0.0,
+      71.8
+     ]
+    },
+    "ULS2 1.2G+1.6Qr": {
+     "0": [
+      -0.0,
+      101.7
+     ],
+     "37": [
+      -0.0,
+      101.7
+     ]
+    },
+    "ULS3 1.2G+1.6Qdyn": {
+     "0": [
+      -0.0,
+      71.8
+     ],
+     "37": [
+      -0.0,
+      71.8
+     ]
+    },
+    "ULS4 1.2G+1.3W0down": {
+     "0": [
+      -4.6,
+      110.2
+     ],
+     "37": [
+      0.0,
+      100.2
+     ]
+    },
+    "ULS5 0.9G+1.3W90up": {
+     "0": [
+      -1.8,
+      -52.8
+     ],
+     "37": [
+      0.0,
+      -52.3
+     ]
+    },
+    "ULS6 0.9G+1.3W0up": {
+     "0": [
+      -4.5,
+      -44.5
+     ],
+     "37": [
+      0.0,
+      -37.6
+     ]
+    }
+   },
+   "f1_hz": 5.17
+  },
+  "4": {
+   "line_name": "typical interior (lines 3-8)",
+   "mass_members_kg": 3033.1,
+   "max_util": 0.762,
+   "sections": {
+    "BC": [
+     "2L80x80x8"
+    ],
+    "D": [
+     "2L100x100x8",
+     "2L75x75x6"
+    ],
+    "TC": [
+     "2L90x90x8"
+    ],
+    "V": [
+     "2L60x60x6",
+     "2L75x75x6"
+    ],
+    "VK": [
+     "2L100x100x8"
+    ],
+    "VP": [
+     "2L70x70x6"
+    ]
+   },
+   "chord_sections": {
+    "TC": [
+     "2L90x90x8"
+    ],
+    "BC": [
+     "2L80x80x8"
+    ]
+   },
+   "chord_forces": {
+    "TC": {
+     "Nc_kN": 188.9,
+     "Nt_kN": 79.5,
+     "util_max": 0.762
+    },
+    "BC": {
+     "Nc_kN": 63.5,
+     "Nt_kN": 179.3,
+     "util_max": 0.418
+    }
+   },
+   "webs": [
+    {
+     "group": "VP",
+     "section": "2L70x70x6",
+     "s1": 0.0,
+     "end1": "B",
+     "s2": 0.0,
+     "end2": "T",
+     "Nc_kN": 36.5,
+     "Nt_kN": 101.4,
+     "util": 0.236,
+     "lam": 69.2
+    },
+    {
+     "group": "D",
+     "section": "2L100x100x8",
+     "s1": 0.0,
+     "end1": "B",
+     "s2": 2.7,
+     "end2": "T",
+     "Nc_kN": 157.5,
+     "Nt_kN": 58.9,
+     "util": 0.457,
+     "lam": 113.9
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 2.7,
+     "end1": "B",
+     "s2": 2.7,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 4.2,
+     "util": 0.011,
+     "lam": 121.1
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 2.7,
+     "end1": "T",
+     "s2": 5.4,
+     "end2": "B",
+     "Nc_kN": 19.0,
+     "Nt_kN": 57.3,
+     "util": 0.156,
+     "lam": 151.5
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 5.4,
+     "end1": "B",
+     "s2": 5.4,
+     "end2": "T",
+     "Nc_kN": 12.7,
+     "Nt_kN": 9.0,
+     "util": 0.147,
+     "lam": 160.8
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 5.4,
+     "end1": "B",
+     "s2": 8.1,
+     "end2": "T",
+     "Nc_kN": 23.1,
+     "Nt_kN": 5.3,
+     "util": 0.306,
+     "lam": 197.4
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 8.1,
+     "end1": "B",
+     "s2": 8.1,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 5.8,
+     "util": 0.016,
+     "lam": 200.6
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 8.1,
+     "end1": "T",
+     "s2": 10.8,
+     "end2": "B",
+     "Nc_kN": 5.5,
+     "Nt_kN": 4.9,
+     "util": 0.072,
+     "lam": 197.4
+    },
+    {
+     "group": "V",
+     "section": "2L75x75x6",
+     "s1": 10.8,
+     "end1": "B",
+     "s2": 10.8,
+     "end2": "T",
+     "Nc_kN": 13.0,
+     "Nt_kN": 9.1,
+     "util": 0.16,
+     "lam": 190.2
+    },
+    {
+     "group": "D",
+     "section": "2L100x100x8",
+     "s1": 10.8,
+     "end1": "B",
+     "s2": 13.5,
+     "end2": "T",
+     "Nc_kN": 12.9,
+     "Nt_kN": 26.2,
+     "util": 0.088,
+     "lam": 188.5
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 13.5,
+     "end1": "B",
+     "s2": 13.5,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 4.1,
+     "util": 0.011,
+     "lam": 280.1
+    },
+    {
+     "group": "D",
+     "section": "2L100x100x8",
+     "s1": 13.5,
+     "end1": "T",
+     "s2": 16.2,
+     "end2": "B",
+     "Nc_kN": 39.3,
+     "Nt_kN": 16.7,
+     "util": 0.269,
+     "lam": 188.5
+    },
+    {
+     "group": "VK",
+     "section": "2L100x100x8",
+     "s1": 16.2,
+     "end1": "B",
+     "s2": 16.2,
+     "end2": "T",
+     "Nc_kN": 26.9,
+     "Nt_kN": 68.2,
+     "util": 0.187,
+     "lam": 190.2
+    },
+    {
+     "group": "D",
+     "section": "2L100x100x8",
+     "s1": 16.2,
+     "end1": "B",
+     "s2": 18.9,
+     "end2": "T",
+     "Nc_kN": 31.1,
+     "Nt_kN": 19.3,
+     "util": 0.213,
+     "lam": 188.5
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 18.9,
+     "end1": "B",
+     "s2": 18.9,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 4.1,
+     "util": 0.011,
+     "lam": 280.1
+    },
+    {
+     "group": "D",
+     "section": "2L100x100x8",
+     "s1": 18.9,
+     "end1": "T",
+     "s2": 21.6,
+     "end2": "B",
+     "Nc_kN": 12.9,
+     "Nt_kN": 19.4,
+     "util": 0.088,
+     "lam": 188.5
+    },
+    {
+     "group": "V",
+     "section": "2L75x75x6",
+     "s1": 21.6,
+     "end1": "B",
+     "s2": 21.6,
+     "end2": "T",
+     "Nc_kN": 10.2,
+     "Nt_kN": 9.1,
+     "util": 0.126,
+     "lam": 190.2
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 21.6,
+     "end1": "B",
+     "s2": 24.3,
+     "end2": "T",
+     "Nc_kN": 1.5,
+     "Nt_kN": 4.9,
+     "util": 0.019,
+     "lam": 197.4
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 24.3,
+     "end1": "B",
+     "s2": 24.3,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 5.8,
+     "util": 0.016,
+     "lam": 200.6
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 24.3,
+     "end1": "T",
+     "s2": 27.0,
+     "end2": "B",
+     "Nc_kN": 23.9,
+     "Nt_kN": 7.1,
+     "util": 0.316,
+     "lam": 197.4
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 27.0,
+     "end1": "B",
+     "s2": 27.0,
+     "end2": "T",
+     "Nc_kN": 9.9,
+     "Nt_kN": 9.0,
+     "util": 0.114,
+     "lam": 160.8
+    },
+    {
+     "group": "D",
+     "section": "2L75x75x6",
+     "s1": 27.0,
+     "end1": "B",
+     "s2": 29.7,
+     "end2": "T",
+     "Nc_kN": 19.0,
+     "Nt_kN": 54.7,
+     "util": 0.156,
+     "lam": 151.5
+    },
+    {
+     "group": "V",
+     "section": "2L60x60x6",
+     "s1": 29.7,
+     "end1": "B",
+     "s2": 29.7,
+     "end2": "T",
+     "Nc_kN": 0.0,
+     "Nt_kN": 4.2,
+     "util": 0.011,
+     "lam": 121.1
+    },
+    {
+     "group": "D",
+     "section": "2L100x100x8",
+     "s1": 29.7,
+     "end1": "T",
+     "s2": 32.4,
+     "end2": "B",
+     "Nc_kN": 144.8,
+     "Nt_kN": 58.9,
+     "util": 0.42,
+     "lam": 113.9
+    },
+    {
+     "group": "VP",
+     "section": "2L70x70x6",
+     "s1": 32.4,
+     "end1": "B",
+     "s2": 32.4,
+     "end2": "T",
+     "Nc_kN": 36.5,
+     "Nt_kN": 93.3,
+     "util": 0.217,
+     "lam": 69.2
+    }
+   ],
+   "reactions": {
+    "ULS1 1.35G": {
+     "0": [
+      -0.0,
+      70.0
+     ],
+     "37": [
+      -0.0,
+      70.0
+     ]
+    },
+    "ULS2 1.2G+1.6Qr": {
+     "0": [
+      -0.0,
+      99.2
+     ],
+     "37": [
+      0.0,
+      99.2
+     ]
+    },
+    "ULS3 1.2G+1.6Qdyn": {
+     "0": [
+      -0.0,
+      63.7
+     ],
+     "37": [
+      0.0,
+      63.7
+     ]
+    },
+    "ULS4 1.2G+1.3W0down": {
+     "0": [
+      -4.6,
+      107.7
+     ],
+     "37": [
+      0.0,
+      97.7
+     ]
+    },
+    "ULS5 0.9G+1.3W90up": {
+     "0": [
+      -1.5,
+      -42.5
+     ],
+     "37": [
+      0.0,
+      -42.1
+     ]
+    },
+    "ULS6 0.9G+1.3W0up": {
+     "0": [
+      -4.5,
+      -44.5
+     ],
+     "37": [
+      0.0,
+      -37.6
+     ]
+    }
+   },
+   "f1_hz": 5.44
+  }
+ },
+ "line_assignment": {
+  "0": "0",
+  "10": "0",
+  "1": "2",
+  "2": "2",
+  "3": "4",
+  "4": "4",
+  "5": "4",
+  "6": "4",
+  "7": "4",
+  "8": "4",
+  "9": "4"
+ },
+ "line_assignment_basis": "R2 cost_model.truss_set_mass: 2 x gable(line 0) + 2 x max(line 1, line 2) + 7 x typical(line 4); R2 analysed lines 0, 1, 2, 4 only (symmetry). Lines 1-2 adopt the heavier of lines 1/2 (= line 2).",
+ "future_scenario_sections": {
+  "0": {
+   "BC": [
+    "2L80x80x8"
+   ],
+   "D": [
+    "2L100x100x8",
+    "2L75x75x6"
+   ],
+   "TC": [
+    "2L80x80x8"
+   ],
+   "V": [
+    "2L60x60x6",
+    "2L75x75x6"
+   ],
+   "VK": [
+    "2L100x100x8"
+   ],
+   "VP": [
+    "2L70x70x6"
+   ]
+  },
+  "1": {
+   "BC": [
+    "2L100x100x8"
+   ],
+   "D": [
+    "2L100x100x8",
+    "2L75x75x6"
+   ],
+   "TC": [
+    "2L90x90x8"
+   ],
+   "V": [
+    "2L60x60x6",
+    "2L75x75x6"
+   ],
+   "VK": [
+    "2L100x100x8"
+   ],
+   "VP": [
+    "2L70x70x6"
+   ]
+  },
+  "2": {
+   "BC": [
+    "2L100x100x8"
+   ],
+   "D": [
+    "2L100x100x8",
+    "2L75x75x6"
+   ],
+   "TC": [
+    "2L100x100x8"
+   ],
+   "V": [
+    "2L60x60x6",
+    "2L75x75x6"
+   ],
+   "VK": [
+    "2L100x100x8"
+   ],
+   "VP": [
+    "2L70x70x6"
+   ]
+  },
+  "4": {
+   "BC": [
+    "2L80x80x8"
+   ],
+   "D": [
+    "2L100x100x8",
+    "2L75x75x6"
+   ],
+   "TC": [
+    "2L90x90x8"
+   ],
+   "V": [
+    "2L60x60x6",
+    "2L75x75x6"
+   ],
+   "VK": [
+    "2L100x100x8"
+   ],
+   "VP": [
+    "2L70x70x6"
+   ]
+  }
+ },
+ "r2_takeoff_per_typical_truss": {
+  "gusset_plates": 26,
+  "bolts": 448,
+  "packers": 164,
+  "web_members": 25,
+  "chord_pieces": 12,
+  "angle_pieces": 74,
+  "mass_members_kg": 3033.1,
+  "connection_kg": 831.4,
+  "mass_with_connections_kg": 3864.5,
+  "connection_ratio": 0.274,
+  "member_length_m": 166.4,
+  "rule": "bolts = sum over webs 2*max(2,ceil(F/100 kN)) + 8 per chord splice (chord pieces - 2) + 4 per gusset + 1 per packer; packers = round(sum(member length)/1.2 + n_webs); conn kg = 15.3/gusset + 1.2/packer + 8/splice + 0.35/bolt (R2 metrics.py)"
+ },
+ "r2_truss_set_t": 42.1,
+ "working_assumptions": {
+  "bolt": "M20 grade 8.8, design resistance 100 kN per bolt (R2 metrics.py BOLT_KN - study assumption)",
+  "gusset_thickness_mm": 10,
+  "gap_between_angles_mm": 10,
+  "steel_grade": "S355JR (as recorded in the model; R2 truss_engine FY 355, sensitivity 275)",
+  "chord_stock_m": 6.0,
+  "coating": "two-coat paint (R2 cost basis); hot-dip galvanising to be decided at design stage (R2 s.11.3)"
+ },
+ "r2_tonnage_B": {
+  "primary_t": 42.1,
+  "columns_t": 21.04,
+  "purlins_t": 12.6,
+  "bracing_t": 8.09,
+  "support_t": 1.8,
+  "total_t": 85.62
+ }
+}

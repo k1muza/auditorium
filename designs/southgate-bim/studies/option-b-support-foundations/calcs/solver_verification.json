@@ -1,0 +1,50 @@
+[
+ {
+  "case": "cantilever tip deflection (mm)",
+  "model": 320.9166704178178,
+  "exact": 320.91732398480866,
+  "ratio": 0.9999979634412292
+ },
+ {
+  "case": "cantilever base moment (kNm)",
+  "model": 129.99978476981875,
+  "exact": 130.0,
+  "ratio": 0.9999983443832211
+ },
+ {
+  "case": "propped column mid deflection (mm)",
+  "model": 83.04324143547355,
+  "exact": 83.50723810254162,
+  "ratio": 0.9944436353349596
+ },
+ {
+  "case": "propped column max moment (kNm)",
+  "model": 106.92891409515687,
+  "exact": 106.929,
+  "ratio": 0.9999991966179135
+ },
+ {
+  "case": "fixed-base propped column max deflection (mm)",
+  "model": 34.69733473682926,
+  "exact": 34.666788574460526,
+  "ratio": 1.00088113620052
+ },
+ {
+  "case": "fixed-base propped column base moment (kNm)",
+  "model": 106.74330804894478,
+  "exact": 106.929,
+  "ratio": 0.9982634088876243
+ },
+ {
+  "case": "Euler load pinned column (kN)",
+  "model": 1316.4460834927174,
+  "exact": 1316.4364463385702,
+  "ratio": 1.0000073206376001
+ },
+ {
+  "case": "two-bar truss member force (kN, compression)",
+  "model": 70.71067811865476,
+  "exact": 70.71067811865474,
+  "ratio": 1.0000000000000002
+ }
+]

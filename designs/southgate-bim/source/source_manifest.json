@@ -1,0 +1,66 @@
+{
+ "schema": "southgate_bim.source_manifest/1",
+ "created": "2026-11-07T03:06",
+ "snapshot": {
+  "path": "source/snapshot/southgate_source_snapshot_20261107.blend",
+  "sha256": "f5d61c754a07fdced6639e892a84f17c3dce3f346d840d5f0201858faac0124f",
+  "size_bytes": 13343485,
+  "source_file_mtime": "2026-11-07T01:25:58",
+  "read_only": true,
+  "copied_from": "designs/F-site-A-2000-astra-v2/model/church_auditorium_2000.blend",
+  "copy_method": "byte copy (cp -p), checksum-verified identical"
+ },
+ "authoritative_source": {
+  "path": "designs/F-site-A-2000-astra-v2/model/church_auditorium_2000.blend",
+  "sha256_at_snapshot": "f5d61c754a07fdced6639e892a84f17c3dce3f346d840d5f0201858faac0124f",
+  "manifest": "designs/F-site-A-2000-astra-v2/model/active_model.json",
+  "manifest_sha256": "f5d61c754a07fdced6639e892a84f17c3dce3f346d840d5f0201858faac0124f",
+  "manifest_match": true,
+  "deep_geometry_check": "check_active_model.py --deep: geometry_check_ok=true, no differences (2026-11-07 ~03:05)",
+  "geometry_fingerprint": "c504497c9f102a6972b578d61f568bc4f4f7bae5907e3fa17bf5f522e5b84d12"
+ },
+ "source_verification": {
+  "blender_mcp": "No interactive Blender session and no MCP socket on 127.0.0.1:9876 at 2026-11-07 02:54. The only Blender process (PID 15828) was a headless background job of another session rendering studies/roof-truss-selection from its own analysis snapshot - not a design session; it was not touched.",
+  "bpy.data.filepath (headless inspection)": "C:\\Users\\Kelvin\\Desktop\\auditorium\\designs\\southgate-bim\\source\\snapshot\\southgate_source_snapshot_20261107.blend",
+  "is_dirty": "No live session exists, so there are no unsaved live changes to preserve. (The headless inventory process reports is_dirty=True only because evaluating meshes marks the in-memory session dirty; it never saves.)",
+  "active_scene": "Southgate Worship Center",
+  "object_count": 13699,
+  "blender_version": "5.2.3 LTS",
+  "latest_revisions_compared": [
+   {
+    "path": "model/church_auditorium_2000.blend",
+    "sha256": "f5d61c754a07fdced6639e892a84f17c3dce3f346d840d5f0201858faac0124f",
+    "mtime": "2026-11-07T01:25:58",
+    "status": "AUTHORITATIVE (active_model.json)"
+   },
+   {
+    "path": "model/church_auditorium_2000_restrooms_v2_20261106.blend",
+    "mtime": "2026-11-07T01:32:53",
+    "status": "identical geometry fingerprint (equivalent_files in active_model.json) - not authoritative"
+   },
+   {
+    "path": "model/snapshots/live_recovery_20261107/quit_20261107-0132.blend",
+    "status": "last in-memory state of the closed GUI session; identical geometry fingerprint"
+   }
+  ],
+  "newer_files_after_01:26": "only the two equivalent files above; no newer design revision exists",
+  "discrepancies": [
+   "Scene custom property 'revision' reads 'F01' (stale metadata, documented in source AGENTS.md); not used as design state.",
+   "Five orphan image datablocks reported by the source cleanup (not geometry)."
+  ]
+ },
+ "scene_properties": {
+  "revision": "F01",
+  "design_id": "F-site-A-2000-astra-v2",
+  "status": "CONCEPT DESIGN - NOT FOR CONSTRUCTION",
+  "programme_occupancy": 2144,
+  "ground_rear_level": 0.265,
+  "assumed_site_level": 0.265,
+  "seat_count_intended": 2000
+ },
+ "prohibitions_respected": [
+  "source .blend never opened for writing (headless -b --factory-startup, no save calls; snapshot file read-only)",
+  "no historical generator scripts run",
+  "no source element deleted or modified"
+ ]
+}

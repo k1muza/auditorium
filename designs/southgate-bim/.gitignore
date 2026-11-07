@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+# regenerable working data (plan, fit cache, builds, pilot copies, logs)
+work/
+*.blend1
+*_autosave.blend
+quit.blend
+# large binaries -> Git LFS if versioned: source/snapshot/*.blend, bim/*.ifc, bim/*.blend

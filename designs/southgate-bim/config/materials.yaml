@@ -1,0 +1,26 @@
+# Source Blender material name -> IFC material category and nominal density.
+# The IFC material keeps the source material name (traceability). Category follows
+# the Bonsai/IfcOpenShell material category vocabulary. Densities are nominal
+# values used ONLY for indicative mass of steel/aluminium items; they are not
+# specifications. Materials whose specification is not defined in the source are
+# flagged spec_status: UNSPECIFIED and must be specified before BOQ pricing.
+default: {category: not_defined, density: null, spec_status: UNSPECIFIED}
+
+# first match (case-insensitive substring) wins
+keyword_rules:
+  - {kw: [bolt, fastener, fixing, screw, anchor], category: steel, density: 7850, spec_status: CONCEPT}
+  - {kw: [galvanised, galvanized, "str-", steel, rhs, outrigger, chrome], category: steel, density: 7850, spec_status: CONCEPT}
+  - {kw: [ibr, roof-metal, capped-metal, prepainted, "roof-rwg", flashing], category: steel, density: 7850, spec_status: CONCEPT}
+  - {kw: [aluminium, aluminum, anodized, anodised, mullion, "metallic cladding", "metallic panel", "folded portal", "panel joint", hvls, "fan housing"], category: aluminium, density: 2700, spec_status: CONCEPT}
+  - {kw: [glass, glazing, mirror, acrylic], category: glass, density: 2500, spec_status: CONCEPT}
+  - {kw: [concrete, "rc-structural", precast, granite, sandstone, paver, paving], category: concrete, density: 2400, spec_status: CONCEPT}
+  - {kw: [stone], category: concrete, density: 2400, spec_status: UNSPECIFIED, note: "Source 'stone' is a generic slab/step render material - structural material not specified"}
+  - {kw: [brick, masonry], category: brick, density: 1900, spec_status: UNSPECIFIED}
+  - {kw: [plaster, gypsum, fibre-cement, "fiber-cement"], category: gypsum, density: 1000, spec_status: UNSPECIFIED}
+  - {kw: [timber, walnut, oak, wood, batten], category: wood, density: 600, spec_status: CONCEPT}
+  - {kw: [mineral wool, insulation, "acoustic splitter", lining], category: insulation, density: 45, spec_status: CONCEPT}
+  - {kw: [ceramic, vitreous, tile], category: ceramic, density: 2300, spec_status: CONCEPT}
+  - {kw: [upvc, pp-r, abs, plastic, nylon, laminate, epdm, membrane, dpm, polyethylene], category: plastic, density: 1400, spec_status: CONCEPT}
+  - {kw: [stainless], category: steel, density: 8000, spec_status: CONCEPT}
+  - {kw: [luminaire, lens, light, fixture, sensor], category: not_defined, density: null, spec_status: CONCEPT}
+  - {kw: [seat], category: not_defined, density: null, spec_status: UNSPECIFIED, note: "Fixed congregation seat - product not selected"}

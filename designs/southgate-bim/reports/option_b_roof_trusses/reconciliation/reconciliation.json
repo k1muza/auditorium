@@ -1,0 +1,147 @@
+{
+ "bridge": [
+  {
+   "Step": "R2 truss set incl. connections (reported)",
+   "Mass_kg": 42100,
+   "Status": "PRELIMINARY_ESTIMATE"
+  },
+  {
+   "Step": "R2 member mass, 2 gable + 2 rigging + 7 typical (R2 formula)",
+   "Mass_kg": 33044.7,
+   "Status": "PRELIMINARY_ESTIMATE"
+  },
+  {
+   "Step": "R2 connection allowance (27.4 % of members)",
+   "Mass_kg": 9055.3,
+   "Status": "PRELIMINARY_ESTIMATE"
+  },
+  {
+   "Step": "Hand calc H1 (R2 geometry, node-to-node lengths) - check vs R2 members",
+   "Mass_kg": 33044.7,
+   "Status": "INDEPENDENT_CHECK",
+   "Delta_kg": 0.0
+  },
+  {
+   "Step": "Hand calc H2 (DEV-01 setting-out: TOS on the purlin seat)",
+   "Mass_kg": 32909.6,
+   "Status": "INDEPENDENT_CHECK",
+   "Delta_kg": -135.1
+  },
+  {
+   "Step": "Model member mass (cut lengths x kg/m; set-backs, heel extensions, splice gaps)",
+   "Mass_kg": 31514.7,
+   "Status": "MODEL_DERIVED",
+   "Delta_kg": -1394.9
+  },
+  {
+   "Step": "Model plates (gussets + splice + packing, net of holes)",
+   "Mass_kg": 3143.7,
+   "Status": "MODEL_DERIVED / ASSUMPTION_DEPENDENT"
+  },
+  {
+   "Step": "Model bolt sets (simplified geometry)",
+   "Mass_kg": 976.3,
+   "Status": "ASSUMPTION_DEPENDENT"
+  },
+  {
+   "Step": "Model truss set total (indicative)",
+   "Mass_kg": 35634.7,
+   "Status": "MODEL_DERIVED (sizes CONCEPT_UNVERIFIED)",
+   "Delta_kg": -6465.3
+  }
+ ],
+ "hand": [
+  {
+   "R2_line": "0",
+   "R2_member_mass_kg": 2873.4,
+   "H1_R2_geometry_kg": 2873.4,
+   "H1_minus_R2_kg": -0.0,
+   "H1_setting_out_length_m": 166.4,
+   "H2_DEV01_geometry_kg": 2862.1,
+   "DEV01_effect_kg": -11.3,
+   "H2_setting_out_length_m": 165.64
+  },
+  {
+   "R2_line": "2",
+   "R2_member_mass_kg": 3033.1,
+   "H1_R2_geometry_kg": 3033.1,
+   "H1_minus_R2_kg": 0.0,
+   "H1_setting_out_length_m": 166.4,
+   "H2_DEV01_geometry_kg": 3020.6,
+   "DEV01_effect_kg": -12.6,
+   "H2_setting_out_length_m": 165.58
+  },
+  {
+   "R2_line": "4",
+   "R2_member_mass_kg": 3033.1,
+   "H1_R2_geometry_kg": 3033.1,
+   "H1_minus_R2_kg": 0.0,
+   "H1_setting_out_length_m": 166.4,
+   "H2_DEV01_geometry_kg": 3020.6,
+   "DEV01_effect_kg": -12.6,
+   "H2_setting_out_length_m": 165.58
+  },
+  {
+   "R2_line": "1",
+   "R2_member_mass_kg": 2947.9,
+   "H1_R2_geometry_kg": 2947.9,
+   "H1_minus_R2_kg": 0.0,
+   "H1_setting_out_length_m": 166.4,
+   "H2_DEV01_geometry_kg": 2936.2,
+   "DEV01_effect_kg": -11.7,
+   "H2_setting_out_length_m": 165.64
+  }
+ ],
+ "connection_typical": [
+  {
+   "Item": "Gusset plates",
+   "R2_count": 26,
+   "Model_count": 26,
+   "R2_mass_kg": 397.8,
+   "Model_mass_kg": 198.2,
+   "Explanation": "R2 used 15.3 kg per gusset (average of the superseded model's gussets); modelled 10 mm gussets are sized to the bolt groups (avg ~7.7 kg)"
+  },
+  {
+   "Item": "Splice plates",
+   "R2_count": 20,
+   "Model_count": 20,
+   "R2_mass_kg": 80.0,
+   "Model_mass_kg": 43.8,
+   "Explanation": "same count (10 splices x 2); R2 allowed 4 kg per plate, modelled 8 mm plates within the connected-leg flat ~2.2 kg"
+  },
+  {
+   "Item": "Packing plates",
+   "R2_count": 164,
+   "Model_count": 86,
+   "R2_mass_kg": 196.8,
+   "Model_mass_kg": 43.7,
+   "Explanation": "R2: round(total length/1.2 + webs) double counts (connections already restrain the ends); model: ceil(clear/1.2)-1 per clear length, >= 1 per web"
+  },
+  {
+   "Item": "Bolt sets",
+   "R2_count": 448,
+   "Model_count": 330,
+   "R2_mass_kg": 156.8,
+   "Model_mass_kg": 88.7,
+   "Explanation": "webs 100 = 100; splice 80 = 80; chord-to-gusset R2 104 vs model 64 (at the 10 splice nodes the splice bolts pass through the gusset - DEV-03); packer bolts follow the packer count"
+  },
+  {
+   "Item": "Angles",
+   "R2_count": 74,
+   "Model_count": 74,
+   "R2_mass_kg": 3033.1,
+   "Model_mass_kg": 2891.1,
+   "Explanation": "same piece count; mass difference from DEV-01 and cut lengths (see bridge)"
+  }
+ ],
+ "set": {
+  "R2_t": 42.1,
+  "model_t": 35.63,
+  "model_members_t": 31.51,
+  "model_connections_t": 4.12,
+  "model_vs_R2_pct": -15.4
+ },
+ "engine_vs_ifc_counts_identical": true,
+ "engine_vs_ifc_member_mass_max_diff_kg": 0.0,
+ "geometry_vs_nominal_member_mass_pct": -0.04
+}

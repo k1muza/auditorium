@@ -1,0 +1,17 @@
+{
+ "S1": {
+  "total": 406709.2800905598,
+  "ok": true,
+  "fail": null
+ },
+ "S2": {
+  "total": 419565.6845380438,
+  "ok": true,
+  "fail": null
+ },
+ "S3": {
+  "total": 398675.9300928707,
+  "ok": true,
+  "fail": null
+ }
+}

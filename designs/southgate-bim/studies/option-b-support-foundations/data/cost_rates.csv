@@ -1,0 +1,38 @@
+rate,low,central,high,unit,basis,evidence_class
+steel_ub_uc,1400,1600,1800,USD/t,"Harare retail UB/UC ex-stock 2026 ~1,480-1,710/t (Steel Centre Intl list, as used in R2 cost_rates.csv); project-volume range",ATTRIBUTED (R2 desk survey)
+import_premium,0.20,0.30,0.45,fraction,"UC 356x368 not rolled in SADC: freight, duty, lead time premium on base UB/UC rate",ASSUMPTION
+steel_chs,1500,1750,2050,USD/t,"No Harare CHS list found; light tube ~1,700/t (R2 steel_shs basis); SA-order sizes +12 %",INFERRED
+steel_plate,1300,1450,1650,USD/t,"S355 plate 10-40 mm, Harare stockist range (inferred from UB/UC and angle lists)",INFERRED
+bolt,1.5,2.5,3.5,USD/each,"M16/M20 8.8 HDG bolt set, stockist (R2 rate)",INFERRED (R2)
+hd_m24,18,25,35,USD/each,"M24 8.8 cast-in holding-down bolt 600 long, nut, washer, anchor plate",INFERRED
+hd_m30,35,50,70,USD/each,"M30 8.8 cast-in holding-down bolt 900 long with anchor plate",INFERRED
+hd_m36,55,75,100,USD/each,"M36 8.8 cast-in holding-down bolt 1,100 long with anchor plate",INFERRED
+hd_template,25,40,60,USD/base,"setting-out template, survey, sleeve/cone formers",ASSUMPTION
+grout,900,1200,1600,USD/m3,"non-shrink cementitious grout, placed (bagged product ~USD 25/25 kg)",INFERRED
+shear_key,60,90,140,USD/each,"stub shear key (UC/UB offcut 150 mm) welded under base plate + pocket",ASSUMPTION
+fab_column,250,320,420,USD/t,"simple pinned columns: ~25 h/t x USD 9/h loaded shop rate (R2 shop_rate) + consumables/overhead ~USD 100/t",INFERRED
+fab_column_fixed,320,420,560,USD/t,"fixed-base columns: thick stiffened base plate, full-strength welds, inspection",INFERRED
+fab_bracing,480,650,850,USD/t,"CHS bracing: slotting, gusset/end-plate welding, ~55 h/t + consumables",INFERRED
+fab_plate,850,1100,1400,USD/t,"connection plates: cut, drill, weld ~100 h/t + consumables",INFERRED
+paint,8,12,18,USD/m2,"2-coat shop primer + finish, internal C2 (R2 rate)",ASSUMPTION (R2)
+transport_t,30,45,70,USD/t,"local haul Harare, ~USD 450 per 10 t load (R2 truck_load)",INFERRED (R2)
+long_load,60,100,160,USD/piece,"13-17 m columns and posts on extendable trailer, escorts not required",ASSUMPTION
+erect_gang_day,300,400,550,USD/day,"6-person erection gang x 8 h x USD 8/h field rate (R2 field_rate) + supervision",INFERRED (R2)
+crane_day,900,1300,2000,USD/day,"Zimbabwe mobile crane USD 500-1,500/day (planthire.co.zw via R2); 40-60 t AT for 13-17 m picks",ATTRIBUTED (R2)
+crane_mob,800,1500,3000,USD/each,"mobilisation / demobilisation, Harare (R2)",ASSUMPTION (R2)
+mewp_day,120,180,280,USD/day,"15-18 m MEWP hire (R2)",ASSUMPTION (R2)
+temp_S1,6000,9000,14000,USD,"pinned-base columns unstable until girders/bracing complete: guys, props, sequencing",ASSUMPTION
+temp_S2,2500,4000,6500,USD,"fixed-base frames self-stable as cantilevers; truss erection bracing only",ASSUMPTION
+temp_S3,3000,5000,8000,USD,"fixed-base columns self-stable in erection; girders still needed for permanent state",ASSUMPTION
+concrete,140,175,220,USD/m3,"C25/30 supplied and placed. Derived: cement USD 11-12.5/50 kg bag Harare (urbanedgezw guide, Jan 2026) x ~7 bags + aggregates + batching/placing; no ready-mix quotation found",INFERRED
+blinding,110,140,180,USD/m3,"15 MPa blinding 50 mm",INFERRED
+rebar,1400,1650,1950,USD/t,"Y-bar supplied, cut, bent and fixed; no per-tonne Harare price found (SMEAZ listing unit unclear); import-parity steel ~USD 1,100-1,300/t + fixing",INFERRED
+formwork,12,18,28,USD/m2,"footing/beam side formwork, timber, incl. strike",ASSUMPTION
+excavation,6,9,14,USD/m3,"machine excavation in soft/firm ground incl. trimming; x1.3 in G3 (wet/trimming)",ASSUMPTION
+backfill,5,7,10,USD/m3,"selected excavated material, compacted in layers",ASSUMPTION
+disposal,5,8,12,USD/m3,"surplus spoil off-site (bulked 1.25)",ASSUMPTION
+void_former,15,25,40,USD/m,"collapsible void former under ground beams (expansive soil, G3/F3 only)",ASSUMPTION
+overhead_profit,0.10,0.15,0.20,fraction,"fabricator/erector margin on labour and plant (R2)",ASSUMPTION (R2)
+contingency,0.07,0.10,0.15,fraction,"design-development contingency on the supporting system (higher than R2 5 %: foundations unengineered, no SI)",ASSUMPTION
+pad_key,150,250,400,USD/each,"pad downstand shear key 0.4 x 0.4 m x pad width incl. rebar and excavation (sliding on soil)",ASSUMPTION
+pier_enlarge,220,320,450,USD/m3,"enlarging masonry piers / pilasters for columns deeper than the 420 mm zone, incl. finishes",ASSUMPTION

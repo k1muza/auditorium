@@ -1,0 +1,211 @@
+{
+ "file": "bim/southgate.ifc",
+ "schema": "IFC4",
+ "ifcopenshell": "0.9.0.post1",
+ "schema_validation": {
+  "issues": 0,
+  "examples": [],
+  "express_rules_checked": false
+ },
+ "hierarchy": {
+  "projects": 1,
+  "sites": 1,
+  "buildings": 1,
+  "storeys": [
+   [
+    "00 Ground Floor",
+    0.265
+   ],
+   [
+    "01 Mezzanine and Gallery",
+    4.0575
+   ],
+   [
+    "02 Upper Floor",
+    7.85
+   ],
+   [
+    "03 Roof",
+    10.9
+   ]
+  ],
+  "site_in_project": true,
+  "building_in_site": true,
+  "storeys_in_building": true
+ },
+ "units": [
+  [
+   "VOLUMEUNIT",
+   null,
+   "CUBIC_METRE"
+  ],
+  [
+   "PLANEANGLEUNIT",
+   null,
+   "RADIAN"
+  ],
+  [
+   "AREAUNIT",
+   null,
+   "SQUARE_METRE"
+  ],
+  [
+   "MASSUNIT",
+   "KILO",
+   "GRAM"
+  ],
+  [
+   "LENGTHUNIT",
+   null,
+   "METRE"
+  ]
+ ],
+ "element_counts": {
+  "IfcFurniture": 2135,
+  "IfcFastener": 1924,
+  "IfcMember": 1563,
+  "IfcMechanicalFastener": 1501,
+  "IfcPlate": 962,
+  "IfcCovering": 960,
+  "IfcPipeSegment": 155,
+  "IfcDiscreteAccessory": 138,
+  "IfcWall": 116,
+  "IfcColumn": 99,
+  "IfcLightFixture": 96,
+  "IfcFooting": 92,
+  "IfcDoor": 84,
+  "IfcSlab": 82,
+  "IfcPipeFitting": 81,
+  "IfcSanitaryTerminal": 66,
+  "IfcRailing": 61,
+  "IfcAirTerminal": 54,
+  "IfcBeam": 44,
+  "IfcWindow": 40,
+  "IfcDuctSilencer": 38,
+  "IfcBuildingElementProxy": 35,
+  "IfcElementAssembly": 32,
+  "IfcActuator": 28,
+  "IfcStairFlight": 23,
+  "IfcFan": 23,
+  "IfcDuctSegment": 19,
+  "IfcWasteTerminal": 18,
+  "IfcSensor": 13,
+  "IfcEvaporativeCooler": 10,
+  "IfcAudioVisualAppliance": 10,
+  "IfcOutlet": 6,
+  "IfcCurtainWall": 5,
+  "IfcRampFlight": 4,
+  "IfcStair": 3,
+  "IfcRoof": 1
+ },
+ "spatial": {
+  "elements": 10521,
+  "uncontained_and_unaggregated": 0,
+  "examples": [],
+  "spaces": 14,
+  "spatial_zones": 19
+ },
+ "materials": {
+  "elements_without_material": 0,
+  "examples": [],
+  "usage_layer": 162,
+  "usage_profile": 1433,
+  "materials": 104
+ },
+ "types": {
+  "typed_elements": 5921,
+  "type_objects": 150
+ },
+ "openings": {
+  "openings": 58,
+  "filled": 58,
+  "voiding": 58,
+  "doors": 84,
+  "windows": 40,
+  "doors_windows_filling_openings": 58
+ },
+ "assemblies": {
+  "assemblies": 41,
+  "by_class": {
+   "IfcElementAssembly": 32,
+   "IfcCurtainWall": 5,
+   "IfcRoof": 1,
+   "IfcStair": 3
+  },
+  "empty": []
+ },
+ "systems": [
+  [
+   "SOUTHGATE-SYS-RAINWATER",
+   125
+  ],
+  [
+   "SOUTHGATE-SYS-SANITARY",
+   66
+  ],
+  [
+   "SOUTHGATE-SYS-ELECTROACOUSTIC",
+   10
+  ],
+  [
+   "SOUTHGATE-SYS-VENTILATION",
+   134
+  ],
+  [
+   "SOUTHGATE-SYS-LIGHTING",
+   96
+  ],
+  [
+   "SOUTHGATE-SYS-PLUMBING",
+   129
+  ],
+  [
+   "SOUTHGATE-SYS-EXHAUST",
+   51
+  ],
+  [
+   "SOUTHGATE-SYS-ELECTRICAL",
+   6
+  ]
+ ],
+ "quantities": {
+  "elements_with_base_quantities": 4222,
+  "of": 10521
+ },
+ "design_status": {
+  "CONCEPT_UNVERIFIED": 5220,
+  "EXISTING_DESIGN_REFERENCE": 2800,
+  "PRELIMINARY_DESIGN": 2501
+ },
+ "engineering_verified_claims": 0,
+ "guids": {
+  "total": 109738,
+  "duplicates": []
+ },
+ "body_representation_types": {
+  "SweptSolid": 4233,
+  "Tessellation": 448,
+  "Clipping": 1473,
+  "MappedRepresentation": 4326
+ },
+ "geometry": {
+  "elements_with_geometry": 10480,
+  "of": 10521,
+  "world_min": [
+   -6.65,
+   -1.0,
+   -1.45
+  ],
+  "world_max": [
+   62.34,
+   37.59,
+   19.57
+  ],
+  "extent_m": [
+   68.99,
+   38.59,
+   21.02
+  ]
+ },
+ "seconds": 670.7
+}

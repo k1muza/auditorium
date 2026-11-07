@@ -1,0 +1,19 @@
+category,item,value,unit,basis
+Permanent,"Roof dead (sheeting 0.060, purlins 0.066, insulation 0.040, bracing 0.012)",0.178,kN/m2 plan,R2 load schedule
+Permanent,General suspended services,0.1,kN/m2 plan,R2 central
+Permanent,"Truss, column, post, bracing self-weight",model,kg/m x L x 1.05-1.08,calculated
+Permanent,"Acoustic rafts 3.4 kN/group, HVLS fans 1.8 kN, ridge fans 4.0 kN, cable trays 0.25 kN/m (central)",see model_b.SCEN,kN,R2 scenario values (no products selected)
+Variable,"Roof imposed (maintenance, inaccessible)",0.25,kN/m2 plan,SANS 10160-2 cat H (to verify)
+Variable,"Rigging: line arrays 8 kN each, lighting bars 0.40 kN/m, x1.20 dynamic",see model_b.SCEN,kN,R2 scenario; future scenario as sensitivity
+Permanent,North wall masonry over loggia via transfer beam (lines 7-9 north),134 / 267 / 134,kN,study assumption - no transfer structure modelled
+Wind,Peak velocity pressure q_p,"0.85 (SLS, ULS) / 1.20 (ULS)",kPa,R2 central/upper; Harare design gust unconfirmed
+Wind,Long walls cpe D/E,0.72/-0.37,-,"EN 1991-1-4 Table 7.1, h/d 0.44"
+Wind,Gables cpe D/E,0.7/-0.3,-,h/d 0.26
+Wind,"Side walls, wind parallel to ridge, zones A/B/C",-1.2/-0.8/-0.5,-,e = 29 m
+Wind,Internal pressure cpi,+0.2 / -0.3 (dominant opening +0.55 as sensitivity),-,EN 1991-1-4 7.2.9
+Wind,Roof net cp,"R2 profiles (duopitch 15 deg, zones F-J)",-,R2 options_and_loads.wind_profile
+Imperfection,Notional horizontal load,0.005 x factored gravity,-,SANS 10162-1 cl 8.7.2
+Combination,ULS,1.35G; 1.2G+1.6Qr; 1.2G+1.6Qrig; 1.2G+1.3W; 0.9G+1.3W,-,SANS 10160-1 STR/EQU
+Combination,SLS deflection,1.0W at q_p 0.85 (1.20 as sensitivity); limit h/300 for masonry,-,study criterion
+Combination,Construction stage,"0.9G + 1.3 x 0.75 x W(q 1.20), walls not yet built",-,study assumption - to confirm
+Combination,Foundation bearing,"characteristic G+W, G+Q (allowable bearing)",-,Harare practice (SANS 10160-5 to confirm)

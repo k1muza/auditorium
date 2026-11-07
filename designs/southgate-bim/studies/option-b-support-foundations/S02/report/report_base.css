@@ -1,0 +1,138 @@
+/* Editorial design system - Architectural Concept & Preliminary Feasibility Report (A4 portrait) */
+:root {
+  --paper: #f7f3ec; --paper2: #efe8dc; --ink: #1f1d1a; --ink2: #3b3834; --muted: #6f6961; --rule: #d6ccbc;
+  --accent: #8c4a32; --accent2: #c47b52; --slate: #2d5a6b; --slate2: #dfe7e8; --good: #4a6b3a;
+  --serif: 'Source Serif 4', Georgia, serif; --display: 'Cormorant Garamond', Georgia, serif; --tech: 'Barlow Semi Condensed', 'Segoe UI', sans-serif;
+}
+@page { size: A4; margin: 19mm 17mm 20mm 21mm; background: #f7f3ec;
+  @top-left { font: 400 7.2pt var(--tech); color: #6f6961; letter-spacing: .08em; text-transform: uppercase; }
+  @top-right { content: "Proposed 2,000-seat church auditorium"; font: 400 7.2pt var(--tech); color: #6f6961; letter-spacing: .08em; text-transform: uppercase; }
+  @bottom-left { content: "Architectural concept & preliminary feasibility \2014  Issue P01 \2014  Concept design, not for construction"; font: 400 7pt var(--tech); color: #8a8378; }
+  @bottom-right { content: counter(page); font: 600 8.5pt var(--tech); color: #8c4a32; }
+}
+@page cover { margin: 0; @top-left { content: none } @top-right { content: none } @bottom-left { content: none } @bottom-right { content: none } }
+html { background: var(--paper); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; font: 400 9.3pt/1.5 var(--serif); color: var(--ink); background: var(--paper); hyphens: auto; font-variant-numeric: lining-nums; }
+p { margin: 0 0 2.6mm; orphans: 3; widows: 3; text-align: left; }
+b { font-weight: 600; } i { font-style: italic; }
+a { color: inherit; text-decoration: none; }
+.mono { font-family: var(--tech); letter-spacing: .02em; }
+.small { font-size: 8pt; line-height: 1.45; color: var(--ink2); }
+
+/* cover */
+.cover { page: cover; position: relative; width: 210mm; height: 297mm; overflow: hidden; background: #1f1d1a; break-after: page; }
+.cover-img { position: absolute; top: 0; left: 0; width: 210mm; height: 205mm; object-fit: cover; object-position: 55% 50%; display: block; }
+.cover-band { position: absolute; left: 0; right: 0; bottom: 0; height: 92mm; background: var(--paper); padding: 13mm 18mm 0 21mm; box-sizing: border-box; }
+.cover-kicker { font: 500 8.5pt var(--tech); letter-spacing: .22em; text-transform: uppercase; color: var(--accent); margin-bottom: 4mm; }
+.cover-title { font: 500 38pt/0.98 var(--display); margin: 0 0 8mm; letter-spacing: -.01em; }
+.cover-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 2.2mm 10mm; font: 400 8.6pt var(--tech); color: var(--ink2); border-top: .3mm solid var(--ink); padding-top: 4mm; }
+.cover-meta span { display: block; font-size: 6.6pt; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.cover-foot { position: absolute; bottom: 6mm; left: 21mm; right: 18mm; font: 400 6.6pt var(--tech); color: var(--muted); }
+
+/* front matter */
+.front { break-after: page; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; align-items: start; }
+h2.sm { font: 600 8pt var(--tech); letter-spacing: .16em; text-transform: uppercase; color: var(--accent); margin: 0 0 3mm; padding-top: 2mm; border-top: .25mm solid var(--ink); }
+.toc { list-style: none; padding: 0; margin: 0 0 8mm; font: 400 10pt/1.25 var(--display); }
+.toc li { display: grid; grid-template-columns: 11mm 1fr; padding: 1.35mm 0; border-bottom: .2mm solid var(--rule); font-size: 11.5pt; }
+.toc .tn { font: 600 7.5pt var(--tech); color: var(--accent); padding-top: 1mm; }
+table.kv td { vertical-align: top; padding: 1.1mm 2mm 1.1mm 0; font: 400 7.8pt/1.35 var(--tech); border-bottom: .2mm solid var(--rule); }
+table.kv td:first-child { color: var(--muted); width: 24mm; text-transform: uppercase; letter-spacing: .08em; font-size: 6.6pt; padding-top: 1.5mm; }
+table.legend-t td { padding: .8mm 2mm .8mm 0; font-size: 8.4pt; vertical-align: middle; }
+
+/* chapters */
+.chapter { break-before: page; }
+.opener { margin: 0 0 7mm; padding-bottom: 5mm; border-bottom: .35mm solid var(--ink); display: grid; grid-template-columns: 30mm 1fr; column-gap: 4mm; }
+.opener .cnum { font: 300 46pt/0.85 var(--display); color: var(--accent); grid-row: span 2; }
+.opener h1 { font: 500 27pt/1.04 var(--display); margin: 0 0 3mm; letter-spacing: -.005em; }
+.opener .lede { font: italic 400 11pt/1.42 var(--serif); color: var(--ink2); margin: 0; max-width: 128mm; }
+.opener.short { grid-template-columns: 30mm 1fr; }
+.body { margin-left: 34mm; }
+.body > figure.full, .body > .two, .body > table, .body > .tcap, .body > .tsrc, .body > .risks, .body > figure, .body > .decision { margin-left: -34mm; }
+h2 { font: 500 15pt/1.15 var(--display); margin: 6mm 0 2.5mm; break-after: avoid; }
+h3 { font: 600 8.2pt var(--tech); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: 4mm 0 1.5mm; break-after: avoid; }
+ul.tight, ol.obj { margin: 0 0 3mm; padding-left: 4.5mm; }
+ul.tight li, ol.obj li { margin-bottom: 1.4mm; }
+ol.obj li::marker { font: 600 8pt var(--tech); color: var(--accent); }
+
+/* figures */
+figure { margin: 3mm 0 5mm; break-inside: avoid; }
+figure img { width: 100%; display: block; }
+figure.full img { max-height: 150mm; object-fit: contain; background: transparent; }
+figure.half { margin: 0; }
+figure.inline { margin: 0 0 3mm; }
+figcaption { font: 400 7.4pt/1.4 var(--tech); color: var(--ink2); margin-top: 1.8mm; padding-top: 1.5mm; border-top: .2mm solid var(--rule); }
+.fn { font-weight: 600; color: var(--accent); letter-spacing: .04em; text-transform: uppercase; font-size: 6.9pt; margin-right: 1mm; }
+.ft { font-weight: 600; color: var(--ink); }
+.src { display: block; color: var(--muted); font-size: 6.7pt; margin-top: .6mm; }
+
+/* tables */
+.tcap { font: 400 7.6pt var(--tech); color: var(--ink2); margin: 4mm 0 1.2mm; break-after: avoid; }
+.tsrc { font: 400 6.7pt var(--tech); color: var(--muted); margin: 1mm 0 4mm; }
+table { width: 100%; border-collapse: collapse; margin: 0 0 3mm; font: 400 7.9pt/1.35 var(--tech); break-inside: auto; }
+thead { display: table-header-group; }
+tr { break-inside: avoid; }
+th { text-align: left; font-weight: 600; font-size: 6.9pt; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); border-bottom: .35mm solid var(--ink); padding: 1.2mm 2mm 1.2mm 0; vertical-align: bottom; }
+td { border-bottom: .2mm solid var(--rule); padding: 1.15mm 2mm 1.15mm 0; vertical-align: top; }
+table.num td { font-variant-numeric: tabular-nums; }
+table.small { font-size: 7.4pt; }
+table.tiny { font-size: 6.6pt; line-height: 1.28; }
+table.tiny th { font-size: 6pt; }
+table.tiny td { padding: .7mm 1.6mm .7mm 0; }
+.cols2 { column-count: 2; column-gap: 8mm; }
+.cols2 table { break-inside: auto; }
+
+/* tags & notes */
+.tag { display: inline-block; font: 600 5.9pt/1 var(--tech); letter-spacing: .1em; text-transform: uppercase; padding: .55mm 1.1mm .45mm; border-radius: .6mm; vertical-align: .25mm; white-space: nowrap; }
+.tag.m { background: #2d5a6b; color: #fff; } .tag.d { background: #dfe7e8; color: #2d5a6b; } .tag.a { background: #f1dfcf; color: #8c4a32; }
+.tag.p { background: #e8e1d5; color: #5d564c; border: .2mm dashed #8a8378; } .tag.n { background: #fff; color: #8c4a32; border: .2mm solid #c47b52; } .tag.c { background: #ece3f0; color: #5b4467; }
+.note { margin: 3mm 0 4mm; padding: 2.6mm 3.2mm; background: var(--paper2); border-left: .9mm solid var(--slate); font-size: 8.4pt; line-height: 1.45; break-inside: avoid; }
+.note .nl { font: 600 6.6pt var(--tech); letter-spacing: .14em; text-transform: uppercase; color: var(--slate); margin-bottom: .8mm; }
+.note.assume { border-color: var(--accent2); } .note.assume .nl { color: var(--accent); }
+.note.gap { border-color: var(--accent); background: #f3e6da; } .note.gap .nl { color: var(--accent); }
+.note.caution { border-color: #1f1d1a; background: #ebe5da; } .note.caution .nl { color: #1f1d1a; }
+.note.finding { border-color: var(--good); } .note.finding .nl { color: var(--good); }
+
+/* executive summary */
+.exec-grid { display: grid; grid-template-columns: 1fr 58mm; gap: 7mm; }
+.exec-text p.lead { font: 400 11.2pt/1.45 var(--serif); color: var(--ink); }
+.exec-text { font-size: 8.9pt; line-height: 1.47; }
+.metrics { background: #1f1d1a; color: #f7f3ec; padding: 4mm 4.2mm 3mm; align-self: start; }
+.metric { padding: 1.9mm 0 2mm; border-bottom: .2mm solid #4b4740; }
+.metric .mv { font: 500 17pt/1 var(--display); color: #fff; }
+.metric .ml { font: 600 6.5pt var(--tech); letter-spacing: .1em; text-transform: uppercase; color: #e2b48f; margin-top: .9mm; }
+.metric .ms { font: 400 6.9pt/1.3 var(--tech); color: #c9c1b4; margin-top: .4mm; }
+.metric .tag { transform: scale(.85); transform-origin: left center; }
+.mfoot { font: 400 6.2pt var(--tech); color: #a39b8e; margin-top: 2mm; }
+.decision { margin: 6mm 0 0; padding: 4mm 5mm; border: .35mm solid var(--accent); background: #fbf7f1; break-inside: avoid; }
+.decision .dl { font: 600 7pt var(--tech); letter-spacing: .16em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5mm; }
+.decision p { margin: 0; font-size: 9pt; }
+.exec .decision { margin-left: 0; }
+
+/* risks */
+.risks { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+.risk { border-top: .35mm solid var(--ink); padding-top: 1.6mm; break-inside: avoid; font: 400 7.4pt/1.35 var(--tech); }
+.rh { display: flex; gap: 2mm; align-items: center; margin-bottom: .8mm; }
+.rid { font-weight: 600; color: var(--accent); } .rcat { color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-size: 6.2pt; flex: 1; }
+.sev { font: 600 6pt var(--tech); letter-spacing: .1em; text-transform: uppercase; padding: .5mm 1.4mm; border-radius: .6mm; }
+.sev.h { background: #8c4a32; color: #fff; } .sev.m { background: #e2b48f; color: #3b2116; } .sev.l { background: #e8e1d5; color: #5d564c; }
+.rt { font: 500 11pt/1.15 var(--display); margin-bottom: 1mm; }
+.risk dl { display: grid; grid-template-columns: 17mm 1fr; margin: 0; row-gap: .6mm; }
+.risk dt { color: var(--muted); font-size: 6.2pt; letter-spacing: .08em; text-transform: uppercase; padding-top: .3mm; }
+.risk dd { margin: 0; }
+
+/* appendices */
+.appendix h2.app { font: 500 14pt var(--display); margin: 7mm 0 2mm; padding-top: 2mm; border-top: .3mm solid var(--ink); break-after: avoid; }
+.applist { columns: 2; font: 400 8.4pt/1.6 var(--tech); padding-left: 0; list-style: none; margin: 0 0 4mm; }
+.applist b { color: var(--accent); display: inline-block; width: 6mm; }
+.res { font-weight: 600; letter-spacing: .06em; font-size: 6pt; } .res.pass { color: var(--good); } .res.discrepancy { color: var(--accent); } .res.info { color: var(--slate); }
+.appL { break-before: page; padding-top: 70mm; }
+.appL h2.app { font-size: 26pt; border: 0; }
+
+/* review fixes: contents page numbers, legible appendix tables, tighter figure heights, keep short tables whole */
+.toc li { grid-template-columns: 11mm 1fr 10mm; }
+.toc .tp { font: 600 8pt var(--tech); color: var(--muted); text-align: right; padding-top: 1mm; }
+table.tiny { font-size: 7pt; line-height: 1.3; }
+table.tiny th { font-size: 6.4pt; }
+figure.full img { max-height: 128mm; }
+table.keep, .two table, .tcap + table.num { break-inside: avoid; }

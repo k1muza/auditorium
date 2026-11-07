@@ -1,0 +1,29 @@
+{
+ "file": "work\\option_b\\pilot\\20261107-114941\\pilot_T05.ifc",
+ "sha256": "d2add9021935a3a0db3c71d208a7efeea3516df7b565e14e05e1fbb1c4e62e11",
+ "truss": {
+  "truss": "T05",
+  "line": 4,
+  "x": 25.49,
+  "type": "TT-T",
+  "members": 37,
+  "angles": 74,
+  "webs": 25,
+  "chord_pieces": 12,
+  "joints": 26,
+  "gussets": 26,
+  "splice_plates": 20,
+  "packers": 86,
+  "bolts": 330,
+  "member_mass_nominal_kg": 2891.1,
+  "depth_at_bearing_m": 1.4432,
+  "depth_at_ridge_m": 5.784
+ },
+ "elements": 599,
+ "classes": {
+  "IfcElementAssembly": 63,
+  "IfcMember": 74,
+  "IfcPlate": 132,
+  "IfcMechanicalFastener": 330
+ }
+}

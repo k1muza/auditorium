@@ -1,0 +1,20 @@
+{
+ "_doc": "Matching comparison cameras (world metres, source = IFC coordinates). hide: source-object predicates applied identically to both models (IFC elements are hidden when all their source members are hidden). min_z_above hides objects whose bbox minimum z is above the value.",
+ "resolution": [1600, 900],
+ "views": [
+  {"id": "01_east_elevation", "title": "East elevation (glazed gable portal + entrance)", "type": "ORTHO", "loc": [130, 16.5, 9.0], "target": [30, 16.5, 9.0], "ortho_scale": 46},
+  {"id": "02_east_entrance", "title": "East entrance - perspective", "type": "PERSP", "loc": [86, -6, 5.0], "target": [60, 16.5, 5.5], "lens": 32},
+  {"id": "03_west_elevation", "title": "West elevation (glazed gable, office wing, spiral stair)", "type": "ORTHO", "loc": [-70, 16.5, 9.0], "target": [30, 16.5, 9.0], "ortho_scale": 46},
+  {"id": "04_north_elevation", "title": "North elevation (main entrance canopy)", "type": "ORTHO", "loc": [31, 110, 9.0], "target": [31, 16.5, 9.0], "ortho_scale": 80},
+  {"id": "05_south_elevation", "title": "South elevation", "type": "ORTHO", "loc": [31, -80, 9.0], "target": [31, 16.5, 9.0], "ortho_scale": 80},
+  {"id": "06_aerial_overview", "title": "Aerial overview (north-east)", "type": "PERSP", "loc": [105, 85, 70], "target": [30, 16.5, 6], "lens": 35},
+  {"id": "07_auditorium_interior", "title": "Auditorium interior from the gallery", "type": "PERSP", "loc": [47, 16.5, 9.2], "target": [6, 16.5, 4.0], "lens": 22},
+  {"id": "08_stage", "title": "Stage and backdrop", "type": "PERSP", "loc": [24, 9, 4.2], "target": [6, 16.5, 3.0], "lens": 26},
+  {"id": "09_roof_framing", "title": "Roof framing (roof covering, fixings and lining hidden)", "type": "PERSP", "loc": [95, -45, 48], "target": [30, 16.5, 13], "lens": 35,
+   "hide": {"collections": ["ROOF-IBR-SHEETS-REBUILT-2026", "ROOF-IBR-FLASHINGS-2026", "ROOF-IBR-FIXINGS-2026", "VENT-07 Roof insulation lining 100 mm (prerequisite)"],
+            "name_regex": "^EXT0[23]-[EW]-PROJECTING-ROOF-PITCH|^VENT-04"}},
+  {"id": "10_offices_and_balcony", "title": "West office wing, roof terrace / balcony and spiral stair", "type": "PERSP", "loc": [-32, -16, 13], "target": [0, 16.5, 2.5], "lens": 30},
+  {"id": "11_roof_off_interior", "title": "Roof-off interior (everything with base above +9.5 m hidden)", "type": "PERSP", "loc": [62, -38, 58], "target": [31, 16.5, 2], "lens": 33, "hide": {"min_z_above": 9.5}},
+  {"id": "12_childrens_church", "title": "Children's church - OUT OF SCOPE (detached building, not migrated)", "skip": true}
+ ]
+}

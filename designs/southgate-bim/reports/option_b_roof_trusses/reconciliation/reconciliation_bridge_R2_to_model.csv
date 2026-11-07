@@ -1,0 +1,10 @@
+Step,Mass_kg,Status,Delta_kg
+R2 truss set incl. connections (reported),42100,PRELIMINARY_ESTIMATE,
+"R2 member mass, 2 gable + 2 rigging + 7 typical (R2 formula)",33044.7,PRELIMINARY_ESTIMATE,
+R2 connection allowance (27.4 % of members),9055.3,PRELIMINARY_ESTIMATE,
+"Hand calc H1 (R2 geometry, node-to-node lengths) - check vs R2 members",33044.7,INDEPENDENT_CHECK,0.0
+Hand calc H2 (DEV-01 setting-out: TOS on the purlin seat),32909.6,INDEPENDENT_CHECK,-135.1
+"Model member mass (cut lengths x kg/m; set-backs, heel extensions, splice gaps)",31514.7,MODEL_DERIVED,-1394.9
+"Model plates (gussets + splice + packing, net of holes)",3143.7,MODEL_DERIVED / ASSUMPTION_DEPENDENT,
+Model bolt sets (simplified geometry),976.3,ASSUMPTION_DEPENDENT,
+Model truss set total (indicative),35634.7,MODEL_DERIVED (sizes CONCEPT_UNVERIFIED),-6465.3

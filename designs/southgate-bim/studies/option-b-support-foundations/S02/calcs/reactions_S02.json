@@ -1,0 +1,420 @@
+{
+ "S02 S3 (L2)": {
+  "bearings": {
+   "gable truss (lines 0, 10) | q 0.935": {
+    "compression": 118.4,
+    "uplift": -72.0,
+    "Ht": 28.0,
+    "Hl": 18.8
+   },
+   "gable truss (lines 0, 10) | q 1.32": {
+    "compression": 145.9,
+    "uplift": -114.9,
+    "Ht": 39.5,
+    "Hl": 26.5
+   },
+   "end-adjacent truss (lines 1, 9) | q 0.935": {
+    "compression": 107.9,
+    "uplift": -78.8,
+    "Ht": 45.8,
+    "Hl": 47.7
+   },
+   "end-adjacent truss (lines 1, 9) | q 1.32": {
+    "compression": 126.7,
+    "uplift": -126.3,
+    "Ht": 64.7,
+    "Hl": 65.9
+   },
+   "second truss (lines 2, 8) | q 0.935": {
+    "compression": 121.0,
+    "uplift": -62.1,
+    "Ht": 37.9,
+    "Hl": 46.6
+   },
+   "second truss (lines 2, 8) | q 1.32": {
+    "compression": 143.4,
+    "uplift": -102.4,
+    "Ht": 53.5,
+    "Hl": 65.9
+   },
+   "typical interior truss (lines 3-7) | q 0.935": {
+    "compression": 127.8,
+    "uplift": -49.3,
+    "Ht": 37.9,
+    "Hl": 57.4
+   },
+   "typical interior truss (lines 3-7) | q 1.32": {
+    "compression": 151.1,
+    "uplift": -84.2,
+    "Ht": 53.5,
+    "Hl": 81.1
+   }
+  },
+  "bases": {
+   "corner column": {
+    "N_comp": 161.6,
+    "N_uplift": -103.2,
+    "M": 103.2,
+    "H": 47.2,
+    "n": 4
+   },
+   "braced-bay column": {
+    "N_comp": 367.8,
+    "N_uplift": -341.6,
+    "M": 173.0,
+    "H": 96.0,
+    "n": 8
+   },
+   "typical side column": {
+    "N_comp": 166.7,
+    "N_uplift": -114.6,
+    "M": 170.6,
+    "H": 76.5,
+    "n": 10
+   },
+   "gable post": {
+    "N_comp": 19.2,
+    "N_uplift": 0,
+    "M": 0,
+    "H": 68.0,
+    "n": 4
+   },
+   "gable post (braced panel)": {
+    "N_comp": 539.9,
+    "N_uplift": -492.4,
+    "M": 0,
+    "H": 102.5,
+    "n": 8
+   }
+  },
+  "lateral": {
+   "transverse (wind S)": {
+    "combo": "U4 1.2G+1.3W WSp q1.32",
+    "total_kN": -1309.5,
+    "columns_kN": -721.8,
+    "posts_kN": -587.7
+   },
+   "longitudinal (wind W)": {
+    "combo": "U4 1.2G+1.3W WWp q1.32",
+    "total_kN": -823.0,
+    "columns_kN": -482.3,
+    "posts_kN": -340.7
+   }
+  }
+ },
+ "S02 S3 (L1)": {
+  "bearings": {
+   "gable truss (lines 0, 10) | q 0.935": {
+    "compression": 119.9,
+    "uplift": -71.2,
+    "Ht": 28.0,
+    "Hl": 18.8
+   },
+   "gable truss (lines 0, 10) | q 1.32": {
+    "compression": 148.0,
+    "uplift": -113.9,
+    "Ht": 39.5,
+    "Hl": 26.5
+   },
+   "end-adjacent truss (lines 1, 9) | q 0.935": {
+    "compression": 107.2,
+    "uplift": -79.4,
+    "Ht": 45.8,
+    "Hl": 27.5
+   },
+   "end-adjacent truss (lines 1, 9) | q 1.32": {
+    "compression": 125.8,
+    "uplift": -127.6,
+    "Ht": 64.7,
+    "Hl": 38.5
+   },
+   "second truss (lines 2, 8) | q 0.935": {
+    "compression": 120.8,
+    "uplift": -62.1,
+    "Ht": 37.9,
+    "Hl": 27.6
+   },
+   "second truss (lines 2, 8) | q 1.32": {
+    "compression": 143.1,
+    "uplift": -102.5,
+    "Ht": 53.5,
+    "Hl": 38.5
+   },
+   "typical interior truss (lines 3-7) | q 0.935": {
+    "compression": 127.9,
+    "uplift": -49.1,
+    "Ht": 37.9,
+    "Hl": 27.9
+   },
+   "typical interior truss (lines 3-7) | q 1.32": {
+    "compression": 151.1,
+    "uplift": -84.0,
+    "Ht": 53.5,
+    "Hl": 39.1
+   }
+  },
+  "bases": {
+   "corner column": {
+    "N_comp": 163.7,
+    "N_uplift": -102.1,
+    "M": 103.2,
+    "H": 47.2,
+    "n": 4
+   },
+   "braced-bay column": {
+    "N_comp": 237.6,
+    "N_uplift": -259.6,
+    "M": 173.8,
+    "H": 87.5,
+    "n": 12
+   },
+   "typical side column": {
+    "N_comp": 157.4,
+    "N_uplift": -114.8,
+    "M": 170.5,
+    "H": 76.5,
+    "n": 6
+   },
+   "gable post": {
+    "N_comp": 19.2,
+    "N_uplift": 0,
+    "M": 0,
+    "H": 68.0,
+    "n": 4
+   },
+   "gable post (braced panel)": {
+    "N_comp": 545.1,
+    "N_uplift": -497.6,
+    "M": 0,
+    "H": 102.9,
+    "n": 8
+   }
+  },
+  "lateral": {
+   "transverse (wind S)": {
+    "combo": "U4 1.2G+1.3W WSp q1.32",
+    "total_kN": -1309.6,
+    "columns_kN": -722.4,
+    "posts_kN": -587.2
+   },
+   "longitudinal (wind W)": {
+    "combo": "U4 1.2G+1.3W WWp q1.32",
+    "total_kN": -823.2,
+    "columns_kN": -482.5,
+    "posts_kN": -340.7
+   }
+  }
+ },
+ "S02 S1 (L2)": {
+  "bearings": {
+   "gable truss (lines 0, 10) | q 0.935": {
+    "compression": 120.3,
+    "uplift": -70.5,
+    "Ht": 33.6,
+    "Hl": 18.8
+   },
+   "gable truss (lines 0, 10) | q 1.32": {
+    "compression": 148.0,
+    "uplift": -113.3,
+    "Ht": 47.4,
+    "Hl": 26.5
+   },
+   "end-adjacent truss (lines 1, 9) | q 0.935": {
+    "compression": 115.8,
+    "uplift": -74.4,
+    "Ht": 55.0,
+    "Hl": 44.8
+   },
+   "end-adjacent truss (lines 1, 9) | q 1.32": {
+    "compression": 137.1,
+    "uplift": -120.9,
+    "Ht": 77.7,
+    "Hl": 62.1
+   },
+   "second truss (lines 2, 8) | q 0.935": {
+    "compression": 126.7,
+    "uplift": -59.4,
+    "Ht": 46.5,
+    "Hl": 43.2
+   },
+   "second truss (lines 2, 8) | q 1.32": {
+    "compression": 149.9,
+    "uplift": -99.7,
+    "Ht": 65.6,
+    "Hl": 61.1
+   },
+   "typical interior truss (lines 3-7) | q 0.935": {
+    "compression": 133.9,
+    "uplift": -46.9,
+    "Ht": 46.5,
+    "Hl": 50.4
+   },
+   "typical interior truss (lines 3-7) | q 1.32": {
+    "compression": 158.1,
+    "uplift": -81.8,
+    "Ht": 65.6,
+    "Hl": 69.8
+   }
+  },
+  "bases": {
+   "corner column": {
+    "N_comp": 170.1,
+    "N_uplift": -96.7,
+    "M": 0,
+    "H": 39.5,
+    "n": 4
+   },
+   "braced-bay column": {
+    "N_comp": 360.5,
+    "N_uplift": -335.9,
+    "M": 0,
+    "H": 85.3,
+    "n": 8
+   },
+   "typical side column": {
+    "N_comp": 180.2,
+    "N_uplift": -104.3,
+    "M": 0,
+    "H": 63.5,
+    "n": 10
+   },
+   "gable post": {
+    "N_comp": 19.2,
+    "N_uplift": 0,
+    "M": 0,
+    "H": 68.0,
+    "n": 4
+   },
+   "gable post (braced panel)": {
+    "N_comp": 653.5,
+    "N_uplift": -604.1,
+    "M": 0,
+    "H": 120.6,
+    "n": 8
+   }
+  },
+  "lateral": {
+   "transverse (wind S)": {
+    "combo": "U4 1.2G+1.3W WSp q1.32",
+    "total_kN": -1310.7,
+    "columns_kN": -576.4,
+    "posts_kN": -734.3
+   },
+   "longitudinal (wind W)": {
+    "combo": "U4 1.2G+1.3W WWp q1.32",
+    "total_kN": -824.2,
+    "columns_kN": -483.5,
+    "posts_kN": -340.7
+   }
+  }
+ },
+ "S01 S3": {
+  "bearings": {
+   "gable truss (lines 0, 10) | q 0.85": {
+    "compression": 110.5,
+    "uplift": -62.3,
+    "Ht": 23.4,
+    "Hl": 17.1
+   },
+   "gable truss (lines 0, 10) | q 1.2": {
+    "compression": 134.6,
+    "uplift": -101.4,
+    "Ht": 33.0,
+    "Hl": 24.1
+   },
+   "end-adjacent truss (lines 1, 9) | q 0.85": {
+    "compression": 102.4,
+    "uplift": -62.1,
+    "Ht": 38.2,
+    "Hl": 36.9
+   },
+   "end-adjacent truss (lines 1, 9) | q 1.2": {
+    "compression": 118.8,
+    "uplift": -103.3,
+    "Ht": 54.0,
+    "Hl": 51.7
+   },
+   "second truss (lines 2, 8) | q 0.85": {
+    "compression": 116.8,
+    "uplift": -52.2,
+    "Ht": 31.6,
+    "Hl": 37.2
+   },
+   "second truss (lines 2, 8) | q 1.2": {
+    "compression": 137.1,
+    "uplift": -88.8,
+    "Ht": 44.6,
+    "Hl": 52.0
+   },
+   "typical interior truss (lines 3-7) | q 0.85": {
+    "compression": 123.7,
+    "uplift": -40.0,
+    "Ht": 31.6,
+    "Hl": 37.2
+   },
+   "typical interior truss (lines 3-7) | q 1.2": {
+    "compression": 144.8,
+    "uplift": -71.4,
+    "Ht": 44.7,
+    "Hl": 52.1
+   }
+  },
+  "bases": {
+   "corner column": {
+    "N_comp": 150.2,
+    "N_uplift": -89.7,
+    "M": 132.1,
+    "H": 45.8,
+    "n": 4
+   },
+   "braced-bay column": {
+    "N_comp": 304.4,
+    "N_uplift": -308.6,
+    "M": 218.3,
+    "H": 93.8,
+    "n": 8
+   },
+   "typical side column": {
+    "N_comp": 160.4,
+    "N_uplift": -90.7,
+    "M": 218.2,
+    "H": 74.4,
+    "n": 10
+   },
+   "gable post": {
+    "N_comp": 19.2,
+    "N_uplift": 0,
+    "M": 0,
+    "H": 61.8,
+    "n": 4
+   },
+   "gable post (braced panel)": {
+    "N_comp": 467.9,
+    "N_uplift": -420.4,
+    "M": 0,
+    "H": 89.9,
+    "n": 8
+   }
+  },
+  "lateral": {
+   "transverse (wind S)": {
+    "combo": "U4 1.2G+1.3W WSp q1.2",
+    "total_kN": -1191.7,
+    "columns_kN": -701.6,
+    "posts_kN": -490.1
+   },
+   "longitudinal (wind W)": {
+    "combo": "U4 1.2G+1.3W WWp q1.2",
+    "total_kN": -749.5,
+    "columns_kN": -439.7,
+    "posts_kN": -309.8
+   }
+  }
+ },
+ "R2_screening": {
+  "compression_085": 110.0,
+  "uplift_085": -44.0,
+  "uplift_120_interior": -75.0,
+  "uplift_120_gable": -104.0
+ }
+}

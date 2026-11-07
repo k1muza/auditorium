@@ -1,0 +1,4 @@
+DB_L2_S3 S3 UC 305x305x97    ok=True u=0.43 y=36.5 x=7.7 | q1.2 y=51.5 x=10.9 WBX=CHS 168.3x5 t=130s
+DB_L2_S3 S3 UC 254x254x107   ok=True u=0.47 y=39.8 x=6.2 | q1.2 y=56.2 x=8.7 WBX=CHS 168.3x5 t=139s
+DB_L2_S3 S3 UC 254x254x89    ok=True u=0.55 y=40.3 x=5.0 | q1.2 y=56.9 x=7.1 WBX=CHS 168.3x5 t=395s
+written DB_L2_S3

@@ -1,0 +1,55 @@
+# Southgate Worship Center - BIM project configuration (single source for scripts)
+project:
+  name: Southgate Worship Center
+  long_name: Southgate Worship Center - Main Auditorium Building
+  id_prefix: SOUTHGATE
+  schema: IFC4            # Bonsai 0.9.0 default; IFC4X3 deliberately not used (see README "Schema")
+  units: metre
+  design_stage: CONCEPT DESIGN - NOT FOR CONSTRUCTION
+  guid_namespace: 6f1c1a4e-5a52-4f2b-9f30-50a71e0b2026   # uuid5 namespace -> deterministic GlobalIds
+
+source:
+  design_project: ../F-site-A-2000-astra-v2
+  authoritative_manifest: ../F-site-A-2000-astra-v2/model/active_model.json
+  snapshot: source/snapshot/southgate_source_snapshot_20261107.blend
+  snapshot_sha256: f5d61c754a07fdced6639e892a84f17c3dce3f346d840d5f0201858faac0124f
+  geometry_fingerprint: c504497c9f102a6972b578d61f568bc4f4f7bae5907e3fa17bf5f522e5b84d12
+
+coordinates:
+  # Blender world coordinates are used 1:1 as IFC project coordinates (metres, Z up).
+  # No transformation is applied. True north, geodetic datum and site levels are NOT verified.
+  transform: identity
+  true_north: UNVERIFIED       # model +Y is called "north" in the source naming convention
+  geolocation: UNVERIFIED
+  site_datum_note: "Source scene property assumed_site_level = +0.265 (ground floor FFL). Absolute datum unknown."
+
+# Scope boundary: the main auditorium building and physically integrated components.
+boundary:
+  description: >
+    Main auditorium hall (x 3.1..59.0, y 0..33.0) including its east/west glazed gable
+    portals, north entrance canopy/portal, the attached single-storey west office wing
+    (x -2.48..3.1) with its roof terrace, terrace deck structure and the attached
+    north-west spiral stair. Detached buildings and external works are excluded.
+  include_box: {min: [-8.0, -1.6, -2.0], max: [62.5, 37.7, 20.0]}
+  excluded_collections:
+    "Children's Church - 35deg Half-Hip Maroon IBR": "Detached building (children's church) - outside project scope"
+    "Site": "Site works, parking, site boundary and EX- massing blocks of detached buildings - outside building boundary"
+    "EXT02-EAST-FORECOURT-STUDY-20261105": "External forecourt study (site works) - outside building boundary"
+    "EXT12-UNIFIED-EXTERIOR-PAVING-20261105": "External paving subbase (site works) - outside building boundary"
+  excluded_name_patterns:
+    "^BIM-OFFICE-APRON": "External paving apron around office wing (site works) - outside building boundary"
+    "^BIM-SITE-": "Site grade reference / site walk subbase - outside building boundary"
+    "^EXT14-N-(APPROACH-PAVER|ACCESSIBLE-GUIDANCE-PAVING)": "External approach paving (site works) - outside building boundary"
+
+# Storeys derived from source slab top levels (m). See reports/migration/spatial_structure.md
+storeys:
+  - {code: "00", name: "00 Ground Floor", elevation: 0.265, evidence: "SLAB-FOYER / SLAB-BACKSTAGE / HALL-GROUND-FLOOR slab tops = +0.265; scene assumed_site_level 0.265"}
+  - {code: "01", name: "01 Mezzanine and Gallery", elevation: 4.0575, evidence: "MEZZ-CROSS / MEZZ-SERVICE slab tops = +4.0575; gallery front level 4.6 (source config)"}
+  - {code: "02", name: "02 Upper Floor", elevation: 7.85, evidence: "UPPER-CROSS / UPPER-SERVICES slab tops = +7.85"}
+  - {code: "03", name: "03 Roof", elevation: 10.9, evidence: "source config roof_bottom = 10.9 (truss bottom chord datum); eaves 12.5"}
+
+tolerances:
+  position_m: 0.005        # placement/centroid agreement source vs IFC
+  dimension_m: 0.005       # bounding-box dimension agreement
+  volume_rel: 0.01         # 1 % volume agreement for swept solids
+  volume_rel_tess: 0.02    # tessellated (custom) geometry

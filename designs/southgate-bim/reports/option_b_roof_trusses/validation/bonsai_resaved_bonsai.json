@@ -1,0 +1,26 @@
+{
+ "input": "C:\\Users\\Kelvin\\Desktop\\auditorium\\designs\\southgate-bim\\work\\option_b\\candidates\\20261107-115532\\southgate_optionB_candidate.ifc",
+ "bonsai": "bl_ext.user_default.bonsai",
+ "load_seconds": 398.4,
+ "new_elements": 6597,
+ "with_geometry": 5904,
+ "blender_objects_for_them": 5904,
+ "not_loaded": [],
+ "ifc_elements_total": 15656,
+ "edit": {
+  "element": "SOUTHGATE-RTB-T05-D04-A",
+  "before_depth": 5.28979,
+  "profile": "L100x100x8",
+  "usage_before": "IfcMaterialProfileSetUsage",
+  "operator": [
+   "FINISHED"
+  ],
+  "after_depth": 5.339789867401123,
+  "profile_after": "L100x100x8",
+  "profile_is_LShape": true,
+  "usage_after": "IfcMaterialProfileSetUsage",
+  "type_after": "SG-OPTB-D-L100x100x8"
+ },
+ "saved": true,
+ "seconds": 592.3
+}

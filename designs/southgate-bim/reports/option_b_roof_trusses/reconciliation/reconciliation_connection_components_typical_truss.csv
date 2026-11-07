@@ -1,0 +1,6 @@
+Item,R2_count,Model_count,R2_mass_kg,Model_mass_kg,Explanation
+Gusset plates,26,26,397.8,198.2,R2 used 15.3 kg per gusset (average of the superseded model's gussets); modelled 10 mm gussets are sized to the bolt groups (avg ~7.7 kg)
+Splice plates,20,20,80.0,43.8,"same count (10 splices x 2); R2 allowed 4 kg per plate, modelled 8 mm plates within the connected-leg flat ~2.2 kg"
+Packing plates,164,86,196.8,43.7,"R2: round(total length/1.2 + webs) double counts (connections already restrain the ends); model: ceil(clear/1.2)-1 per clear length, >= 1 per web"
+Bolt sets,448,330,156.8,88.7,webs 100 = 100; splice 80 = 80; chord-to-gusset R2 104 vs model 64 (at the 10 splice nodes the splice bolts pass through the gusset - DEV-03); packer bolts follow the packer count
+Angles,74,74,3033.1,2891.1,same piece count; mass difference from DEV-01 and cut lengths (see bridge)

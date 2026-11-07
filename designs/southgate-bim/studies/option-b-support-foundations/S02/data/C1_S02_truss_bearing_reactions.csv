@@ -1,0 +1,177 @@
+design,scheme,line,side,category,qp_ULS,compression_kN,compression_combo,uplift_kN,uplift_combo,H_transverse_kN,H_transverse_combo,H_longitudinal_kN,H_longitudinal_combo
+S02 S3 (L2),S3,0,south,"gable truss (lines 0, 10)",0.935,118.4,U4 1.2G+1.3W WSn q0.935,-72.0,U5 0.9G+1.3W WWp q0.935,28.0,U5 0.9G+1.3W WWp q0.935,18.7,U4 1.2G+1.3W WSp q0.935
+S02 S3 (L2),S3,0,south,"gable truss (lines 0, 10)",1.32,145.9,U4 1.2G+1.3W WSn q1.32,-114.9,U5 0.9G+1.3W WWp q1.32,39.5,U5 0.9G+1.3W WWp q1.32,26.5,U5 0.9G+1.3W WSp q1.32
+S02 S3 (L2),S3,0,north,"gable truss (lines 0, 10)",0.935,118.4,U4 1.2G+1.3W WNn q0.935,-72.0,U5 0.9G+1.3W WWp q0.935,28.0,U5 0.9G+1.3W WWp q0.935,18.7,U4 1.2G+1.3W WNp q0.935
+S02 S3 (L2),S3,0,north,"gable truss (lines 0, 10)",1.32,145.9,U4 1.2G+1.3W WNn q1.32,-114.9,U5 0.9G+1.3W WWp q1.32,39.5,U5 0.9G+1.3W WWp q1.32,26.5,U5 0.9G+1.3W WNp q1.32
+S02 S3 (L2),S3,1,south,"end-adjacent truss (lines 1, 9)",0.935,104.0,U4 1.2G+1.3W WNn q0.935,-77.8,U5 0.9G+1.3W WSp q0.935,45.8,U5 0.9G+1.3W WWp q0.935,47.7,U4 1.2G+1.3W WWn q0.935
+S02 S3 (L2),S3,1,south,"end-adjacent truss (lines 1, 9)",1.32,120.8,U4 1.2G+1.3W WNn q1.32,-125.4,U5 0.9G+1.3W WSp q1.32,64.7,U5 0.9G+1.3W WWp q1.32,65.9,U4 1.2G+1.3W WWn q1.32
+S02 S3 (L2),S3,1,north,"end-adjacent truss (lines 1, 9)",0.935,104.0,U4 1.2G+1.3W WSn q0.935,-77.8,U5 0.9G+1.3W WNp q0.935,45.8,U5 0.9G+1.3W WWp q0.935,47.7,U4 1.2G+1.3W WWn q0.935
+S02 S3 (L2),S3,1,north,"end-adjacent truss (lines 1, 9)",1.32,120.8,U4 1.2G+1.3W WSn q1.32,-125.4,U5 0.9G+1.3W WNp q1.32,64.7,U5 0.9G+1.3W WWp q1.32,65.9,U4 1.2G+1.3W WWn q1.32
+S02 S3 (L2),S3,2,south,"second truss (lines 2, 8)",0.935,121.0,U4 1.2G+1.3W WSn q0.935,-60.2,U5 0.9G+1.3W WEp q0.935,37.9,U5 0.9G+1.3W WWp q0.935,46.6,U5 0.9G+1.3W WWn q0.935
+S02 S3 (L2),S3,2,south,"second truss (lines 2, 8)",1.32,143.4,U4 1.2G+1.3W WSn q1.32,-99.7,U5 0.9G+1.3W WEp q1.32,53.5,U5 0.9G+1.3W WWp q1.32,65.9,U5 0.9G+1.3W WWn q1.32
+S02 S3 (L2),S3,2,north,"second truss (lines 2, 8)",0.935,121.0,U4 1.2G+1.3W WNn q0.935,-60.2,U5 0.9G+1.3W WEp q0.935,37.9,U5 0.9G+1.3W WWp q0.935,46.6,U5 0.9G+1.3W WWn q0.935
+S02 S3 (L2),S3,2,north,"second truss (lines 2, 8)",1.32,143.4,U4 1.2G+1.3W WNn q1.32,-99.7,U5 0.9G+1.3W WEp q1.32,53.5,U5 0.9G+1.3W WWp q1.32,65.9,U5 0.9G+1.3W WWn q1.32
+S02 S3 (L2),S3,3,south,typical interior truss (lines 3-7),0.935,120.4,U4 1.2G+1.3W WSn q0.935,-43.6,U5 0.9G+1.3W WEp q0.935,37.9,U5 0.9G+1.3W WWp q0.935,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L2),S3,3,south,typical interior truss (lines 3-7),1.32,143.2,U4 1.2G+1.3W WSn q1.32,-75.0,U5 0.9G+1.3W WEp q1.32,53.5,U5 0.9G+1.3W WWp q1.32,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L2),S3,3,north,typical interior truss (lines 3-7),0.935,120.4,U4 1.2G+1.3W WNn q0.935,-43.6,U5 0.9G+1.3W WEp q0.935,37.9,U5 0.9G+1.3W WWp q0.935,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L2),S3,3,north,typical interior truss (lines 3-7),1.32,143.2,U4 1.2G+1.3W WNn q1.32,-75.0,U5 0.9G+1.3W WEp q1.32,53.5,U5 0.9G+1.3W WWp q1.32,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L2),S3,4,south,typical interior truss (lines 3-7),0.935,127.8,U4 1.2G+1.3W WSn q0.935,-48.8,U5 0.9G+1.3W WNp q0.935,37.9,U5 0.9G+1.3W WWp q0.935,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L2),S3,4,south,typical interior truss (lines 3-7),1.32,151.1,U4 1.2G+1.3W WSn q1.32,-83.5,U5 0.9G+1.3W WNp q1.32,53.5,U5 0.9G+1.3W WWp q1.32,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L2),S3,4,north,typical interior truss (lines 3-7),0.935,127.8,U4 1.2G+1.3W WNn q0.935,-48.8,U5 0.9G+1.3W WSp q0.935,37.9,U5 0.9G+1.3W WWp q0.935,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L2),S3,4,north,typical interior truss (lines 3-7),1.32,151.1,U4 1.2G+1.3W WNn q1.32,-83.5,U5 0.9G+1.3W WSp q1.32,53.5,U5 0.9G+1.3W WWp q1.32,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L2),S3,5,south,typical interior truss (lines 3-7),0.935,122.8,U4 1.2G+1.3W WSn q0.935,-42.2,U5 0.9G+1.3W WEp q0.935,37.1,U4 1.2G+1.3W WSn q0.935,39.1,U5 0.9G+1.3W WEn q0.935
+S02 S3 (L2),S3,5,south,typical interior truss (lines 3-7),1.32,146.1,U4 1.2G+1.3W WSn q1.32,-73.1,U5 0.9G+1.3W WEp q1.32,52.4,U4 1.2G+1.3W WSn q1.32,55.3,U5 0.9G+1.3W WEn q1.32
+S02 S3 (L2),S3,5,north,typical interior truss (lines 3-7),0.935,122.8,U4 1.2G+1.3W WNn q0.935,-42.2,U5 0.9G+1.3W WEp q0.935,37.1,U4 1.2G+1.3W WNn q0.935,39.1,U5 0.9G+1.3W WEn q0.935
+S02 S3 (L2),S3,5,north,typical interior truss (lines 3-7),1.32,146.1,U4 1.2G+1.3W WNn q1.32,-73.1,U5 0.9G+1.3W WEp q1.32,52.4,U4 1.2G+1.3W WNn q1.32,55.3,U5 0.9G+1.3W WEn q1.32
+S02 S3 (L2),S3,6,south,typical interior truss (lines 3-7),0.935,127.6,U4 1.2G+1.3W WSn q0.935,-49.3,U5 0.9G+1.3W WNp q0.935,37.9,U5 0.9G+1.3W WEp q0.935,57.4,U4 1.2G+1.3W WEn q0.935
+S02 S3 (L2),S3,6,south,typical interior truss (lines 3-7),1.32,150.7,U4 1.2G+1.3W WSn q1.32,-84.2,U5 0.9G+1.3W WNp q1.32,53.5,U5 0.9G+1.3W WEp q1.32,81.1,U5 0.9G+1.3W WNp q1.32
+S02 S3 (L2),S3,6,north,typical interior truss (lines 3-7),0.935,127.6,U4 1.2G+1.3W WNn q0.935,-49.3,U5 0.9G+1.3W WSp q0.935,37.9,U5 0.9G+1.3W WEp q0.935,57.4,U4 1.2G+1.3W WEn q0.935
+S02 S3 (L2),S3,6,north,typical interior truss (lines 3-7),1.32,150.7,U4 1.2G+1.3W WNn q1.32,-84.2,U5 0.9G+1.3W WSp q1.32,53.5,U5 0.9G+1.3W WEp q1.32,81.1,U5 0.9G+1.3W WSp q1.32
+S02 S3 (L2),S3,7,south,typical interior truss (lines 3-7),0.935,119.0,U4 1.2G+1.3W WSn q0.935,-44.8,U5 0.9G+1.3W WEp q0.935,37.9,U5 0.9G+1.3W WEp q0.935,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L2),S3,7,south,typical interior truss (lines 3-7),1.32,142.4,U4 1.2G+1.3W WSn q1.32,-76.8,U5 0.9G+1.3W WEp q1.32,53.5,U5 0.9G+1.3W WEp q1.32,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L2),S3,7,north,typical interior truss (lines 3-7),0.935,119.0,U4 1.2G+1.3W WNn q0.935,-44.8,U5 0.9G+1.3W WEp q0.935,37.9,U5 0.9G+1.3W WEp q0.935,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L2),S3,7,north,typical interior truss (lines 3-7),1.32,142.4,U4 1.2G+1.3W WNn q1.32,-76.8,U5 0.9G+1.3W WEp q1.32,53.5,U5 0.9G+1.3W WEp q1.32,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L2),S3,8,south,"second truss (lines 2, 8)",0.935,117.6,U4 1.2G+1.3W WSn q0.935,-62.1,U5 0.9G+1.3W WWp q0.935,37.9,U5 0.9G+1.3W WEp q0.935,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L2),S3,8,south,"second truss (lines 2, 8)",1.32,139.8,U4 1.2G+1.3W WSn q1.32,-102.4,U5 0.9G+1.3W WWp q1.32,53.5,U5 0.9G+1.3W WEp q1.32,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L2),S3,8,north,"second truss (lines 2, 8)",0.935,117.6,U4 1.2G+1.3W WNn q0.935,-62.1,U5 0.9G+1.3W WWp q0.935,37.9,U5 0.9G+1.3W WEp q0.935,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L2),S3,8,north,"second truss (lines 2, 8)",1.32,139.8,U4 1.2G+1.3W WNn q1.32,-102.4,U5 0.9G+1.3W WWp q1.32,53.5,U5 0.9G+1.3W WEp q1.32,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L2),S3,9,south,"end-adjacent truss (lines 1, 9)",0.935,107.9,U4 1.2G+1.3W WNn q0.935,-78.8,U5 0.9G+1.3W WSp q0.935,45.8,U5 0.9G+1.3W WEp q0.935,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L2),S3,9,south,"end-adjacent truss (lines 1, 9)",1.32,126.7,U4 1.2G+1.3W WNn q1.32,-126.3,U5 0.9G+1.3W WSp q1.32,64.7,U5 0.9G+1.3W WEp q1.32,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L2),S3,9,north,"end-adjacent truss (lines 1, 9)",0.935,107.9,U4 1.2G+1.3W WSn q0.935,-78.8,U5 0.9G+1.3W WNp q0.935,45.8,U5 0.9G+1.3W WEp q0.935,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L2),S3,9,north,"end-adjacent truss (lines 1, 9)",1.32,126.7,U4 1.2G+1.3W WSn q1.32,-126.3,U5 0.9G+1.3W WNp q1.32,64.7,U5 0.9G+1.3W WEp q1.32,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L2),S3,10,south,"gable truss (lines 0, 10)",0.935,112.8,U4 1.2G+1.3W WSn q0.935,-70.7,U5 0.9G+1.3W WEp q0.935,28.0,U5 0.9G+1.3W WEp q0.935,18.8,U4 1.2G+1.3W WSp q0.935
+S02 S3 (L2),S3,10,south,"gable truss (lines 0, 10)",1.32,137.7,U4 1.2G+1.3W WSn q1.32,-113.3,U5 0.9G+1.3W WEp q1.32,39.5,U5 0.9G+1.3W WEp q1.32,26.5,U4 1.2G+1.3W WSp q1.32
+S02 S3 (L2),S3,10,north,"gable truss (lines 0, 10)",0.935,112.8,U4 1.2G+1.3W WNn q0.935,-70.7,U5 0.9G+1.3W WEp q0.935,28.0,U5 0.9G+1.3W WEp q0.935,18.8,U4 1.2G+1.3W WNp q0.935
+S02 S3 (L2),S3,10,north,"gable truss (lines 0, 10)",1.32,137.7,U4 1.2G+1.3W WNn q1.32,-113.3,U5 0.9G+1.3W WEp q1.32,39.5,U5 0.9G+1.3W WEp q1.32,26.5,U4 1.2G+1.3W WNp q1.32
+S02 S3 (L1),S3,0,south,"gable truss (lines 0, 10)",0.935,119.9,U4 1.2G+1.3W WSn q0.935,-71.2,U5 0.9G+1.3W WWp q0.935,28.0,U5 0.9G+1.3W WWp q0.935,18.7,U4 1.2G+1.3W WSp q0.935
+S02 S3 (L1),S3,0,south,"gable truss (lines 0, 10)",1.32,148.0,U4 1.2G+1.3W WSn q1.32,-113.9,U5 0.9G+1.3W WWp q1.32,39.5,U5 0.9G+1.3W WWp q1.32,26.5,U4 1.2G+1.3W WSp q1.32
+S02 S3 (L1),S3,0,north,"gable truss (lines 0, 10)",0.935,119.9,U4 1.2G+1.3W WNn q0.935,-71.2,U5 0.9G+1.3W WWp q0.935,28.0,U5 0.9G+1.3W WWp q0.935,18.7,U4 1.2G+1.3W WNp q0.935
+S02 S3 (L1),S3,0,north,"gable truss (lines 0, 10)",1.32,148.0,U4 1.2G+1.3W WNn q1.32,-113.9,U5 0.9G+1.3W WWp q1.32,39.5,U5 0.9G+1.3W WWp q1.32,26.5,U4 1.2G+1.3W WNp q1.32
+S02 S3 (L1),S3,1,south,"end-adjacent truss (lines 1, 9)",0.935,105.7,U4 1.2G+1.3W WNn q0.935,-79.4,U5 0.9G+1.3W WSp q0.935,45.8,U5 0.9G+1.3W WWp q0.935,27.5,U4 1.2G+1.3W WWn q0.935
+S02 S3 (L1),S3,1,south,"end-adjacent truss (lines 1, 9)",1.32,123.0,U4 1.2G+1.3W WNn q1.32,-127.6,U5 0.9G+1.3W WSp q1.32,64.7,U5 0.9G+1.3W WWp q1.32,38.5,U4 1.2G+1.3W WWn q1.32
+S02 S3 (L1),S3,1,north,"end-adjacent truss (lines 1, 9)",0.935,105.7,U4 1.2G+1.3W WSn q0.935,-79.4,U5 0.9G+1.3W WNp q0.935,45.8,U5 0.9G+1.3W WWp q0.935,27.5,U4 1.2G+1.3W WWn q0.935
+S02 S3 (L1),S3,1,north,"end-adjacent truss (lines 1, 9)",1.32,123.0,U4 1.2G+1.3W WSn q1.32,-127.6,U5 0.9G+1.3W WNp q1.32,64.7,U5 0.9G+1.3W WWp q1.32,38.5,U4 1.2G+1.3W WWn q1.32
+S02 S3 (L1),S3,2,south,"second truss (lines 2, 8)",0.935,120.8,U4 1.2G+1.3W WSn q0.935,-60.2,U5 0.9G+1.3W WEp q0.935,37.9,U5 0.9G+1.3W WWp q0.935,27.6,U4 1.2G+1.3W WWn q0.935
+S02 S3 (L1),S3,2,south,"second truss (lines 2, 8)",1.32,143.1,U4 1.2G+1.3W WSn q1.32,-99.9,U5 0.9G+1.3W WEp q1.32,53.5,U5 0.9G+1.3W WWp q1.32,38.5,U4 1.2G+1.3W WWn q1.32
+S02 S3 (L1),S3,2,north,"second truss (lines 2, 8)",0.935,120.8,U4 1.2G+1.3W WNn q0.935,-60.2,U5 0.9G+1.3W WEp q0.935,37.9,U5 0.9G+1.3W WWp q0.935,27.6,U4 1.2G+1.3W WWn q0.935
+S02 S3 (L1),S3,2,north,"second truss (lines 2, 8)",1.32,143.1,U4 1.2G+1.3W WNn q1.32,-99.9,U5 0.9G+1.3W WEp q1.32,53.5,U5 0.9G+1.3W WWp q1.32,38.5,U4 1.2G+1.3W WWn q1.32
+S02 S3 (L1),S3,3,south,typical interior truss (lines 3-7),0.935,121.2,U4 1.2G+1.3W WSn q0.935,-42.8,U5 0.9G+1.3W WEp q0.935,37.9,U5 0.9G+1.3W WWp q0.935,26.7,U4 1.2G+1.3W WEp q0.935
+S02 S3 (L1),S3,3,south,typical interior truss (lines 3-7),1.32,144.3,U4 1.2G+1.3W WSn q1.32,-73.9,U5 0.9G+1.3W WEp q1.32,53.5,U5 0.9G+1.3W WWp q1.32,37.4,U4 1.2G+1.3W WWn q1.32
+S02 S3 (L1),S3,3,north,typical interior truss (lines 3-7),0.935,121.2,U4 1.2G+1.3W WNn q0.935,-42.8,U5 0.9G+1.3W WEp q0.935,37.9,U5 0.9G+1.3W WWp q0.935,26.7,U4 1.2G+1.3W WEp q0.935
+S02 S3 (L1),S3,3,north,typical interior truss (lines 3-7),1.32,144.3,U4 1.2G+1.3W WNn q1.32,-73.9,U5 0.9G+1.3W WEp q1.32,53.5,U5 0.9G+1.3W WWp q1.32,37.4,U4 1.2G+1.3W WWn q1.32
+S02 S3 (L1),S3,4,south,typical interior truss (lines 3-7),0.935,127.9,U4 1.2G+1.3W WSn q0.935,-48.9,U5 0.9G+1.3W WNp q0.935,37.9,U5 0.9G+1.3W WWp q0.935,26.8,U4 1.2G+1.3W WWp q0.935
+S02 S3 (L1),S3,4,south,typical interior truss (lines 3-7),1.32,151.1,U4 1.2G+1.3W WSn q1.32,-83.7,U5 0.9G+1.3W WNp q1.32,53.5,U5 0.9G+1.3W WWp q1.32,37.5,U4 1.2G+1.3W WWp q1.32
+S02 S3 (L1),S3,4,north,typical interior truss (lines 3-7),0.935,127.9,U4 1.2G+1.3W WNn q0.935,-48.9,U5 0.9G+1.3W WSp q0.935,37.9,U5 0.9G+1.3W WWp q0.935,26.8,U4 1.2G+1.3W WWp q0.935
+S02 S3 (L1),S3,4,north,typical interior truss (lines 3-7),1.32,151.1,U4 1.2G+1.3W WNn q1.32,-83.7,U5 0.9G+1.3W WSp q1.32,53.5,U5 0.9G+1.3W WWp q1.32,37.5,U4 1.2G+1.3W WWp q1.32
+S02 S3 (L1),S3,5,south,typical interior truss (lines 3-7),0.935,123.1,U4 1.2G+1.3W WSn q0.935,-43.8,U5 0.9G+1.3W WEp q0.935,37.0,U4 1.2G+1.3W WSn q0.935,27.4,U4 1.2G+1.3W WEn q0.935
+S02 S3 (L1),S3,5,south,typical interior truss (lines 3-7),1.32,146.6,U4 1.2G+1.3W WSn q1.32,-75.4,U5 0.9G+1.3W WEp q1.32,52.3,U4 1.2G+1.3W WSn q1.32,38.3,U4 1.2G+1.3W WEn q1.32
+S02 S3 (L1),S3,5,north,typical interior truss (lines 3-7),0.935,123.1,U4 1.2G+1.3W WNn q0.935,-43.8,U5 0.9G+1.3W WEp q0.935,37.0,U4 1.2G+1.3W WNn q0.935,27.4,U4 1.2G+1.3W WEn q0.935
+S02 S3 (L1),S3,5,north,typical interior truss (lines 3-7),1.32,146.6,U4 1.2G+1.3W WNn q1.32,-75.4,U5 0.9G+1.3W WEp q1.32,52.3,U4 1.2G+1.3W WNn q1.32,38.3,U4 1.2G+1.3W WEn q1.32
+S02 S3 (L1),S3,6,south,typical interior truss (lines 3-7),0.935,127.8,U4 1.2G+1.3W WSn q0.935,-49.1,U5 0.9G+1.3W WNp q0.935,37.9,U5 0.9G+1.3W WEp q0.935,27.9,U4 1.2G+1.3W WEn q0.935
+S02 S3 (L1),S3,6,south,typical interior truss (lines 3-7),1.32,150.9,U4 1.2G+1.3W WSn q1.32,-84.0,U5 0.9G+1.3W WNp q1.32,53.5,U5 0.9G+1.3W WEp q1.32,39.1,U4 1.2G+1.3W WEn q1.32
+S02 S3 (L1),S3,6,north,typical interior truss (lines 3-7),0.935,127.8,U4 1.2G+1.3W WNn q0.935,-49.1,U5 0.9G+1.3W WSp q0.935,37.9,U5 0.9G+1.3W WEp q0.935,27.9,U4 1.2G+1.3W WEn q0.935
+S02 S3 (L1),S3,6,north,typical interior truss (lines 3-7),1.32,150.9,U4 1.2G+1.3W WNn q1.32,-84.0,U5 0.9G+1.3W WSp q1.32,53.5,U5 0.9G+1.3W WEp q1.32,39.1,U4 1.2G+1.3W WEn q1.32
+S02 S3 (L1),S3,7,south,typical interior truss (lines 3-7),0.935,118.6,U4 1.2G+1.3W WSn q0.935,-44.0,U5 0.9G+1.3W WEp q0.935,37.9,U5 0.9G+1.3W WEp q0.935,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L1),S3,7,south,typical interior truss (lines 3-7),1.32,141.8,U4 1.2G+1.3W WSn q1.32,-75.7,U5 0.9G+1.3W WEp q1.32,53.5,U5 0.9G+1.3W WEp q1.32,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L1),S3,7,north,typical interior truss (lines 3-7),0.935,118.6,U4 1.2G+1.3W WNn q0.935,-44.0,U5 0.9G+1.3W WEp q0.935,37.9,U5 0.9G+1.3W WEp q0.935,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L1),S3,7,north,typical interior truss (lines 3-7),1.32,141.8,U4 1.2G+1.3W WNn q1.32,-75.7,U5 0.9G+1.3W WEp q1.32,53.5,U5 0.9G+1.3W WEp q1.32,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L1),S3,8,south,"second truss (lines 2, 8)",0.935,117.7,U4 1.2G+1.3W WSn q0.935,-62.1,U5 0.9G+1.3W WWp q0.935,37.9,U5 0.9G+1.3W WEp q0.935,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L1),S3,8,south,"second truss (lines 2, 8)",1.32,139.9,U4 1.2G+1.3W WSn q1.32,-102.5,U5 0.9G+1.3W WWp q1.32,53.5,U5 0.9G+1.3W WEp q1.32,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L1),S3,8,north,"second truss (lines 2, 8)",0.935,117.7,U4 1.2G+1.3W WNn q0.935,-62.1,U5 0.9G+1.3W WWp q0.935,37.9,U5 0.9G+1.3W WEp q0.935,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L1),S3,8,north,"second truss (lines 2, 8)",1.32,139.9,U4 1.2G+1.3W WNn q1.32,-102.5,U5 0.9G+1.3W WWp q1.32,53.5,U5 0.9G+1.3W WEp q1.32,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L1),S3,9,south,"end-adjacent truss (lines 1, 9)",0.935,107.2,U4 1.2G+1.3W WNn q0.935,-78.8,U5 0.9G+1.3W WSp q0.935,45.8,U5 0.9G+1.3W WEp q0.935,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L1),S3,9,south,"end-adjacent truss (lines 1, 9)",1.32,125.8,U4 1.2G+1.3W WNn q1.32,-126.5,U5 0.9G+1.3W WSp q1.32,64.7,U5 0.9G+1.3W WEp q1.32,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L1),S3,9,north,"end-adjacent truss (lines 1, 9)",0.935,107.2,U4 1.2G+1.3W WSn q0.935,-78.8,U5 0.9G+1.3W WNp q0.935,45.8,U5 0.9G+1.3W WEp q0.935,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L1),S3,9,north,"end-adjacent truss (lines 1, 9)",1.32,125.8,U4 1.2G+1.3W WSn q1.32,-126.5,U5 0.9G+1.3W WNp q1.32,64.7,U5 0.9G+1.3W WEp q1.32,0.0,U3x 1.2G+1.6Qrig
+S02 S3 (L1),S3,10,south,"gable truss (lines 0, 10)",0.935,112.9,U4 1.2G+1.3W WSn q0.935,-70.9,U5 0.9G+1.3W WEp q0.935,28.0,U5 0.9G+1.3W WEp q0.935,18.8,U4 1.2G+1.3W WSp q0.935
+S02 S3 (L1),S3,10,south,"gable truss (lines 0, 10)",1.32,137.8,U4 1.2G+1.3W WSn q1.32,-113.6,U5 0.9G+1.3W WEp q1.32,39.5,U5 0.9G+1.3W WEp q1.32,26.5,U4 1.2G+1.3W WSp q1.32
+S02 S3 (L1),S3,10,north,"gable truss (lines 0, 10)",0.935,112.9,U4 1.2G+1.3W WNn q0.935,-70.9,U5 0.9G+1.3W WEp q0.935,28.0,U5 0.9G+1.3W WEp q0.935,18.8,U4 1.2G+1.3W WNp q0.935
+S02 S3 (L1),S3,10,north,"gable truss (lines 0, 10)",1.32,137.8,U4 1.2G+1.3W WNn q1.32,-113.6,U5 0.9G+1.3W WEp q1.32,39.5,U5 0.9G+1.3W WEp q1.32,26.5,U4 1.2G+1.3W WNp q1.32
+S02 S1 (L2),S1,0,south,"gable truss (lines 0, 10)",0.935,120.3,U4 1.2G+1.3W WSn q0.935,-70.5,U5 0.9G+1.3W WWp q0.935,33.6,U4 1.2G+1.3W WWp q0.935,18.8,U4 1.2G+1.3W WSp q0.935
+S02 S1 (L2),S1,0,south,"gable truss (lines 0, 10)",1.32,148.0,U4 1.2G+1.3W WSn q1.32,-113.3,U5 0.9G+1.3W WWp q1.32,47.4,U4 1.2G+1.3W WWp q1.32,26.5,U4 1.2G+1.3W WSp q1.32
+S02 S1 (L2),S1,0,north,"gable truss (lines 0, 10)",0.935,120.3,U4 1.2G+1.3W WNn q0.935,-70.5,U5 0.9G+1.3W WWp q0.935,33.6,U4 1.2G+1.3W WWp q0.935,18.8,U4 1.2G+1.3W WNp q0.935
+S02 S1 (L2),S1,0,north,"gable truss (lines 0, 10)",1.32,148.0,U4 1.2G+1.3W WNn q1.32,-113.3,U5 0.9G+1.3W WWp q1.32,47.4,U4 1.2G+1.3W WWp q1.32,26.5,U4 1.2G+1.3W WNp q1.32
+S02 S1 (L2),S1,1,south,"end-adjacent truss (lines 1, 9)",0.935,111.1,U4 1.2G+1.3W WNn q0.935,-72.2,U5 0.9G+1.3W WSp q0.935,55.0,U4 1.2G+1.3W WWp q0.935,44.8,U4 1.2G+1.3W WWn q0.935
+S02 S1 (L2),S1,1,south,"end-adjacent truss (lines 1, 9)",1.32,129.8,U4 1.2G+1.3W WNn q1.32,-118.2,U5 0.9G+1.3W WSp q1.32,77.7,U4 1.2G+1.3W WWp q1.32,62.1,U4 1.2G+1.3W WWn q1.32
+S02 S1 (L2),S1,1,north,"end-adjacent truss (lines 1, 9)",0.935,111.1,U4 1.2G+1.3W WSn q0.935,-72.2,U5 0.9G+1.3W WNp q0.935,55.0,U4 1.2G+1.3W WWp q0.935,44.8,U4 1.2G+1.3W WWn q0.935
+S02 S1 (L2),S1,1,north,"end-adjacent truss (lines 1, 9)",1.32,129.8,U4 1.2G+1.3W WSn q1.32,-118.2,U5 0.9G+1.3W WNp q1.32,77.7,U4 1.2G+1.3W WWp q1.32,62.1,U4 1.2G+1.3W WWn q1.32
+S02 S1 (L2),S1,2,south,"second truss (lines 2, 8)",0.935,126.7,U4 1.2G+1.3W WSn q0.935,-58.2,U5 0.9G+1.3W WEp q0.935,46.5,U4 1.2G+1.3W WSn q0.935,43.2,U5 0.9G+1.3W WWn q0.935
+S02 S1 (L2),S1,2,south,"second truss (lines 2, 8)",1.32,149.9,U4 1.2G+1.3W WSn q1.32,-98.0,U5 0.9G+1.3W WEp q1.32,65.6,U4 1.2G+1.3W WSn q1.32,61.1,U5 0.9G+1.3W WWn q1.32
+S02 S1 (L2),S1,2,north,"second truss (lines 2, 8)",0.935,126.7,U4 1.2G+1.3W WNn q0.935,-58.2,U5 0.9G+1.3W WEp q0.935,46.5,U4 1.2G+1.3W WNn q0.935,43.2,U5 0.9G+1.3W WWn q0.935
+S02 S1 (L2),S1,2,north,"second truss (lines 2, 8)",1.32,149.9,U4 1.2G+1.3W WNn q1.32,-98.0,U5 0.9G+1.3W WEp q1.32,65.6,U4 1.2G+1.3W WNn q1.32,61.1,U5 0.9G+1.3W WWn q1.32
+S02 S1 (L2),S1,3,south,typical interior truss (lines 3-7),0.935,123.3,U4 1.2G+1.3W WSn q0.935,-40.7,U5 0.9G+1.3W WEp q0.935,46.5,U4 1.2G+1.3W WSn q0.935,0.1,U3x 1.2G+1.6Qrig
+S02 S1 (L2),S1,3,south,typical interior truss (lines 3-7),1.32,146.1,U4 1.2G+1.3W WSn q1.32,-72.0,U5 0.9G+1.3W WEp q1.32,65.6,U4 1.2G+1.3W WSn q1.32,0.1,U3x 1.2G+1.6Qrig
+S02 S1 (L2),S1,3,north,typical interior truss (lines 3-7),0.935,123.3,U4 1.2G+1.3W WNn q0.935,-40.7,U5 0.9G+1.3W WEp q0.935,46.5,U4 1.2G+1.3W WNn q0.935,0.1,U3x 1.2G+1.6Qrig
+S02 S1 (L2),S1,3,north,typical interior truss (lines 3-7),1.32,146.1,U4 1.2G+1.3W WNn q1.32,-72.0,U5 0.9G+1.3W WEp q1.32,65.6,U4 1.2G+1.3W WNn q1.32,0.1,U3x 1.2G+1.6Qrig
+S02 S1 (L2),S1,4,south,typical interior truss (lines 3-7),0.935,133.9,U4 1.2G+1.3W WSn q0.935,-46.6,U5 0.9G+1.3W WNp q0.935,46.5,U4 1.2G+1.3W WSn q0.935,0.1,U3x 1.2G+1.6Qrig
+S02 S1 (L2),S1,4,south,typical interior truss (lines 3-7),1.32,158.1,U4 1.2G+1.3W WSn q1.32,-81.4,U5 0.9G+1.3W WNp q1.32,65.6,U4 1.2G+1.3W WSn q1.32,0.1,U3x 1.2G+1.6Qrig
+S02 S1 (L2),S1,4,north,typical interior truss (lines 3-7),0.935,133.9,U4 1.2G+1.3W WNn q0.935,-46.6,U5 0.9G+1.3W WSp q0.935,46.5,U4 1.2G+1.3W WNn q0.935,0.1,U3x 1.2G+1.6Qrig
+S02 S1 (L2),S1,4,north,typical interior truss (lines 3-7),1.32,158.1,U4 1.2G+1.3W WNn q1.32,-81.4,U5 0.9G+1.3W WSp q1.32,65.6,U4 1.2G+1.3W WNn q1.32,0.1,U3x 1.2G+1.6Qrig
+S02 S1 (L2),S1,5,south,typical interior truss (lines 3-7),0.935,125.7,U4 1.2G+1.3W WSn q0.935,-39.4,U5 0.9G+1.3W WEp q0.935,46.5,U4 1.2G+1.3W WSn q0.935,40.2,U5 0.9G+1.3W WEn q0.935
+S02 S1 (L2),S1,5,south,typical interior truss (lines 3-7),1.32,148.9,U4 1.2G+1.3W WSn q1.32,-70.1,U5 0.9G+1.3W WEp q1.32,65.6,U4 1.2G+1.3W WSn q1.32,56.8,U5 0.9G+1.3W WEn q1.32
+S02 S1 (L2),S1,5,north,typical interior truss (lines 3-7),0.935,125.7,U4 1.2G+1.3W WNn q0.935,-39.4,U5 0.9G+1.3W WEp q0.935,46.5,U4 1.2G+1.3W WNn q0.935,40.2,U5 0.9G+1.3W WEn q0.935
+S02 S1 (L2),S1,5,north,typical interior truss (lines 3-7),1.32,148.9,U4 1.2G+1.3W WNn q1.32,-70.1,U5 0.9G+1.3W WEp q1.32,65.6,U4 1.2G+1.3W WNn q1.32,56.8,U5 0.9G+1.3W WEn q1.32
+S02 S1 (L2),S1,6,south,typical interior truss (lines 3-7),0.935,133.7,U4 1.2G+1.3W WSn q0.935,-46.9,U5 0.9G+1.3W WNp q0.935,46.5,U4 1.2G+1.3W WSn q0.935,50.4,U4 1.2G+1.3W WEn q0.935
+S02 S1 (L2),S1,6,south,typical interior truss (lines 3-7),1.32,157.9,U4 1.2G+1.3W WSn q1.32,-81.8,U5 0.9G+1.3W WNp q1.32,65.6,U4 1.2G+1.3W WSn q1.32,69.8,U4 1.2G+1.3W WEn q1.32
+S02 S1 (L2),S1,6,north,typical interior truss (lines 3-7),0.935,133.7,U4 1.2G+1.3W WNn q0.935,-46.9,U5 0.9G+1.3W WSp q0.935,46.5,U4 1.2G+1.3W WNn q0.935,50.4,U4 1.2G+1.3W WEn q0.935
+S02 S1 (L2),S1,6,north,typical interior truss (lines 3-7),1.32,157.9,U4 1.2G+1.3W WNn q1.32,-81.8,U5 0.9G+1.3W WSp q1.32,65.6,U4 1.2G+1.3W WNn q1.32,69.8,U4 1.2G+1.3W WEn q1.32
+S02 S1 (L2),S1,7,south,typical interior truss (lines 3-7),0.935,121.0,U4 1.2G+1.3W WSn q0.935,-39.1,U5 0.9G+1.3W WNp q0.935,46.5,U4 1.2G+1.3W WSn q0.935,0.1,U3x 1.2G+1.6Qrig
+S02 S1 (L2),S1,7,south,typical interior truss (lines 3-7),1.32,143.9,U4 1.2G+1.3W WSn q1.32,-69.7,U5 0.9G+1.3W WNp q1.32,65.6,U4 1.2G+1.3W WSn q1.32,0.1,U3x 1.2G+1.6Qrig
+S02 S1 (L2),S1,7,north,typical interior truss (lines 3-7),0.935,121.0,U4 1.2G+1.3W WNn q0.935,-39.1,U5 0.9G+1.3W WSp q0.935,46.5,U4 1.2G+1.3W WNn q0.935,0.1,U3x 1.2G+1.6Qrig
+S02 S1 (L2),S1,7,north,typical interior truss (lines 3-7),1.32,143.9,U4 1.2G+1.3W WNn q1.32,-69.7,U5 0.9G+1.3W WSp q1.32,65.6,U4 1.2G+1.3W WNn q1.32,0.1,U3x 1.2G+1.6Qrig
+S02 S1 (L2),S1,8,south,"second truss (lines 2, 8)",0.935,123.4,U4 1.2G+1.3W WSn q0.935,-59.4,U5 0.9G+1.3W WWp q0.935,46.5,U4 1.2G+1.3W WSn q0.935,0.1,U3x 1.2G+1.6Qrig
+S02 S1 (L2),S1,8,south,"second truss (lines 2, 8)",1.32,146.6,U4 1.2G+1.3W WSn q1.32,-99.7,U5 0.9G+1.3W WWp q1.32,65.6,U4 1.2G+1.3W WSn q1.32,0.1,U3x 1.2G+1.6Qrig
+S02 S1 (L2),S1,8,north,"second truss (lines 2, 8)",0.935,123.4,U4 1.2G+1.3W WNn q0.935,-59.4,U5 0.9G+1.3W WWp q0.935,46.5,U4 1.2G+1.3W WNn q0.935,0.1,U3x 1.2G+1.6Qrig
+S02 S1 (L2),S1,8,north,"second truss (lines 2, 8)",1.32,146.6,U4 1.2G+1.3W WNn q1.32,-99.7,U5 0.9G+1.3W WWp q1.32,65.6,U4 1.2G+1.3W WNn q1.32,0.1,U3x 1.2G+1.6Qrig
+S02 S1 (L2),S1,9,south,"end-adjacent truss (lines 1, 9)",0.935,115.8,U4 1.2G+1.3W WNn q0.935,-74.4,U5 0.9G+1.3W WSp q0.935,55.0,U4 1.2G+1.3W WEp q0.935,0.1,U3x 1.2G+1.6Qrig
+S02 S1 (L2),S1,9,south,"end-adjacent truss (lines 1, 9)",1.32,137.1,U4 1.2G+1.3W WNn q1.32,-120.9,U5 0.9G+1.3W WSp q1.32,77.7,U4 1.2G+1.3W WEp q1.32,0.1,U3x 1.2G+1.6Qrig
+S02 S1 (L2),S1,9,north,"end-adjacent truss (lines 1, 9)",0.935,115.8,U4 1.2G+1.3W WSn q0.935,-74.4,U5 0.9G+1.3W WNp q0.935,55.0,U4 1.2G+1.3W WEp q0.935,0.1,U3x 1.2G+1.6Qrig
+S02 S1 (L2),S1,9,north,"end-adjacent truss (lines 1, 9)",1.32,137.1,U4 1.2G+1.3W WSn q1.32,-120.9,U5 0.9G+1.3W WNp q1.32,77.7,U4 1.2G+1.3W WEp q1.32,0.1,U3x 1.2G+1.6Qrig
+S02 S1 (L2),S1,10,south,"gable truss (lines 0, 10)",0.935,114.0,U4 1.2G+1.3W WSn q0.935,-68.8,U5 0.9G+1.3W WEp q0.935,33.6,U4 1.2G+1.3W WEp q0.935,18.8,U4 1.2G+1.3W WSp q0.935
+S02 S1 (L2),S1,10,south,"gable truss (lines 0, 10)",1.32,138.6,U4 1.2G+1.3W WSn q1.32,-111.2,U5 0.9G+1.3W WEp q1.32,47.4,U4 1.2G+1.3W WEp q1.32,26.5,U4 1.2G+1.3W WSp q1.32
+S02 S1 (L2),S1,10,north,"gable truss (lines 0, 10)",0.935,114.0,U4 1.2G+1.3W WNn q0.935,-68.8,U5 0.9G+1.3W WEp q0.935,33.6,U4 1.2G+1.3W WEp q0.935,18.8,U4 1.2G+1.3W WNp q0.935
+S02 S1 (L2),S1,10,north,"gable truss (lines 0, 10)",1.32,138.6,U4 1.2G+1.3W WNn q1.32,-111.2,U5 0.9G+1.3W WEp q1.32,47.4,U4 1.2G+1.3W WEp q1.32,26.5,U4 1.2G+1.3W WNp q1.32
+S01 S3,S3,0,south,"gable truss (lines 0, 10)",0.85,110.5,U4 1.2G+1.3W WSn q0.85,-62.3,U5 0.9G+1.3W WWp q0.85,23.4,U5 0.9G+1.3W WWp q0.85,17.0,U4 1.2G+1.3W WSp q0.85
+S01 S3,S3,0,south,"gable truss (lines 0, 10)",1.2,134.6,U4 1.2G+1.3W WSn q1.2,-101.4,U5 0.9G+1.3W WWp q1.2,33.0,U5 0.9G+1.3W WWp q1.2,24.1,U4 1.2G+1.3W WSp q1.2
+S01 S3,S3,0,north,"gable truss (lines 0, 10)",0.85,110.5,U4 1.2G+1.3W WNn q0.85,-62.3,U5 0.9G+1.3W WWp q0.85,23.4,U5 0.9G+1.3W WWp q0.85,17.0,U4 1.2G+1.3W WNp q0.85
+S01 S3,S3,0,north,"gable truss (lines 0, 10)",1.2,134.6,U4 1.2G+1.3W WNn q1.2,-101.4,U5 0.9G+1.3W WWp q1.2,33.0,U5 0.9G+1.3W WWp q1.2,24.1,U4 1.2G+1.3W WNp q1.2
+S01 S3,S3,1,south,"end-adjacent truss (lines 1, 9)",0.85,100.7,U4 1.2G+1.3W WNn q0.85,-62.1,U5 0.9G+1.3W WSp q0.85,38.2,U5 0.9G+1.3W WWp q0.85,36.9,U4 1.2G+1.3W WWn q0.85
+S01 S3,S3,1,south,"end-adjacent truss (lines 1, 9)",1.2,115.8,U4 1.2G+1.3W WNn q1.2,-103.3,U5 0.9G+1.3W WSp q1.2,54.0,U5 0.9G+1.3W WWp q1.2,51.7,U4 1.2G+1.3W WWn q1.2
+S01 S3,S3,1,north,"end-adjacent truss (lines 1, 9)",0.85,100.7,U4 1.2G+1.3W WSn q0.85,-62.1,U5 0.9G+1.3W WNp q0.85,38.2,U5 0.9G+1.3W WWp q0.85,36.9,U4 1.2G+1.3W WWn q0.85
+S01 S3,S3,1,north,"end-adjacent truss (lines 1, 9)",1.2,115.8,U4 1.2G+1.3W WSn q1.2,-103.3,U5 0.9G+1.3W WNp q1.2,54.0,U5 0.9G+1.3W WWp q1.2,51.7,U4 1.2G+1.3W WWn q1.2
+S01 S3,S3,2,south,"second truss (lines 2, 8)",0.85,116.8,U4 1.2G+1.3W WSn q0.85,-50.8,U5 0.9G+1.3W WEp q0.85,31.6,U5 0.9G+1.3W WWp q0.85,37.2,U4 1.2G+1.3W WWn q0.85
+S01 S3,S3,2,south,"second truss (lines 2, 8)",1.2,137.1,U4 1.2G+1.3W WSn q1.2,-86.8,U5 0.9G+1.3W WEp q1.2,44.6,U5 0.9G+1.3W WWp q1.2,52.0,U4 1.2G+1.3W WWn q1.2
+S01 S3,S3,2,north,"second truss (lines 2, 8)",0.85,116.8,U4 1.2G+1.3W WNn q0.85,-50.8,U5 0.9G+1.3W WEp q0.85,31.6,U5 0.9G+1.3W WWp q0.85,37.2,U4 1.2G+1.3W WWn q0.85
+S01 S3,S3,2,north,"second truss (lines 2, 8)",1.2,137.1,U4 1.2G+1.3W WNn q1.2,-86.8,U5 0.9G+1.3W WEp q1.2,44.6,U5 0.9G+1.3W WWp q1.2,52.0,U4 1.2G+1.3W WWn q1.2
+S01 S3,S3,3,south,typical interior truss (lines 3-7),0.85,115.2,U4 1.2G+1.3W WSn q0.85,-35.9,U5 0.9G+1.3W WEp q0.85,31.6,U5 0.9G+1.3W WWp q0.85,0.0,U3x 1.2G+1.6Qrig
+S01 S3,S3,3,south,typical interior truss (lines 3-7),1.2,135.5,U4 1.2G+1.3W WSn q1.2,-64.5,U5 0.9G+1.3W WEp q1.2,44.6,U5 0.9G+1.3W WWp q1.2,0.0,U3x 1.2G+1.6Qrig
+S01 S3,S3,3,north,typical interior truss (lines 3-7),0.85,115.2,U4 1.2G+1.3W WNn q0.85,-35.9,U5 0.9G+1.3W WEp q0.85,31.6,U5 0.9G+1.3W WWp q0.85,0.0,U3x 1.2G+1.6Qrig
+S01 S3,S3,3,north,typical interior truss (lines 3-7),1.2,135.5,U4 1.2G+1.3W WNn q1.2,-64.5,U5 0.9G+1.3W WEp q1.2,44.6,U5 0.9G+1.3W WWp q1.2,0.0,U3x 1.2G+1.6Qrig
+S01 S3,S3,4,south,typical interior truss (lines 3-7),0.85,123.7,U4 1.2G+1.3W WSn q0.85,-39.4,U5 0.9G+1.3W WNp q0.85,31.6,U5 0.9G+1.3W WWp q0.85,0.0,U3x 1.2G+1.6Qrig
+S01 S3,S3,4,south,typical interior truss (lines 3-7),1.2,144.8,U4 1.2G+1.3W WSn q1.2,-70.5,U5 0.9G+1.3W WNp q1.2,44.7,U5 0.9G+1.3W WWp q1.2,0.0,U3x 1.2G+1.6Qrig
+S01 S3,S3,4,north,typical interior truss (lines 3-7),0.85,123.7,U4 1.2G+1.3W WNn q0.85,-39.4,U5 0.9G+1.3W WSp q0.85,31.6,U5 0.9G+1.3W WWp q0.85,0.0,U3x 1.2G+1.6Qrig
+S01 S3,S3,4,north,typical interior truss (lines 3-7),1.2,144.8,U4 1.2G+1.3W WNn q1.2,-70.5,U5 0.9G+1.3W WSp q1.2,44.7,U5 0.9G+1.3W WWp q1.2,0.0,U3x 1.2G+1.6Qrig
+S01 S3,S3,5,south,typical interior truss (lines 3-7),0.85,117.3,U4 1.2G+1.3W WSn q0.85,-34.9,U5 0.9G+1.3W WEp q0.85,30.8,U4 1.2G+1.3W WSn q0.85,37.1,U4 1.2G+1.3W WEn q0.85
+S01 S3,S3,5,south,typical interior truss (lines 3-7),1.2,138.0,U4 1.2G+1.3W WSn q1.2,-63.1,U5 0.9G+1.3W WEp q1.2,43.5,U4 1.2G+1.3W WSn q1.2,51.9,U4 1.2G+1.3W WEn q1.2
+S01 S3,S3,5,north,typical interior truss (lines 3-7),0.85,117.3,U4 1.2G+1.3W WNn q0.85,-34.9,U5 0.9G+1.3W WEp q0.85,30.8,U4 1.2G+1.3W WNn q0.85,37.1,U4 1.2G+1.3W WEn q0.85
+S01 S3,S3,5,north,typical interior truss (lines 3-7),1.2,138.0,U4 1.2G+1.3W WNn q1.2,-63.1,U5 0.9G+1.3W WEp q1.2,43.5,U4 1.2G+1.3W WNn q1.2,51.9,U4 1.2G+1.3W WEn q1.2
+S01 S3,S3,6,south,typical interior truss (lines 3-7),0.85,123.7,U4 1.2G+1.3W WSn q0.85,-40.0,U5 0.9G+1.3W WWp q0.85,31.6,U5 0.9G+1.3W WEp q0.85,37.2,U4 1.2G+1.3W WEn q0.85
+S01 S3,S3,6,south,typical interior truss (lines 3-7),1.2,144.8,U4 1.2G+1.3W WSn q1.2,-71.4,U5 0.9G+1.3W WWp q1.2,44.6,U5 0.9G+1.3W WEp q1.2,52.1,U4 1.2G+1.3W WEn q1.2
+S01 S3,S3,6,north,typical interior truss (lines 3-7),0.85,123.7,U4 1.2G+1.3W WNn q0.85,-40.0,U5 0.9G+1.3W WWp q0.85,31.6,U5 0.9G+1.3W WEp q0.85,37.2,U4 1.2G+1.3W WEn q0.85
+S01 S3,S3,6,north,typical interior truss (lines 3-7),1.2,144.8,U4 1.2G+1.3W WNn q1.2,-71.4,U5 0.9G+1.3W WWp q1.2,44.6,U5 0.9G+1.3W WEp q1.2,52.1,U4 1.2G+1.3W WEn q1.2
+S01 S3,S3,7,south,typical interior truss (lines 3-7),0.85,112.5,U4 1.2G+1.3W WSn q0.85,-35.1,U5 0.9G+1.3W WEp q0.85,31.6,U5 0.9G+1.3W WEp q0.85,0.0,U3x 1.2G+1.6Qrig
+S01 S3,S3,7,south,typical interior truss (lines 3-7),1.2,132.9,U4 1.2G+1.3W WSn q1.2,-63.4,U5 0.9G+1.3W WEp q1.2,44.6,U5 0.9G+1.3W WEp q1.2,0.0,U3x 1.2G+1.6Qrig
+S01 S3,S3,7,north,typical interior truss (lines 3-7),0.85,112.5,U4 1.2G+1.3W WNn q0.85,-35.1,U5 0.9G+1.3W WEp q0.85,31.6,U5 0.9G+1.3W WEp q0.85,0.0,U3x 1.2G+1.6Qrig
+S01 S3,S3,7,north,typical interior truss (lines 3-7),1.2,132.9,U4 1.2G+1.3W WNn q1.2,-63.4,U5 0.9G+1.3W WEp q1.2,44.6,U5 0.9G+1.3W WEp q1.2,0.0,U3x 1.2G+1.6Qrig
+S01 S3,S3,8,south,"second truss (lines 2, 8)",0.85,113.6,U4 1.2G+1.3W WSn q0.85,-52.2,U5 0.9G+1.3W WWp q0.85,31.6,U5 0.9G+1.3W WEp q0.85,0.0,U3x 1.2G+1.6Qrig
+S01 S3,S3,8,south,"second truss (lines 2, 8)",1.2,133.8,U4 1.2G+1.3W WSn q1.2,-88.8,U5 0.9G+1.3W WWp q1.2,44.6,U5 0.9G+1.3W WEp q1.2,0.0,U3x 1.2G+1.6Qrig
+S01 S3,S3,8,north,"second truss (lines 2, 8)",0.85,113.6,U4 1.2G+1.3W WNn q0.85,-52.2,U5 0.9G+1.3W WWp q0.85,31.6,U5 0.9G+1.3W WEp q0.85,0.0,U3x 1.2G+1.6Qrig
+S01 S3,S3,8,north,"second truss (lines 2, 8)",1.2,133.8,U4 1.2G+1.3W WNn q1.2,-88.8,U5 0.9G+1.3W WWp q1.2,44.6,U5 0.9G+1.3W WEp q1.2,0.0,U3x 1.2G+1.6Qrig
+S01 S3,S3,9,south,"end-adjacent truss (lines 1, 9)",0.85,102.4,U4 1.2G+1.3W WNn q0.85,-61.7,U5 0.9G+1.3W WSp q0.85,38.2,U5 0.9G+1.3W WEp q0.85,0.0,U3x 1.2G+1.6Qrig
+S01 S3,S3,9,south,"end-adjacent truss (lines 1, 9)",1.2,118.8,U4 1.2G+1.3W WNn q1.2,-102.4,U5 0.9G+1.3W WSp q1.2,54.0,U5 0.9G+1.3W WEp q1.2,0.0,U3x 1.2G+1.6Qrig
+S01 S3,S3,9,north,"end-adjacent truss (lines 1, 9)",0.85,102.4,U4 1.2G+1.3W WSn q0.85,-61.7,U5 0.9G+1.3W WNp q0.85,38.2,U5 0.9G+1.3W WEp q0.85,0.0,U3x 1.2G+1.6Qrig
+S01 S3,S3,9,north,"end-adjacent truss (lines 1, 9)",1.2,118.8,U4 1.2G+1.3W WSn q1.2,-102.4,U5 0.9G+1.3W WNp q1.2,54.0,U5 0.9G+1.3W WEp q1.2,0.0,U3x 1.2G+1.6Qrig
+S01 S3,S3,10,south,"gable truss (lines 0, 10)",0.85,105.6,U4 1.2G+1.3W WSn q0.85,-60.8,U5 0.9G+1.3W WEp q0.85,23.4,U5 0.9G+1.3W WEp q0.85,17.1,U4 1.2G+1.3W WSp q0.85
+S01 S3,S3,10,south,"gable truss (lines 0, 10)",1.2,127.2,U4 1.2G+1.3W WSn q1.2,-99.5,U5 0.9G+1.3W WEp q1.2,33.0,U5 0.9G+1.3W WEp q1.2,24.1,U4 1.2G+1.3W WSp q1.2
+S01 S3,S3,10,north,"gable truss (lines 0, 10)",0.85,105.6,U4 1.2G+1.3W WNn q0.85,-60.8,U5 0.9G+1.3W WEp q0.85,23.4,U5 0.9G+1.3W WEp q0.85,17.1,U4 1.2G+1.3W WNp q0.85
+S01 S3,S3,10,north,"gable truss (lines 0, 10)",1.2,127.2,U4 1.2G+1.3W WNn q1.2,-99.5,U5 0.9G+1.3W WEp q1.2,33.0,U5 0.9G+1.3W WEp q1.2,24.1,U4 1.2G+1.3W WNp q1.2

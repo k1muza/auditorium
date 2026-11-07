@@ -1,0 +1,48 @@
+scheme,group,section,pieces,length_m,mass_t,role,common_to_all
+S1,COLC,UC 305x305x137,32,52.3,7.163,gable-line columns 0/10,False
+S1,COL,UC 305x305x137,144,235.4,32.232,side columns lines 1-9,False
+S1,EAV,CHS 168.3x6.3,20,111.2,2.799,eaves struts,True
+S1,EGC,CHS 168.3x5,20,111.2,2.239,eaves girder inner chord,False
+S1,EGD,CHS 168.3x5,16,126.2,2.54,eaves girder diagonals,False
+S1,RBD,CHS 168.3x5,24,149.4,3.007,end-bay roof girder diagonals,True
+S1,XF,CHS 139.7x4.5,20,139.1,2.086,end-bay cross frames,True
+S1,BCB,CHS 139.7x4.5,8,62.0,0.93,end-bay bottom-chord bracing,True
+S1,BCT,CHS 88.9x3.2,50,278.0,1.88,bottom-chord ties,True
+S1,POST,UB 533x210x82,72,184.2,15.142,gable wind posts,True
+S1,GBX,CHS 219.1x6.3,16,150.4,4.974,gable bracing diagonals,False
+S1,GBS,CHS 88.9x3.2,4,21.6,0.146,gable bracing struts,False
+S1,WBS,CHS 101.6x3.6,12,22.2,0.194,wall bracing sill strut,True
+S1,WBK,CHS 60.3x3,8,20.9,0.089,wall bracing knees,True
+S1,WBX,CHS 193.7x6.3,8,96.5,2.809,wall bracing diagonals,True
+S1,PSTR,CHS 88.9x3.2,20,129.6,0.877,gable-post restraint struts (2 rows per gable),True
+S1,PLATES,S355 plate,-,-,5.16,connection and base plates (allowance),False
+S2,COLC,UC 356x368x153,32,52.3,8.0,gable-line columns 0/10,False
+S2,COL,UC 356x368x153,144,235.4,35.999,side columns lines 1-9,False
+S2,EAV,CHS 139.7x4.5,20,111.2,1.668,eaves struts,True
+S2,RBD,CHS 139.7x4.5,24,149.4,2.241,end-bay roof girder diagonals,True
+S2,XF,CHS 139.7x4.5,20,139.1,2.086,end-bay cross frames,True
+S2,BCB,CHS 139.7x4.5,8,62.0,0.93,end-bay bottom-chord bracing,True
+S2,BCT,CHS 101.6x3.6,50,278.0,2.419,bottom-chord ties,True
+S2,POST,UB 533x210x82,72,184.2,15.142,gable wind posts,True
+S2,WBS,CHS 101.6x3.6,12,22.2,0.194,wall bracing sill strut,True
+S2,WBK,CHS 48.3x3,8,20.9,0.07,wall bracing knees,True
+S2,WBX,CHS 193.7x6.3,8,96.5,2.809,wall bracing diagonals,True
+S2,PSTR,CHS 88.9x3.2,20,129.6,0.877,gable-post restraint struts (2 rows per gable),True
+S2,PLATES,S355 plate,-,-,6.384,connection and base plates (allowance),False
+S3,COLC,UC 305x305x97,32,52.3,5.07,gable-line columns 0/10,False
+S3,COL,UC 305x305x97,144,235.4,22.814,side columns lines 1-9,False
+S3,EAV,CHS 168.3x6.3,20,111.2,2.799,eaves struts,True
+S3,EGC,CHS 139.7x4.5,20,111.2,1.668,eaves girder inner chord,False
+S3,EGD,CHS 168.3x5,16,126.2,2.54,eaves girder diagonals,False
+S3,RBD,CHS 168.3x5,24,149.4,3.007,end-bay roof girder diagonals,True
+S3,XF,CHS 139.7x4.5,20,139.1,2.086,end-bay cross frames,True
+S3,BCB,CHS 139.7x4.5,8,62.0,0.93,end-bay bottom-chord bracing,True
+S3,BCT,CHS 88.9x3.2,50,278.0,1.88,bottom-chord ties,True
+S3,POST,UB 533x210x82,72,184.2,15.142,gable wind posts,True
+S3,GBX,CHS 193.7x6.3,16,150.4,4.38,gable bracing diagonals,False
+S3,GBS,CHS 88.9x3.2,4,21.6,0.146,gable bracing struts,False
+S3,WBS,CHS 101.6x3.6,12,22.2,0.194,wall bracing sill strut,True
+S3,WBK,CHS 114.3x5,8,20.9,0.282,wall bracing knees,True
+S3,WBX,CHS 219.1x8,8,96.5,4.018,wall bracing diagonals,True
+S3,PSTR,CHS 88.9x3.2,20,129.6,0.877,gable-post restraint struts (2 rows per gable),True
+S3,PLATES,S355 plate,-,-,5.811,connection and base plates (allowance),False

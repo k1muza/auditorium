@@ -1,0 +1,7 @@
+Profile,Angles,kg_per_m,MeasuredLength_m,MeasuredMass_kg,GeometryMass_kg,MeasurementStatus,Stock6mBars_FFD,StockLength_m,StockMass_kg,CuttingOffcut_m,ProcurementStatus
+L100x100x8,146,12.2,692.404,8447.3,8435.3,MODEL_DERIVED,128,768.0,9369.6,75.158,"ASSUMPTION_DEPENDENT (6 m stock per R2, 3 mm kerf placeholder, no offcut reuse across profiles)"
+L60x60x6,176,5.42,571.128,3095.5,3098.3,MODEL_DERIVED,110,660.0,3577.2,88.344,"ASSUMPTION_DEPENDENT (6 m stock per R2, 3 mm kerf placeholder, no offcut reuse across profiles)"
+L70x70x6,44,6.38,57.164,364.7,364.8,MODEL_DERIVED,11,66.0,421.1,8.704,"ASSUMPTION_DEPENDENT (6 m stock per R2, 3 mm kerf placeholder, no offcut reuse across profiles)"
+L75x75x6,184,6.85,711.582,4874.3,4865.8,MODEL_DERIVED,184,1104.0,7562.4,391.866,"ASSUMPTION_DEPENDENT (6 m stock per R2, 3 mm kerf placeholder, no offcut reuse across profiles)"
+L80x80x8,156,9.63,847.158,8158.2,8160.2,MODEL_DERIVED,156,936.0,9013.7,88.374,"ASSUMPTION_DEPENDENT (6 m stock per R2, 3 mm kerf placeholder, no offcut reuse across profiles)"
+L90x90x8,108,10.9,603.173,6574.6,6578.6,MODEL_DERIVED,108,648.0,7063.2,44.503,"ASSUMPTION_DEPENDENT (6 m stock per R2, 3 mm kerf placeholder, no offcut reuse across profiles)"

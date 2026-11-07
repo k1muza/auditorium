@@ -1,0 +1,141 @@
+{
+ "trusses": 11,
+ "totals": {
+  "Truss": "ALL 11 TRUSSES",
+  "BuiltUpMembers": 407,
+  "ChordPieces": 132,
+  "WebMembers": 275,
+  "Angles": 814,
+  "AngleLength_m": 3482.6,
+  "MemberMassNominal_kg": 31514.7,
+  "MemberMassGeometry_kg": 31503.3,
+  "ConnectionAssemblies": 286,
+  "Gussets": 286,
+  "GussetMass_kg": 2189.4,
+  "SplicePlates": 220,
+  "SpliceMass_kg": 475.0,
+  "PackingPlates": 950,
+  "PackerMass_kg": 479.3,
+  "RiggingTabs": 22,
+  "BoltSets": 3634,
+  "BoltSets_M20": 3124,
+  "BoltSets_M16": 510,
+  "Nuts": 3634,
+  "Washers": 3634,
+  "PlateMass_kg": 3143.7,
+  "SteelMassExclBolts_kg": 34658.4,
+  "BoltSetMass_kg": 976.3,
+  "TotalSteelIndicative_kg": 35634.7
+ },
+ "by_profile": {
+  "L60x60x6": {
+   "angles": 176,
+   "length_m": 571.13,
+   "mass_kg": 3095.5
+  },
+  "L70x70x6": {
+   "angles": 44,
+   "length_m": 57.16,
+   "mass_kg": 364.7
+  },
+  "L80x80x8": {
+   "angles": 156,
+   "length_m": 847.16,
+   "mass_kg": 8158.2
+  },
+  "L75x75x6": {
+   "angles": 184,
+   "length_m": 711.58,
+   "mass_kg": 4874.3
+  },
+  "L100x100x8": {
+   "angles": 146,
+   "length_m": 692.4,
+   "mass_kg": 8447.3
+  },
+  "L90x90x8": {
+   "angles": 108,
+   "length_m": 603.17,
+   "mass_kg": 6574.6
+  }
+ },
+ "plates": {
+  "GUSSET_PLATE": {
+   "Component": "GUSSET_PLATE",
+   "Type": "SG-OPTB-GUSSET-10",
+   "Thickness_mm": 10.0,
+   "Count": 286,
+   "UniquePartMarks": 29,
+   "GrossArea_m2": 28.8619,
+   "NetArea_m2": 27.8744,
+   "BoltHoles": 2706,
+   "Mass_kg": 2188.9,
+   "MeasurementStatus": "MODEL_DERIVED"
+  },
+  "PACKING_PLATE": {
+   "Component": "PACKING_PLATE",
+   "Type": "SG-OPTB-PACKER-80x90x10",
+   "Thickness_mm": 10.0,
+   "Count": 108,
+   "UniquePartMarks": 1,
+   "GrossArea_m2": 0.7776,
+   "NetArea_m2": 0.7776,
+   "BoltHoles": 0,
+   "Mass_kg": 61.0,
+   "MeasurementStatus": "ASSUMPTION_DEPENDENT"
+  },
+  "SPLICE_PLATE": {
+   "Component": "SPLICE_PLATE",
+   "Type": "SG-OPTB-SPLICE-8",
+   "Thickness_mm": 8.0,
+   "Count": 220,
+   "UniquePartMarks": 5,
+   "GrossArea_m2": 8.2225,
+   "NetArea_m2": 7.5537,
+   "BoltHoles": 1760,
+   "Mass_kg": 474.8,
+   "MeasurementStatus": "ASSUMPTION_DEPENDENT"
+  }
+ },
+ "bolt_types": {
+  "SG-OPTB-BOLTSET-M16x45-8.8-G22": 510,
+  "SG-OPTB-BOLTSET-M20x50-8.8-G22": 728,
+  "SG-OPTB-BOLTSET-M20x50-8.8-G26": 1516,
+  "SG-OPTB-BOLTSET-M20x70-8.8-G42": 880
+ },
+ "connection_types": 35,
+ "connection_instances": 286,
+ "built_up_types": 9,
+ "truss_types": {
+  "SG-OPTB-TT-G": 2,
+  "SG-OPTB-TT-R": 2,
+  "SG-OPTB-TT-T": 7
+ },
+ "member_surface_m2": 1102.16,
+ "stock_bars": {
+  "L60x60x6": {
+   "bars": 110,
+   "offcut_m": 88.344
+  },
+  "L70x70x6": {
+   "bars": 11,
+   "offcut_m": 8.704
+  },
+  "L80x80x8": {
+   "bars": 156,
+   "offcut_m": 88.374
+  },
+  "L75x75x6": {
+   "bars": 184,
+   "offcut_m": 391.866
+  },
+  "L100x100x8": {
+   "bars": 128,
+   "offcut_m": 75.158
+  },
+  "L90x90x8": {
+   "bars": 108,
+   "offcut_m": 44.503
+  }
+ }
+}

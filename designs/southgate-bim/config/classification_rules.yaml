@@ -1,0 +1,238 @@
+# Ordered source-component -> IFC classification rules. FIRST MATCH WINS.
+#
+# match keys (all given keys must match; Python regex, re.search):
+#   coll  - top-level source collection name        name  - source object name
+#   etype - source custom property element_type
+# result keys:
+#   cls / ptype / otype  - IFC class, PredefinedType (USERDEFINED -> otype used as ObjectType)
+#   method - wall | slab | profile | plate | extrude | door | window | stair | space | zone | proxy
+#            (representation is chosen by evidence: parametric only when the mesh is proven
+#             to be a box / prism; otherwise the exact source tessellation is kept)
+#   group  - consolidation key template: parts with the same key become ONE IFC element
+#   assembly - IfcElementAssembly / aggregate key template (children keep their own class)
+#   cat    - stable identifier category  (SOUTHGATE-<cat>-NNNN)
+#   phase  - migration batch C..I        system - distribution system / group code
+#   status - design status override (default from source evidence, see migration/plan.py)
+# Named regex groups in `name` are available to templates as {name}.
+
+rules:
+# ---------------------------------------------------------------- B spatial
+- {id: SPACE, coll: "^Spaces$", cls: IfcSpace, ptype: INTERNAL, method: space, cat: SPACE, phase: B}
+- {id: WHEELCHAIR-POS, coll: "^Wheelchair$", cls: IfcSpatialZone, ptype: USERDEFINED, otype: WHEELCHAIR_POSITION, method: zone, cat: ZONE, phase: B}
+- {id: REFUGE, name: "^REFUGE-", cls: IfcSpatialZone, ptype: USERDEFINED, otype: EVACUATION_REFUGE, method: zone, cat: ZONE, phase: B}
+
+# ---------------------------------------------------------------- I foundations (current concept)
+- {id: FTG-GALLERY-PAD, name: "^PAD-GALLERY", cls: IfcFooting, ptype: PAD_FOOTING, method: extrude, cat: FTG, phase: I, status: CONCEPT_UNVERIFIED}
+- {id: FTG-CONCEPT-PAD, coll: "Concept Footing Pads$", cls: IfcFooting, ptype: PAD_FOOTING, method: extrude, cat: FTG, phase: I, status: CONCEPT_UNVERIFIED}
+- {id: FTG-WEST-STRIP, name: "STRIP-FOOTING", cls: IfcFooting, ptype: STRIP_FOOTING, method: extrude, cat: FTG, phase: I, status: CONCEPT_UNVERIFIED}
+- {id: FTG-WEST-PAD, coll: "Relocated West Wall - Concept Footings", cls: IfcFooting, ptype: PAD_FOOTING, method: extrude, cat: FTG, phase: I, status: CONCEPT_UNVERIFIED}
+- {id: FTG-SPIRAL, name: "(SPIRAL-MAST-ISOLATED-FOOTING|SPIRAL-CIRCULAR-FOUNDATION-PAD|INDEPENDENT-FOOTING)", cls: IfcFooting, ptype: PAD_FOOTING, method: extrude, cat: FTG, phase: I, status: CONCEPT_UNVERIFIED}
+- {id: FTG-EXT05, coll: "^EXT05-", etype: "^Foundation$", cls: IfcFooting, ptype: PAD_FOOTING, method: extrude, cat: FTG, phase: I, status: CONCEPT_UNVERIFIED}
+- {id: FTG-GENERIC, etype: "^Foundation$", cls: IfcFooting, ptype: NOTDEFINED, method: extrude, cat: FTG, phase: I, status: CONCEPT_UNVERIFIED}
+- {id: SUBBASE, name: "SUBBASE", cls: IfcBuildingElementProxy, ptype: USERDEFINED, otype: COMPACTED_GRANULAR_SUBBASE, method: extrude, cat: SUB, phase: I}
+- {id: DPM, name: "-DPM$", cls: IfcCovering, ptype: MEMBRANE, method: extrude, cat: COV, phase: I}
+
+# ---------------------------------------------------------------- C slabs and floors
+- {id: SLAB-GF, name: "^(SLAB-FOYER|SLAB-BACKSTAGE|HALL-GROUND-FLOOR-UNIFIED|BIM-OFFICE-GROUND-BEARING-RC-SLAB)", cls: IfcSlab, ptype: BASESLAB, method: slab, cat: SLAB, phase: C}
+- {id: SLAB-MEZZ-UPPER, name: "^(MEZZ-CROSS|MEZZ-SERVICE|UPPER-CROSS|UPPER-SERVICES)$", cls: IfcSlab, ptype: FLOOR, method: slab, cat: SLAB, phase: C}
+- {id: FLOOR-GRID, name: "^HALL-FLOOR-RADIAL-GRID", cls: IfcCovering, ptype: FLOORING, otype: RADIAL_JOINT_GRID, method: extrude, cat: COV, phase: F}
+- {id: SLAB-TERRACE-DECK, name: "STRUCTURAL-ROOF-DECK|DECK-REINSTATED", cls: IfcSlab, ptype: ROOF, method: slab, cat: SLAB, phase: G}
+- {id: TERRACE-SCREED, name: "ROOF-FALL-SCREED-MEMBRANE|WATERPROOF-CONTINUOUS", cls: IfcCovering, ptype: ROOFING, otype: SCREED_AND_MEMBRANE, method: extrude, cat: COV, phase: G}
+- {id: TERRACE-PAVERS, name: "TERACE-PAVERS|TERRACE-PAVERS|WALKING-PAVERS", cls: IfcCovering, ptype: FLOORING, otype: TERRACE_PAVERS, method: extrude, cat: COV, phase: G}
+- {id: LOGGIA-FLOOR, name: "^LOGGIA-FLOOR$", cls: IfcSlab, ptype: FLOOR, method: slab, cat: SLAB, phase: D}
+- {id: LOGGIA-SOFFIT, name: "SOFFIT", cls: IfcCovering, ptype: CEILING, method: extrude, cat: COV, phase: D}
+- {id: TIER, name: "^TIER-\\d+", cls: IfcSlab, ptype: FLOOR, otype: GALLERY_TIER, method: slab, cat: SLAB, phase: F}
+- {id: SEAT-PLINTH, name: "^(COMP-BASE|WC-TERRACE-WC)", cls: IfcSlab, ptype: USERDEFINED, otype: SEATING_PLINTH, method: slab, cat: SLAB, phase: F}
+- {id: ANNEX-FLOOR, name: "^ANNEX-(FLOOR-FINISH|BACKSTAGE-CORRIDOR-FLOOR)", cls: IfcCovering, ptype: FLOORING, method: extrude, cat: COV, phase: G}
+- {id: SPIRAL-LANDING-SLAB, name: "SPIRAL-GROUND-RC-LANDING", cls: IfcSlab, ptype: LANDING, method: slab, cat: SLAB, phase: G}
+
+# ---------------------------------------------------------------- C structure (gallery, cores)
+- {id: GAL-COL, name: "^COL-GALLERY", cls: IfcColumn, ptype: COLUMN, method: profile, cat: COL, phase: C}
+- {id: GAL-RAKER, name: "^RAKER", cls: IfcBeam, ptype: BEAM, otype: RAKER, method: profile, cat: BEAM, phase: C}
+- {id: GAL-TRANSFER, name: "^GALLERY-TRANSFER", cls: IfcBeam, ptype: BEAM, method: profile, cat: BEAM, phase: C}
+- {id: GALLERY-SOFFIT, name: "^GALLERY-SOFFIT$", cls: IfcCovering, ptype: CEILING, method: extrude, cat: COV, phase: F}
+- {id: GALLERY-FASCIA, name: "^GALLERY-FASCIA$", cls: IfcCovering, ptype: CLADDING, method: extrude, cat: COV, phase: F}
+- {id: GALLERY-GLASS, name: "^GALLERY-GLASS$", cls: IfcRailing, ptype: GUARDRAIL, otype: GLASS_GUARD, method: extrude, cat: RAIL, phase: F}
+
+# ---------------------------------------------------------------- C/D walls
+- {id: CORE-WALL, coll: "^(Structure|Architecture)$", name: "^CORE-", cls: IfcWall, ptype: SOLIDWALL, method: wall, cat: WALL, phase: C}
+- {id: LINTEL, name: "LINTEL", cls: IfcBeam, ptype: LINTEL, method: profile, cat: BEAM, phase: D}
+- {id: EXT-WALL, coll: "^Architecture$", name: "^(EXT-[NSE]-|GABLE|HALL-WEST-(HIGH-WALL|LOWER-SOLID)|PORTAL-[LR]$)", cls: IfcWall, ptype: SOLIDWALL, method: wall, cat: WALL, phase: C}
+- {id: EXT-WINDOW-INFILL, name: "^EXT-E-WINDOW-INFILL", cls: IfcWall, ptype: SOLIDWALL, otype: WINDOW_INFILL_PANEL, method: wall, cat: WALL, phase: D}
+- {id: INT-WALL, coll: "^Architecture$", name: "^(TOILET-(?!WINDOW)|MEZZ-(PART|END)|AWC-|HALL-SCREEN)", cls: IfcWall, ptype: PARTITIONING, method: wall, cat: WALL, phase: G}
+- {id: FACADE-BAY, coll: "^Facade - 5.56m Grid$", cls: IfcWall, ptype: SOLIDWALL, otype: FACADE_BAY_INFILL, method: wall, cat: WALL, phase: D}
+- {id: FACADE-PIER, name: "MASONRY-PIER$", cls: IfcColumn, ptype: PILASTER, method: profile, cat: COL, phase: D}
+- {id: FACADE-CROSS, name: "^FACADE-CROSS-|DECORATIVE-CROSS", cls: IfcMember, ptype: USERDEFINED, otype: FACADE_CROSS_FEATURE, method: profile, cat: MEMB, phase: D}
+- {id: ENTRY-GLASS, name: "^ENTRY-GLASS-", cls: IfcPlate, ptype: CURTAIN_PANEL, method: plate, assembly: "ENTRY-SCREEN-CURTAIN-WALL", cat: PLATE, phase: D}
+- {id: LOGGIA-PORTAL, coll: "^North Loggia", cls: IfcMember, ptype: USERDEFINED, otype: PORTAL_FRAME_ELEMENT, method: profile, cat: MEMB, phase: D}
+
+# annex (west office wing)
+- {id: ANNEX-WIN, name: "^ANNEX-(?P<room>[A-Z-]+?)-WIN-", cls: IfcWindow, ptype: WINDOW, method: window, group: "ANNEX-{room}-WINDOW", cat: WIN, phase: G}
+- {id: ANNEX-DOOR, name: "^ANNEX-(?P<room>[A-Z-]+?)-DOOR-(LEAF|HANDLE)$", cls: IfcDoor, ptype: DOOR, method: door, group: "ANNEX-{room}-DOOR", cat: DOOR, phase: G}
+- {id: ANNEX-EXT-DOOR, name: "^ANNEX-PLANT-EXTERNAL-DOOR", cls: IfcDoor, ptype: DOOR, method: door, group: "ANNEX-PLANT-EXTERNAL-DOOR", cat: DOOR, phase: G}
+- {id: ANNEX-WALL, coll: "^Rear Annex", etype: "^Wall$", cls: IfcWall, ptype: SOLIDWALL, method: wall, cat: WALL, phase: G}
+- {id: ANNEX-FURN, coll: "^Rear Annex", name: "(DESK|CHAIR|SOFA|TABLE|SHELVING|WORKDESK|CABINET)", cls: IfcFurniture, ptype: USERDEFINED, otype: OFFICE_FURNITURE, method: extrude, cat: FURN, phase: G}
+- {id: ANNEX-PLANT-ALLOW, name: "RESERVED-EQUIPMENT-FOOTPRINT", cls: IfcSpatialZone, ptype: USERDEFINED, otype: PLANT_EQUIPMENT_ALLOWANCE, method: zone, cat: ZONE, phase: G}
+
+# ---------------------------------------------------------------- D doors and windows (architecture)
+- {id: WIN-HIGH, name: "^WINDOW-(?P<side>[NS])-(?P<i>\\d+)-", cls: IfcWindow, ptype: WINDOW, method: window, group: "WINDOW-{side}-{i}", cat: WIN, phase: D}
+- {id: WIN-TOILET, name: "^TOILET-WINDOW-(?P<k>[FM]-[GU])-", cls: IfcWindow, ptype: WINDOW, method: window, group: "TOILET-WINDOW-{k}", cat: WIN, phase: D}
+- {id: DOOR-WEST-HALL, name: "^HALL-WEST-(?P<s>NORTH|SOUTH)-(DOOR-OPEN|FRAME-HEAD|FRAME-JAMB-[NS]|HANDLE)$", cls: IfcDoor, ptype: DOOR, method: door, group: "HALL-WEST-{s}-DOOR", cat: DOOR, phase: D}
+- {id: DOOR-STAIR-REGRID, name: "^EXT-[NS]-STAIR-REGRID-(DOOR-HEAD|DOOR-SILL|SOLID-[EW])$", cls: IfcWall, ptype: SOLIDWALL, method: wall, cat: WALL, phase: C}
+- {id: DOOR-ENTRY-SCREEN, coll: "^Doors$", name: "^DOOR-ENTRY-", cls: IfcDoor, ptype: DOOR, method: door, assembly: "ENTRY-SCREEN-CURTAIN-WALL", cat: DOOR, phase: D}
+- {id: DOORS-COLL, coll: "^Doors$", cls: IfcDoor, ptype: DOOR, method: door, cat: DOOR, phase: D}
+- {id: EXT09-DOOR, coll: "^EXT09-", name: "^EXT09-(?P<s>NORTH|SOUTH)-(?!STRUCTURAL-LINTEL)", cls: IfcDoor, ptype: DOOR, method: door, group: "EXT09-{s}-CORRIDOR-DOOR", cat: DOOR, phase: G}
+- {id: EXT09-DOOR2, coll: "^EXT09-", name: "^EXT09-(?P<s>NORTH|SOUTH)-CORRIDOR-EXIT-BAR", cls: IfcDoor, ptype: DOOR, method: door, group: "EXT09-{s}-CORRIDOR-DOOR", cat: DOOR, phase: G}
+
+# ---------------------------------------------------------------- D glazed portals / facade (EXT02/EXT03/EXT13/EXT14)
+- {id: PORTAL-E-DOOR, name: "^EXT02-E-(ENTRANCE-DOOR|DOOR-JAMB|DOOR-PULL)-(?P<a>\\d+)-(?P<b>\\d+)", cls: IfcDoor, ptype: DOOR, method: door, group: "EXT02-E-ENTRANCE-DOOR-{a}-{b}", assembly: "E-CURTAIN-WALL", cat: DOOR, phase: D}
+- {id: PORTAL-E-REAR-DOOR, name: "^EXT02-E-REAR-(INTERNAL-GLASS-DOOR|DOOR-HANDLE)-(?P<a>\\d+)", cls: IfcDoor, ptype: DOOR, method: door, group: "EXT02-E-REAR-DOOR-{a}", assembly: "E-CURTAIN-WALL", cat: DOOR, phase: D}
+- {id: PORTAL-CW-MULLION, name: "^EXT0[23]-(?P<s>[EW])-(CURTAINWALL-PRIMARY-V|CURTAINWALL-TRANSOM|REAR-ENTRY-MULLION|CURTAIN-WALL-BOTTOM-RAIL|INSET-GLAZING-JAMB)", cls: IfcMember, ptype: MULLION, method: profile, assembly: "{s}-CURTAIN-WALL", cat: MEMB, phase: D}
+- {id: PORTAL-CW-GLASS, name: "^EXT0[23]-(?P<s>[EW])-(FRONT-GLASS-DOUBLE-SKIN|REAR-ACTUAL-GABLE-GLASS|OPAQUE-INSULATED-GLAZING-BACKING|SIDE-INSULATED-PRIVACY-SPANDREL)", cls: IfcPlate, ptype: CURTAIN_PANEL, method: plate, assembly: "{s}-CURTAIN-WALL", cat: PLATE, phase: D}
+- {id: PORTAL-COLUMN, name: "^EXT0[23]-[EW]-TALL-PORTAL-COLUMN", cls: IfcColumn, ptype: COLUMN, method: profile, cat: COL, phase: D}
+- {id: PORTAL-GUTTER, name: "^EXT0[23]-[EW]-GUTTER-", cls: IfcPipeSegment, ptype: GUTTER, method: extrude, system: RAINWATER, cat: GUTTER, phase: E}
+- {id: PORTAL-ROOF, name: "^EXT0[23]-[EW]-PROJECTING-ROOF-PITCH", cls: IfcCovering, ptype: ROOFING, method: extrude, assembly: "ROOF", cat: COV, phase: E}
+- {id: PORTAL-SPOT, name: "SOFFIT-(WARM-)?SPOT|DOWNLIGHT|LUMINAIRE|WARM-LIGHT", cls: IfcLightFixture, ptype: DIRECTIONSOURCE, method: extrude, system: LIGHTING, cat: LGT, phase: H}
+- {id: PORTAL-SLATS, name: "(WOOD-SLAT|HEADER-SLAT|BATTEN|CIVIC-FIN|WELCOME-FIN|STRUCTURAL-BAY-FIN)", cls: IfcCovering, ptype: CLADDING, otype: FACADE_BATTEN, method: extrude, cat: CLAD, phase: D}
+- {id: PORTAL-SEAMS, name: "(METALLIC-SEAM|METALLIC-OPAQUE-SEAM|PANEL-SEAM|SOLID-METALLIC-SEAM)", cls: IfcCovering, ptype: CLADDING, otype: METALLIC_PANEL_SEAM, method: extrude, cat: CLAD, phase: D}
+- {id: PORTAL-FRAME, name: "^EXT0[23]-[EW]-(DEEP-PORTAL-RAKE|PROJECTED-PORTAL-RETURN|RIDGE-NOSE-TRIM|GABLE-SOLID-END|ENTRY-|LOBBY-OPENING|GLASS-BASE-ENDCAP|ANNEX-GLASS-SILL-DRIP)", cls: IfcCovering, ptype: CLADDING, otype: PORTAL_FRAME_CLADDING, method: extrude, cat: CLAD, phase: D}
+- {id: CIVIC-PLINTH, name: "PLINTH", cls: IfcCovering, ptype: CLADDING, otype: FACADE_PLINTH, method: extrude, cat: CLAD, phase: D}
+- {id: CIVIC-SHROUD, name: "RWG-SHROUD|WELCOME-SHROUD|RWG-ACCESS-PANEL", cls: IfcCovering, ptype: CLADDING, otype: DOWNPIPE_SHROUD, method: extrude, cat: CLAD, phase: D}
+- {id: CIVIC-EXIT-BAY, name: "BRONZE-EXIT-BAY|CORNER-PIER|WEATHERING-PLINTH|SHADOW-DATUM", cls: IfcCovering, ptype: CLADDING, method: extrude, cat: CLAD, phase: D}
+- {id: SIGNAGE, name: "SIGN-(BACKING|HALO|SUPPORT)|SIGNAGE", cls: IfcBuildingElementProxy, ptype: USERDEFINED, otype: SIGNAGE, method: extrude, cat: SIGN, phase: D}
+- {id: SIGNAGE-TEXT, etype: "signage", cls: IfcBuildingElementProxy, ptype: USERDEFINED, otype: SIGNAGE_LETTERS, method: extrude, cat: SIGN, phase: D}
+- {id: N-CANOPY-PORTAL-COL, name: "^EXT14-N-PORTAL-(FRONT-COLUMN|WALL-PILASTER)", cls: IfcColumn, ptype: COLUMN, method: profile, assembly: "NORTH-ENTRANCE-PORTAL", cat: COL, phase: D}
+- {id: N-CANOPY-PORTAL-BEAM, name: "^EXT14-N-PORTAL-(FRONT-HEADER|ROOF-SIDE-BEAM|WALL-HEADER)", cls: IfcBeam, ptype: BEAM, method: profile, assembly: "NORTH-ENTRANCE-PORTAL", cat: BEAM, phase: D}
+- {id: N-CANOPY-ROOF, name: "^EXT14-N-CANOPY-(ROOF|WARM-SOFFIT|FRONT-FASCIA|WALL-FLASHING)", cls: IfcCovering, ptype: ROOFING, method: extrude, assembly: "NORTH-ENTRANCE-PORTAL", cat: COV, phase: D}
+- {id: N-CANOPY-RWG, name: "^EXT14-N-CANOPY-(CONCEALED-GUTTER|RWP)", cls: IfcPipeSegment, ptype: GUTTER, method: extrude, system: RAINWATER, assembly: "NORTH-ENTRANCE-PORTAL", cat: GUTTER, phase: E}
+- {id: N-WIND-SCREEN-GLASS, name: "^EXT14-N-WIND-SCREEN-GLASS-(?P<s>EAST|WEST)", cls: IfcPlate, ptype: CURTAIN_PANEL, method: plate, assembly: "N-WIND-SCREEN-{s}-CURTAIN-WALL", cat: PLATE, phase: D}
+- {id: N-WIND-SCREEN-FRAME, name: "^EXT14-N-WIND-SCREEN-.*(?P<s>EAST|WEST)", cls: IfcMember, ptype: MULLION, method: profile, assembly: "N-WIND-SCREEN-{s}-CURTAIN-WALL", cat: MEMB, phase: D}
+
+# ---------------------------------------------------------------- E roof steel (preliminary)
+- {id: ROOF-COL, name: "^COL-ROOF-(?P<t>\\d+)-", cls: IfcColumn, ptype: COLUMN, method: profile, cat: COL, phase: E}
+- {id: TRUSS-MEMBER, name: "^TRUSS-(TOP|CHORD|V|WEB)-(?P<t>\\d+)-", cls: IfcMember, ptype: CHORD, method: profile, assembly: "TRUSS-{t}", cat: MEMB, phase: E}
+- {id: TRUSS-GUSSET, name: "^TRUSS-GUSSET-(?P<t>\\d+)-", cls: IfcPlate, ptype: USERDEFINED, otype: GUSSET_PLATE, method: plate, assembly: "TRUSS-{t}", cat: PLATE, phase: E}
+- {id: TRUSS-SPLICE, name: "^ROOF-CHORD-SPLICE-(?P<t>\\d+)-\\d+-[LR]$", cls: IfcPlate, ptype: USERDEFINED, otype: SPLICE_PLATE, method: plate, assembly: "TRUSS-{t}", cat: PLATE, phase: E}
+- {id: TRUSS-BOLTS, name: "^ROOF-(GUSSET|CHORD-SPLICE)-BOLT-(?P<t>\\d+)-", cls: IfcMechanicalFastener, ptype: BOLT, method: extrude, assembly: "TRUSS-{t}", cat: BOLT, phase: E}
+- {id: COL-PLATES, name: "^ROOF-(BASEPLATE|COLUMN-CAP|COLUMN-SEAT)-(?P<t>\\d+)-", cls: IfcPlate, ptype: USERDEFINED, otype: COLUMN_CONNECTION_PLATE, method: plate, cat: PLATE, phase: E}
+- {id: PURLIN, name: "^(PURLIN-ROW-|ROOF-EDGE-PURLIN|ROOF-GABLE-EXT-[EW]-PURLIN|ROOF-RIDGE-ADJACENT-PURLIN|ROOF-RIDGE-PURLIN)", cls: IfcMember, ptype: PURLIN, method: profile, cat: PURL, phase: E}
+- {id: PURLIN-CLEAT, name: "^PURLIN-(CLEAT|SPLICE-ROW)", cls: IfcPlate, ptype: USERDEFINED, otype: PURLIN_CLEAT, method: plate, cat: PLATE, phase: E}
+- {id: PURLIN-BOLT, name: "^PURLIN-(SPLICE-)?BOLT", cls: IfcMechanicalFastener, ptype: BOLT, method: extrude, cat: BOLT, phase: E}
+- {id: BRACE-ROD, name: "^BRACE-ROOF-\\d+$", cls: IfcMember, ptype: BRACE, method: profile, cat: BRACE, phase: E}
+- {id: BRACE-HW, name: "^BRACE-ROOF-(TURNBUCKLE|ENDPLATE)", cls: IfcDiscreteAccessory, ptype: USERDEFINED, otype: BRACING_HARDWARE, method: extrude, cat: FAST, phase: E}
+- {id: ROOF-ANCHOR, name: "^ROOF-ANCHOR-", cls: IfcMechanicalFastener, ptype: ANCHORBOLT, method: extrude, cat: BOLT, phase: E}
+- {id: EAVES-SUPPORT, coll: "^ROOF-IBR-EDGE-SUPPORT", name: "(OUTRIGGER|GABLE-EXT-[EW]-EDGE)", cls: IfcMember, ptype: MEMBER, method: profile, cat: MEMB, phase: E}
+- {id: EAVES-CLEAT, name: "^ROOF-EAVES-CLEAT", cls: IfcPlate, ptype: USERDEFINED, otype: EAVES_CLEAT, method: plate, cat: PLATE, phase: E}
+
+# ---------------------------------------------------------------- E roof covering
+- {id: IBR-SHEET, coll: "^ROOF-IBR-SHEETS", cls: IfcCovering, ptype: ROOFING, otype: IBR686_SHEET, method: extrude, assembly: ROOF, cat: ROOF-SHEET, phase: E}
+- {id: RIDGE-CAP, name: "^ROOF-RIDGE-CAP", cls: IfcCovering, ptype: USERDEFINED, otype: RIDGE_CAP, method: extrude, assembly: ROOF, cat: FLASH, phase: E}
+- {id: FLASHINGS, coll: "^ROOF-IBR-FLASHINGS", cls: IfcCovering, ptype: USERDEFINED, otype: FLASHING, method: extrude, assembly: ROOF, cat: FLASH, phase: E}
+- {id: ROOF-FIXINGS, coll: "^ROOF-IBR-FIXINGS", cls: IfcMechanicalFastener, ptype: USERDEFINED, otype: ROOF_SCREW_SET, method: extrude, assembly: ROOF, cat: FAST, phase: E}
+- {id: ROOF-INSULATION, coll: "^VENT-07", cls: IfcCovering, ptype: INSULATION, method: extrude, assembly: ROOF, cat: COV, phase: E, status: PRELIMINARY_DESIGN}
+- {id: SAFETY-ANCHOR, etype: "Roof safety anchor", cls: IfcDiscreteAccessory, ptype: USERDEFINED, otype: ROOF_SAFETY_ANCHOR, method: extrude, cat: FAST, phase: E}
+
+# ---------------------------------------------------------------- E rainwater
+- {id: RWG-GUTTER, name: "^RWG-OPEN-BOX-GUTTER|ROOF-EDGE-WEST-GUTTER|STAIRHEAD-ROOF-WEST-GUTTER", cls: IfcPipeSegment, ptype: GUTTER, method: extrude, system: RAINWATER, cat: GUTTER, phase: E}
+- {id: RWG-DOWNPIPE, name: "DOWNPIPE(?!-EXTERNAL-SHOE)|RWP|ROOF-LEADER", cls: IfcPipeSegment, ptype: RIGIDSEGMENT, otype: DOWNPIPE, method: extrude, system: RAINWATER, cat: DPIPE, phase: E}
+- {id: RWG-FITTING, name: "^RWG-(DROP-COLLECTOR|OUTLET-SOCKET)|GUTTER-OUTLET|EXTERNAL-SHOE|EMERGENCY-OVERFLOW", cls: IfcPipeFitting, ptype: USERDEFINED, otype: RAINWATER_FITTING, method: extrude, system: RAINWATER, cat: PFIT, phase: E}
+- {id: RWG-GRATE, name: "^RWG-(CATCHPIT-GRATE-BAR|GROUND-INLET-RIM)-(?P<s>[NS])-(?P<i>\\d+)", group: "RWG-GROUND-INLET-{s}-{i}", cls: IfcWasteTerminal, ptype: GULLYGRATING, method: extrude, system: RAINWATER, cat: RWG, phase: E}
+- {id: RWG-BRACKET, name: "^RWG-(EAVES-GUTTER-HANGER|OUTLET-HANGER|PIPE-ANCHOR|PIPE-CLAMP)", cls: IfcFastener, ptype: USERDEFINED, otype: RAINWATER_BRACKET, method: extrude, system: RAINWATER, cat: FAST, phase: E}
+- {id: RWG-FASCIA, name: "^RWG-ROOF-EAVES-FASCIA|WEST-LOW-FASCIA", cls: IfcCovering, ptype: CLADDING, otype: EAVES_FASCIA, method: extrude, assembly: ROOF, cat: FLASH, phase: E}
+
+# ---------------------------------------------------------------- F stage and auditorium
+- {id: STG-POST, name: "^STG-STR-POST", cls: IfcColumn, ptype: COLUMN, method: profile, assembly: STAGE, cat: COL, phase: F}
+- {id: STG-BEAM, name: "^STG-STR-BEAM", cls: IfcBeam, ptype: BEAM, method: profile, assembly: STAGE, cat: BEAM, phase: F}
+- {id: STG-DECK, name: "^STG-STR-DECK-SLAB", cls: IfcSlab, ptype: FLOOR, otype: STAGE_DECK, method: slab, assembly: STAGE, cat: SLAB, phase: F}
+- {id: STG-FLOOR, name: "^STG-FIN-OAK-FLOOR", cls: IfcCovering, ptype: FLOORING, method: extrude, assembly: STAGE, cat: COV, phase: F}
+- {id: STG-FASCIA, name: "^STG-FIN-(FASCIA|WARM-REVEAL)", cls: IfcCovering, ptype: CLADDING, method: extrude, assembly: STAGE, cat: COV, phase: F}
+- {id: STG-STAIR, name: "^STG-ACC-SIDE-STAIR-(TREAD-FINISH-)?(?P<s>[NS])$", cls: IfcStairFlight, ptype: STRAIGHT, method: extrude, group: "STG-SIDE-STAIR-{s}", assembly: STAGE, cat: STAIR, phase: F}
+- {id: STG-HANDRAIL, coll: "^STG-03-ACCESS", etype: "handrail", cls: IfcRailing, ptype: HANDRAIL, method: extrude, assembly: STAGE, cat: RAIL, phase: F}
+- {id: STG-BACKDROP, name: "^STG-BKD-(ACOUSTIC-PANEL|TIMBER-SLAT|VERTICAL-REVEAL|CENTRAL-LOWER-WALL)", cls: IfcCovering, ptype: CLADDING, otype: STAGE_BACKDROP, method: extrude, assembly: STAGE, cat: COV, phase: F}
+- {id: STG-SCREEN-PORTAL, name: "^STG-(BKD-SCREEN-PORTAL|AV-SIDE-SCREEN)", cls: IfcMember, ptype: USERDEFINED, otype: SCREEN_FRAME, method: profile, assembly: STAGE, cat: MEMB, phase: F}
+- {id: STG-LGT-BAR, name: "^STG-LGT-(BAR|HANGER)|SUSPENSION|LIGHTING-BAR", cls: IfcMember, ptype: USERDEFINED, otype: LIGHTING_BATTEN, method: profile, system: LIGHTING, cat: MEMB, phase: H}
+- {id: STG-LGT, name: "^STG-LGT-(FIXTURE|LENS)-(?P<p>FRONT|STAGE)-(?P<i>\\d+)", cls: IfcLightFixture, ptype: DIRECTIONSOURCE, method: extrude, group: "STG-LGT-{p}-{i}", system: LIGHTING, cat: LGT, phase: H}
+- {id: STG-FLOORBOX, name: "^STG-SVC-FLOORBOX", cls: IfcOutlet, ptype: POWEROUTLET, otype: FLUSH_FLOOR_BOX, method: extrude, system: ELECTRICAL, cat: OUT, phase: H}
+- {id: LECTERN, coll: "^Clear Acrylic Lectern", cls: IfcFurniture, ptype: USERDEFINED, otype: LECTERN, method: extrude, group: "LECTERN", cat: FURN, phase: F}
+- {id: SEAT, coll: "^Seating$", cls: IfcFurniture, ptype: CHAIR, method: extrude, cat: SEAT, phase: F}
+- {id: AISLE-STEP, name: "^AISLE-STEP-(?P<a>\\d+)-", cls: IfcStairFlight, ptype: STRAIGHT, otype: GALLERY_AISLE_STEPS, method: stair, group: "AISLE-STEPS-{a}", cat: STAIR, phase: F}
+- {id: STAIR-STEPS, name: "^STAIR-(?P<s>[NS])-(?P<f>\\d+)-\\d+$", cls: IfcStairFlight, ptype: STRAIGHT, method: stair, group: "STAIR-{s}-FLIGHT-{f}", assembly: "STAIR-{s}", cat: STAIR, phase: F}
+- {id: STAIR-LANDING, name: "^STAIR-(LANDING|FLOOR)-(?P<s>[NS])-", cls: IfcSlab, ptype: LANDING, method: slab, assembly: "STAIR-{s}", cat: SLAB, phase: F}
+- {id: RAMP, name: "^RAMP-[NS]-", cls: IfcRampFlight, ptype: STRAIGHT, method: extrude, cat: RAMP, phase: F}
+- {id: HALL-LANDING, name: "^LANDING-[NS]-", cls: IfcSlab, ptype: LANDING, method: slab, cat: SLAB, phase: F}
+- {id: RAILS, etype: "Balustrade/Railing", name: "^(AISLE-RAIL|STAIR-RAIL)", cls: IfcRailing, ptype: HANDRAIL, method: extrude, cat: RAIL, phase: F}
+- {id: MEZZ-GUARD, name: "^MEZZ-GUARD", cls: IfcRailing, ptype: GUARDRAIL, method: extrude, cat: RAIL, phase: F}
+- {id: FOH-DESK, name: "^FOH-DESK$", cls: IfcFurniture, ptype: USERDEFINED, otype: FOH_CONTROL_DESK, method: extrude, cat: FURN, phase: F}
+
+# ---------------------------------------------------------------- G west office terrace / spiral (EXT05/EXT13/BIM-AUDIT)
+- {id: SPIRAL-TREAD, name: "SPIRAL-(STEEL-ANTI-SLIP-TREAD|OUTER-TREAD-BRACKET|RADIAL-STRINGER)", cls: IfcMember, ptype: USERDEFINED, otype: SPIRAL_STAIR_COMPONENT, method: profile, assembly: SPIRAL-STAIR, cat: MEMB, phase: G}
+- {id: SPIRAL-MAST, name: "SPIRAL-(CENTER-PIPE-STEEL-POST|BRIDGE-INDEPENDENT-POST|LANDING-FRAME-POST)", cls: IfcColumn, ptype: COLUMN, method: profile, assembly: SPIRAL-STAIR, cat: COL, phase: G}
+- {id: SPIRAL-RAIL, name: "SPIRAL-(CONTINUOUS-OUTER-HANDRAIL|INNER-CONTINUOUS-HANDRAIL|CONTINUOUS-VERTICAL-GUARD-PICKETS|LOWER-TOE-BOARD|TOP-HANDRAIL|PRIMARY-GUARD-POST)", cls: IfcRailing, ptype: GUARDRAIL, method: extrude, assembly: SPIRAL-STAIR, cat: RAIL, phase: G}
+- {id: SPIRAL-BRIDGE, name: "SPIRAL-(LANDING-BRIDGE|BRIDGE-SIDE-FRAMING|LANDING-FRAME-HEAD|LANDING-DRAINAGE)", cls: IfcSlab, ptype: LANDING, otype: SPIRAL_LANDING_BRIDGE, method: extrude, assembly: SPIRAL-STAIR, cat: SLAB, phase: G}
+- {id: SPIRAL-BASE, name: "SPIRAL-(MAST-BASE-PLATE|ANCHOR-BOLT)", cls: IfcDiscreteAccessory, ptype: USERDEFINED, otype: STAIR_BASE_FIXING, method: extrude, assembly: SPIRAL-STAIR, cat: FAST, phase: G}
+- {id: TERRACE-GUARD, name: "BALCONY-GUARD", cls: IfcRailing, ptype: GUARDRAIL, method: extrude, cat: RAIL, phase: G}
+- {id: TERRACE-COL, name: "^EXT05-STRUCTURAL-STEEL-COLUMN", cls: IfcColumn, ptype: COLUMN, method: profile, cat: COL, phase: G}
+- {id: TERRACE-BEAM, name: "^EXT05-STRUCTURAL-(LONGITUDINAL-GIRDER|TRANSVERSE-BEAM)", cls: IfcBeam, ptype: BEAM, method: profile, cat: BEAM, phase: G}
+- {id: OFFICE-INFILL, name: "^EXT05-(OFFICE-UNIFORM-INFILL|OFFICE-INSULATED-HEAD-BAY|OFFICE-END-CLOSURE)", cls: IfcCovering, ptype: CLADDING, otype: INSULATED_WALL_PANEL, method: extrude, cat: CLAD, phase: G}
+- {id: OFFICE-SUBFRAME, name: "^EXT05-(OFFICE-FACADE-SUBFRAME-HEAD|FACADE-MODULAR-VERTICAL-COLUMN-CAP|WINDOW-FRAME-BAY)", cls: IfcMember, ptype: USERDEFINED, otype: FACADE_SUBFRAME, method: profile, cat: MEMB, phase: G}
+
+# ---------------------------------------------------------------- G restrooms (RR-V2)
+- {id: RR-WC, name: "^RR-WC-", cls: IfcSanitaryTerminal, ptype: WCSEAT, method: extrude, system: SANITARY, cat: SAN, phase: G}
+- {id: RR-URINAL, name: "^RR-URINAL-(?!DIVIDER)", cls: IfcSanitaryTerminal, ptype: URINAL, method: extrude, system: SANITARY, cat: SAN, phase: G}
+- {id: RR-BASIN, name: "^RR-BASIN-", cls: IfcSanitaryTerminal, ptype: WASHHANDBASIN, method: extrude, system: SANITARY, cat: SAN, phase: G}
+- {id: RR-CUB-DOOR, name: "^RR-CUB-(?P<k>[FM]-[GU])-.*-DOOR$", cls: IfcDoor, ptype: DOOR, otype: WC_CUBICLE_DOOR, method: door, assembly: "WC-CUBICLES-{k}", cat: DOOR, phase: G}
+- {id: RR-DOOR, name: "^RR-DOOR-", cls: IfcDoor, ptype: DOOR, otype: ACCESSIBLE_WC_DOOR, method: door, cat: DOOR, phase: G}
+- {id: RR-CUB-LEG, name: "^RR-CUB-(?P<k>[FM]-[GU])-.*(LEG|PILASTERS-RAIL)", cls: IfcMember, ptype: USERDEFINED, otype: CUBICLE_LEG_OR_RAIL, method: extrude, assembly: "WC-CUBICLES-{k}", cat: MEMB, phase: G}
+- {id: RR-CUB, name: "^RR-CUB-(?P<k>[FM]-[GU])-", cls: IfcPlate, ptype: USERDEFINED, otype: CUBICLE_PANEL, method: extrude, assembly: "WC-CUBICLES-{k}", cat: PLATE, phase: G}
+- {id: RR-URINAL-DIV, name: "^RR-URINAL-DIVIDER-(?P<k>[FM]-[GU])-", cls: IfcPlate, ptype: USERDEFINED, otype: URINAL_DIVIDER, method: extrude, assembly: "WC-CUBICLES-{k}", cat: PLATE, phase: G}
+- {id: RR-COUNTER, name: "^RR-COUNTER-", cls: IfcFurniture, ptype: USERDEFINED, otype: VANITY_COUNTER, method: extrude, cat: FURN, phase: G}
+- {id: RR-IPS, name: "^RR-IPS-", cls: IfcCovering, ptype: CLADDING, otype: IPS_DUCT_PANELLING, method: extrude, cat: COV, phase: G}
+- {id: RR-ACC, name: "^RR-ACC-", cls: IfcFurniture, ptype: USERDEFINED, otype: SANITARY_ACCESSORY, method: extrude, cat: FURN, phase: G}
+- {id: RR-FIN-FLOOR, name: "^RR-FIN-FLOOR", cls: IfcCovering, ptype: FLOORING, method: extrude, cat: COV, phase: G}
+- {id: RR-FIN-CEIL, name: "^RR-FIN-CEILING", cls: IfcCovering, ptype: CEILING, method: extrude, cat: COV, phase: G}
+- {id: RR-FIN-TILE, name: "^RR-FIN-WALLTILE", cls: IfcCovering, ptype: CLADDING, otype: WALL_TILING, method: extrude, cat: COV, phase: G}
+- {id: RR-SIGN, name: "^RR-SIGN", cls: IfcBuildingElementProxy, ptype: USERDEFINED, otype: SIGNAGE, method: extrude, cat: SIGN, phase: G}
+- {id: RR-PIPE-SEG, name: "^RR-PLUMB-(CW|SOIL|STACK|CONCEPT-BELOW-SLAB|WASTE|VENT)", cls: IfcPipeSegment, ptype: RIGIDSEGMENT, method: extrude, system: PLUMBING, cat: PIPE, phase: H, status: CONCEPT_UNVERIFIED}
+- {id: RR-PIPE-FIT, name: "^RR-PLUMB-(AAV|FIRECOLLAR|CONCEPT-IC|GULLY)", cls: IfcPipeFitting, ptype: USERDEFINED, otype: PLUMBING_FITTING, method: extrude, system: PLUMBING, cat: PFIT, phase: H, status: CONCEPT_UNVERIFIED}
+- {id: RR-CISTERN, name: "^RR-PLUMB-CISTERN-FRAME", cls: IfcDiscreteAccessory, ptype: USERDEFINED, otype: CONCEALED_CISTERN_FRAME, method: extrude, system: SANITARY, cat: SAN, phase: G}
+- {id: RR-MEZZ-BOXING, name: "^RR-PLUMB-CONCEPT-MEZZ-BOXING", cls: IfcCovering, ptype: CLADDING, otype: SERVICE_BOXING, method: extrude, cat: COV, phase: H, status: CONCEPT_UNVERIFIED}
+- {id: RR-PLUMB-OTHER, name: "^RR-PLUMB-", cls: IfcPipeSegment, ptype: RIGIDSEGMENT, method: extrude, system: PLUMBING, cat: PIPE, phase: H, status: CONCEPT_UNVERIFIED}
+- {id: RR-LUM, name: "^RR-LUM-", cls: IfcLightFixture, ptype: POINTSOURCE, method: extrude, system: LIGHTING, cat: LGT, phase: H}
+- {id: RR-VENT-FAN, name: "^RR-VENT-INLINE-FAN", cls: IfcFan, ptype: INLINEDUCTFAN, method: extrude, system: EXHAUST, cat: FAN, phase: H}
+- {id: RR-VENT-DUCT, name: "^RR-VENT-(FLEXDUCT|DUCT|CONCEPT-DUCT-ROUTE)", cls: IfcDuctSegment, ptype: FLEXIBLESEGMENT, method: extrude, system: EXHAUST, cat: DUCT, phase: H}
+- {id: RR-VENT-TERM, name: "^RR-VENT-(VALVE|LOUVRE|DISCHARGE|TRANSFER-GRILLE)", cls: IfcAirTerminal, ptype: GRILLE, method: extrude, system: EXHAUST, cat: AT, phase: H}
+
+# ---------------------------------------------------------------- H acoustic + AV (auditorium services)
+- {id: ACU-PANEL, name: "^ACOUSTIC-PANEL-", cls: IfcCovering, ptype: CEILING, otype: ACOUSTIC_RAFT_PANEL, method: extrude, assembly: "ACOUSTIC-RAFT-{_coll_suffix}", cat: ACU, phase: H}
+- {id: ACU-SUPPORT-STEEL, name: "^ACOUSTIC-(TRANSFER-RAIL|TRUSS-CLAMP)", cls: IfcMember, ptype: USERDEFINED, otype: ACOUSTIC_SUPPORT_STEEL, method: profile, assembly: "ACOUSTIC-RAFT-{_coll_suffix}", cat: MEMB, phase: H}
+- {id: ACU-HANGER, name: "^ACOUSTIC-(HANGER|WIRE-GRIP|RAIL-EYE|ABSORBER-ANCHOR|CLAMP-FASTENER|CLAMP-NECK)", cls: IfcFastener, ptype: USERDEFINED, otype: ACOUSTIC_SUSPENSION, method: extrude, assembly: "ACOUSTIC-RAFT-{_coll_suffix}", cat: FAST, phase: H}
+- {id: ACU-WALL-ABSORBER, name: "^ABSORBER-[NS]-", cls: IfcCovering, ptype: CLADDING, otype: ACOUSTIC_WALL_ABSORBER, method: extrude, cat: ACU, phase: H}
+- {id: AV-ARRAY, name: "^(ARRAY|DELAY)-", cls: IfcAudioVisualAppliance, ptype: SPEAKER, method: extrude, system: ELECTROACOUSTIC, cat: AV, phase: H}
+- {id: AV-SCREEN, name: "^SCREEN-", cls: IfcAudioVisualAppliance, ptype: DISPLAY, otype: PROJECTION_SCREEN, method: extrude, system: ELECTROACOUSTIC, cat: AV, phase: H}
+- {id: SVC-DUCT, coll: "^Services$", name: "^DUCT-", cls: IfcDuctSegment, ptype: RIGIDSEGMENT, method: extrude, system: VENTILATION, cat: DUCT, phase: H}
+- {id: SVC-LOUVRE, coll: "^Services$", name: "^LOUVRE-", cls: IfcAirTerminal, ptype: LOUVRE, method: extrude, system: VENTILATION, cat: AT, phase: H}
+
+# ---------------------------------------------------------------- H ventilation proposal (PRELIMINARY)
+- {id: VENT-SPLITTER, coll: "^VENT-", name: "SPLITTER|ATTENUATOR", cls: IfcDuctSilencer, ptype: RECTANGULAR, method: extrude, system: VENTILATION, cat: SIL, phase: H, status: PRELIMINARY_DESIGN}
+- {id: VENT-FAN-RIDGE, coll: "^VENT-04", name: "(HOUSING|COWL$|INLET-GRILLE)", cls: IfcFan, ptype: PROPELLORAXIAL, otype: RIDGE_EC_EXTRACT_FAN, method: extrude, group: "{_vent_unit}", system: VENTILATION, cat: FAN, phase: H, status: PRELIMINARY_DESIGN}
+- {id: VENT-FAN-RIDGE-KERB, coll: "^VENT-04", cls: IfcDiscreteAccessory, ptype: USERDEFINED, otype: FAN_KERB_AND_SUPPORT, method: extrude, system: VENTILATION, cat: FAST, phase: H, status: PRELIMINARY_DESIGN}
+- {id: VENT-HVLS, coll: "^VENT-05", name: "(BLADE|MOTOR|DROP-TUBE)", cls: IfcFan, ptype: USERDEFINED, otype: HVLS_CEILING_FAN, method: extrude, group: "{_vent_unit}", system: VENTILATION, cat: FAN, phase: H, status: PRELIMINARY_DESIGN}
+- {id: VENT-HVLS-BEAM, coll: "^VENT-05", name: "SUPPORT-BEAM", cls: IfcMember, ptype: USERDEFINED, otype: SECONDARY_HANGER_BEAM, method: profile, cat: MEMB, phase: H, status: PRELIMINARY_DESIGN}
+- {id: VENT-SENSOR, coll: "^VENT-08", name: "SENSOR|WEATHER-HEAD", cls: IfcSensor, ptype: CO2SENSOR, method: extrude, system: VENTILATION, cat: SENS, phase: H, status: PRELIMINARY_DESIGN}
+- {id: VENT-MAST, coll: "^VENT-08", cls: IfcMember, ptype: USERDEFINED, otype: SENSOR_MAST, method: profile, cat: MEMB, phase: H, status: PRELIMINARY_DESIGN}
+- {id: VENT-EVAP, coll: "^VENT-09", cls: IfcEvaporativeCooler, ptype: USERDEFINED, otype: EVAPORATIVE_PAD_PROVISION_PHASE2, method: extrude, system: VENTILATION, cat: EVAP, phase: H, status: PRELIMINARY_DESIGN}
+- {id: VENT-SASH, coll: "^VENT-03", name: "SASH", cls: IfcWindow, ptype: WINDOW, otype: MOTORISED_VENT_SASH, method: extrude, system: VENTILATION, cat: WIN, phase: H, status: PRELIMINARY_DESIGN}
+- {id: VENT-ACTUATOR, coll: "^VENT-03", name: "ACTUATOR", cls: IfcActuator, ptype: ELECTRICACTUATOR, method: extrude, system: VENTILATION, cat: ACT, phase: H, status: PRELIMINARY_DESIGN}
+- {id: VENT-LOUVRE-BAY, coll: "^VENT-0[126]", cls: IfcAirTerminal, ptype: LOUVRE, method: extrude, group: "{_vent_unit}", system: VENTILATION, cat: AT, phase: H, status: PRELIMINARY_DESIGN}
+
+# ---------------------------------------------------------------- fallbacks by source element_type (only after all specific rules)
+- {id: FB-WALL, etype: "^Wall$", cls: IfcWall, ptype: SOLIDWALL, method: wall, cat: WALL, phase: G}
+- {id: FB-COL, etype: "^Column/Post$|column", cls: IfcColumn, ptype: COLUMN, method: profile, cat: COL, phase: G}
+- {id: FB-BEAM, etype: "beam|Beam/Truss", cls: IfcBeam, ptype: BEAM, method: profile, cat: BEAM, phase: G}
+- {id: FB-SLAB, etype: "^Slab$", cls: IfcSlab, ptype: FLOOR, method: slab, cat: SLAB, phase: G}
+- {id: FB-RAIL, etype: "Balustrade|handrail|Railing", cls: IfcRailing, ptype: HANDRAIL, method: extrude, cat: RAIL, phase: G}
+- {id: FB-RWG, etype: "Rainwater|gutter|downpipe", cls: IfcPipeSegment, ptype: RIGIDSEGMENT, method: extrude, system: RAINWATER, cat: DPIPE, phase: E}
+- {id: FB-CLAD, etype: "Cladding|Facade|fascia|reveal", cls: IfcCovering, ptype: CLADDING, method: extrude, cat: CLAD, phase: D}
+- {id: FB-FLOOR, etype: "Floor/Paving|floor finish", cls: IfcCovering, ptype: FLOORING, method: extrude, cat: COV, phase: G}
+- {id: FB-LIGHT, etype: "light|LED|luminaire", cls: IfcLightFixture, ptype: POINTSOURCE, method: extrude, system: LIGHTING, cat: LGT, phase: H}
+- {id: FB-PROXY, cls: IfcBuildingElementProxy, ptype: NOTDEFINED, method: extrude, cat: PROXY, phase: G}

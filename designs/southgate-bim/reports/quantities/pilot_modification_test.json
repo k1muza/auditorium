@@ -1,0 +1,80 @@
+{
+ "wall": "SOUTHGATE-WALL-0279",
+ "bonsai_edit": {
+  "wall": "SOUTHGATE-WALL-0279",
+  "guid": "3_252c1yHG$Qli2ODmTgOx",
+  "blender_object": "IfcWall/SOUTHGATE-WALL-0279",
+  "before_height": 5.220000088214874,
+  "before_length": 4.59999942779541,
+  "operator_results": [
+   [
+    "FINISHED"
+   ],
+   [
+    "FINISHED"
+   ]
+  ],
+  "after_height": 5.720000267028809,
+  "after_length": 5.59999942779541,
+  "openings_after": [
+   "SOUTHGATE-WALL-0279-OPEN-WIN-0001"
+  ],
+  "material_after": "IfcMaterialLayerSetUsage",
+  "saved": true
+ },
+ "before_qto": {
+  "Length_m": 4.59999942779541,
+  "Height_m": 5.220000088214874,
+  "GrossArea_m2": 24.011997418880412,
+  "NetArea_m2": 22.229498333215645,
+  "GrossVolume_m3": 5.762879380531293,
+  "NetVolume_m3": 5.335079599971749
+ },
+ "stale_qto_in_modified_file": {
+  "Length": 4.59999942779541,
+  "Height": 5.220000088214874,
+  "GrossSideArea": 24.011997418880412,
+  "NetVolume": 5.335079599971749
+ },
+ "recomputed_qto": {
+  "Length": 5.59999942779541,
+  "Height": 5.720000267028809,
+  "GrossSideArea": 32.03199822235092,
+  "NetSideArea": 30.249499136686154,
+  "GrossVolume": 7.687679573364212,
+  "NetVolume": 7.25987979280467
+ },
+ "persisted_after_reopen": {
+  "Length": 5.59999942779541,
+  "Height": 5.720000267028809,
+  "GrossSideArea": 32.03199822235092,
+  "NetVolume": 7.25987979280467
+ },
+ "expected_gross_side_area": 32.032,
+ "quantities_updated": true,
+ "stale_detected": true,
+ "persisted": true,
+ "relationships": {
+  "original": {
+   "elements": 15,
+   "openings": 2,
+   "fills": 2,
+   "voids": 2,
+   "types": 9,
+   "containment": 3,
+   "aggregates": 5,
+   "qto_sets": 11
+  },
+  "modified_reopened": {
+   "elements": 15,
+   "openings": 2,
+   "fills": 2,
+   "voids": 2,
+   "types": 9,
+   "containment": 3,
+   "aggregates": 5,
+   "qto_sets": 11
+  }
+ },
+ "relationships_persist": true
+}

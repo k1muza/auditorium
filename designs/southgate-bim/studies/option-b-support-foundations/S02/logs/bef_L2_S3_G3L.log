@@ -1,0 +1,12 @@
+S3 G3L SA Mr=86 Vr=217 S: ULS M=107 V=111 lift=0.0mm transfer=212 | constr M=71 lift=0.0 | char q_strip=102 q_pad=129 settle=10.8 ang=1/1437
+S3 G3L SA Mr=86 Vr=217 N: ULS M=114 V=120 lift=0.0mm transfer=232 | constr M=71 lift=0.0 | char q_strip=108 q_pad=129 settle=10.8 ang=1/1437
+S3 G3L SA Mr=86 Vr=217 W: ULS M=181 V=177 lift=0.0mm transfer=333 | constr M=127 lift=0.0 | char q_strip=108 q_pad=89 settle=9.0 ang=1/1989
+S3 G3L SA Mr=86 Vr=217 E: ULS M=116 V=129 lift=0.1mm transfer=244 | constr M=89 lift=1.4 | char q_strip=101 q_pad=100 settle=8.5 ang=1/1183
+S3 G3L SB Mr=248 Vr=320 S: ULS M=146 V=120 lift=0.0mm transfer=243 | constr M=92 lift=0.0 | char q_strip=103 q_pad=121 settle=10.1 ang=1/1725
+S3 G3L SB Mr=248 Vr=320 N: ULS M=146 V=135 lift=0.0mm transfer=263 | constr M=106 lift=0.0 | char q_strip=109 q_pad=121 settle=10.1 ang=1/1725
+S3 G3L SB Mr=248 Vr=320 W: ULS M=228 V=216 lift=0.0mm transfer=394 | constr M=162 lift=0.0 | char q_strip=106 q_pad=92 settle=8.8 ang=1/2340
+S3 G3L SB Mr=248 Vr=320 E: ULS M=176 V=142 lift=0.0mm transfer=265 | constr M=124 lift=0.9 | char q_strip=98 q_pad=97 settle=8.1 ang=1/1255
+S3 G3L SC Mr=397 Vr=500 S: ULS M=193 V=131 lift=0.0mm transfer=266 | constr M=114 lift=0.0 | char q_strip=104 q_pad=115 settle=9.6 ang=1/2050
+S3 G3L SC Mr=397 Vr=500 N: ULS M=193 V=144 lift=0.0mm transfer=283 | constr M=143 lift=0.0 | char q_strip=109 q_pad=118 settle=9.9 ang=1/2050
+S3 G3L SC Mr=397 Vr=500 W: ULS M=281 V=244 lift=0.0mm transfer=433 | constr M=188 lift=0.0 | char q_strip=102 q_pad=94 settle=8.5 ang=1/2571
+S3 G3L SC Mr=397 Vr=500 E: ULS M=246 V=150 lift=0.0mm transfer=282 | constr M=160 lift=0.5 | char q_strip=96 q_pad=94 settle=8.0 ang=1/1323

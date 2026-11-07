@@ -1,0 +1,84 @@
+[
+ {
+  "id": "01_east_elevation",
+  "title": "East elevation (glazed gable portal + entrance)",
+  "iou": 0.9752,
+  "source_only_px_pct": 0.0,
+  "ifc_only_px_pct": 2.479
+ },
+ {
+  "id": "02_east_entrance",
+  "title": "East entrance - perspective",
+  "iou": 1.0,
+  "source_only_px_pct": 0.0,
+  "ifc_only_px_pct": 0.002
+ },
+ {
+  "id": "03_west_elevation",
+  "title": "West elevation (glazed gable, office wing, spiral stair)",
+  "iou": 0.9752,
+  "source_only_px_pct": 0.0,
+  "ifc_only_px_pct": 2.479
+ },
+ {
+  "id": "04_north_elevation",
+  "title": "North elevation (main entrance canopy)",
+  "iou": 0.9885,
+  "source_only_px_pct": 0.0,
+  "ifc_only_px_pct": 1.151
+ },
+ {
+  "id": "05_south_elevation",
+  "title": "South elevation",
+  "iou": 0.9885,
+  "source_only_px_pct": 0.0,
+  "ifc_only_px_pct": 1.149
+ },
+ {
+  "id": "06_aerial_overview",
+  "title": "Aerial overview (north-east)",
+  "iou": 0.9895,
+  "source_only_px_pct": 0.132,
+  "ifc_only_px_pct": 0.921
+ },
+ {
+  "id": "07_auditorium_interior",
+  "title": "Auditorium interior from the gallery",
+  "iou": 1.0,
+  "source_only_px_pct": 0.0,
+  "ifc_only_px_pct": 0.0
+ },
+ {
+  "id": "08_stage",
+  "title": "Stage and backdrop",
+  "iou": 1.0,
+  "source_only_px_pct": 0.0,
+  "ifc_only_px_pct": 0.0
+ },
+ {
+  "id": "09_roof_framing",
+  "title": "Roof framing (roof covering, fixings and lining hidden)",
+  "iou": 0.9881,
+  "source_only_px_pct": 0.054,
+  "ifc_only_px_pct": 1.135
+ },
+ {
+  "id": "10_offices_and_balcony",
+  "title": "West office wing, roof terrace / balcony and spiral stair",
+  "iou": 0.9656,
+  "source_only_px_pct": 0.0,
+  "ifc_only_px_pct": 3.445
+ },
+ {
+  "id": "11_roof_off_interior",
+  "title": "Roof-off interior (everything with base above +9.5 m hidden)",
+  "iou": 0.9914,
+  "source_only_px_pct": 0.003,
+  "ifc_only_px_pct": 0.856
+ },
+ {
+  "id": "12_childrens_church",
+  "title": "Children's church - OUT OF SCOPE (detached building, not migrated)",
+  "skipped": true
+ }
+]

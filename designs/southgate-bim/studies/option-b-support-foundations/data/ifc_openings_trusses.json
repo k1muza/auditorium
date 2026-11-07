@@ -1,0 +1,1791 @@
+{
+ "openings": [
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0023",
+   "src": "TOILET-WINDOW-F-G-FRAME-LEFT; TOILET-WINDOW-F-G-FRAME-LOWER; TOILET-WINDOW-F-G-FRAME-RIGHT; TOILET-WINDOW-F-G-FRAME-UPPER; TOILET-WINDOW-F-G-FROSTED; TOILET-WINDOW-F-G-MULLION",
+   "bbox": [
+    58.778,
+    11.65,
+    2.1,
+    58.922,
+    12.85,
+    2.7
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0024",
+   "src": "TOILET-WINDOW-F-U-FRAME-LEFT; TOILET-WINDOW-F-U-FRAME-LOWER; TOILET-WINDOW-F-U-FRAME-RIGHT; TOILET-WINDOW-F-U-FRAME-UPPER; TOILET-WINDOW-F-U-FROSTED; TOILET-WINDOW-F-U-MULLION",
+   "bbox": [
+    58.778,
+    11.65,
+    9.7,
+    58.922,
+    12.85,
+    10.3
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0025",
+   "src": "TOILET-WINDOW-M-G-FRAME-LEFT; TOILET-WINDOW-M-G-FRAME-LOWER; TOILET-WINDOW-M-G-FRAME-RIGHT; TOILET-WINDOW-M-G-FRAME-UPPER; TOILET-WINDOW-M-G-FROSTED; TOILET-WINDOW-M-G-MULLION",
+   "bbox": [
+    58.778,
+    20.25,
+    2.1,
+    58.922,
+    21.45,
+    2.7
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0026",
+   "src": "TOILET-WINDOW-M-U-FRAME-LEFT; TOILET-WINDOW-M-U-FRAME-LOWER; TOILET-WINDOW-M-U-FRAME-RIGHT; TOILET-WINDOW-M-U-FRAME-UPPER; TOILET-WINDOW-M-U-FROSTED; TOILET-WINDOW-M-U-MULLION",
+   "bbox": [
+    58.778,
+    20.25,
+    9.7,
+    58.922,
+    21.45,
+    10.3
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0027",
+   "src": "WINDOW-N-0-FRAME-BOTTOM; WINDOW-N-0-FRAME-LEFT; WINDOW-N-0-FRAME-RIGHT; WINDOW-N-0-FRAME-TOP; WINDOW-N-0-NEW-GLASS",
+   "bbox": [
+    4.33,
+    32.752,
+    10.1,
+    7.73,
+    32.948,
+    11.8
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0028",
+   "src": "WINDOW-N-1-FRAME-BOTTOM; WINDOW-N-1-FRAME-LEFT; WINDOW-N-1-FRAME-RIGHT; WINDOW-N-1-FRAME-TOP; WINDOW-N-1-NEW-GLASS",
+   "bbox": [
+    9.89,
+    32.752,
+    10.1,
+    13.29,
+    32.948,
+    11.8
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0029",
+   "src": "WINDOW-N-2-FRAME-BOTTOM; WINDOW-N-2-FRAME-LEFT; WINDOW-N-2-FRAME-RIGHT; WINDOW-N-2-FRAME-TOP; WINDOW-N-2-NEW-GLASS",
+   "bbox": [
+    15.45,
+    32.752,
+    10.1,
+    18.85,
+    32.948,
+    11.8
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0030",
+   "src": "WINDOW-N-3-FRAME-BOTTOM; WINDOW-N-3-FRAME-LEFT; WINDOW-N-3-FRAME-RIGHT; WINDOW-N-3-FRAME-TOP; WINDOW-N-3-NEW-GLASS",
+   "bbox": [
+    21.01,
+    32.752,
+    10.1,
+    24.41,
+    32.948,
+    11.8
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0031",
+   "src": "WINDOW-N-4-FRAME-BOTTOM; WINDOW-N-4-FRAME-LEFT; WINDOW-N-4-FRAME-RIGHT; WINDOW-N-4-FRAME-TOP; WINDOW-N-4-NEW-GLASS",
+   "bbox": [
+    26.57,
+    32.752,
+    10.1,
+    29.97,
+    32.948,
+    11.8
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0032",
+   "src": "WINDOW-N-5-FRAME-BOTTOM; WINDOW-N-5-FRAME-LEFT; WINDOW-N-5-FRAME-RIGHT; WINDOW-N-5-FRAME-TOP; WINDOW-N-5-NEW-GLASS",
+   "bbox": [
+    32.13,
+    32.752,
+    10.1,
+    35.53,
+    32.948,
+    11.8
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0033",
+   "src": "WINDOW-N-6-FRAME-BOTTOM; WINDOW-N-6-FRAME-LEFT; WINDOW-N-6-FRAME-RIGHT; WINDOW-N-6-FRAME-TOP; WINDOW-N-6-NEW-GLASS",
+   "bbox": [
+    37.69,
+    32.752,
+    10.1,
+    41.09,
+    32.948,
+    11.8
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0034",
+   "src": "WINDOW-S-0-FRAME-BOTTOM; WINDOW-S-0-FRAME-LEFT; WINDOW-S-0-FRAME-RIGHT; WINDOW-S-0-FRAME-TOP; WINDOW-S-0-NEW-GLASS",
+   "bbox": [
+    4.33,
+    0.052,
+    10.1,
+    7.73,
+    0.248,
+    11.8
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0035",
+   "src": "WINDOW-S-1-FRAME-BOTTOM; WINDOW-S-1-FRAME-LEFT; WINDOW-S-1-FRAME-RIGHT; WINDOW-S-1-FRAME-TOP; WINDOW-S-1-NEW-GLASS",
+   "bbox": [
+    9.89,
+    0.052,
+    10.1,
+    13.29,
+    0.248,
+    11.8
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0036",
+   "src": "WINDOW-S-2-FRAME-BOTTOM; WINDOW-S-2-FRAME-LEFT; WINDOW-S-2-FRAME-RIGHT; WINDOW-S-2-FRAME-TOP; WINDOW-S-2-NEW-GLASS",
+   "bbox": [
+    15.45,
+    0.052,
+    10.1,
+    18.85,
+    0.248,
+    11.8
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0037",
+   "src": "WINDOW-S-3-FRAME-BOTTOM; WINDOW-S-3-FRAME-LEFT; WINDOW-S-3-FRAME-RIGHT; WINDOW-S-3-FRAME-TOP; WINDOW-S-3-NEW-GLASS",
+   "bbox": [
+    21.01,
+    0.052,
+    10.1,
+    24.41,
+    0.248,
+    11.8
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0038",
+   "src": "WINDOW-S-4-FRAME-BOTTOM; WINDOW-S-4-FRAME-LEFT; WINDOW-S-4-FRAME-RIGHT; WINDOW-S-4-FRAME-TOP; WINDOW-S-4-NEW-GLASS",
+   "bbox": [
+    26.57,
+    0.052,
+    10.1,
+    29.97,
+    0.248,
+    11.8
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0039",
+   "src": "WINDOW-S-5-FRAME-BOTTOM; WINDOW-S-5-FRAME-LEFT; WINDOW-S-5-FRAME-RIGHT; WINDOW-S-5-FRAME-TOP; WINDOW-S-5-NEW-GLASS",
+   "bbox": [
+    32.13,
+    0.052,
+    10.1,
+    35.53,
+    0.248,
+    11.8
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0040",
+   "src": "WINDOW-S-6-FRAME-BOTTOM; WINDOW-S-6-FRAME-LEFT; WINDOW-S-6-FRAME-RIGHT; WINDOW-S-6-FRAME-TOP; WINDOW-S-6-NEW-GLASS",
+   "bbox": [
+    37.69,
+    0.052,
+    10.1,
+    41.09,
+    0.248,
+    11.8
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0001",
+   "src": "ANNEX-ADMIN-WIN-FRAME-LOWER; ANNEX-ADMIN-WIN-FRAME-N; ANNEX-ADMIN-WIN-FRAME-S; ANNEX-ADMIN-WIN-FRAME-UPPER; ANNEX-ADMIN-WIN-GLAZING",
+   "bbox": [
+    -2.532,
+    15.725,
+    1.295,
+    -2.188,
+    17.275,
+    2.445
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0002",
+   "src": "ANNEX-FINANCE-WIN-FRAME-LOWER; ANNEX-FINANCE-WIN-FRAME-N; ANNEX-FINANCE-WIN-FRAME-S; ANNEX-FINANCE-WIN-FRAME-UPPER; ANNEX-FINANCE-WIN-GLAZING",
+   "bbox": [
+    -2.532,
+    11.125,
+    1.295,
+    -2.188,
+    12.675,
+    2.445
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0003",
+   "src": "ANNEX-PASTORAL-WIN-FRAME-LOWER; ANNEX-PASTORAL-WIN-FRAME-N; ANNEX-PASTORAL-WIN-FRAME-S; ANNEX-PASTORAL-WIN-FRAME-UPPER; ANNEX-PASTORAL-WIN-GLAZING",
+   "bbox": [
+    -2.532,
+    20.325,
+    1.295,
+    -2.188,
+    21.875,
+    2.445
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0004",
+   "src": "ANNEX-PLANT-WIN-FRAME-LOWER; ANNEX-PLANT-WIN-FRAME-N; ANNEX-PLANT-WIN-FRAME-S; ANNEX-PLANT-WIN-FRAME-UPPER; ANNEX-PLANT-WIN-GLAZING",
+   "bbox": [
+    -2.532,
+    1.9,
+    2.145,
+    -2.188,
+    3.05,
+    2.795
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0005",
+   "src": "ANNEX-STAFF-WC-WIN-FRAME-LOWER; ANNEX-STAFF-WC-WIN-FRAME-N; ANNEX-STAFF-WC-WIN-FRAME-S; ANNEX-STAFF-WC-WIN-FRAME-UPPER; ANNEX-STAFF-WC-WIN-PRIVACY",
+   "bbox": [
+    -2.532,
+    5.175,
+    2.315,
+    -2.188,
+    5.825,
+    2.765
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0006",
+   "src": "ANNEX-STORE-WIN-FRAME-LOWER; ANNEX-STORE-WIN-FRAME-N; ANNEX-STORE-WIN-FRAME-S; ANNEX-STORE-WIN-FRAME-UPPER; ANNEX-STORE-WIN-GLAZING",
+   "bbox": [
+    -2.532,
+    7.6,
+    2.165,
+    -2.188,
+    8.6,
+    2.715
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0007",
+   "src": "ANNEX-VESTRY-WIN-FRAME-LOWER; ANNEX-VESTRY-WIN-FRAME-N; ANNEX-VESTRY-WIN-FRAME-S; ANNEX-VESTRY-WIN-FRAME-UPPER; ANNEX-VESTRY-WIN-GLAZING",
+   "bbox": [
+    -2.532,
+    24.7,
+    1.365,
+    -2.188,
+    26.2,
+    2.465
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0008",
+   "src": "ANNEX-VISITORS-WIN-FRAME-LOWER; ANNEX-VISITORS-WIN-FRAME-N; ANNEX-VISITORS-WIN-FRAME-S; ANNEX-VISITORS-WIN-FRAME-UPPER; ANNEX-VISITORS-WIN-GLAZING",
+   "bbox": [
+    -2.532,
+    29.025,
+    1.245,
+    -2.188,
+    30.925,
+    2.445
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0009",
+   "src": "VENT-03-N-W0-SASH",
+   "bbox": [
+    4.4,
+    32.629,
+    10.298,
+    7.7,
+    33.013,
+    11.044
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0010",
+   "src": "VENT-03-N-W1-SASH",
+   "bbox": [
+    9.96,
+    32.629,
+    10.298,
+    13.26,
+    33.013,
+    11.044
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0011",
+   "src": "VENT-03-N-W2-SASH",
+   "bbox": [
+    15.52,
+    32.629,
+    10.298,
+    18.82,
+    33.013,
+    11.044
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0012",
+   "src": "VENT-03-N-W3-SASH",
+   "bbox": [
+    21.08,
+    32.629,
+    10.298,
+    24.38,
+    33.013,
+    11.044
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0013",
+   "src": "VENT-03-N-W4-SASH",
+   "bbox": [
+    26.64,
+    32.629,
+    10.298,
+    29.94,
+    33.013,
+    11.044
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0014",
+   "src": "VENT-03-N-W5-SASH",
+   "bbox": [
+    32.2,
+    32.629,
+    10.298,
+    35.5,
+    33.013,
+    11.044
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0015",
+   "src": "VENT-03-N-W6-SASH",
+   "bbox": [
+    37.76,
+    32.629,
+    10.298,
+    41.06,
+    33.013,
+    11.044
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0016",
+   "src": "VENT-03-S-W0-SASH",
+   "bbox": [
+    4.4,
+    -0.013,
+    10.298,
+    7.7,
+    0.371,
+    11.044
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0017",
+   "src": "VENT-03-S-W1-SASH",
+   "bbox": [
+    9.96,
+    -0.013,
+    10.298,
+    13.26,
+    0.371,
+    11.044
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0018",
+   "src": "VENT-03-S-W2-SASH",
+   "bbox": [
+    15.52,
+    -0.013,
+    10.298,
+    18.82,
+    0.371,
+    11.044
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0019",
+   "src": "VENT-03-S-W3-SASH",
+   "bbox": [
+    21.08,
+    -0.013,
+    10.298,
+    24.38,
+    0.371,
+    11.044
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0020",
+   "src": "VENT-03-S-W4-SASH",
+   "bbox": [
+    26.64,
+    -0.013,
+    10.298,
+    29.94,
+    0.371,
+    11.044
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0021",
+   "src": "VENT-03-S-W5-SASH",
+   "bbox": [
+    32.2,
+    -0.013,
+    10.298,
+    35.5,
+    0.371,
+    11.044
+   ]
+  },
+  {
+   "cls": "IfcWindow",
+   "name": "SOUTHGATE-WIN-0022",
+   "src": "VENT-03-S-W6-SASH",
+   "bbox": [
+    37.76,
+    -0.013,
+    10.298,
+    41.06,
+    0.371,
+    11.044
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0010",
+   "src": "EXT02-E-DOOR-JAMB-00-0-10.55; EXT02-E-DOOR-JAMB-00-0-11.51; EXT02-E-DOOR-PULL-00-0; EXT02-E-ENTRANCE-DOOR-00-0",
+   "bbox": [
+    62.078,
+    10.52,
+    0.29,
+    62.202,
+    11.54,
+    3.32
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0011",
+   "src": "EXT02-E-DOOR-JAMB-00-1-11.55; EXT02-E-DOOR-JAMB-00-1-12.51; EXT02-E-DOOR-PULL-00-1; EXT02-E-ENTRANCE-DOOR-00-1",
+   "bbox": [
+    62.078,
+    11.52,
+    0.29,
+    62.202,
+    12.54,
+    3.32
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0012",
+   "src": "EXT02-E-DOOR-JAMB-01-0-12.55; EXT02-E-DOOR-JAMB-01-0-13.51; EXT02-E-DOOR-PULL-01-0; EXT02-E-ENTRANCE-DOOR-01-0",
+   "bbox": [
+    62.078,
+    12.52,
+    0.29,
+    62.202,
+    13.54,
+    3.32
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0013",
+   "src": "EXT02-E-DOOR-JAMB-01-1-13.55; EXT02-E-DOOR-JAMB-01-1-14.51; EXT02-E-DOOR-PULL-01-1; EXT02-E-ENTRANCE-DOOR-01-1",
+   "bbox": [
+    62.078,
+    13.52,
+    0.29,
+    62.202,
+    14.54,
+    3.32
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0014",
+   "src": "EXT02-E-DOOR-JAMB-02-0-14.55; EXT02-E-DOOR-JAMB-02-0-15.51; EXT02-E-DOOR-PULL-02-0; EXT02-E-ENTRANCE-DOOR-02-0",
+   "bbox": [
+    62.078,
+    14.52,
+    0.29,
+    62.202,
+    15.54,
+    3.32
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0015",
+   "src": "EXT02-E-DOOR-JAMB-02-1-15.55; EXT02-E-DOOR-JAMB-02-1-16.51; EXT02-E-DOOR-PULL-02-1; EXT02-E-ENTRANCE-DOOR-02-1",
+   "bbox": [
+    62.078,
+    15.52,
+    0.29,
+    62.202,
+    16.54,
+    3.32
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0016",
+   "src": "EXT02-E-DOOR-JAMB-03-0-16.55; EXT02-E-DOOR-JAMB-03-0-17.51; EXT02-E-DOOR-PULL-03-0; EXT02-E-ENTRANCE-DOOR-03-0",
+   "bbox": [
+    62.078,
+    16.52,
+    0.29,
+    62.202,
+    17.54,
+    3.32
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0017",
+   "src": "EXT02-E-DOOR-JAMB-03-1-17.55; EXT02-E-DOOR-JAMB-03-1-18.51; EXT02-E-DOOR-PULL-03-1; EXT02-E-ENTRANCE-DOOR-03-1",
+   "bbox": [
+    62.078,
+    17.52,
+    0.29,
+    62.202,
+    18.54,
+    3.32
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0018",
+   "src": "EXT02-E-DOOR-JAMB-04-0-18.55; EXT02-E-DOOR-JAMB-04-0-19.51; EXT02-E-DOOR-PULL-04-0; EXT02-E-ENTRANCE-DOOR-04-0",
+   "bbox": [
+    62.078,
+    18.52,
+    0.29,
+    62.202,
+    19.54,
+    3.32
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0019",
+   "src": "EXT02-E-DOOR-JAMB-04-1-19.55; EXT02-E-DOOR-JAMB-04-1-20.51; EXT02-E-DOOR-PULL-04-1; EXT02-E-ENTRANCE-DOOR-04-1",
+   "bbox": [
+    62.078,
+    19.52,
+    0.29,
+    62.202,
+    20.54,
+    3.32
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0020",
+   "src": "EXT02-E-DOOR-JAMB-05-0-20.55; EXT02-E-DOOR-JAMB-05-0-21.51; EXT02-E-DOOR-PULL-05-0; EXT02-E-ENTRANCE-DOOR-05-0",
+   "bbox": [
+    62.078,
+    20.52,
+    0.29,
+    62.202,
+    21.54,
+    3.32
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0021",
+   "src": "EXT02-E-DOOR-JAMB-05-1-21.55; EXT02-E-DOOR-JAMB-05-1-22.51; EXT02-E-DOOR-PULL-05-1; EXT02-E-ENTRANCE-DOOR-05-1",
+   "bbox": [
+    62.078,
+    21.52,
+    0.29,
+    62.202,
+    22.54,
+    3.32
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0022",
+   "src": "EXT02-E-REAR-DOOR-HANDLE-00; EXT02-E-REAR-INTERNAL-GLASS-DOOR-00",
+   "bbox": [
+    59.0,
+    14.6,
+    0.27,
+    59.118,
+    16.45,
+    3.37
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0023",
+   "src": "EXT02-E-REAR-DOOR-HANDLE-01; EXT02-E-REAR-INTERNAL-GLASS-DOOR-01",
+   "bbox": [
+    59.0,
+    16.5,
+    0.27,
+    59.118,
+    18.35,
+    3.37
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0026",
+   "src": "HALL-WEST-NORTH-DOOR-OPEN; HALL-WEST-NORTH-FRAME-HEAD; HALL-WEST-NORTH-FRAME-JAMB-N; HALL-WEST-NORTH-FRAME-JAMB-S; HALL-WEST-NORTH-HANDLE",
+   "bbox": [
+    3.058,
+    26.8,
+    0.265,
+    3.443,
+    28.0,
+    2.715
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0027",
+   "src": "HALL-WEST-SOUTH-DOOR-OPEN; HALL-WEST-SOUTH-FRAME-HEAD; HALL-WEST-SOUTH-FRAME-JAMB-N; HALL-WEST-SOUTH-FRAME-JAMB-S; HALL-WEST-SOUTH-HANDLE",
+   "bbox": [
+    3.058,
+    5.0,
+    0.265,
+    3.443,
+    6.2,
+    2.715
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0028",
+   "src": "DOOR-CORE-M-N",
+   "bbox": [
+    52.538,
+    29.75,
+    4.058,
+    52.662,
+    32.55,
+    6.358
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0029",
+   "src": "DOOR-CORE-M-S",
+   "bbox": [
+    52.538,
+    0.45,
+    4.058,
+    52.662,
+    3.25,
+    6.358
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0030",
+   "src": "DOOR-CORE-N",
+   "bbox": [
+    52.538,
+    29.75,
+    7.85,
+    52.662,
+    32.55,
+    10.15
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0031",
+   "src": "DOOR-CORE-S",
+   "bbox": [
+    52.538,
+    0.45,
+    7.85,
+    52.662,
+    3.25,
+    10.15
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0032",
+   "src": "DOOR-ENTRY-0",
+   "bbox": [
+    43.3,
+    29.938,
+    0.265,
+    45.7,
+    30.062,
+    2.865
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0033",
+   "src": "DOOR-ENTRY-1",
+   "bbox": [
+    46.3,
+    29.938,
+    0.265,
+    48.7,
+    30.062,
+    2.865
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0034",
+   "src": "DOOR-ENTRY-2",
+   "bbox": [
+    49.3,
+    29.938,
+    0.265,
+    51.7,
+    30.062,
+    2.865
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0035",
+   "src": "DOOR-HALL-0",
+   "bbox": [
+    43.048,
+    0.3,
+    0.265,
+    43.172,
+    1.95,
+    2.865
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0036",
+   "src": "DOOR-HALL-1",
+   "bbox": [
+    43.048,
+    10.45,
+    0.265,
+    43.172,
+    12.25,
+    2.865
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0037",
+   "src": "DOOR-HALL-2",
+   "bbox": [
+    43.048,
+    20.75,
+    0.265,
+    43.172,
+    22.55,
+    2.865
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0038",
+   "src": "DOOR-HALL-3",
+   "bbox": [
+    43.048,
+    31.05,
+    0.265,
+    43.172,
+    32.7,
+    2.865
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0039",
+   "src": "DOOR-N-FOYER",
+   "bbox": [
+    44.0,
+    32.788,
+    0.265,
+    46.8,
+    32.912,
+    2.765
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0040",
+   "src": "DOOR-N-FRONT",
+   "bbox": [
+    6.0,
+    32.788,
+    0.265,
+    8.4,
+    32.912,
+    2.765
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0041",
+   "src": "DOOR-N-MID",
+   "bbox": [
+    28.0,
+    32.788,
+    0.265,
+    30.4,
+    32.912,
+    2.765
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0042",
+   "src": "DOOR-N-STAIR",
+   "bbox": [
+    54.5,
+    32.788,
+    0.265,
+    57.3,
+    32.912,
+    2.765
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0043",
+   "src": "DOOR-S-FOYER",
+   "bbox": [
+    44.0,
+    0.088,
+    0.265,
+    46.8,
+    0.212,
+    2.765
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0044",
+   "src": "DOOR-S-FRONT",
+   "bbox": [
+    6.0,
+    0.088,
+    0.265,
+    8.4,
+    0.212,
+    2.765
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0045",
+   "src": "DOOR-S-MID",
+   "bbox": [
+    28.0,
+    0.088,
+    0.265,
+    30.4,
+    0.212,
+    2.765
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0046",
+   "src": "DOOR-S-STAIR",
+   "bbox": [
+    54.5,
+    0.088,
+    0.265,
+    57.3,
+    0.212,
+    2.765
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0047",
+   "src": "DOOR-TOILET-F-U",
+   "bbox": [
+    57.07,
+    14.44,
+    7.85,
+    57.93,
+    14.56,
+    10.0
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0048",
+   "src": "DOOR-TOILET-M-U",
+   "bbox": [
+    57.07,
+    18.49,
+    7.85,
+    57.93,
+    18.61,
+    10.0
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0001",
+   "src": "ANNEX-ADMIN-DOOR-HANDLE; ANNEX-ADMIN-DOOR-LEAF",
+   "bbox": [
+    1.572,
+    16.04,
+    0.265,
+    1.698,
+    16.96,
+    2.38
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0002",
+   "src": "ANNEX-FINANCE-DOOR-HANDLE; ANNEX-FINANCE-DOOR-LEAF",
+   "bbox": [
+    1.572,
+    11.39,
+    0.265,
+    1.698,
+    12.31,
+    2.38
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0003",
+   "src": "ANNEX-PASTORAL-DOOR-HANDLE; ANNEX-PASTORAL-DOOR-LEAF",
+   "bbox": [
+    1.572,
+    20.64,
+    0.265,
+    1.698,
+    21.56,
+    2.38
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0004",
+   "src": "ANNEX-PLANT-DOOR-HANDLE; ANNEX-PLANT-DOOR-LEAF",
+   "bbox": [
+    1.572,
+    1.99,
+    0.265,
+    1.698,
+    2.91,
+    2.38
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0005",
+   "src": "ANNEX-PLANT-EXTERNAL-DOOR; ANNEX-PLANT-EXTERNAL-DOOR-HANDLE",
+   "bbox": [
+    -1.88,
+    0.068,
+    0.265,
+    -0.92,
+    0.193,
+    2.45
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0006",
+   "src": "ANNEX-STAFF-WC-DOOR-HANDLE; ANNEX-STAFF-WC-DOOR-LEAF",
+   "bbox": [
+    1.572,
+    5.04,
+    0.265,
+    1.698,
+    5.96,
+    2.38
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0007",
+   "src": "ANNEX-STORE-DOOR-HANDLE; ANNEX-STORE-DOOR-LEAF",
+   "bbox": [
+    1.572,
+    7.64,
+    0.265,
+    1.698,
+    8.56,
+    2.38
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0008",
+   "src": "ANNEX-VESTRY-DOOR-HANDLE; ANNEX-VESTRY-DOOR-LEAF",
+   "bbox": [
+    1.572,
+    25.04,
+    0.265,
+    1.698,
+    25.96,
+    2.38
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0009",
+   "src": "ANNEX-VISITORS-DOOR-HANDLE; ANNEX-VISITORS-DOOR-LEAF",
+   "bbox": [
+    1.572,
+    29.54,
+    0.265,
+    1.698,
+    30.46,
+    2.38
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0024",
+   "src": "EXT09-NORTH-CORRIDOR-EXIT-BAR; EXT09-NORTH-DOOR-HEADER; EXT09-NORTH-DOOR-JAMB-HINGE; EXT09-NORTH-DOOR-JAMB-LATCH; EXT09-NORTH-DOOR-THRESHOLD; EXT09-NORTH-EXTERIOR-PULL; EXT09-NORTH-HINGE-00; EXT09-NORTH-HINGE-01; EXT09-NORTH-HINGE-02; EXT09-NORTH-LEAF-GLAZING; EXT09-NORTH-LEAF-KICK; EXT09-NORTH-LEAF-LEFT-STILE; EXT09-NORTH-LEAF-MIDRAIL; EXT09-NORTH-LEAF-RIGHT-STILE; EXT09-NORTH-LEAF-TOPRAIL; EXT09-NORTH-WEATHER-DRIP-CAP",
+   "bbox": [
+    1.75,
+    32.678,
+    0.25,
+    2.77,
+    33.092,
+    2.53
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0025",
+   "src": "EXT09-SOUTH-CORRIDOR-EXIT-BAR; EXT09-SOUTH-DOOR-HEADER; EXT09-SOUTH-DOOR-JAMB-HINGE; EXT09-SOUTH-DOOR-JAMB-LATCH; EXT09-SOUTH-DOOR-THRESHOLD; EXT09-SOUTH-EXTERIOR-PULL; EXT09-SOUTH-HINGE-00; EXT09-SOUTH-HINGE-01; EXT09-SOUTH-HINGE-02; EXT09-SOUTH-LEAF-GLAZING; EXT09-SOUTH-LEAF-KICK; EXT09-SOUTH-LEAF-LEFT-STILE; EXT09-SOUTH-LEAF-MIDRAIL; EXT09-SOUTH-LEAF-RIGHT-STILE; EXT09-SOUTH-LEAF-TOPRAIL; EXT09-SOUTH-WEATHER-DRIP-CAP",
+   "bbox": [
+    1.75,
+    -0.092,
+    0.25,
+    2.77,
+    0.322,
+    2.53
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0049",
+   "src": "RR-CUB-F-G-N-01-DOOR",
+   "bbox": [
+    52.822,
+    11.418,
+    0.415,
+    53.43,
+    11.568,
+    2.315
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0050",
+   "src": "RR-CUB-F-G-N-02-DOOR",
+   "bbox": [
+    53.677,
+    11.418,
+    0.415,
+    54.286,
+    11.568,
+    2.315
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0051",
+   "src": "RR-CUB-F-G-N-03-DOOR",
+   "bbox": [
+    54.466,
+    10.891,
+    0.415,
+    54.721,
+    11.514,
+    2.315
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0052",
+   "src": "RR-CUB-F-G-N-04-DOOR",
+   "bbox": [
+    55.391,
+    11.418,
+    0.415,
+    56.0,
+    11.568,
+    2.315
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0053",
+   "src": "RR-CUB-F-G-N-05-DOOR",
+   "bbox": [
+    56.248,
+    11.418,
+    0.415,
+    56.857,
+    11.568,
+    2.315
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0054",
+   "src": "RR-CUB-F-G-N-06-DOOR",
+   "bbox": [
+    57.085,
+    11.235,
+    0.415,
+    57.706,
+    11.568,
+    2.315
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0055",
+   "src": "RR-CUB-F-G-N-07-DOOR",
+   "bbox": [
+    57.961,
+    11.418,
+    0.415,
+    58.57,
+    11.568,
+    2.315
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0056",
+   "src": "RR-CUB-F-G-S-01-DOOR",
+   "bbox": [
+    52.823,
+    12.682,
+    0.415,
+    53.432,
+    12.832,
+    2.315
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0057",
+   "src": "RR-CUB-F-G-S-02-DOOR",
+   "bbox": [
+    53.656,
+    12.684,
+    0.415,
+    54.271,
+    13.052,
+    2.315
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0058",
+   "src": "RR-CUB-F-G-S-03-DOOR",
+   "bbox": [
+    54.541,
+    12.682,
+    0.415,
+    55.15,
+    12.832,
+    2.315
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0059",
+   "src": "RR-CUB-F-G-S-04-DOOR",
+   "bbox": [
+    55.401,
+    12.682,
+    0.415,
+    56.01,
+    12.832,
+    2.315
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0060",
+   "src": "RR-CUB-F-G-S-05-DOOR",
+   "bbox": [
+    56.217,
+    12.682,
+    0.415,
+    56.926,
+    12.832,
+    2.315
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0061",
+   "src": "RR-CUB-F-U-N-01-DOOR",
+   "bbox": [
+    52.822,
+    11.418,
+    8.0,
+    53.43,
+    11.568,
+    9.9
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0062",
+   "src": "RR-CUB-F-U-N-02-DOOR",
+   "bbox": [
+    53.649,
+    11.17,
+    8.0,
+    54.258,
+    11.565,
+    9.9
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0063",
+   "src": "RR-CUB-F-U-N-03-DOOR",
+   "bbox": [
+    54.534,
+    11.418,
+    8.0,
+    55.143,
+    11.568,
+    9.9
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0064",
+   "src": "RR-CUB-F-U-N-04-DOOR",
+   "bbox": [
+    55.391,
+    11.418,
+    8.0,
+    56.0,
+    11.568,
+    9.9
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0065",
+   "src": "RR-CUB-F-U-N-05-DOOR",
+   "bbox": [
+    56.248,
+    11.418,
+    8.0,
+    56.857,
+    11.568,
+    9.9
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0066",
+   "src": "RR-CUB-F-U-N-06-DOOR",
+   "bbox": [
+    57.106,
+    11.418,
+    8.0,
+    57.714,
+    11.568,
+    9.9
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0067",
+   "src": "RR-CUB-F-U-N-07-DOOR",
+   "bbox": [
+    57.961,
+    11.418,
+    8.0,
+    58.57,
+    11.568,
+    9.9
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0068",
+   "src": "RR-CUB-F-U-S-01-DOOR",
+   "bbox": [
+    52.823,
+    12.682,
+    8.0,
+    53.432,
+    12.832,
+    9.9
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0069",
+   "src": "RR-CUB-F-U-S-02-DOOR",
+   "bbox": [
+    53.681,
+    12.682,
+    8.0,
+    54.29,
+    12.832,
+    9.9
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0070",
+   "src": "RR-CUB-F-U-S-03-DOOR",
+   "bbox": [
+    54.541,
+    12.682,
+    8.0,
+    55.15,
+    12.832,
+    9.9
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0071",
+   "src": "RR-CUB-F-U-S-04-DOOR",
+   "bbox": [
+    55.401,
+    12.682,
+    8.0,
+    56.01,
+    12.832,
+    9.9
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0072",
+   "src": "RR-CUB-F-U-S-05-DOOR",
+   "bbox": [
+    56.217,
+    12.682,
+    8.0,
+    56.926,
+    12.832,
+    9.9
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0073",
+   "src": "RR-CUB-M-G-W-01-DOOR",
+   "bbox": [
+    52.823,
+    20.217,
+    0.415,
+    53.432,
+    20.368,
+    2.315
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0074",
+   "src": "RR-CUB-M-G-W-02-DOOR",
+   "bbox": [
+    53.615,
+    19.706,
+    0.415,
+    53.966,
+    20.325,
+    2.315
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0075",
+   "src": "RR-CUB-M-G-W-03-DOOR",
+   "bbox": [
+    54.541,
+    20.217,
+    0.415,
+    55.15,
+    20.368,
+    2.315
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0076",
+   "src": "RR-CUB-M-G-W-04-DOOR",
+   "bbox": [
+    55.384,
+    20.064,
+    0.415,
+    56.007,
+    20.368,
+    2.315
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0077",
+   "src": "RR-CUB-M-G-W-05-DOOR",
+   "bbox": [
+    56.217,
+    20.217,
+    0.415,
+    56.926,
+    20.368,
+    2.315
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0078",
+   "src": "RR-CUB-M-U-W-01-DOOR",
+   "bbox": [
+    52.823,
+    20.217,
+    8.0,
+    53.432,
+    20.368,
+    9.9
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0079",
+   "src": "RR-CUB-M-U-W-02-DOOR",
+   "bbox": [
+    53.681,
+    20.217,
+    8.0,
+    54.29,
+    20.368,
+    9.9
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0080",
+   "src": "RR-CUB-M-U-W-03-DOOR",
+   "bbox": [
+    54.518,
+    20.016,
+    8.0,
+    55.137,
+    20.367,
+    9.9
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0081",
+   "src": "RR-CUB-M-U-W-04-DOOR",
+   "bbox": [
+    55.401,
+    20.217,
+    8.0,
+    56.01,
+    20.368,
+    9.9
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0082",
+   "src": "RR-CUB-M-U-W-05-DOOR",
+   "bbox": [
+    56.217,
+    20.217,
+    8.0,
+    56.926,
+    20.368,
+    9.9
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0083",
+   "src": "RR-DOOR-AWC-G-N",
+   "bbox": [
+    49.602,
+    25.9,
+    0.265,
+    49.808,
+    26.9,
+    2.465
+   ]
+  },
+  {
+   "cls": "IfcDoor",
+   "name": "SOUTHGATE-DOOR-0084",
+   "src": "RR-DOOR-AWC-G-S",
+   "bbox": [
+    49.602,
+    7.4,
+    0.265,
+    49.808,
+    8.4,
+    2.465
+   ]
+  },
+  {
+   "cls": "IfcCurtainWall",
+   "name": "SOUTHGATE-ASM-E-CURTAIN-WALL",
+   "src": null,
+   "bbox": null
+  },
+  {
+   "cls": "IfcCurtainWall",
+   "name": "SOUTHGATE-ASM-ENTRY-SCREEN-CURTAIN-WALL",
+   "src": null,
+   "bbox": null
+  },
+  {
+   "cls": "IfcCurtainWall",
+   "name": "SOUTHGATE-ASM-W-CURTAIN-WALL",
+   "src": null,
+   "bbox": null
+  },
+  {
+   "cls": "IfcCurtainWall",
+   "name": "SOUTHGATE-ASM-N-WIND-SCREEN-EAST-CURTAIN-WALL",
+   "src": null,
+   "bbox": null
+  },
+  {
+   "cls": "IfcCurtainWall",
+   "name": "SOUTHGATE-ASM-N-WIND-SCREEN-WEST-CURTAIN-WALL",
+   "src": null,
+   "bbox": null
+  }
+ ],
+ "trusses": [
+  {
+   "name": "SOUTHGATE-TRUSS-T01",
+   "src": null,
+   "n": 94,
+   "bbox": [
+    3.12,
+    0.03,
+    10.67,
+    3.382,
+    32.97,
+    16.77
+   ]
+  },
+  {
+   "name": "SOUTHGATE-TRUSS-T02",
+   "src": null,
+   "n": 94,
+   "bbox": [
+    8.68,
+    0.03,
+    10.67,
+    8.942,
+    32.97,
+    16.77
+   ]
+  },
+  {
+   "name": "SOUTHGATE-TRUSS-T03",
+   "src": null,
+   "n": 94,
+   "bbox": [
+    14.24,
+    0.03,
+    10.67,
+    14.502,
+    32.97,
+    16.77
+   ]
+  },
+  {
+   "name": "SOUTHGATE-TRUSS-T04",
+   "src": null,
+   "n": 94,
+   "bbox": [
+    19.8,
+    0.03,
+    10.67,
+    20.062,
+    32.97,
+    16.77
+   ]
+  },
+  {
+   "name": "SOUTHGATE-TRUSS-T05",
+   "src": null,
+   "n": 94,
+   "bbox": [
+    25.36,
+    0.03,
+    10.67,
+    25.622,
+    32.97,
+    16.77
+   ]
+  },
+  {
+   "name": "SOUTHGATE-TRUSS-T06",
+   "src": null,
+   "n": 580,
+   "bbox": [
+    30.92,
+    0.03,
+    10.67,
+    31.182,
+    32.97,
+    16.77
+   ]
+  },
+  {
+   "name": "SOUTHGATE-TRUSS-T07",
+   "src": null,
+   "n": 94,
+   "bbox": [
+    36.48,
+    0.03,
+    10.67,
+    36.742,
+    32.97,
+    16.77
+   ]
+  },
+  {
+   "name": "SOUTHGATE-TRUSS-T08",
+   "src": null,
+   "n": 94,
+   "bbox": [
+    42.04,
+    0.03,
+    10.67,
+    42.302,
+    32.97,
+    16.77
+   ]
+  },
+  {
+   "name": "SOUTHGATE-TRUSS-T09",
+   "src": null,
+   "n": 94,
+   "bbox": [
+    47.6,
+    0.03,
+    10.67,
+    47.862,
+    32.97,
+    16.77
+   ]
+  },
+  {
+   "name": "SOUTHGATE-TRUSS-T10",
+   "src": null,
+   "n": 94,
+   "bbox": [
+    53.16,
+    0.03,
+    10.67,
+    53.422,
+    32.97,
+    16.77
+   ]
+  },
+  {
+   "name": "SOUTHGATE-TRUSS-T11",
+   "src": null,
+   "n": 94,
+   "bbox": [
+    58.72,
+    0.03,
+    10.67,
+    58.982,
+    32.97,
+    16.77
+   ]
+  }
+ ]
+}

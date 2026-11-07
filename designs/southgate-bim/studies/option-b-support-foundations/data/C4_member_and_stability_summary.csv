@@ -1,0 +1,4 @@
+scheme,column,column_util_max,governing_combo,at_z,defl_y_SLS_q085_mm,limit_mm,defl_y_SLS_q120_mm,eaves_x_SLS_q085_mm,eaves_x_SLS_q120_mm,column_util_no_masonry_restraint,post_util,post_defl_ratio,alpha_cr_transverse,alpha_cr_longitudinal
+S1,UC 305x305x137,0.526,U5 0.9G+1.3W WWp q1.2,7.9,40.5,40.8,57.1,31.8,44.9,0.644,0.66,0.86,48.4,42.6
+S2,UC 356x368x153,0.346,U5 0.9G+1.3W WSn q1.2,-0.8,36.9,40.8,52.2,25.9,36.5,0.491,0.476,0.86,61.7,73.6
+S3,UC 305x305x97,0.609,U5 0.9G+1.3W WWp q1.2,9.9,26.1,40.8,36.8,40.7,57.5,0.931,0.588,0.86,87.3,33.5
